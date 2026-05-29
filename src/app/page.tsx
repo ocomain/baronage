@@ -3,6 +3,7 @@ import { HeroHome } from "@/components/HeroHome";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
+import { ROLL_URL } from "@/lib/site";
 
 const HISTORY_IMG =
   "https://images.unsplash.com/photo-1732008209481-3f5eed6b4ab5?auto=format&fit=crop&w=1600&q=80";
@@ -12,7 +13,8 @@ const pillars = [
     numeral: "I",
     title: "The Roll of Barons",
     body: "An open, verified public register of the Baronage of Scotland — free, for life, to verify an entry.",
-    href: "/the-roll",
+    href: ROLL_URL,
+    external: true,
   },
   {
     numeral: "II",
@@ -89,6 +91,7 @@ export default function HomePage() {
               <Reveal key={p.title} delay={i * 0.08}>
                 <Link
                   href={p.href}
+                  {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="group grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-2 border-b border-navy/15 py-8 transition-colors hover:bg-parchment/60 sm:grid-cols-[6rem_1fr_auto] sm:gap-x-10 sm:py-10"
                 >
                   <span className="font-inscribe text-3xl text-gold/70 transition-colors group-hover:text-gold sm:text-4xl">
@@ -184,7 +187,7 @@ export default function HomePage() {
               baronage.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <ButtonLink href="/the-roll" variant="gold">
+              <ButtonLink href={ROLL_URL} variant="gold">
                 Verify on the Roll
               </ButtonLink>
               <ButtonLink href="/contact" variant="outlineLight">

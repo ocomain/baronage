@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
+import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "History of the Scottish Baronage",
@@ -95,7 +96,7 @@ export default function HistoryPage() {
               <ButtonLink href="/proper-address" variant="outline">
                 Forms of address
               </ButtonLink>
-              <ButtonLink href="/the-roll" variant="gold">
+              <ButtonLink href={ROLL_URL} variant="gold">
                 Verify on the Roll
               </ButtonLink>
             </div>

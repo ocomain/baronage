@@ -7,11 +7,14 @@ export const site = {
   established: "Keepers of the Roll of Scottish Barons",
 };
 
-export type NavLink = { href: string; label: string };
+/** The live, existing register — a separate app we link out to. */
+export const ROLL_URL = "https://roll.baronage.com/";
+
+export type NavLink = { href: string; label: string; external?: boolean };
 
 /** Primary navigation — mirrors the existing site menu. */
 export const navLinks: NavLink[] = [
-  { href: "/the-roll", label: "The Roll" },
+  { href: ROLL_URL, label: "The Roll", external: true },
   { href: "/history", label: "History" },
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
