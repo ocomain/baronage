@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const members = [
-  { name: "Brady", designation: "Baron of Balvaird", mark: "B" },
-  { name: "Alexander", designation: "Baron of Drum", mark: "D" },
-  { name: "Antoin", designation: "Younger of Kinfauns", mark: "K" },
-  { name: "Gordon Macduff", designation: "Member of Council", mark: "M" },
+  { mark: "B", full: "Brady, Baron of Balvaird" },
+  { mark: "D", full: "Alexander, Baron of Drum, Chief of the Name Irvine" },
+  { mark: "K", full: "Antoin, Younger of Kinfauns, Tanist, Irish Clan Ó Comáin" },
+  { mark: "M", full: "Gordon Macduff" },
 ];
 
 const stewardship = [
@@ -72,20 +72,16 @@ export default function GoverningCouncilPage() {
               <GoldRule className="mt-6" />
             </div>
           </Reveal>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-14 max-w-3xl divide-y divide-navy/15 border-y border-navy/15">
             {members.map((m, i) => (
-              <Reveal key={m.name} delay={i * 0.08} className="h-full">
-                <article className="flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 p-8 text-center">
-                  <span className="relative flex h-20 w-20 items-center justify-center rounded-full border border-gold/50 bg-navy">
+              <Reveal key={m.mark} delay={i * 0.06}>
+                <div className="flex items-center gap-5 py-6 sm:gap-7 sm:py-7">
+                  <span className="relative flex h-14 w-14 flex-none items-center justify-center rounded-full border border-gold/50 bg-navy sm:h-16 sm:w-16">
                     <span className="absolute inset-1 rounded-full border border-gold/25" aria-hidden />
-                    <span className="font-inscribe text-2xl text-gold-light">{m.mark}</span>
+                    <span className="font-inscribe text-xl text-gold-light sm:text-2xl">{m.mark}</span>
                   </span>
-                  <h3 className="mt-6 font-display text-2xl text-navy">
-                    {m.name}
-                    <span className="text-gold-deep">,</span>
-                  </h3>
-                  <p className="mt-1 font-serif text-lg italic text-ink-soft">{m.designation}</p>
-                </article>
+                  <p className="font-display text-xl leading-snug text-navy sm:text-[1.7rem]">{m.full}</p>
+                </div>
               </Reveal>
             ))}
           </div>
