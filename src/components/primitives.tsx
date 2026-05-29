@@ -110,7 +110,7 @@ export function ButtonLink({
   className?: string;
 }) {
   const isInternal = href.startsWith("/");
-  const cls = `inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5 text-[0.7rem] font-semibold uppercase tracking-[0.22em] transition-all duration-300 ${buttonStyles[variant]} ${className}`;
+  const cls = `inline-flex cursor-pointer items-center justify-center gap-2 rounded-sm px-8 py-4 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] transition-all duration-300 ${buttonStyles[variant]} ${className}`;
   if (isInternal) {
     return (
       <Link href={href} className={cls}>

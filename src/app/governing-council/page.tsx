@@ -80,10 +80,11 @@ export default function GoverningCouncilPage() {
                     <span className="absolute inset-1 rounded-full border border-gold/25" aria-hidden />
                     <span className="font-inscribe text-2xl text-gold-light">{m.mark}</span>
                   </span>
-                  <h3 className="mt-6 font-display text-2xl text-navy">{m.name}</h3>
-                  <span className="mt-3 font-inscribe text-[0.62rem] uppercase tracking-[0.2em] text-gold-deep">
-                    {m.designation}
-                  </span>
+                  <h3 className="mt-6 font-display text-2xl text-navy">
+                    {m.name}
+                    <span className="text-gold-deep">,</span>
+                  </h3>
+                  <p className="mt-1 font-serif text-lg italic text-ink-soft">{m.designation}</p>
                 </article>
               </Reveal>
             ))}
