@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Crest } from "./Crest";
+import { Seal } from "./Seal";
 import { GoldRule } from "./primitives";
 import { navLinks, site } from "@/lib/site";
 
@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="bg-navy-deep text-parchment-200/80 texture-saltire">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8">
         <div className="flex flex-col items-center text-center">
-          <Crest className="text-gold" style={{ width: 52, height: (52 * 112) / 96 }} />
+          <Seal className="h-16 w-16" />
           <p className="mt-4 font-display text-2xl text-parchment-50">The Baronage of Scotland</p>
           <p className="mt-3 max-w-md font-serif text-lg italic text-parchment-200/70">{site.tagline}</p>
           <GoldRule className="mt-6" />

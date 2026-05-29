@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ *
- *  Baronage of Scotland — "Heritage Luxury" design system
+ *  Baronage of Scotland — "Charter & Crest" editorial-luxury system
  * ------------------------------------------------------------------ */
 @theme {
   /* Palette */
-  --color-parchment: #f4efe6;
-  --color-parchment-50: #faf8f2;
-  --color-parchment-100: #f4efe6;
-  --color-parchment-200: #ece3d3;
-  --color-parchment-300: #ddd0b9;
+  --color-parchment: #f3ecdd;
+  --color-parchment-50: #faf6ec;
+  --color-parchment-100: #f3ecdd;
+  --color-parchment-200: #e7dcc4;
+  --color-parchment-300: #d8c8a6;
 
-  --color-ink: #221c14;
-  --color-ink-soft: #443c2e;
-  --color-muted: #6f6555;
+  --color-ink: #1c170f;
+  --color-ink-soft: #463d2d;
+  --color-muted: #6f6452;
 
-  --color-navy: #14213d;
-  --color-navy-deep: #0c1530;
-  --color-navy-700: #1e2f54;
+  --color-navy: #131e3a;
+  --color-navy-deep: #0a1024;
+  --color-navy-700: #1e2c50;
   --color-navy-300: #4a5a82;
 
   --color-oxblood: #6e1423;
-  --color-oxblood-deep: #511019;
+  --color-oxblood-deep: #4d0f17;
 
   --color-gold: #c9a24b;
-  --color-gold-light: #e0c585;
-  --color-gold-deep: #9c7a2e;
+  --color-gold-light: #e6cf93;
+  --color-gold-deep: #936f24;
 
   /* Fonts — mapped to next/font CSS variables set in layout.tsx */
   --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-inscribe: var(--font-cinzel), "Trajan Pro", Georgia, serif;
   --font-serif: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-ebgaramond), Georgia, serif;
 
-  /* Misc */
-  --shadow-heritage: 0 24px 60px -28px rgba(12, 21, 48, 0.45);
+  --shadow-heritage: 0 30px 80px -36px rgba(10, 16, 36, 0.55);
 }
 
 :root {
@@ -58,16 +58,12 @@
     font-feature-settings: "liga" 1, "kern" 1;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
+  h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
     font-weight: 600;
     color: var(--color-navy);
-    line-height: 1.08;
-    letter-spacing: -0.01em;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
   }
 
   ::selection {
@@ -75,33 +71,50 @@
     color: var(--color-navy-deep);
   }
 
-  a {
-    text-underline-offset: 0.25em;
-  }
+  a { text-underline-offset: 0.25em; }
 }
 
-/* ----------------------------- Motifs ----------------------------- */
+/* Global film-grain — adds richness without distraction */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-/* Small-caps gold eyebrow label */
+/* ----------------------------- Gold foil ----------------------------- */
+.text-foil {
+  background: linear-gradient(100deg, #9c7a2e 0%, #e6cf93 38%, #c9a24b 60%, #f1e3bd 78%, #a9842f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bg-foil {
+  background: linear-gradient(135deg, #936f24 0%, #c9a24b 42%, #e6cf93 70%, #b48a32 100%);
+}
+
+/* ----------------------------- Inscriptional eyebrow ----------------------------- */
 .eyebrow {
-  font-family: var(--font-body);
+  font-family: var(--font-inscribe);
   text-transform: uppercase;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.3em;
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--color-gold-deep);
 }
-.eyebrow--light {
-  color: var(--color-gold-light);
-}
+.eyebrow--light { color: var(--color-gold-light); }
 
-/* Thin gold rule with a centred lozenge */
+/* ----------------------------- Ornamental rules ----------------------------- */
 .gold-rule {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.85rem;
   color: var(--color-gold);
+  justify-content: center;
 }
 .gold-rule::before,
 .gold-rule::after {
@@ -110,118 +123,75 @@
   width: clamp(2.5rem, 12vw, 5rem);
   background: linear-gradient(to right, transparent, currentColor);
 }
-.gold-rule::after {
-  background: linear-gradient(to left, transparent, currentColor);
-}
+.gold-rule::after { background: linear-gradient(to left, transparent, currentColor); }
 .gold-rule__gem {
-  width: 7px;
-  height: 7px;
-  rotate: 45deg;
-  border: 1px solid currentColor;
+  width: 7px; height: 7px; rotate: 45deg; border: 1px solid currentColor;
 }
-.gold-rule--start {
-  justify-content: flex-start;
-}
-.gold-rule--start::before {
-  display: none;
+.gold-rule--start { justify-content: flex-start; }
+.gold-rule--start::before { display: none; }
+
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,162,75,0.5), transparent);
 }
 
-/* Faint parchment grain + heraldic wash */
+/* ----------------------------- Textures ----------------------------- */
 .texture-parchment {
   background-image:
-    radial-gradient(circle at 18% 12%, rgba(201, 162, 75, 0.06), transparent 42%),
-    radial-gradient(circle at 84% 88%, rgba(110, 20, 35, 0.05), transparent 46%);
+    radial-gradient(circle at 16% 8%, rgba(201, 162, 75, 0.07), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(110, 20, 35, 0.05), transparent 44%);
 }
-
-/* Subtle saltire watermark for dark sections */
 .texture-saltire {
   background-image:
-    linear-gradient(135deg, transparent 49.5%, rgba(201, 162, 75, 0.05) 49.5%, rgba(201, 162, 75, 0.05) 50.5%, transparent 50.5%),
-    linear-gradient(45deg, transparent 49.5%, rgba(201, 162, 75, 0.05) 49.5%, rgba(201, 162, 75, 0.05) 50.5%, transparent 50.5%);
-  background-size: 120px 120px;
+    linear-gradient(135deg, transparent 49.6%, rgba(201, 162, 75, 0.05) 49.6%, rgba(201, 162, 75, 0.05) 50.4%, transparent 50.4%),
+    linear-gradient(45deg, transparent 49.6%, rgba(201, 162, 75, 0.05) 49.6%, rgba(201, 162, 75, 0.05) 50.4%, transparent 50.4%);
+  background-size: 140px 140px;
 }
 
-/* Long-form heritage prose */
-.prose-heritage {
-  color: var(--color-ink-soft);
-}
-.prose-heritage p {
-  margin-bottom: 1.25rem;
-  max-width: 68ch;
-}
+/* ----------------------------- Editorial long-form ----------------------------- */
+.prose-heritage { color: var(--color-ink-soft); }
+.prose-heritage p { margin-bottom: 1.35rem; }
 .prose-heritage h2 {
-  margin-top: 2.75rem;
-  margin-bottom: 1rem;
-  font-size: 1.85rem;
+  margin-top: 3rem; margin-bottom: 1rem;
+  font-family: var(--font-inscribe);
+  font-size: 1.45rem; letter-spacing: 0.02em; color: var(--color-navy);
 }
-.prose-heritage h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.6rem;
-  font-size: 1.3rem;
-  color: var(--color-oxblood-deep);
-}
-.prose-heritage strong {
-  color: var(--color-navy);
-  font-weight: 600;
-}
-.prose-heritage a {
-  color: var(--color-oxblood);
-  text-decoration: underline;
-  text-decoration-color: rgba(201, 162, 75, 0.6);
-}
+.prose-heritage h3 { margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.3rem; color: var(--color-oxblood-deep); }
+.prose-heritage strong { color: var(--color-navy); font-weight: 600; }
+.prose-heritage a { color: var(--color-oxblood); text-decoration: underline; text-decoration-color: rgba(201,162,75,0.6); }
 
-/* Drop cap for the first paragraph of a long page */
 .dropcap::first-letter {
   font-family: var(--font-display);
-  font-size: 3.6rem;
-  line-height: 0.8;
+  font-size: 4.6rem;
+  line-height: 0.74;
   float: left;
-  margin: 0.1em 0.12em 0 0;
+  margin: 0.06em 0.1em 0 0;
   color: var(--color-oxblood);
+  font-weight: 500;
 }
 
-/* Animated underline for nav links */
-.nav-link {
-  position: relative;
-}
+/* ----------------------------- Nav underline ----------------------------- */
+.nav-link { position: relative; }
 .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  height: 1px;
-  width: 100%;
-  background: var(--color-gold);
-  transform: scaleX(0);
-  transform-origin: right;
+  content: ""; position: absolute; left: 0; bottom: -4px; height: 1px; width: 100%;
+  background: var(--color-gold); transform: scaleX(0); transform-origin: right;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .nav-link:hover::after,
-.nav-link[data-active="true"]::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
+.nav-link[data-active="true"]::after { transform: scaleX(1); transform-origin: left; }
 
-/* Pure-CSS entrance (no JS dependency) — used for above-the-fold hero */
+/* ----------------------------- Entrance (CSS, no JS) ----------------------------- */
 @keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(26px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
 }
-.rise {
-  animation: rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+.rise { animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@keyframes seal-spin {
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rise {
-    animation: none;
-  }
-  html {
-    scroll-behavior: auto;
-  }
+  .rise { animation: none; }
+  html { scroll-behavior: auto; }
 }

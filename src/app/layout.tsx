@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant_Garamond, EB_Garamond } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, EB_Garamond, Cinzel } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -25,6 +25,13 @@ const ebGaramond = EB_Garamond({
   display: "swap",
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -59,7 +66,7 @@ export default function RootLayout({
     <html
       lang="en-GB"
       data-scroll-behavior="smooth"
-      className={`${playfair.variable} ${cormorant.variable} ${ebGaramond.variable} h-full antialiased`}
+      className={`${playfair.variable} ${cormorant.variable} ${ebGaramond.variable} ${cinzel.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-parchment text-ink">
         <SiteHeader />
