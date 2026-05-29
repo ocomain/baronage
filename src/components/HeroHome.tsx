@@ -1,0 +1,109 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Seal } from "./Seal";
+import { ButtonLink, Container } from "./primitives";
+
+const HERO_IMG =
+  "https://images.unsplash.com/photo-1458413111252-87446cbff277?auto=format&fit=crop&w=2400&q=80";
+
+export function HeroHome() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1.12, 1.28]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -90]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
+
+  return (
+    <section
+      ref={ref}
+      className="relative isolate flex min-h-screen items-center overflow-hidden bg-navy-deep text-parchment-50"
+    >
+      {/* Parallax photograph */}
+      <motion.div
+        className="absolute inset-0 -z-20 bg-cover bg-center"
+        style={{ backgroundImage: `url('${HERO_IMG}')`, y: bgY, scale: bgScale }}
+        aria-hidden
+      />
+      {/* Cinematic grade */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(125% 85% at 50% 12%, rgba(10,16,36,0.35), rgba(10,16,36,0.82) 60%, rgba(7,11,26,0.97)), linear-gradient(to bottom, rgba(7,11,26,0.55), rgba(7,11,26,0.6) 40%, rgba(7,11,26,0.98))",
+        }}
+        aria-hidden
+      />
+
+      <motion.div style={{ y: contentY, opacity: contentOpacity }} className="relative w-full">
+        <Container className="py-24 text-center">
+          {/* Masthead */}
+          <div className="rise mx-auto flex max-w-md items-center gap-4 text-gold-light/80">
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-gold/50" />
+            <span className="font-inscribe text-[0.62rem] uppercase tracking-[0.34em]">Edinburgh · Scotland</span>
+            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gold/50" />
+          </div>
+
+          {/* Seal — gentle float */}
+          <div className="rise mt-6 flex justify-center" style={{ animationDelay: "0.06s" }}>
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Seal className="h-48 w-48 drop-shadow-[0_14px_40px_rgba(0,0,0,0.55)] sm:h-60 sm:w-60" />
+            </motion.div>
+          </div>
+
+          <p
+            className="rise mt-8 font-serif text-xl italic text-gold-light sm:text-2xl"
+            style={{ animationDelay: "0.12s" }}
+          >
+            Preserving the noble heritage of Scottish Barons
+          </p>
+
+          <h1
+            className="rise mt-3 font-display font-medium leading-[0.95] tracking-tight text-parchment-50"
+            style={{ animationDelay: "0.18s", fontSize: "clamp(2.75rem, 8.5vw, 6.75rem)" }}
+          >
+            The Baronage <span className="font-serif font-normal italic text-gold-light">of</span> Scotland
+          </h1>
+
+          <p
+            className="rise mx-auto mt-8 max-w-xl text-lg leading-relaxed text-parchment-200/85"
+            style={{ animationDelay: "0.26s" }}
+          >
+            One of the oldest noble classes in Scotland — predating the peerage and part of the historic Three Estates.
+          </p>
+
+          <div
+            className="rise mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            style={{ animationDelay: "0.34s" }}
+          >
+            <ButtonLink href="/the-roll" variant="gold">
+              Verify on the Roll
+            </ButtonLink>
+            <ButtonLink href="/history" variant="outlineLight">
+              Discover the heritage
+            </ButtonLink>
+          </div>
+        </Container>
+      </motion.div>
+
+      {/* Bottom motto + scroll cue */}
+      <div className="absolute inset-x-0 bottom-7 flex flex-col items-center gap-3">
+        <p className="font-inscribe text-[0.6rem] uppercase tracking-[0.4em] text-gold/55">
+          In Liberam Baroniam · Per Cartas Nostras
+        </p>
+        <motion.span
+          className="h-8 w-px bg-gradient-to-b from-gold/0 to-gold/70"
+          animate={{ scaleY: [0.4, 1, 0.4], opacity: [0.3, 1, 0.3] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+          style={{ transformOrigin: "top" }}
+        />
+      </div>
+    </section>
+  );
+}
