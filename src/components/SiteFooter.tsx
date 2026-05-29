@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8">
         <div className="flex flex-col items-center text-center">
           <Seal className="h-16 w-16" />
-          <p className="mt-4 font-display text-3xl text-parchment-50">The Baronage of Scotland Association</p>
+          <p className="mt-4 font-display text-3xl text-parchment-50">Baronage of Scotland Association</p>
           <p className="mt-3 max-w-md font-serif text-lg italic text-parchment-200/70">{site.tagline}</p>
           <GoldRule className="mt-6" />
         </div>
