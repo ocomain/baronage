@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Seal } from "./Seal";
-import { GoldRule } from "./primitives";
+import { GoldRule, ExternalArrow } from "./primitives";
 import { navLinks, site, ROLL_URL } from "@/lib/site";
 
 export function SiteFooter() {
@@ -61,15 +61,18 @@ export function SiteFooter() {
           <div>
             <h3 className="eyebrow eyebrow--light">The Roll</h3>
             <p className="mt-4 text-sm leading-relaxed text-parchment-200/70">
-              An open, verified register of the Baronage of Scotland — free for life to verify an entry.
+              The Roll is a separate, public register at roll.baronage.com — free, for life, to verify an entry. Opens
+              in a new window.
             </p>
             <a
               href={ROLL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
+              title="Opens the Roll register (roll.baronage.com) in a new window"
+              className="mt-4 inline-flex items-center gap-1.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
             >
-              Verify a title →
+              Verify a title
+              <ExternalArrow className="h-3 w-3" />
             </a>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Wordmark } from "./Wordmark";
+import { ExternalArrow } from "./primitives";
 import { navLinks, site, ROLL_URL } from "@/lib/site";
 
 function useScrolled(threshold = 12) {
@@ -59,9 +60,11 @@ export function SiteHeader() {
               href={ROLL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-sm bg-gold px-5 py-3 font-sans text-[0.6rem] font-medium uppercase tracking-[0.2em] text-navy-deep transition-colors hover:bg-gold-light lg:inline-flex"
+              title="Opens the Roll register (roll.baronage.com) in a new window"
+              className="hidden items-center gap-1.5 rounded-sm bg-gold px-5 py-3 font-sans text-[0.6rem] font-medium uppercase tracking-[0.2em] text-navy-deep transition-colors hover:bg-gold-light lg:inline-flex"
             >
               Verify on the Roll
+              <ExternalArrow className="h-3 w-3" />
             </a>
             <button
               type="button"
