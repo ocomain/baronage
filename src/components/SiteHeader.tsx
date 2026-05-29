@@ -50,8 +50,8 @@ export function SiteHeader() {
         }`}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-8">
-          <Link href="/" aria-label="Baronage of Scotland — home" className="text-navy">
-            <Wordmark crestClassName="text-gold-deep" crestSize={scrolled ? 34 : 40} />
+          <Link href="/" aria-label="Baronage of Scotland Association — home" className="text-navy">
+            <Wordmark />
           </Link>
 
           <div className="flex items-center gap-3">

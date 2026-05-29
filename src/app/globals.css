@@ -27,12 +27,12 @@
   --color-gold-light: #e6cf93;
   --color-gold-deep: #936f24;
 
-  /* Fonts — mapped to next/font CSS variables set in layout.tsx */
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-inscribe: var(--font-cinzel), "Trajan Pro", Georgia, serif;
+  /* Fonts — matched to roll.baronage.com: Cormorant Garamond (display) + Quicksand (sans) */
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
   --font-serif: var(--font-cormorant), Georgia, serif;
-  --font-body: var(--font-ebgaramond), Georgia, serif;
-  --font-sans: var(--font-jost), ui-sans-serif, system-ui, "Helvetica Neue", sans-serif;
+  --font-inscribe: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
 
   --shadow-heritage: 0 30px 80px -36px rgba(10, 16, 36, 0.55);
 }
@@ -61,10 +61,10 @@
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-navy);
-    line-height: 1.04;
-    letter-spacing: -0.015em;
+    line-height: 1.05;
+    letter-spacing: 0;
   }
 
   ::selection {
