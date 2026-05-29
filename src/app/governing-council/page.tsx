@@ -15,7 +15,7 @@ const members: Member[] = [
   { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: "/council/balvaird.avif", pos: "center 25%" },
   { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of the Name Irvine", img: "/council/Irvine.jpg", pos: "center 20%" },
   { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist, Irish Clan Ó Comáin", img: "/council/kinfauns.jpg", pos: "center 18%" },
-  { mark: "M", name: "Gordon Macduff", also: null, img: null },
+  { mark: "M", name: "Gordon MacGregor, Esq", also: "Genealogist and author of the Red Book of Scotland", img: null },
 ];
 
 const stewardship = [
@@ -74,11 +74,11 @@ export default function GoverningCouncilPage() {
               <GoldRule className="mt-6" />
             </div>
           </Reveal>
-          <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-14 sm:grid-cols-2">
             {members.map((m, i) => (
-              <Reveal key={m.mark} delay={(i % 4) * 0.08}>
+              <Reveal key={m.mark} delay={(i % 2) * 0.1}>
                 <figure className="text-center">
-                  <div className="relative mx-auto aspect-[3/4] w-full max-w-[14rem]">
+                  <div className="relative mx-auto aspect-[3/4] w-full max-w-[18rem]">
                     <div className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/40" aria-hidden />
                     <div className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire">
                       {m.img ? (
