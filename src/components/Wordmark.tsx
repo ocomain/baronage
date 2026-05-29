@@ -1,38 +1,11 @@
-import { Crest } from "./Crest";
-
-type WordmarkProps = {
-  /** "row" for header lockup, "stack" for hero/footer */
-  layout?: "row" | "stack";
-  className?: string;
-  crestClassName?: string;
-  /** size of the crest in px */
-  crestSize?: number;
-};
-
-export function Wordmark({
-  layout = "row",
-  className = "",
-  crestClassName = "text-gold",
-  crestSize = 40,
-}: WordmarkProps) {
-  if (layout === "stack") {
-    return (
-      <span className={`flex flex-col items-center text-center ${className}`}>
-        <Crest className={crestClassName} style={{ width: crestSize, height: (crestSize * 112) / 96 }} />
-        <span className="mt-4 font-display text-2xl leading-none tracking-tight sm:text-3xl">
-          The Baronage of Scotland
-        </span>
-        <span className="eyebrow mt-2 text-[0.6rem]">Association</span>
-      </span>
-    );
-  }
-
+/* The Association's primary logo (matches roll.baronage.com) + "Association" lockup. */
+export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`flex items-center gap-3 ${className}`}>
-      <Crest className={crestClassName} style={{ width: crestSize, height: (crestSize * 112) / 96 }} />
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-lg tracking-tight sm:text-xl">The Baronage of Scotland</span>
-        <span className="eyebrow mt-1 text-[0.55rem]">Association</span>
+    <span className={`flex flex-col gap-1 ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/logo.png" alt="Baronage of Scotland" className="h-7 w-auto sm:h-8" />
+      <span className="pl-0.5 font-sans text-[0.56rem] font-semibold uppercase tracking-[0.34em] text-gold-deep">
+        Association
       </span>
     </span>
   );

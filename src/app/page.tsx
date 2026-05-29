@@ -4,8 +4,8 @@ import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1458413111252-87446cbff277?auto=format&fit=crop&w=2400&q=80";
+const HISTORY_IMG =
+  "https://images.unsplash.com/photo-1732008209481-3f5eed6b4ab5?auto=format&fit=crop&w=1600&q=80";
 
 const pillars = [
   {
@@ -141,7 +141,7 @@ export default function HomePage() {
                 <div
                   className="aspect-[4/5] w-full bg-cover bg-center"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(10,16,36,0.3), rgba(10,16,36,0.5)), url('${HERO_IMG}')`,
+                    backgroundImage: `linear-gradient(rgba(10,16,36,0.12), rgba(10,16,36,0.3)), url('${HISTORY_IMG}')`,
                   }}
                   role="img"
                   aria-label="A Scottish castle at dusk"

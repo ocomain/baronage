@@ -6,7 +6,7 @@ import { Seal } from "./Seal";
 import { ButtonLink, Container } from "./primitives";
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1458413111252-87446cbff277?auto=format&fit=crop&w=2400&q=80";
+  "https://images.unsplash.com/photo-1651145447308-9cb5670705e9?auto=format&fit=crop&w=2400&q=80";
 
 export function HeroHome() {
   const ref = useRef<HTMLElement>(null);
@@ -33,7 +33,7 @@ export function HeroHome() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(125% 85% at 50% 12%, rgba(10,16,36,0.35), rgba(10,16,36,0.82) 60%, rgba(7,11,26,0.97)), linear-gradient(to bottom, rgba(7,11,26,0.55), rgba(7,11,26,0.6) 40%, rgba(7,11,26,0.98))",
+            "linear-gradient(180deg, rgba(8,12,28,0.62) 0%, rgba(8,12,28,0.34) 34%, rgba(8,12,28,0.55) 66%, rgba(8,12,28,0.95) 100%)",
         }}
         aria-hidden
       />
@@ -70,10 +70,16 @@ export function HeroHome() {
           >
             The Baronage <span className="font-serif font-normal italic text-gold-light">of</span> Scotland
           </h1>
+          <p
+            className="rise mt-3 font-sans text-xs uppercase tracking-[0.5em] text-gold-light/90 sm:text-sm"
+            style={{ animationDelay: "0.22s" }}
+          >
+            Association
+          </p>
 
           <p
             className="rise mx-auto mt-8 max-w-xl text-lg leading-relaxed text-parchment-200/85"
-            style={{ animationDelay: "0.26s" }}
+            style={{ animationDelay: "0.3s" }}
           >
             One of the oldest noble classes in Scotland — predating the peerage and part of the historic Three Estates.
           </p>
