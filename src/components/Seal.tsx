@@ -60,10 +60,10 @@ export function Seal({
         fill={`url(#${gold})`}
       />
 
-      {/* Side lozenges separating the motto */}
+      {/* Side crosses separating the motto */}
       <g fill={`url(#${gold})`}>
-        <rect x="25" y="97" width="6" height="6" transform="rotate(45 28 100)" />
-        <rect x="169" y="97" width="6" height="6" transform="rotate(45 172 100)" />
+        <path d="M27 95.5h2v3h3v2h-3v3h-2v-3h-3v-2h3z" />
+        <path d="M171 95.5h2v3h3v2h-3v3h-2v-3h-3v-2h3z" />
       </g>
 
       {/* Circular motto */}

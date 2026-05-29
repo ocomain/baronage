@@ -33,7 +33,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50">
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-2 text-[0.7rem] tracking-[0.18em] uppercase">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
           <span>{site.established}</span>
           <a href={`mailto:${site.email}`} className="nav-link transition-colors hover:text-gold">
             {site.email}
@@ -57,7 +57,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3">
             <Link
               href="/the-roll"
-              className="hidden rounded-sm bg-gold px-5 py-3 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-navy-deep transition-colors hover:bg-gold-light lg:inline-flex"
+              className="hidden rounded-sm bg-gold px-5 py-3 font-sans text-[0.6rem] font-medium uppercase tracking-[0.2em] text-navy-deep transition-colors hover:bg-gold-light lg:inline-flex"
             >
               Verify on the Roll
             </Link>
@@ -85,8 +85,8 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               data-active={isActive(link.href)}
-              className={`nav-link font-body text-[0.95rem] tracking-wide transition-colors ${
-                isActive(link.href) ? "text-oxblood" : "text-navy/80 hover:text-navy"
+              className={`nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
+                isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
               }`}
             >
               {link.label}

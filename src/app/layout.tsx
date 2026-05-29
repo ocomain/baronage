@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant_Garamond, EB_Garamond, Cinzel } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, EB_Garamond, Cinzel, Jost } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -34,6 +34,13 @@ const cinzel = Cinzel({
   weight: ["400", "500", "600", "700"],
 });
 
+const jost = Jost({
+  subsets: ["latin"],
+  variable: "--font-jost",
+  display: "swap",
+  weight: ["300", "400", "500", "600"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://baronage.com"),
   title: {
@@ -66,7 +73,7 @@ export default function RootLayout({
     <html
       lang="en-GB"
       data-scroll-behavior="smooth"
-      className={`${playfair.variable} ${cormorant.variable} ${ebGaramond.variable} ${cinzel.variable} h-full antialiased`}
+      className={`${playfair.variable} ${cormorant.variable} ${ebGaramond.variable} ${cinzel.variable} ${jost.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-parchment text-ink">
         <SiteHeader />
