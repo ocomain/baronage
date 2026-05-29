@@ -9,11 +9,13 @@ export const metadata: Metadata = {
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",
 };
 
-const members = [
-  { mark: "B", full: "Brady, Baron of Balvaird" },
-  { mark: "D", full: "Alexander, Baron of Drum, Chief of the Name Irvine" },
-  { mark: "K", full: "Antoin, Younger of Kinfauns, Tanist, Irish Clan Ó Comáin" },
-  { mark: "M", full: "Gordon Macduff" },
+type Member = { mark: string; name: string; also: string | null; img: string | null };
+
+const members: Member[] = [
+  { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: null },
+  { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of the Name Irvine", img: null },
+  { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist, Irish Clan Ó Comáin", img: null },
+  { mark: "M", name: "Gordon Macduff", also: null, img: null },
 ];
 
 const stewardship = [
@@ -72,16 +74,29 @@ export default function GoverningCouncilPage() {
               <GoldRule className="mt-6" />
             </div>
           </Reveal>
-          <div className="mx-auto mt-14 max-w-3xl divide-y divide-navy/15 border-y border-navy/15">
+          <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
             {members.map((m, i) => (
-              <Reveal key={m.mark} delay={i * 0.06}>
-                <div className="flex items-center gap-5 py-6 sm:gap-7 sm:py-7">
-                  <span className="relative flex h-14 w-14 flex-none items-center justify-center rounded-full border border-gold/50 bg-navy sm:h-16 sm:w-16">
-                    <span className="absolute inset-1 rounded-full border border-gold/25" aria-hidden />
-                    <span className="font-inscribe text-xl text-gold-light sm:text-2xl">{m.mark}</span>
-                  </span>
-                  <p className="font-display text-xl leading-snug text-navy sm:text-[1.7rem]">{m.full}</p>
-                </div>
+              <Reveal key={m.mark} delay={(i % 4) * 0.08}>
+                <figure className="text-center">
+                  <div className="relative mx-auto aspect-[3/4] w-full max-w-[14rem]">
+                    <div className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/40" aria-hidden />
+                    <div className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire">
+                      {m.img ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={m.img} alt={m.name} className="h-full w-full object-cover" />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center font-display text-6xl text-gold-light/70">
+                          {m.mark}
+                        </span>
+                      )}
+                      <div className="pointer-events-none absolute inset-3 border border-gold/20" aria-hidden />
+                    </div>
+                  </div>
+                  <figcaption className="mt-6">
+                    <h3 className="font-display text-xl leading-snug text-navy">{m.name}</h3>
+                    {m.also && <p className="mt-1 font-serif text-base italic text-gold-deep">{m.also}</p>}
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>

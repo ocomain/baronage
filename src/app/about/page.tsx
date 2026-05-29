@@ -6,7 +6,7 @@ import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/comp
 export const metadata: Metadata = {
   title: "About the Association",
   description:
-    "The Baronage of Scotland Association is a non-profit honourable body owned by its members — preserving the rights, heritage and dignity of Scottish Barons.",
+    "Baronage of Scotland Association is a non-profit honourable body owned by its members — preserving the rights, heritage and dignity of Scottish Barons.",
 };
 
 const mandate = [
@@ -96,7 +96,7 @@ export default function AboutPage() {
               <h3 className="text-2xl text-navy">Legal Status</h3>
               <GoldRule className="mt-5" />
               <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-ink-soft">
-                The Baronage of Scotland Association is a non-profit honourable body owned by its members — not a
+                Baronage of Scotland Association is a non-profit honourable body owned by its members — not a
                 charity. A separate, independent charitable entity is being formed for donations from barons to good
                 causes, in collaboration with other stakeholders.
               </p>

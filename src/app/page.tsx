@@ -57,7 +57,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal className="lg:col-span-8" delay={0.1}>
               <p className="dropcap font-serif text-2xl leading-[1.5] text-ink sm:text-[1.7rem]">
-                The Baronage of Scotland Association is dedicated to the advocacy, legal protection and principled
+                Baronage of Scotland Association is dedicated to the advocacy, legal protection and principled
                 stewardship of baronial titles — one of the historic Three Estates of Scotland. We leverage the legacy
                 of the baronage as a force for good, much as the barons who sealed the Declaration of Arbroath in 1320.
               </p>

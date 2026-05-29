@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · Baronage of Scotland Association",
   },
   description:
-    "The Baronage of Scotland Association preserves the historical rights, heritage and dignity of Scottish Barons, and maintains the Roll of Scottish Barons — an open, verified register of titles.",
+    "Baronage of Scotland Association preserves the historical rights, heritage and dignity of Scottish Barons, and maintains the Roll of Scottish Barons — an open, verified register of titles.",
   keywords: [
     "Baronage of Scotland Association",
     "Scottish Barons",

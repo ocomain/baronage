@@ -69,7 +69,7 @@ export function HeroHome() {
             className="rise mt-3 font-display font-medium leading-[0.95] tracking-tight text-parchment-50"
             style={{ animationDelay: "0.18s", fontSize: "clamp(2.75rem, 8.5vw, 6.75rem)" }}
           >
-            The Baronage <span className="font-serif font-normal italic text-gold-light">of</span> Scotland
+            Baronage <span className="font-serif font-normal italic text-gold-light">of</span> Scotland
           </h1>
           <p
             className="rise mt-3 font-sans text-xs uppercase tracking-[0.5em] text-gold-light/90 sm:text-sm"
