@@ -94,7 +94,11 @@ export default function GoverningCouncilPage() {
                   </div>
                   <figcaption className="mt-6">
                     <h3 className="font-display text-xl leading-snug text-navy">{m.name}</h3>
-                    {m.also && <p className="mt-1 font-serif text-base italic text-gold-deep">{m.also}</p>}
+                    {m.also && (
+                      <p className="mt-2 font-serif text-2xl italic leading-snug text-gold-deep sm:text-[1.7rem]">
+                        {m.also}
+                      </p>
+                    )}
                   </figcaption>
                 </figure>
               </Reveal>
