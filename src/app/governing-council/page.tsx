@@ -9,12 +9,12 @@ export const metadata: Metadata = {
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",
 };
 
-type Member = { mark: string; name: string; also: string | null; img: string | null };
+type Member = { mark: string; name: string; also: string | null; img: string | null; pos?: string };
 
 const members: Member[] = [
-  { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: null },
-  { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of the Name Irvine", img: null },
-  { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist, Irish Clan Ó Comáin", img: null },
+  { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: "/council/balvaird.avif", pos: "center 25%" },
+  { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of the Name Irvine", img: "/council/Irvine.jpg", pos: "center 20%" },
+  { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist, Irish Clan Ó Comáin", img: "/council/kinfauns.jpg", pos: "center 18%" },
   { mark: "M", name: "Gordon Macduff", also: null, img: null },
 ];
 
@@ -83,7 +83,12 @@ export default function GoverningCouncilPage() {
                     <div className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire">
                       {m.img ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={m.img} alt={m.name} className="h-full w-full object-cover" />
+                        <img
+                          src={m.img}
+                          alt={m.name}
+                          className="h-full w-full object-cover"
+                          style={{ objectPosition: m.pos ?? "center" }}
+                        />
                       ) : (
                         <span className="flex h-full w-full items-center justify-center font-display text-6xl text-gold-light/70">
                           {m.mark}
@@ -93,11 +98,9 @@ export default function GoverningCouncilPage() {
                     </div>
                   </div>
                   <figcaption className="mt-6">
-                    <h3 className="font-display text-xl leading-snug text-navy">{m.name}</h3>
+                    <h3 className="font-display text-2xl leading-tight text-navy">{m.name}</h3>
                     {m.also && (
-                      <p className="mt-2 font-serif text-2xl italic leading-snug text-gold-deep sm:text-[1.7rem]">
-                        {m.also}
-                      </p>
+                      <p className="mt-1.5 font-serif text-lg italic leading-snug text-gold-deep">{m.also}</p>
                     )}
                   </figcaption>
                 </figure>
