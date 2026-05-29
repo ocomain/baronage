@@ -61,8 +61,8 @@ export default function HomePage() {
             <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gold/50" />
           </div>
 
-          <div className="rise mt-10 flex justify-center" style={{ animationDelay: "0.06s" }}>
-            <Seal className="h-32 w-32 sm:h-40 sm:w-40" />
+          <div className="rise mt-6 flex justify-center" style={{ animationDelay: "0.06s" }}>
+            <Seal className="h-48 w-48 drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)] sm:h-60 sm:w-60" />
           </div>
 
           <p
