@@ -9,13 +9,28 @@ export const metadata: Metadata = {
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",
 };
 
-type Member = { mark: string; name: string; also: string | null; img: string | null; pos?: string };
+type Member = {
+  mark: string;
+  name: string;
+  also: string | null;
+  img: string | null;
+  pos?: string;
+  fit?: "cover" | "contain";
+  bg?: string;
+};
 
 const members: Member[] = [
   { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: "/council/balvaird.avif", pos: "center 25%" },
   { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of the Name Irvine", img: "/council/Irvine.jpg", pos: "center 20%" },
   { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist, Irish Clan Ó Comáin", img: "/council/kinfauns.jpg", pos: "center 18%" },
-  { mark: "M", name: "Gordon MacGregor, Esq", also: "Genealogist and author of the Red Book of Scotland", img: null },
+  {
+    mark: "M",
+    name: "Gordon MacGregor, Esq",
+    also: "Genealogist and author of the Red Book of Scotland",
+    img: "/council/red-book.png",
+    fit: "contain",
+    bg: "#8b1c08",
+  },
 ];
 
 const stewardship = [
@@ -74,21 +89,29 @@ export default function GoverningCouncilPage() {
               <GoldRule className="mt-6" />
             </div>
           </Reveal>
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-14 sm:grid-cols-2">
+          <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-14">
             {members.map((m, i) => (
-              <Reveal key={m.mark} delay={(i % 2) * 0.1}>
+              <Reveal key={m.mark} delay={(i % 3) * 0.08} className="w-full sm:w-[46%] lg:w-[30%]">
                 <figure className="text-center">
                   <div className="relative mx-auto aspect-[3/4] w-full max-w-[18rem]">
                     <div className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/40" aria-hidden />
-                    <div className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire">
+                    <div
+                      className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire"
+                      style={m.bg ? { backgroundColor: m.bg } : undefined}
+                    >
                       {m.img ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={m.img}
-                          alt={m.name}
-                          className="h-full w-full object-cover"
-                          style={{ objectPosition: m.pos ?? "center" }}
-                        />
+                        m.fit === "contain" ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={m.img} alt={m.name} className="h-full w-full object-contain p-4" />
+                        ) : (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={m.img}
+                            alt={m.name}
+                            className="h-full w-full object-cover"
+                            style={{ objectPosition: m.pos ?? "center" }}
+                          />
+                        )
                       ) : (
                         <span className="flex h-full w-full items-center justify-center font-display text-6xl text-gold-light/70">
                           {m.mark}
