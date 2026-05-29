@@ -110,6 +110,7 @@ export function ButtonLink({
   className?: string;
 }) {
   const isInternal = href.startsWith("/");
+  const isHttp = href.startsWith("http");
   const cls = `inline-flex cursor-pointer items-center justify-center gap-2 rounded-sm px-8 py-4 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] transition-all duration-300 ${buttonStyles[variant]} ${className}`;
   if (isInternal) {
     return (
@@ -119,7 +120,7 @@ export function ButtonLink({
     );
   }
   return (
-    <a href={href} className={cls}>
+    <a href={href} className={cls} {...(isHttp ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
       {children}
     </a>
   );

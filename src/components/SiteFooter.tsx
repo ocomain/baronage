@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Seal } from "./Seal";
 import { GoldRule } from "./primitives";
-import { navLinks, site } from "@/lib/site";
+import { navLinks, site, ROLL_URL } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -35,13 +35,26 @@ export function SiteFooter() {
           <nav className="lg:col-span-2">
             <h3 className="eyebrow eyebrow--light">Explore</h3>
             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-gold">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) =>
+                link.external ? (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-gold"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={link.href}>
+                    <Link href={link.href} className="transition-colors hover:text-gold">
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
 
@@ -50,12 +63,14 @@ export function SiteFooter() {
             <p className="mt-4 text-sm leading-relaxed text-parchment-200/70">
               An open, verified register of the Baronage of Scotland — free for life to verify an entry.
             </p>
-            <Link
-              href="/the-roll"
-              className="mt-4 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
+            <a
+              href={ROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
             >
               Verify a title →
-            </Link>
+            </a>
           </div>
         </div>
 

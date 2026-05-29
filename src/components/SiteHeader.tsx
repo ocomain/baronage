@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Wordmark } from "./Wordmark";
-import { navLinks, site } from "@/lib/site";
+import { navLinks, site, ROLL_URL } from "@/lib/site";
 
 function useScrolled(threshold = 12) {
   const [scrolled, setScrolled] = useState(false);
@@ -55,12 +55,14 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/the-roll"
+            <a
+              href={ROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden rounded-sm bg-gold px-5 py-3 font-sans text-[0.6rem] font-medium uppercase tracking-[0.2em] text-navy-deep transition-colors hover:bg-gold-light lg:inline-flex"
             >
               Verify on the Roll
-            </Link>
+            </a>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
@@ -80,18 +82,20 @@ export function SiteHeader() {
 
         {/* Desktop nav row */}
         <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-7 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              data-active={isActive(link.href)}
-              className={`nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
-                isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const cls = `nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
+              isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
+            }`;
+            return link.external ? (
+              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={cls}>
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.href} href={link.href} data-active={isActive(link.href)} className={cls}>
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
 
@@ -116,14 +120,25 @@ export function SiteHeader() {
               <ul className="flex flex-col divide-y divide-parchment-300/70">
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={`block py-3.5 font-display text-lg ${
-                        isActive(link.href) ? "text-oxblood" : "text-navy"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block py-3.5 font-display text-lg text-navy"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={`block py-3.5 font-display text-lg ${
+                          isActive(link.href) ? "text-oxblood" : "text-navy"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

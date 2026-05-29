@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Seal } from "./Seal";
 import { ButtonLink, Container } from "./primitives";
+import { ROLL_URL } from "@/lib/site";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1651145447308-9cb5670705e9?auto=format&fit=crop&w=2400&q=80";
@@ -88,7 +89,7 @@ export function HeroHome() {
             className="rise mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
             style={{ animationDelay: "0.34s" }}
           >
-            <ButtonLink href="/the-roll" variant="gold">
+            <ButtonLink href={ROLL_URL} variant="gold">
               Verify on the Roll
             </ButtonLink>
             <ButtonLink href="/history" variant="outlineLight">
