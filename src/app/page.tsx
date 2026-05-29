@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroHome } from "@/components/HeroHome";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
@@ -37,75 +38,7 @@ const timeline = [
 export default function HomePage() {
   return (
     <>
-      {/* ============================== HERO ============================== */}
-      <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-navy-deep text-parchment-50">
-        <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
-          style={{ backgroundImage: `url('${HERO_IMG}')` }}
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(120% 80% at 50% 18%, rgba(10,16,36,0.45), rgba(10,16,36,0.82) 62%, rgba(8,12,28,0.96)), linear-gradient(to bottom, rgba(10,16,36,0.5), rgba(8,12,28,0.95))",
-          }}
-          aria-hidden
-        />
-
-        <Container className="py-20 text-center">
-          {/* Masthead rule */}
-          <div className="rise mx-auto flex max-w-md items-center gap-4 text-gold-light/80">
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-gold/50" />
-            <span className="font-inscribe text-[0.62rem] uppercase tracking-[0.34em]">Edinburgh · Scotland</span>
-            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gold/50" />
-          </div>
-
-          <div className="rise mt-6 flex justify-center" style={{ animationDelay: "0.06s" }}>
-            <Seal className="h-48 w-48 drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)] sm:h-60 sm:w-60" />
-          </div>
-
-          <p
-            className="rise mt-10 font-serif text-xl italic text-gold-light sm:text-2xl"
-            style={{ animationDelay: "0.12s" }}
-          >
-            Preserving the noble heritage of Scottish Barons
-          </p>
-
-          <h1
-            className="rise mt-3 font-display font-medium leading-[0.98] tracking-tight text-parchment-50"
-            style={{ animationDelay: "0.18s", fontSize: "clamp(2.75rem, 8.5vw, 6.75rem)" }}
-          >
-            The Baronage <span className="font-serif italic font-normal text-gold-light">of</span> Scotland
-          </h1>
-
-          <p
-            className="rise mx-auto mt-8 max-w-xl text-lg leading-relaxed text-parchment-200/85"
-            style={{ animationDelay: "0.26s" }}
-          >
-            One of the oldest noble classes in Scotland — predating the peerage and part of the historic Three Estates.
-          </p>
-
-          <div
-            className="rise mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-            style={{ animationDelay: "0.34s" }}
-          >
-            <ButtonLink href="/the-roll" variant="gold">
-              Verify on the Roll
-            </ButtonLink>
-            <ButtonLink href="/history" variant="outlineLight">
-              Discover the heritage
-            </ButtonLink>
-          </div>
-        </Container>
-
-        {/* Bottom motto rule */}
-        <div className="absolute inset-x-0 bottom-6 flex justify-center">
-          <p className="font-inscribe text-[0.6rem] uppercase tracking-[0.4em] text-gold/55">
-            In Liberam Baroniam · Per Cartas Nostras
-          </p>
-        </div>
-      </section>
+      <HeroHome />
 
       {/* ============================== MANDATE ============================== */}
       <Section tone="parchment">
@@ -181,8 +114,9 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden bg-navy-deep py-28 text-center text-parchment-50 sm:py-36">
         <div className="absolute inset-0 -z-10 texture-saltire opacity-60" aria-hidden />
         <Seal
-          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 opacity-[0.06]"
+          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 opacity-[0.07]"
           aria-hidden
+          alt=""
         />
         <Container size="prose">
           <Reveal>
@@ -207,7 +141,7 @@ export default function HomePage() {
                 <div
                   className="aspect-[4/5] w-full bg-cover bg-center"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(10,16,36,0.35), rgba(10,16,36,0.55)), url('${HERO_IMG}')`,
+                    backgroundImage: `linear-gradient(rgba(10,16,36,0.3), rgba(10,16,36,0.5)), url('${HERO_IMG}')`,
                   }}
                   role="img"
                   aria-label="A Scottish castle at dusk"
@@ -216,9 +150,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <Eyebrow>A Thousand Years</Eyebrow>
-              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">
-                Defenders of Scottish sovereignty
-              </h2>
+              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Defenders of Scottish sovereignty</h2>
               <p className="mt-6 leading-relaxed text-ink-soft">
                 Scottish barons held their lands directly from the Crown and stood as key defenders of Scotland’s
                 independence. Today the dignity endures as a non-territorial title of honour, protected in Scots law.
