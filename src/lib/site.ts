@@ -14,7 +14,7 @@ export type NavLink = { href: string; label: string; external?: boolean };
 
 /** Primary navigation — mirrors the existing site menu. */
 export const navLinks: NavLink[] = [
-  { href: ROLL_URL, label: "The Roll", external: true },
+  { href: "/the-roll", label: "The Roll" },
   { href: "/history", label: "History" },
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
