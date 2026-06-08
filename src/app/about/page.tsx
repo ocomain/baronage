@@ -15,7 +15,28 @@ const mandate = [
   "Keeper of the open-source verification Roll of Scottish Barons.",
   "Offering barons The Pledge — a pledged bloodline hereditary honour bound by the Baronial Code.",
   "Representing barons in their engagement with government.",
-  "Allying with affiliated baronial and noble bodies, at home and on the Continent.",
+  "Updating baronial descriptors to reflect the law: since the 2000 Act, titles are personal and non-territorial, and the term “feudal” baron is no longer correct for extant baronies.",
+  "Lobbying for HRH the Baron of Renfrew as patron, for a royal warrant recognising the Roll, and for the modern relevance of the Lord Lyon office.",
+  "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
+];
+
+const citations = [
+  {
+    source: "Court of the Lord Lyon · 1943",
+    text: "Finds and Declares that the Barons of Scotland are recognised as a “titled nobility,” of the ancient Feudal Nobility of Scotland.",
+  },
+  {
+    source: "Lord Clyde’s dictum · 1992",
+    text: "A barony falls into the class of noble — as opposed to ignoble — feus: a territorial dignity conferred by the Crown.",
+  },
+  {
+    source: "The Institutional Writers",
+    text: "Craig, Stair and Bankton confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate.",
+  },
+  {
+    source: "Scotland Act 2000",
+    text: "On the abolition of the feudal system, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity, protected in Scots law.",
+  },
 ];
 
 const entities = [
@@ -60,6 +81,15 @@ export default function AboutPage() {
               ))}
             </ul>
           </Reveal>
+          <Reveal>
+            <div className="mt-12 border-l-2 border-gold/60 pl-6">
+              <p className="font-serif text-lg italic leading-relaxed text-oxblood-deep">
+                The heir to the British throne holds the title Baron of Renfrew, and around thirty Scottish clan chiefs
+                are also barons — titles rooted deep in antiquity. As Lord Lyon Sir Thomas Innes of Learney observed,
+                Scottish barons are equivalent to the Continental barons.
+              </p>
+            </div>
+          </Reveal>
         </Container>
       </Section>
 
@@ -83,6 +113,33 @@ export default function AboutPage() {
                   </div>
                   <p className="mt-5 leading-relaxed text-ink-soft">{e.body}</p>
                 </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="navyDeep">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Recognised in Law"
+              title="A noble dignity, affirmed"
+              light
+              intro="The status of the Scottish Baronage is recognised in the nobiliary court, the Court of Session and within UK legal frameworks."
+            />
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {citations.map((c, i) => (
+              <Reveal key={c.source} delay={(i % 2) * 0.1} className="h-full">
+                <figure className="flex h-full flex-col border-l-2 border-gold/60 bg-navy/40 p-7">
+                  <blockquote className="font-serif text-lg italic leading-relaxed text-parchment-100/90">
+                    {c.text}
+                  </blockquote>
+                  <figcaption className="mt-4 font-sans text-xs uppercase tracking-[0.18em] text-gold-light">
+                    {c.source}
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>
