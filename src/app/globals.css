@@ -192,7 +192,27 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
+/* Auto-scrolling marquee — "Tour of the Baronies" */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 64s linear infinite;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rise { animation: none; }
+  .marquee__track { animation: none; }
   html { scroll-behavior: auto; }
 }
