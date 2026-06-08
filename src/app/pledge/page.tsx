@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { Crest } from "@/components/Crest";
+import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "The Oath & The Pledge",
+  title: "The Pledge",
   description:
-    "The Pledge converts a baronial title into a pledged bloodline honour — a family compact of service, sealed by the Baronial Oath.",
+    "The Pledge converts a baronial title into a pledged bloodline honour — a family compact of service, bound by the Baronial Code of Honour.",
 };
 
 const pledgePoints = [
   "A declaration that the barony be preserved within the family line as a hereditary dignity.",
-  "A commitment to uphold the Baronial Code of Honour and to swear the Baronial Oath.",
-  "An optional tithe to a Scottish registered charity, in service to others.",
+  "A commitment to uphold the Baronial Code of Honour, in service to others.",
+  "An optional tithe to a Scottish registered charity, for good causes.",
   "A family compact in honour rather than law — retained with the holder’s will and estate papers.",
 ];
 
-export default function OathPage() {
+export default function PledgePage() {
   return (
     <>
       <PageHero
         eyebrow="A Lasting Commitment"
-        title="The Oath & The Pledge"
+        title="The Pledge"
         intro="An opportunity to convert a baronial title into a pledged bloodline hereditary honour — ensuring legitimacy and principled commitment for future generations."
       />
 
@@ -53,29 +53,18 @@ export default function OathPage() {
         </Container>
       </Section>
 
-      {/* The Oath — presented as a declaration */}
+      {/* The Pledge — presented as a declaration */}
       <Section tone="navy">
         <Container size="prose">
           <Reveal>
             <div className="relative border border-gold/30 bg-navy-deep/60 p-8 text-center sm:p-12">
               <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
-              <Crest className="mx-auto text-gold" style={{ width: 46, height: (46 * 112) / 96 }} />
-              <p className="eyebrow eyebrow--light mt-6">The Baronial Oath</p>
+              <Seal className="mx-auto h-16 w-16" />
+              <p className="eyebrow eyebrow--light mt-6">The Baronial Pledge</p>
               <GoldRule className="mt-5" />
-              <blockquote className="mt-8 space-y-5 font-serif text-lg italic leading-relaxed text-parchment-100/90 sm:text-xl">
-                <p>
-                  “I, Baron of [Title], solemnly swear by my honour and the legacy of the noble baronage to uphold the
-                  principles and duties bestowed upon me as a holder of a title in the Baronage of Scotland.
-                </p>
-                <p>
-                  I pledge to conduct myself with the highest levels of honour, dignity and integrity; to respect the
-                  laws of my country and the rights of others; and to dedicate my efforts to the service of my
-                  community, the baronage and society at large.
-                </p>
-                <p>
-                  I embrace this oath as a lifelong commitment, striving always to bring credit to the baronage, my
-                  family, and my country.”
-                </p>
+              <blockquote className="mt-8 font-serif text-xl italic leading-relaxed text-parchment-100/90 sm:text-2xl">
+                “That my barony be preserved within my family line as a hereditary dignity; that I uphold the Baronial
+                Code of Honour; and that I dedicate my title to the service of others and the betterment of society.”
               </blockquote>
             </div>
           </Reveal>

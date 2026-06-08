@@ -19,9 +19,9 @@ const pillars = [
   },
   {
     numeral: "II",
-    title: "The Pledge & Oath",
-    body: "A pledged bloodline honour — a family compact of service, bound by the Baronial Code and Oath.",
-    href: "/oath",
+    title: "The Pledge",
+    body: "A pledged bloodline honour — a family compact of service, bound by the Baronial Code.",
+    href: "/pledge",
   },
   {
     numeral: "III",
@@ -49,22 +49,29 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-4">
               <div className="lg:sticky lg:top-40">
-                <Eyebrow>Our Mandate</Eyebrow>
+                <Eyebrow>An Ancient Dignity</Eyebrow>
                 <div className="mt-6 h-px w-16 bg-gold/60 lg:h-24 lg:w-px" />
                 <p className="mt-6 font-inscribe text-sm uppercase tracking-[0.2em] text-muted">
-                  An honourable body, owned by its members
+                  Predating the peerage itself
                 </p>
               </div>
             </Reveal>
             <Reveal className="lg:col-span-8" delay={0.1}>
-              <p className="dropcap font-serif text-2xl leading-[1.5] text-ink sm:text-[1.7rem]">
-                Baronage of Scotland Association is dedicated to the advocacy, legal protection and principled
-                stewardship of baronial titles — one of the historic Three Estates of Scotland. We leverage the legacy
-                of the baronage as a force for good, much as the barons who sealed the Declaration of Arbroath in 1320.
+              <p className="dropcap font-serif text-xl leading-[1.6] text-ink sm:text-2xl">
+                Scottish baronies predate the peerage itself, standing among the most ancient noble dignities in the
+                British Isles. Originating in the medieval period, a barony was an estate of land held directly from the
+                Crown, erected into a free barony by Royal Charter — a dignity created not by Parliament but by the
+                sovereign will of the Scottish Crown.
               </p>
-              <div className="mt-10 border-l-2 border-gold/50 pl-6">
-                <p className="font-serif text-xl italic leading-relaxed text-oxblood-deep">
-                  “Central to being a baron is to provide for a better society.”
+              <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+                Unlike the modern peerage, which is primarily a titular and parliamentary distinction, the Scottish
+                Baronage was rooted in territorial jurisdiction. The baron held both the dignity of the title and the
+                legal authority over his lands, often possessing the right of “pit and gallows” — the power of life and
+                death.
+              </p>
+              <div className="mt-9 border-l-2 border-gold/60 pl-6">
+                <p className="font-serif text-xl italic leading-relaxed text-oxblood-deep sm:text-2xl">
+                  Today, the Scottish Baronage is a recognised noble status in Scots law.
                 </p>
               </div>
             </Reveal>
