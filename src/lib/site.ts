@@ -18,7 +18,7 @@ export const navLinks: NavLink[] = [
   { href: "/history", label: "History" },
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
-  { href: "/oath", label: "Oath & Pledge" },
+  { href: "/pledge", label: "The Pledge" },
   { href: "/charitable-trust", label: "Charitable Trust" },
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },

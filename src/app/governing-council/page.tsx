@@ -22,7 +22,7 @@ type Member = {
 const members: Member[] = [
   { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: "/council/balvaird.avif", pos: "center 25%" },
   { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of the Name Irvine", img: "/council/Irvine.jpg", pos: "center 20%" },
-  { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist, Irish Clan Ó Comáin", img: "/council/kinfauns.jpg", pos: "center 18%" },
+  { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist Clan Commane", img: "/council/kinfauns.jpg", pos: "center 18%" },
   {
     mark: "M",
     name: "Gordon MacGregor, Esq",
@@ -89,11 +89,11 @@ export default function GoverningCouncilPage() {
               <GoldRule className="mt-6" />
             </div>
           </Reveal>
-          <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-14">
+          <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4">
             {members.map((m, i) => (
-              <Reveal key={m.mark} delay={(i % 3) * 0.08} className="w-full sm:w-[46%] lg:w-[30%]">
+              <Reveal key={m.mark} delay={(i % 4) * 0.08}>
                 <figure className="text-center">
-                  <div className="relative mx-auto aspect-[3/4] w-full max-w-[18rem]">
+                  <div className="relative mx-auto aspect-[3/4] w-full max-w-[14rem]">
                     <div className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/40" aria-hidden />
                     <div
                       className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire"
@@ -121,9 +121,9 @@ export default function GoverningCouncilPage() {
                     </div>
                   </div>
                   <figcaption className="mt-6">
-                    <h3 className="font-display text-2xl leading-tight text-navy">{m.name}</h3>
+                    <h3 className="font-display text-xl leading-tight text-navy">{m.name}</h3>
                     {m.also && (
-                      <p className="mt-2 font-serif text-2xl italic leading-snug text-gold-deep">{m.also}</p>
+                      <p className="mt-2 font-serif text-lg italic leading-snug text-gold-deep">{m.also}</p>
                     )}
                   </figcaption>
                 </figure>

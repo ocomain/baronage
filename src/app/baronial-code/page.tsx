@@ -76,14 +76,13 @@ export default function BaronialCodePage() {
       <Section tone="navyDeep" className="text-center">
         <Container size="prose">
           <Reveal>
-            <h2 className="text-3xl text-parchment-50 sm:text-4xl">Take the Oath. Make the Pledge.</h2>
+            <h2 className="text-3xl text-parchment-50 sm:text-4xl">Make the Pledge.</h2>
             <p className="mx-auto mt-6 max-w-xl leading-relaxed text-parchment-200/85">
-              The Code is affirmed through the Baronial Oath and The Pledge — a lasting commitment of honour to family,
-              baronage and country.
+              The Code is affirmed through The Pledge — a lasting commitment of honour to family, baronage and country.
             </p>
             <div className="mt-9 flex justify-center">
-              <ButtonLink href="/oath" variant="gold">
-                The Oath & The Pledge
+              <ButtonLink href="/pledge" variant="gold">
+                The Pledge
               </ButtonLink>
             </div>
           </Reveal>
