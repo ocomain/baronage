@@ -209,6 +209,40 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* ============================== FEATURED BARON ============================== */}
+      <Section tone="parchment" className="border-t border-parchment-300/60">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+            <Reveal>
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-sm">
+                <div className="absolute inset-0 translate-x-3 translate-y-3 border border-gold/40" aria-hidden />
+                <div className="relative flex h-full w-full flex-col items-center justify-center bg-navy-deep texture-saltire text-center">
+                  <Seal className="h-28 w-28" />
+                  <p className="mt-6 px-6 font-serif text-lg italic text-parchment-200/80">
+                    Arms of the featured baron
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <Eyebrow>Featured Baron</Eyebrow>
+              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">The Baron of Ardblair and Gask</h2>
+              <GoldRule className="mt-6" align="start" />
+              <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+                Each season we honour a member of the baronage whose stewardship exemplifies the Baronial Code —
+                service, integrity and the preservation of heritage. Their title, like all upon the Roll, is recorded
+                with accuracy and legal precision.
+              </p>
+              <div className="mt-8">
+                <ButtonLink href="/the-roll" variant="outline">
+                  About the Roll
+                </ButtonLink>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </Section>
+
       {/* ============================== CTA ============================== */}
       <Section tone="navy" className="text-center">
         <Container size="prose">
