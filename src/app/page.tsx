@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeroHome } from "@/components/HeroHome";
+import { BaroniesCarousel } from "@/components/BaroniesCarousel";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
@@ -133,6 +134,31 @@ export default function HomePage() {
           </Reveal>
         </Container>
       </section>
+
+      {/* ============================== TOUR OF THE BARONIES ============================== */}
+      <Section tone="parchment">
+        <Container>
+          <Reveal>
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <Eyebrow>From the Roll</Eyebrow>
+                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">A tour of the baronies</h2>
+              </div>
+              <p className="max-w-xs font-serif text-lg italic text-muted">
+                Selected arms from across the Scottish baronage.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+        <Reveal className="mt-14">
+          <BaroniesCarousel />
+        </Reveal>
+        <Container className="mt-14 text-center">
+          <ButtonLink href={ROLL_URL} variant="outline">
+            Explore the Roll
+          </ButtonLink>
+        </Container>
+      </Section>
 
       {/* ============================== HISTORY (asymmetric) ============================== */}
       <Section tone="parchment" className="overflow-hidden">
