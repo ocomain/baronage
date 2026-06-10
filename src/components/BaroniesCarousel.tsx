@@ -19,7 +19,7 @@ const baronies: Barony[] = [
   { dignity: "Lord Baron", name: "Leslie", img: "/arms/leslie.webp" },
   { dignity: "Baron", name: "Bachuil", img: "/arms/bachuil.webp" },
   { dignity: "Baron", name: "Bannockburn", img: "/arms/bannockburn.webp" },
-  { dignity: "Baron", name: "Biggar" },
+  { dignity: "Baron", name: "Biggar", img: "/arms/biggar.webp" },
   { dignity: "Baron", name: "Menie" },
   {
     dignity: "Baron",
@@ -84,7 +84,7 @@ export function BaroniesCarousel() {
         {row.map((b, i) => (
           <figure
             key={`${b.name}-${i}`}
-            className="group mr-6 flex w-56 shrink-0 flex-col items-center rounded-sm border border-parchment-300/70 bg-parchment-50 px-6 pb-6 pt-8 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]"
+            className="group mr-6 flex w-56 shrink-0 flex-col items-center rounded-sm border border-parchment-300/70 bg-parchment-50 px-6 pb-6 pt-8 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]"
             aria-hidden={i >= baronies.length}
           >
             <div className="flex h-44 w-full items-center justify-center">
@@ -94,6 +94,8 @@ export function BaroniesCarousel() {
                   src={b.img}
                   alt={`Coat of arms — ${b.dignity} of ${b.name}`}
                   decoding="async"
+                  width={160}
+                  height={160}
                   className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               ) : (
