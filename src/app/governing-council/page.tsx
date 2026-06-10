@@ -17,6 +17,7 @@ const members: CouncilMember[] = [
     also: null,
     img: "/council/balvaird.avif",
     pos: "center 25%",
+    popPos: "center 12%",
     bio: "Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird is a serial entrepreneur and author — co-founder of six startups and former CEO of TheoremOne, which he grew into a four-hundred-strong global technology consultancy before its merger with Media.Monks. Balvaird is the author of Smaller is Better and an investor in frontier technology through Late Stage Capital. Balvaird succeeded to the barony in 2017 — a title confirmed by James VI in 1624 and recognised by the Lord Lyon in 2020 — and has pledged it as a hereditary title upon the Roll.",
   },
   {
@@ -27,6 +28,7 @@ const members: CouncilMember[] = [
     alsoProminent: true,
     img: "/council/Irvine.jpg",
     pos: "center 20%",
+    popPos: "center 10%",
     bio: "Alexander Irvine of Drum, 27th Baron of Drum succeeded his father in 2019 and is Chief of the Name and Arms of Irvine of Drum. The barony descends from the Royal Charter granted to William de Irwyn by Robert the Bruce in 1323, with Drum Castle in Aberdeenshire its caput for seven centuries. Drum is Patron of the Clan Irwin Association, and the barony is pledged as a hereditary title upon the Roll.",
   },
   {
@@ -36,6 +38,7 @@ const members: CouncilMember[] = [
     also: "Tanist Clan Commane",
     img: "/council/kinfauns.jpg",
     pos: "center 18%",
+    popPos: "center 14%",
     bio: "Antoin Commane, Younger of Kinfauns is heir to the Lordship of Kinfauns — a dignity with origins around 1340, granted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist. Kinfauns’ father has pledged the lordship as a hereditary title upon the Roll.",
   },
   {
