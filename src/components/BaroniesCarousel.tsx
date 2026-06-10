@@ -19,7 +19,6 @@ const baronies: Barony[] = [
     img: "/arms/drum.webp",
     note: "Chief of his Name",
   },
-  { dignity: "Baron", name: "Plean", img: "/arms/plean.webp" },
   { dignity: "Lord Baron", name: "Leslie", img: "/arms/leslie.webp" },
   { dignity: "Baron", name: "Bachuil", img: "/arms/bachuil.webp" },
   { dignity: "Baron", name: "Bannockburn", img: "/arms/bannockburn.webp" },
