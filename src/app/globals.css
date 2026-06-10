@@ -269,3 +269,23 @@ body::before {
   ::-webkit-scrollbar-thumb:hover { background: #d4b46e; }
   html { scrollbar-width: thin; scrollbar-color: #a8843c #0d1430; }
 }
+
+/* Mobile: the supporters rail becomes a native swipe carousel */
+@media (max-width: 639px) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .marquee::-webkit-scrollbar { display: none; }
+  .marquee::before,
+  .marquee::after { display: none; }
+  .marquee__track {
+    animation: none;
+    width: max-content;
+    padding-inline: 1.25rem;
+  }
+  .marquee__track > figure { scroll-snap-align: center; }
+  .marquee__track > figure[aria-hidden="true"] { display: none; }
+}
