@@ -13,6 +13,7 @@ const members: CouncilMember[] = [
   {
     mark: "B",
     name: "Brady, Baron of Balvaird",
+    formal: "The Baron of Balvaird",
     also: null,
     img: "/council/balvaird.avif",
     pos: "center 25%",
@@ -21,6 +22,7 @@ const members: CouncilMember[] = [
   {
     mark: "D",
     name: "Alexander, Baron of Drum",
+    formal: "The Baron of Drum",
     also: "Chief of his Name",
     alsoProminent: true,
     img: "/council/Irvine.jpg",
@@ -30,10 +32,11 @@ const members: CouncilMember[] = [
   {
     mark: "K",
     name: "Antoin, Younger of Kinfauns",
+    formal: "The Younger of Kinfauns",
     also: "Tanist Clan Commane",
     img: "/council/kinfauns.jpg",
     pos: "center 18%",
-    bio: "Antoin Commane, Younger of Kinfauns is heir to the Lordship of Kinfauns — a dignity with origins around 1340, granted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist. His father, Lord Kinfauns, has pledged the lordship as a hereditary title upon the Roll.",
+    bio: "Antoin Commane, Younger of Kinfauns is heir to the Lordship of Kinfauns — a dignity with origins around 1340, granted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist. Kinfauns’ father has pledged the lordship as a hereditary title upon the Roll.",
   },
   {
     mark: "M",
