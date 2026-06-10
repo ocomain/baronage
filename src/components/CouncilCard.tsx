@@ -70,7 +70,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
         <figcaption className="mt-6 sm:mt-5">
           <h3 className="font-display text-3xl leading-tight text-parchment-50 sm:text-xl">{m.name}</h3>
           {m.also && (
-            <p className="mt-2 font-serif text-xl italic leading-snug text-gold-light sm:mt-1.5 sm:text-lg">{m.also}</p>
+            <p className="mt-2 font-serif text-3xl italic leading-snug text-gold-light sm:mt-1.5 sm:text-xl">{m.also}</p>
           )}
           <button
             type="button"
@@ -78,7 +78,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
               e.stopPropagation();
               setOpen(true);
             }}
-            className="mt-3 cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-gold underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold-light"
+            className="mt-4 cursor-pointer border-0 bg-transparent p-0 font-sans text-sm font-semibold uppercase tracking-[0.2em] text-gold-light underline decoration-gold-light/60 decoration-2 underline-offset-4 transition-colors hover:text-parchment-50 sm:text-xs"
           >
             Read bio
           </button>
