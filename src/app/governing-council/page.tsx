@@ -48,6 +48,7 @@ const members: CouncilMember[] = [
     mark: "M",
     name: "Gordon MacGregor, Esq",
     alt: "Gordon MacGregor, genealogist and author of the Red Book of Scotland",
+    link: { href: "https://www.redbookofscotland.co.uk", label: "Red Book ↗" },
     also: "Genealogist and author of the Red Book",
     img: "/council/red-book.png",
     fit: "contain",
