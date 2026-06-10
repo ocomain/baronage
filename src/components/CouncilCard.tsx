@@ -69,11 +69,11 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
           </div>
         </div>
         <figcaption className="mt-6 sm:mt-5">
-          <h3 className="font-display text-3xl leading-tight text-parchment-50 sm:text-2xl">{m.name}</h3>
+          <h3 className="font-display text-3xl leading-tight text-parchment-50 sm:text-xl">{m.name}</h3>
           {m.also && (
             <p
               className={`mt-2 font-serif italic leading-snug text-gold-light sm:mt-1.5 ${
-                m.alsoProminent ? "text-3xl sm:text-2xl" : "text-xl sm:text-lg"
+                m.alsoProminent ? "text-3xl sm:text-xl" : "text-xl sm:text-lg"
               }`}
             >
               {m.also}
