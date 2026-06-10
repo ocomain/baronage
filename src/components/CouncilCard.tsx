@@ -14,6 +14,7 @@ export type CouncilMember = {
   fit?: "cover" | "contain";
   bg?: string;
   bio: string;
+  alsoProminent?: boolean;
 };
 
 /** Council portrait card — tap/click opens a biography pop-up. */
@@ -70,7 +71,13 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
         <figcaption className="mt-6 sm:mt-5">
           <h3 className="font-display text-3xl leading-tight text-parchment-50 sm:text-2xl">{m.name}</h3>
           {m.also && (
-            <p className="mt-2 font-serif text-3xl italic leading-snug text-gold-light sm:mt-1.5 sm:text-2xl">{m.also}</p>
+            <p
+              className={`mt-2 font-serif italic leading-snug text-gold-light sm:mt-1.5 ${
+                m.alsoProminent ? "text-3xl sm:text-2xl" : "text-xl sm:text-lg"
+              }`}
+            >
+              {m.also}
+            </p>
           )}
           <button
             type="button"
