@@ -31,7 +31,7 @@ export function SiteHeader() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className="sticky z-50 bg-parchment-50" style={{ top: "env(safe-area-inset-top, 0px)" }}>
+    <header className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
         <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
