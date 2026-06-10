@@ -103,7 +103,8 @@ export default function RootLayout({
         {/* iOS: solid parchment cap over the status-bar strip — content can never show through */}
         <div
           aria-hidden
-          className="pointer-events-none fixed inset-x-0 top-0 z-[80] h-[env(safe-area-inset-top)] bg-parchment-50"
+          className="pointer-events-none fixed inset-x-0 top-0 z-[80] bg-parchment-50"
+          style={{ height: "env(safe-area-inset-top, 0px)" }}
         />
         <script
           type="application/ld+json"
