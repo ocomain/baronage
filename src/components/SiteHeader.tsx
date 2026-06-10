@@ -122,7 +122,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
             />
             <motion.nav
-              className="fixed inset-x-0 z-40 border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
+              className="fixed inset-x-0 top-[4.75rem] z-40 max-h-[calc(100svh-4.75rem)] overflow-y-auto border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
               initial={{ opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
