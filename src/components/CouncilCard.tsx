@@ -18,6 +18,8 @@ export type CouncilMember = {
   formal?: string;
   /** Full formal name for image alts / structured data */
   alt?: string;
+  /** Optional external link shown beside the bio link */
+  link?: { href: string; label: string };
   /** object-position for the wide pop-up banner (defaults to pos) */
   popPos?: string;
 };
@@ -94,6 +96,17 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
           >
             Read bio
           </button>
+          {m.link && (
+            <a
+              href={m.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="ml-4 mt-4 inline-block font-sans text-sm font-semibold uppercase tracking-[0.2em] text-gold-light underline decoration-gold-light/60 decoration-2 underline-offset-4 transition-colors hover:text-parchment-50 sm:text-xs"
+            >
+              {m.link.label}
+            </a>
+          )}
         </figcaption>
       </figure>
 
