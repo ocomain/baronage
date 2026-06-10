@@ -1,114 +1,71 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { Container, GoldRule, Section } from "@/components/primitives";
-import { site } from "@/lib/site";
+import { Container, Eyebrow, GoldRule, Section, ExternalArrow } from "@/components/primitives";
+import { site, CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Request a Call Back",
   description:
-    "Contact the Baronage of Scotland Association — Secretary, registered office in Edinburgh, and requests for a call back or meeting.",
+    "Book a thirty-minute call with the Secretary of the Baronage of Scotland Association — for membership, the Roll, the Pledge, or the work of the baronage.",
 };
-
-const inputClass =
-  "mt-2 w-full border border-parchment-300 bg-parchment-50 px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted/60 focus:border-gold focus:ring-1 focus:ring-gold/40";
 
 export default function ContactPage() {
   return (
     <>
       <PageHero
         eyebrow="Get in Touch"
-        title="Contact the Association"
-        intro="For membership, the Roll, the Pledge, or the work of the baronage — the Secretary will be glad to hear from you."
+        title="Request a Call Back"
+        intro="The surest way to reach us is to book a thirty-minute call with the Secretary — for membership, the Roll, the Pledge, or the work of the baronage."
+        image="/images/hero-loch-castle.webp"
       />
 
       <Section tone="parchment">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            {/* Details */}
-            <Reveal>
-              <div className="space-y-8">
-                <div>
-                  <h2 className="eyebrow">Secretary</h2>
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="mt-3 block font-display text-2xl text-navy transition-colors hover:text-oxblood"
-                  >
-                    {site.email}
-                  </a>
-                </div>
-                <div>
-                  <h2 className="eyebrow">Registered Office</h2>
-                  <address className="mt-3 not-italic leading-relaxed text-ink-soft">
-                    {site.addressLines.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                </div>
-                <div>
-                  <h2 className="eyebrow">In Person</h2>
-                  <p className="mt-3 leading-relaxed text-ink-soft">
-                    Meeting rooms are available at our Edinburgh address on request.
-                  </p>
-                </div>
-                <GoldRule align="start" />
-              </div>
-            </Reveal>
-
-            {/* Form (Netlify Forms — active once deployed) */}
-            <Reveal delay={0.1}>
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                action="/contact?sent=1"
-                className="border border-parchment-300/70 bg-parchment-50 p-7 sm:p-9"
+        <Container size="prose">
+          <Reveal>
+            <div className="border border-gold/30 bg-parchment-50 p-8 text-center sm:p-12">
+              <Eyebrow>Speak with the Secretary</Eyebrow>
+              <h2 className="mt-4 text-3xl text-navy sm:text-4xl">Book a thirty-minute call</h2>
+              <GoldRule className="mt-6" />
+              <p className="mx-auto mt-6 max-w-xl leading-relaxed text-ink-soft">
+                Choose a time that suits you and we will call you back — to discuss membership, verifying a title on the
+                Roll, the Pledge, or any aspect of the baronage.
+              </p>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-sm bg-gold px-9 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-navy-deep transition-colors hover:bg-gold-light"
               >
-                <input type="hidden" name="form-name" value="contact" />
-                <p className="hidden">
-                  <label>
-                    Do not fill this out: <input name="bot-field" />
-                  </label>
-                </p>
+                Request a Call Back
+                <ExternalArrow className="h-4 w-4" />
+              </a>
+            </div>
+          </Reveal>
 
-                <h2 className="font-display text-2xl text-navy">Send a message</h2>
-                <div className="mt-6 grid gap-5 sm:grid-cols-2">
-                  <label className="block text-sm font-medium text-ink">
-                    Name
-                    <input type="text" name="name" required autoComplete="name" className={inputClass} />
-                  </label>
-                  <label className="block text-sm font-medium text-ink">
-                    Email
-                    <input type="email" name="email" required autoComplete="email" className={inputClass} />
-                  </label>
-                </div>
-                <label className="mt-5 block text-sm font-medium text-ink">
-                  Subject
-                  <input type="text" name="subject" className={inputClass} />
-                </label>
-                <label className="mt-5 block text-sm font-medium text-ink">
-                  Message
-                  <textarea name="message" rows={5} required className={inputClass} />
-                </label>
-                <button
-                  type="submit"
-                  className="mt-7 inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-8 py-3.5 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-navy-deep transition-colors hover:bg-gold-light"
+          <Reveal>
+            <div className="mt-12 grid gap-8 border-t border-parchment-300/70 pt-10 sm:grid-cols-2">
+              <div>
+                <h3 className="eyebrow">Secretary</h3>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="mt-3 block font-display text-xl text-navy transition-colors hover:text-oxblood"
                 >
-                  Send to the Secretary
-                </button>
-                <p className="mt-4 text-xs text-muted">
-                  Or email us directly at{" "}
-                  <a href={`mailto:${site.email}`} className="text-oxblood underline">
-                    {site.email}
-                  </a>
-                  .
-                </p>
-              </form>
-            </Reveal>
-          </div>
+                  {site.email}
+                </a>
+              </div>
+              <div>
+                <h3 className="eyebrow">Registered Office</h3>
+                <address className="mt-3 not-italic leading-relaxed text-ink-soft">
+                  {site.addressLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </address>
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </Section>
     </>

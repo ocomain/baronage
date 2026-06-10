@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section, SectionHeading } from "@/components/primitives";
-import { site } from "@/lib/site";
+import { site, CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Baron’s Charitable Trust",
@@ -38,6 +38,8 @@ export default function CharitableTrustPage() {
         eyebrow="Dedicated to Service & Empowerment"
         title="The Baron’s Charitable Trust"
         intro="With the privilege of a baronial title comes the responsibility to give back — to lead by example and use our influence for the greater good."
+        image="/images/glen-mist.webp"
+        position="center 45%"
       />
 
       <Section tone="parchment">
@@ -105,14 +107,24 @@ export default function CharitableTrustPage() {
           <Reveal>
             <Eyebrow light>In Development</Eyebrow>
             <h2 className="mt-4 text-3xl text-parchment-50 sm:text-4xl">Seeking principal benefactors</h2>
-            <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-parchment-200/85">
-              The Baron’s Charitable Trust is an independent initiative currently in development, intended to apply for
-              charitable status in Scotland subject to regulatory approval. It is entirely distinct from the non-profit
-              Association, and is actively seeking principal benefactors to support its mission.
-            </p>
+            <div className="mx-auto mt-6 max-w-2xl space-y-4 leading-relaxed text-parchment-200/85">
+              <p>
+                The Baron’s Charitable Trust is an independent initiative currently in development, with the intention
+                of a separate entity applying for charitable status in Scotland, subject to regulatory approval.
+              </p>
+              <p>
+                It is being structured to operate with full transparency and accountability, as a separate independent
+                entity, and aims to include all baronage stakeholders. It is actively seeking principal benefactors to
+                support its mission—please get in touch.
+              </p>
+              <p>
+                This prospective trust is entirely distinct from our non-profit Baronage of Scotland Association, which
+                manages The Roll of the Scottish Baronage.
+              </p>
+            </div>
             <div className="mt-9 flex justify-center">
-              <ButtonLink href={`mailto:${site.email}`} variant="gold">
-                Get in touch
+              <ButtonLink href={CALENDLY_URL} variant="gold">
+                Request a Call Back
               </ButtonLink>
             </div>
           </Reveal>

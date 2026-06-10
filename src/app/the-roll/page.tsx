@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, Eyebrow, GoldRule, Section, SectionHeading } from "@/components/primitives";
+import { ButtonLink, Container, Eyebrow, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -32,6 +32,8 @@ export default function TheRollPage() {
         eyebrow="The Open Register"
         title="The Roll of Scottish Barons"
         intro="An open-source verification register of titles within the Baronage of Scotland — created to improve transparency and accuracy in the public record."
+        image="/images/letters-patent.webp"
+        position="center 32%"
       />
 
       {/* Prominent, clearly-marked hand-off to the separate register */}
@@ -102,6 +104,30 @@ export default function TheRollPage() {
                 Phrasing from a Crown charter grant — Records of the Parliament of Scotland
               </figcaption>
             </figure>
+          </Reveal>
+
+          <Reveal>
+            <div className="mt-10 border-t border-parchment-300/70 pt-8">
+              <p className="leading-relaxed text-ink-soft">Cooperating organisations and Barons agree to:</p>
+              <ul className="mt-4 space-y-3">
+                <li className="flex gap-3 leading-relaxed text-ink-soft">
+                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
+                  <span>
+                    Not recognise the title, honour, rank, and status “baron of” (or higher dignity) for unverified
+                    holders.
+                  </span>
+                </li>
+                <li className="flex gap-3 leading-relaxed text-ink-soft">
+                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
+                  <span>
+                    It is recommended that organisations do not recognise a title not verified on the Roll.
+                  </span>
+                </li>
+              </ul>
+              <div className="mt-8">
+                <PdfLink href="/docs/roll-inclusion-guidelines.pdf" label="Roll Inclusion Guidelines.pdf" />
+              </div>
+            </div>
           </Reveal>
         </Container>
       </Section>

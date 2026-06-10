@@ -48,7 +48,7 @@ const chapters: Chapter[] = [
     title: "From feudal tenure to personal dignity",
     body: "With the end of the feudal system, baronial titles ceased to be territorial, becoming non-territorial personal dignities protected in Scots law and enshrined by the Scotland Act 2000 — passed down through generations to this day.",
     kind: "emblem",
-    src: "/arms/slains.png",
+    src: "/arms/slains.webp",
   },
 ];
 

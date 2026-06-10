@@ -23,6 +23,7 @@ const tones = {
   navy: "bg-navy text-parchment-100 texture-saltire",
   navyDeep: "bg-navy-deep text-parchment-100 texture-saltire",
   oxblood: "bg-oxblood text-parchment-100",
+  white: "bg-white text-ink",
 } as const;
 
 export function Section({
@@ -152,5 +153,22 @@ export function ExternalArrow({ className = "" }: { className?: string }) {
     >
       <path d="M7 17 17 7M9 7h8v8" />
     </svg>
+  );
+}
+
+/** Download link styled as a PDF document, matching the source site. */
+export function PdfLink({ href, label }: { href: string; label: string }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3">
+      <span
+        className="flex h-9 w-8 flex-none items-center justify-center rounded-[3px] bg-oxblood text-[0.5rem] font-bold tracking-wider text-parchment-50 shadow-[0_3px_10px_-3px_rgba(110,20,35,0.6)]"
+        aria-hidden
+      >
+        PDF
+      </span>
+      <span className="font-serif text-lg text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors group-hover:text-oxblood-deep">
+        {label}
+      </span>
+    </a>
   );
 }

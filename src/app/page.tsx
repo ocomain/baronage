@@ -1,18 +1,39 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { HeroHome } from "@/components/HeroHome";
 import { BaroniesCarousel } from "@/components/BaroniesCarousel";
-import { Seal } from "@/components/Seal";
+import { ImageBand } from "@/components/ImageBand";
 import { Reveal } from "@/components/Reveal";
+import { Footnote } from "@/components/Footnote";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
-const HISTORY_IMG =
-  "https://images.unsplash.com/photo-1732008209481-3f5eed6b4ab5?auto=format&fit=crop&w=1600&q=80";
+const CHARTER_IMG = "/images/charter-seal.webp";
+const GLEN_IMG = "/images/glen-mist.webp";
+
+/** Footnote-reference superscript that opens the citation in a pop-up card. */
+function Fn({ n }: { n: number }) {
+  const f = footnotes[n - 1];
+  return (
+    <Footnote n={n}>
+      <p>{f.body}</p>
+      {f.subs && f.subs.length > 0 ? (
+        <ol className="mt-3 ml-4 list-[lower-alpha] space-y-2 marker:font-inscribe marker:text-gold-deep">
+          {f.subs.map((s, j) => (
+            <li key={j} className="pl-1">
+              {s}
+            </li>
+          ))}
+        </ol>
+      ) : null}
+    </Footnote>
+  );
+}
 
 const pillars = [
   {
     numeral: "I",
-    title: "The Roll of Barons",
+    title: "The Roll of Scottish Barons",
     body: "An open, verified public register of the Baronage of Scotland — free, for life, to verify an entry.",
     href: "/the-roll",
     external: true,
@@ -38,13 +59,164 @@ const timeline = [
   { year: "2004", event: "Titles become non-territorial personal dignities" },
 ];
 
+const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
+  {
+    body: (
+      <>
+        Lord Lyon Court Ruling (26 February 1943, Vol. IV, p. 26): “Finds and Declares that the (Minor) Barons of
+        Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled
+        nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of
+        Scotland” <em>Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143</em>
+      </>
+    ),
+    subs: [
+      <>
+        Lord Lyon David Sellar 2010 [Ref: 57 Lindberg Ptr Lyon Court] “the dignity of baron has a{" "}
+        <strong className="font-semibold">noble</strong> character in that it is a right which historically originated
+        in a Crown grant.”
+      </>,
+    ],
+  },
+  {
+    body: (
+      <>
+        Spencer-Thomas of Buquhollie v. Newell (1992), Lord Clyde’s dictum “<em>a barony falls into the class of
+        noble</em> as opposed to ignoble feus. That classification is discussed by Craig (Jus Feudale, I.x.16) and
+        Bankton (II.iii.83). In Scotland the distinction was recognised between the greater barons and the lesser
+        barons, the former acquiring such titles as Duke or Earl. It was at the earliest a territorial dignity as
+        distinct from the later personal peerage. Thus when one was divested of an estate the title of honour ceased
+        (Bankton, II.iii.84). In the feudal system, however, whether the dignity was that of a baron or of the greater
+        dignity of an earldom, the feudal effects were the same (Erskine’s Institute, II.iii.46).” The Baronage of
+        Scotland by Sir Robert Douglas (1798), a foundational text on Scottish nobility, describes baronies as{" "}
+        <strong className="font-semibold">“titles of honour”</strong> conferred by the Crown with associated dignities.
+      </>
+    ),
+  },
+  {
+    body: (
+      <>
+        Scottish Law Times 1992, p. 979: “The essential feature of a barony title is the{" "}
+        <strong className="font-semibold">noble quality</strong> of the feudal grant… giving the proprietor a
+        territorial <strong className="font-semibold">rank</strong> and{" "}
+        <strong className="font-semibold">dignity</strong>. It also at an earlier period gave rights in relation to
+        Parliament.”
+      </>
+    ),
+  },
+  {
+    body: (
+      <>
+        Institutional Writers <em>(writers whose text is accepted in Scottish courts as an explanation of the law)</em>:
+      </>
+    ),
+    subs: [
+      <>
+        Sir Thomas Craig, Jus Feudale (I.xii.23): “Where the prince makes a grant of lands which have rank attached to
+        them, he <strong className="font-semibold">ennobles the grantee</strong> even though no express conferment of
+        noble rank be made.”
+      </>,
+      <>
+        Lord Stair, Institutions (II.iii.45): “Erection is, when lands are not only united in one tenement, but are
+        erected into the dignity of a barony; which comprehendeth lordship, earldom, &amp;c. all which are but more{" "}
+        <strong className="font-semibold">noble titles of a barony</strong>, having the like feudal effects.”
+      </>,
+      <>
+        Bankton, Institute (II.iii.84): “<em>Nobility</em> followed the property of the estate to which it was annexed.”
+      </>,
+    ],
+  },
+  {
+    body: <>Scottish Law Commission Report, 1999, para 2.34</>,
+    subs: [
+      <>
+        <em>
+          In our view the Scottish Parliament could, if it wished, abolish feudal baronies altogether… while allowing
+          the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a
+          floating dignity.
+        </em>{" "}
+        p,24
+      </>,
+      <>
+        <em>
+          The discussion paper mentioned, but rejected, the possibility of allowing the “noble aspects of the barony
+          title” to lapse along with the abolition of the feudal relationship on which the{" "}
+          <strong className="font-semibold not-italic">ennoblement of the baron</strong> is based.
+        </em>{" "}
+        para 2.34
+      </>,
+    ],
+  },
+  {
+    body: <>Scottish Parliament, Explanatory Notes to the 2000 Act, Section 63.198</>,
+  },
+  {
+    body: <>Abolition of Feudal Tenure etc. (Scotland) Act 2000, Section 63</>,
+  },
+  {
+    body: <>Royal Warrant, 1469 (Baron of Renfrew title)</>,
+  },
+  {
+    body: (
+      <>
+        The Convention of the Baronage of Scotland observed that “four Barons bore the Canopy of State at the Queen’s
+        Accession Service in St Giles in 1953”.
+      </>
+    ),
+  },
+];
+
 export default function HomePage() {
   return (
     <>
       <HeroHome />
 
+      {/* ============================== THE ROLL — KEY NUMBERS ============================== */}
+      <section className="border-t-2 border-gold/40 border-b border-b-parchment-300/60 bg-parchment texture-parchment py-8 sm:py-9">
+        <Container>
+          <Reveal>
+            <div className="grid grid-cols-1 divide-y divide-parchment-300/70 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+              {[
+                { value: "200", label: "Verified Barons" },
+                { value: "200", label: "Unverified Holders" },
+                { value: "86", label: "Pledged Hereditary" },
+              ].map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center px-6 py-4 text-center sm:py-1.5">
+                  <span className="font-display text-5xl leading-none text-navy sm:text-6xl">{stat.value}</span>
+                  <span className="mt-2 font-inscribe text-xs uppercase tracking-[0.22em] text-muted">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ============================== TOUR OF THE BARONIES ============================== */}
+      <Section tone="parchment" className="pt-16 pb-10 sm:pt-20 sm:pb-12">
+        <Container>
+          <Reveal>
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <Eyebrow>The Baronage</Eyebrow>
+                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">A selection of supporters</h2>
+              </div>
+              <p className="max-w-xs font-serif text-lg italic text-muted">
+                From the Roll of Scottish Barons.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+        <Reveal className="mt-14">
+          <BaroniesCarousel />
+        </Reveal>
+        <Container className="mt-14 text-center">
+          <ButtonLink href={ROLL_URL} variant="outline">
+            Explore the Roll
+          </ButtonLink>
+        </Container>
+      </Section>
+
       {/* ============================== MANDATE ============================== */}
-      <Section tone="parchment">
+      <Section tone="parchment" className="border-t border-parchment-300/50 pt-12 sm:pt-16">
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-4">
@@ -58,24 +230,79 @@ export default function HomePage() {
             </Reveal>
             <Reveal className="lg:col-span-8" delay={0.1}>
               <p className="dropcap font-serif text-xl leading-[1.6] text-ink sm:text-2xl">
-                Scottish baronies predate the peerage itself, standing among the most ancient noble dignities in the
-                British Isles. Originating in the medieval period, a barony was an estate of land held directly from the
-                Crown, erected into a free barony by Royal Charter — a dignity created not by Parliament but by the
-                sovereign will of the Scottish Crown.
+                In Scotland, the title “Baron” or “Baroness” is a rank of the ancient nobility of the Baronage of
+                Scotland<Fn n={1} />. The Scottish baronage, predating the peerage, remains a distinguished part of our
+                noble heritage today, recognised in the nobiliary court and the Court of Session as{" "}
+                <strong className="font-semibold text-navy">titled nobility</strong>
+                <Fn n={1} />, and affirmed in Lord Clyde’s 1992 dictum as heritable{" "}
+                <strong className="font-semibold text-navy">titles of honour</strong>
+                <Fn n={2} /> and for their <em>“noble quality”</em> and former parliamentary rights<Fn n={3} />. Their
+                noble status is further enshrined by the institutional writers, including Sir Thomas Craig, Lord Stair,
+                and Bankton<Fn n={4} />.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-                Unlike the modern peerage, which is primarily a titular and parliamentary distinction, the Scottish
-                Baronage was rooted in territorial jurisdiction. The baron held both the dignity of the title and the
-                legal authority over his lands, often possessing the right of “pit and gallows” — the power of life and
-                death.
+                Since the feudal aspects of baronies were abolished in 2004<Fn n={5} />, special legal provisions ensured the{" "}
+                <strong className="font-semibold text-navy">dignity of baron</strong> was retained as a
+                non-territorial<Fn n={6} />, floating dignity<Fn n={6} />, protected in Scots law<Fn n={7} /> and
+                recognised within UK legal frameworks, including its continued ennoblement<Fn n={5} /> as noted in the
+                Scottish Law Commission report for the Scottish Parliament<Fn n={5} />. The <em>“Baron of X”</em> as a
+                title of nobility is the holder’s name and identity, legally recognised and eligible in British
+                passports and official documents.
               </p>
-              <div className="mt-9 border-l-2 border-gold/60 pl-6">
-                <p className="font-serif text-xl italic leading-relaxed text-oxblood-deep sm:text-2xl">
-                  Today, the Scottish Baronage is a recognised noble status in Scots law.
-                </p>
-              </div>
+              <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+                Notably, the heir to the British throne, Prince William, holds the baronage titles Lord of the Isles and Baron of Renfrew<Fn n={8} />,
+                underscoring the prestige of the baronial tradition. Around thirty Scottish clan chiefs are also barons,
+                with titles and histories rooted deep in antiquity. In an age where personal identity and chosen forms
+                of address are widely respected, honouring a historic title — rooted in centuries of tradition and legal
+                standing — preserves our shared national heritage, and ensures the contributions of past generations are
+                not forgotten.
+              </p>
             </Reveal>
           </div>
+        </Container>
+      </Section>
+
+      {/* ============================== NON-RECOGNITION ============================== */}
+      <Section tone="navyDeep">
+        <Container size="prose">
+          <Reveal>
+            <div className="relative border border-gold/35 bg-navy/60 p-8 text-center sm:p-12">
+              <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
+              <Eyebrow light>Fundamental to the Roll</Eyebrow>
+              <h2 className="mt-4 text-3xl text-parchment-50 sm:text-4xl">
+                Non-recognition of unverified titles
+              </h2>
+              <GoldRule className="mt-6" />
+              <p className="mx-auto mt-7 max-w-2xl leading-relaxed text-parchment-200/85">
+                Inclusion on the Roll is voluntary but requires adherence to rigorous criteria — only dignities with
+                proven legitimacy are recognised.{" "}
+                <strong className="font-semibold text-parchment-50">
+                  Non-recognition of unverified titles is fundamental.
+                </strong>
+              </p>
+              <p className="mt-8 font-inscribe text-[0.7rem] uppercase tracking-[0.24em] text-gold">
+                Cooperating organisations and Barons agree to
+              </p>
+              <ul className="mx-auto mt-5 max-w-xl space-y-4 text-left">
+                <li className="flex gap-4 leading-relaxed text-parchment-200/85">
+                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
+                  <span>
+                    Not recognise the title, honour, rank, and status <em>“baron of”</em> (or higher dignity) for
+                    unverified holders.
+                  </span>
+                </li>
+                <li className="flex gap-4 leading-relaxed text-parchment-200/85">
+                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
+                  <span>It is recommended that organisations do not recognise a title not verified on the Roll.</span>
+                </li>
+              </ul>
+              <div className="mt-10 flex justify-center">
+                <ButtonLink href={ROLL_URL} variant="gold">
+                  Verify a Title on the Roll
+                </ButtonLink>
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </Section>
 
@@ -86,7 +313,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <Eyebrow>What We Maintain</Eyebrow>
-                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Three pillars of the baronage</h2>
+                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Three pillars of the Association</h2>
               </div>
               <p className="max-w-xs font-serif text-lg italic text-muted">
                 The work entrusted to an honourable body.
@@ -121,51 +348,19 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* ============================== QUOTE (full-bleed, seal watermark) ============================== */}
-      <section className="relative isolate overflow-hidden bg-navy-deep py-28 text-center text-parchment-50 sm:py-36">
-        <div className="absolute inset-0 -z-10 texture-saltire opacity-60" aria-hidden />
-        <Seal
-          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 opacity-[0.07]"
-          aria-hidden
-          alt=""
-        />
-        <Container size="prose">
-          <Reveal>
-            <blockquote className="font-serif text-3xl italic leading-snug text-parchment-50 sm:text-[2.7rem]">
-              Recognised in the nobiliary court and the Court of Session as a{" "}
-              <span className="text-foil not-italic">“titled nobility.”</span>
-            </blockquote>
-            <cite className="mt-8 block font-inscribe text-xs uppercase not-italic tracking-[0.3em] text-parchment-200/70">
-              Court of the Lord Lyon · 1943
-            </cite>
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* ============================== TOUR OF THE BARONIES ============================== */}
-      <Section tone="parchment">
-        <Container>
-          <Reveal>
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <Eyebrow>From the Roll</Eyebrow>
-                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">A tour of the baronies</h2>
-              </div>
-              <p className="max-w-xs font-serif text-lg italic text-muted">
-                Selected arms from across the Scottish baronage.
-              </p>
-            </div>
-          </Reveal>
-        </Container>
-        <Reveal className="mt-14">
-          <BaroniesCarousel />
+      {/* ============================== QUOTE (full-bleed cinematic) ============================== */}
+      <ImageBand image={GLEN_IMG} position="center 42%">
+        <Reveal>
+          <p className="eyebrow eyebrow--light">Recognised in Law</p>
+          <blockquote className="mt-7 font-serif text-3xl italic leading-snug text-parchment-50 sm:text-[2.7rem]">
+            Recognised in the nobiliary court and the Court of Session as{" "}
+            <span className="text-foil not-italic">“titled nobility.”</span>
+          </blockquote>
+          <cite className="mt-8 block font-inscribe text-xs uppercase not-italic tracking-[0.3em] text-parchment-200/75">
+            Court of the Lord Lyon · 1943
+          </cite>
         </Reveal>
-        <Container className="mt-14 text-center">
-          <ButtonLink href={ROLL_URL} variant="outline">
-            Explore the Roll
-          </ButtonLink>
-        </Container>
-      </Section>
+      </ImageBand>
 
       {/* ============================== HISTORY (asymmetric) ============================== */}
       <Section tone="parchment" className="overflow-hidden">
@@ -177,10 +372,10 @@ export default function HomePage() {
                 <div
                   className="aspect-[4/5] w-full bg-cover bg-center"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(10,16,36,0.12), rgba(10,16,36,0.3)), url('${HISTORY_IMG}')`,
+                    backgroundImage: `linear-gradient(rgba(10,16,36,0.08), rgba(10,16,36,0.22)), url('${CHARTER_IMG}')`,
                   }}
                   role="img"
-                  aria-label="A Scottish castle at dusk"
+                  aria-label="A sealed Scottish charter with red wax seal"
                 />
               </div>
             </Reveal>
@@ -216,12 +411,12 @@ export default function HomePage() {
             <Reveal>
               <div className="relative mx-auto aspect-[4/5] w-full max-w-sm">
                 <div className="absolute inset-0 translate-x-3 translate-y-3 border border-gold/40" aria-hidden />
-                <div className="relative flex h-full w-full flex-col items-center justify-center bg-navy-deep texture-saltire text-center">
-                  <Seal className="h-28 w-28" />
-                  <p className="mt-6 px-6 font-serif text-lg italic text-parchment-200/80">
-                    Arms of the featured baron
-                  </p>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/featured/ardblair.webp"
+                  alt="The Baron of Ardblair and Gask"
+                  className="relative h-full w-full object-cover object-top shadow-[0_30px_60px_-30px_rgba(10,16,36,0.7)]"
+                />
               </div>
             </Reveal>
             <Reveal delay={0.12}>
@@ -240,28 +435,6 @@ export default function HomePage() {
               </div>
             </Reveal>
           </div>
-        </Container>
-      </Section>
-
-      {/* ============================== CTA ============================== */}
-      <Section tone="navy" className="text-center">
-        <Container size="prose">
-          <Reveal>
-            <GoldRule className="mb-8" />
-            <h2 className="text-4xl text-parchment-50 sm:text-5xl">Preserve your title’s legacy</h2>
-            <p className="mx-auto mt-6 max-w-xl leading-relaxed text-parchment-200/85">
-              Verify an entry on the Roll, or speak with the Secretary about membership, the Pledge, and the work of the
-              baronage.
-            </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <ButtonLink href={ROLL_URL} variant="gold">
-                Verify on the Roll
-              </ButtonLink>
-              <ButtonLink href="/contact" variant="outlineLight">
-                Contact the Secretary
-              </ButtonLink>
-            </div>
-          </Reveal>
         </Container>
       </Section>
     </>
