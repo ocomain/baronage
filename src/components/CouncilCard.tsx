@@ -68,9 +68,9 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
           </div>
         </div>
         <figcaption className="mt-6 sm:mt-5">
-          <h3 className="font-display text-3xl leading-tight text-parchment-50 sm:text-xl">{m.name}</h3>
+          <h3 className="font-display text-3xl leading-tight text-parchment-50 sm:text-2xl">{m.name}</h3>
           {m.also && (
-            <p className="mt-2 font-serif text-3xl italic leading-snug text-gold-light sm:mt-1.5 sm:text-xl">{m.also}</p>
+            <p className="mt-2 font-serif text-3xl italic leading-snug text-gold-light sm:mt-1.5 sm:text-2xl">{m.also}</p>
           )}
           <button
             type="button"
@@ -101,7 +101,6 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                   role="dialog"
                   aria-modal="true"
                   aria-label={`Biography — ${m.name}`}
-                  onClick={(e) => e.stopPropagation()}
                   initial={{ opacity: 0, y: 16, scale: 0.97 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.97 }}
