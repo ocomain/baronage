@@ -15,6 +15,7 @@ export type CouncilMember = {
   bg?: string;
   bio: string;
   alsoProminent?: boolean;
+  formal?: string;
 };
 
 /** Council portrait card — tap/click opens a biography pop-up. */
@@ -129,7 +130,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                     ×
                   </button>
                   <div className="p-6 sm:p-8">
-                    <h3 className="font-display text-2xl leading-tight text-navy">{m.name}</h3>
+                    <h3 className="font-display text-2xl leading-tight text-navy">{m.formal ?? m.name}</h3>
                     {m.also && <p className="mt-1.5 font-serif text-lg italic text-gold-deep">{m.also}</p>}
                     <div className="mt-4 h-px w-16 bg-gold/60" aria-hidden />
                     <p className="mt-4 leading-relaxed text-ink-soft">{m.bio}</p>
