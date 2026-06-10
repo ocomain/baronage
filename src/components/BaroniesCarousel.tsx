@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 type Barony = { dignity: "Baron" | "Lord Baron" | "Earl Baron"; name: string; img?: string; note?: string };
 
 /**
@@ -77,10 +81,94 @@ function CrestPlaceholder({ initial }: { initial: string }) {
  * The list is duplicated so the loop is seamless.
  */
 export function BaroniesCarousel() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Auto-glide on a real scroll container — so drag (desktop), swipe (mobile)
+  // and wheel all work natively; the duplicated list lets the loop wrap
+  // seamlessly in either direction.
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let raf = 0;
+    let last = performance.now();
+    let pauseUntil = 0;
+    let dragging = false;
+    let startX = 0;
+    let startLeft = 0;
+    let moved = false;
+
+    const tick = (now: number) => {
+      const dt = now - last;
+      last = now;
+      if (!reduce && !dragging && now > pauseUntil) {
+        el.scrollLeft += Math.min(dt, 50) * 0.035; // ~35px/s; clamped so tab-switches never jump
+      }
+      const half = el.scrollWidth / 2;
+      if (half > 0) {
+        if (el.scrollLeft >= half) el.scrollLeft -= half;
+        else if (el.scrollLeft <= 0) el.scrollLeft += half;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    const down = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return; // touch pans natively
+      dragging = true;
+      moved = false;
+      startX = e.clientX;
+      startLeft = el.scrollLeft;
+      el.setPointerCapture(e.pointerId);
+    };
+    const move = (e: PointerEvent) => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      el.scrollLeft = startLeft - dx;
+    };
+    const up = () => {
+      if (!dragging) return;
+      dragging = false;
+      pauseUntil = performance.now() + 1800;
+    };
+    const interacted = () => {
+      pauseUntil = performance.now() + 1800;
+    };
+    const swallowClick = (e: MouseEvent) => {
+      if (moved) {
+        e.preventDefault();
+        e.stopPropagation();
+        moved = false;
+      }
+    };
+
+    el.addEventListener("pointerdown", down);
+    el.addEventListener("pointermove", move);
+    el.addEventListener("pointerup", up);
+    el.addEventListener("pointercancel", up);
+    el.addEventListener("wheel", interacted, { passive: true });
+    el.addEventListener("touchmove", interacted, { passive: true });
+    el.addEventListener("click", swallowClick, true);
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("pointerdown", down);
+      el.removeEventListener("pointermove", move);
+      el.removeEventListener("pointerup", up);
+      el.removeEventListener("pointercancel", up);
+      el.removeEventListener("wheel", interacted);
+      el.removeEventListener("touchmove", interacted);
+      el.removeEventListener("click", swallowClick, true);
+    };
+  }, []);
+
   const row = [...baronies, ...baronies];
   return (
-    <div className="marquee py-2">
-      <div className="marquee__track">
+    <div className="marquee">
+      <div
+        ref={ref}
+        className="marquee__scroll flex cursor-grab select-none overflow-x-auto py-2 active:cursor-grabbing"
+      >
         {row.map((b, i) => (
           <figure
             key={`${b.name}-${i}`}
