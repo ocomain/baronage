@@ -329,7 +329,6 @@ export default function HomePage() {
               <Reveal key={p.title} delay={i * 0.08}>
                 <Link
                   href={p.href}
-                  {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="group grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-2 border-b border-navy/15 py-8 transition-colors hover:bg-parchment/60 sm:grid-cols-[6rem_1fr_auto] sm:gap-x-10 sm:py-10"
                 >
                   <span className="font-inscribe text-3xl text-gold/70 transition-colors group-hover:text-gold sm:text-4xl">
