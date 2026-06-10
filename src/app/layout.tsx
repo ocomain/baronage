@@ -22,7 +22,6 @@ const quicksand = Quicksand({
 
 export const viewport: Viewport = {
   themeColor: "#faf6ec",
-  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
