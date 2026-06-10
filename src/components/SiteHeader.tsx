@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Wordmark } from "./Wordmark";
 import { ExternalArrow } from "./primitives";
-import { navLinks, site, ROLL_URL } from "@/lib/site";
+import { navLinks, ROLL_URL, CALENDLY_URL } from "@/lib/site";
 
 function useScrolled(threshold = 12) {
   const [scrolled, setScrolled] = useState(false);
@@ -54,8 +54,8 @@ export function SiteHeader() {
       <div
         className={`border-b transition-all duration-300 ${
           scrolled
-            ? "border-gold/30 bg-parchment-50/95 shadow-[0_8px_30px_-18px_rgba(12,21,48,0.5)] backdrop-blur"
-            : "border-transparent bg-parchment-50/80 backdrop-blur-sm"
+            ? "border-gold/30 bg-parchment-50 md:bg-parchment-50/95 shadow-[0_8px_30px_-18px_rgba(12,21,48,0.5)] backdrop-blur"
+            : "border-transparent bg-parchment-50 md:bg-parchment-50/80 md:backdrop-blur-sm"
         }`}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-8">
@@ -154,10 +154,12 @@ export function SiteHeader() {
                 ))}
               </ul>
               <a
-                href={`mailto:${site.email}`}
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 block text-sm uppercase tracking-[0.18em] text-gold-deep"
               >
-                {site.email}
+                Request a Call Back
               </a>
             </motion.nav>
           </>
