@@ -44,14 +44,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://baronage.com",
     siteName: "Baronage of Scotland Association",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Eilean Donan castle at dusk with the seal of the Baronage of Scotland Association" }],
+    // NOTE go-live: revert these image URLs to "/og.jpg" once the site serves at baronage.com
+    images: [{ url: "https://new.baronage.com/og.jpg", width: 1200, height: 630, alt: "Eilean Donan castle at dusk with the seal of the Baronage of Scotland Association" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Baronage of Scotland Association",
     description:
       "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
-    images: ["/og.jpg"],
+    images: ["https://new.baronage.com/og.jpg"],
   },
   alternates: { canonical: "/" },
   manifest: "/site.webmanifest",
