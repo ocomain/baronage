@@ -250,9 +250,13 @@ export default function HomePage() {
                 passports and official documents.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-                Notably, the heir to the British throne, Prince William, holds the baronage titles Lord of the Isles and Baron of Renfrew<Fn n={8} />,
-                underscoring the prestige of the baronial tradition. Around thirty Scottish clan chiefs are also barons,
-                with titles and histories rooted deep in antiquity. In an age where personal identity and chosen forms
+                <strong className="font-semibold text-navy">
+                  Notably, the heir to the British throne, Prince William, holds the baronage titles Lord of the Isles
+                  and Baron of Renfrew
+                  <Fn n={8} />, underscoring the prestige of the baronial tradition. Around thirty Scottish clan chiefs
+                  are also barons, with titles and histories rooted deep in antiquity.
+                </strong>{" "}
+                In an age where personal identity and chosen forms
                 of address are widely respected, honouring a historic title — rooted in centuries of tradition and legal
                 standing — preserves our shared national heritage, and ensures the contributions of past generations are
                 not forgotten.

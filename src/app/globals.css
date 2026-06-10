@@ -212,6 +212,7 @@ body::before {
 .marquee {
   position: relative;
   overflow: hidden;
+  contain: layout style paint;
 }
 /* Static edge fades (no CSS mask, so the moving track is never re-rasterized) */
 .marquee::before,
@@ -236,7 +237,7 @@ body::before {
   display: flex;
   width: max-content;
   /* GPU-composited transform on its own layer — smooth, jank-free scroll */
-  animation: marquee 90s linear infinite;
+  animation: marquee 110s linear infinite;
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;

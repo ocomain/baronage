@@ -416,27 +416,7 @@ export default function ProperAddressPage() {
                   the most formal documents such as crown charters) and earldoms are typically a combined earldom,
                   lordship and barony.
                 </P>
-                <P>Lordship example:</P>
-                <Forms>
-                  <F>
-                    Scottish baronial Lord: <S>The Much Honoured Lord Lochaber or Baron of Lochaber</S> never Baron X
-                    <N>(spoken Lochaber)</N>
-                  </F>
-                  <F>
-                    Peer: <S>The Right Hon The Lord Lochaber</S>
-                    <N>(spoken Lord Lochaber)</N>
-                  </F>
-                </Forms>
-                <P>
-                  The heir to these higher dignities is the same as a baron “Younger of Lochaber” for a son, and for the
-                  oldest daughter “Maid of Lochaber”. Earls in the Baronage of Scotland, typically hold lordship or
-                  barony subsidiary titles. For Pledged title holders, the Roll recommends special disposition allowing
-                  their children use of their junior titles during their lifetimes, similar to courtesy titles in the
-                  peerage but more like the Spanish nobility’s practice of subtitle transfer during a lifetime. This is a
-                  one-time, irreversible process that lasts until death, after which the title reverts to the primary
-                  succession of the senior title. For advice, contact us.
-                </P>
-                <div className="mt-8 border-t border-parchment-300/70 pt-6 text-center">
+                <div className="mt-8 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">
                     William Borthwick, 1775 —{" "}
                     <a
@@ -468,6 +448,26 @@ export default function ProperAddressPage() {
                     Lord Graham until 1445.
                   </p>
                 </div>
+                <P>Lordship example:</P>
+                <Forms>
+                  <F>
+                    Scottish baronial Lord: <S>The Much Honoured Lord Lochaber or Baron of Lochaber</S> never Baron X
+                    <N>(spoken Lochaber)</N>
+                  </F>
+                  <F>
+                    Peer: <S>The Right Hon The Lord Lochaber</S>
+                    <N>(spoken Lord Lochaber)</N>
+                  </F>
+                </Forms>
+                <P>
+                  The heir to these higher dignities is the same as a baron “Younger of Lochaber” for a son, and for the
+                  oldest daughter “Maid of Lochaber”. Earls in the Baronage of Scotland, typically hold lordship or
+                  barony subsidiary titles. For Pledged title holders, the Roll recommends special disposition allowing
+                  their children use of their junior titles during their lifetimes, similar to courtesy titles in the
+                  peerage but more like the Spanish nobility’s practice of subtitle transfer during a lifetime. This is a
+                  one-time, irreversible process that lasts until death, after which the title reverts to the primary
+                  succession of the senior title. For advice, contact us.
+                </P>
               </Sec>
             </Reveal>
 

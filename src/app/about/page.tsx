@@ -87,7 +87,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="mt-12 border-l-2 border-gold/60 pl-6">
               <p className="font-serif text-lg italic leading-relaxed text-oxblood-deep">
-                The heir to the British throne holds the title Baron of Renfrew, and around thirty Scottish clan chiefs
+                The heir to the British throne holds the baronage titles Lord of the Isles and Baron of Renfrew, and around thirty Scottish clan chiefs
                 are also barons — titles rooted deep in antiquity. As Lord Lyon Sir Thomas Innes of Learney observed,
                 Scottish barons are equivalent to the Continental barons.
               </p>
