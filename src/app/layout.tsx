@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://baronage.com"),
   title: {
-    default: "Baronage of Scotland Association — Preserving the Heritage of Scottish Barons",
+    default: "Baronage of Scotland Association — The Ancient Nobility of Scotland",
     template: "%s · Baronage of Scotland Association",
   },
   description:
