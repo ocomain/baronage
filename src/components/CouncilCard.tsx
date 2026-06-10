@@ -16,6 +16,8 @@ export type CouncilMember = {
   bio: string;
   alsoProminent?: boolean;
   formal?: string;
+  /** Full formal name for image alts / structured data */
+  alt?: string;
   /** object-position for the wide pop-up banner (defaults to pos) */
   popPos?: string;
 };
@@ -38,13 +40,13 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
       m.fit === "contain" ? (
         <FadeImg
           src={m.img}
-          alt={m.name}
+          alt={m.alt ?? m.name}
           className={`h-full w-full object-contain p-4 transition duration-700 ${large ? "" : "group-hover:scale-[1.04]"}`}
         />
       ) : (
         <FadeImg
           src={m.img}
-          alt={m.name}
+          alt={m.alt ?? m.name}
           className={`h-full w-full object-cover transition duration-700 ${large ? "" : "group-hover:scale-105"}`}
           style={{ objectPosition: (large ? m.popPos ?? m.pos : m.pos) ?? "center" }}
         />
