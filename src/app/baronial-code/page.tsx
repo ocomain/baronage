@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const principles = [
   {
     title: "Hereditary Title Conversion",
-    body: "Each Baron commits to The Pledge, converting their title into a pledged hereditary honour preserved within the family bloodline for future generations.",
+    body: "Each Baron commits to The Pledge, converting their barony into a pledged hereditary title preserved within the family bloodline for future generations.",
   },
   {
     title: "Honour and Integrity",

@@ -204,48 +204,9 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
-/* Auto-scrolling marquee — supporters of the Roll */
-@keyframes marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-.marquee {
-  position: relative;
-  overflow: hidden;
-  contain: layout style paint;
-}
-/* Static edge fades (no CSS mask, so the moving track is never re-rasterized) */
-.marquee::before,
-.marquee::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 4%;
-  pointer-events: none;
-}
-.marquee::before {
-  left: 0;
-  background: linear-gradient(to right, #f3ecdd, rgba(243, 236, 221, 0));
-}
-.marquee::after {
-  right: 0;
-  background: linear-gradient(to left, #f3ecdd, rgba(243, 236, 221, 0));
-}
-.marquee__track {
-  display: flex;
-  width: max-content;
-  /* GPU-composited transform on its own layer — smooth, jank-free scroll */
-  animation: marquee 110s linear infinite;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
 
 @media (prefers-reduced-motion: reduce) {
   .rise { animation: none; }
-  .marquee__track { animation: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -270,22 +231,38 @@ body::before {
   html { scrollbar-width: thin; scrollbar-color: #a8843c #0d1430; }
 }
 
-/* Mobile: the supporters rail becomes a native swipe carousel */
+
+/* Supporters rail — JS glide on a native scroll container */
+.marquee {
+  position: relative;
+}
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4%;
+  z-index: 1;
+  pointer-events: none;
+}
+.marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, #f3ecdd, rgba(243, 236, 221, 0));
+}
+.marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, #f3ecdd, rgba(243, 236, 221, 0));
+}
+.marquee__scroll {
+  scrollbar-width: none;
+}
+.marquee__scroll::-webkit-scrollbar {
+  display: none;
+}
 @media (max-width: 639px) {
-  .marquee {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-  .marquee::-webkit-scrollbar { display: none; }
   .marquee::before,
-  .marquee::after { display: none; }
-  .marquee__track {
-    animation: none;
-    width: max-content;
-    padding-inline: 1.25rem;
+  .marquee::after {
+    display: none;
   }
-  .marquee__track > figure { scroll-snap-align: center; }
-  .marquee__track > figure[aria-hidden="true"] { display: none; }
 }
