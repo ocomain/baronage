@@ -89,8 +89,8 @@ export function BaroniesCarousel() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let raf = 0;
+    let pos = -1; // float accumulator — Safari rounds scrollLeft, which stalls sub-pixel steps
     let last = performance.now();
     let pauseUntil = 0;
     let dragging = false;
@@ -101,11 +101,18 @@ export function BaroniesCarousel() {
     const tick = (now: number) => {
       const dt = now - last;
       last = now;
-      if (!reduce && !dragging && now > pauseUntil) {
-        el.scrollLeft += Math.min(dt, 50) * 0.035; // ~35px/s; clamped so tab-switches never jump
-      }
       const half = el.scrollWidth / 2;
-      if (half > 0) {
+      if (!dragging && now > pauseUntil) {
+        // resync after any user scroll, then advance the float accumulator
+        if (pos < 0 || Math.abs(el.scrollLeft - pos) > 2) pos = el.scrollLeft;
+        pos += Math.min(dt, 50) * 0.035; // ~35px/s; clamped so tab-switches never jump
+        if (half > 0) {
+          if (pos >= half) pos -= half;
+          else if (pos <= 0) pos += half;
+        }
+        el.scrollLeft = pos;
+      } else if (half > 0) {
+        // user is in control — keep the loop seamless at the edges only
         if (el.scrollLeft >= half) el.scrollLeft -= half;
         else if (el.scrollLeft <= 0) el.scrollLeft += half;
       }
