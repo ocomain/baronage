@@ -14,6 +14,7 @@ const members: CouncilMember[] = [
     mark: "B",
     name: "Brady, Baron of Balvaird",
     formal: "The Baron of Balvaird",
+    alt: "Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird",
     also: null,
     img: "/council/balvaird.avif",
     pos: "center 25%",
@@ -24,6 +25,7 @@ const members: CouncilMember[] = [
     mark: "D",
     name: "Alexander, Baron of Drum",
     formal: "The Baron of Drum",
+    alt: "Alexander Irvine of Drum, 27th Baron of Drum",
     also: "Chief of his Name",
     alsoProminent: true,
     img: "/council/Irvine.jpg",
@@ -35,6 +37,7 @@ const members: CouncilMember[] = [
     mark: "K",
     name: "Antoin, Younger of Kinfauns",
     formal: "The Younger of Kinfauns",
+    alt: "Antoin Commane, Younger of Kinfauns",
     also: "Tanist Clan Commane",
     img: "/council/kinfauns.jpg",
     pos: "center 18%",
@@ -44,6 +47,7 @@ const members: CouncilMember[] = [
   {
     mark: "M",
     name: "Gordon MacGregor, Esq",
+    alt: "Gordon MacGregor, genealogist and author of the Red Book of Scotland",
     also: "Genealogist and author of the Red Book",
     img: "/council/red-book.png",
     fit: "contain",
@@ -51,6 +55,28 @@ const members: CouncilMember[] = [
     bio: "Gordon MacGregor is one of Scotland\u2019s foremost genealogists, with over thirty years of commissioned research including work for the Court of the Lord Lyon. He is the author of the Red Book of Scotland — a nine-volume, 9,500-page account of the families who shaped Scotland from the medieval era to the present — held by the National Records of Scotland and the National Library of Scotland.",
   },
 ];
+
+const councilJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Governing Council of the Baronage of Scotland Association",
+  itemListElement: members.map((m, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Person",
+      name: m.alt ?? m.name,
+      alternateName: m.formal ?? m.name,
+      description: m.bio,
+      ...(m.img ? { image: `https://baronage.com${m.img}` } : {}),
+      affiliation: {
+        "@type": "Organization",
+        name: "Baronage of Scotland Association",
+        url: "https://baronage.com",
+      },
+    },
+  })),
+};
 
 const stewardship = [
   {
@@ -73,6 +99,7 @@ const stewardship = [
 export default function GoverningCouncilPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(councilJsonLd) }} />
       {/* Hero — the council framed over an extended great-hall backdrop */}
       <section className="relative isolate overflow-hidden">
         <div
