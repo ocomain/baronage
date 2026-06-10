@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
-import { site } from "@/lib/site";
+import { ButtonLink, Container, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
+import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Pledge",
   description:
-    "The Pledge converts a baronial title into a pledged bloodline honour — a family compact of service, bound by the Baronial Code of Honour.",
+    "The Pledge converts a barony into a pledged hereditary title — a family compact of service, bound by the Baronial Code of Honour.",
 };
 
 const pledgePoints = [
@@ -24,7 +24,9 @@ export default function PledgePage() {
       <PageHero
         eyebrow="A Lasting Commitment"
         title="The Pledge"
-        intro="An opportunity to convert a baronial title into a pledged bloodline hereditary honour — ensuring legitimacy and principled commitment for future generations."
+        intro="An opportunity to convert a barony into a pledged hereditary title — ensuring legitimacy and principled commitment for future generations."
+        image="/images/scribe.webp"
+        position="center 30%"
       />
 
       <Section tone="parchment">
@@ -76,15 +78,17 @@ export default function PledgePage() {
           <Reveal>
             <h2 className="text-3xl text-navy sm:text-4xl">Begin the Pledge</h2>
             <p className="mx-auto mt-6 max-w-xl leading-relaxed text-ink-soft">
-              The full Baronial Pledge is available on request. To take the Pledge or learn more, please contact the
-              Secretary.
+              To take the Pledge or learn more, please contact the Secretary.
             </p>
+            <div className="mt-8 flex justify-center">
+              <PdfLink href="/docs/the-baronial-pledge.pdf" label="The Baronial Pledge.pdf" />
+            </div>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <ButtonLink href="/baronial-code" variant="outline">
                 Read the Code of Honour
               </ButtonLink>
-              <ButtonLink href={`mailto:${site.email}`} variant="gold">
-                Contact the Secretary
+              <ButtonLink href={CALENDLY_URL} variant="gold">
+                Request a Call Back
               </ButtonLink>
             </div>
           </Reveal>

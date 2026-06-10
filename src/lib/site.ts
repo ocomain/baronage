@@ -1,7 +1,7 @@
 export const site = {
   name: "Baronage of Scotland",
   legalName: "Baronage of Scotland Association",
-  tagline: "Preserving the noble heritage of Scottish Barons in the modern era.",
+  tagline: "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
   email: "secretary@baronage.com",
   addressLines: ["5 South Charlotte Street", "Edinburgh", "EH2 4AN"],
   established: "Keepers of the Roll of Scottish Barons",
@@ -9,6 +9,9 @@ export const site = {
 
 /** The live, existing register — a separate app we link out to. */
 export const ROLL_URL = "https://roll.baronage.com/";
+
+/** The Secretary's Calendly booking link — "Request a Call Back". */
+export const CALENDLY_URL = "https://calendly.com/secretary-baronage/30min";
 
 export type NavLink = { href: string; label: string; external?: boolean };
 
@@ -22,5 +25,5 @@ export const navLinks: NavLink[] = [
   { href: "/charitable-trust", label: "Charitable Trust" },
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/members", label: "Members" },
 ];

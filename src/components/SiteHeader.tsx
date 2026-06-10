@@ -34,11 +34,19 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50">
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
-          <span>{site.established}</span>
-          <a href={`mailto:${site.email}`} className="nav-link transition-colors hover:text-gold">
-            {site.email}
-          </a>
+        <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
+          <span className="text-parchment-200/75">
+            We maintain{" "}
+            <a
+              href={ROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold transition-colors hover:text-gold-light"
+            >
+              The Roll of Scottish Barons
+            </a>{" "}
+            an open-source title verification register
+          </span>
         </div>
       </div>
 
@@ -63,7 +71,7 @@ export function SiteHeader() {
               title="Opens the Roll register (roll.baronage.com) in a new window"
               className="hidden items-center gap-1.5 rounded-sm bg-gold px-5 py-3 font-sans text-[0.6rem] font-medium uppercase tracking-[0.2em] text-navy-deep transition-colors hover:bg-gold-light lg:inline-flex"
             >
-              Verify on the Roll
+              Verify Title on the Roll
               <ExternalArrow className="h-3 w-3" />
             </a>
             <button

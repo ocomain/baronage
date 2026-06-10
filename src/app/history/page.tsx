@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/PageHero";
-import { InteractiveHistory } from "@/components/InteractiveHistory";
+import { HistoryStory } from "@/components/HistoryStory";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
+import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,33 +13,56 @@ export const metadata: Metadata = {
 export default function HistoryPage() {
   return (
     <>
-      <PageHero
-        eyebrow="A Thousand Years of Heritage"
-        title="History of the Scottish Baronage"
-        intro="One of the oldest noble classes in Scotland — with origins in the medieval period, predating the peerage itself."
-      />
+      {/* Compact masthead — the storybook itself is the hero */}
+      <section className="bg-navy-deep text-parchment-50 texture-saltire">
+        <Container className="py-10 text-center sm:py-12">
+          <p className="rise eyebrow eyebrow--light">A Thousand Years of Heritage · In Four Chapters</p>
+          <h1
+            className="rise mt-4 font-display leading-[1.02] text-parchment-50"
+            style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
+          >
+            History of the Scottish Baronage
+          </h1>
+          <p className="rise mt-4 font-serif text-lg italic text-parchment-200/75" style={{ animationDelay: "0.16s" }}>
+            Scroll through the chapters.
+          </p>
+        </Container>
+      </section>
+
+      {/* The storybook — each chapter scrolls over the last */}
+      <HistoryStory />
 
       <Section tone="parchment">
         <Container size="prose">
           <Reveal>
             <p className="dropcap text-xl leading-relaxed text-ink-soft">
-              For over a thousand years the Scottish baronage has stood among the nation’s oldest nobility — feudal
-              superiors of the Crown, defenders of its sovereignty, and today a dignity of honour preserved in law. Its
-              story unfolds across the centuries that shaped Scotland itself.
+              Scottish baronies predate the peerage itself, standing among the most ancient noble dignities in the
+              British Isles. Originating in the medieval period, a barony was an estate of land held directly from the
+              Crown, erected into a <strong className="font-semibold text-navy">free barony</strong> by Crown Charter —
+              a dignity created not by Parliament but by the sovereign will of the Scottish Crown.
             </p>
           </Reveal>
-        </Container>
-
-        <Container className="mt-16">
           <Reveal>
-            <div className="mx-auto mb-14 max-w-2xl text-center">
-              <Eyebrow>The Story in Four Chapters</Eyebrow>
-              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">From the Crown to the present day</h2>
-              <GoldRule className="mt-6" />
-            </div>
+            <p className="mt-7 text-lg leading-relaxed text-ink-soft">
+              Unlike the modern peerage, which is primarily a titular and parliamentary distinction, the Scottish
+              Baronage was rooted in territorial jurisdiction. The baron held both the dignity of the title and the
+              legal authority over his lands, often possessing the right of <em>“pit and gallows”</em> — the power of
+              life and death.
+            </p>
           </Reveal>
           <Reveal>
-            <InteractiveHistory />
+            <blockquote className="mt-10 border-l-2 border-gold pl-6 font-serif text-2xl italic leading-relaxed text-navy sm:pl-8">
+              Today, the Scottish Baronage is a recognised dignity in Scots law.
+            </blockquote>
+          </Reveal>
+          <Reveal>
+            <p className="mt-10 text-lg leading-relaxed text-ink-soft">
+              Since the abolition of land-based tenure in 2004, baronies have become{" "}
+              <strong className="font-semibold text-navy">incorporeal heritable dignities</strong> — independent of any
+              land, freely inheritable and transferable. The holder of a Scottish barony is correctly styled a{" "}
+              <strong className="font-semibold text-navy">minor baron</strong>: a titled noble below the peerage, yet
+              above the rank of gentleman.
+            </p>
           </Reveal>
         </Container>
       </Section>

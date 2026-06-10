@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · Baronage of Scotland Association",
   },
   description:
-    "Baronage of Scotland Association preserves the historical rights, heritage and dignity of Scottish Barons, and maintains the Roll of Scottish Barons — an open, verified register of titles.",
+    "The ancient nobility of Scotland — verified, recorded, and preserved for future generations. The Association maintains the Roll of Scottish Barons, an open, verified register of titles.",
   keywords: [
     "Baronage of Scotland Association",
     "Scottish Barons",
@@ -39,10 +39,49 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Baronage of Scotland Association",
     description:
-      "Preserving the noble heritage of Scottish Barons and providing value in society in the modern era.",
+      "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
     type: "website",
     locale: "en_GB",
+    url: "https://baronage.com",
+    siteName: "Baronage of Scotland Association",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Eilean Donan castle at dusk with the seal of the Baronage of Scotland Association" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Baronage of Scotland Association",
+    description:
+      "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
+    images: ["/og.jpg"],
+  },
+  alternates: { canonical: "/" },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
+};
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Baronage of Scotland Association",
+  url: "https://baronage.com",
+  logo: "https://baronage.com/seal-gold.png",
+  description:
+    "The ancient nobility of Scotland — verified, recorded, and preserved for future generations. A non-profit honourable body and keeper of the Roll of Scottish Barons.",
+  email: "secretary@baronage.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5 South Charlotte Street",
+    addressLocality: "Edinburgh",
+    postalCode: "EH2 4AN",
+    addressCountry: "GB",
+  },
+  sameAs: ["https://roll.baronage.com"],
 };
 
 export default function RootLayout({
@@ -55,6 +94,10 @@ export default function RootLayout({
       className={`${cormorant.variable} ${quicksand.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-parchment text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

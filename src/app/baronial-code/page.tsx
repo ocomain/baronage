@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, Section } from "@/components/primitives";
+import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 
 export const metadata: Metadata = {
   title: "The Baronial Code of Honour",
@@ -55,21 +56,49 @@ export default function BaronialCodePage() {
         eyebrow="Honour · Duty · Nobility"
         title="The Baronial Code of Honour"
         intro="The principles and standards that define our collective commitment. By signing The Pledge, each Baron affirms this Code."
+        image="/images/knight-helm.webp"
       />
 
       <Section tone="parchment">
-        <Container>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {principles.map((p, i) => (
-              <Reveal key={p.title} delay={(i % 3) * 0.08} className="h-full">
-                <article className="flex h-full flex-col border border-parchment-300/70 bg-parchment-50 p-7">
-                  <span className="font-display text-4xl text-gold/55">{String(i + 1).padStart(2, "0")}</span>
-                  <h2 className="mt-3 text-xl text-navy">{p.title}</h2>
-                  <p className="mt-4 leading-relaxed text-ink-soft">{p.body}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+        <Container size="prose">
+          {/* The Code, presented as the document itself */}
+          <Reveal>
+            <div className="relative border border-gold/40 bg-parchment-50 px-6 py-12 shadow-[0_30px_80px_-40px_rgba(10,16,36,0.5)] sm:px-12 sm:py-16">
+              <div className="pointer-events-none absolute inset-3 border border-gold/20" aria-hidden />
+              <div className="flex flex-col items-center text-center">
+                <Seal className="h-16 w-16" />
+                <p className="eyebrow mt-5">In Nine Articles</p>
+                <h2 className="mt-3 font-display text-3xl text-navy sm:text-4xl">The Code of Honour</h2>
+                <GoldRule className="mt-6" />
+              </div>
+
+              <ol className="mt-12">
+                {principles.map((p, i) => (
+                  <Reveal key={p.title} delay={Math.min(i * 0.04, 0.2)}>
+                    <li
+                      className={`grid grid-cols-[3.2rem_1fr] items-start gap-x-5 py-7 sm:grid-cols-[4rem_1fr] sm:gap-x-8 ${
+                        i > 0 ? "border-t border-parchment-300/70" : ""
+                      }`}
+                    >
+                      <span className="pt-0.5 text-center font-inscribe text-2xl leading-none text-gold-deep sm:text-3xl">
+                        {["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"][i]}
+                      </span>
+                      <div>
+                        <h3 className="font-display text-xl text-navy sm:text-2xl">{p.title}</h3>
+                        <p className="mt-2.5 leading-relaxed text-ink-soft">{p.body}</p>
+                      </div>
+                    </li>
+                  </Reveal>
+                ))}
+              </ol>
+
+              <div className="mt-10 flex flex-col items-center border-t border-parchment-300/70 pt-9 text-center">
+                <p className="max-w-md font-serif text-lg italic leading-relaxed text-ink-soft">
+                  Affirmed by each Baron upon taking the Pledge — in honour, to family, baronage and country.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </Section>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
 
@@ -13,7 +14,7 @@ const mandate = [
   "Advocacy for the titles of the Baronage of Scotland, one of the historic Three Estates.",
   "Legal protection of the historic rights and heritage of the baronage, upholding the principles of honour.",
   "Keeper of the open-source verification Roll of Scottish Barons.",
-  "Offering barons The Pledge — a pledged bloodline hereditary honour bound by the Baronial Code.",
+  "Offering barons The Pledge — converting a barony into a pledged hereditary title, bound by the Baronial Code.",
   "Representing barons in their engagement with government.",
   "Updating baronial descriptors to reflect the law: since the 2000 Act, titles are personal and non-territorial, and the term “feudal” baron is no longer correct for extant baronies.",
   "Lobbying for HRH the Baron of Renfrew as patron, for a royal warrant recognising the Roll, and for the modern relevance of the Lord Lyon office.",
@@ -62,8 +63,10 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="The Association"
-        title="About the Baronage of Scotland"
+        title="About the Baronage of Scotland Association"
         intro="An independent, voluntary and non-profit honourable body, dedicated to preserving the historical integrity of Scottish baronies."
+        image="/images/great-hall.webp"
+        position="center 60%"
       />
 
       <Section tone="parchment">
@@ -90,6 +93,72 @@ export default function AboutPage() {
               </p>
             </div>
           </Reveal>
+        </Container>
+      </Section>
+
+      <Section tone="parchment" className="border-t border-parchment-300/50">
+        <Container size="prose">
+          <Reveal>
+            <SectionHeading align="start" eyebrow="About Us" title="An impartial, voluntary honourable body" />
+          </Reveal>
+          <Reveal>
+            <div className="prose-heritage mt-8">
+              <p>
+                The Roll of Scottish Barons and Baronage of Scotland Association (baronage.com), “the Roll,” is an independent,
+                voluntary non-profit dedicated to preserving the historical integrity of Scottish baronies. Since 2004,
+                there has been no legal requirement to record baronies in Scotland, leading to false or questionable
+                claimants appearing in sources like Debrett’s. We address this by maintaining a strict and verified,
+                public record, ensuring succession is documented with accuracy and legal precision.
+              </p>
+              <p>
+                As a non-political and impartial honourable body, we collaborate with recognised authorities,
+                researchers, and institutions to authenticate claims. Inclusion on the Roll is voluntary but requires
+                adherence to rigorous criteria—only dignities with proven legitimacy are recognised. Non-recognition of
+                unverified titles is fundamental. By safeguarding the historical record and upholding the traditions of
+                the Scottish Baronage—part of the Three Estates—we provide a trusted resource for scholars,
+                genealogists, and those interested in Scotland’s heritage.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* The emblem and its motto */}
+      <Section tone="navyDeep">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <Reveal>
+              <div className="relative mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-gold/30 bg-navy/50 sm:max-w-sm">
+                <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
+                <Seal className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="eyebrow eyebrow--light">Our Emblem</p>
+              <h2 className="mt-4 font-display text-3xl leading-tight text-parchment-50 sm:text-4xl">
+                In Liberam Baroniam · Per Cartas Nostras
+              </h2>
+              <GoldRule className="mt-6" align="start" />
+              <p className="mt-6 font-serif text-xl italic leading-relaxed text-gold-light">
+                “Into a free barony · By our charters”
+              </p>
+              <div className="mt-6 space-y-4 leading-relaxed text-parchment-200/85">
+                <p>
+                  Our emblem takes the form of an engraved seal — recalling the wax seals appended to the Crown
+                  charters by which every Scottish barony was created. The motto around its ring preserves the very
+                  words of those grants: lands were erected{" "}
+                  <em className="text-parchment-100">in liberam baroniam</em> — “into a free barony” — conferring the
+                  rank and dignity of baron upon the grantee and their heirs.
+                </p>
+                <p>
+                  <em className="text-parchment-100">Per cartas nostras</em> — “by our charters” — records the source
+                  of that honour: the sealed charters of the Crown, from which every baronial dignity flows. The shield
+                  at the seal’s centre stands for the baronage itself — the ancient Feudal Nobility of Scotland, whose
+                  titles the Association and the Roll exist to verify and preserve.
+                </p>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </Section>
 
