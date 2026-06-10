@@ -31,7 +31,7 @@ export function SiteHeader() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className="sticky top-0 z-50 bg-parchment-50">
+    <header className="sticky top-[env(safe-area-inset-top)] z-50 bg-parchment-50">
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
         <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
@@ -52,7 +52,7 @@ export function SiteHeader() {
 
       {/* Main bar */}
       <div
-        className={`border-b transition-all duration-300 ${
+        className={`relative z-50 border-b transition-all duration-300 ${
           scrolled
             ? "border-gold/30 bg-parchment-50 md:bg-parchment-50/95 shadow-[0_8px_30px_-18px_rgba(12,21,48,0.5)] backdrop-blur"
             : "border-transparent bg-parchment-50 md:bg-parchment-50/80 md:backdrop-blur-sm"
@@ -122,7 +122,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
             />
             <motion.nav
-              className="fixed inset-x-0 top-[4.75rem] z-40 max-h-[calc(100svh-4.75rem)] overflow-y-auto border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
+              className="fixed inset-x-0 top-[calc(4.75rem+env(safe-area-inset-top))] z-40 max-h-[calc(100svh-4.75rem-env(safe-area-inset-top))] overflow-y-auto border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
               initial={{ opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}

@@ -22,6 +22,7 @@ const quicksand = Quicksand({
 
 export const viewport: Viewport = {
   themeColor: "#faf6ec",
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -99,6 +100,11 @@ export default function RootLayout({
       className={`${cormorant.variable} ${quicksand.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-parchment text-ink">
+        {/* iOS: solid parchment cap over the status-bar strip — content can never show through */}
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-x-0 top-0 z-[80] h-[env(safe-area-inset-top)] bg-parchment-50"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
