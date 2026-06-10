@@ -91,7 +91,6 @@ export function BaroniesCarousel() {
     let raf = 0;
     let pos = -1; // float accumulator — Safari rounds scrollLeft, which stalls sub-pixel steps
     let last = performance.now();
-    let pauseUntil = 0;
     let dragging = false;
     let startX = 0;
     let startLeft = 0;
@@ -101,7 +100,7 @@ export function BaroniesCarousel() {
       const dt = now - last;
       last = now;
       const half = el.scrollWidth / 2;
-      if (!dragging && now > pauseUntil) {
+      if (!dragging) {
         // resync after any user scroll, then advance the float accumulator
         if (pos < 0 || Math.abs(el.scrollLeft - pos) > 2) pos = el.scrollLeft;
         pos += Math.min(dt, 50) * 0.035; // ~35px/s; clamped so tab-switches never jump
@@ -134,17 +133,7 @@ export function BaroniesCarousel() {
       el.scrollLeft = startLeft - dx;
     };
     const up = () => {
-      if (!dragging) return;
       dragging = false;
-      pauseUntil = performance.now() + 1800;
-    };
-    const interacted = () => {
-      pauseUntil = performance.now() + 1800;
-    };
-    const onWheel = (e: WheelEvent) => {
-      // Only deliberate horizontal scrolling pauses the belt — hovering or
-      // scrolling the page vertically over it must never stop the movement.
-      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) interacted();
     };
     const swallowClick = (e: MouseEvent) => {
       if (moved) {
@@ -158,8 +147,6 @@ export function BaroniesCarousel() {
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerup", up);
     el.addEventListener("pointercancel", up);
-    el.addEventListener("wheel", onWheel, { passive: true });
-    el.addEventListener("touchmove", interacted, { passive: true });
     el.addEventListener("click", swallowClick, true);
     return () => {
       cancelAnimationFrame(raf);
@@ -167,8 +154,6 @@ export function BaroniesCarousel() {
       el.removeEventListener("pointermove", move);
       el.removeEventListener("pointerup", up);
       el.removeEventListener("pointercancel", up);
-      el.removeEventListener("wheel", onWheel);
-      el.removeEventListener("touchmove", interacted);
       el.removeEventListener("click", swallowClick, true);
     };
   }, []);
