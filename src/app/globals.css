@@ -266,3 +266,8 @@ body::before {
     display: none;
   }
 }
+
+/* iOS paints the status-bar strip with the page background — keep it solid parchment */
+html {
+  background-color: #faf6ec;
+}
