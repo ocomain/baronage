@@ -16,7 +16,7 @@ const members: CouncilMember[] = [
     also: null,
     img: "/council/balvaird.avif",
     pos: "center 25%",
-    bio: "Brady Brim-DeForest, Baron of Balvaird and Blairlogie, is a serial entrepreneur and author — co-founder of six startups and former CEO of TheoremOne, which he grew into a four-hundred-strong global technology consultancy before its merger with Media.Monks. He is the author of Smaller is Better, an investor in frontier technology through Late Stage Capital, and a Life Fellow of the Royal Society of Arts and the Royal Anthropological Institute. He succeeded to the Barony of Balvaird in 2017 — a title confirmed by James VI in 1624 and recognised by the Lord Lyon in 2020 — and has pledged it as a hereditary title upon the Roll.",
+    bio: "Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird, is a serial entrepreneur and author — co-founder of six startups and former CEO of TheoremOne, which he grew into a four-hundred-strong global technology consultancy before its merger with Media.Monks. He is the author of Smaller is Better, an investor in frontier technology through Late Stage Capital, and a Life Fellow of the Royal Society of Arts and the Royal Anthropological Institute. He succeeded to the Barony of Balvaird in 2017 — a title confirmed by James VI in 1624 and recognised by the Lord Lyon in 2020 — and has pledged it as a hereditary title upon the Roll.",
   },
   {
     mark: "D",
@@ -32,7 +32,7 @@ const members: CouncilMember[] = [
     also: "Tanist Clan Commane",
     img: "/council/kinfauns.jpg",
     pos: "center 18%",
-    bio: "Antoin Commane, Younger of Kinfauns, is heir to the Lordship and Barony of Kinfauns — a dignity granted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist.",
+    bio: "Antoin Commane, Younger of Kinfauns, is heir to the Lordship of Kinfauns — a dignity with origins around 1340, granted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist.",
   },
   {
     mark: "M",
