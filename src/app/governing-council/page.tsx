@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { FadeImg } from "@/components/FadeImg";
+import { CouncilCard, type CouncilMember } from "@/components/CouncilCard";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 
 export const metadata: Metadata = {
@@ -9,20 +9,31 @@ export const metadata: Metadata = {
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",
 };
 
-type Member = {
-  mark: string;
-  name: string;
-  also: string | null;
-  img: string | null;
-  pos?: string;
-  fit?: "cover" | "contain";
-  bg?: string;
-};
-
-const members: Member[] = [
-  { mark: "B", name: "Brady, Baron of Balvaird", also: null, img: "/council/balvaird.avif", pos: "center 25%" },
-  { mark: "D", name: "Alexander, Baron of Drum", also: "Chief of his Name", img: "/council/Irvine.jpg", pos: "center 20%" },
-  { mark: "K", name: "Antoin, Younger of Kinfauns", also: "Tanist Clan Commane", img: "/council/kinfauns.jpg", pos: "center 18%" },
+const members: CouncilMember[] = [
+  {
+    mark: "B",
+    name: "Brady, Baron of Balvaird",
+    also: null,
+    img: "/council/balvaird.avif",
+    pos: "center 25%",
+    bio: "Brady Brim-DeForest, Baron of Balvaird and Blairlogie, succeeded to the barony in 2017. The title — confirmed by James VI in 1624, with its caput at Balvaird Castle in Perthshire — is recorded in Burke\u2019s Peerage and was recognised by the Lord Lyon King of Arms in 2020. He has pledged the barony as a hereditary title upon the Roll.",
+  },
+  {
+    mark: "D",
+    name: "Alexander, Baron of Drum",
+    also: "Chief of his Name",
+    img: "/council/Irvine.jpg",
+    pos: "center 20%",
+    bio: "Alexander Irvine, 27th Baron of Drum, succeeded his father in 2019 and is Chief of the Name and Arms of Irvine of Drum. The barony descends from the Royal Charter granted to William de Irwyn by Robert the Bruce in 1323, with Drum Castle in Aberdeenshire its caput for seven centuries. He is Patron of the Clan Irwin Association.",
+  },
+  {
+    mark: "K",
+    name: "Antoin, Younger of Kinfauns",
+    also: "Tanist Clan Commane",
+    img: "/council/kinfauns.jpg",
+    pos: "center 18%",
+    bio: "Antoin Commane, Younger of Kinfauns, is heir to the Lordship and Barony of Kinfauns — a dignity granted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist.",
+  },
   {
     mark: "M",
     name: "Gordon MacGregor, Esq",
@@ -30,6 +41,7 @@ const members: Member[] = [
     img: "/council/red-book.png",
     fit: "contain",
     bg: "#8b1c08",
+    bio: "Gordon MacGregor is one of Scotland\u2019s foremost genealogists, with over thirty years of commissioned research including work for the Court of the Lord Lyon. He is the author of the Red Book of Scotland — a nine-volume, 9,500-page account of the families who shaped Scotland from the medieval era to the present — held by the National Records of Scotland and the National Library of Scotland.",
   },
 ];
 
@@ -51,46 +63,6 @@ const stewardship = [
   },
 ];
 
-function MemberFigure({ m }: { m: Member }) {
-  return (
-    <figure className="group text-center">
-      <div className="relative mx-auto aspect-[3/4] w-full max-w-[13rem]">
-        <div className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/50 transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3" aria-hidden />
-        <div
-          className="relative h-full w-full overflow-hidden bg-navy-deep texture-saltire shadow-[0_24px_50px_-24px_rgba(0,0,0,0.8)]"
-          style={m.bg ? { backgroundColor: m.bg } : undefined}
-        >
-          {m.img ? (
-            m.fit === "contain" ? (
-              <FadeImg
-                src={m.img}
-                alt={m.name}
-                className="h-full w-full object-contain p-4 transition duration-700 group-hover:scale-[1.04]"
-              />
-            ) : (
-              <FadeImg
-                src={m.img}
-                alt={m.name}
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                style={{ objectPosition: m.pos ?? "center" }}
-              />
-            )
-          ) : (
-            <span className="flex h-full w-full items-center justify-center font-display text-6xl text-gold-light/70">
-              {m.mark}
-            </span>
-          )}
-          <div className="pointer-events-none absolute inset-3 border border-gold/25" aria-hidden />
-        </div>
-      </div>
-      <figcaption className="mt-5">
-        <h3 className="font-display text-xl leading-tight text-parchment-50">{m.name}</h3>
-        {m.also && <p className="mt-1.5 font-serif text-lg italic leading-snug text-gold-light">{m.also}</p>}
-      </figcaption>
-    </figure>
-  );
-}
-
 export default function GoverningCouncilPage() {
   return (
     <>
@@ -102,7 +74,15 @@ export default function GoverningCouncilPage() {
           aria-hidden
         />
         <div
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 sm:hidden"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(8,12,28,0.8) 0%, rgba(8,12,28,0.28) 30%, rgba(8,12,28,0.42) 62%, rgba(8,12,28,0.9) 100%)",
+          }}
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 -z-10 hidden sm:block"
           style={{
             background:
               "linear-gradient(180deg, rgba(8,12,28,0.88) 0%, rgba(8,12,28,0.5) 34%, rgba(8,12,28,0.66) 64%, rgba(8,12,28,0.93) 100%)",
@@ -128,7 +108,7 @@ export default function GoverningCouncilPage() {
           <div className="mt-20 grid grid-cols-1 gap-x-6 gap-y-12 sm:mt-28 sm:grid-cols-2 lg:grid-cols-4">
             {members.map((m, i) => (
               <Reveal key={m.mark} delay={(i % 4) * 0.08}>
-                <MemberFigure m={m} />
+                <CouncilCard m={m} />
               </Reveal>
             ))}
           </div>
