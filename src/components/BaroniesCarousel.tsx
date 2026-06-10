@@ -135,6 +135,11 @@ export function BaroniesCarousel() {
     const interacted = () => {
       pauseUntil = performance.now() + 1800;
     };
+    const onWheel = (e: WheelEvent) => {
+      // Only deliberate horizontal scrolling pauses the belt — hovering or
+      // scrolling the page vertically over it must never stop the movement.
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) interacted();
+    };
     const swallowClick = (e: MouseEvent) => {
       if (moved) {
         e.preventDefault();
@@ -147,7 +152,7 @@ export function BaroniesCarousel() {
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerup", up);
     el.addEventListener("pointercancel", up);
-    el.addEventListener("wheel", interacted, { passive: true });
+    el.addEventListener("wheel", onWheel, { passive: true });
     el.addEventListener("touchmove", interacted, { passive: true });
     el.addEventListener("click", swallowClick, true);
     return () => {
@@ -156,7 +161,7 @@ export function BaroniesCarousel() {
       el.removeEventListener("pointermove", move);
       el.removeEventListener("pointerup", up);
       el.removeEventListener("pointercancel", up);
-      el.removeEventListener("wheel", interacted);
+      el.removeEventListener("wheel", onWheel);
       el.removeEventListener("touchmove", interacted);
       el.removeEventListener("click", swallowClick, true);
     };
