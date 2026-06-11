@@ -69,6 +69,46 @@ export default function AboutPage() {
         position="center 60%"
       />
 
+      {/* The emblem and its motto */}
+      <Section tone="navyDeep">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <Reveal>
+              <div className="relative mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-gold/30 bg-navy/50 sm:max-w-sm">
+                <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
+                <Seal className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="eyebrow eyebrow--light">Our Emblem</p>
+              <h2 className="mt-4 font-display text-3xl leading-tight text-parchment-50 sm:text-4xl">
+                In Liberam Baroniam · Per Cartas Nostras
+              </h2>
+              <GoldRule className="mt-6" align="start" />
+              <p className="mt-6 font-serif text-xl italic leading-relaxed text-gold-light">
+                “Into a free barony · By our charters”
+              </p>
+              <div className="mt-6 space-y-4 leading-relaxed text-parchment-200/85">
+                <p>
+                  Our emblem takes the form of an engraved seal — recalling the wax seals appended to the Crown
+                  charters by which every Scottish barony was created. The motto around its ring preserves the very
+                  words of those grants: lands were erected{" "}
+                  <em className="text-parchment-100">in liberam baroniam</em> — “into a free barony” — conferring the
+                  rank and dignity of baron upon the grantee and their heirs.
+                </p>
+                <p>
+                  <em className="text-parchment-100">Per cartas nostras</em> — “by our charters” — records the source
+                  of that honour: the sealed charters of the Crown, from which every baronial dignity flows. The shield
+                  at the seal’s centre stands for the baronage itself — the ancient Feudal Nobility of Scotland, whose
+                  titles the Association and the Roll exist to verify and preserve.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </Section>
+
+
       <Section tone="parchment">
         <Container size="prose">
           <Reveal>
@@ -120,45 +160,6 @@ export default function AboutPage() {
               </p>
             </div>
           </Reveal>
-        </Container>
-      </Section>
-
-      {/* The emblem and its motto */}
-      <Section tone="navyDeep">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            <Reveal>
-              <div className="relative mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-gold/30 bg-navy/50 sm:max-w-sm">
-                <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
-                <Seal className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="eyebrow eyebrow--light">Our Emblem</p>
-              <h2 className="mt-4 font-display text-3xl leading-tight text-parchment-50 sm:text-4xl">
-                In Liberam Baroniam · Per Cartas Nostras
-              </h2>
-              <GoldRule className="mt-6" align="start" />
-              <p className="mt-6 font-serif text-xl italic leading-relaxed text-gold-light">
-                “Into a free barony · By our charters”
-              </p>
-              <div className="mt-6 space-y-4 leading-relaxed text-parchment-200/85">
-                <p>
-                  Our emblem takes the form of an engraved seal — recalling the wax seals appended to the Crown
-                  charters by which every Scottish barony was created. The motto around its ring preserves the very
-                  words of those grants: lands were erected{" "}
-                  <em className="text-parchment-100">in liberam baroniam</em> — “into a free barony” — conferring the
-                  rank and dignity of baron upon the grantee and their heirs.
-                </p>
-                <p>
-                  <em className="text-parchment-100">Per cartas nostras</em> — “by our charters” — records the source
-                  of that honour: the sealed charters of the Crown, from which every baronial dignity flows. The shield
-                  at the seal’s centre stands for the baronage itself — the ancient Feudal Nobility of Scotland, whose
-                  titles the Association and the Roll exist to verify and preserve.
-                </p>
-              </div>
-            </Reveal>
-          </div>
         </Container>
       </Section>
 
