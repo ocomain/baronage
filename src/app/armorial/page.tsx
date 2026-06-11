@@ -31,7 +31,7 @@ export default function SupportersPage() {
             className="rise mt-4 font-display leading-[1.02] text-parchment-50"
             style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
           >
-            Armorial of Supporters
+            An Armorial of Supporters
             <span className="mt-2 block text-[0.52em] leading-snug text-parchment-200/85">
               of the work of the Association
             </span>
@@ -74,7 +74,7 @@ export default function SupportersPage() {
                   </div>
                   <figcaption className="mt-6">
                     {b.dignity !== "Younger" && (
-                      <span className="block font-sans text-[0.5rem] font-medium uppercase tracking-[0.2em] text-gold-deep/70">
+                      <span className="block font-sans text-[0.55rem] font-medium uppercase tracking-[0.26em] text-gold-deep/70">
                         The Much Hon
                       </span>
                     )}
