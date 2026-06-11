@@ -31,23 +31,12 @@ export default function SupportersPage() {
             className="rise mt-4 font-display leading-[1.02] text-parchment-50"
             style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
           >
-            An Armorial of Supporters
+            An Armorial of Supporters of the work of the Association
           </h1>
         </Container>
       </section>
 
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
-        <Container size="prose" className="mb-14 sm:mb-16">
-          <Reveal>
-            <div className="text-center">
-              <p className="mx-auto max-w-3xl font-serif text-2xl leading-[1.55] text-ink sm:text-[1.75rem]">
-                Supporters of the work of the Association —{" "}
-                <strong className="font-semibold text-navy">titles verified and recorded upon the Roll.</strong>
-              </p>
-              <GoldRule className="mt-7" />
-            </div>
-          </Reveal>
-        </Container>
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {baronies.map((b, i) => (
