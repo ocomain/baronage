@@ -61,7 +61,14 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
 
   return (
     <>
-      <figure className="group cursor-pointer text-center" onClick={() => setOpen(true)}>
+      <figure
+        className="group cursor-pointer text-center"
+        onClick={(e) => {
+          // never hijack clicks meant for links or buttons inside the card
+          if ((e.target as HTMLElement).closest("a,button")) return;
+          setOpen(true);
+        }}
+      >
         <div className="relative mx-auto aspect-[3/4] w-full max-w-[17rem] sm:max-w-[13rem]">
           <div
             className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/50 transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3"
