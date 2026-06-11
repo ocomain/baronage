@@ -208,7 +208,7 @@ export default function HomePage() {
           <BaroniesCarousel />
         </Reveal>
         <Container className="mt-14 text-center">
-          <ButtonLink href="/supporters" variant="outline">
+          <ButtonLink href="/armorial" variant="outline">
             Explore Armorials
           </ButtonLink>
         </Container>
