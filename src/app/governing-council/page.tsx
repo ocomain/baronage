@@ -102,18 +102,10 @@ export default function GoverningCouncilPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(councilJsonLd) }} />
       {/* Hero — the council framed over an extended great-hall backdrop */}
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate overflow-hidden bg-navy-deep texture-saltire">
         <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
+          className="absolute inset-0 -z-20 hidden bg-cover bg-center sm:block"
           style={{ backgroundImage: "url('/images/great-hall.webp')" }}
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 -z-10 sm:hidden"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(8,12,28,0.8) 0%, rgba(8,12,28,0.28) 30%, rgba(8,12,28,0.42) 62%, rgba(8,12,28,0.9) 100%)",
-          }}
           aria-hidden
         />
         <div

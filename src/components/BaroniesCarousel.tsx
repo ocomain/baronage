@@ -164,6 +164,7 @@ export function BaroniesCarousel() {
       <div
         ref={ref}
         className="marquee__scroll flex cursor-grab select-none overflow-x-auto py-2 active:cursor-grabbing"
+        onDragStart={(e) => e.preventDefault()}
       >
         {row.map((b, i) => (
           <figure
@@ -178,6 +179,7 @@ export function BaroniesCarousel() {
                   src={b.img}
                   alt={`Coat of arms — ${b.dignity} of ${b.name}`}
                   decoding="async"
+                  draggable={false}
                   width={160}
                   height={160}
                   className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-105"
