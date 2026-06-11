@@ -66,7 +66,7 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
         Lord Lyon Court Ruling (26 February 1943, Vol. IV, p. 26): “Finds and Declares that the (Minor) Barons of
         Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled
         nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of
-        Scotland” <em>Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143</em>
+        Scotland” <em><a href="https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143</a></em>
       </>
     ),
     subs: [
@@ -80,7 +80,7 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
   {
     body: (
       <>
-        Spencer-Thomas of Buquhollie v. Newell (1992), Lord Clyde’s dictum “<em>a barony falls into the class of
+        <a href="https://archive.org/details/1992-lord-clydes-dictum" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Spencer-Thomas of Buquhollie v. Newell (1992), Lord Clyde’s dictum</a> “<em>a barony falls into the class of
         noble</em> as opposed to ignoble feus. That classification is discussed by Craig (Jus Feudale, I.x.16) and
         Bankton (II.iii.83). In Scotland the distinction was recognised between the greater barons and the lesser
         barons, the former acquiring such titles as Duke or Earl. It was at the earliest a territorial dignity as
@@ -126,7 +126,11 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
     ],
   },
   {
-    body: <>Scottish Law Commission Report, 1999, para 2.34</>,
+    body: (
+      <>
+        <a href="https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Scottish Law Commission Report, 1999, para 2.34</a>
+      </>
+    ),
     subs: [
       <>
         <em>
@@ -147,13 +151,25 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
     ],
   },
   {
-    body: <>Scottish Parliament, Explanatory Notes to the 2000 Act, Section 63.198</>,
+    body: (
+      <>
+        <a href="https://www.legislation.gov.uk/asp/2000/5/notes/division/1/3/6/11" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Scottish Parliament, Explanatory Notes to the 2000 Act, Section 63.198</a>
+      </>
+    ),
   },
   {
-    body: <>Abolition of Feudal Tenure etc. (Scotland) Act 2000, Section 63</>,
+    body: (
+      <>
+        <a href="https://www.legislation.gov.uk/asp/2000/5/section/63" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Abolition of Feudal Tenure etc. (Scotland) Act 2000, Section 63</a>
+      </>
+    ),
   },
   {
-    body: <>Royal Warrant, 1469 (Baron of Renfrew title)</>,
+    body: (
+      <>
+        <a href="https://en.wikipedia.org/wiki/Baron_of_Renfrew_(title)" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Royal Warrant, 1469 (Baron of Renfrew title)</a>
+      </>
+    ),
   },
   {
     body: (
