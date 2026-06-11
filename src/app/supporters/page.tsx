@@ -41,8 +41,8 @@ export default function SupportersPage() {
           <Reveal>
             <div className="text-center">
               <p className="mx-auto max-w-3xl font-serif text-2xl leading-[1.55] text-ink sm:text-[1.75rem]">
-                The arms of barons who support the work of the Association —{" "}
-                <strong className="font-semibold text-navy">each title verified and recorded upon the Roll.</strong>
+                Supporters of the work of the Association —{" "}
+                <strong className="font-semibold text-navy">titles verified and recorded upon the Roll.</strong>
               </p>
               <GoldRule className="mt-7" />
             </div>
@@ -89,7 +89,7 @@ export default function SupportersPage() {
 
           <Reveal>
             <p className="mt-12 text-center font-serif text-lg italic text-muted">
-              A selection of the baronage — every entry verified upon the Roll of Scottish Barons.
+              A selection of support — titles verified in the Roll of Scottish Barons.
             </p>
           </Reveal>
         </Container>

@@ -1,5 +1,12 @@
 /** The supporters shown in the homepage conveyor and on /supporters. */
-export type Barony = { dignity: "Baron" | "Lord Baron" | "Earl Baron"; name: string; img?: string; note?: string };
+export type Barony = {
+  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger";
+  name: string;
+  img?: string;
+  note?: string;
+  /** shown on /supporters only, not in the homepage conveyor */
+  pageOnly?: boolean;
+};
 
 export const baronies: Barony[] = [
   { dignity: "Baron", name: "Balvaird", img: "/arms/balvaird.webp" },
@@ -26,4 +33,5 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Hartsyde", img: "/arms/hartsyde.webp" },
   { dignity: "Earl Baron", name: "Rothes", img: "/arms/rothes.webp" },
   { dignity: "Baron", name: "Stobo", img: "/arms/stobo.webp" },
+  { dignity: "Younger", name: "Kinfauns", img: "/arms/kinfauns.webp", pageOnly: true },
 ];
