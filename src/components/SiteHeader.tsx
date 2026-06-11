@@ -64,6 +64,14 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/members"
+              className={`nav-link hidden font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors lg:inline-block ${
+                isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
+              }`}
+            >
+              Members
+            </Link>
             <a
               href={ROLL_URL}
               target="_blank"
@@ -153,6 +161,16 @@ export function SiteHeader() {
                     )}
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href="/members"
+                    className={`block py-3.5 font-display text-lg ${
+                      isActive("/members") ? "text-oxblood" : "text-navy"
+                    }`}
+                  >
+                    Members
+                  </Link>
+                </li>
               </ul>
               <a
                 href={CALENDLY_URL}
