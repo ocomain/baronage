@@ -42,7 +42,7 @@ export default function SupportersPage() {
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
         <Container size="prose" className="mb-12 sm:mb-14">
           <p className="text-center font-serif text-lg italic leading-relaxed text-muted">
-            Every achievement shown here appears by the kind permission of its holder.{" "}
+            Every achievement shown here appears by the request or kind permission of its holder.{" "}
             <strong className="font-semibold not-italic text-navy">
               Space allows only a selection of our many supporters.
             </strong>
