@@ -21,13 +21,15 @@ const mandate = [
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
 
-const citations = [
+const citations: { source: string; text: string; href?: string }[] = [
   {
     source: "Court of the Lord Lyon · 1943",
+    href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
     text: "Finds and Declares that the Barons of Scotland are recognised as a “titled nobility,” of the ancient Feudal Nobility of Scotland.",
   },
   {
     source: "Lord Clyde’s dictum · 1992",
+    href: "https://archive.org/details/1992-lord-clydes-dictum",
     text: "A barony falls into the class of noble — as opposed to ignoble — feus: a territorial dignity conferred by the Crown.",
   },
   {
@@ -36,6 +38,7 @@ const citations = [
   },
   {
     source: "Scotland Act 2000",
+    href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
     text: "On the abolition of the feudal system, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity, protected in Scots law.",
   },
 ];
@@ -99,7 +102,7 @@ export default function AboutPage() {
                 <p>
                   <em className="text-parchment-100">Per cartas nostras</em> — “by our charters” — records the source
                   of that honour: the sealed charters of the Crown, from which every baronial dignity flows. The shield
-                  at the seal’s centre stands for the baronage itself — the ancient Feudal Nobility of Scotland, whose
+                  at the seal’s centre stands for the baronage itself — the ancient Nobility of Scotland, whose
                   titles the Association and the Roll exist to verify and preserve.
                 </p>
               </div>
@@ -108,6 +111,44 @@ export default function AboutPage() {
         </Container>
       </Section>
 
+
+      <Section tone="navyDeep">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Recognised in Law"
+              title="A noble dignity, affirmed"
+              light
+              intro="The status of the Scottish Baronage is recognised in the nobiliary court, the Court of Session and within UK legal frameworks."
+            />
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {citations.map((c, i) => (
+              <Reveal key={c.source} delay={(i % 2) * 0.1} className="h-full">
+                <figure className="flex h-full flex-col border-l-2 border-gold/60 bg-navy/40 p-7">
+                  <blockquote className="font-serif text-lg italic leading-relaxed text-parchment-100/90">
+                    {c.text}
+                  </blockquote>
+                  <figcaption className="mt-4 font-sans text-xs uppercase tracking-[0.18em] text-gold-light">
+                    {c.href ? (
+                      <a
+                        href={c.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+                      >
+                        {c.source}
+                      </a>
+                    ) : (
+                      c.source
+                    )}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
 
       <Section tone="parchment">
         <Container size="prose">
@@ -183,33 +224,6 @@ export default function AboutPage() {
                   </div>
                   <p className="mt-5 leading-relaxed text-ink-soft">{e.body}</p>
                 </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section tone="navyDeep">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Recognised in Law"
-              title="A noble dignity, affirmed"
-              light
-              intro="The status of the Scottish Baronage is recognised in the nobiliary court, the Court of Session and within UK legal frameworks."
-            />
-          </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {citations.map((c, i) => (
-              <Reveal key={c.source} delay={(i % 2) * 0.1} className="h-full">
-                <figure className="flex h-full flex-col border-l-2 border-gold/60 bg-navy/40 p-7">
-                  <blockquote className="font-serif text-lg italic leading-relaxed text-parchment-100/90">
-                    {c.text}
-                  </blockquote>
-                  <figcaption className="mt-4 font-sans text-xs uppercase tracking-[0.18em] text-gold-light">
-                    {c.source}
-                  </figcaption>
-                </figure>
               </Reveal>
             ))}
           </div>
