@@ -42,9 +42,10 @@ export default function SupportersPage() {
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {baronies.map((b) => (
+            {baronies.map((b) => {
+              const card = (
               <figure
-                key={b.name} className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
+                className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
                   <div className="pointer-events-none absolute inset-2.5 border border-gold/0 transition-colors duration-300 group-hover:border-gold/25" aria-hidden />
                   <div className="flex h-56 w-full items-center justify-center">
                     {b.img ? (
@@ -73,9 +74,24 @@ export default function SupportersPage() {
                         {b.note}
                       </span>
                     ) : null}
+                    {b.roll ? (
+                      <span className="mt-3 inline-block font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-gold-deep underline decoration-gold/40 underline-offset-4">
+                        View on the Roll
+                      </span>
+                    ) : null}
                   </figcaption>
               </figure>
-            ))}
+              );
+              return b.roll ? (
+                <a key={b.name} href={b.roll} target="_blank" rel="noopener noreferrer" className="block h-full">
+                  {card}
+                </a>
+              ) : (
+                <div key={b.name} className="h-full">
+                  {card}
+                </div>
+              );
+            })}
           </div>
 
           <Reveal>
