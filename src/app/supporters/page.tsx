@@ -36,12 +36,11 @@ export default function SupportersPage() {
         </Container>
       </section>
 
-      <Section tone="cream" className="border-b border-parchment-300/60 !py-14 sm:!py-16">
-        <Container size="prose">
+      <Section tone="parchment">
+        <Container size="prose" className="mb-14 sm:mb-16">
           <Reveal>
             <div className="text-center">
-              <p className="eyebrow">The Armorial</p>
-              <p className="mx-auto mt-5 max-w-3xl font-serif text-2xl leading-[1.55] text-ink sm:text-[1.75rem]">
+              <p className="mx-auto max-w-3xl font-serif text-2xl leading-[1.55] text-ink sm:text-[1.75rem]">
                 The arms of barons who support the work of the Association —{" "}
                 <strong className="font-semibold text-navy">each title verified and recorded upon the Roll.</strong>
               </p>
@@ -49,9 +48,6 @@ export default function SupportersPage() {
             </div>
           </Reveal>
         </Container>
-      </Section>
-
-      <Section tone="parchment">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {baronies.map((b, i) => (
