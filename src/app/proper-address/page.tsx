@@ -194,10 +194,9 @@ export default function ProperAddressPage() {
                     — the premier baron:
                   </p>
                   <p className="mt-3 font-serif text-xl font-bold text-navy">Niall, Baron of Bachuil</p>
-                  <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
-                    Bachuil chaired a Titles and Usages Committee and published the paper{" "}
-                    <em>“The Use and Abuse of Titles”</em>, presented to the Court of the Lord Lyon and the Scottish
-                    Parliament.
+                  <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic leading-relaxed text-ink">
+                    Bachuil chaired a Titles and Usages Committee and published the paper “The Use and Abuse of
+                    Titles”, presented to the Court of the Lord Lyon and the Scottish Parliament.
                   </p>
                 </div>
                 <P>
