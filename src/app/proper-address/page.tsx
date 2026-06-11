@@ -215,7 +215,7 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  A Scottish barony is a personal dignity held legally by the baron. It does not create a separate legal title for
+                  A Scottish barony is a personal dignity held legally by the baron (or baroness in her own right). It does not create a separate legal title for
                   a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
                   She shares his rank and assumes the feminine form of his title by courtesy but does not hold it in her
                   own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
