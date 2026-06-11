@@ -375,6 +375,19 @@ export default function ProperAddressPage() {
                       The Dowager Madam Livingstone of Bachuil
                     </a>
                   </p>
+                  <p className="mt-5 border-t border-parchment-300/60 pt-5 font-serif text-base italic leading-relaxed text-ink">
+                    As published in{" "}
+                    <a
+                      href="https://announcements.telegraph.co.uk/marketplace/advert/livingstone-of-bachuil-notices_61304"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                    >
+                      The Telegraph
+                    </a>
+                    : <strong className="font-bold not-italic text-navy">Valerie, Madam Livingstone of Bachuil</strong>{" "}
+                    and <strong className="font-bold not-italic text-navy">Niall, Baron of Bachuil</strong>
+                  </p>
                 </div>
                 <P>
                   The following section applies only to Pledged bloodline titles; as the title of honour always remains
