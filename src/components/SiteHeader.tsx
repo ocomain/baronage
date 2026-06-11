@@ -70,7 +70,7 @@ export function SiteHeader() {
                 isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
               }`}
             >
-              Members
+              Member’s Area
             </Link>
             <a
               href={ROLL_URL}
@@ -168,7 +168,7 @@ export function SiteHeader() {
                       isActive("/members") ? "text-oxblood" : "text-navy"
                     }`}
                   >
-                    Members
+                    Member’s Area
                   </Link>
                 </li>
               </ul>
