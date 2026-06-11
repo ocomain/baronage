@@ -23,7 +23,7 @@ const baronies: Barony[] = [
   { dignity: "Baron", name: "Bachuil", img: "/arms/bachuil.webp" },
   { dignity: "Baron", name: "Bannockburn", img: "/arms/bannockburn.webp" },
   { dignity: "Baron", name: "Biggar", img: "/arms/biggar.webp" },
-  { dignity: "Baron", name: "Menie" },
+  { dignity: "Baron", name: "Menie", img: "/arms/menie.webp" },
   {
     dignity: "Baron",
     name: "Moncrieffe",
