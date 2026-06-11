@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/the-roll",
-    "/supporters",
+    "/armorial",
     "/history",
     "/proper-address",
     "/baronial-code",
