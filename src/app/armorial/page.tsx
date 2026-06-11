@@ -73,10 +73,15 @@ export default function SupportersPage() {
                     )}
                   </div>
                   <figcaption className="mt-6">
-                    <span className="block font-sans text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold-deep">
+                    {b.dignity !== "Younger" && (
+                      <span className="block font-sans text-[0.55rem] font-medium uppercase tracking-[0.26em] text-gold-deep/70">
+                        The Much Hon
+                      </span>
+                    )}
+                    <span className="mt-1 block font-sans text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">
                       {b.dignity} of
                     </span>
-                    <span className="mt-1.5 block font-display text-2xl text-navy">{b.name}</span>
+                    <span className="mt-1.5 block font-display text-3xl text-navy">{b.name}</span>
                     {b.note ? (
                       <span className="mx-auto mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
                         {b.note}
