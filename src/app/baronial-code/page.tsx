@@ -33,7 +33,7 @@ const principles = [
   },
   {
     title: "Forfeiture of Title",
-    body: "Should a Baron be convicted of a serious crime, as judged by their fellow barons, they shall forfeit their title and recognition on the Roll.",
+    body: "Should a Baron be convicted of a serious crime, as judged by their fellow barons, they shall forfeit their title recognition on the Roll (does not affect title succession recognition).",
   },
   {
     title: "Loyalty to the Crown",
