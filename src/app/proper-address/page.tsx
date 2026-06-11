@@ -180,6 +180,21 @@ export default function ProperAddressPage() {
                   <strong className="font-bold">John Inverness</strong>. The holder may also retain their family name,
                   with or without TD, but is not typically used for daily life.
                 </Aside>
+                <div className="my-6 border-y border-parchment-300/70 py-6 text-center">
+                  <p className="font-serif text-base italic leading-relaxed text-ink">
+                    As published in{" "}
+                    <a
+                      href="https://announcements.telegraph.co.uk/marketplace/advert/livingstone-of-bachuil-notices_61304"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                    >
+                      The Telegraph
+                    </a>{" "}
+                    — the premier baron:
+                  </p>
+                  <p className="mt-3 font-serif text-xl font-bold text-navy">Niall, Baron of Bachuil</p>
+                </div>
                 <P>
                   Wives or female barons are entitled to <S>Lady</S> <em>or</em> <S>Baroness of</S>
                 </P>

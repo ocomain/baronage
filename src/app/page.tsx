@@ -209,7 +209,7 @@ export default function HomePage() {
         </Reveal>
         <Container className="mt-14 text-center">
           <ButtonLink href="/supporters" variant="outline">
-            Explore the Supporters
+            Explore Armorials
           </ButtonLink>
         </Container>
       </Section>
