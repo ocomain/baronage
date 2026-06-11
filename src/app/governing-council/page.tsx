@@ -43,7 +43,7 @@ const members: CouncilMember[] = [
     link: { href: "https://www.ocomain.org", label: "Clan Ó Comáin ↗" },
     pos: "center 18%",
     popPos: "center 14%",
-    bio: "Antoin Commane, Younger of Kinfauns is heir to the Lordship of Kinfauns — a dignity with origins around 1330, regranted by James III in 1487 — and Tanist of Clan Commane, an Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist. Kinfauns’ father has pledged the lordship as a hereditary title upon the Roll.",
+    bio: "Antoin Commane, Younger of Kinfauns is heir to the Lordship of Kinfauns — a dignity with origins around 1330, regranted by James III in 1487 — and Tanist of Clan Commane, heir to the Chief, an ancient Gaelic Royal House and Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist. Kinfauns’ father has pledged the lordship as a hereditary title upon the Roll.",
   },
   {
     mark: "M",
