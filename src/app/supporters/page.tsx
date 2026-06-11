@@ -33,15 +33,23 @@ export default function SupportersPage() {
           >
             An Armorial of Supporters
           </h1>
-          <p
-            className="rise mx-auto mt-5 max-w-2xl font-serif text-lg italic text-parchment-200/80"
-            style={{ animationDelay: "0.16s" }}
-          >
-            The arms of barons who support the work of the Association — each title verified and recorded upon the
-            Roll.
-          </p>
         </Container>
       </section>
+
+      <Section tone="cream" className="border-b border-parchment-300/60 !py-14 sm:!py-16">
+        <Container size="prose">
+          <Reveal>
+            <div className="text-center">
+              <p className="eyebrow">The Armorial</p>
+              <p className="mx-auto mt-5 max-w-3xl font-serif text-2xl leading-[1.55] text-ink sm:text-[1.75rem]">
+                The arms of barons who support the work of the Association —{" "}
+                <strong className="font-semibold text-navy">each title verified and recorded upon the Roll.</strong>
+              </p>
+              <GoldRule className="mt-7" />
+            </div>
+          </Reveal>
+        </Container>
+      </Section>
 
       <Section tone="parchment">
         <Container>
@@ -97,7 +105,7 @@ export default function SupportersPage() {
             <GoldRule className="mb-8" />
             <h2 className="text-3xl text-parchment-50 sm:text-4xl">Join their number</h2>
             <p className="mx-auto mt-6 max-w-xl leading-relaxed text-parchment-200/85">
-              Verify a title on the Roll, or take the Pledge to preserve a barony within the family line.
+              Verify a title on the Roll, or take the Pledge to help support our work.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <ButtonLink href={CALENDLY_URL} variant="gold">
