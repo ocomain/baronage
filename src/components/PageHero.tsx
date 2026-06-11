@@ -11,6 +11,7 @@ export function PageHero({
   intro,
   image,
   position = "center",
+  scrim = "default",
 }: {
   eyebrow: string;
   title: string;
@@ -18,6 +19,8 @@ export function PageHero({
   /** Optional full-bleed cinematic photograph behind the masthead. */
   image?: string;
   position?: string;
+  /** "strong" darkens the wash for bright imagery so light text stays legible. */
+  scrim?: "default" | "strong";
 }) {
   const ref = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
@@ -50,7 +53,9 @@ export function PageHero({
             className="absolute inset-0 -z-10"
             style={{
               background:
-                "linear-gradient(180deg, rgba(8,12,28,0.45) 0%, rgba(8,12,28,0.38) 45%, rgba(8,12,28,0.9) 100%)",
+                scrim === "strong"
+                  ? "linear-gradient(180deg, rgba(8,12,28,0.74) 0%, rgba(8,12,28,0.66) 45%, rgba(8,12,28,0.94) 100%)"
+                  : "linear-gradient(180deg, rgba(8,12,28,0.45) 0%, rgba(8,12,28,0.38) 45%, rgba(8,12,28,0.9) 100%)",
             }}
             aria-hidden
           />

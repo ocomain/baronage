@@ -34,6 +34,7 @@ export default function TheRollPage() {
         intro="An open-source verification register of titles within the Baronage of Scotland — created to improve transparency and accuracy in the public record."
         image="/images/craighall.webp"
         position="center 32%"
+        scrim="strong"
       />
 
       {/* Prominent, clearly-marked hand-off to the separate register */}

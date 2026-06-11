@@ -9,6 +9,8 @@ type Page = {
   body: string;
   img: string;
   pos?: string;
+  /** stronger wash for bright imagery */
+  dark?: boolean;
 };
 
 const pages: Page[] = [
@@ -41,6 +43,7 @@ const pages: Page[] = [
     body: "With the end of the feudal system, baronial titles ceased to be territorial, becoming non-territorial personal dignities protected in Scots law and enshrined by the Scotland Act 2000 — passed down through generations to this day.",
     img: "/images/craighall.webp",
     pos: "center 30%",
+    dark: true,
   },
 ];
 
@@ -69,8 +72,9 @@ export function HistoryStory() {
           <div
             className="absolute inset-0 -z-10"
             style={{
-              background:
-                "linear-gradient(180deg, rgba(10,16,36,0.78) 0%, rgba(10,16,36,0.55) 45%, rgba(10,16,36,0.85) 100%)",
+              background: p.dark
+                ? "linear-gradient(180deg, rgba(10,16,36,0.88) 0%, rgba(10,16,36,0.74) 45%, rgba(10,16,36,0.92) 100%)"
+                : "linear-gradient(180deg, rgba(10,16,36,0.78) 0%, rgba(10,16,36,0.55) 45%, rgba(10,16,36,0.85) 100%)",
             }}
             aria-hidden
           />
