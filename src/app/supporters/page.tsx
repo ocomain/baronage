@@ -36,7 +36,7 @@ export default function SupportersPage() {
         </Container>
       </section>
 
-      <Section tone="parchment">
+      <Section tone="parchment" className="!pt-12 sm:!pt-14">
         <Container size="prose" className="mb-14 sm:mb-16">
           <Reveal>
             <div className="text-center">
