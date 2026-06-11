@@ -33,7 +33,7 @@ export default function SupportersPage() {
           >
             An Armorial of Supporters
             <span className="mt-2 block text-[0.52em] leading-snug text-parchment-200/85">
-              the work of the Association — each title verified and recorded upon the Roll
+              the work of the Association
             </span>
           </h1>
         </Container>
@@ -42,8 +42,9 @@ export default function SupportersPage() {
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
         <Container size="prose" className="mb-12 sm:mb-14">
           <p className="text-center font-serif text-lg italic leading-relaxed text-muted">
-            Every achievement shown here appears by the kind permission of its holder. Space allows only a selection —
-            the arms of all our supporters would fill many pages.
+            Every achievement shown here appears by the kind permission of its holder.{" "}
+            <strong className="font-semibold not-italic text-navy">Space allows only a selection</strong> — the arms
+            of all our supporters would fill many pages.
           </p>
         </Container>
         <Container>
