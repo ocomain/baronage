@@ -40,6 +40,12 @@ export default function SupportersPage() {
       </section>
 
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
+        <Container size="prose" className="mb-12 sm:mb-14">
+          <p className="text-center font-serif text-lg italic leading-relaxed text-muted">
+            A deliberate selection — with hundreds of verified titles upon the Roll, displaying every coat of arms
+            would overwhelm the page. These few stand for the many.
+          </p>
+        </Container>
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {baronies.map((b) => (
