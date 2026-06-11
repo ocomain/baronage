@@ -74,11 +74,6 @@ export default function SupportersPage() {
                         {b.note}
                       </span>
                     ) : null}
-                    {b.roll ? (
-                      <span className="mt-3 inline-block font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-gold-deep underline decoration-gold/40 underline-offset-4">
-                        View on the Roll
-                      </span>
-                    ) : null}
                   </figcaption>
               </figure>
               );

@@ -360,6 +360,22 @@ export default function ProperAddressPage() {
 
             <Reveal>
               <Sec id="dowager" title="Widow or Dowager Baroness">
+                <div className="mb-2 mt-2 border-y border-parchment-300/70 py-6 text-center">
+                  <p className="font-serif text-base italic leading-relaxed text-ink">
+                    The mother of the premier baron — also styled <strong className="font-bold not-italic text-navy">Madam</strong>{" "}
+                    instead of Lady, as a Highland chiefly family:
+                  </p>
+                  <p className="mt-4 font-serif text-xl font-bold text-navy">
+                    <a
+                      href="https://www.clanlivingstone.info/LateChief.htm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-gold/50 underline-offset-4 transition-colors hover:text-oxblood"
+                    >
+                      The Dowager Madam Livingstone of Bachuil
+                    </a>
+                  </p>
+                </div>
                 <P>
                   The following section applies only to Pledged bloodline titles; as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
