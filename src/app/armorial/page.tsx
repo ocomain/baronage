@@ -31,9 +31,9 @@ export default function SupportersPage() {
             className="rise mt-4 font-display leading-[1.02] text-parchment-50"
             style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
           >
-            An Armorial Selection
+            An Armorial of Supporters
             <span className="mt-2 block text-[0.52em] leading-snug text-parchment-200/85">
-              supporters of the work of the Association
+              the work of the Association — each title verified and recorded upon the Roll
             </span>
           </h1>
         </Container>
