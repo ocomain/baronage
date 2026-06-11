@@ -132,7 +132,8 @@ export function BaroniesCarousel() {
     };
   }, []);
 
-  const row = [...baronies, ...baronies];
+  const rail = baronies.filter((b) => !b.pageOnly);
+  const row = [...rail, ...rail];
   return (
     <div className="marquee">
       <div
@@ -144,7 +145,7 @@ export function BaroniesCarousel() {
           <figure
             key={`${b.name}-${i}`}
             className="group mr-6 flex w-56 shrink-0 flex-col items-center rounded-sm border border-parchment-300/70 bg-parchment-50 px-6 pb-6 pt-8 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]"
-            aria-hidden={i >= baronies.length}
+            aria-hidden={i >= rail.length}
           >
             <div className="flex h-44 w-full items-center justify-center">
               {b.img ? (
