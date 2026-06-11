@@ -112,7 +112,7 @@ export default function AboutPage() {
               </p>
               <p>
                 As a non-political and impartial honourable body, we collaborate with recognised authorities,
-                researchers, and institutions to authenticate claims. Inclusion on the Roll is voluntary but requires
+                researchers, and institutions to authenticate claims. Inclusion on the Roll is free/voluntary pledged or non-pledged but requires
                 adherence to rigorous criteria—only dignities with proven legitimacy are recognised. Non-recognition of
                 unverified titles is fundamental. By safeguarding the historical record and upholding the traditions of
                 the Scottish Baronage—part of the Three Estates—we provide a trusted resource for scholars,
