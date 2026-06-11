@@ -277,7 +277,7 @@ export default function HomePage() {
               </h2>
               <GoldRule className="mt-6" />
               <p className="mx-auto mt-7 max-w-2xl leading-relaxed text-parchment-200/85">
-                Inclusion on the Roll is voluntary but requires adherence to rigorous criteria — only dignities with
+                Inclusion on the Roll is free/voluntary pledged or non-pledged but requires adherence to rigorous criteria — only dignities with
                 proven legitimacy are recognised.{" "}
                 <strong className="font-semibold text-parchment-50">
                   Non-recognition of unverified titles is fundamental.
