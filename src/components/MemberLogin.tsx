@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Seal } from "./Seal";
 import { ExternalArrow } from "./primitives";
 import { CALENDLY_URL } from "@/lib/site";
@@ -8,6 +9,8 @@ const fieldClass =
   "mt-2 w-full border border-parchment-300 bg-parchment-50 px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted/60 focus:border-gold focus:ring-1 focus:ring-gold/40";
 
 export function MemberLogin() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <div className="relative w-full max-w-md border border-gold/30 bg-parchment-50/95 p-8 shadow-[0_40px_90px_-35px_rgba(8,12,28,0.85)] backdrop-blur-sm sm:p-10">
       <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
@@ -18,7 +21,10 @@ export function MemberLogin() {
       </div>
 
       <form
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setSubmitted(true);
+        }}
         className="mt-8"
       >
         <label className="block text-sm font-medium text-ink">
@@ -42,6 +48,11 @@ export function MemberLogin() {
           Sign in
         </button>
 
+        {submitted ? (
+          <p className="mt-5 text-center text-sm leading-relaxed text-ink-soft">
+            New members are enrolled following a call with the Secretary — please request a call back below.
+          </p>
+        ) : null}
       </form>
 
       <div className="mt-7 border-t border-parchment-300/70 pt-6 text-center">
