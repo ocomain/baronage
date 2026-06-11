@@ -11,7 +11,18 @@ import { AnimatePresence, motion } from "framer-motion";
  * The card is rendered through a portal to <body> so it is never nested inside
  * the surrounding <p> (which would be invalid HTML) and always sits above the page.
  */
-export function Footnote({ n, children }: { n: number; children: ReactNode }) {
+export function Footnote({
+  n,
+  children,
+  label,
+  triggerClassName,
+}: {
+  n: number;
+  children: ReactNode;
+  /** Optional text trigger — renders instead of the superscript number. */
+  label?: string;
+  triggerClassName?: string;
+}) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -28,6 +39,17 @@ export function Footnote({ n, children }: { n: number; children: ReactNode }) {
 
   return (
     <>
+      {label ? (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+          className={triggerClassName ?? "cursor-pointer border-0 bg-transparent p-0 underline underline-offset-2"}
+        >
+          {label}
+        </button>
+      ) : (
       <sup className="text-[0.62em] leading-none">
         <button
           type="button"
@@ -40,6 +62,7 @@ export function Footnote({ n, children }: { n: number; children: ReactNode }) {
           {n}
         </button>
       </sup>
+      )}
 
       {mounted &&
         createPortal(

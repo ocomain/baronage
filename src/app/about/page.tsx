@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
+import { Footnote } from "@/components/Footnote";
 
 export const metadata: Metadata = {
   title: "About the Association",
@@ -21,7 +22,7 @@ const mandate = [
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
 
-const citations: { source: string; text: string; href?: string }[] = [
+const citations: { source: string; text: string; href?: string; pop?: boolean }[] = [
   {
     source: "Court of the Lord Lyon · 1943",
     href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
@@ -34,6 +35,7 @@ const citations: { source: string; text: string; href?: string }[] = [
   },
   {
     source: "The Institutional Writers",
+    pop: true,
     text: "Craig, Stair and Bankton confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate.",
   },
   {
@@ -73,7 +75,7 @@ export default function AboutPage() {
       />
 
       {/* The emblem and its motto */}
-      <Section tone="navyDeep">
+      <Section tone="navyDeep" className="!pb-10 sm:!pb-12">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <Reveal>
@@ -112,7 +114,7 @@ export default function AboutPage() {
       </Section>
 
 
-      <Section tone="navyDeep">
+      <Section tone="navyDeep" className="!pt-10 sm:!pt-12">
         <Container>
           <Reveal>
             <SectionHeading
@@ -139,6 +141,36 @@ export default function AboutPage() {
                       >
                         {c.source}
                       </a>
+                    ) : c.pop ? (
+                      <Footnote
+                        n={4}
+                        label={c.source}
+                        triggerClassName="cursor-pointer border-0 bg-transparent p-0 font-sans text-xs uppercase tracking-[0.18em] text-gold-light underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+                      >
+                        <p>
+                          Institutional Writers{" "}
+                          <em>(writers whose text is accepted in Scottish courts as an explanation of the law)</em>:
+                        </p>
+                        <ol className="mt-3 ml-4 list-[lower-alpha] space-y-2 marker:font-inscribe marker:text-gold-deep">
+                          <li className="pl-1">
+                            Sir Thomas Craig, Jus Feudale (I.xii.23): “Where the prince makes a grant of lands which
+                            have rank attached to them, he{" "}
+                            <strong className="font-semibold">ennobles the grantee</strong> even though no express
+                            conferment of noble rank be made.”
+                          </li>
+                          <li className="pl-1">
+                            Lord Stair, Institutions (II.iii.45): “Erection is, when lands are not only united in one
+                            tenement, but are erected into the dignity of a barony; which comprehendeth lordship,
+                            earldom, &amp;c. all which are but more{" "}
+                            <strong className="font-semibold">noble titles of a barony</strong>, having the like feudal
+                            effects.”
+                          </li>
+                          <li className="pl-1">
+                            Bankton, Institute (II.iii.84): “<em>Nobility</em> followed the property of the estate to
+                            which it was annexed.”
+                          </li>
+                        </ol>
+                      </Footnote>
                     ) : (
                       c.source
                     )}
