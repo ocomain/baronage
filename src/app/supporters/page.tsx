@@ -5,11 +5,11 @@ import { baronies } from "@/lib/supporters";
 import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Supporters — An Armorial of the Baronage",
+  title: "The Armorial",
   description:
     "Supporters of the work of the Association — each title verified and recorded upon the Roll.",
   openGraph: {
-    title: "An Armorial of Supporters — Baronage of Scotland Association",
+    title: "An Armorial Selection — Baronage of Scotland Association",
     description: "Supporters of the work of the Association — each title verified and recorded upon the Roll.",
     // NOTE go-live: revert to "/og-supporters.jpg" once the site serves at baronage.com
     images: [{ url: "https://new.baronage.com/og-supporters.jpg", width: 1200, height: 630, alt: "Coats of arms of supporters of the Baronage of Scotland Association" }],
@@ -31,7 +31,7 @@ export default function SupportersPage() {
             className="rise mt-4 font-display leading-[1.02] text-parchment-50"
             style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
           >
-            An Armorial Selection of Supporters
+            An Armorial Selection
             <span className="mt-2 block text-[0.52em] leading-snug text-parchment-200/85">
               of the work of the Association
             </span>
