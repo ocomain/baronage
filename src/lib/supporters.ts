@@ -37,5 +37,5 @@ export const baronies: Barony[] = [
   { dignity: "Earl Baron", name: "Rothes", roll: "https://roll.baronage.com/dario-item.html", img: "/arms/rothes.webp" },
   { dignity: "Baron", name: "Stobo", roll: "https://roll.baronage.com/baron/william-jolly", img: "/arms/stobo.webp" },
   { dignity: "Baron", name: "Finavon", img: "/arms/finavon.webp", roll: "https://roll.baronage.com/baron/david-cairns", pageOnly: true },
-  { dignity: "Younger", name: "Kinfauns", img: "/arms/kinfauns.webp", pageOnly: true },
+  { dignity: "Younger", name: "Kinfauns", img: "/arms/kinfauns-arms.webp", pageOnly: true },
 ];
