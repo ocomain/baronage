@@ -83,7 +83,7 @@ const stewardship = [
   {
     numeral: "I",
     title: "Chancellor & Council",
-    body: "An elected Chancellor and Governing Council, serving a biannual term, voted in at the members’ meeting.",
+    body: "An elected Chancellor and Governing Council, gets voted in via the members’ meeting.",
   },
   {
     numeral: "II",
