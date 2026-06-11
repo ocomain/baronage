@@ -357,6 +357,7 @@ export default function HomePage() {
           <blockquote className="mt-7 font-serif text-3xl italic leading-snug text-parchment-50 sm:text-[2.7rem]">
             Recognised in the nobiliary court and the Court of Session as{" "}
             <span className="text-foil not-italic">“titled nobility.”</span>
+            <Fn n={1} />
           </blockquote>
           <cite className="mt-8 block font-inscribe text-xs uppercase not-italic tracking-[0.3em] text-parchment-200/75">
             Court of the Lord Lyon · 1943
