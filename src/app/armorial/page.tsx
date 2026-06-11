@@ -43,8 +43,9 @@ export default function SupportersPage() {
         <Container size="prose" className="mb-12 sm:mb-14">
           <p className="text-center font-serif text-lg italic leading-relaxed text-muted">
             Every achievement shown here appears by the kind permission of its holder.{" "}
-            <strong className="font-semibold not-italic text-navy">Space allows only a selection</strong> — the arms
-            of all our supporters would fill many pages.
+            <strong className="font-semibold not-italic text-navy">
+              Space allows only a selection of our many supporters.
+            </strong>
           </p>
         </Container>
         <Container>
