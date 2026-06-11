@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { baronies } from "@/lib/supporters";
-import { ROLL_URL } from "@/lib/site";
+import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Supporters — An Armorial of the Baronage",
   description:
-    "An armorial of supporters of the Roll of Scottish Barons — the coats of arms of barons, lord barons and earl barons recorded upon the Roll.",
+    "Supporters of the work of the Association — each title verified and recorded upon the Roll.",
+  openGraph: {
+    title: "An Armorial of Supporters — Baronage of Scotland Association",
+    description: "Supporters of the work of the Association — each title verified and recorded upon the Roll.",
+    // NOTE go-live: revert to "/og-supporters.jpg" once the site serves at baronage.com
+    images: [{ url: "https://new.baronage.com/og-supporters.jpg", width: 1200, height: 630, alt: "Coats of arms of supporters of the Baronage of Scotland Association" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://new.baronage.com/og-supporters.jpg"],
+  },
 };
 
 export default function SupportersPage() {
@@ -90,8 +100,8 @@ export default function SupportersPage() {
               Verify a title on the Roll, or take the Pledge to preserve a barony within the family line.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <ButtonLink href={ROLL_URL} variant="gold">
-                Verify on the Roll
+              <ButtonLink href={CALENDLY_URL} variant="gold">
+                Request a Call Back
               </ButtonLink>
               <ButtonLink href="/pledge" variant="outlineLight">
                 The Pledge
