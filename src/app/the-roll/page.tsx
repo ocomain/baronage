@@ -32,7 +32,7 @@ export default function TheRollPage() {
         eyebrow="The Open Register"
         title="The Roll of Scottish Barons"
         intro="An open-source verification register of titles within the Baronage of Scotland — created to improve transparency and accuracy in the public record."
-        image="/images/letters-patent.webp"
+        image="/images/craighall.webp"
         position="center 32%"
       />
 
