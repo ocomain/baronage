@@ -42,9 +42,9 @@ export default function SupportersPage() {
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {baronies.map((b, i) => (
-              <Reveal key={b.name} delay={(i % 4) * 0.06} className="h-full">
-                <figure className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
+            {baronies.map((b) => (
+              <figure
+                key={b.name} className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
                   <div className="pointer-events-none absolute inset-2.5 border border-gold/0 transition-colors duration-300 group-hover:border-gold/25" aria-hidden />
                   <div className="flex h-56 w-full items-center justify-center">
                     {b.img ? (
@@ -54,7 +54,7 @@ export default function SupportersPage() {
                         alt={`Coat of arms — ${b.dignity} of ${b.name}`}
                         width={208}
                         height={208}
-                        loading={i > 7 ? "lazy" : "eager"}
+                        loading="eager"
                         decoding="async"
                         draggable={false}
                         className="h-52 w-52 object-contain transition-transform duration-500 group-hover:scale-[1.06]"
@@ -74,8 +74,7 @@ export default function SupportersPage() {
                       </span>
                     ) : null}
                   </figcaption>
-                </figure>
-              </Reveal>
+              </figure>
             ))}
           </div>
 
