@@ -94,7 +94,15 @@ export default function SupportersPage() {
 
           <Reveal>
             <p className="mt-12 text-center font-serif text-lg italic text-muted">
-              A selection of support — titles verified in the Roll of Scottish Barons.
+              A selection of support — Baronage of Scotland titles verified in the{" "}
+              <a
+                href="https://roll.baronage.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+              >
+                Roll of Scottish Barons
+              </a>
             </p>
           </Reveal>
         </Container>
