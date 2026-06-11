@@ -33,7 +33,7 @@ export default function SupportersPage() {
           >
             An Armorial of Supporters
             <span className="mt-2 block text-[0.52em] leading-snug text-parchment-200/85">
-              the work of the Association
+              of the work of the Association
             </span>
           </h1>
         </Container>
