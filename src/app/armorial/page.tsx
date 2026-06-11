@@ -42,8 +42,8 @@ export default function SupportersPage() {
       <Section tone="parchment" className="!pt-12 sm:!pt-14">
         <Container size="prose" className="mb-12 sm:mb-14">
           <p className="text-center font-serif text-lg italic leading-relaxed text-muted">
-            A deliberate selection — with hundreds of verified titles upon the Roll, displaying every coat of arms
-            would overwhelm the page. These few stand for the many.
+            Every achievement shown here appears by the kind permission of its holder. Space allows only a selection —
+            the arms of all our supporters would fill many pages.
           </p>
         </Container>
         <Container>
