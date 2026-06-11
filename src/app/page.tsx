@@ -208,8 +208,8 @@ export default function HomePage() {
           <BaroniesCarousel />
         </Reveal>
         <Container className="mt-14 text-center">
-          <ButtonLink href={ROLL_URL} variant="outline">
-            Explore the Roll
+          <ButtonLink href="/supporters" variant="outline">
+            Explore the Supporters
           </ButtonLink>
         </Container>
       </Section>
