@@ -53,6 +53,7 @@ const pillars = [
 
 const timeline = [
   { year: "1320", event: "Barons seal the Declaration of Arbroath" },
+  { year: "1587", event: "Minor barons relieved of attending Parliament’s summons in person" },
   { year: "1707", event: "Sat among the Three Estates until the Union" },
   { year: "2000", event: "Dignity preserved in law by the Scotland Act" },
   { year: "2004", event: "Titles become non-territorial personal dignities" },
