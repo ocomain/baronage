@@ -40,7 +40,7 @@ const pillars = [
   {
     numeral: "II",
     title: "The Pledge",
-    body: "A pledged bloodline honour — a family compact of service, bound by the Baronial Code.",
+    body: "A pledged hereditary title — a family compact of service, bound by the Baronial Code.",
     href: "/pledge",
   },
   {
