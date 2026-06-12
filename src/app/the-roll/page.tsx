@@ -97,7 +97,7 @@ export default function TheRollPage() {
         </Container>
       </Section>
 
-      <Section tone="parchment">
+      <Section tone="parchment" className="!pb-12 sm:!pb-14">
         <Container size="prose">
           <Reveal>
             <SectionHeading
@@ -129,6 +129,18 @@ export default function TheRollPage() {
           </Reveal>
 
           <Reveal>
+            <figure className="mt-10 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
+              <blockquote className="font-serif text-lg italic leading-relaxed text-navy">
+                “…the title, honour, rank and status of free baron, who shall now and in perpetuity be called barons of
+                Spynie.”
+              </blockquote>
+              <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
+                Phrasing from a Crown charter grant — Records of the Parliament of Scotland
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal>
             <figure className="mt-10 border border-parchment-300/70 bg-parchment-50 p-6 sm:p-8">
               <div className="flex flex-wrap items-center gap-2.5">
                 <span className="rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
@@ -146,29 +158,50 @@ export default function TheRollPage() {
                 </li>
                 <li>• Scottish Barony Register, Dignity of the Barony of Hartsyde (County of Lanark) 26th Feb 2010 “2010/02”</li>
                 <li>• Burke’s Peerage Revised Families. Burke’s Peerage (Genealogical Books) Ltd. Updated 2025</li>
+                <li>
+                  • Pledged Hereditary Title — the holder has formally signed the Roll’s{" "}
+                  <Link
+                    href="/pledge"
+                    className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+                  >
+                    Baronial Pledge
+                  </Link>
+                  , a declaration that the barony be preserved within the family line as a hereditary dignity
+                </li>
               </ul>
               <div className="mt-6 grid grid-cols-2 items-start gap-4 sm:gap-5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/hartsyde-patent.webp"
-                  alt="Original letters patent document, as displayed on the Hartsyde entry"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                  className="w-full border border-parchment-300/70"
-                />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/hartsyde-pledge.webp"
-                  alt="Signed Baronial Pledge document, as displayed on the Hartsyde entry"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                  className="w-full border border-parchment-300/70"
-                />
+                <div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/hartsyde-patent.webp"
+                    alt="Original letters patent document, as displayed on the Hartsyde entry"
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                    className="w-full border border-parchment-300/70"
+                  />
+                  <span className="mt-2 block font-sans text-[0.6rem] uppercase tracking-[0.14em] text-muted">
+                    Original letters patent
+                  </span>
+                </div>
+                <div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/hartsyde-pledge.webp"
+                    alt="Signed Baronial Pledge document, as displayed on the Hartsyde entry"
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                    className="w-full border border-parchment-300/70"
+                  />
+                  <span className="mt-2 block font-sans text-[0.6rem] uppercase tracking-[0.14em] text-muted">
+                    The signed Baronial Pledge
+                  </span>
+                </div>
               </div>
               <figcaption className="mt-5 font-sans text-xs uppercase tracking-[0.16em] text-muted">
-                An entry as published — credentials and original documents, Barony of Hartsyde ·{" "}
+                An entry as published — credentials, original documents and the signed Baronial Pledge, Barony of
+                Hartsyde ·{" "}
                 <a
                   href="https://roll.baronage.com/baron/jean-guy-philip-boisserolles-de-st-julien"
                   target="_blank"
@@ -181,17 +214,6 @@ export default function TheRollPage() {
             </figure>
           </Reveal>
 
-          <Reveal>
-            <figure className="mt-10 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
-              <blockquote className="font-serif text-lg italic leading-relaxed text-navy">
-                “…the title, honour, rank and status of free baron, who shall now and in perpetuity be called barons of
-                Spynie.”
-              </blockquote>
-              <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
-                Phrasing from a Crown charter grant — Records of the Parliament of Scotland
-              </figcaption>
-            </figure>
-          </Reveal>
 
           <Reveal>
             <div className="mt-10 border-t border-parchment-300/70 pt-8">
@@ -219,7 +241,7 @@ export default function TheRollPage() {
         </Container>
       </Section>
 
-      <Section tone="cream" id="related-organisations" className="border-t border-parchment-300/60">
+      <Section tone="cream" id="related-organisations" className="border-t border-parchment-300/60 !pt-12 sm:!pt-14">
         <Container size="prose">
           <Reveal>
             <SectionHeading
