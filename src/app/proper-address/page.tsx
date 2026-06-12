@@ -63,46 +63,150 @@ function Sec({ id, title, children }: { id: string; title: string; children: Rea
   );
 }
 
-const DIGITAL: { head: string; body: ReactNode }[] = [
+const DIGITAL: { head: ReactNode; key: string; entry: ReactNode; example?: ReactNode; note?: ReactNode }[] = [
   {
+    key: "title-free",
     head: "Title Field (Free Text)",
-    body: "If the title field allows free text, type “The Much Honoured” as the prefix. Or type the title “The Baron of [Placename]”.",
+    entry: (
+      <>
+        If the title field allows free text, type <S>“The Much Honoured”</S> as the prefix. Or type the title{" "}
+        <S>“The Baron of [Placename]”</S>.
+      </>
+    ),
   },
   {
+    key: "title-dropdown",
     head: "Title Field (Drop-Down List)",
-    body: "If the title field uses a drop-down list, select “Baron” or “Baroness” or “Lady” as appropriate. Example: Select “Baron” from the drop-down list.",
+    entry: (
+      <>
+        If the title field uses a drop-down list, select <S>“Baron”</S>
+        <Or />
+        <S>“Baroness”</S>
+        <Or />
+        <S>“Lady”</S> as appropriate.
+      </>
+    ),
+    example: <>Select “Baron” from the drop-down list.</>,
   },
   {
+    key: "first-name",
     head: "First Name Field",
-    body: "Enter the christian name of the baron. Or type “The Baron of” or “The Much Honoured” or “The Baron of [Placename]” if the system primarily uses first names. Example: “John”.",
+    entry: (
+      <>
+        Enter the christian name of the baron. Or type <S>“The Baron of”</S>
+        <Or />
+        <S>“The Much Honoured”</S>
+        <Or />
+        <S>“The Baron of [Placename]”</S> if the system primarily uses first names.
+      </>
+    ),
+    example: <S>“John”</S>,
   },
   {
+    key: "surname",
     head: "Surname Field",
-    body: "Enter the full baronial title in the surname field, following the format “Baron of [Placename]” or optionally “[Familyname] The Baron of [Placename].” Example: “Baron of Inverness” or “Smith The Baron of Inverness”.",
+    entry: (
+      <>
+        Enter the full baronial title in the surname field, following the format <S>“Baron of [Placename]”</S> or
+        optionally <S>“[Familyname] The Baron of [Placename]”</S>.
+      </>
+    ),
+    example: (
+      <>
+        <S>“Baron of Inverness”</S>
+        <Or />
+        <S>“Smith The Baron of Inverness”</S>
+      </>
+    ),
   },
   {
+    key: "surname-title-selected",
     head: "Surname Field (if you selected, for example, Baron in the title field)",
-    body: "If your title is already in the title field, put “of [Placename]” or “[Familyname] of [Placename]” to accurately represent the baronial title. Example: “of Inverness” or “Smith of Inverness”.",
+    entry: (
+      <>
+        If your title is already in the title field, put <S>“of [Placename]”</S>
+        <Or />
+        <S>“[Familyname] of [Placename]”</S> to accurately represent the baronial title.
+      </>
+    ),
+    example: (
+      <>
+        <S>“of Inverness”</S>
+        <Or />
+        <S>“Smith of Inverness”</S>
+      </>
+    ),
   },
   {
+    key: "surname-baron-first-name",
     head: "Surname Field (if you typed “The Baron of [Placename]” in the first name field)",
-    body: "The Much Honoured.",
+    entry: <S>The Much Honoured</S>,
   },
   {
+    key: "display-name",
     head: "Display Name or Full Name Field",
-    body: "For systems that use a single display name or full name field, enter the name in the following format: “The Much Hon. John Smith, Baron of Inverness.” or “The Much Honoured Baron of Inverness” or “John The Baron of Inverness” or “John, Baron of Inverness”.",
+    entry: <>For systems that use a single display name or full name field, enter the name in the following format:</>,
+    example: (
+      <>
+        <S>“The Much Hon. John Smith, Baron of Inverness.”</S>
+        <Or />
+        <S>“The Much Honoured Baron of Inverness”</S>
+        <Or />
+        <S>“John The Baron of Inverness”</S>
+        <Or />
+        <S>“John, Baron of Inverness”</S>
+      </>
+    ),
   },
   {
+    key: "correspondence",
     head: "Addressing the Baron in Correspondence",
-    body: "In digital correspondence, ensure that the salutation reflects the correct title. Use “Dear Baron of Inverness” or “Dear The Much Hon. Baron of Inverness” — the prefix normally reserved for Mr or Dr would be replaced with The Much Hon. and surname Baron of Inverness.",
+    entry: (
+      <>
+        In digital correspondence, ensure that the salutation reflects the correct title — the prefix normally reserved
+        for Mr or Dr is replaced with The Much Hon. and the surname with Baron of Inverness.
+      </>
+    ),
+    example: (
+      <>
+        <S>“Dear Baron of Inverness”</S>
+        <Or />
+        <S>“Dear The Much Hon. Baron of Inverness”</S>
+      </>
+    ),
   },
   {
+    key: "email-signature",
     head: "Email Signature",
-    body: "If including the title in an email signature, format it as follows: “John Smith, Baron of Inverness” or “John The Baron of Inverness” or “John, Baron of Inverness”. However, Much Hon can be useful for replacing the Mr title field on digital platforms.",
+    entry: <>If including the title in an email signature, format it as follows:</>,
+    example: (
+      <>
+        <S>“John Smith, Baron of Inverness”</S>
+        <Or />
+        <S>“John The Baron of Inverness”</S>
+        <Or />
+        <S>“John, Baron of Inverness”</S>
+      </>
+    ),
+    note: <>However, Much Hon can be useful for replacing the Mr title field on digital platforms.</>,
   },
   {
+    key: "worst-case",
     head: "Worst case",
-    body: "Note that if the title field only allows for Mr / Ms, for example, by entering “The Baron of [Placename]” or “The Lady [Placename]” in the surname field ensures that it will at least format as: “Mr The Baron of Inverness” or “Ms The Lady Lochaber”.",
+    entry: (
+      <>
+        Note that if the title field only allows for Mr / Ms, for example, entering <S>“The Baron of [Placename]”</S>
+        <Or />
+        <S>“The Lady [Placename]”</S> in the surname field ensures that it will at least format as:
+      </>
+    ),
+    example: (
+      <>
+        <S>“Mr The Baron of Inverness”</S>
+        <Or />
+        <S>“Ms The Lady Lochaber”</S>
+      </>
+    ),
   },
 ];
 
@@ -527,10 +631,20 @@ export default function ProperAddressPage() {
                   recommended practices for filling out typical fields in computer systems, such as databases, online
                   forms, and digital directories. Always think of how it will be presented in that system:
                 </P>
-                <ol className="my-6 list-decimal space-y-4 pl-7 marker:font-inscribe marker:text-gold-deep">
+                <ol className="my-6 list-decimal space-y-8 pl-7 marker:font-inscribe marker:text-gold-deep">
                   {DIGITAL.map((d) => (
-                    <li key={d.head} className="font-serif text-xl leading-[1.8] text-ink">
-                      <S>{d.head}:</S> {d.body}
+                    <li key={d.key} className="font-serif text-xl leading-[1.8] text-ink">
+                      <S>{d.head}</S>
+                      <p className="mt-1.5">{d.entry}</p>
+                      {d.example && (
+                        <p className="mt-1.5">
+                          <span className="mr-2.5 align-[0.18em] font-sans text-[0.6rem] font-medium uppercase tracking-[0.18em] text-gold-deep">
+                            Example
+                          </span>
+                          {d.example}
+                        </p>
+                      )}
+                      {d.note && <p className="mt-1.5 font-serif text-lg italic leading-relaxed text-muted">{d.note}</p>}
                     </li>
                   ))}
                 </ol>
