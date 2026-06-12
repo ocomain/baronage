@@ -1,6 +1,6 @@
 /** The supporters shown in the homepage conveyor and on /supporters. */
 export type Barony = {
-  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger";
+  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger" | "Lord Steward" | "Countess" | "Baroness";
   name: string;
   img?: string;
   note?: string;
@@ -13,7 +13,6 @@ export type Barony = {
 export const baronies: Barony[] = [
   { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird.webp" },
   { dignity: "Lord Baron", name: "Pittenweem", roll: "https://roll.baronage.com/claes-zangeberg.html", img: "/arms/pittenweem.webp" },
-  { dignity: "Baron", name: "Inneryne", roll: "https://roll.baronage.com/baron/ronald-reisinger", img: "/arms/inneryne.webp" },
   {
     dignity: "Baron",
     name: "Drum",
@@ -21,6 +20,11 @@ export const baronies: Barony[] = [
     img: "/arms/drum.webp",
     note: "Chief of his Name",
   },
+  { dignity: "Baron", name: "Inneryne", roll: "https://roll.baronage.com/baron/ronald-reisinger", img: "/arms/inneryne.webp" },
+  { dignity: "Baron", name: "Carstairs", img: "/arms/carstairs.webp", pageOnly: true },
+  { dignity: "Lord Steward", name: "Garlies", img: "/arms/garlies.webp", pageOnly: true },
+  { dignity: "Countess", name: "Crawfurd-Lindsay", img: "/arms/crawfurd-lindsay.webp", pageOnly: true },
+  { dignity: "Baroness", name: "Greenan", img: "/arms/greenan.webp", pageOnly: true },
   { dignity: "Lord Baron", name: "Leslie", roll: "https://roll.baronage.com/giacomo-merello.html", img: "/arms/leslie.webp" },
   { dignity: "Baron", name: "Bachuil", roll: "https://roll.baronage.com/baron/niall-livingstone-of-bachuil", img: "/arms/bachuil.webp", note: "Chief of his Name" },
   { dignity: "Baron", name: "Bannockburn", roll: "https://roll.baronage.com/baron/hope-vere-anderson", img: "/arms/bannockburn.webp" },
@@ -39,4 +43,5 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Stobo", roll: "https://roll.baronage.com/baron/william-jolly", img: "/arms/stobo.webp" },
   { dignity: "Baron", name: "Finavon", img: "/arms/finavon.webp", roll: "https://roll.baronage.com/baron/david-cairns", pageOnly: true },
   { dignity: "Younger", name: "Kinfauns", img: "/arms/kinfauns-arms.webp", pageOnly: true },
+  { dignity: "Baron", name: "Gilmerton", img: "/arms/gilmerton.webp", pageOnly: true },
 ];
