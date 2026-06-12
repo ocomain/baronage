@@ -131,11 +131,19 @@ export default function TheRollPage() {
           <Reveal>
             <figure className="mt-10 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
               <blockquote className="font-serif text-lg italic leading-relaxed text-navy">
-                “…the title, honour, rank and status of free baron, who shall now and in perpetuity be called barons of
-                Spynie.”
+                “the barony of Spynie, giving and granting to the said Master Alexander and his foresaids the title,
+                honour, rank and status of free baron, who shall now and in perpetuity be called barons of Spynie”
               </blockquote>
               <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
-                Phrasing from a Crown charter grant — Records of the Parliament of Scotland
+                Phrasing from a Crown charter grant —{" "}
+                <a
+                  href="https://www.rps.ac.uk/search.php?a=fcf&fn=jamesvi_trans&id=11094&t=trans"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold-deep transition-colors hover:text-oxblood"
+                >
+                  Records of the Parliament of Scotland ↗
+                </a>
               </figcaption>
             </figure>
           </Reveal>
