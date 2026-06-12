@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, Eyebrow, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
+import { ButtonLink, Container, ExternalArrow, Eyebrow, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Roll of Scottish Barons",
   description:
-    "An open, verified and impartial public register of the Baronage of Scotland — free, for life, to verify an entry. Maintained by researchers, genealogists and scholars at roll.baronage.com.",
+    "An open, verified and impartial public register of the Baronage of Scotland — free, for life, to verify an entry. Maintained by researchers, genealogists and scholars at roll.baronage.com. Related organisations: the Court of the Lord Lyon, the Scottish Barony Register and the Convention of the Baronage of Scotland.",
 };
 
 const features = [
@@ -22,6 +23,31 @@ const features = [
   {
     title: "Public & impartial",
     body: "A non-political, impartial honourable body. The record is open and public, safeguarding the historical integrity of Scottish baronies.",
+  },
+];
+
+const organisations: { name: string; href?: string; linkLabel?: string; body: string }[] = [
+  {
+    name: "The Court of the Lord Lyon",
+    href: "https://www.courtofthelordlyon.scot",
+    linkLabel: "courtofthelordlyon.scot",
+    body: "Scotland’s heraldic authority and a court of law. The Lyon Court’s letters patent, matriculations and official gazette notices are the Roll’s primary sources: where a dignity is evidenced under the hand of the Lord Lyon, no further proof is asked. The Court is wholly independent of this Association and of every private body within the baronial community.",
+  },
+  {
+    name: "The Scottish Barony Register",
+    href: "https://scottishbaronyregister.org",
+    linkLabel: "scottishbaronyregister.org",
+    body: "Established by members of the Scottish legal profession upon the abolition of feudal tenure in 2004, under a Custodian whose certification the Lord Lyon accepts as evidence of title. We recognise the Register as an authoritative source for inclusion on the Roll, and we recommend that every holder of a Scottish barony record their legal title there. The Roll is complementary to the Register, not in competition with it: the Register records transfers of ownership since 2004, while the Roll also documents the wider historic baronage — dignities held by dynastic succession, by chiefs of Name and by peers — which have never changed hands in the modern era and therefore appear in no register of transfers. For these, the records of the Lyon Office stand as primary evidence.",
+  },
+  {
+    name: "The Convention of the Baronage of Scotland",
+    href: "https://www.scotsbarons.org",
+    linkLabel: "scotsbarons.org",
+    body: "The historic representative body of Scotland’s baronage, revived in the twentieth century with the encouragement of Lord Lyon Sir Thomas Innes of Learney. Though quieter in recent years, the Convention holds a distinguished place in the modern history of the baronage, and the Association honours it.",
+  },
+  {
+    name: "The Forum for the Scottish Baronage",
+    body: "A modern private association of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private association’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
   },
 ];
 
@@ -129,6 +155,87 @@ export default function TheRollPage() {
                 <PdfLink href="/docs/roll-inclusion-guidelines.pdf" label="Roll Inclusion Guidelines.pdf" />
               </div>
             </div>
+          </Reveal>
+        </Container>
+      </Section>
+
+      <Section tone="cream" id="related-organisations" className="border-t border-parchment-300/60">
+        <Container size="prose">
+          <Reveal>
+            <SectionHeading
+              align="start"
+              eyebrow="Recognised Sources"
+              title="Related Organisations"
+              intro={
+                <>
+                  The Roll does not stand alone. It is maintained under the oversight of the Association’s{" "}
+                  <Link
+                    href="/governing-council"
+                    className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+                  >
+                    Governing Council
+                  </Link>
+                  , and draws gladly on the work of Scotland’s established institutions.
+                </>
+              }
+            />
+          </Reveal>
+
+          <div className="mt-12 space-y-10">
+            {organisations.map((o, i) => (
+              <Reveal key={o.name} delay={i * 0.06}>
+                <article className="border-t border-parchment-300/70 pt-8">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                    <h3 className="text-2xl text-navy">{o.name}</h3>
+                    {o.href && (
+                      <a
+                        href={o.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-muted transition-colors hover:text-gold-deep"
+                      >
+                        {o.linkLabel}
+                        <ExternalArrow className="h-3 w-3" />
+                      </a>
+                    )}
+                  </div>
+                  <p className="mt-4 leading-relaxed text-ink-soft">{o.body}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal>
+            <aside className="mt-14 border-l-2 border-gold/60 bg-white px-6 py-7 sm:px-8">
+              <Eyebrow>For the Avoidance of Doubt</Eyebrow>
+              <ul className="mt-6 space-y-6">
+                <li className="leading-relaxed text-ink-soft">
+                  <strong className="font-semibold text-navy">Who maintains the Roll.</strong> The Roll is maintained
+                  under the oversight of the Association’s Governing Council, whose members are published — by name,
+                  with their records — on{" "}
+                  <Link
+                    href="/governing-council"
+                    className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+                  >
+                    this site
+                  </Link>
+                  .
+                </li>
+                <li className="leading-relaxed text-ink-soft">
+                  <strong className="font-semibold text-navy">“Hereditary Title.”</strong> The badge is defined openly
+                  on the register itself: “All Scottish baronial dignities are heritable. The Roll displays a
+                  ‘Hereditary Title’ badge where hereditary succession is pledged, or where the dignity is treated as
+                  dynastic.” It describes the Roll’s treatment of succession; it asserts no category of property law.
+                </li>
+                <li className="leading-relaxed text-ink-soft">
+                  <strong className="font-semibold text-navy">“Verified.”</strong> Verification on the Roll means
+                  documentary authentication against the primary record — letters patent, the official gazettes of the
+                  Lyon Office, and the certification of the Scottish Barony Register. Since 2004 no register of
+                  Scottish baronies, public or private, has carried statutory force; what a serious record offers is
+                  evidence. The Roll’s entries cite theirs.
+                </li>
+              </ul>
+            </aside>
           </Reveal>
         </Container>
       </Section>
