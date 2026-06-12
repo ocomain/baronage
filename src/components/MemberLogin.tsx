@@ -17,7 +17,7 @@ export function MemberLogin() {
 
       <div className="flex flex-col items-center text-center">
         <Seal tone="ink" className="h-44 w-44 sm:h-52 sm:w-52" />
-        <h1 className="eyebrow mt-6">Member’s Area</h1>
+        <h1 className="eyebrow mt-6">Member’s Chamber</h1>
       </div>
 
       <form
