@@ -25,7 +25,7 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Bachuil", roll: "https://roll.baronage.com/baron/niall-livingstone-of-bachuil", img: "/arms/bachuil.webp", note: "Chief of his Name" },
   { dignity: "Baron", name: "Bannockburn", roll: "https://roll.baronage.com/baron/hope-vere-anderson", img: "/arms/bannockburn.webp" },
   { dignity: "Baron", name: "Biggar", roll: "https://roll.baronage.com/baron/charles-ross-of-biggar", img: "/arms/biggar.webp" },
-  { dignity: "Baron", name: "Menie", roll: "https://roll.baronage.com/baron/michael-woodley-of-menie", img: "/arms/menie.webp" },
+  { dignity: "Baron", name: "Balvill", roll: "https://roll.baronage.com/baron/mark-hopking", img: "/arms/balvill.webp" },
   {
     dignity: "Baron",
     name: "Moncrieffe",
