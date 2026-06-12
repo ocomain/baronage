@@ -47,7 +47,7 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
   },
   {
     name: "The Forum for the Scottish Baronage",
-    body: "A modern private association of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private association’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
+    body: "An organisation of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private association’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
   },
 ];
 
@@ -126,6 +126,59 @@ export default function TheRollPage() {
                 titles is fundamental to our work.
               </p>
             </div>
+          </Reveal>
+
+          <Reveal>
+            <figure className="mt-10 border border-parchment-300/70 bg-parchment-50 p-6 sm:p-8">
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
+                  Authenticated Baron
+                </span>
+                <span className="rounded-sm border border-amber-300 bg-amber-100 px-3 py-1 font-sans text-xs text-amber-900">
+                  🛡️ Hereditary Title
+                </span>
+              </div>
+              <p className="mt-4 font-serif text-xl text-navy">The Much Honoured Baron of Hartsyde</p>
+              <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-ink-soft">
+                <li>
+                  • Verified by The Roll 30 Jun 2025 seeing original Warrant for Letters Patent “Baron of Hartsyde”
+                  officially recognised by Lord Lyon 16th Aug 2010
+                </li>
+                <li>• Scottish Barony Register, Dignity of the Barony of Hartsyde (County of Lanark) 26th Feb 2010 “2010/02”</li>
+                <li>• Burke’s Peerage Revised Families. Burke’s Peerage (Genealogical Books) Ltd. Updated 2025</li>
+              </ul>
+              <div className="mt-6 grid grid-cols-2 items-start gap-4 sm:gap-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/hartsyde-patent.webp"
+                  alt="Original letters patent document, as displayed on the Hartsyde entry"
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                  className="w-full border border-parchment-300/70"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/hartsyde-pledge.webp"
+                  alt="Signed Baronial Pledge document, as displayed on the Hartsyde entry"
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                  className="w-full border border-parchment-300/70"
+                />
+              </div>
+              <figcaption className="mt-5 font-sans text-xs uppercase tracking-[0.16em] text-muted">
+                An entry as published — credentials and original documents, Barony of Hartsyde ·{" "}
+                <a
+                  href="https://roll.baronage.com/baron/jean-guy-philip-boisserolles-de-st-julien"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold-deep transition-colors hover:text-oxblood"
+                >
+                  view the live entry ↗
+                </a>
+              </figcaption>
+            </figure>
           </Reveal>
 
           <Reveal>
