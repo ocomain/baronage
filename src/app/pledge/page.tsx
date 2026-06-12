@@ -25,8 +25,12 @@ export default function PledgePage() {
         eyebrow="A Lasting Commitment"
         title="The Pledge"
         intro="An opportunity to convert a barony into a pledged hereditary title — ensuring legitimacy and principled commitment for future generations."
-        image="/images/scribe.webp"
-        position="center 30%"
+        video={{
+          webm: "/videos/pledge-scribe.webm",
+          mp4: "/videos/pledge-scribe.mp4",
+          poster: "/videos/pledge-scribe-poster.webp",
+        }}
+        position="52% 55%"
       />
 
       <Section tone="parchment">
