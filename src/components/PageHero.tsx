@@ -10,6 +10,7 @@ export function PageHero({
   title,
   intro,
   image,
+  video,
   position = "center",
   scrim = "default",
 }: {
@@ -18,36 +19,62 @@ export function PageHero({
   intro?: string;
   /** Optional full-bleed cinematic photograph behind the masthead. */
   image?: string;
+  /** Optional full-bleed looping film, used in place of the photograph. Poster doubles as the reduced-motion fallback. */
+  video?: { mp4: string; webm?: string; poster: string };
   position?: string;
   /** "strong" darkens the wash for bright imagery so light text stays legible. */
   scrim?: "default" | "strong";
 }) {
   const ref = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
+  const hasMedia = Boolean(image || video);
 
   // Same motion language as the homepage hero, a touch quieter:
   // spring-smoothed drift on scroll + a very slow ambient breathe.
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const progress = useSpring(scrollYProgress, { stiffness: 80, damping: 26, mass: 0.5, restDelta: 0.0005 });
-  const bgY = useTransform(progress, [0, 1], ["0%", reduceMotion || !image ? "0%" : "10%"]);
+  const bgY = useTransform(progress, [0, 1], ["0%", reduceMotion || !hasMedia ? "0%" : "10%"]);
 
   return (
     <section
       ref={ref}
       className={`relative isolate overflow-hidden bg-navy-deep text-parchment-50 ${
-        image ? "flex min-h-[58vh] items-end" : ""
+        hasMedia ? "flex min-h-[58vh] items-end" : ""
       }`}
     >
-      {image ? (
+      {hasMedia ? (
         <>
           <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
-            <motion.div
-              className="h-full w-full bg-cover"
-              style={{ backgroundImage: `url('${image}')`, backgroundPosition: position }}
-              initial={{ scale: 1.1 }}
-              animate={reduceMotion ? undefined : { scale: [1.1, 1.16, 1.1] }}
-              transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
-            />
+            {video && !reduceMotion ? (
+              <motion.div
+                className="h-full w-full"
+                initial={{ scale: 1.1 }}
+                animate={{ scale: [1.1, 1.16, 1.1] }}
+                transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <video
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: position }}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster={video.poster}
+                >
+                  {video.webm && <source src={video.webm} type="video/webm" />}
+                  <source src={video.mp4} type="video/mp4" />
+                </video>
+              </motion.div>
+            ) : (
+              <motion.div
+                className="h-full w-full bg-cover"
+                style={{ backgroundImage: `url('${video ? video.poster : image}')`, backgroundPosition: position }}
+                initial={{ scale: 1.1 }}
+                animate={reduceMotion ? undefined : { scale: [1.1, 1.16, 1.1] }}
+                transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
+              />
+            )}
           </motion.div>
           <div
             className="absolute inset-0 -z-10"
