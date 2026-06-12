@@ -57,7 +57,8 @@ export default function HistoryPage() {
           </Reveal>
           <Reveal>
             <p className="mt-10 text-lg leading-relaxed text-ink-soft">
-              Since the abolition of land-based tenure in 2004, baronies have become{" "}
+              Since the abolition of the feudal system in 2004, baronies, which were held by feudal barons, have
+              become{" "}
               <strong className="font-semibold text-navy">incorporeal heritable dignities</strong> — independent of any
               land, freely inheritable and transferable. The holder of a Scottish barony is correctly styled a{" "}
               <strong className="font-semibold text-navy">minor baron</strong>: a titled noble below the peerage, yet
