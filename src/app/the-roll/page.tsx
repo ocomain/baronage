@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const features = [
   {
     title: "Verified & vetted",
-    body: "Every entry is thoroughly researched and authenticated with recognised authorities, researchers and institutions. Only dignities of proven legitimacy are recognised.",
+    body: "Every entry is thoroughly researched and authenticated with recognised authorities, researchers and institutions. Only dignities of proven legitimacy are recognised — and each entry publishes the credentials on which it rests.",
   },
   {
     title: "Free, for life",
@@ -69,7 +69,8 @@ export default function TheRollPage() {
           <div>
             <p className="eyebrow eyebrow--light">A separate register · roll.baronage.com</p>
             <p className="mt-2 max-w-xl text-parchment-200/85">
-              The live Roll is a distinct public sub-site. Searching or verifying an entry opens it in a new window.
+              The live Roll is a distinct public sub-site — every entry and its evidence open to inspection. Searching
+              or verifying an entry opens it in a new window.
             </p>
           </div>
           <ButtonLink href={ROLL_URL} variant="gold" className="shrink-0">
@@ -112,6 +113,12 @@ export default function TheRollPage() {
                 register, false or questionable claimants have appeared in published sources. The Roll addresses this by
                 maintaining a strict, verified and public record — a trusted resource for scholars, genealogists and all
                 those interested in Scotland’s heritage.
+              </p>
+              <p>
+                Because the Roll is open source, nothing is asked to be taken on trust. Every entry publishes the
+                credentials on which it rests — Lyon Court instruments, Scottish Barony Register references, gazette
+                citations and images of original documents — so that anyone, anywhere, may verify a title for
+                themselves.
               </p>
               <p>
                 Inclusion is voluntary but requires adherence to rigorous criteria. As custodians of the Roll, we
