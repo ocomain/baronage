@@ -47,7 +47,7 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
   },
   {
     name: "The Forum for the Scottish Baronage",
-    body: "An organisation of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private association’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
+    body: "An organisation of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private organisation’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function TheRollPage() {
         </Container>
       </section>
 
-      <Section tone="cream" className="border-b border-parchment-300/60">
+      <Section tone="cream" className="border-b border-parchment-300/60 !py-12 sm:!py-16">
         <Container>
           <div className="grid gap-px overflow-hidden rounded-sm border border-parchment-300/70 bg-parchment-300/70 md:grid-cols-3">
             {features.map((f, i) => (
@@ -97,13 +97,34 @@ export default function TheRollPage() {
         </Container>
       </Section>
 
-      <Section tone="parchment" className="!pb-12 sm:!pb-14">
+      <Section tone="parchment" className="!py-12 sm:!py-14">
         <Container size="prose">
+          <Reveal>
+            <figure className="border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
+              <blockquote className="font-serif text-lg italic leading-relaxed text-navy">
+                “…the title, honour, rank and status of free baron, who shall now and in perpetuity be called barons of
+                Spynie.”
+              </blockquote>
+              <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
+                Phrasing from a Crown charter grant —{" "}
+                <a
+                  href="https://www.rps.ac.uk/search.php?a=fcf&fn=jamesvi_trans&id=11094&t=trans"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold-deep transition-colors hover:text-oxblood"
+                >
+                  Records of the Parliament of Scotland ↗
+                </a>
+              </figcaption>
+            </figure>
+          </Reveal>
+
           <Reveal>
             <SectionHeading
               align="start"
               eyebrow="Why the Roll Exists"
               title="A trusted record, where none was required"
+              className="mt-12"
             />
           </Reveal>
           <Reveal>
@@ -128,25 +149,6 @@ export default function TheRollPage() {
             </div>
           </Reveal>
 
-          <Reveal>
-            <figure className="mt-10 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
-              <blockquote className="font-serif text-lg italic leading-relaxed text-navy">
-                “the barony of Spynie, giving and granting to the said Master Alexander and his foresaids the title,
-                honour, rank and status of free baron, who shall now and in perpetuity be called barons of Spynie”
-              </blockquote>
-              <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
-                Phrasing from a Crown charter grant —{" "}
-                <a
-                  href="https://www.rps.ac.uk/search.php?a=fcf&fn=jamesvi_trans&id=11094&t=trans"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gold-deep transition-colors hover:text-oxblood"
-                >
-                  Records of the Parliament of Scotland ↗
-                </a>
-              </figcaption>
-            </figure>
-          </Reveal>
 
           <Reveal>
             <figure className="mt-10 border border-parchment-300/70 bg-parchment-50 p-6 sm:p-8">
@@ -249,7 +251,7 @@ export default function TheRollPage() {
         </Container>
       </Section>
 
-      <Section tone="cream" id="related-organisations" className="border-t border-parchment-300/60 !pt-12 sm:!pt-14">
+      <Section tone="cream" id="related-organisations" className="border-t border-parchment-300/60 !py-12 sm:!py-14">
         <Container size="prose">
           <Reveal>
             <SectionHeading
