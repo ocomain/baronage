@@ -140,6 +140,11 @@ export default function TheRollPage() {
                 themselves.
               </p>
               <p>
+                We, as custodians of the Roll, do not wish to own or control this entity; we plan to eventually
+                transfer its oversight to government supervisors to ensure proper checks and balances into the future
+                (once agreed with officials).
+              </p>
+              <p>
                 Inclusion is voluntary but requires adherence to rigorous criteria. As custodians of the Roll, we
                 collaborate with recognised authorities to authenticate claims, and the non-recognition of unverified
                 titles is fundamental to our work.

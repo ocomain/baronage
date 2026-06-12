@@ -259,6 +259,13 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
+          <Reveal>
+            <p className="mx-auto mt-10 max-w-3xl text-center font-serif text-lg italic leading-relaxed text-muted">
+              We, as custodians of the Roll, do not wish to own or control this entity; we plan to eventually transfer
+              its oversight to government supervisors to ensure proper checks and balances into the future (once
+              agreed with officials).
+            </p>
+          </Reveal>
         </Container>
       </Section>
 
