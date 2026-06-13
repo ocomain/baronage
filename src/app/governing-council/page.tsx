@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { CouncilCard, type CouncilMember } from "@/components/CouncilCard";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
@@ -84,7 +85,17 @@ const stewardship = [
   {
     numeral: "I",
     title: "Chancellor & Council",
-    body: "An elected Chancellor and Governing Council, gets voted in via the members’ meeting.",
+    body: (
+      <>
+        An elected Governing Council, gets voted in via the members’ meeting.{" "}
+        <Link
+          href="/members"
+          className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+        >
+          Become a member
+        </Link>
+      </>
+    ),
   },
   {
     numeral: "II",
