@@ -20,6 +20,40 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Hover flourish — "in the Baronage of Scotland" rises in letter-by-letter on
+ * card hover. Pure CSS: the parent figure's `group` hover drives a staggered
+ * per-letter transition (delay = index · step). Decorative, so aria-hidden;
+ * desktop-only by nature (no hover on touch). Reduced-motion users get a plain
+ * fade with no travel.
+ */
+function Flourish({ text, placement }: { text: string; placement: "top" | "below" }) {
+  // "top" (chief cards) is an absolute overlay centred between the gold frame
+  // and the arms — adds no height. "below" is an in-flow line under the barony
+  // name: it reserves its own line so the card grows to hold it (no overflow at
+  // the bottom edge, even for two-line names) while the arms stay top-anchored.
+  const base =
+    placement === "top"
+      ? "pointer-events-none absolute inset-x-0 top-[1.45rem] z-10"
+      : "mt-2 block";
+  return (
+    <span
+      aria-hidden
+      className={`${base} whitespace-nowrap px-4 text-center font-display text-[0.88rem] italic leading-none tracking-wide text-gold-deep`}
+    >
+      {[...text].map((ch, i) => (
+        <span
+          key={i}
+          style={{ transitionDelay: `${i * 28}ms` }}
+          className="inline-block -translate-y-2 opacity-0 transition-[opacity,transform] duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:translate-y-0 motion-reduce:duration-200"
+        >
+          {ch === " " ? " " : ch}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function SupportersPage() {
   return (
     <>
@@ -55,6 +89,7 @@ export default function SupportersPage() {
                 key={b.name}
                 className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
                   <div className="pointer-events-none absolute inset-2.5 border border-gold/0 transition-colors duration-300 group-hover:border-gold/25" aria-hidden />
+                  {b.note && <Flourish text="in the Baronage of Scotland" placement="top" />}
                   <div className="flex h-56 w-full items-center justify-center">
                     {b.img ? (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -72,7 +107,7 @@ export default function SupportersPage() {
                       <span className="font-display text-6xl text-gold/50">{b.name.charAt(0)}</span>
                     )}
                   </div>
-                  <figcaption className="mt-6">
+                  <figcaption className="relative mt-6 w-full">
                     {b.dignity !== "Younger" && (
                       <span className="block font-sans text-[0.55rem] font-medium uppercase tracking-[0.26em] text-gold-deep/70">
                         The Much Hon
@@ -86,7 +121,9 @@ export default function SupportersPage() {
                       <span className="mx-auto mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
                         {b.note}
                       </span>
-                    ) : null}
+                    ) : (
+                      <Flourish text="in the Baronage of Scotland" placement="below" />
+                    )}
                   </figcaption>
               </figure>
             ))}
