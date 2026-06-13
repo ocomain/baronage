@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
+import { ArmorialGrid } from "@/components/ArmorialGrid";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { baronies } from "@/lib/supporters";
 import { CALENDLY_URL } from "@/lib/site";
@@ -83,7 +84,7 @@ export default function SupportersPage() {
           </p>
         </Container>
         <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <ArmorialGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {baronies.map((b) => (
               <figure
                 key={b.name}
@@ -127,7 +128,7 @@ export default function SupportersPage() {
                   </figcaption>
               </figure>
             ))}
-          </div>
+          </ArmorialGrid>
 
           <Reveal>
             <p className="mt-12 text-center font-serif text-lg italic text-muted">
