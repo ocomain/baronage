@@ -1,6 +1,6 @@
 /** The supporters shown in the homepage conveyor and on /supporters. */
 export type Barony = {
-  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger" | "Lord Steward" | "Countess" | "Baroness";
+  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger" | "Lord & Steward" | "Countess" | "Baroness";
   name: string;
   img?: string;
   note?: string;
@@ -23,7 +23,7 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Kirkbuddo", roll: "https://roll.baronage.com/baron/jean-yves-de-la-sabliere", img: "/arms/kirkbuddo.webp" },
   { dignity: "Baron", name: "Inneryne", roll: "https://roll.baronage.com/baron/ronald-reisinger", img: "/arms/inneryne.webp" },
   { dignity: "Baron", name: "Carstairs", img: "/arms/carstairs.webp", pageOnly: true },
-  { dignity: "Lord Steward", name: "Garlies", img: "/arms/garlies.webp", pageOnly: true },
+  { dignity: "Lord & Steward", name: "Garlies", img: "/arms/garlies.webp", pageOnly: true },
   { dignity: "Countess", name: "Crawfurd-Lindsay", img: "/arms/crawfurd-lindsay.webp", pageOnly: true },
   { dignity: "Baroness", name: "Greenan", img: "/arms/greenan.webp", pageOnly: true },
   { dignity: "Baron", name: "Culbin", img: "/arms/culbin.webp", pageOnly: true },
