@@ -134,7 +134,10 @@ export default function TheRollPage() {
                 those interested in Scotland’s heritage.
               </p>
               <p>
-                Because the Roll is open source, nothing is asked to be taken on trust. Every entry publishes the
+                <strong className="font-semibold text-navy">
+                  Because the Roll is open source, nothing is asked to be taken on trust.
+                </strong>{" "}
+                Every entry publishes the
                 credentials on which it rests — Lyon Court instruments, Scottish Barony Register references, gazette
                 citations and images of original documents — so that anyone, anywhere, may verify a title for
                 themselves.
