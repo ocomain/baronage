@@ -22,8 +22,13 @@ export function PageHero({
   /** Optional full-bleed looping film, used in place of the photograph. Poster doubles as the reduced-motion fallback. */
   video?: { mp4: string; webm?: string; poster: string };
   position?: string;
-  /** "strong" darkens the wash for bright imagery so light text stays legible. */
-  scrim?: "default" | "strong";
+  /**
+   * "strong" darkens the wash for bright imagery so light text stays legible.
+   * "bottom-blur" leaves the imagery clear and instead frosts only the lower
+   * band with a masked backdrop-blur (plus a gentle darken) so the masthead
+   * reads without flattening the picture above it.
+   */
+  scrim?: "default" | "strong" | "bottom-blur";
 }) {
   const ref = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
@@ -76,16 +81,28 @@ export function PageHero({
               />
             )}
           </motion.div>
-          <div
-            className="absolute inset-0 -z-10"
-            style={{
-              background:
-                scrim === "strong"
-                  ? "linear-gradient(180deg, rgba(8,12,28,0.74) 0%, rgba(8,12,28,0.66) 45%, rgba(8,12,28,0.94) 100%)"
-                  : "linear-gradient(180deg, rgba(8,12,28,0.45) 0%, rgba(8,12,28,0.38) 45%, rgba(8,12,28,0.9) 100%)",
-            }}
-            aria-hidden
-          />
+          {scrim === "bottom-blur" ? (
+            <div
+              className="absolute inset-0 -z-10 backdrop-blur-xl"
+              style={{
+                WebkitMaskImage: "linear-gradient(to top, #000 0%, #000 16%, transparent 48%)",
+                maskImage: "linear-gradient(to top, #000 0%, #000 16%, transparent 48%)",
+                background: "linear-gradient(to top, rgba(8,12,28,0.62) 0%, rgba(8,12,28,0) 44%)",
+              }}
+              aria-hidden
+            />
+          ) : (
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                background:
+                  scrim === "strong"
+                    ? "linear-gradient(180deg, rgba(8,12,28,0.74) 0%, rgba(8,12,28,0.66) 45%, rgba(8,12,28,0.94) 100%)"
+                    : "linear-gradient(180deg, rgba(8,12,28,0.45) 0%, rgba(8,12,28,0.38) 45%, rgba(8,12,28,0.9) 100%)",
+              }}
+              aria-hidden
+            />
+          )}
         </>
       ) : (
         <>

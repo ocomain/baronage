@@ -58,9 +58,13 @@ export default function TheRollPage() {
         eyebrow="The Open Register"
         title="The Roll of Scottish Barons"
         intro="An open-source verification register of titles within the Baronage of Scotland — created to improve transparency and accuracy in the public record."
-        image="/images/craighall.webp"
-        position="center 32%"
-        scrim="strong"
+        video={{
+          webm: "/videos/roll-portal.webm",
+          mp4: "/videos/roll-portal.mp4",
+          poster: "/videos/roll-portal-poster.webp",
+        }}
+        position="center 42%"
+        scrim="bottom-blur"
       />
 
       {/* Prominent, clearly-marked hand-off to the separate register */}
