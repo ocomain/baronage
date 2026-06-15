@@ -46,12 +46,12 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
     body: "The historic representative body of Scotland’s baronage, revived in the twentieth century with the encouragement of Lord Lyon Sir Thomas Innes of Learney. Though quieter in recent years, the Convention holds a distinguished place in the modern history of the baronage, and the Association honours it.",
   },
   {
-    name: "The Forum for the Scottish Baronage",
-    body: "An organisation of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private organisation’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
-  },
-  {
     name: "The Registry of Scots Nobility",
     body: "A private organisation maintaining a register of the peerage, baronetage and baronage, which also publishes commentary of its own on other baronial bodies, including this Roll. Its own page states plainly that “This association has no official standing, and cannot effect a Baron or Barony’s legal position” — and the same holds of every private register, the Roll included: none carries statutory force, and the Roll claims none. What the Roll offers instead is method. As an open-source register, it records a barony as a dignity in its own right — distinct from a territorial designation, which is a description appended to a name, not a title of nobility — and enters each dignity once, verified against the public records of the Lyon Court and the certification of the Scottish Barony Register, its evidence open for anyone to inspect.",
+  },
+  {
+    name: "The Forum for the Scottish Baronage",
+    body: "An organisation of barony owners, which describes itself as “the largest and most active community of Scottish barons and baronesses in the world”. The Forum publishes commentary of its own on other baronial organisations, including this Roll. We leave readers to weigh such commentary against the primary record: the Roll seeks no private organisation’s endorsement, resting instead on the public records of the Lyon Court and the certification of the Scottish Barony Register.",
   },
 ];
 
