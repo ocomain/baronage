@@ -192,7 +192,7 @@ export default function HomePage() {
           <Reveal>
             <div className="grid grid-cols-1 divide-y divide-parchment-300/70 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {[
-                { value: "200", label: "Verified Barons" },
+                { value: "201", label: "Verified Barons" },
                 { value: "200", label: "Unverified Holders" },
                 { value: "86", label: "Pledged Hereditary" },
               ].map((stat) => (
