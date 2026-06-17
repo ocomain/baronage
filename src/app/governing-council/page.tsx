@@ -20,7 +20,7 @@ const members: CouncilMember[] = [
     img: "/council/balvaird-whitetie.webp",
     pos: "center 16%",
     popPos: "center 10%",
-    bio: "Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird is an Officer of the Most Venerable Order of Saint John and a Knight of the Pontifical Equestrian Order of Saint Sylvester. His armorial bearings are recognised across three jurisdictions — matriculated by the Court of the Lord Lyon in Scotland (2020), and granted by the Chief Herald of Malta (2022) and the College of Arms in London (2025). Balvaird succeeded to the barony in 2017 — a title confirmed by James VI in 1624 — and has pledged it as a hereditary title upon the Roll.",
+    bio: "The Much Hon. Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird is an Officer of the Most Venerable Order of Saint John and a Knight of the Pontifical Equestrian Order of Saint Sylvester. His armorial bearings are recognised across three jurisdictions — matriculated by the Court of the Lord Lyon in Scotland (2020), and granted by the Chief Herald of Malta (2022) and the College of Arms in London (2025). Balvaird succeeded to the barony in 2017 — a title confirmed by James VI in 1624 — and has pledged it as a hereditary title upon the Roll.",
   },
   {
     mark: "D",
@@ -32,7 +32,7 @@ const members: CouncilMember[] = [
     img: "/council/Irvine.jpg",
     pos: "center 20%",
     popPos: "center 10%",
-    bio: "Alexander Irvine of Drum, 27th Baron of Drum succeeded his father in 2019 and is Chief of the Name and Arms of Irvine of Drum. The barony descends from the Royal Charter granted to William de Irwyn by Robert the Bruce in 1323, with Drum Castle in Aberdeenshire its caput for seven centuries. Drum is Patron of the Clan Irwin Association, and the barony is pledged as a hereditary title upon the Roll.",
+    bio: "The Much Hon. Alexander Irvine of Drum, 27th Baron of Drum succeeded his father in 2019 and is Chief of the Name and Arms of Irvine of Drum. The barony descends from the Royal Charter granted to William de Irwyn by Robert the Bruce in 1323, with Drum Castle in Aberdeenshire its caput for seven centuries. Drum is Patron of the Clan Irwin Association, and the barony is pledged as a hereditary title upon the Roll.",
   },
   {
     mark: "K",
