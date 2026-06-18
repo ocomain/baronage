@@ -85,7 +85,7 @@ export default function PledgePage() {
               To take the Pledge or learn more, please contact the Secretary.
             </p>
             <div className="mt-8 flex justify-center">
-              <PdfLink href="/docs/the-baronial-pledge.pdf" label="The Baronial Pledge.pdf" />
+              <PdfLink href="/pledge.pdf" label="The Baronial Pledge.pdf" />
             </div>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <ButtonLink href="/baronial-code" variant="outline">
