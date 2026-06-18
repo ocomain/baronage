@@ -22,11 +22,12 @@ export const metadata: Metadata = {
 };
 
 /**
- * Hover flourish — "in the Baronage of Scotland" rises in letter-by-letter on
+ * Hover flourish — "in the Baronage of Scotland" fades in letter-by-letter on
  * card hover. Pure CSS: the parent figure's `group` hover drives a staggered
- * per-letter transition (delay = index · step). Decorative, so aria-hidden;
- * desktop-only by nature (no hover on touch). Reduced-motion users get a plain
- * fade with no travel.
+ * per-letter opacity transition (delay = index · step). The letters carry NO
+ * vertical travel of their own, so they rise with the card lift in lockstep
+ * with the rest of the caption and stay aligned. Decorative, so aria-hidden;
+ * desktop-only by nature (no hover on touch).
  */
 function Flourish({ text, placement }: { text: string; placement: "top" | "below" }) {
   // "top" (chief cards) is an absolute overlay centred between the gold frame
@@ -46,7 +47,7 @@ function Flourish({ text, placement }: { text: string; placement: "top" | "below
         <span
           key={i}
           style={{ transitionDelay: `${i * 28}ms` }}
-          className="inline-block -translate-y-2 opacity-0 transition-[opacity,transform] duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:translate-y-0 motion-reduce:duration-200"
+          className="inline-block opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 motion-reduce:duration-200"
         >
           {ch === " " ? " " : ch}
         </span>
