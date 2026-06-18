@@ -258,7 +258,7 @@ export default function TheRollPage() {
                 </li>
               </ul>
               <div className="mt-8">
-                <PdfLink href="/docs/roll-inclusion-guidelines.pdf" label="Roll Inclusion Guidelines.pdf" />
+                <PdfLink href="/guidelines.pdf" label="Roll Inclusion Guidelines.pdf" />
               </div>
             </div>
           </Reveal>
