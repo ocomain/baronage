@@ -194,7 +194,7 @@ export default function HomePage() {
               {[
                 { value: "201", label: "Verified Barons" },
                 { value: "200", label: "Unverified Holders" },
-                { value: "86", label: "Pledged Hereditary" },
+                { value: "90", label: "Pledged Hereditary" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center px-6 py-4 text-center sm:py-1.5">
                   <span className="font-display text-5xl leading-none text-navy sm:text-6xl">{stat.value}</span>
