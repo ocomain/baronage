@@ -4,6 +4,7 @@ import { HeroHome } from "@/components/HeroHome";
 import { BaroniesCarousel } from "@/components/BaroniesCarousel";
 import { ImageBand } from "@/components/ImageBand";
 import { Reveal } from "@/components/Reveal";
+import { LiveStats } from "@/components/LiveStats";
 import { Footnote } from "@/components/Footnote";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
@@ -190,18 +191,7 @@ export default function HomePage() {
       <section className="border-t-2 border-gold/40 border-b border-b-parchment-300/60 bg-parchment texture-parchment py-8 sm:py-9">
         <Container>
           <Reveal>
-            <div className="grid grid-cols-1 divide-y divide-parchment-300/70 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-              {[
-                { value: "201", label: "Verified Barons" },
-                { value: "200", label: "Unverified Holders" },
-                { value: "90", label: "Pledged Hereditary" },
-              ].map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center px-6 py-4 text-center sm:py-1.5">
-                  <span className="font-display text-5xl leading-none text-navy sm:text-6xl">{stat.value}</span>
-                  <span className="mt-2 font-inscribe text-xs uppercase tracking-[0.22em] text-muted">{stat.label}</span>
-                </div>
-              ))}
-            </div>
+            <LiveStats />
           </Reveal>
         </Container>
       </section>

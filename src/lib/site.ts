@@ -7,8 +7,14 @@ export const site = {
   established: "Keepers of the Roll of Scottish Barons",
 };
 
+/** Canonical production origin (no trailing slash). www is the live GitHub Pages domain; the apex 301-redirects to it. */
+export const SITE_URL = "https://www.baronage.com";
+
 /** The live, existing register — a separate app we link out to. */
 export const ROLL_URL = "https://roll.baronage.com/";
+
+/** Roll API origin (no trailing slash) — D1-backed endpoints, e.g. /api/stats. */
+export const ROLL_API = "https://roll.baronage.com";
 
 /** The Secretary's Calendly booking link — "Request a Call Back". */
 export const CALENDLY_URL = "https://calendly.com/secretary-baronage/30min";
