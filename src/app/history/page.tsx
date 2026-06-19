@@ -62,7 +62,8 @@ export default function HistoryPage() {
               <strong className="font-semibold text-navy">incorporeal heritable dignities</strong> — independent of any
               land, freely inheritable and transferable. The holder of a Scottish barony is correctly styled a{" "}
               <strong className="font-semibold text-navy">minor baron</strong>: a titled noble below the peerage, yet
-              above the rank of gentleman.
+              above the rank of gentleman and equivalent in rank to continental barons (according to former Lord Lyon
+              Sir Thomas Innes of Learney).
             </p>
           </Reveal>
         </Container>
