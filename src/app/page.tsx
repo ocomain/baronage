@@ -247,6 +247,10 @@ export default function HomePage() {
                 and Bankton<Fn n={4} />.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+                In Scotland, unlike England, a baron is not a member of the peerage; the Scottish peerage rank
+                equivalent to an English baron is that of a Lord of Parliament.
+              </p>
+              <p className="mt-6 text-lg leading-relaxed text-ink-soft">
                 Since the feudal aspects of baronies were abolished in 2004<Fn n={5} />, special legal provisions ensured the{" "}
                 <strong className="font-semibold text-navy">dignity of baron</strong> was retained as a
                 non-territorial<Fn n={6} />, floating dignity<Fn n={6} />, protected in Scots law<Fn n={7} /> and
