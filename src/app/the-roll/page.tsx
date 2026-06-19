@@ -91,7 +91,7 @@ export default function TheRollPage() {
         <Container>
           <Reveal>
             <figure className="mx-auto mb-12 max-w-3xl border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
-              <blockquote className="font-serif text-lg italic leading-relaxed text-navy">
+              <blockquote className="font-serif text-2xl italic leading-snug text-navy sm:text-3xl lg:text-4xl">
                 “…the title, honour, rank and status of free baron, who shall now and in perpetuity be called barons of
                 Spynie.”
               </blockquote>
