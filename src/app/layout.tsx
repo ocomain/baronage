@@ -111,6 +111,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
+        {/* Cloudflare Web Analytics — privacy-first, cookieless */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "15c0a029804c41d8b4c3223aeee42148"}'
+        ></script>
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
