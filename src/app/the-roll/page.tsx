@@ -166,33 +166,48 @@ export default function TheRollPage() {
 
           <Reveal>
             <figure className="mt-10 border border-parchment-300/70 bg-parchment-50 p-6 sm:p-8">
-              <div className="flex flex-wrap items-center gap-2.5">
-                <span className="rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
-                  Authenticated Baron
-                </span>
-                <span className="rounded-sm border border-amber-300 bg-amber-100 px-3 py-1 font-sans text-xs text-amber-900">
-                  🛡️ Hereditary Title
-                </span>
+              <div className="flex flex-col gap-5 sm:flex-row sm:gap-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/hartsyde-baron.webp"
+                  alt="The Much Honoured Baron of Hartsyde, robed as a baron"
+                  width={500}
+                  height={525}
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                  className="w-32 self-start border border-parchment-300/70 sm:w-40 md:w-44"
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <span className="rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
+                      Authenticated Baron
+                    </span>
+                    <span className="rounded-sm border border-amber-300 bg-amber-100 px-3 py-1 font-sans text-xs text-amber-900">
+                      🛡️ Hereditary Title
+                    </span>
+                  </div>
+                  <p className="mt-4 font-serif text-xl text-navy">The Much Honoured Baron of Hartsyde</p>
+                  <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-ink-soft">
+                    <li>
+                      • Verified by The Roll 30 Jun 2025 seeing original Warrant for Letters Patent “Baron of Hartsyde”
+                      officially recognised by Lord Lyon 16th Aug 2010
+                    </li>
+                    <li>• Scottish Barony Register, Dignity of the Barony of Hartsyde (County of Lanark) 26th Feb 2010 “2010/02”</li>
+                    <li>• Burke’s Peerage Revised Families. Burke’s Peerage (Genealogical Books) Ltd. Updated 2025</li>
+                    <li>
+                      • Pledged Hereditary Title — the holder has formally signed the Roll’s{" "}
+                      <Link
+                        href="/pledge"
+                        className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+                      >
+                        Baronial Pledge
+                      </Link>
+                      , a declaration that the barony be preserved within the family line as a hereditary dignity
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <p className="mt-4 font-serif text-xl text-navy">The Much Honoured Baron of Hartsyde</p>
-              <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-ink-soft">
-                <li>
-                  • Verified by The Roll 30 Jun 2025 seeing original Warrant for Letters Patent “Baron of Hartsyde”
-                  officially recognised by Lord Lyon 16th Aug 2010
-                </li>
-                <li>• Scottish Barony Register, Dignity of the Barony of Hartsyde (County of Lanark) 26th Feb 2010 “2010/02”</li>
-                <li>• Burke’s Peerage Revised Families. Burke’s Peerage (Genealogical Books) Ltd. Updated 2025</li>
-                <li>
-                  • Pledged Hereditary Title — the holder has formally signed the Roll’s{" "}
-                  <Link
-                    href="/pledge"
-                    className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
-                  >
-                    Baronial Pledge
-                  </Link>
-                  , a declaration that the barony be preserved within the family line as a hereditary dignity
-                </li>
-              </ul>
               <div className="mt-6 grid grid-cols-2 items-start gap-4 sm:gap-5">
                 <div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
