@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Quicksand } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SITE_URL } from "@/lib/site";
 
 // Matches the brand fonts used on roll.baronage.com
 const cormorant = Cormorant_Garamond({
@@ -26,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://baronage.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Baronage of Scotland Association — The Ancient Nobility of Scotland",
     template: "%s · Baronage of Scotland Association",
@@ -47,17 +48,16 @@ export const metadata: Metadata = {
       "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
     type: "website",
     locale: "en_GB",
-    url: "https://baronage.com",
+    url: SITE_URL,
     siteName: "Baronage of Scotland Association",
-    // NOTE go-live: revert these image URLs to "/og.jpg" once the site serves at baronage.com
-    images: [{ url: "https://new.baronage.com/og.jpg", width: 1200, height: 630, alt: "Eilean Donan castle at dusk with the seal of the Baronage of Scotland Association" }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Eilean Donan castle at dusk with the seal of the Baronage of Scotland Association" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Baronage of Scotland Association",
     description:
       "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
-    images: ["https://new.baronage.com/og.jpg"],
+    images: ["/og.jpg"],
   },
   alternates: { canonical: "/" },
   manifest: "/site.webmanifest",
@@ -75,8 +75,8 @@ const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Baronage of Scotland Association",
-  url: "https://baronage.com",
-  logo: "https://baronage.com/seal-gold.png",
+  url: SITE_URL,
+  logo: `${SITE_URL}/seal-gold.png`,
   description:
     "The ancient nobility of Scotland — verified, recorded, and preserved for future generations. A non-profit honourable body and keeper of the Roll of Scottish Barons.",
   email: "secretary@baronage.com",

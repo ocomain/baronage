@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { CouncilCard, type CouncilMember } from "@/components/CouncilCard";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Governing Council",
@@ -71,11 +72,11 @@ const councilJsonLd = {
       name: m.alt ?? m.name,
       alternateName: m.formal ?? m.name,
       description: m.bio,
-      ...(m.img ? { image: `https://baronage.com${m.img}` } : {}),
+      ...(m.img ? { image: `${SITE_URL}${m.img}` } : {}),
       affiliation: {
         "@type": "Organization",
         name: "Baronage of Scotland Association",
-        url: "https://baronage.com",
+        url: SITE_URL,
       },
     },
   })),

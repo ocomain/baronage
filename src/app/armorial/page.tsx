@@ -12,12 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "An Armorial Selection — Baronage of Scotland Association",
     description: "Supporters of the work of the Association — each title verified and recorded upon the Roll.",
-    // NOTE go-live: revert to "/og-supporters.jpg" once the site serves at baronage.com
-    images: [{ url: "https://new.baronage.com/og-supporters.jpg", width: 1200, height: 630, alt: "Coats of arms of supporters of the Baronage of Scotland Association" }],
+    images: [{ url: "/og-supporters.jpg", width: 1200, height: 630, alt: "Coats of arms of supporters of the Baronage of Scotland Association" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://new.baronage.com/og-supporters.jpg"],
+    images: ["/og-supporters.jpg"],
   },
 };
 
