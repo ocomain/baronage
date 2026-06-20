@@ -17,7 +17,7 @@ const mandate = [
   "Keeper of the open-source verification Roll of Scottish Barons.",
   "Offering barons The Pledge — converting a barony into a pledged hereditary title, bound by the Baronial Code.",
   "Representing barons in their engagement with government.",
-  "Updating baronial descriptors to reflect the law: since the 2000 Act, titles are personal and non-territorial, and the term “feudal” baron is no longer correct for extant baronies.",
+  "Updating baronial descriptors to reflect the law: since the 2000 Act, titles are personal and non-territorial, and the term “feudal” baron is no longer correct for extant baronies (Lord Lyon Sellar, in 2009, accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”).",
   "Lobbying for HRH the Baron of Renfrew as patron, for a royal warrant recognising the Roll, and for the modern relevance of the Lord Lyon office.",
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
