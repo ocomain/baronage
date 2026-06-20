@@ -17,7 +17,28 @@ const mandate = [
   "Keeper of the open-source verification Roll of Scottish Barons.",
   "Offering barons The Pledge — converting a barony into a pledged hereditary title, bound by the Baronial Code.",
   "Representing barons in their engagement with government.",
-  "Updating baronial descriptors to reflect the law: since the 2000 Act, titles are personal and non-territorial, and the term “feudal” baron is no longer correct for extant baronies (Lord Lyon Sellar, in 2009, accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”).",
+  (
+    <>
+      Updating baronial descriptors to reflect the law: since the 2000 Act, titles are personal and
+      non-territorial, and the term “feudal” baron is no longer correct for extant baronies (Lord Lyon
+      Sellar, in 2009, accordingly termed them “quondam feudal baronies”
+      <Footnote n={5}>
+        <p>
+          Lord Lyon W. D. H. Sellar (2009), p. 82 — quoted in Donald Draper Campbell,{" "}
+          <a
+            href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+          >
+            Scottish Armory and Heraldry
+          </a>{" "}
+          (2019).
+        </p>
+      </Footnote>{" "}
+      — quondam meaning “formerly”).
+    </>
+  ),
   "Lobbying for HRH the Baron of Renfrew as patron, for a royal warrant recognising the Roll, and for the modern relevance of the Lord Lyon office.",
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
@@ -189,8 +210,8 @@ export default function AboutPage() {
           </Reveal>
           <Reveal>
             <ul className="mt-8 space-y-4">
-              {mandate.map((item) => (
-                <li key={item} className="flex gap-4 leading-relaxed text-ink-soft">
+              {mandate.map((item, i) => (
+                <li key={i} className="flex gap-4 leading-relaxed text-ink-soft">
                   <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
                   <span>{item}</span>
                 </li>
