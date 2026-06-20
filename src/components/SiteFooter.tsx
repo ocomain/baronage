@@ -108,7 +108,15 @@ export function SiteFooter() {
             stakeholders.
           </p>
           <p className="mt-4">
-            © {new Date().getFullYear()} {site.legalName} (baronage.com).
+            © {new Date().getFullYear()} {site.legalName} (baronage.com). ·{" "}
+            <a
+              href="https://roll.baronage.com/copyright"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-parchment-200/30 underline-offset-2 transition-colors hover:text-parchment-100"
+            >
+              Copyright &amp; Database Rights
+            </a>
           </p>
         </div>
       </div>
