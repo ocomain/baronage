@@ -85,7 +85,7 @@ export default function SupportersPage() {
         </Container>
         <Container>
           <ArmorialGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {baronies.filter((b) => !b.conveyorOnly).map((b) => (
+            {baronies.map((b) => (
               <figure
                 key={b.name}
                 className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
