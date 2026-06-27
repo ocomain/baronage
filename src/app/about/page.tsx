@@ -222,7 +222,7 @@ export default function AboutPage() {
             <div className="mt-12 border-l-2 border-gold/60 pl-6">
               <p className="font-serif text-lg italic leading-relaxed text-oxblood-deep">
                 The heir to the British throne holds the baronage titles Lord of the Isles and Baron of Renfrew, and around thirty Scottish clan chiefs
-                are also barons — titles rooted deep in antiquity. As Lord Lyon Sir Thomas Innes of Learney observed,
+                are also barons — titles rooted deep in antiquity. As Lord Lyon Sir Thomas Innes of Learney stated,
                 Scottish barons are equivalent in rank to Continental barons.
               </p>
             </div>
