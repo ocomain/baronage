@@ -6,8 +6,6 @@ export type Barony = {
   note?: string;
   /** shown on /supporters only, not in the homepage conveyor */
   pageOnly?: boolean;
-  /** homepage conveyor only — hidden from the Armorial grid */
-  conveyorOnly?: boolean;
   /** profile on roll.baronage.com */
   roll?: string;
 };
@@ -23,8 +21,7 @@ export const baronies: Barony[] = [
     note: "Chief of his Name",
   },
   { dignity: "Baron", name: "Kirkbuddo", roll: "https://roll.baronage.com/baron/jean-yves-de-la-sabliere", img: "/arms/kirkbuddo.webp" },
-  { dignity: "Baron", name: "Lundie", img: "/arms/lundie.webp", pageOnly: true },
-  { dignity: "Baron", name: "Inneryne", roll: "https://roll.baronage.com/baron/ronald-reisinger", img: "/arms/inneryne.webp", conveyorOnly: true },
+  { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
   { dignity: "Baron", name: "Carstairs", img: "/arms/carstairs.webp", pageOnly: true },
   { dignity: "Lord & Steward", name: "Garlies", img: "/arms/garlies.webp", pageOnly: true },
   { dignity: "Countess", name: "Crawfurd-Lindsay", img: "/arms/crawfurd-lindsay.webp", pageOnly: true },
