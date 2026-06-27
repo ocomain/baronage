@@ -30,6 +30,9 @@ export function SiteHeader() {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
+  // Top nav omits Charitable Trust (it remains in the footer); Member's Chamber sits at the end.
+  const topNavLinks = navLinks.filter((link) => link.href !== "/charitable-trust");
+
   return (
     <header className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
       {/* Utility bar */}
@@ -64,14 +67,6 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/members"
-              className={`nav-link hidden font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors lg:inline-block ${
-                isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
-              }`}
-            >
-              Member’s Chamber
-            </Link>
             <a
               href={ROLL_URL}
               target="_blank"
@@ -101,7 +96,7 @@ export function SiteHeader() {
 
         {/* Desktop nav row */}
         <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-7 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
-          {navLinks.map((link) => {
+          {topNavLinks.map((link) => {
             const cls = `nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
               isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
             }`;
@@ -115,6 +110,15 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <Link
+            href="/members"
+            data-active={isActive("/members")}
+            className={`nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
+              isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
+            }`}
+          >
+            Member’s Chamber
+          </Link>
         </nav>
       </div>
 
@@ -138,7 +142,7 @@ export function SiteHeader() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <ul className="flex flex-col divide-y divide-parchment-300/70">
-                {navLinks.map((link) => (
+                {topNavLinks.map((link) => (
                   <li key={link.href}>
                     {link.external ? (
                       <a
