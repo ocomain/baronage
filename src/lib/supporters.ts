@@ -24,7 +24,7 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
   { dignity: "Baron", name: "Crawfordjohn", img: "/arms/crawfordjohn.webp", pageOnly: true },
   { dignity: "Lord & Steward", name: "Garlies", img: "/arms/garlies.webp", pageOnly: true },
-  { dignity: "Countess", name: "Crawfurd-Lindsay", img: "/arms/crawfurd-lindsay.webp", pageOnly: true },
+  { dignity: "Baroness", name: "Redcastle", img: "/arms/redcastle.webp", pageOnly: true },
   { dignity: "Baroness", name: "Greenan", img: "/arms/greenan.webp", pageOnly: true },
   { dignity: "Baron", name: "Culbin", img: "/arms/culbin.webp", pageOnly: true },
   { dignity: "Baron", name: "Bachuil", roll: "https://roll.baronage.com/baron/niall-livingstone-of-bachuil", img: "/arms/bachuil.webp", note: "Chief of his Name" },
