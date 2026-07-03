@@ -28,16 +28,16 @@ const features = [
 
 const organisations: { name: string; href?: string; linkLabel?: string; body: string }[] = [
   {
-    name: "The Roll of the Peerage",
-    href: "https://www.college-of-arms.gov.uk/resources/roll-of-the-peerage",
-    linkLabel: "college-of-arms.gov.uk",
-    body: "The official public record of the peerage, established by royal warrant of Queen Elizabeth II on 1 June 2004, maintained by the Crown Office within the Ministry of Justice and published by the College of Arms. It registers peers of England, Scotland, Ireland, Great Britain and the United Kingdom — a different order of dignity from the baronage: as noted elsewhere on this site, a Scottish baron is not a peer, and holds no place upon it. Enrolment neither creates nor alters a peerage in law: a peer remains a peer, and may bear the title in private life — upon a passport, for instance — with no place on the Roll, which governs only official recognition, such as precedence at public ceremonies. A number of peers are indeed absent from it, yet bear their titles in the ordinary way.",
-  },
-  {
     name: "The Official Roll of the Baronetage",
     href: "https://www.baronetage.org",
     linkLabel: "baronetage.org",
-    body: "The official record of the baronetage, established by royal warrant of Edward VII on 8 February 1910 and maintained today by the Lord Chancellor, with an abridged version published online by the Standing Council of the Baronetage. Like the Roll of the Peerage, it records a separate order of hereditary dignity: a baronetcy is not a barony, and the two Rolls are maintained wholly independently of one another. Here, though, recognition follows enrolment strictly: since 1910 no person is received, styled, or accorded precedence as a baronet unless entered upon the Roll — in practice, one is a baronet only if on it.",
+    body: "The official record of the baronetage, established by royal warrant of Edward VII on 8 February 1910 and maintained today by the Lord Chancellor, with an abridged version published online by the Standing Council of the Baronetage. It records a separate order of hereditary dignity — a baronetcy is not a barony — and recognition upon it follows enrolment strictly: since 1910 no person is received, styled, or accorded precedence as a baronet unless entered upon the Roll, so that, in practice, one is a baronet only if on it.",
+  },
+  {
+    name: "The Roll of the Peerage",
+    href: "https://www.college-of-arms.gov.uk/resources/roll-of-the-peerage",
+    linkLabel: "college-of-arms.gov.uk",
+    body: "The official public record of the peerage, established by royal warrant of Queen Elizabeth II on 1 June 2004, maintained by the Crown Office within the Ministry of Justice and published by the College of Arms. It registers peers of England, Scotland, Ireland, Great Britain and the United Kingdom, and is maintained wholly independently of the Baronetage. A peerage, by contrast, stands in law whether enrolled or not: a peer remains a peer, and may bear the title in private life — upon a passport, for instance — with no place on the Roll, which governs only official recognition, such as precedence at public ceremonies. A number of peers are indeed absent from it, yet bear their titles in the ordinary way. (A Scottish baron, as noted elsewhere on this site, is not a peer, and holds no place upon it.)",
   },
   {
     name: "The Court of the Lord Lyon",
