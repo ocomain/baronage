@@ -340,11 +340,12 @@ export default function TheRollPage() {
                   >
                     this site
                   </Link>
-                  .
+                  . Among them one of Scotland’s foremost genealogists connected to Lyon court, a solicitor, and a chief
+                  of the name.
                 </li>
                 <li className="leading-relaxed text-ink-soft">
                   <strong className="font-semibold text-navy">“Hereditary Title.”</strong> The badge is defined openly
-                  on the register itself: “All Scottish baronial dignities are heritable. The Roll displays a
+                  on the Roll itself: “All Scottish baronial dignities are heritable. The Roll displays a
                   ‘Hereditary Title’ badge where hereditary succession is pledged, or where the dignity is treated as
                   dynastic.” It describes the Roll’s treatment of succession; it asserts no category of property law.
                 </li>
