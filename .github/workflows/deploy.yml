@@ -10,9 +10,11 @@ permissions:
   pages: write
   id-token: write
 
+# Allow one in-flight Pages deployment to finish rather than cancelling it
+# (cancel-in-progress: true was aborting production deploys mid-run and failing them).
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
