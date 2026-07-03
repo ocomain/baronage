@@ -31,7 +31,7 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
     name: "The Official Roll of the Baronetage",
     href: "https://www.baronetage.org",
     linkLabel: "baronetage.org",
-    body: "Originally created as the baronetage was in a state of disarray, it later was given royal warrant by Edward VII in 1910 and maintained today by the Lord Chancellor, with an online version published by the Standing Council of the Baronetage. It records a separate order of hereditary dignity — a baronetcy is not a barony — and recognition upon it follows enrolment strictly: since 1910 no person is received, styled, or accorded precedence as a baronet unless entered upon the Roll, so that, in practice, one is a baronet only if on it.",
+    body: "Originally created a little before 1910, as the baronetage was in a state of disarray, it was given its royal warrant by Edward VII in that year and is maintained today by the Lord Chancellor, with an online version published by the Standing Council of the Baronetage. It records a separate order of hereditary dignity — a baronetcy is not a barony — and recognition upon it follows enrolment strictly: since 1910 no person is received, styled, or accorded precedence as a baronet unless entered upon the Roll, so that, in practice, one is a baronet only if on it.",
   },
   {
     name: "The Roll of the Peerage",
