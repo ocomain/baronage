@@ -264,7 +264,7 @@ export default function ProperAddressPage() {
                   When addressing a Scottish Baron in writing, for some barons they hold a territorial designation and
                   the correct format for the envelope or any formal correspondence would be the full territorial title:
                 </P>
-                <FormLine>(The Much Hon.) [First Name] [Surname] of [TD], Baron of [Barony]</FormLine>
+                <FormLine>(The Much Hon.) [First Name] [Surname] [of TD], Baron of [Barony]</FormLine>
                 <P>
                   Some barons with a territorial designation choose not to use their baron title. However, most barons
                   do not hold a territorial designation and <em>just the title</em> is normally the <em>preferred</em>{" "}
