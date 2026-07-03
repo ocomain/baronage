@@ -40,6 +40,18 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
     body: "Established by members of the Scottish legal profession upon the abolition of feudal tenure in 2004, under a Custodian whose certification the Lord Lyon accepts as evidence of title. We recognise the Register as an authoritative source for inclusion on the Roll, and we recommend that every holder of a Scottish barony record their legal title there. The Roll is complementary to the Register, not in competition with it: the Register records transfers of ownership since 2004, while the Roll also documents the wider historic baronage — dignities held by dynastic succession, by chiefs, baronets and peers — which have never changed families in the modern era and therefore appear in no register of transfers. For these, the records of the Lyon Office stand as primary evidence.",
   },
   {
+    name: "The Roll of the Peerage",
+    href: "https://www.college-of-arms.gov.uk/resources/roll-of-the-peerage",
+    linkLabel: "college-of-arms.gov.uk",
+    body: "The official public record of the peerage, established by royal warrant of Queen Elizabeth II on 1 June 2004, maintained by the Crown Office within the Ministry of Justice and published by the College of Arms. It registers peers of England, Scotland, Ireland, Great Britain and the United Kingdom — a different order of dignity from the baronage: as noted elsewhere on this site, a Scottish baron is not a peer, and holds no place upon it.",
+  },
+  {
+    name: "The Official Roll of the Baronetage",
+    href: "https://www.baronetage.org",
+    linkLabel: "baronetage.org",
+    body: "The official record of the baronetage, established by royal warrant of Edward VII on 8 February 1910 and maintained today by the Lord Chancellor, with an abridged version published online by the Standing Council of the Baronetage. Like the Roll of the Peerage, it records a separate order of hereditary dignity: a baronetcy is not a barony, and the two Rolls are maintained wholly independently of one another.",
+  },
+  {
     name: "The Convention of the Baronage of Scotland",
     href: "https://www.scotsbarons.org",
     linkLabel: "scotsbarons.org",
