@@ -36,7 +36,33 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry1.outputs.page_url || steps.deployment_retry2.outputs.page_url }}
     steps:
+      # GitHub's Pages backend occasionally returns a transient "Deployment failed,
+      # try again later" moments after accepting the deployment (unrelated to the
+      # build or this repo). Retry a couple of times in-job before failing, so a
+      # blip doesn't need a manual re-push and doesn't send a false failure email.
       - id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait before retry 1
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 20
+
+      - id: deployment_retry1
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait before retry 2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure'
+        run: sleep 30
+
+      - id: deployment_retry2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if every attempt failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry1.outcome == 'failure' && steps.deployment_retry2.outcome == 'failure'
+        run: exit 1
