@@ -40,7 +40,7 @@ const members: CouncilMember[] = [
     name: "Antoin, Younger of Kinfauns",
     formal: "The Younger of Kinfauns",
     alt: "Antoin Commane, Younger of Kinfauns",
-    also: "Tanist Clan Commane",
+    also: "Tanist Clan Ó Comáin",
     img: "/council/kinfauns.jpg",
     link: { href: "https://www.ocomain.org", label: "Clan Ó Comáin ↗" },
     pos: "center 18%",
