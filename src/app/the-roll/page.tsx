@@ -315,7 +315,9 @@ export default function TheRollPage() {
           </Reveal>
 
           <div className="mt-12 space-y-10">
-            {organisations.map((o, i) => (
+            {organisations
+              .filter((o) => o.name !== "The Registry of Scots Nobility" && o.name !== "The Forum for the Scottish Baronage")
+              .map((o, i) => (
               <Reveal key={o.name} delay={i * 0.06}>
                 <article className="border-t border-parchment-300/70 pt-8">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
@@ -338,39 +340,41 @@ export default function TheRollPage() {
             ))}
           </div>
 
-          <Reveal>
-            <aside className="mt-14 border-l-2 border-gold/60 bg-white px-6 py-7 sm:px-8">
-              <Eyebrow>For the Avoidance of Doubt</Eyebrow>
-              <ul className="mt-6 space-y-6">
-                <li className="leading-relaxed text-ink-soft">
-                  <strong className="font-semibold text-navy">Who maintains the Roll.</strong> The Roll is maintained
-                  under the oversight of the Association’s Governing Council, whose members are published — by name,
-                  with their records — on{" "}
-                  <Link
-                    href="/governing-council"
-                    className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
-                  >
-                    this site
-                  </Link>
-                  . Among them one of Scotland’s foremost genealogists connected to Lyon court, a solicitor, and a chief
-                  of the name.
-                </li>
-                <li className="leading-relaxed text-ink-soft">
-                  <strong className="font-semibold text-navy">“Hereditary Title.”</strong> The badge is defined openly
-                  on the Roll itself: “All Scottish baronial dignities are heritable. The Roll displays a
-                  ‘Hereditary Title’ badge where hereditary succession is pledged, or where the dignity is treated as
-                  dynastic.” It describes the Roll’s treatment of succession; it asserts no category of property law.
-                </li>
-                <li className="leading-relaxed text-ink-soft">
-                  <strong className="font-semibold text-navy">“Verified.”</strong> Verification on the Roll means
-                  documentary authentication against the primary record — letters patent, the official gazettes of the
-                  Lyon Office, and the certification of the Scottish Barony Register. Since 2004 no register of
-                  Scottish baronies, public or private, has carried statutory force; what a serious record offers is
-                  evidence. The Roll’s entries cite theirs.
-                </li>
-              </ul>
-            </aside>
-          </Reveal>
+          {false && (
+            <Reveal>
+              <aside className="mt-14 border-l-2 border-gold/60 bg-white px-6 py-7 sm:px-8">
+                <Eyebrow>For the Avoidance of Doubt</Eyebrow>
+                <ul className="mt-6 space-y-6">
+                  <li className="leading-relaxed text-ink-soft">
+                    <strong className="font-semibold text-navy">Who maintains the Roll.</strong> The Roll is maintained
+                    under the oversight of the Association’s Governing Council, whose members are published — by name,
+                    with their records — on{" "}
+                    <Link
+                      href="/governing-council"
+                      className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+                    >
+                      this site
+                    </Link>
+                    . Among them one of Scotland’s foremost genealogists connected to Lyon court, a solicitor, and a chief
+                    of the name.
+                  </li>
+                  <li className="leading-relaxed text-ink-soft">
+                    <strong className="font-semibold text-navy">“Hereditary Title.”</strong> The badge is defined openly
+                    on the Roll itself: “All Scottish baronial dignities are heritable. The Roll displays a
+                    ‘Hereditary Title’ badge where hereditary succession is pledged, or where the dignity is treated as
+                    dynastic.” It describes the Roll’s treatment of succession; it asserts no category of property law.
+                  </li>
+                  <li className="leading-relaxed text-ink-soft">
+                    <strong className="font-semibold text-navy">“Verified.”</strong> Verification on the Roll means
+                    documentary authentication against the primary record — letters patent, the official gazettes of the
+                    Lyon Office, and the certification of the Scottish Barony Register. Since 2004 no register of
+                    Scottish baronies, public or private, has carried statutory force; what a serious record offers is
+                    evidence. The Roll’s entries cite theirs.
+                  </li>
+                </ul>
+              </aside>
+            </Reveal>
+          )}
         </Container>
       </Section>
 
