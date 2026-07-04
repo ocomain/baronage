@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { HiddenPreview } from "@/components/HiddenPreview";
 import { ButtonLink, Container, ExternalArrow, Eyebrow, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
@@ -315,32 +316,39 @@ export default function TheRollPage() {
           </Reveal>
 
           <div className="mt-12 space-y-10">
-            {organisations
-              .filter((o) => o.name !== "The Registry of Scots Nobility" && o.name !== "The Forum for the Scottish Baronage")
-              .map((o, i) => (
-              <Reveal key={o.name} delay={i * 0.06}>
-                <article className="border-t border-parchment-300/70 pt-8">
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-                    <h3 className="text-2xl text-navy">{o.name}</h3>
-                    {o.href && (
-                      <a
-                        href={o.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-muted transition-colors hover:text-gold-deep"
-                      >
-                        {o.linkLabel}
-                        <ExternalArrow className="h-3 w-3" />
-                      </a>
-                    )}
-                  </div>
-                  <p className="mt-4 leading-relaxed text-ink-soft">{o.body}</p>
-                </article>
-              </Reveal>
-            ))}
+            {organisations.map((o, i) => {
+              const card = (
+                <Reveal delay={i * 0.06}>
+                  <article className="border-t border-parchment-300/70 pt-8">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                      <h3 className="text-2xl text-navy">{o.name}</h3>
+                      {o.href && (
+                        <a
+                          href={o.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-muted transition-colors hover:text-gold-deep"
+                        >
+                          {o.linkLabel}
+                          <ExternalArrow className="h-3 w-3" />
+                        </a>
+                      )}
+                    </div>
+                    <p className="mt-4 leading-relaxed text-ink-soft">{o.body}</p>
+                  </article>
+                </Reveal>
+              );
+              const isHiddenByDefault =
+                o.name === "The Registry of Scots Nobility" || o.name === "The Forum for the Scottish Baronage";
+              return isHiddenByDefault ? (
+                <HiddenPreview key={o.name}>{card}</HiddenPreview>
+              ) : (
+                <div key={o.name}>{card}</div>
+              );
+            })}
           </div>
 
-          {false && (
+          <HiddenPreview>
             <Reveal>
               <aside className="mt-14 border-l-2 border-gold/60 bg-white px-6 py-7 sm:px-8">
                 <Eyebrow>For the Avoidance of Doubt</Eyebrow>
@@ -374,7 +382,7 @@ export default function TheRollPage() {
                 </ul>
               </aside>
             </Reveal>
-          )}
+          </HiddenPreview>
         </Container>
       </Section>
 
