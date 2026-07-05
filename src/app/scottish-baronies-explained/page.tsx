@@ -680,12 +680,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
 const FAQ_ORDER = [
   "is-a-scottish-baron-a-nobleman",
   "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
+  "can-a-scottish-barony-be-bought-and-sold",
   "what-is-the-pledge-and-what-does-it-change",
   "how-does-succession-to-a-barony-work",
   "what-did-the-2004-change-actually-do",
   "are-scottish-baronies-recognised-in-law",
   "are-scottish-barony-titles-legitimate-or-a-scam",
-  "can-a-scottish-barony-be-bought-and-sold",
   "can-you-buy-a-lord-or-laird-title-in-scotland",
   "what-is-a-territorial-designation-td-and-is-it-the-same-as-a-barony",
   "what-is-the-difference-between-a-barony-and-a-lordship-of-the-manor",
