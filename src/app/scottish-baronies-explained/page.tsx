@@ -38,7 +38,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage — correctly styled a minor baron, the term used by the Lord Lyon Court itself for this rank of the ancient nobility. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage — correctly described a minor baron, the term used by the Lord Lyon Court itself for this rank of the ancient nobility. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
     body: (
       <>
         <p>
@@ -47,7 +47,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
           Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
-          below the peerage — correctly styled a{" "}
+          below the peerage — correctly described a{" "}
           <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Lord Lyon Court
           itself for this rank of the ancient nobility. The prefix{" "}
           <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally
