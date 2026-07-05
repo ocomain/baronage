@@ -782,7 +782,7 @@ const glossary: { term: string; def: string }[] = [
     def: "A barony that was feudal before 28 November 2004. “Quondam” means “formerly”; the phrase (Lord Lyon Sellar, 2009) marks that a barony's feudal character is now historical, the living dignity personal and non-territorial.",
   },
   {
-    term: "Incorporeal heritable property",
+    term: "Incorporeal hereditament",
     def: "An intangible form of heritable property that may be owned and inherited without attaching to land. Since 2004 a Scottish barony exists as such a dignity, independent of any estate.",
   },
   {
