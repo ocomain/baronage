@@ -795,7 +795,7 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. Lords of Parliament arose in the mid-15th century from among the greater barons — territorial dignities at that stage, the term “peerage” itself settling into use only closer to the Union of 1707. The lesser barons, the minor barons, also sat among the nobility in Parliament in their own right: from 1428 they were relieved of the obligation to attend in person, and an Act of 1587 had them represented by elected commissioners for the shires, though many retained the legal right to attend — which continued until the Union of 1707.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. Lords of Parliament arose in the mid-15th century from among the greater barons — territorial dignities at that stage, the term “peerage” itself settling into use only closer to the Union of 1707. The lesser barons (minor barons) also sat among the nobility in Parliament in their own right: from 1428 they were relieved of the obligation to attend in person, due to the expense and burdens of travel, and an Act of 1587 allowed them to be represented by elected commissioners for the shires, though minor barons retained the legal right to attend in person — which continued until the Union of 1707.",
   },
   {
     term: "Baronetcy",
