@@ -381,7 +381,7 @@ export default function BaroniesExplainedPage() {
             Scottish Baronies, Explained
           </h1>
           <p
-            className="rise mx-auto mt-4 max-w-2xl font-serif text-lg italic text-parchment-200/85"
+            className="rise mx-auto mt-5 max-w-3xl text-xl leading-relaxed text-parchment-100 sm:text-2xl"
             style={{ animationDelay: "0.16s" }}
           >
             Distinct from peerages, altered by legislation in 2004, and often described with terminology that is now
