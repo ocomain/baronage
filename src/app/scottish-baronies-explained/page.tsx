@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 
@@ -60,7 +59,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
-    q: "Is “feudal baron” the correct term today?",
+    q: "Is “feudal baron” or “Scottish feudal barony” the correct term today?",
     a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”.",
     body: (
       <>
@@ -144,7 +143,18 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           This is widely misunderstood in both directions. In law,{" "}
           <strong className="font-semibold text-navy">yes</strong>: since the 2004 reform baronies are freely
           transferable dignities and may pass by inheritance, bequest, gift, or assignation, with the transferee
-          becoming the new holder. In practice, the market is very small. The{" "}
+          becoming the new holder.
+        </p>
+        <p className="mt-4 border-l-2 border-gold/50 pl-4 text-[0.95em] italic">
+          A note from this site: the Baronage of Scotland Association operates{" "}
+          <Link href="/pledge" className={intLink}>
+            The Pledge
+          </Link>
+          , an initiative inviting holders to commit their titles to hereditary descent, with the aim of reducing
+          commercial transfer of baronies.
+        </p>
+        <p className="mt-4">
+          In practice, the market is very small. The{" "}
           <a href="https://scottishbaronyregister.org" target="_blank" rel="noopener noreferrer" className={extLink}>
             Scottish Barony Register
           </a>
@@ -169,14 +179,6 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Barony of MacDonald of the Isle of Skye was reported to have been offered for sale at more than £1 million.
           Independent accounts also note that a number of post-2004 transfers have involved purchasers from outside
           Scotland and the United Kingdom.
-        </p>
-        <p className="mt-4 border-l-2 border-gold/50 pl-4 text-[0.95em] italic">
-          A note from this site: the Baronage of Scotland Association operates{" "}
-          <Link href="/pledge" className={intLink}>
-            The Pledge
-          </Link>
-          , an initiative inviting holders to commit their titles to hereditary descent, with the aim of reducing
-          commercial transfer of baronies.
         </p>
       </>
     ),
@@ -245,7 +247,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           conveyance and registration in the Register of Sasines that established the new baron.
         </p>
         <p className="mt-4">
-          Since 2004 the system has changed once more. The barony is now an incorporeal dignity — a non-territorial
+          Since 2004 the system has changed once more. The barony is now an incorporeal hereditament — a non-territorial
           personal dignity — which nonetheless retains the old remainder to heirs and assignees. It can be transferred
           or bequeathed by will, and where a holder dies without settling it, it descends under the pre-1964 rules
           preserved for titles and dignities.
@@ -390,12 +392,24 @@ export default function BaroniesExplainedPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <PageHero
-        eyebrow="Frequently Asked Questions"
-        title="Scottish Baronies, Explained"
-        intro="Scottish baronies are among the more misunderstood titles in the British Isles — distinct from peerages, altered fundamentally by legislation in 2004, and often described with terminology that is now out of date. This FAQ sets out what the law and the institutional sources actually say."
-        image="/images/charter-seal.webp"
-      />
+      <section className="bg-navy-deep text-parchment-50 texture-saltire">
+        <Container className="py-10 text-center sm:py-12">
+          <p className="rise eyebrow eyebrow--light">Frequently Asked Questions</p>
+          <h1
+            className="rise mt-4 font-display leading-[1.02] text-parchment-50"
+            style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
+          >
+            Scottish Baronies, Explained
+          </h1>
+          <p
+            className="rise mx-auto mt-4 max-w-2xl font-serif text-lg italic text-parchment-200/85"
+            style={{ animationDelay: "0.16s" }}
+          >
+            Distinct from peerages, altered by legislation in 2004, and often described with terminology that is now
+            out of date. What the law and the institutional sources actually say.
+          </p>
+        </Container>
+      </section>
 
       <Section tone="parchment">
         <Container size="prose">
