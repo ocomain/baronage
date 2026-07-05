@@ -6,6 +6,7 @@ import { baronies } from "@/lib/supporters";
 import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/armorial/" },
   title: "The Armorial",
   description:
     "Supporters of the work of the Association — each title verified and recorded upon the Roll.",

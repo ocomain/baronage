@@ -4,6 +4,7 @@ import { MemberLogin } from "@/components/MemberLogin";
 import { Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/members/" },
   title: "Member Login",
   description:
     "Sign in to the members’ area of the Baronage of Scotland Association, or request a call back to join — membership carries ownership and voting rights.",

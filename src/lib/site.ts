@@ -25,6 +25,7 @@ export type NavLink = { href: string; label: string; external?: boolean };
 export const navLinks: NavLink[] = [
   { href: "/the-roll", label: "The Roll" },
   { href: "/history", label: "History" },
+  { href: "/scottish-baronies-explained", label: "Baronies Explained" },
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
   { href: "/pledge", label: "The Pledge" },

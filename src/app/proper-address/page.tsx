@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { Container, Section } from "@/components/primitives";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/proper-address/" },
   title: "Proper Address for Scottish Barons",
   description:
     "The correct forms of address, salutation and precedence for Scottish Barons and Baronesses — written, verbal and digital — preserving the dignity of the title.",

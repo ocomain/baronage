@@ -30,8 +30,11 @@ export function SiteHeader() {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
-  // Top nav omits Charitable Trust (it remains in the footer); Member's Chamber sits at the end.
-  const topNavLinks = navLinks.filter((link) => link.href !== "/charitable-trust");
+  // Top nav omits Charitable Trust and the Baronies Explained FAQ (both remain in the
+  // footer, and the FAQ is in the sitemap); Member's Chamber sits at the end.
+  const topNavLinks = navLinks.filter(
+    (link) => link.href !== "/charitable-trust" && link.href !== "/scottish-baronies-explained"
+  );
 
   return (
     <header className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>

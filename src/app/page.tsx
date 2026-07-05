@@ -9,6 +9,8 @@ import { Footnote } from "@/components/Footnote";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
+export const metadata = { alternates: { canonical: "/" } };
+
 const CHARTER_IMG = "/images/charter-seal.webp";
 const GLEN_IMG = "/images/glen-mist.webp";
 

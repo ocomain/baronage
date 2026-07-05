@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HistoryStory } from "@/components/HistoryStory";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/history/" },
   title: "History of the Scottish Baronage",
   description:
     "One of the oldest noble classes in Scotland — feudal superiors of the Crown, defenders of sovereignty, and today a non-territorial dignity preserved in law.",
@@ -64,6 +66,19 @@ export default function HistoryPage() {
               <strong className="font-semibold text-navy">minor baron</strong>: a titled noble below the peerage, yet
               above the rank of gentleman and equivalent in rank to continental barons (according to former Lord Lyon
               Sir Thomas Innes of Learney).
+            </p>
+          </Reveal>
+          <Reveal>
+            <p className="mt-7 text-lg leading-relaxed text-ink-soft">
+              For common questions — what the 2004 reform changed, how succession works, and why “feudal baron” is no
+              longer the correct term for an extant barony — see{" "}
+              <Link
+                href="/scottish-baronies-explained"
+                className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+              >
+                Scottish Baronies, Explained
+              </Link>
+              .
             </p>
           </Reveal>
         </Container>
