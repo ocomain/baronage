@@ -45,7 +45,7 @@ export default function PledgePage() {
               The Pledge is a non-legal declaration of intent, by which a baron asks that their barony be preserved
               within the family line and treated as a hereditary dignity. It operates as a family compact — in honour
               rather than law. It cannot legally alter a barony or create an entail; its practical effect is future
-              recognition on the Roll should a pledged barony later be sold outside the family — see{" "}
+              recognition on the Roll should a pledged barony later be conveyed outside the family — see{" "}
               <Link
                 href="/scottish-baronies-explained#what-is-the-pledge-and-what-does-it-change"
                 className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
