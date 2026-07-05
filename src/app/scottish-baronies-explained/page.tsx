@@ -664,6 +664,27 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
 ];
 
+/** Display order for the questions (drives the table of contents, the visible
+ * page, and the FAQ JSON-LD alike). Casual-reader questions lead; the more
+ * detailed, legal and edge-case questions follow. Reorder here — the entries
+ * are matched to `faqs` by anchor slug, so this is the single place to change. */
+const FAQ_ORDER = [
+  "is-a-scottish-baron-a-nobleman",
+  "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
+  "what-is-the-pledge-and-what-does-it-change",
+  "how-does-succession-to-a-barony-work",
+  "what-did-the-2004-change-actually-do",
+  "are-scottish-baronies-recognised-in-law",
+  "are-scottish-barony-titles-legitimate-or-a-scam",
+  "can-a-scottish-barony-be-bought-and-sold",
+  "can-you-buy-a-lord-or-laird-title-in-scotland",
+  "what-is-a-territorial-designation-td-and-is-it-the-same-as-a-barony",
+  "what-is-the-difference-between-a-barony-and-a-lordship-of-the-manor",
+];
+const orderedFaqs = FAQ_ORDER.map((slug) => faqs.find((f) => slugify(f.q) === slug)).filter(
+  (f): f is (typeof faqs)[number] => Boolean(f),
+);
+
 const sources: ReactNode[] = [
   <>
     <a
@@ -807,7 +828,7 @@ const jsonLd = {
           ],
         },
       ],
-      mainEntity: faqs.map((f) => ({
+      mainEntity: orderedFaqs.map((f) => ({
         "@type": "Question",
         name: f.q,
         acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -875,7 +896,7 @@ export default function BaroniesExplainedPage() {
                 On this page
               </p>
               <ol className="mt-4 space-y-2.5">
-                {faqs.map((f, i) => (
+                {orderedFaqs.map((f, i) => (
                   <li key={f.q} className="flex gap-3 leading-snug">
                     <span className="font-sans text-sm tabular-nums text-gold-deep/70">{i + 1}.</span>
                     <a href={`#${slugify(f.q)}`} className={intLink}>
@@ -887,7 +908,7 @@ export default function BaroniesExplainedPage() {
             </nav>
           </Reveal>
           <div className="space-y-14">
-            {faqs.map((f, i) => {
+            {orderedFaqs.map((f, i) => {
               const slug = slugify(f.q);
               return (
               <Reveal key={f.q} delay={Math.min(i * 0.04, 0.16)}>
