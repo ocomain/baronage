@@ -791,11 +791,11 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Peerage",
-    def: "The highest grade of the British nobility. In Scotland its ranks, in ascending order, are Lord of Parliament, Viscount, Earl, Marquess and Duke. A peerage stands in law whether or not its holder is enrolled, and historically carried a seat in Parliament. It ranks above, and is distinct from, a barony in the Baronage of Scotland.",
+    def: "The highest grade of the British nobility. In Scotland its ranks, in ascending order, are Lord of Parliament, Viscount, Earl, Marquess and Duke in the peerage of Scotland. A peerage stands in law whether or not its holder is enrolled, and historically carried a seat in Parliament. It ranks above, and is distinct from, a barony in the Baronage of Scotland.",
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The rank emerged in the mid-15th century, when the greater barons came to be created Lords of Parliament — a distinct, personal peerage drawn from the wider baronage. The lesser barons, the minor barons, also sat among the nobility in Parliament in their own right; from 1587 they were allowed to send elected commissioners for the shires in their place, but the right to sit continued until the Union of 1707.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. Lords of Parliament arose in the mid-15th century from among the greater barons — territorial dignities at that stage, the term “peerage” itself settling into use only closer to the Union of 1707. The lesser barons, the minor barons, also sat among the nobility in Parliament in their own right: from 1428 they were relieved of the obligation to attend in person, and an Act of 1587 had them represented by elected commissioners for the shires, though many retained the legal right to attend — which continued until the Union of 1707.",
   },
   {
     term: "Baronetcy",
