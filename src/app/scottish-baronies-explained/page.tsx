@@ -153,12 +153,14 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           becoming the new holder.
         </p>
         <p className="mt-4 border-l-2 border-gold/50 pl-4 text-[0.95em] italic">
-          A note from this site: the Baronage of Scotland Association operates{" "}
+          A note from this site: a growing number of barons wish to reduce the commercial aspect of baronies. By
+          signing{" "}
           <Link href="/pledge" className={intLink}>
             The Pledge
-          </Link>
-          , an initiative inviting holders to commit their titles to hereditary descent, with the aim of reducing
-          commercial transfer of baronies.
+          </Link>{" "}
+          they commit their title to hereditary descent — a commitment that shapes the future{" "}
+          <strong className="font-semibold not-italic text-navy">recognition</strong> of the barony upon the Roll of
+          Scottish Barons, as explained in the next question.
         </p>
         <p className="mt-4">
           In practice, the market is very small. The{" "}
@@ -203,6 +205,67 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         (intestate descent). Transfer volume: Annual Reports of the Custodian, Scottish Barony Register, 2021–2025.
         Valuation: Scottish Law Commission estimate from 1997 evidence; 2002 press reports on the Barony of MacDonald.
         The prevalence of family retention over sale is a market observation, not a rule of law.
+      </>
+    ),
+  },
+  {
+    q: "What is The Pledge, and what does it change?",
+    a: "The Pledge is a declaration of honour by which a baron commits their barony to hereditary descent within the family line. It cannot legally alter a barony — it operates in honour rather than law — but its practical effect is on future recognition upon the Roll of Scottish Barons should a pledged barony later be conveyed outside the family. In this the Roll follows the two official Rolls. The Roll of the Peerage separates recognition from legal title: Andrew Mountbatten Windsor remains Duke of York in law, since only an Act of Parliament can extinguish a peerage, yet the King's removal of his name from that Roll in 2025 withdrew official recognition of the title — not his legal entitlement to it. The Roll of the Baronetage goes further: no one is received or styled as a baronet unless entered upon it. The Roll of Scottish Barons is modelled between the two — recognition is paramount, as with the baronetage, while legal title is never affected, as with the peerage.",
+    body: (
+      <>
+        <p>
+          <Link href="/pledge" className={intLink}>
+            The Pledge
+          </Link>{" "}
+          is a declaration of honour by which a baron commits their barony to{" "}
+          <strong className="font-semibold text-navy">hereditary descent</strong> within the family line. A growing
+          number of barons have taken it, wishing to reduce the commercial transfer of baronies. It cannot legally
+          alter a barony — it operates in honour rather than law — but its practical effect is on future{" "}
+          <strong className="font-semibold text-navy">recognition</strong> upon the Roll of Scottish Barons, should a
+          pledged barony later be conveyed outside the family.
+        </p>
+        <p className="mt-4">
+          In separating recognition from legal title, the Roll follows the model of the two official Rolls. The
+          instructive recent example is the former Prince Andrew:{" "}
+          <strong className="font-semibold text-navy">
+            Andrew Mountbatten Windsor remains Duke of York in law
+          </strong>{" "}
+          — only an Act of Parliament can extinguish a peerage — yet the King’s removal of his name from the Roll of
+          the Peerage in 2025 withdrew official <em>recognition</em> of the title, not his legal entitlement to it.
+          The Roll of the Baronetage goes a degree further: no one is received or styled as a baronet unless entered
+          upon it.
+        </p>
+        <p className="mt-4">
+          The Roll of Scottish Barons is modelled between the two: recognition upon the Roll is paramount, as with
+          the baronetage, while legal title is never affected, as with the peerage. A pledged barony that is later
+          sold out of the family line does not cease to exist in law — but its recognition on the Roll is a matter of
+          the Roll’s published method, just as the peerage and baronetage Rolls govern recognition in their own
+          spheres. See{" "}
+          <Link href="/the-roll" className={intLink}>
+            The Roll
+          </Link>{" "}
+          for how the two official Rolls work.
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        <Link href="/pledge" className={intLink}>
+          The Pledge
+        </Link>{" "}
+        (a convention of honour, not statute — it cannot alter a barony in law). Roll of the Peerage: created by royal
+        warrant, 1 June 2004; maintained by the Crown Office and published by the{" "}
+        <a
+          href="https://www.college-of-arms.gov.uk/resources/roll-of-the-peerage"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          College of Arms
+        </a>
+        ; the removal of Andrew Mountbatten Windsor from it in 2025 was widely reported, the dukedom itself remaining
+        extant in law. Roll of the Baronetage: royal warrant of Edward VII, 1910 — precedence and official styling as
+        a baronet follow enrolment.
       </>
     ),
   },
