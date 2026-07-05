@@ -795,11 +795,11 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The name is deliberate: a Lord of Parliament held a seat in Parliament as a peer, which a non-peerage lordship or barony does not. The rank itself arose only in the mid-15th century — the term distinguishing the lords summoned to Parliament from the older lords of the Baronage, who were not.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The rank emerged in the mid-15th century, when the greater barons came to be created Lords of Parliament — a distinct, personal peerage drawn from the wider baronage. The lesser barons, the minor barons, also sat among the nobility in Parliament in their own right; from 1587 they were allowed to send elected commissioners for the shires in their place, but the right to sit continued until the Union of 1707.",
   },
   {
     term: "Baronetcy",
-    def: "A hereditary honour ranking below the peerage and above a knighthood. A baronet is styled “Sir” (or “Dame”), and the dignity passes to heirs — unlike a knighthood, which is personal. The Scottish baronetcies are the Baronets of Nova Scotia, created from 1625.",
+    def: "A hereditary honour ranking below the peerage and above a knighthood. A baronet is styled “Sir” (or “Dame”), and the dignity passes to heirs — unlike a knighthood, which is personal.",
   },
   {
     term: "Knighthood",
