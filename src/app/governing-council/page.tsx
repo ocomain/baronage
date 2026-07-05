@@ -6,6 +6,7 @@ import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/governing-council/" },
   title: "The Governing Council",
   description:
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",

@@ -59,7 +59,8 @@ export const metadata: Metadata = {
       "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
     images: ["/og.jpg"],
   },
-  alternates: { canonical: "/" },
+  // NOTE: no global canonical here — a layout-level canonical is inherited by every
+  // page and would mark them all as duplicates of the homepage. Each page sets its own.
   manifest: "/site.webmanifest",
   icons: {
     icon: [

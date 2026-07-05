@@ -5,6 +5,7 @@ import { ButtonLink, Container, Eyebrow, GoldRule, Section, SectionHeading } fro
 import { site, CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/charitable-trust/" },
   title: "The Baron’s Charitable Trust",
   description:
     "Channelling the influence and resources of the baronage into meaningful action — empowering young people, supporting charitable causes and preserving Scotland’s heritage.",

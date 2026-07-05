@@ -5,6 +5,7 @@ import { Container, Eyebrow, GoldRule, Section, ExternalArrow } from "@/componen
 import { site, CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact/" },
   title: "Request a Call Back",
   description:
     "Book a thirty-minute call with the Secretary of the Baronage of Scotland Association — for membership, the Roll, the Pledge, or the work of the baronage.",

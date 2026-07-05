@@ -6,6 +6,7 @@ import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/comp
 import { Footnote } from "@/components/Footnote";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about/" },
   title: "About the Association",
   description:
     "Baronage of Scotland Association is a non-profit honourable body owned by its members — preserving the rights, heritage and dignity of Scottish Barons.",

@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/baronial-code/" },
   title: "The Baronial Code of Honour",
   description:
     "The principles and standards that define the collective commitment of the Scottish baronage to honour, duty and nobility.",

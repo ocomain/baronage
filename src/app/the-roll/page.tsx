@@ -7,6 +7,7 @@ import { ButtonLink, Container, ExternalArrow, Eyebrow, GoldRule, PdfLink, Secti
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/the-roll/" },
   title: "The Roll of Scottish Barons",
   description:
     "An open, verified and impartial public register of the Baronage of Scotland — free, for life, to verify an entry. Maintained by researchers, genealogists and scholars at roll.baronage.com. Related organisations: the Court of the Lord Lyon, the Scottish Barony Register and the Convention of the Baronage of Scotland.",

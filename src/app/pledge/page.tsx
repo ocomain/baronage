@@ -6,6 +6,7 @@ import { ButtonLink, Container, GoldRule, PdfLink, Section, SectionHeading } fro
 import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pledge/" },
   title: "The Pledge",
   description:
     "The Pledge converts a barony into a pledged hereditary title — a family compact of service, bound by the Baronial Code of Honour.",
