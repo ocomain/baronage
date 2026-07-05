@@ -38,13 +38,13 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title of Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
     body: (
       <>
         <p>
           Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland’s{" "}
           <strong className="font-semibold text-navy">titled nobility</strong>, though not a peer. The distinction
-          matters: the Scottish equivalent of an English peerage baron is the higher title of{" "}
+          matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
           Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
           below the peerage. The prefix <strong className="font-semibold text-navy">“The Much Honoured”</strong> is
@@ -79,7 +79,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <strong className="font-semibold text-navy">“quondam feudal baronies”</strong> —{" "}
           <em>quondam</em> meaning “formerly”. The historically precise usage is thus “quondam feudal” for the
           pre-2004 character of a barony, and simply “barony” or “personal dignity” for its present one. For the
-          titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description.
+          titleholder,{" "}
+          <strong className="font-semibold text-navy">
+            baron or lord or earl in the Baronage of Scotland is the correct modern description
+          </strong>
+          .
         </p>
       </>
     ),
