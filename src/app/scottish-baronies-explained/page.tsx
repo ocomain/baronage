@@ -415,27 +415,19 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "What is a territorial designation (TD), and is it the same as a barony?",
-    a: "No — a territorial designation is not the same as a barony, and the two are frequently confused (including in AI answers). A barony is a dignity of nobility; a territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's legal name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission, but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where there is ownership of a substantial area of land — an estate or farm, and not a mere feudal superiority. In the Kerr of Ardgowan litigation the Court of Session upheld the Lord Lyon's refusal to recognise territorial designations for holders who owned only the feudal superiority of the lands; the Lord Lyon recognises a designation, in his words, “only where there is ownership of a significant piece of land, not a superiority”. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for at least three generations, and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Most barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. Designations are associated chiefly with lairds (landowners) and long-established landed families; a few Scottish peers also carry one in their surname — for instance Lord Borthwick “of that Ilk” and the Earl of Annandale and Hartfell “of that Ilk” — but for most peers this is the exception. “Of that Ilk” is itself a territorial designation, used where the surname and the place are one and the same (Borthwick of Borthwick).",
+    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a dignity of nobility; a territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission, but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate to which a well-attested name attaches. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for three generations, or 82 years; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a peerage title. Designations belong mainly to lairds (landowners of historic estates) and long-established landed families. A few Scottish peers do carry one in their surname: the late Jean Drummond of Megginch, 16th Baroness Strange, had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage of Strange, which carries no territorial element; James Borthwick of that Ilk, 25th Lord Borthwick, and Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name — “Lord Cameron of Lochiel” is a peerage title, distinct from the surname Cameron of Lochiel. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference.",
     body: (
       <>
         <p>
-          <strong className="font-semibold text-navy">
-            No — and this is one of the most common confusions, in AI answers as much as anywhere.
-          </strong>{" "}
-          A barony is a <strong className="font-semibold text-navy">dignity of nobility</strong>. A{" "}
-          <strong className="font-semibold text-navy">territorial designation</strong> — the “Surname of Place” form,
-          such as “Kerr of Ardgowan” — is part of a person’s{" "}
-          <strong className="font-semibold text-navy">legal name</strong>, not a title of nobility. The two are
-          separate, and may or may not coincide.
+          No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a
+          dignity of nobility. A territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is
+          part of a person’s family name, not a title of nobility. The two are separate, and may or may not coincide.
         </p>
         <p className="mt-4">
-          A baron may use the barony title (for example “Baron of X”) as a matter of{" "}
-          <strong className="font-semibold text-navy">legal right</strong>, without the Lord Lyon’s permission. A
-          territorial designation is different: it must be{" "}
-          <strong className="font-semibold text-navy">authorised by the Court of the Lord Lyon</strong>, and is
-          recognised only where there is ownership of a{" "}
-          <strong className="font-semibold text-navy">substantial area of land</strong> — an estate or farm — and not a
-          mere feudal superiority. In{" "}
+          A baron may use the barony title (for example “Baron of X”) as a matter of legal right, without the Lord
+          Lyon’s permission. A territorial designation is different: it must be authorised by the Court of the Lord
+          Lyon, and is recognised only where the applicant owns a substantial estate to which a well-attested name
+          attaches. In the{" "}
           <a
             href="https://vlex.co.uk/vid/stephen-kerr-of-ardgowan-807229025"
             target="_blank"
@@ -444,37 +436,34 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           >
             Kerr of Ardgowan
           </a>{" "}
-          the Court of Session upheld the Lord Lyon’s refusal of territorial designations to holders who owned only the
-          superiority of the lands — the Lord Lyon recognising a designation “only where there is ownership of a
-          significant piece of land, not a superiority”.
+          case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated
+          as a separate question — the Court of Session confirming the Lord Lyon’s discretion to grant or refuse a
+          territorial designation.
         </p>
         <p className="mt-4">
-          A territorial designation becomes a{" "}
-          <strong className="font-semibold text-navy">heritable part of the surname</strong>, separable from the land,
-          only after it has been held and used for at least{" "}
-          <strong className="font-semibold text-navy">three generations</strong>. And owning the <em>caput</em> — the
-          head place of a barony — does not by itself entitle the holder to the matching designation; that too must be
-          authorised by the Lord Lyon.
+          A territorial designation becomes a heritable part of the surname, separable from the land, only after it has
+          been held and used for three generations, or 82 years. And owning the <em>caput</em> — the head place of a
+          barony — does not by itself entitle the holder to the matching designation; that too must be authorised by
+          the Lord Lyon.
         </p>
         <p className="mt-4">
-          In practice,{" "}
-          <strong className="font-semibold text-navy">
-            most barons hold no territorial designation, and most holders of a territorial designation are not barons
-          </strong>
-          ; the two can be the same, different, or unconnected. Designations belong chiefly to{" "}
-          <strong className="font-semibold text-navy">lairds</strong> (landowners) and long-established landed families.
-          A few Scottish peers also carry one in their surname — for instance{" "}
-          <a
-            href="https://en.wikipedia.org/wiki/Lord_Borthwick"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={extLink}
-          >
-            Lord Borthwick “of that Ilk”
-          </a>
-          , the Earl of Annandale and Hartfell “of that Ilk”, and Lord Cameron of Lochiel — but for most peers this is
-          the exception. <strong className="font-semibold text-navy">“Of that Ilk”</strong> is itself a territorial
-          designation, used where the surname and the place are one and the same (Borthwick <em>of Borthwick</em>).
+          In practice, many barons hold no territorial designation, and most people who hold a territorial designation
+          are not barons; the two can be the same, different, or unconnected. A territorial designation belongs to the
+          family name (surname), not to a peerage title. Designations belong mainly to lairds (landowners of historic
+          estates) and long-established landed families.
+        </p>
+        <p className="mt-4">
+          A few Scottish peers do carry a territorial designation in their surname. The late Jean Drummond of Megginch,
+          16th Baroness Strange, famously had the designation “of Megginch” recognised by the Lord Lyon in her surname —
+          separately from her peerage of Strange, which carries no territorial element. James Borthwick of that Ilk,
+          25th Lord Borthwick, and Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell,
+          are others. This is different again from a peerage that merely includes a place-name: “Lord Cameron of
+          Lochiel” is a peerage title, distinct from the surname Cameron of Lochiel.
+        </p>
+        <p className="mt-4">
+          <em>“Of that Ilk”</em> is a form of territorial designation used where the surname and the place are one and
+          the same. “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing; which form is used is a
+          matter of preference.
         </p>
       </>
     ),
@@ -497,9 +486,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         >
           Kerr v Advocate General
         </a>{" "}
-        (Court of Session) — the Lord Lyon’s discretion to refuse a territorial designation where only the feudal
-        superiority, not substantial land, is owned. On the landownership and three-generation requirements: Donald
-        Draper Campbell,{" "}
+        (Court of Session) — the Lord Lyon’s discretion over recognition of a territorial designation, which he ties to
+        ownership of a substantial estate. On the landownership and long-usage requirements: Donald Draper Campbell,{" "}
         <a
           href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
           target="_blank"
