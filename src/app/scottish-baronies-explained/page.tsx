@@ -38,7 +38,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage — correctly styled a minor baron, the term used by the Lord Lyon Court itself for this rank of the ancient nobility. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
     body: (
       <>
         <p>
@@ -47,8 +47,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
           Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
-          below the peerage. The prefix <strong className="font-semibold text-navy">“The Much Honoured”</strong> is
-          the honorific traditionally used to distinguish a Scottish baron from a peer.
+          below the peerage — correctly styled a{" "}
+          <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Lord Lyon Court
+          itself for this rank of the ancient nobility. The prefix{" "}
+          <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally
+          used to distinguish a Scottish baron from a peer.
         </p>
       </>
     ),
@@ -475,9 +478,18 @@ export default function BaroniesExplainedPage() {
       <Section tone="parchment">
         <Container size="prose">
           <div className="space-y-14">
-            {faqs.map((f, i) => (
+            {faqs.map((f, i) => {
+              const slug = f.q
+                .toLowerCase()
+                .replace(/[“”"?]/g, "")
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/^-|-$/g, "");
+              return (
               <Reveal key={f.q} delay={Math.min(i * 0.04, 0.16)}>
-                <article className={i > 0 ? "border-t border-parchment-300/70 pt-12" : undefined}>
+                <article
+                  id={slug}
+                  className={`scroll-mt-28 ${i > 0 ? "border-t border-parchment-300/70 pt-12" : ""}`}
+                >
                   <h2 className="font-display text-2xl text-navy sm:text-3xl">{f.q}</h2>
                   <div className="mt-5 leading-relaxed text-ink-soft">{f.body}</div>
                   <p className="mt-6 border-l-2 border-gold/50 pl-4 font-sans text-sm leading-relaxed text-muted">
@@ -486,7 +498,8 @@ export default function BaroniesExplainedPage() {
                   </p>
                 </article>
               </Reveal>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </Section>
