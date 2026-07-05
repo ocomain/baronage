@@ -73,7 +73,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage — correctly described as a minor baron, the term used by the Lord Lyon Court itself for this rank of the ancient nobility. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
     body: (
       <>
         <p>
@@ -82,9 +82,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
           Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
-          below the peerage — correctly described as a{" "}
-          <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Lord Lyon Court
-          itself for this rank of the ancient nobility. The prefix{" "}
+          below the peerage. The prefix{" "}
           <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally
           used to distinguish a Scottish baron from a peer.
         </p>
@@ -217,7 +215,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
-    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description.",
+    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility.",
     body: (
       <>
         <p>
@@ -236,7 +234,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           pre-2004 character of a barony, and simply “barony” or “personal dignity” for its present one. For the
           titleholder,{" "}
           <strong className="font-semibold text-navy">baron or lord or earl in the Baronage of Scotland</strong> is
-          the correct modern description.
+          the correct modern description; the holder is correctly described as a{" "}
+          <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Court of the Lord
+          Lyon for this rank of the ancient nobility.
         </p>
       </>
     ),
@@ -470,24 +470,27 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "How does succession to a barony work?",
-    a: "Scottish titles have historically had more liberal succession rules than their English counterparts, and can descend through female lines. The earliest baronies carried remainders to “heirs and assignees”. Before the Union, titles were often resigned to the Crown and reissued with a new destination; the Conveyancing (Scotland) Act 1874 ended Crown confirmation charters, after which assignation by legal conveyance and registration established the new baron. Since 2004 the barony is a non-territorial personal dignity that retains the old remainder to heirs and assignees: it can be transferred or bequeathed by will, and otherwise descends under the pre-1964 rules preserved for titles and dignities.",
+    a: "Scottish titles have historically had more liberal succession rules than their English counterparts, with some descending through female lines. The earliest baronies carried remainders to “heirs and assignees”. Before the Union, titles were often resigned to the Crown and reissued with a new destination; the Conveyancing (Scotland) Act 1874 ended Crown confirmation charters, after which assignation by legal conveyance and registration established the new baron. This is what created the so-called feudal earl. Since 2004 the barony is a non-territorial personal dignity that retains the old remainder to heirs and assignees: it can be transferred or bequeathed by will, and otherwise descends under the pre-1964 rules preserved for titles and dignities.",
     body: (
       <>
         <p>
-          Scottish titles have historically had more liberal succession rules than their English counterparts, and can
-          descend through female lines. The earliest baronies, like other early dignities, carried remainders to{" "}
+          Scottish titles have historically had more liberal succession rules than their English counterparts, with
+          some descending through female lines. The earliest baronies, like other early dignities, carried remainders to{" "}
           <strong className="font-semibold text-navy">“heirs and assignees”</strong> — because all noble titles,
           including the higher dignities that became today’s peerage, were originally territorial: they ran with the
-          owner of the estate rather than the person. Over time they evolved into personal dignities or peerages
+          owner of the estate rather than the person. However, the title and estate were typically entailed to the
+          male heir, which kept them in the family line for hundreds of years. Over time they evolved into personal
+          dignities or peerages
           attached to the individual.
         </p>
         <p className="mt-4">
           Before the Union, Scotland operated differently from England. Titles were often resigned to the Crown and
           reissued with a new destination — for instance to a kinsman or a member of the clan — giving the system a
-          flexibility the English peerage lacked. When a barony passed to a new family, the practice was to resign the
+          flexibility the English peerage lacked. When a barony passed to a new family or baron, the practice was to resign the
           title and obtain reconfirmation of the feudal grant from the Crown. The Conveyancing (Scotland) Act 1874
           ended this practice, and Crown confirmation charters ceased; thereafter it was assignation by legal
-          conveyance and registration in the Register of Sasines that established the new baron.
+          conveyance and registration in the Register of Sasines that established the new baron. This is what created
+          the so-called feudal earl.
         </p>
         <p className="mt-4">
           Since 2004 the system has changed once more. The barony is now an incorporeal hereditament — a non-territorial
