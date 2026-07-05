@@ -99,6 +99,123 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
+    q: "Are Scottish barony titles legitimate, or a scam?",
+    a: "They are legitimate. A Scottish barony is a genuine dignity recognised in Scots law: the barons of Scotland were affirmed as a “titled nobility” by the Court of the Lord Lyon in 1943 and by the Court of Session, and section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 expressly preserved the dignity of baron when the feudal system was abolished. What is not a title is a “souvenir plot” — a novelty square of Scottish land sold online with a “Lord” or “Laird” label. Owning one confers no title and no nobility; the Court of the Lord Lyon states that a souvenir plot is not even sufficient to petition for a grant of arms. Nearly every “Scottish title scam” story concerns these souvenir schemes, not genuine baronies, which are an entirely different thing.",
+    body: (
+      <>
+        <p>
+          <strong className="font-semibold text-navy">They are legitimate.</strong> A Scottish barony is a genuine
+          dignity recognised in Scots law: the barons of Scotland were affirmed as a{" "}
+          <strong className="font-semibold text-navy">“titled nobility”</strong> by the Court of the Lord Lyon in 1943
+          and by the Court of Session, and{" "}
+          <a
+            href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000
+          </a>{" "}
+          expressly preserved the dignity of baron when the feudal system was abolished.
+        </p>
+        <p className="mt-4">
+          What is <strong className="font-semibold text-navy">not</strong> a title is a{" "}
+          <strong className="font-semibold text-navy">“souvenir plot”</strong> — a novelty square of Scottish land
+          sold online with a “Lord” or “Laird” label. Owning one confers no title and no nobility; the Court of the
+          Lord Lyon states that a souvenir plot is not even sufficient to petition for a grant of arms. Nearly every{" "}
+          <em>“Scottish title scam”</em> story concerns these souvenir schemes — not genuine baronies, which are an
+          entirely different thing (see{" "}
+          <a href="#can-you-buy-a-lord-or-laird-title-in-scotland" className={intLink}>
+            Can you buy a “Lord” or “Laird” title in Scotland?
+          </a>
+          ).
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        Court of the Lord Lyon, Petition of Maclean of Ardgour (1943), and{" "}
+        <em>Spencer-Thomas of Buquhollie v Newell</em> (Court of Session) — recognition as a “titled nobility”;{" "}
+        <a
+          href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Abolition of Feudal Tenure etc. (Scotland) Act 2000, s.63
+        </a>{" "}
+        — preservation of the dignity. On souvenir plots:{" "}
+        <a
+          href="https://web.archive.org/web/20120728090955/http://www.lyon-court.com/lordlyon/776.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Court of the Lord Lyon, “Lairds”
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    q: "Are Scottish baronies recognised in law?",
+    a: "Yes — by statute. When the feudal system was abolished, the dignity of baron was expressly preserved: section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 provides that nothing in the Act affects the dignity of baron. The Explanatory Notes to the Act confirm that the dignity survives as a personal, non-territorial “floating” dignity, no longer attached to land. A Scottish barony is therefore a recognised dignity in Scots law, held independently of any estate.",
+    body: (
+      <>
+        <p>
+          <strong className="font-semibold text-navy">Yes — by statute.</strong> When the feudal system was abolished,
+          the dignity of baron was expressly preserved:{" "}
+          <a
+            href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000
+          </a>{" "}
+          provides that <em>nothing in the Act affects the dignity of baron</em>.
+        </p>
+        <p className="mt-4">
+          The{" "}
+          <a
+            href="https://www.legislation.gov.uk/asp/2000/5/notes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Explanatory Notes
+          </a>{" "}
+          to the Act confirm that the dignity survives as a{" "}
+          <strong className="font-semibold text-navy">personal, non-territorial “floating” dignity</strong>, no longer
+          attached to land. A Scottish barony is therefore a recognised dignity in Scots law, held independently of any
+          estate.
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        <a
+          href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Abolition of Feudal Tenure etc. (Scotland) Act 2000, s.63
+        </a>{" "}
+        and its{" "}
+        <a
+          href="https://www.legislation.gov.uk/asp/2000/5/notes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Explanatory Notes
+        </a>{" "}
+        — legislation.gov.uk.
+      </>
+    ),
+  },
+  {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
     a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description.",
     body: (
@@ -245,8 +362,54 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
+    q: "Can you buy a “Lord” or “Laird” title in Scotland?",
+    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. The Court adds that “laird” is not synonymous with “lord” or “lady”. A genuine Scottish barony is a different matter entirely: it is a real dignity of nobility, lawfully transferable since the 2004 reform — so a barony can be acquired, but a souvenir “lordship” or “lairdship” is not a title at all.",
+    body: (
+      <>
+        <p>
+          <strong className="font-semibold text-navy">A souvenir plot does not make you a Lord or a Laird</strong> —
+          this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the{" "}
+          <a
+            href="https://web.archive.org/web/20120728090955/http://www.lyon-court.com/lordlyon/776.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Court of the Lord Lyon
+          </a>{" "}
+          states that “laird” is{" "}
+          <strong className="font-semibold text-navy">“a description rather than a title”</strong>, and that a souvenir
+          plot is not sufficient to bring a person within the Lyon Court’s jurisdiction to seek a grant of arms. The
+          Court adds that “laird” is not synonymous with “lord” or “lady”.
+        </p>
+        <p className="mt-4">
+          A genuine <strong className="font-semibold text-navy">Scottish barony</strong> is a different matter
+          entirely: it is a real dignity of nobility, lawfully transferable since the 2004 reform (see{" "}
+          <a href="#can-a-scottish-barony-be-bought-and-sold" className={intLink}>
+            Can a Scottish barony be bought and sold?
+          </a>
+          ). So a barony can be acquired — but a souvenir “lordship” or “lairdship” is not a title at all.
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        <a
+          href="https://web.archive.org/web/20120728090955/http://www.lyon-court.com/lordlyon/776.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Court of the Lord Lyon, “Lairds”
+        </a>{" "}
+        (archived 2012): “the term ‘laird’ … is a description rather than a title”, “not appropriate for … the owner of
+        a small souvenir plot of land”, and “not synonymous with that of ‘lord’ or ‘lady’”.
+      </>
+    ),
+  },
+  {
     q: "What is The Pledge, and what does it change?",
-    a: "The Pledge is a declaration of honour by which a baron commits their barony to hereditary descent within the family line. It cannot legally alter a barony — it operates in honour rather than law — but its practical effect is on future recognition upon the Roll of Scottish Barons should a pledged barony later be conveyed outside the family. In this the Roll follows the two official Rolls. The Roll of the Peerage separates recognition from legal title: Andrew Mountbatten Windsor remains Duke of York in law, since only an Act of Parliament can extinguish a peerage, yet the King's removal of his name from that Roll in 2025 withdrew official recognition of the title — not his legal entitlement to it. The Roll of the Baronetage goes further: no one is received or styled as a baronet unless entered upon it. The Roll of Scottish Barons is modelled between the two — recognition is paramount, as with the baronetage, while legal title is never affected, as with the peerage.",
+    a: "The Pledge is a declaration of honour by which a baron commits their barony to hereditary descent within the family line. It cannot legally alter a barony — it operates in honour rather than law — but its practical effect is on future recognition upon the Roll of Scottish Barons should a pledged barony later be sold outside the family. In this the Roll follows the two official Rolls. The Roll of the Peerage separates recognition from legal title: Andrew Mountbatten Windsor remains Duke of York in law, since only an Act of Parliament can extinguish a peerage, yet the King's removal of his name from that Roll in 2025 withdrew official recognition of the title — not his legal entitlement to it. The Roll of the Baronetage goes further: no one is received or styled as a baronet unless entered upon it. The Roll of Scottish Barons is modelled between the two — recognition is paramount, as with the baronetage, while legal title is never affected, as with the peerage.",
     body: (
       <>
         <p>
@@ -258,7 +421,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           number of barons have taken it, wishing to reduce the commercial transfer of baronies. It cannot legally
           alter a barony — it operates in honour rather than law — but its practical effect is on future{" "}
           <strong className="font-semibold text-navy">recognition</strong> upon the Roll of Scottish Barons, should a
-          pledged barony later be conveyed outside the family.
+          pledged barony later be sold outside the family.
         </p>
         <p className="mt-4">
           In separating recognition from legal title, the Roll follows the model of the two official Rolls. The
