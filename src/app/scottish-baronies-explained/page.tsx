@@ -324,7 +324,16 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <strong className="font-semibold text-navy">“Lordship of the Manor”</strong> was never a Crown-granted title
           of nobility: it is a style attached to the ownership of a manor and confers no noble rank and no
           parliamentary rights. The nearest Scottish equivalent to a Lord of the Manor is a{" "}
-          <em>Laird</em>. The Court of the Lord Lyon has itself stated that “laird” is{" "}
+          <em>Laird</em>. The{" "}
+          <a
+            href="https://web.archive.org/web/20120728090955/http://www.lyon-court.com/lordlyon/776.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Court of the Lord Lyon has itself stated
+          </a>{" "}
+          that “laird” is{" "}
           <strong className="font-semibold text-navy">“a description rather than a title”</strong>, and it likewise
           carries no formal status in law.
         </p>
