@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Scottish Baronies, Explained — FAQ",
@@ -21,12 +22,46 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/scottish-baronies-explained/" },
   openGraph: {
+    type: "article",
     title: "Scottish Baronies, Explained",
     description:
       "Distinct from peerages, altered fundamentally by legislation in 2004, and often described with out-of-date terminology. What the law and the institutional sources actually say.",
     url: "/scottish-baronies-explained/",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Scottish Baronies, Explained — the Baronage of Scotland Association",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scottish Baronies, Explained",
+    description:
+      "Since the 2004 reform, Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ with primary sources.",
+    images: ["/og.jpg"],
   },
 };
+
+/** Freshness signals — bump DATE_MODIFIED (and REVIEWED_LABEL) whenever the
+ * answers change; both the visible "last reviewed" line and the schema.org
+ * dateModified read from here, so they cannot drift. */
+const DATE_PUBLISHED = "2026-07-02";
+const DATE_MODIFIED = "2026-07-05";
+const REVIEWED_LABEL = "July 2026";
+
+const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
+
+/** One source of truth for the URL-fragment ids: the table of contents and the
+ * per-question <article id> both derive from this, so anchors always match. */
+const slugify = (q: string) =>
+  q
+    .toLowerCase()
+    .replace(/[“”"?]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
 const extLink =
   "text-gold-deep underline decoration-gold/40 underline-offset-2 transition-colors hover:text-oxblood";
@@ -38,7 +73,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage — correctly described a minor baron, the term used by the Lord Lyon Court itself for this rank of the ancient nobility. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage — correctly described as a minor baron, the term used by the Lord Lyon Court itself for this rank of the ancient nobility. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
     body: (
       <>
         <p>
@@ -47,7 +82,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
           Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
-          below the peerage — correctly described a{" "}
+          below the peerage — correctly described as a{" "}
           <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Lord Lyon Court
           itself for this rank of the ancient nobility. The prefix{" "}
           <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally
@@ -441,20 +476,105 @@ const sources: ReactNode[] = [
   </>,
 ];
 
-const faqJsonLd = {
+/** Key terms, single source of truth for the visible glossary and the
+ * schema.org DefinedTermSet. */
+const glossary: { term: string; def: string }[] = [
+  {
+    term: "Minor baron",
+    def: "A holder of a Scottish barony — a member of Scotland's titled nobility ranking below the peerage. The term used by the Court of the Lord Lyon to distinguish these barons from barons of the peerage.",
+  },
+  {
+    term: "Quondam feudal barony",
+    def: "A barony that was feudal before 28 November 2004. “Quondam” means “formerly”; the phrase (Lord Lyon Sellar, 2009) marks that a barony's feudal character is now historical, the living dignity personal and non-territorial.",
+  },
+  {
+    term: "Incorporeal heritable property",
+    def: "An intangible form of heritable property that may be owned and inherited without attaching to land. Since 2004 a Scottish barony exists as such a dignity, independent of any estate.",
+  },
+  {
+    term: "Lord of Parliament",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron.",
+  },
+  {
+    term: "Register of Sasines",
+    def: "Scotland's public register of property deeds. After the Conveyancing (Scotland) Act 1874 the transfer of a barony was recorded here; since 2004, baronies are recorded in the separate Scottish Barony Register.",
+  },
+];
+
+const org = {
+  "@type": "Organization",
+  name: "Baronage of Scotland Association",
+  url: `${SITE_URL}/`,
+};
+
+/** A single JSON-LD @graph: the FAQ (with authorship, freshness dates and the
+ * entities it is about), breadcrumbs, and the glossary as a DefinedTermSet.
+ * Machine-readable structure for search engines and AI answer engines. */
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      url: PAGE_URL,
+      name: "Scottish Baronies, Explained",
+      description:
+        "An evidence-based FAQ on the Baronage of Scotland: why “feudal baron” is out of date since the 2004 reform, and what the law and institutional sources actually say.",
+      inLanguage: "en-GB",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      author: org,
+      publisher: org,
+      about: [
+        {
+          "@type": "Legislation",
+          name: "Abolition of Feudal Tenure etc. (Scotland) Act 2000",
+          legislationIdentifier: "2000 asp 5",
+          sameAs: [
+            "https://www.legislation.gov.uk/asp/2000/5/contents",
+            "https://en.wikipedia.org/wiki/Abolition_of_Feudal_Tenure_etc._(Scotland)_Act_2000",
+          ],
+        },
+        {
+          "@type": "GovernmentOrganization",
+          name: "Court of the Lord Lyon",
+          sameAs: [
+            "https://www.courtofthelordlyon.scot",
+            "https://en.wikipedia.org/wiki/Court_of_the_Lord_Lyon",
+          ],
+        },
+      ],
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Scottish Baronies, Explained", item: PAGE_URL },
+      ],
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": `${PAGE_URL}#glossary`,
+      name: "Glossary of Scottish baronial terms",
+      hasDefinedTerm: glossary.map((g) => ({
+        "@type": "DefinedTerm",
+        name: g.term,
+        description: g.def,
+        inDefinedTermSet: `${PAGE_URL}#glossary`,
+      })),
+    },
+  ],
 };
 
 export default function BaroniesExplainedPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <section className="bg-navy-deep text-parchment-50 texture-saltire">
         <Container className="py-10 text-center sm:py-12">
@@ -472,18 +592,40 @@ export default function BaroniesExplainedPage() {
             Distinct from peerages, altered by legislation in 2004, and often described with terminology that is now
             out of date. What the law and the institutional sources actually say.
           </p>
+          <p
+            className="rise mt-6 font-sans text-[0.7rem] uppercase tracking-[0.18em] text-parchment-200/60"
+            style={{ animationDelay: "0.24s" }}
+          >
+            Last reviewed {REVIEWED_LABEL} · Sourced from primary legislation and the Court of the Lord Lyon
+          </p>
         </Container>
       </section>
 
       <Section tone="parchment">
         <Container size="prose">
+          <Reveal>
+            <nav
+              aria-label="On this page"
+              className="mb-14 rounded-sm border border-parchment-300/70 bg-parchment-50/70 px-6 py-6 sm:px-8"
+            >
+              <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                On this page
+              </p>
+              <ol className="mt-4 space-y-2.5">
+                {faqs.map((f, i) => (
+                  <li key={f.q} className="flex gap-3 leading-snug">
+                    <span className="font-sans text-sm tabular-nums text-gold-deep/70">{i + 1}.</span>
+                    <a href={`#${slugify(f.q)}`} className={intLink}>
+                      {f.q}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </Reveal>
           <div className="space-y-14">
             {faqs.map((f, i) => {
-              const slug = f.q
-                .toLowerCase()
-                .replace(/[“”"?]/g, "")
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-|-$/g, "");
+              const slug = slugify(f.q);
               return (
               <Reveal key={f.q} delay={Math.min(i * 0.04, 0.16)}>
                 <article
@@ -501,6 +643,23 @@ export default function BaroniesExplainedPage() {
               );
             })}
           </div>
+        </Container>
+      </Section>
+
+      <Section tone="parchment" className="border-t border-parchment-300/60">
+        <Container size="prose">
+          <Reveal>
+            <h2 className="font-display text-2xl text-navy sm:text-3xl">Glossary of terms</h2>
+            <GoldRule className="mt-5" align="start" />
+            <dl className="mt-8 space-y-6">
+              {glossary.map((g) => (
+                <div key={g.term}>
+                  <dt className="font-display text-lg text-navy">{g.term}</dt>
+                  <dd className="mt-1.5 leading-relaxed text-ink-soft">{g.def}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
         </Container>
       </Section>
 
