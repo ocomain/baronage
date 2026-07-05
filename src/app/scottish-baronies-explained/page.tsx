@@ -38,14 +38,15 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title of Lord of Parliament; a Scottish baron is noble but sits below the peerage.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title of Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage.",
     body: (
       <>
         <p>
           Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland’s{" "}
           <strong className="font-semibold text-navy">titled nobility</strong>, though not a peer. The distinction
           matters: the Scottish equivalent of an English peerage baron is the higher title of{" "}
-          <strong className="font-semibold text-navy">Lord of Parliament</strong>. A Scottish baron is noble but sits
+          <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
+          Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
           below the peerage.
         </p>
       </>
