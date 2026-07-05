@@ -400,7 +400,14 @@ export default function HomePage() {
               <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Defenders of Scottish sovereignty</h2>
               <p className="mt-6 leading-relaxed text-ink-soft">
                 Scottish barons held their lands directly from the Crown and stood as key defenders of Scotland’s
-                independence. Today the dignity endures as a non-territorial title of honour, protected in Scots law.
+                independence. Today the dignity endures as a{" "}
+                <Link
+                  href="/scottish-baronies-explained"
+                  className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                >
+                  non-territorial title of honour
+                </Link>
+                , protected in Scots law.
               </p>
               <dl className="mt-8 divide-y divide-parchment-300/70 border-y border-parchment-300/70">
                 {timeline.map((t) => (

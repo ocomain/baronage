@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
@@ -37,7 +38,14 @@ const mandate = [
           (2019).
         </p>
       </Footnote>{" "}
-      — quondam meaning “formerly”).
+      — quondam meaning “formerly”). This is set out in full in{" "}
+      <Link
+        href="/scottish-baronies-explained"
+        className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+      >
+        Scottish Baronies, Explained
+      </Link>
+      .
     </>
   ),
   "Lobbying for HRH the Baron of Renfrew as patron, for a royal warrant recognising the Roll, and for the modern relevance of the Lord Lyon office.",
