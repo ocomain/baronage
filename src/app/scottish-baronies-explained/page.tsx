@@ -61,7 +61,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
-    q: "Is “Scottish feudal barony” or “feudal baron” the correct term today?",
+    q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
     a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description.",
     body: (
       <>
@@ -80,10 +80,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <em>quondam</em> meaning “formerly”. The historically precise usage is thus “quondam feudal” for the
           pre-2004 character of a barony, and simply “barony” or “personal dignity” for its present one. For the
           titleholder,{" "}
-          <strong className="font-semibold text-navy">
-            baron or lord or earl in the Baronage of Scotland is the correct modern description
-          </strong>
-          .
+          <strong className="font-semibold text-navy">baron or lord or earl in the Baronage of Scotland</strong> is
+          the correct modern description.
         </p>
       </>
     ),
@@ -178,9 +176,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>{" "}
           (publicly available for 2021–2025); these record on the order of{" "}
           <strong className="font-semibold text-navy">one to two transfers in a typical year</strong> — and a recorded
-          transfer is not necessarily a commercial sale, since assignations within families and by bequest pass through
-          the same register. Baronies generally remain within families across generations; a barony can only be bought
-          if a holder chooses to part with one, and few do.
+          transfer is not necessarily a commercial sale, since assignations within families and by bequest can
+          sometimes pass through the same register. Baronies generally remain within families across generations; a barony can only be bought
+          if a holder chooses to part with one, and few do. Families are not selling their heirlooms.
         </p>
         <p className="mt-4">
           Where sales have occurred, the sums indicate scarcity value. The Scottish Law Commission, working from 1997
@@ -285,7 +283,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <p className="mt-4">
           Before the Union, Scotland operated differently from England. Titles were often resigned to the Crown and
           reissued with a new destination — for instance to a kinsman or a member of the clan — giving the system a
-          flexibility the English peerage lacked. When a barony passed to a new holder, the practice was to resign the
+          flexibility the English peerage lacked. When a barony passed to a new family, the practice was to resign the
           title and obtain reconfirmation of the feudal grant from the Crown. The Conveyancing (Scotland) Act 1874
           ended this practice, and Crown confirmation charters ceased; thereafter it was assignation by legal
           conveyance and registration in the Register of Sasines that established the new baron.
@@ -315,7 +313,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "What is the difference between a barony and a Lordship of the Manor?",
-    a: "They are entirely different things. A Scottish barony is a title of nobility, granted historically by the Crown through a charter, conferring precedence, privileges, and — until the Union of 1707 — a place among the ancient Three Estates of the Scottish Parliament. An English Lordship of the Manor was never a Crown-granted title of nobility: it is a style attached to the ownership of a manor and confers no noble rank and no parliamentary rights. The nearest Scottish equivalent to a Lord of the Manor is a Laird, which likewise carries no formal status in law.",
+    a: "They are entirely different things. A Scottish barony is a title of nobility, granted historically by the Crown through a charter, conferring precedence, privileges, and — until the Union of 1707 — a place among the ancient Three Estates of the Scottish Parliament. An English Lordship of the Manor was never a Crown-granted title of nobility: it is a style attached to the ownership of a manor and confers no noble rank and no parliamentary rights. The nearest Scottish equivalent to a Lord of the Manor is a Laird. The Court of the Lord Lyon has itself stated that 'laird' is 'a description rather than a title', and it likewise carries no formal status in law.",
     body: (
       <>
         <p>
@@ -326,7 +324,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <strong className="font-semibold text-navy">“Lordship of the Manor”</strong> was never a Crown-granted title
           of nobility: it is a style attached to the ownership of a manor and confers no noble rank and no
           parliamentary rights. The nearest Scottish equivalent to a Lord of the Manor is a{" "}
-          <em>Laird</em>, which likewise carries no formal status in law.
+          <em>Laird</em>. The Court of the Lord Lyon has itself stated that “laird” is{" "}
+          <strong className="font-semibold text-navy">“a description rather than a title”</strong>, and it likewise
+          carries no formal status in law.
         </p>
         <p className="mt-4">
           The claim, made by some, that Scottish baronies are simply the Scottish name for English manors is incorrect:
@@ -339,8 +339,16 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     authority: (
       <>
         <em>Spencer-Thomas of Buquhollie v Newell</em> (Court of Session — the noble quality of the barony grant);
-        historical accounts of the Scottish Three Estates; on the manorial contrast and the Laird comparison, the
-        sources cited in standard reference works on Lordships of the Manor.
+        historical accounts of the Scottish Three Estates. On Laird:{" "}
+        <a
+          href="https://web.archive.org/web/20120728090955/http://www.lyon-court.com/lordlyon/776.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Court of the Lord Lyon, “Lairds”
+        </a>
+        , archived 2012 — “the term ‘laird’ … is a description rather than a title”.
       </>
     ),
   },
