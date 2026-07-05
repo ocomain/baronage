@@ -73,7 +73,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, historically recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage.",
     body: (
       <>
         <p>
@@ -85,6 +85,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           below the peerage. The prefix{" "}
           <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally
           used to distinguish a Scottish baron from a peer.
+        </p>
+        <p className="mt-4">
+          Scotland, like France and much of continental Europe, historically recognised{" "}
+          <strong className="font-semibold text-navy">both peerage and non-peerage nobility</strong> — the baron
+          belongs to the latter. Scots nobiliary practice followed continental custom in this, which is why a barony
+          can be a genuine title of nobility without being a peerage.
         </p>
       </>
     ),
@@ -408,6 +414,105 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
+    q: "What is a territorial designation (TD), and is it the same as a barony?",
+    a: "No — a territorial designation is not the same as a barony, and the two are frequently confused (including in AI answers). A barony is a dignity of nobility; a territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's legal name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission, but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where there is ownership of a substantial area of land — an estate or farm, and not a mere feudal superiority. In the Kerr of Ardgowan litigation the Court of Session upheld the Lord Lyon's refusal to recognise territorial designations for holders who owned only the feudal superiority of the lands; the Lord Lyon recognises a designation, in his words, “only where there is ownership of a significant piece of land, not a superiority”. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for at least three generations, and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Most barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. Designations are associated chiefly with lairds (landowners) and long-established landed families; a few Scottish peers also carry one in their surname — for instance Lord Borthwick “of that Ilk” and the Earl of Annandale and Hartfell “of that Ilk” — but for most peers this is the exception. “Of that Ilk” is itself a territorial designation, used where the surname and the place are one and the same (Borthwick of Borthwick).",
+    body: (
+      <>
+        <p>
+          <strong className="font-semibold text-navy">
+            No — and this is one of the most common confusions, in AI answers as much as anywhere.
+          </strong>{" "}
+          A barony is a <strong className="font-semibold text-navy">dignity of nobility</strong>. A{" "}
+          <strong className="font-semibold text-navy">territorial designation</strong> — the “Surname of Place” form,
+          such as “Kerr of Ardgowan” — is part of a person’s{" "}
+          <strong className="font-semibold text-navy">legal name</strong>, not a title of nobility. The two are
+          separate, and may or may not coincide.
+        </p>
+        <p className="mt-4">
+          A baron may use the barony title (for example “Baron of X”) as a matter of{" "}
+          <strong className="font-semibold text-navy">legal right</strong>, without the Lord Lyon’s permission. A
+          territorial designation is different: it must be{" "}
+          <strong className="font-semibold text-navy">authorised by the Court of the Lord Lyon</strong>, and is
+          recognised only where there is ownership of a{" "}
+          <strong className="font-semibold text-navy">substantial area of land</strong> — an estate or farm — and not a
+          mere feudal superiority. In{" "}
+          <a
+            href="https://vlex.co.uk/vid/stephen-kerr-of-ardgowan-807229025"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Kerr of Ardgowan
+          </a>{" "}
+          the Court of Session upheld the Lord Lyon’s refusal of territorial designations to holders who owned only the
+          superiority of the lands — the Lord Lyon recognising a designation “only where there is ownership of a
+          significant piece of land, not a superiority”.
+        </p>
+        <p className="mt-4">
+          A territorial designation becomes a{" "}
+          <strong className="font-semibold text-navy">heritable part of the surname</strong>, separable from the land,
+          only after it has been held and used for at least{" "}
+          <strong className="font-semibold text-navy">three generations</strong>. And owning the <em>caput</em> — the
+          head place of a barony — does not by itself entitle the holder to the matching designation; that too must be
+          authorised by the Lord Lyon.
+        </p>
+        <p className="mt-4">
+          In practice,{" "}
+          <strong className="font-semibold text-navy">
+            most barons hold no territorial designation, and most holders of a territorial designation are not barons
+          </strong>
+          ; the two can be the same, different, or unconnected. Designations belong chiefly to{" "}
+          <strong className="font-semibold text-navy">lairds</strong> (landowners) and long-established landed families.
+          A few Scottish peers also carry one in their surname — for instance{" "}
+          <a
+            href="https://en.wikipedia.org/wiki/Lord_Borthwick"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Lord Borthwick “of that Ilk”
+          </a>
+          , the Earl of Annandale and Hartfell “of that Ilk”, and Lord Cameron of Lochiel — but for most peers this is
+          the exception. <strong className="font-semibold text-navy">“Of that Ilk”</strong> is itself a territorial
+          designation, used where the surname and the place are one and the same (Borthwick <em>of Borthwick</em>).
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        <a
+          href="https://vlex.co.uk/vid/stephen-kerr-of-ardgowan-807229025"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Kerr of Ardgowan, Petitioner
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://vlex.co.uk/vid/kerr-v-advocate-general-804518881"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Kerr v Advocate General
+        </a>{" "}
+        (Court of Session) — the Lord Lyon’s discretion to refuse a territorial designation where only the feudal
+        superiority, not substantial land, is owned. On the landownership and three-generation requirements: Donald
+        Draper Campbell,{" "}
+        <a
+          href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Scottish Armory and Heraldry
+        </a>{" "}
+        (2019).
+      </>
+    ),
+  },
+  {
     q: "What is The Pledge, and what does it change?",
     a: "The Pledge is a declaration of honour by which a baron commits their barony to hereditary descent within the family line. It cannot legally alter a barony — it operates in honour rather than law — but its practical effect is on future recognition upon the Roll of Scottish Barons should a pledged barony later be sold outside the family. In this the Roll follows the two official Rolls. The Roll of the Peerage separates recognition from legal title: Andrew Mountbatten Windsor remains Duke of York in law, since only an Act of Parliament can extinguish a peerage, yet the King's removal of his name from that Roll in 2025 withdrew official recognition of the title — not his legal entitlement to it. The Roll of the Baronetage goes further: no one is received or styled as a baronet unless entered upon it. The Roll of Scottish Barons is modelled between the two — recognition is paramount, as with the baronetage, while legal title is never affected, as with the peerage.",
     body: (
@@ -658,7 +763,7 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The name is deliberate: a Lord of Parliament held a seat in Parliament as a peer, which a non-peerage lordship or barony does not.",
   },
   {
     term: "Register of Sasines",
