@@ -60,7 +60,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
-    q: "Is “feudal baron” or “Scottish feudal barony” the correct term today?",
+    q: "Is “Scottish feudal barony” or “feudal baron” the correct term today?",
     a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, “baron” or “lord in the Baronage of Scotland” is the correct modern description.",
     body: (
       <>
