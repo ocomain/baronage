@@ -205,32 +205,6 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
   },
   {
-    q: "How is a baron correctly styled?",
-    a: "The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. A small number of baronies rank as lordships within the baronage, whose holders may be styled “Lord” — a degree above an ordinary barony, but still distinct from and below a Lord of Parliament, which is the title of a Scottish peer.",
-    body: (
-      <>
-        <p>
-          A small number of baronies rank as{" "}
-          <strong className="font-semibold text-navy">lordships within the baronage</strong>, whose holders may be
-          styled “Lord” — a degree above an ordinary barony, but still distinct from and below a Lord of Parliament,
-          which is the title of a Scottish peer. The prefix{" "}
-          <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally used
-          to distinguish a Scottish baron from a peer. Full guidance is set out on our{" "}
-          <Link href="/proper-address" className={intLink}>
-            Proper Address
-          </Link>{" "}
-          page.
-        </p>
-      </>
-    ),
-    authority: (
-      <>
-        Accepted heraldic and nobiliary usage; Debrett’s; the institutional writers. Note this is convention of style,
-        not statute.
-      </>
-    ),
-  },
-  {
     q: "How does succession to a barony work?",
     a: "Scottish titles have historically had more liberal succession rules than their English counterparts, and can descend through female lines. The earliest baronies carried remainders to “heirs and assignees”. Before the Union, titles were often resigned to the Crown and reissued with a new destination; the Conveyancing (Scotland) Act 1874 ended Crown confirmation charters, after which assignation by legal conveyance and registration established the new baron. Since 2004 the barony is a non-territorial personal dignity that retains the old remainder to heirs and assignees: it can be transferred or bequeathed by will, and otherwise descends under the pre-1964 rules preserved for titles and dignities.",
     body: (
