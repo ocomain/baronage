@@ -799,7 +799,7 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Baronetcy",
-    def: "A hereditary honour ranking below the peerage and above a knighthood. A baronet is styled “Sir” (or “Dame”), and the dignity passes to heirs — unlike a knighthood, which is personal.",
+    def: "A hereditary knighthood ranking below the peerage and above a knighthood. A baronet is styled “Sir” (or “Dame”), and the dignity passes to heirs — unlike a knighthood, which is personal.",
   },
   {
     term: "Knighthood",
