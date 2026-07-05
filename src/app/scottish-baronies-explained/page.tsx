@@ -319,7 +319,10 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </Link>{" "}
           they commit their title to hereditary descent — a commitment that shapes the future{" "}
           <strong className="font-semibold not-italic text-navy">recognition</strong> of the barony upon the Roll of
-          Scottish Barons, as explained in the next question.
+          Scottish Barons — see{" "}
+          <a href="#what-is-the-pledge-and-what-does-it-change" className={intLink}>
+            What is The Pledge?
+          </a>
         </p>
         <p className="mt-4">
           In practice, the market is very small. The{" "}
