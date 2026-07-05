@@ -479,9 +479,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <strong className="font-semibold text-navy">“heirs and assignees”</strong> — because all noble titles,
           including the higher dignities that became today’s peerage, were originally territorial: they ran with the
           owner of the estate rather than the person. However, the title and estate were typically entailed to the
-          male heir, which kept them in the family line for hundreds of years. Over time they evolved into personal
-          dignities or peerages
-          attached to the individual.
+          male heir, which kept them in the family line for hundreds of years. Over time territorial peerages evolved
+          into personal peerages attached to the individual.
         </p>
         <p className="mt-4">
           Before the Union, Scotland operated differently from England. Titles were often resigned to the Crown and
@@ -659,7 +658,7 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron.",
   },
   {
     term: "Register of Sasines",
