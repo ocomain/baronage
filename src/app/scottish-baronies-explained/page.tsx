@@ -782,12 +782,24 @@ const glossary: { term: string; def: string }[] = [
     def: "An intangible form of heritable property that may be owned and inherited without attaching to land. Since 2004 a Scottish barony exists as such a dignity, independent of any estate.",
   },
   {
+    term: "Caput",
+    def: "The head place of a barony — its principal seat or centre, from which the barony took its name and, historically, where the baron's court was held.",
+  },
+  {
     term: "Lord of Parliament",
     def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The name is deliberate: a Lord of Parliament held a seat in Parliament as a peer, which a non-peerage lordship or barony does not. The rank itself arose only in the mid-15th century — the term distinguishing the lords summoned to Parliament from the older lords of the Baronage, who were not.",
   },
   {
     term: "Register of Sasines",
     def: "Scotland's public register of property deeds. After the Conveyancing (Scotland) Act 1874 the transfer of a barony was recorded here; since 2004, baronies are recorded in the separate Scottish Barony Register.",
+  },
+  {
+    term: "Territorial designation (TD)",
+    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility, and is separate from a barony: a person may hold either, both, or neither.",
+  },
+  {
+    term: "Of that Ilk",
+    def: "A form of territorial designation used where a family's surname and its lands share the same name — “Borthwick of that Ilk” means “Borthwick of Borthwick”. The two forms are interchangeable.",
   },
 ];
 
