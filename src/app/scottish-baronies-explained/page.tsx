@@ -770,6 +770,10 @@ const sources: ReactNode[] = [
  * schema.org DefinedTermSet. */
 const glossary: { term: string; def: string }[] = [
   {
+    term: "Scottish barony",
+    def: "A dignity of the Baronage of Scotland — a title of nobility ranking below the peerage. Historically attached to land held of the Crown, it has, since the 2004 reform, been a personal, non-territorial dignity. Its holder is a baron, or “minor baron” — noble, but not a peer.",
+  },
+  {
     term: "Minor baron",
     def: "A holder of a Scottish barony — a member of Scotland's titled nobility ranking below the peerage. The term used by the Court of the Lord Lyon to distinguish these barons from barons of the peerage.",
   },
@@ -786,8 +790,20 @@ const glossary: { term: string; def: string }[] = [
     def: "The head place of a barony — its principal seat or centre, from which the barony took its name and, historically, where the baron's court was held.",
   },
   {
+    term: "Peerage",
+    def: "The highest grade of the British nobility. In Scotland its ranks, in ascending order, are Lord of Parliament, Viscount, Earl, Marquess and Duke. A peerage stands in law whether or not its holder is enrolled, and historically carried a seat in Parliament. It ranks above, and is distinct from, a barony in the Baronage of Scotland.",
+  },
+  {
     term: "Lord of Parliament",
     def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The name is deliberate: a Lord of Parliament held a seat in Parliament as a peer, which a non-peerage lordship or barony does not. The rank itself arose only in the mid-15th century — the term distinguishing the lords summoned to Parliament from the older lords of the Baronage, who were not.",
+  },
+  {
+    term: "Baronetcy",
+    def: "A hereditary honour ranking below the peerage and above a knighthood. A baronet is styled “Sir” (or “Dame”), and the dignity passes to heirs — unlike a knighthood, which is personal. The Scottish baronetcies are the Baronets of Nova Scotia, created from 1625.",
+  },
+  {
+    term: "Knighthood",
+    def: "A personal, non-hereditary honour conferring the style “Sir” (or “Dame”). Unlike a peerage, a barony or a baronetcy, it does not pass to the holder's heirs.",
   },
   {
     term: "Register of Sasines",
