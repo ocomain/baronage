@@ -763,7 +763,7 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The name is deliberate: a Lord of Parliament held a seat in Parliament as a peer, which a non-peerage lordship or barony does not.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. The name is deliberate: a Lord of Parliament held a seat in Parliament as a peer, which a non-peerage lordship or barony does not. The rank itself arose only in the mid-15th century — the term distinguishing the lords summoned to Parliament from the older lords of the Baronage, who were not.",
   },
   {
     term: "Register of Sasines",
@@ -900,7 +900,7 @@ export default function BaroniesExplainedPage() {
               <Reveal key={f.q} delay={Math.min(i * 0.04, 0.16)}>
                 <article
                   id={slug}
-                  className={`scroll-mt-28 ${i > 0 ? "border-t border-parchment-300/70 pt-12" : ""}`}
+                  className={`scroll-mt-32 lg:scroll-mt-44 ${i > 0 ? "border-t border-parchment-300/70 pt-12" : ""}`}
                 >
                   <h2 className="font-display text-2xl text-navy sm:text-3xl">{f.q}</h2>
                   <div className="mt-5 leading-relaxed text-ink-soft">{f.body}</div>
