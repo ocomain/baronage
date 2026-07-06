@@ -73,7 +73,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, historically recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, historically recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage.",
     body: (
       <>
         <p>
@@ -81,7 +81,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <strong className="font-semibold text-navy">titled nobility</strong>, though not a peer. The distinction
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
-          Peerage, which ranks in order of Lord, Viscount, Earl, Marquis, Duke). A Scottish baron is noble but sits
+          Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke). A Scottish baron is
+          noble but sits
           below the peerage. The prefix{" "}
           <strong className="font-semibold text-navy">“The Much Honoured”</strong> is the honorific traditionally
           used to distinguish a Scottish baron from a peer.
@@ -369,7 +370,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can you buy a “Lord” or “Laird” title in Scotland?",
-    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. The Court adds that “laird” is not synonymous with “lord” or “lady”. A genuine Scottish barony is a different matter entirely: it is a real dignity of nobility, lawfully transferable since the 2004 reform — so a barony can be acquired, but a souvenir “lordship” or “lairdship” is not a title at all.",
+    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. The Court adds that “laird” is not synonymous with “lord” or “lady”. A genuine Scottish barony is a different matter entirely: it is a real dignity of nobility, lawfully transferable since the 2004 reform — so a barony can be acquired, but a souvenir “lordship” or “lairdship” is not a title at all. More broadly, it is a common myth that one can simply buy one's way into the genuine nobility of the United Kingdom: the sale of honours — peerages, baronetcies, knighthoods — is a criminal offence under the Honours (Prevention of Abuses) Act 1925, and we do not understand how any service claiming to sell such a title would get around that Act. The Scottish barony stands apart only because it is not an honour in the gift of the Crown but existing heritable property, expressly preserved as transferable in 2004 — everything else offered for sale as a “title” is a novelty, not nobility.",
     body: (
       <>
         <p>
@@ -396,6 +397,22 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>
           ). So a barony can be acquired — but a souvenir “lordship” or “lairdship” is not a title at all.
         </p>
+        <p className="mt-4">
+          More broadly, it is a common myth that one can simply buy one’s way into the genuine nobility of the United
+          Kingdom. The sale of honours — peerages, baronetcies, knighthoods — is a criminal offence under the{" "}
+          <a
+            href="https://www.legislation.gov.uk/ukpga/1925/72"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Honours (Prevention of Abuses) Act 1925
+          </a>
+          , and we do not understand how any service claiming to sell such a title would get around that Act. The
+          Scottish barony stands apart only because it is not an honour in the gift of the Crown but existing heritable
+          property, expressly preserved as transferable in 2004 — everything else offered for sale as a “title” is a
+          novelty, not nobility.
+        </p>
       </>
     ),
     authority: (
@@ -409,13 +426,22 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Court of the Lord Lyon, “Lairds”
         </a>{" "}
         (archived 2012): “the term ‘laird’ … is a description rather than a title”, “not appropriate for … the owner of
-        a small souvenir plot of land”, and “not synonymous with that of ‘lord’ or ‘lady’”.
+        a small souvenir plot of land”, and “not synonymous with that of ‘lord’ or ‘lady’”. On the sale of honours:{" "}
+        <a
+          href="https://www.legislation.gov.uk/ukpga/1925/72"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Honours (Prevention of Abuses) Act 1925
+        </a>{" "}
+        — legislation.gov.uk.
       </>
     ),
   },
   {
     q: "What is a territorial designation (TD), and is it the same as a barony?",
-    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a title of nobility; a territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission, but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for three generations, or 82 years; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a barony or peerage title. TDs belong mainly to lairds (landowners of historic estates) and long-established landed families. A baron may hold one too: where he owns the lands historically associated with his barony and is so recognised by the Lord Lyon, he may be “Surname of [TD]” as well as “Baron of [Barony]” — though the designation and the barony remain distinct. A few Scottish peers also carry a designation in their surname: The Rt Hon Jean Drummond of Megginch, 16th Baroness Strange (d. 2005), had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage Strange, which carries no territorial element; The Rt Hon James Borthwick of that Ilk, 25th Lord Borthwick, and The Rt Hon Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name: The Rt Hon Donald Cameron of Lochiel, Lord Cameron of Lochiel — “Lord Cameron of Lochiel” is a peerage title, distinct from his surname “Cameron of Lochiel”, which carries the territorial designation. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference. The usage is continental in character: the Scots “of” before a placename does the work of the Continent's nobiliary particles — the German von, the French and Spanish de — and has no true counterpart elsewhere in the British Isles.",
+    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a title of nobility; a territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission, but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for three generations, or 82 years; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a barony or peerage title. TDs belong mainly to lairds (landowners of historic estates) and long-established landed families. A baron may hold one too: where he owns the lands historically associated with his barony and is so recognised by the Lord Lyon, he may be “Surname of [TD]” as well as “Baron of [Barony]” — though the designation and the barony remain distinct. A few Scottish peers also carry a designation in their surname: The Rt Hon Jean Drummond of Megginch, 16th Baroness Strange (d. 2005), had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage Strange, which carries no territorial element; The Rt Hon James Borthwick of that Ilk, 25th Lord Borthwick, and The Rt Hon Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name: The Rt Hon Donald Cameron of Lochiel, Lord Cameron of Lochiel — “Lord Cameron of Lochiel” is a peerage title, distinct from his surname “Cameron of Lochiel”, which carries the territorial designation. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference. The usage is continental in character: the Scots “of” before a placename does the work of the Continent's nobiliary particles — the German von, the French and Spanish de. The territorial “of” does not exist in the United Kingdom outside Scotland: UK institutions such as HM Passport Office and the College of Arms refer “of” surnames to the Lord Lyon, and an “of” surname marks its bearer as Scottish.",
     body: (
       <>
         <p>
@@ -474,7 +500,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           The usage is continental in character: the Scots <em>“of”</em> before a placename does the work of the
           Continent’s nobiliary particles — the German <em>von</em>, the French and Spanish <em>de</em> — naming a
           family after its territory. It is a custom Scotland shares with Europe, in keeping with the rest of its
-          nobiliary practice, and one with no true counterpart elsewhere in the British Isles.
+          nobiliary practice. The territorial “of” does not exist in the United Kingdom outside Scotland: UK
+          institutions such as HM Passport Office and the College of Arms refer “of” surnames to the Lord Lyon, and an
+          “of” surname marks its bearer as Scottish.
         </p>
       </>
     ),
@@ -774,6 +802,10 @@ const glossary: { term: string; def: string }[] = [
     def: "A dignity of the Baronage of Scotland — a title of nobility ranking below the peerage. Historically attached to land held of the Crown, it has, since the 2004 reform, been a personal, non-territorial dignity. Its holder is a baron, or “minor baron” — noble, but not a peer.",
   },
   {
+    term: "Scottish feudal barony",
+    def: "A now incorrect and defunct historical term. Baronies were feudal until 28 November 2004, when the feudal system was abolished; extant baronies continue as personal, non-territorial dignities, so a living barony is no longer “feudal”. The precise term for the historic character is “quondam” (formerly) feudal barony.",
+  },
+  {
     term: "Minor baron",
     def: "A holder of a Scottish barony — a member of Scotland's titled nobility ranking below the peerage. The term used by the Court of the Lord Lyon to distinguish these barons from barons of the peerage.",
   },
@@ -811,7 +843,7 @@ const glossary: { term: string; def: string }[] = [
   },
   {
     term: "Territorial designation (TD)",
-    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility, and is separate from a barony: a person may hold either, both, or neither.",
+    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility, and is separate from a barony: a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
   },
   {
     term: "Of that Ilk",
