@@ -434,7 +434,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
       <>
         <p>
           No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a
-          title of nobility. A distinctly Scottish territorial designation — the “Surname of Place” form, such as
+          title of nobility. The distinctly Scottish territorial designation “Surname of Place” form, such as
           “Kerr of Ardgowan” — is part of a person’s family name, not a title of nobility. The two are separate, and
           may or may not coincide.
         </p>
@@ -535,7 +535,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Will the Lord Lyon recognise a baron as a baron?",
-    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon.",
+    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon.",
     body: (
       <>
         <p>
@@ -555,7 +555,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           — and exercises his discretion in the petitioner’s favour, he will officially recognise the petitioner as{" "}
           <strong className="font-semibold text-navy">“Baron of [the barony]”</strong> and grant arms with a helmet
           befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry
-          in the Scottish Barony Register as sufficient evidence that the dignity exists.
+          in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without
+          recognition.
         </p>
         <p className="mt-4">
           Recognition is not what makes a baron a baron — the dignity is held as of legal right. But recognition by the
