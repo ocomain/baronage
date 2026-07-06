@@ -221,7 +221,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
-    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so “feudal” is now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility.",
+    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility.",
     body: (
       <>
         <p>
@@ -229,8 +229,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           feudal baronies, because the dignity was attached to land held of the Crown. The{" "}
           <em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em>, which came into force on 28 November 2004,
           ended the feudal system and severed the dignity from the land.
-          Extant baronies were expressly preserved, but the word <em>“feudal”</em> is now dated as a descriptor of a
-          living barony — the titles were retained specifically as{" "}
+          Extant baronies were expressly preserved, but the feudal aspects and the word <em>“feudal”</em> are now dated
+          as a descriptor of a living barony — the titles were retained specifically as{" "}
           <strong className="font-semibold text-navy">personal, non-territorial dignities</strong>.
         </p>
         <p className="mt-4">
