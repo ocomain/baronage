@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { SITE_URL } from "@/lib/site";
 
@@ -73,7 +72,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, historically recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage.",
     body: (
       <>
         <p>
@@ -88,7 +87,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           used to distinguish a Scottish baron from a peer.
         </p>
         <p className="mt-4">
-          Scotland, like France and much of continental Europe, historically recognised{" "}
+          Scotland, like France and much of continental Europe, recognised{" "}
           <strong className="font-semibold text-navy">both peerage and non-peerage nobility</strong> — the baron
           belongs to the latter. Scots nobiliary practice followed continental custom in this, which is why a barony
           can be a genuine title of nobility without being a peerage.
@@ -942,43 +941,40 @@ export default function BaroniesExplainedPage() {
 
       <Section tone="parchment">
         <Container size="prose">
-          <Reveal>
-            <nav
-              aria-label="On this page"
-              className="mb-14 rounded-sm border border-parchment-300/70 bg-parchment-50/70 px-6 py-6 sm:px-8"
-            >
-              <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
-                On this page
-              </p>
-              <ol className="mt-4 space-y-2.5">
-                {orderedFaqs.map((f, i) => (
-                  <li key={f.q} className="flex gap-3 leading-snug">
-                    <span className="font-sans text-sm tabular-nums text-gold-deep/70">{i + 1}.</span>
-                    <a href={`#${slugify(f.q)}`} className={intLink}>
-                      {f.q}
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          </Reveal>
+          <nav
+            aria-label="On this page"
+            className="mb-14 rounded-sm border border-parchment-300/70 bg-parchment-50/70 px-6 py-6 sm:px-8"
+          >
+            <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+              On this page
+            </p>
+            <ol className="mt-4 space-y-2.5">
+              {orderedFaqs.map((f, i) => (
+                <li key={f.q} className="flex gap-3 leading-snug">
+                  <span className="font-sans text-sm tabular-nums text-gold-deep/70">{i + 1}.</span>
+                  <a href={`#${slugify(f.q)}`} className={intLink}>
+                    {f.q}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
           <div className="space-y-14">
             {orderedFaqs.map((f, i) => {
               const slug = slugify(f.q);
               return (
-              <Reveal key={f.q} delay={Math.min(i * 0.04, 0.16)}>
-                <article
-                  id={slug}
-                  className={`scroll-mt-32 lg:scroll-mt-44 ${i > 0 ? "border-t border-parchment-300/70 pt-12" : ""}`}
-                >
-                  <h2 className="font-display text-2xl text-navy sm:text-3xl">{f.q}</h2>
-                  <div className="mt-5 leading-relaxed text-ink-soft">{f.body}</div>
-                  <p className="mt-6 border-l-2 border-gold/50 pl-4 font-sans text-sm leading-relaxed text-muted">
-                    <span className="font-semibold uppercase tracking-[0.14em] text-gold-deep">Authority:</span>{" "}
-                    {f.authority}
-                  </p>
-                </article>
-              </Reveal>
+              <article
+                key={f.q}
+                id={slug}
+                className={`scroll-mt-32 lg:scroll-mt-44 ${i > 0 ? "border-t border-parchment-300/70 pt-12" : ""}`}
+              >
+                <h2 className="font-display text-2xl text-navy sm:text-3xl">{f.q}</h2>
+                <div className="mt-5 leading-relaxed text-ink-soft">{f.body}</div>
+                <p className="mt-6 border-l-2 border-gold/50 pl-4 font-sans text-sm leading-relaxed text-muted">
+                  <span className="font-semibold uppercase tracking-[0.14em] text-gold-deep">Authority:</span>{" "}
+                  {f.authority}
+                </p>
+              </article>
               );
             })}
           </div>
@@ -987,62 +983,56 @@ export default function BaroniesExplainedPage() {
 
       <Section tone="parchment" className="border-t border-parchment-300/60">
         <Container size="prose">
-          <Reveal>
-            <h2 className="font-display text-2xl text-navy sm:text-3xl">Glossary of terms</h2>
-            <GoldRule className="mt-5" align="start" />
-            <dl className="mt-8 space-y-6">
-              {glossary.map((g) => (
-                <div key={g.term}>
-                  <dt className="font-display text-lg text-navy">{g.term}</dt>
-                  <dd className="mt-1.5 leading-relaxed text-ink-soft">{g.def}</dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
+          <h2 className="font-display text-2xl text-navy sm:text-3xl">Glossary of terms</h2>
+          <GoldRule className="mt-5" align="start" />
+          <dl className="mt-8 space-y-6">
+            {glossary.map((g) => (
+              <div key={g.term}>
+                <dt className="font-display text-lg text-navy">{g.term}</dt>
+                <dd className="mt-1.5 leading-relaxed text-ink-soft">{g.def}</dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </Section>
 
       <Section tone="cream" className="border-t border-parchment-300/60">
         <Container size="prose">
-          <Reveal>
-            <h2 className="font-display text-2xl text-navy sm:text-3xl">Primary sources</h2>
-            <GoldRule className="mt-5" align="start" />
-            <ul className="mt-8 space-y-3.5 leading-relaxed text-ink-soft">
-              {sources.map((s, i) => (
-                <li key={i} className="flex gap-4">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
-                  <span>{s}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-10 border-t border-parchment-300/70 pt-6 font-sans text-base leading-relaxed text-ink-soft">
-              This page is intended as general education on Scots nobiliary law and does not address the history or
-              succession of any individual title. Readers researching a specific barony should{" "}
-              <a href="mailto:secretary@baronage.com" className={intLink}>
-                contact us
-              </a>{" "}
-              to consult with our genealogist, the relevant charters, and independent genealogical scholarship.
-            </p>
-          </Reveal>
+          <h2 className="font-display text-2xl text-navy sm:text-3xl">Primary sources</h2>
+          <GoldRule className="mt-5" align="start" />
+          <ul className="mt-8 space-y-3.5 leading-relaxed text-ink-soft">
+            {sources.map((s, i) => (
+              <li key={i} className="flex gap-4">
+                <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
+                <span>{s}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-10 border-t border-parchment-300/70 pt-6 font-sans text-base leading-relaxed text-ink-soft">
+            This page is intended as general education on Scots nobiliary law and does not address the history or
+            succession of any individual title. Readers researching a specific barony should{" "}
+            <a href="mailto:secretary@baronage.com" className={intLink}>
+              contact us
+            </a>{" "}
+            to consult with our genealogist, the relevant charters, and independent genealogical scholarship.
+          </p>
         </Container>
       </Section>
 
       <Section tone="navyDeep" className="text-center">
         <Container size="prose">
-          <Reveal>
-            <h2 className="text-3xl text-parchment-50 sm:text-4xl">Explore further.</h2>
-            <p className="mx-auto mt-6 max-w-xl leading-relaxed text-parchment-200/85">
-              The history of the baronage, the Roll of Scottish Barons, and the correct forms of address.
-            </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <ButtonLink href="/history" variant="gold">
-                The History
-              </ButtonLink>
-              <ButtonLink href="/the-roll" variant="outlineLight">
-                The Roll
-              </ButtonLink>
-            </div>
-          </Reveal>
+          <h2 className="text-3xl text-parchment-50 sm:text-4xl">Explore further.</h2>
+          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-parchment-200/85">
+            The history of the baronage, the Roll of Scottish Barons, and the correct forms of address.
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <ButtonLink href="/history" variant="gold">
+              The History
+            </ButtonLink>
+            <ButtonLink href="/the-roll" variant="outlineLight">
+              The Roll
+            </ButtonLink>
+          </div>
         </Container>
       </Section>
     </>
