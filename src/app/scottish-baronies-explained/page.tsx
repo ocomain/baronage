@@ -429,18 +429,24 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "What is a territorial designation (TD), and is it the same as a barony?",
-    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a title of nobility; a territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission, but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for three generations, or 82 years; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a barony or peerage title. TDs belong mainly to lairds (landowners of historic estates) and long-established landed families. A baron may hold one too: where he owns the lands historically associated with his barony and is so recognised by the Lord Lyon, he may be “Surname of [TD]” as well as “Baron of [Barony]” — though the designation and the barony remain distinct. A few Scottish peers also carry a designation in their surname: The Rt Hon Jean Drummond of Megginch, 16th Baroness Strange (d. 2005), had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage Strange, which carries no territorial element; The Rt Hon James Borthwick of that Ilk, 25th Lord Borthwick, and The Rt Hon Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name: The Rt Hon Donald Cameron of Lochiel, Lord Cameron of Lochiel — “Lord Cameron of Lochiel” is a peerage title, distinct from his surname “Cameron of Lochiel”, which carries the territorial designation. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference. The usage is continental in character: the Scots “of” before a placename does the work of the Continent's nobiliary particles — the German von, the French and Spanish de. The territorial “of” does not exist in the United Kingdom outside Scotland: UK institutions such as HM Passport Office and the College of Arms refer “of” surnames to the Lord Lyon, and an “of” surname marks its bearer as Scottish.",
+    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a title of nobility; a distinctly Scottish territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission (although the Lord Lyon's recognition of the barony title in the holder's favour is nonetheless helpful), but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for three generations, or 82 years; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a barony or peerage title. TDs belong mainly to lairds (landowners of historic estates) and long-established landed families. A baron may hold one too: where he owns the lands historically associated with his barony and is so recognised by the Lord Lyon, he may be “Surname of [TD]” as well as “Baron of [Barony]” — though the designation and the barony remain distinct. A few Scottish peers also carry a designation in their surname: The Rt Hon Jean Drummond of Megginch, 16th Baroness Strange (d. 2005), had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage Strange, which carries no territorial element; The Rt Hon James Borthwick of that Ilk, 25th Lord Borthwick, and The Rt Hon Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name: The Rt Hon Donald Cameron of Lochiel, Lord Cameron of Lochiel — “Lord Cameron of Lochiel” is a peerage title, distinct from his surname “Cameron of Lochiel”, which carries the territorial designation. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference. The usage is continental in character: the Scots “of” before a placename does the work of the Continent's nobiliary particles — the German von, the French and Spanish de. The territorial “of” does not exist in the United Kingdom outside Scotland: UK institutions such as HM Passport Office and the College of Arms refer “of” surnames to the Lord Lyon, and an “of” surname marks its bearer as Scottish.",
     body: (
       <>
         <p>
           No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a
-          title of nobility. A territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is
-          part of a person’s family name, not a title of nobility. The two are separate, and may or may not coincide.
+          title of nobility. A distinctly Scottish territorial designation — the “Surname of Place” form, such as
+          “Kerr of Ardgowan” — is part of a person’s family name, not a title of nobility. The two are separate, and
+          may or may not coincide.
         </p>
         <p className="mt-4">
           A baron may use the barony title (for example “Baron of X”) as a matter of legal right, without the Lord
-          Lyon’s permission. A territorial designation is different: it must be authorised by the Court of the Lord
-          Lyon, and is recognised only where the applicant owns a substantial estate. In the{" "}
+          Lyon’s permission — although the Lord Lyon’s recognition of the barony title in the holder’s favour is
+          nonetheless helpful (see{" "}
+          <a href="#will-the-lord-lyon-recognise-a-baron-as-a-baron" className={intLink}>
+            Will the Lord Lyon recognise a baron as a baron?
+          </a>
+          ). A territorial designation is different: it must be authorised by the Court of the Lord Lyon, and is
+          recognised only where the applicant owns a substantial estate. In the{" "}
           <a
             href="https://vlex.co.uk/vid/stephen-kerr-of-ardgowan-807229025"
             target="_blank"
@@ -524,6 +530,56 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Scottish Armory and Heraldry
         </a>{" "}
         (2019).
+      </>
+    ),
+  },
+  {
+    q: "Will the Lord Lyon recognise a baron as a baron?",
+    a: "Yes — at the discretion of the sitting Lord Lyon. In a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon.",
+    body: (
+      <>
+        <p>
+          <strong className="font-semibold text-navy">Yes — at the discretion of the sitting Lord Lyon.</strong> In a
+          petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the
+          petitioner is a <strong className="font-semibold text-navy">“virtuous and well deserving person”</strong> —
+          the standard set by the{" "}
+          <a
+            href="https://www.legislation.gov.uk/aosp/1672/47"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Lyon King of Arms Act 1672
+          </a>{" "}
+          — and exercises his discretion in the petitioner’s favour, he will officially recognise the petitioner as{" "}
+          <strong className="font-semibold text-navy">“Baron of [the barony]”</strong> and grant arms with a helmet
+          befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry
+          in the Scottish Barony Register as sufficient evidence that the dignity exists.
+        </p>
+        <p className="mt-4">
+          Recognition is not what makes a baron a baron — the dignity is held as of legal right. But recognition by the
+          Lord Lyon is the formal mark of the title within Scotland’s heraldic system, and it rests with the judgement
+          of each sitting Lord Lyon.
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        <a
+          href="https://www.legislation.gov.uk/aosp/1672/47"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Lyon King of Arms Act 1672
+        </a>{" "}
+        — grants of arms to “virtuous and well deserving persons”; the Lord Lyon’s published policy on baronies
+        acquired after 28 November 2004 — official recognition as “Baron of [the barony]” where the dignity is proven
+        and the discretion is exercised in the petitioner’s favour;{" "}
+        <a href="https://www.courtofthelordlyon.scot" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Court of the Lord Lyon
+        </a>
+        .
       </>
     ),
   },
@@ -702,6 +758,7 @@ const FAQ_ORDER = [
   "are-scottish-barony-titles-legitimate-or-a-scam",
   "can-you-buy-a-lord-or-laird-title-in-scotland",
   "what-is-a-territorial-designation-td-and-is-it-the-same-as-a-barony",
+  "will-the-lord-lyon-recognise-a-baron-as-a-baron",
   "what-is-the-difference-between-a-barony-and-a-lordship-of-the-manor",
 ];
 const orderedFaqs = FAQ_ORDER.map((slug) => faqs.find((f) => slugify(f.q) === slug)).filter(
