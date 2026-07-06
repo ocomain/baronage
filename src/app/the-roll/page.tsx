@@ -28,7 +28,7 @@ const features = [
   },
 ];
 
-const organisations: { name: string; href?: string; linkLabel?: string; body: string }[] = [
+const organisations: { name: string; href?: string; linkLabel?: string; body: string; nofollow?: boolean }[] = [
   {
     name: "The Roll of the Baronetage",
     href: "https://www.baronetage.org",
@@ -51,12 +51,14 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
     name: "The Scottish Barony Register",
     href: "https://scottishbaronyregister.org",
     linkLabel: "scottishbaronyregister.org",
+    nofollow: true,
     body: "Established by members of the Scottish legal profession upon the abolition of feudal tenure in 2004, under a Custodian whose certification the Lord Lyon accepts as evidence of title. We recognise the Register as an authoritative source for inclusion on the Roll, and we recommend that every holder of a Scottish barony record their legal title there. The Roll is complementary to the Register, not in competition with it: the Register records transfers of ownership since 2004, while the Roll also documents the wider historic baronage — dignities held by dynastic succession, by chiefs, baronets and peers — which have never changed families in the modern era and therefore appear in no register of transfers. For these, the records of the Lyon Office stand as primary evidence.",
   },
   {
     name: "The Convention of the Baronage of Scotland",
     href: "https://www.scotsbarons.org",
     linkLabel: "scotsbarons.org",
+    nofollow: true,
     body: "The historic representative body of Scotland’s baronage, revived in the twentieth century with the encouragement of Lord Lyon Sir Thomas Innes of Learney. Though quieter in recent years, the Convention holds a distinguished place in the modern history of the baronage, and the Association honours it.",
   },
   {
@@ -327,7 +329,7 @@ export default function TheRollPage() {
                         <a
                           href={o.href}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel={o.nofollow ? "nofollow noopener noreferrer" : "noopener noreferrer"}
                           className="inline-flex items-center gap-1.5 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-muted transition-colors hover:text-gold-deep"
                         >
                           {o.linkLabel}

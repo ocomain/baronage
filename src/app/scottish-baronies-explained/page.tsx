@@ -323,14 +323,14 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         </p>
         <p className="mt-4">
           In practice, the market is very small. The{" "}
-          <a href="https://scottishbaronyregister.org" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <a href="https://scottishbaronyregister.org" target="_blank" rel="nofollow noopener noreferrer" className={extLink}>
             Scottish Barony Register
           </a>
           , the private register that records the legal transfer of baronies, publishes{" "}
           <a
             href="https://scottishbaronyregister.org/annual-reports"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className={extLink}
           >
             annual reports of the Custodian
@@ -745,7 +745,7 @@ const sources: ReactNode[] = [
     <a
       href="https://scottishbaronyregister.org/annual-reports"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="nofollow noopener noreferrer"
       className={extLink}
     >
       Annual Reports of the Custodian
