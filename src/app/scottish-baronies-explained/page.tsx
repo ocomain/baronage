@@ -590,7 +590,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "How does succession to a barony work?",
-    a: "Scottish titles have historically had more liberal succession rules than their English counterparts, with some descending through female lines. The earliest baronies carried remainders to “heirs and assignees”. Before the Union, titles were often resigned to the Crown and reissued with a new destination; the Conveyancing (Scotland) Act 1874 ended Crown confirmation charters, after which assignation by legal conveyance and registration established the new baron. This is what created the so-called feudal earl. Since 2004 the barony is a non-territorial personal dignity that retains the old remainder to heirs and assignees: it can be transferred or bequeathed by will, and otherwise descends under the pre-1964 rules preserved for titles and dignities.",
+    a: "Scottish titles have historically had more liberal succession rules than their English counterparts, with some descending through female lines. The earliest baronies carried remainders to “heirs and assignees”. Before the Union, titles were designed to be perpetual and were often resigned to the Crown and reissued with a new destination; the Conveyancing (Scotland) Act 1874 ended Crown confirmation charters, after which assignation by legal conveyance and registration established the new baron. This is what created the so-called feudal earl. Since 2004 the barony is a non-territorial personal dignity that retains the old remainder to heirs and assignees: it can be transferred or bequeathed by will, and otherwise descends under the pre-1964 rules preserved for titles and dignities.",
     body: (
       <>
         <p>
@@ -603,7 +603,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           into personal peerages attached to the individual.
         </p>
         <p className="mt-4">
-          Before the Union, Scotland operated differently from England. Titles were often resigned to the Crown and
+          Before the Union, Scotland operated differently from England. Titles were designed to be perpetual and were
+          often resigned to the Crown and
           reissued with a new destination — for instance to a kinsman or a member of the clan — giving the system a
           flexibility the English peerage lacked. When a barony passed to a new family or baron, the practice was to resign the
           title and obtain reconfirmation of the feudal grant from the Crown. The Conveyancing (Scotland) Act 1874
