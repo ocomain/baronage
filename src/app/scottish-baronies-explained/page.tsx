@@ -303,11 +303,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can a Scottish barony be bought and sold?",
-    a: "In law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register record on the order of one to two transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald of the Isle of Skye was reported as offered for sale at more than £1 million.",
+    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register record on the order of one to two transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald of the Isle of Skye was reported as offered for sale at more than £1 million.",
     body: (
       <>
         <p>
-          This is widely misunderstood in both directions. In law,{" "}
+          This is widely misunderstood in both directions. Technically, in law,{" "}
           <strong className="font-semibold text-navy">yes</strong>: since the 2004 reform baronies are freely
           transferable dignities and may pass by inheritance, bequest, gift, or assignation, with the transferee
           becoming the new holder.
@@ -370,7 +370,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can you buy a “Lord” or “Laird” title in Scotland?",
-    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. The Court adds that “laird” is not synonymous with “lord” or “lady”. A genuine Scottish barony is a different matter entirely: it is a real dignity of nobility, lawfully transferable since the 2004 reform — so a barony can be acquired, but a souvenir “lordship” or “lairdship” is not a title at all. More broadly, it is a common myth that one can simply buy one's way into the genuine nobility of the United Kingdom: the Honours (Prevention of Abuses) Act 1925 makes it a criminal offence to trade in the grant of honours, so no new peerage, baronetcy or knighthood can lawfully be bought at any price, and we do not understand how any service claiming to sell such a title would get around that Act. The Act applies to new grants of honour, not to existing heritable dignities — which is precisely where the Scottish barony stands apart: an existing incorporeal hereditament, expressly preserved as transferable in 2004, involving no new grant from the Crown. Everything else offered for sale as a “title” is a novelty, not nobility.",
+    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. More broadly, it is a common myth that one can simply buy one's way into the genuine nobility of the United Kingdom: the Honours (Prevention of Abuses) Act 1925 makes it a criminal offence to trade in the grant of honours, so no new peerage, baronetcy or knighthood can lawfully be bought at any price. The Act applies to new grants of honour, not to existing heritable dignities.",
     body: (
       <>
         <p>
@@ -386,16 +386,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>{" "}
           states that “laird” is{" "}
           <strong className="font-semibold text-navy">“a description rather than a title”</strong>, and that a souvenir
-          plot is not sufficient to bring a person within the Lyon Court’s jurisdiction to seek a grant of arms. The
-          Court adds that “laird” is not synonymous with “lord” or “lady”.
-        </p>
-        <p className="mt-4">
-          A genuine <strong className="font-semibold text-navy">Scottish barony</strong> is a different matter
-          entirely: it is a real dignity of nobility, lawfully transferable since the 2004 reform (see{" "}
-          <a href="#can-a-scottish-barony-be-bought-and-sold" className={intLink}>
-            Can a Scottish barony be bought and sold?
-          </a>
-          ). So a barony can be acquired — but a souvenir “lordship” or “lairdship” is not a title at all.
+          plot is not sufficient to bring a person within the Lyon Court’s jurisdiction to seek a grant of arms.
         </p>
         <p className="mt-4">
           More broadly, it is a common myth that one can simply buy one’s way into the genuine nobility of the United
@@ -409,11 +400,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
             Honours (Prevention of Abuses) Act 1925
           </a>{" "}
           makes it a criminal offence to trade in the grant of honours: no new peerage, baronetcy or knighthood can
-          lawfully be bought at any price, and we do not understand how any service claiming to sell such a title would
-          get around that Act. The Act applies to new grants of honour, not to existing heritable dignities — which is
-          precisely where the Scottish barony stands apart: an existing incorporeal hereditament, expressly preserved
-          as transferable in 2004, involving no new grant from the Crown. Everything else offered for sale as a “title” is a
-          novelty, not nobility.
+          lawfully be bought at any price. The Act applies to new grants of honour, not to existing heritable
+          dignities.
         </p>
       </>
     ),
@@ -428,7 +416,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Court of the Lord Lyon, “Lairds”
         </a>{" "}
         (archived 2012): “the term ‘laird’ … is a description rather than a title”, “not appropriate for … the owner of
-        a small souvenir plot of land”, and “not synonymous with that of ‘lord’ or ‘lady’”. On the sale of honours:{" "}
+        a small souvenir plot of land”. On the sale of honours:{" "}
         <a
           href="https://www.legislation.gov.uk/ukpga/1925/72"
           target="_blank"
