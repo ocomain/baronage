@@ -1028,10 +1028,13 @@ export default function BaroniesExplainedPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-10 border-t border-parchment-300/70 pt-6 font-sans text-sm leading-relaxed text-muted">
+            <p className="mt-10 border-t border-parchment-300/70 pt-6 font-sans text-base leading-relaxed text-ink-soft">
               This page is intended as general education on Scots nobiliary law and does not address the history or
-              succession of any individual title. Readers researching a specific barony should consult the Lord Lyon,
-              the relevant charters, and independent genealogical scholarship.
+              succession of any individual title. Readers researching a specific barony should{" "}
+              <a href="mailto:secretary@baronage.com" className={intLink}>
+                contact us
+              </a>{" "}
+              to consult with our genealogist, the relevant charters, and independent genealogical scholarship.
             </p>
           </Reveal>
         </Container>
