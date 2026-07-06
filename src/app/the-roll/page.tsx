@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -28,7 +29,7 @@ const features = [
   },
 ];
 
-const organisations: { name: string; href?: string; linkLabel?: string; body: string; nofollow?: boolean }[] = [
+const organisations: { name: string; href?: string; linkLabel?: string; body: ReactNode; nofollow?: boolean }[] = [
   {
     name: "The Roll of the Baronetage",
     href: "https://www.baronetage.org",
@@ -39,7 +40,27 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: st
     name: "The Roll of the Peerage",
     href: "https://www.college-of-arms.gov.uk/resources/roll-of-the-peerage",
     linkLabel: "college-of-arms.gov.uk",
-    body: "Established by royal warrant of Queen Elizabeth II on 1 June 2004, maintained by the Crown Office and published by the College of Arms. It registers peers of England, Scotland, Ireland, Great Britain and the United Kingdom, and is maintained independently of the Baronetage. A peerage, by contrast, stands in law whether enrolled or not: a peer remains a peer in legal title, and may bear the title in private life — upon a passport, for instance — with no place on the Roll, which governs only official recognition, such as precedence at ceremonies or public office. A number of established hereditary peers, now private citizens not in the House of Lords, are indeed absent from it (e.g. the Earl of Moray, Baron Inchiquin, Baron Teynham, etc), yet bear their titles in the ordinary way. (A Scottish baron, as noted elsewhere on this site, is not a peer, and holds no place upon it.)",
+    body: (
+      <>
+        Established by royal warrant of Queen Elizabeth II on 1 June 2004, maintained by the Crown Office and
+        published by the College of Arms. It registers peers of England, Scotland, Ireland, Great Britain and the
+        United Kingdom, and is maintained independently of the Baronetage. A peerage, by contrast, stands in law
+        whether enrolled or not: a peer remains a peer in legal title, and may bear the title in private life — upon a
+        passport, for instance — with no place on the Roll, which governs only official recognition, such as
+        precedence at ceremonies or public office. A number of established hereditary peers, now private citizens not
+        in the House of Lords, are indeed absent from it (e.g. the Earl of Moray, Baron Inchiquin, Baron Teynham,
+        etc), yet bear their titles in the ordinary way. (A Scottish baron, as noted elsewhere on this site, is not a
+        peer, and holds no place upon it.) For an instructive example of recognition versus legal title — the removal
+        of Andrew Mountbatten Windsor's name from this Roll — see{" "}
+        <Link
+          href="/scottish-baronies-explained#what-is-the-pledge-and-what-does-it-change"
+          className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+        >
+          Scottish Baronies, Explained
+        </Link>
+        .
+      </>
+    ),
   },
   {
     name: "The Court of the Lord Lyon",
