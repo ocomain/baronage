@@ -535,11 +535,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Will the Lord Lyon recognise a baron as a baron?",
-    a: "Yes — at the discretion of the sitting Lord Lyon. In a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon.",
+    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. For baronies acquired after 28 November 2004, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon.",
     body: (
       <>
         <p>
-          <strong className="font-semibold text-navy">Yes — at the discretion of the sitting Lord Lyon.</strong> In a
+          <strong className="font-semibold text-navy">Maybe — this is at the discretion of the sitting Lord Lyon.</strong>{" "}
+          Traditionally, in a
           petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the
           petitioner is a <strong className="font-semibold text-navy">“virtuous and well deserving person”</strong> —
           the standard set by the{" "}
