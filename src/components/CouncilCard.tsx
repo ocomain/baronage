@@ -96,7 +96,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
             </p>
           )}
           {m.alsoSub && (
-            <p className="mt-1 font-serif text-base italic leading-snug text-gold-light/90 sm:text-sm">
+            <p className="mt-1.5 font-serif text-xl italic leading-snug text-gold-light sm:text-lg">
               {m.alsoSub}
             </p>
           )}
@@ -163,7 +163,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                   <div className="p-6 sm:p-8">
                     <h3 className="font-display text-2xl leading-tight text-navy">{m.formal ?? m.name}</h3>
                     {m.also && <p className="mt-1.5 whitespace-pre-line font-serif text-lg italic text-gold-deep">{m.also}</p>}
-                    {m.alsoSub && <p className="mt-1 font-serif text-sm italic text-gold-deep/90">{m.alsoSub}</p>}
+                    {m.alsoSub && <p className="mt-1.5 font-serif text-lg italic text-gold-deep">{m.alsoSub}</p>}
                     <div className="mt-4 h-px w-16 bg-gold/60" aria-hidden />
                     <p className="mt-4 leading-relaxed text-ink-soft">{m.bio}</p>
                   </div>
