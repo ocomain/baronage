@@ -915,11 +915,11 @@ const sources: ReactNode[] = [
 const glossary: { term: string; def: string }[] = [
   {
     term: "Scottish feudal barony",
-    def: "A now incorrect and defunct historical term. Baronies were feudal until 28 November 2004, when the feudal system was abolished; extant baronies continue as personal, non-territorial dignities, so a living barony is no longer “feudal”. The precise term for the historic character is “quondam” (formerly) feudal barony.",
+    def: "A now incorrect and defunct historical term. Baronies were feudal until 28 November 2004, when the feudal system was abolished along with all feudal aspects; extant baronies continue as personal, non-territorial dignities, so a living barony is no longer “feudal”. The precise term for the historic character is “quondam” (formerly) feudal barony.",
   },
   {
     term: "Scottish barony",
-    def: "A dignity which can be baron or lord or earl of the Baronage of Scotland — a title of nobility ranking below the peerage. Historically attached to land held of the Crown, it has, since the 2004 reform, been a personal, non-territorial dignity. Its holder is a baron, or “minor baron” — noble, but not a peer.",
+    def: "A dignity which can be baron or lord or earl in the Baronage of Scotland — a title of nobility ranking below the peerage. Historically attached to land held of the Crown, it has, since the 2004 reform, been a personal, non-territorial dignity. Its holder is a baron, or “minor baron” — noble, but not a peer.",
   },
   {
     term: "Minor baron",
