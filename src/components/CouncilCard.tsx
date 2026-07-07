@@ -15,6 +15,8 @@ export type CouncilMember = {
   bg?: string;
   bio: string;
   alsoProminent?: boolean;
+  /** Optional smaller line rendered beneath `also` (e.g. a secondary title/role) */
+  alsoSub?: string;
   formal?: string;
   /** Full formal name for image alts / structured data */
   alt?: string;
@@ -93,6 +95,11 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
               {m.also}
             </p>
           )}
+          {m.alsoSub && (
+            <p className="mt-1 font-serif text-base italic leading-snug text-gold-light/90 sm:text-sm">
+              {m.alsoSub}
+            </p>
+          )}
           <button
             type="button"
             onClick={(e) => {
@@ -156,6 +163,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                   <div className="p-6 sm:p-8">
                     <h3 className="font-display text-2xl leading-tight text-navy">{m.formal ?? m.name}</h3>
                     {m.also && <p className="mt-1.5 whitespace-pre-line font-serif text-lg italic text-gold-deep">{m.also}</p>}
+                    {m.alsoSub && <p className="mt-1 font-serif text-sm italic text-gold-deep/90">{m.alsoSub}</p>}
                     <div className="mt-4 h-px w-16 bg-gold/60" aria-hidden />
                     <p className="mt-4 leading-relaxed text-ink-soft">{m.bio}</p>
                   </div>
