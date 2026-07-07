@@ -31,10 +31,11 @@ const members: CouncilMember[] = [
     alt: "Alexander Irvine of Drum, 27th Baron of Drum",
     also: "Chief of his Name",
     alsoProminent: true,
+    alsoSub: "& Scottish Registered Solicitor",
     img: "/council/Irvine.jpg",
     pos: "center 20%",
     popPos: "center 10%",
-    bio: "The Much Hon. Alexander Irvine of Drum, 27th Baron of Drum succeeded his father in 2019 and is Chief of the Name and Arms of Irvine of Drum. The barony descends from the Royal Charter granted to William de Irwyn by Robert the Bruce in 1323, with Drum Castle in Aberdeenshire its caput for seven centuries. Drum is Patron of the Clan Irwin Association, and the barony is pledged as a hereditary title upon the Roll.",
+    bio: "The Much Hon. Alexander Irvine of Drum, 27th Baron of Drum succeeded his father in 2019 and is Chief of the Name and Arms of Irvine of Drum, and a Scottish Registered Solicitor. The barony descends from the Royal Charter granted to William de Irwyn by Robert the Bruce in 1323, with Drum Castle in Aberdeenshire its caput for seven centuries. Drum is Patron of the Clan Irwin Association, and the barony is pledged as a hereditary title upon the Roll.",
   },
   {
     mark: "K",
