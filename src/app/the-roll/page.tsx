@@ -326,16 +326,17 @@ export default function TheRollPage() {
               title="Related Organisations"
               intro={
                 <>
-                  The Roll does not stand alone. It is maintained under the oversight of the Association’s{" "}
+                  The Roll does not stand alone. It draws gladly on the work of Scotland’s established institutions and
+                  is maintained under the oversight of the Association’s{" "}
                   <Link
                     href="/governing-council"
                     className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
                   >
                     Governing Council
                   </Link>{" "}
-                  — among them one of Scotland’s foremost genealogists connected to the Court of the Lord Lyon, a
-                  Scottish Registered Solicitor and a Chief of the Name — and draws gladly on the work of Scotland’s
-                  established institutions.
+                  — among them one of Scotland’s foremost genealogists connected to the Lyon Court, researchers,
+                  scholars, a Scottish Registered Solicitor and Chief of the Name who have held a barony in their family
+                  for 700 years.
                 </>
               }
             />
