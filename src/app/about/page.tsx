@@ -73,6 +73,10 @@ const citations: { source: string; text: string; href?: string; pop?: boolean }[
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
     text: "On the abolition of the feudal system, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity, protected in Scots law.",
   },
+  {
+    source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
+    text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
+  },
 ];
 
 const entities = [
