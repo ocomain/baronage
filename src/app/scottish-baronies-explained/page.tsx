@@ -747,6 +747,68 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
       </>
     ),
   },
+  {
+    q: "How does a Scottish barony differ from an English or Irish feudal barony?",
+    a: "They developed along different lines. Scotland followed the continental pattern of a titled nobility that extends below the peerage — a class of noble barons, with the territorial “of” that answers to the German von or the French de. In England and Ireland the word “baron” went the other way and became the lowest rank of the peerage; there is no English or Irish equivalent of the Scottish non-peerage titled baron. (The Scottish peerage has its own lowest rank, the Lord of Parliament, discussed above.) The earliest English baronies were baronies by tenure — held per baroniam, directly of the Crown, the tenure itself carrying a duty to attend Parliament — but from the thirteenth century the summons came instead by writ. Under the Tenures Abolition Act 1660 many baronies by tenure were converted into baronies by writ, and the rest ceased to exist as recognised feudal baronies, their lands passing into free socage; the courts then closed the door on the older form, the Fitzwalter case (1670) holding that barony by tenure had long been discontinued and the Berkeley case (1861) confirming that baronies by tenure no longer existed. In Ireland the picture is more tangled: an Irish feudal barony was a customary title denoting land held by feudal obligation rather than a rank of nobility, and separately “barony” in Ireland means an administrative division of a county — like an English hundred — which is not a title at all, though spurious titles have been sold trading on those place-names. The Scottish barony followed neither path: neither a peerage nor a mere tenure, but a dignity of a titled nobility, it survived the abolition of the feudal system in 2004, expressly preserved as a personal, non-territorial dignity.",
+    body: (
+      <>
+        <p>
+          They developed along different lines. Scotland followed the continental pattern of a titled nobility that
+          extends below the peerage — a class of noble barons, with the territorial “of” that answers to the German{" "}
+          <em>von</em> or the French <em>de</em>. In England and Ireland the word “baron” went the other way and became
+          the lowest rank of the peerage; there is no English or Irish equivalent of the Scottish non-peerage titled
+          baron. (The Scottish peerage has its own lowest rank, the Lord of Parliament, discussed above.)
+        </p>
+        <p className="mt-4">
+          The earliest English baronies were <em>baronies by tenure</em> — held <em>per baroniam</em>, directly of the
+          Crown, the tenure itself carrying a duty to attend Parliament. From the thirteenth century the summons came
+          instead by writ (a <em>barony by writ</em>). The{" "}
+          <a
+            href="https://www.legislation.gov.uk/aep/Cha2/12/24/introduction"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            Tenures Abolition Act 1660
+          </a>{" "}
+          then swept away the old feudal tenures: many baronies by tenure were converted into baronies by writ, and the
+          rest ceased to exist as recognised feudal baronies, their lands passing into free socage. The courts closed
+          the door on the older form — the <em>Fitzwalter</em> case (1670) held that barony by tenure had long been
+          discontinued, and the <em>Berkeley</em> case (1861) confirmed that baronies by tenure no longer existed.
+        </p>
+        <p className="mt-4">
+          In Ireland the picture is more tangled still. An Irish feudal barony was a customary title denoting land held
+          by feudal obligation rather than a rank of nobility, and its holder sat in no parliament by right of it.
+          Separately — and more commonly — “barony” in Ireland means an administrative division of a county, akin to an
+          English hundred, which is not a title at all; spurious “titles” have been sold trading on those place-names.
+        </p>
+        <p className="mt-4">
+          The Scottish barony followed neither path. Neither a peerage nor a mere tenure, but a dignity of a titled
+          nobility, it came through the abolition of the feudal system in 2004 expressly preserved as a personal,
+          non-territorial dignity — as set out{" "}
+          <a href="#what-did-the-2004-change-actually-do" className={intLink}>
+            above
+          </a>
+          .
+        </p>
+      </>
+    ),
+    authority: (
+      <>
+        <a
+          href="https://www.legislation.gov.uk/aep/Cha2/12/24/introduction"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Tenures Abolition Act 1660
+        </a>{" "}
+        (conversion of feudal tenures to socage); <em>Fitzwalter</em> case (1670) and the <em>Berkeley</em> Peerage
+        case (1861), Committee for Privileges of the House of Lords — barony by tenure obsolete. On Ireland, the
+        distinction between an Irish feudal barony and an administrative barony (a land division of a county).
+      </>
+    ),
+  },
 ];
 
 /** Display order for the questions (drives the table of contents, the visible
@@ -766,6 +828,7 @@ const FAQ_ORDER = [
   "what-is-a-territorial-designation-td-and-is-it-the-same-as-a-barony",
   "will-the-lord-lyon-recognise-a-baron-as-a-baron",
   "what-is-the-difference-between-a-barony-and-a-lordship-of-the-manor",
+  "how-does-a-scottish-barony-differ-from-an-english-or-irish-feudal-barony",
 ];
 const orderedFaqs = FAQ_ORDER.map((slug) => faqs.find((f) => slugify(f.q) === slug)).filter(
   (f): f is (typeof faqs)[number] => Boolean(f),
