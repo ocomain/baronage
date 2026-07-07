@@ -969,6 +969,10 @@ const glossary: { term: string; def: string }[] = [
     term: "Of that Ilk",
     def: "A form of territorial designation used where a family's surname and its lands share the same name — “Borthwick of that Ilk” means “Borthwick of Borthwick”. The two forms are interchangeable.",
   },
+  {
+    term: "Souvenir plot",
+    def: "A novelty micro-parcel of Scottish land — often a square foot or a few square feet — sold online, frequently marketed with a “Lord”, “Lady” or “Laird” label. It confers no title and no nobility: the Court of the Lord Lyon has stated that such a plot is not sufficient even to petition for a grant of arms. It is wholly unconnected with a genuine Scottish barony.",
+  },
 ];
 
 const org = {
