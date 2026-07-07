@@ -595,7 +595,7 @@ export default function ProperAddressPage() {
                       alt="Charter excerpt from Borthwick (1775): in 1416 William ‘Lord Graham’ receives the barony of Mellenok, and in 1420 ‘William Lord of Graham’ the lands of Aldmontrose."
                       width={584}
                       height={262}
-                      className="mx-auto w-full max-w-[12rem] border border-navy/10 shadow-[0_14px_34px_-16px_rgba(8,12,28,0.4)]"
+                      className="mx-auto w-full max-w-md border border-navy/10 shadow-[0_14px_34px_-16px_rgba(8,12,28,0.4)]"
                     />
                   </figure>
                   <p className="mt-6 font-serif text-lg text-navy">
