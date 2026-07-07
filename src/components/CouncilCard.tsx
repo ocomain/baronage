@@ -165,7 +165,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                     {m.also && (
                       <p
                         className={`mt-1.5 whitespace-pre-line font-serif italic leading-snug text-gold-deep ${
-                          m.alsoProminent ? "text-3xl" : "text-lg"
+                          m.alsoProminent ? "text-4xl sm:text-5xl" : "text-lg"
                         }`}
                       >
                         {m.also}
@@ -174,7 +174,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                     {m.alsoSub && (
                       <p
                         className={`mt-1.5 font-serif italic leading-snug text-gold-deep ${
-                          m.alsoProminent ? "text-3xl" : "text-lg"
+                          m.alsoProminent ? "text-4xl sm:text-3xl" : "text-lg"
                         }`}
                       >
                         {m.alsoSub}
