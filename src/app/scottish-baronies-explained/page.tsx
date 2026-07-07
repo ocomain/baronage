@@ -374,7 +374,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can you buy a “Lord” or “Laird” title in Scotland?",
-    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. More broadly, it is a common myth that one can simply buy one's way into the genuine nobility of the United Kingdom: the Honours (Prevention of Abuses) Act 1925 makes it a criminal offence to trade in the grant of honours. The Act applies to new grants of honour by the UK Government, not to existing honours.",
+    a: "A souvenir plot does not make you a Lord or a Laird — this is a widespread misunderstanding. Owning a novelty square of Scottish land confers no title: the Court of the Lord Lyon states that “laird” is “a description rather than a title”, and that a souvenir plot is not sufficient to bring a person within the Lyon Court's jurisdiction to seek a grant of arms. More broadly, it is a common myth that one can simply buy one's way into the genuine nobility of the United Kingdom: the Honours (Prevention of Abuses) Act 1925 makes it a criminal offence to trade in the grant of honours.",
     body: (
       <>
         <p>
@@ -403,8 +403,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           >
             Honours (Prevention of Abuses) Act 1925
           </a>{" "}
-          makes it a criminal offence to trade in the grant of honours. The Act applies to new grants of honour by the
-          UK Government, not to existing honours.
+          makes it a criminal offence to trade in the grant of honours.
         </p>
       </>
     ),
