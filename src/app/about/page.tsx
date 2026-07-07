@@ -52,7 +52,12 @@ const mandate = [
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
 
-const citations: { source: string; text: string; href?: string; pop?: boolean }[] = [
+const citations: { source: string; text: string; href?: string; pop?: boolean; feature?: boolean }[] = [
+  {
+    source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
+    feature: true,
+    text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
+  },
   {
     source: "Court of the Lord Lyon · 1943",
     href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
@@ -72,10 +77,6 @@ const citations: { source: string; text: string; href?: string; pop?: boolean }[
     source: "Scotland Act 2000",
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
     text: "On the abolition of the feudal system, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity, protected in Scots law.",
-  },
-  {
-    source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
-    text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
   },
 ];
 
@@ -160,12 +161,24 @@ export default function AboutPage() {
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {citations.map((c, i) => (
-              <Reveal key={c.source} delay={(i % 2) * 0.1} className="h-full">
-                <figure className="flex h-full flex-col border-l-2 border-gold/60 bg-navy/40 p-7">
-                  <blockquote className="font-serif text-lg italic leading-relaxed text-parchment-100/90">
+              <Reveal key={c.source} delay={(i % 2) * 0.1} className={`h-full ${c.feature ? "md:col-span-2" : ""}`}>
+                <figure
+                  className={`flex h-full flex-col border-l-2 ${
+                    c.feature ? "border-gold bg-navy/60 p-8 sm:p-10" : "border-gold/60 bg-navy/40 p-7"
+                  }`}
+                >
+                  <blockquote
+                    className={`font-serif italic leading-relaxed text-parchment-100/90 ${
+                      c.feature ? "text-2xl sm:text-3xl" : "text-lg"
+                    }`}
+                  >
                     {c.text}
                   </blockquote>
-                  <figcaption className="mt-4 font-sans text-xs uppercase tracking-[0.18em] text-gold-light">
+                  <figcaption
+                    className={`mt-4 font-sans uppercase tracking-[0.18em] text-gold-light ${
+                      c.feature ? "text-sm" : "text-xs"
+                    }`}
+                  >
                     {c.href ? (
                       <a
                         href={c.href}
