@@ -89,7 +89,7 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
           {m.also && (
             <p
               className={`mt-2 whitespace-pre-line font-serif italic leading-snug text-gold-light sm:mt-1.5 ${
-                m.alsoProminent ? "text-4xl sm:text-5xl" : "text-xl sm:text-lg"
+                m.alsoProminent ? "text-4xl sm:text-2xl" : "text-xl sm:text-lg"
               }`}
             >
               {m.also}
