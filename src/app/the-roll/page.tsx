@@ -334,9 +334,8 @@ export default function TheRollPage() {
                   >
                     Governing Council
                   </Link>{" "}
-                  — among them one of Scotland’s foremost genealogists connected to the Lyon Court, researchers,
-                  scholars, a Scottish Registered Solicitor and Chief of the Name who have held a barony in their family
-                  for 700 years.
+                  — among them one of Scotland’s foremost genealogists connected to the Lyon Court, a Scottish
+                  Registered Solicitor and Chief of the Name.
                 </>
               }
             />
