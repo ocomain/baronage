@@ -98,7 +98,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
       <>
         Court of the Lord Lyon, Petition of Maclean of Ardgour (26 February 1943): the Minor Barons of Scotland are
         recognised in the nobiliary court and the Court of Session as a <em>“titled nobility”</em> and form part of the
-        ancient nobility of Scotland.
+        ancient nobility of Scotland. Lord Lyon David Sellar, 2010 [Ref: 57 Lindberg Ptr, Lyon Court]:{" "}
+        <em>
+          “the dignity of baron has a noble character in that it is a right which historically originated in a Crown
+          grant.”
+        </em>
       </>
     ),
   },
