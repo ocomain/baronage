@@ -103,7 +103,7 @@ const stewardship = [
   {
     numeral: "II",
     title: "Keepers of the Roll",
-    body: "A Scottish Registered Solicitor, one of Scotland's foremost genealogists connected to the Court of the Lord Lyon, researchers, scholars and a Chief of the Name who have held a barony in their family for 700 years — who vet and verify entries with accuracy and legal precision.",
+    body: "One of Scotland's foremost genealogists connected to the Lyon court, researchers, scholars, a Scottish Registered Solicitor and Chief of the Name who have held a barony in their family for 700 years — who vet and verify entries with accuracy and legal precision.",
   },
   {
     numeral: "III",
