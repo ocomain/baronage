@@ -969,10 +969,6 @@ const glossary: { term: string; def: string }[] = [
     term: "Of that Ilk",
     def: "A form of territorial designation used where a family's surname and its lands share the same name — “Borthwick of that Ilk” means “Borthwick of Borthwick”. The two forms are interchangeable.",
   },
-  {
-    term: "Souvenir plot",
-    def: "A novelty micro-parcel of Scottish land — often a square foot or a few square feet — sold online, frequently marketed with a “Lord”, “Lady” or “Laird” label. It confers no title and no nobility: the Court of the Lord Lyon has stated that such a plot is not sufficient even to petition for a grant of arms. It is wholly unconnected with a genuine Scottish barony.",
-  },
 ];
 
 const org = {
@@ -1093,6 +1089,12 @@ export default function BaroniesExplainedPage() {
                   </a>
                 </li>
               ))}
+              <li className="flex gap-3 leading-snug">
+                <span className="font-sans text-sm tabular-nums text-gold-deep/70">{orderedFaqs.length + 1}.</span>
+                <a href="#glossary" className={intLink}>
+                  Glossary of terms
+                </a>
+              </li>
             </ol>
           </nav>
           <div className="space-y-14">
@@ -1119,7 +1121,9 @@ export default function BaroniesExplainedPage() {
 
       <Section tone="parchment" className="border-t border-parchment-300/60">
         <Container size="prose">
-          <h2 className="font-display text-2xl text-navy sm:text-3xl">Glossary of terms</h2>
+          <h2 id="glossary" className="scroll-mt-32 font-display text-2xl text-navy sm:text-3xl lg:scroll-mt-44">
+            Glossary of terms
+          </h2>
           <GoldRule className="mt-5" align="start" />
           <dl className="mt-8 space-y-6">
             {glossary.map((g) => (
