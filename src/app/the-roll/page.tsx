@@ -332,8 +332,10 @@ export default function TheRollPage() {
                     className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
                   >
                     Governing Council
-                  </Link>
-                  , and draws gladly on the work of Scotland’s established institutions.
+                  </Link>{" "}
+                  — among them one of Scotland’s foremost genealogists connected to the Court of the Lord Lyon, a
+                  Scottish Registered Solicitor and a Chief of the Name — and draws gladly on the work of Scotland’s
+                  established institutions.
                 </>
               }
             />
