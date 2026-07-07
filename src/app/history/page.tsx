@@ -54,15 +54,14 @@ export default function HistoryPage() {
           </Reveal>
           <Reveal>
             <blockquote className="mt-10 border-l-2 border-gold pl-6 font-serif text-2xl italic leading-relaxed text-navy sm:pl-8">
-              Today, the Scottish Baronage is a recognised dignity in Scots law.
+              Today, baron is a protected dignity in Scots law.
             </blockquote>
           </Reveal>
           <Reveal>
             <p className="mt-10 text-lg leading-relaxed text-ink-soft">
-              Since the abolition of the feudal system in 2004, baronies, which were held by feudal barons, have
-              become{" "}
+              Since the abolition of the feudal system in 2004, baronies have become{" "}
               <strong className="font-semibold text-navy">incorporeal heritable dignities</strong> — independent of any
-              land, freely inheritable and transferable. The holder of a Scottish barony is correctly styled a{" "}
+              land, freely inheritable and transferable. The holder of a Scottish barony is correctly described as a{" "}
               <strong className="font-semibold text-navy">minor baron</strong>: a titled noble below the peerage, yet
               above the rank of gentleman and equivalent in rank to continental barons (according to former Lord Lyon
               Sir Thomas Innes of Learney).
