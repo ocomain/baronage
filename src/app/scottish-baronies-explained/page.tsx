@@ -302,7 +302,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can a Scottish barony be bought and sold?",
-    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register, a voluntary, non-statutory private register (it is not an official register), record on the order of one to two transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald of the Isle of Skye was reported as offered for sale at more than £1 million.",
+    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register, a non-statutory private register — not an official register — that records the legal transfer of baronies (the transfers voluntarily submitted), record on the order of one to two transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald of the Isle of Skye was reported as offered for sale at more than £1 million.",
     body: (
       <>
         <p>
@@ -326,8 +326,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <a href="https://scottishbaronyregister.org" target="_blank" rel="nofollow noopener noreferrer" className={extLink}>
             Scottish Barony Register
           </a>
-          , a voluntary, non-statutory private register that records the legal transfer of baronies (it is not an
-          official register), publishes{" "}
+          , a non-statutory private register — not an official register — that records the legal transfer of baronies
+          (the transfers voluntarily submitted), publishes{" "}
           <a
             href="https://scottishbaronyregister.org/annual-reports"
             target="_blank"
