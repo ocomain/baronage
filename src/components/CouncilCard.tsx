@@ -162,8 +162,24 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
                   </button>
                   <div className="p-6 sm:p-8">
                     <h3 className="font-display text-2xl leading-tight text-navy">{m.formal ?? m.name}</h3>
-                    {m.also && <p className="mt-1.5 whitespace-pre-line font-serif text-lg italic text-gold-deep">{m.also}</p>}
-                    {m.alsoSub && <p className="mt-1.5 font-serif text-lg italic text-gold-deep">{m.alsoSub}</p>}
+                    {m.also && (
+                      <p
+                        className={`mt-1.5 whitespace-pre-line font-serif italic leading-snug text-gold-deep ${
+                          m.alsoProminent ? "text-3xl" : "text-lg"
+                        }`}
+                      >
+                        {m.also}
+                      </p>
+                    )}
+                    {m.alsoSub && (
+                      <p
+                        className={`mt-1.5 font-serif italic leading-snug text-gold-deep ${
+                          m.alsoProminent ? "text-3xl" : "text-lg"
+                        }`}
+                      >
+                        {m.alsoSub}
+                      </p>
+                    )}
                     <div className="mt-4 h-px w-16 bg-gold/60" aria-hidden />
                     <p className="mt-4 leading-relaxed text-ink-soft">{m.bio}</p>
                   </div>
