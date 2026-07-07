@@ -535,7 +535,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Will the Lord Lyon recognise a baron as a baron?",
-    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. In recent years, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon.",
+    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. In recent years, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon. The Lord Lyon holds considerable autonomy in this respect: part of that discretion is that the form of address recorded on the grant of arms is the one that should be used for official purposes.",
     body: (
       <>
         <p>
@@ -561,7 +561,10 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <p className="mt-4">
           Recognition is not what makes a baron a baron — the dignity is held as of legal right. But recognition by the
           Lord Lyon is the formal mark of the title within Scotland’s heraldic system, and it rests with the judgement
-          of each sitting Lord Lyon.
+          of each sitting Lord Lyon. The Lord Lyon holds{" "}
+          <strong className="font-semibold text-navy">considerable autonomy</strong> in this respect: part of that
+          discretion is that the form of address recorded on the grant of arms is the one that should be used for
+          official purposes.
         </p>
       </>
     ),
