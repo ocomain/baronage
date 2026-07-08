@@ -132,7 +132,7 @@ export default function RootLayout({
         >
           <span className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-center font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em]">
             <span>Scottish Baronies, Explained</span>
-            <span className="hidden text-navy-deep/70 sm:inline">— the record set straight, with primary sources</span>
+            <span className="hidden text-navy-deep/70 sm:inline">— the record set straight</span>
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
               →
             </span>
