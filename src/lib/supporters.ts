@@ -1,11 +1,13 @@
 /** The supporters shown in the homepage conveyor and on /supporters. */
 export type Barony = {
-  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger" | "Lord & Steward" | "Countess" | "Baroness";
+  dignity: "Baron" | "Lord Baron" | "Earl Baron" | "Younger" | "Lord & Steward" | "Countess" | "Baroness" | "Herald";
   name: string;
   img?: string;
   note?: string;
   /** shown on /supporters only, not in the homepage conveyor */
   pageOnly?: boolean;
+  /** a non-barony supporter (e.g. an officer of arms) — caption shows name + note only */
+  officer?: boolean;
   /** profile on roll.baronage.com */
   roll?: string;
 };
@@ -21,12 +23,12 @@ export const baronies: Barony[] = [
     note: "Chief of his Name",
   },
   { dignity: "Baron", name: "Kirkbuddo", roll: "https://roll.baronage.com/baron/jean-yves-de-la-sabliere", img: "/arms/kirkbuddo.webp" },
-  { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
+  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", officer: true, img: "/arms/petrie.webp", pageOnly: true },
   { dignity: "Baron", name: "Crawfordjohn", img: "/arms/crawfordjohn.webp", pageOnly: true },
   { dignity: "Baron", name: "Haliburton", img: "/arms/haliburton.webp", pageOnly: true },
   { dignity: "Baroness", name: "Redcastle", img: "/arms/redcastle.webp", pageOnly: true },
+  { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
   { dignity: "Baroness", name: "Greenan", img: "/arms/greenan.webp", pageOnly: true },
-  { dignity: "Baron", name: "Culbin", img: "/arms/culbin.webp", pageOnly: true },
   { dignity: "Baron", name: "Bachuil", roll: "https://roll.baronage.com/baron/niall-livingstone-of-bachuil", img: "/arms/bachuil.webp", note: "Chief of his Name" },
   { dignity: "Lord Baron", name: "Leslie", roll: "https://roll.baronage.com/giacomo-merello.html", img: "/arms/leslie.webp" },
   { dignity: "Baron", name: "Bannockburn", roll: "https://roll.baronage.com/baron/hope-vere-anderson", img: "/arms/bannockburn.webp" },
