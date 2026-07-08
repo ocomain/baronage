@@ -16,12 +16,15 @@ export function Footnote({
   children,
   label,
   triggerClassName,
+  heading,
 }: {
   n: number;
   children: ReactNode;
   /** Optional text trigger — renders instead of the superscript number. */
   label?: string;
   triggerClassName?: string;
+  /** Optional heading for the pop-up card (defaults to "Reference · Note {n}"). */
+  heading?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -79,7 +82,7 @@ export function Footnote({
                 <motion.div
                   role="dialog"
                   aria-modal="true"
-                  aria-label={`Footnote ${n}`}
+                  aria-label={heading ?? `Footnote ${n}`}
                   onClick={(e) => e.stopPropagation()}
                   initial={{ opacity: 0, y: 14, scale: 0.97 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -89,7 +92,7 @@ export function Footnote({
                 >
                   <div className="flex items-center justify-between gap-6 border-b border-parchment-300/70 pb-3">
                     <span className="font-inscribe text-[0.7rem] uppercase tracking-[0.22em] text-gold-deep">
-                      Reference · Note {n}
+                      {heading ?? `Reference · Note ${n}`}
                     </span>
                     <button
                       type="button"
