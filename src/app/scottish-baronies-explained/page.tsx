@@ -48,7 +48,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-07-06";
+const DATE_MODIFIED = "2026-07-08";
 const REVIEWED_LABEL = "July 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -72,7 +72,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage.",
+    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
     body: (
       <>
         <p>
@@ -90,7 +90,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Scotland, like France and much of continental Europe, recognised{" "}
           <strong className="font-semibold text-navy">both peerage and non-peerage nobility</strong> — the baron
           belongs to the latter. Scots nobiliary practice followed continental custom in this, which is why a barony
-          can be a genuine title of nobility without being a peerage.
+          can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992
+          dictum as heritable <strong className="font-semibold text-navy">titles of honour</strong>.
         </p>
       </>
     ),
@@ -102,7 +103,20 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <em>
           “the dignity of baron has a noble character in that it is a right which historically originated in a Crown
           grant.”
-        </em>
+        </em>{" "}
+        <em>Spencer-Thomas of Buquhollie v Newell</em> (1992),{" "}
+        <a
+          href="https://archive.org/details/1992-lord-clydes-dictum"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Lord Clyde’s dictum
+        </a>
+        : <em>“a barony falls into the class of noble as opposed to ignoble feus… It was at the earliest a territorial
+        dignity as distinct from the later personal peerage.”</em> Sir Robert Douglas,{" "}
+        <em>The Baronage of Scotland</em> (1798), a foundational text on Scottish nobility, describes baronies as{" "}
+        <em>“titles of honour”</em> conferred by the Crown with associated dignities.
       </>
     ),
   },
@@ -225,7 +239,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
-    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility.",
+    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.",
     body: (
       <>
         <p>
@@ -247,6 +261,18 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           the correct modern description; the holder is correctly described as a{" "}
           <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Court of the Lord
           Lyon for this rank of the ancient nobility.
+        </p>
+        <p className="mt-4">
+          The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament
+          could <em>“abolish feudal baronies altogether”</em> while allowing{" "}
+          <em>
+            “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue
+            as a floating dignity”
+          </em>{" "}
+          (p. 24); its discussion paper had{" "}
+          <strong className="font-semibold text-navy">mentioned, but rejected</strong>, the possibility of allowing
+          the <em>“noble aspects of the barony title”</em> to lapse along with the abolition of the feudal
+          relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.
         </p>
       </>
     ),
@@ -270,7 +296,17 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         >
           Scottish Armory and Heraldry
         </a>{" "}
-        (2019).
+        (2019).{" "}
+        Scottish Law Commission,{" "}
+        <a
+          href="https://web.archive.org/web/20251113231036/https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>Report on Abolition of the Feudal System</em>
+        </a>{" "}
+        (Scot Law Com No 168, 1999), p. 24 and para. 2.34.
       </>
     ),
   },
@@ -300,7 +336,16 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Explanatory Notes
         </a>
         , para. 198 — the retained dignity “will be a floating dignity” no longer attaching to land, becoming a
-        non-territorial dignity. Scottish Law Commission, <em>Report on the Abolition of the Feudal System</em>.
+        non-territorial dignity. Scottish Law Commission,{" "}
+        <a
+          href="https://web.archive.org/web/20251113231036/https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>Report on Abolition of the Feudal System</em>
+        </a>{" "}
+        (Scot Law Com No 168, 1999).
       </>
     ),
   },
