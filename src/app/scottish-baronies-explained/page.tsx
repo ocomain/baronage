@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
+import { Footnote } from "@/components/Footnote";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -1153,10 +1154,18 @@ export default function BaroniesExplainedPage() {
               >
                 <h2 className="font-display text-2xl text-navy sm:text-3xl">{f.q}</h2>
                 <div className="mt-5 leading-relaxed text-ink-soft">{f.body}</div>
-                <p className="mt-6 border-l-2 border-gold/50 pl-4 font-sans text-sm leading-relaxed text-muted">
-                  <span className="font-semibold uppercase tracking-[0.14em] text-gold-deep">Authority:</span>{" "}
-                  {f.authority}
+                <p className="mt-6">
+                  <Footnote
+                    n={i + 1}
+                    heading="Authority & sources"
+                    label="Authority & sources"
+                    triggerClassName="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-gold-deep underline decoration-dotted decoration-gold/40 underline-offset-4 transition-colors hover:text-oxblood"
+                  >
+                    {f.authority}
+                  </Footnote>
                 </p>
+                {/* Crawlable copy of the citations — the pop-up renders its content only when opened. */}
+                <p hidden>Authority: {f.authority}</p>
               </article>
               );
             })}
