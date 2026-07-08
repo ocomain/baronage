@@ -72,11 +72,13 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
+    a: "Yes. Historically, barons were untitled nobility as baron was a description not a title, as the first hereditary titles were lords and earls. Today, a holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
     body: (
       <>
         <p>
-          Yes. A holder of a barony within the Baronage of Scotland is a member of Scotland’s{" "}
+          Yes. Historically, barons were untitled nobility as baron was a description not a title, as the first
+          hereditary titles were lords and earls. Today, a holder of a barony within the Baronage of Scotland is a
+          member of Scotland’s{" "}
           <strong className="font-semibold text-navy">titled nobility</strong>, though not a peer. The distinction
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
@@ -269,8 +271,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
             “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue
             as a floating dignity”
           </em>{" "}
-          (p. 24); its discussion paper had{" "}
-          <strong className="font-semibold text-navy">mentioned, but rejected</strong>, the possibility of allowing
+          (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing
           the <em>“noble aspects of the barony title”</em> to lapse along with the abolition of the feudal
           relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.
         </p>
