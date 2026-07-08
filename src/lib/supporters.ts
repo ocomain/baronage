@@ -16,7 +16,7 @@ export type Barony = {
 
 export const baronies: Barony[] = [
   { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie.webp", pageOnly: true },
-  { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird.webp" },
+  { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird-brim.webp" },
   { dignity: "Lord Baron", name: "Pittenweem", roll: "https://roll.baronage.com/claes-zangeberg.html", img: "/arms/pittenweem.webp" },
   {
     dignity: "Baron",
