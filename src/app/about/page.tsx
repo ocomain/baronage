@@ -55,8 +55,12 @@ const mandate = [
 const citations: { source: string; text: string; href?: string; pop?: boolean; feature?: boolean }[] = [
   {
     source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
-    feature: true,
     text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
+  },
+  {
+    source: "Scottish Law Commission · Report No 168, 1999",
+    href: "https://web.archive.org/web/20251113231036/https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf",
+    text: "Even were feudal baronies abolished altogether, the dignity of baron would “continue as a floating dignity” — allowing the “noble aspects of the barony title” to lapse was mentioned, but rejected.",
   },
   {
     source: "Court of the Lord Lyon · 1943",
