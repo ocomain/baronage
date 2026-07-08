@@ -8,11 +8,14 @@ export type Barony = {
   pageOnly?: boolean;
   /** a non-barony supporter (e.g. an officer of arms) — caption shows name + note only */
   officer?: boolean;
+  /** small permanent sub-line under the note (e.g. an institution) */
+  sub?: string;
   /** profile on roll.baronage.com */
   roll?: string;
 };
 
 export const baronies: Barony[] = [
+  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie.webp", pageOnly: true },
   { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird.webp" },
   { dignity: "Lord Baron", name: "Pittenweem", roll: "https://roll.baronage.com/claes-zangeberg.html", img: "/arms/pittenweem.webp" },
   {
@@ -23,7 +26,6 @@ export const baronies: Barony[] = [
     note: "Chief of his Name",
   },
   { dignity: "Baron", name: "Kirkbuddo", roll: "https://roll.baronage.com/baron/jean-yves-de-la-sabliere", img: "/arms/kirkbuddo.webp" },
-  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", officer: true, img: "/arms/petrie.webp", pageOnly: true },
   { dignity: "Baron", name: "Crawfordjohn", img: "/arms/crawfordjohn.webp", pageOnly: true },
   { dignity: "Baron", name: "Haliburton", img: "/arms/haliburton.webp", pageOnly: true },
   { dignity: "Baroness", name: "Redcastle", img: "/arms/redcastle.webp", pageOnly: true },

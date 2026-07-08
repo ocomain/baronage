@@ -112,10 +112,17 @@ export default function SupportersPage() {
                   <figcaption className="relative mt-6 w-full">
                     {b.officer ? (
                       <>
-                        <span className="block font-display text-2xl leading-tight text-navy">{b.name}</span>
+                        <span className="block whitespace-nowrap font-display text-lg leading-tight text-navy">
+                          {b.name}
+                        </span>
                         {b.note && (
                           <span className="mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
                             {b.note}
+                          </span>
+                        )}
+                        {b.sub && (
+                          <span className="mt-1 block whitespace-nowrap font-display text-[0.88rem] italic leading-none tracking-wide text-gold-deep">
+                            {b.sub}
                           </span>
                         )}
                       </>
