@@ -91,13 +91,13 @@ export default function SupportersPage() {
                 key={b.name}
                 className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
                   <div className="pointer-events-none absolute inset-2.5 border border-gold/0 transition-colors duration-300 group-hover:border-gold/25" aria-hidden />
-                  {b.note && <Flourish text="in the Baronage of Scotland" placement="top" />}
+                  {b.note && !b.officer && <Flourish text="in the Baronage of Scotland" placement="top" />}
                   <div className="flex h-56 w-full items-center justify-center">
                     {b.img ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={b.img}
-                        alt={`Coat of arms — ${b.dignity} of ${b.name}`}
+                        alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
                         width={208}
                         height={208}
                         loading="eager"
@@ -110,21 +110,34 @@ export default function SupportersPage() {
                     )}
                   </div>
                   <figcaption className="relative mt-6 w-full">
-                    {b.dignity !== "Younger" && (
-                      <span className="block font-sans text-[0.55rem] font-medium uppercase tracking-[0.26em] text-gold-deep/70">
-                        The Much Hon
-                      </span>
-                    )}
-                    <span className="mt-1 block font-sans text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">
-                      {b.dignity} of
-                    </span>
-                    <span className="mt-1.5 block font-display text-3xl text-navy">{b.name}</span>
-                    {b.note ? (
-                      <span className="mx-auto mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
-                        {b.note}
-                      </span>
+                    {b.officer ? (
+                      <>
+                        <span className="block font-display text-2xl leading-tight text-navy">{b.name}</span>
+                        {b.note && (
+                          <span className="mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
+                            {b.note}
+                          </span>
+                        )}
+                      </>
                     ) : (
-                      <Flourish text="in the Baronage of Scotland" placement="below" />
+                      <>
+                        {b.dignity !== "Younger" && (
+                          <span className="block font-sans text-[0.55rem] font-medium uppercase tracking-[0.26em] text-gold-deep/70">
+                            The Much Hon
+                          </span>
+                        )}
+                        <span className="mt-1 block font-sans text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">
+                          {b.dignity} of
+                        </span>
+                        <span className="mt-1.5 block font-display text-3xl text-navy">{b.name}</span>
+                        {b.note ? (
+                          <span className="mx-auto mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
+                            {b.note}
+                          </span>
+                        ) : (
+                          <Flourish text="in the Baronage of Scotland" placement="below" />
+                        )}
+                      </>
                     )}
                   </figcaption>
               </figure>
