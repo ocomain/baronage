@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Wordmark } from "./Wordmark";
 import { ExternalArrow } from "./primitives";
@@ -23,10 +23,31 @@ export function SiteHeader() {
   const pathname = usePathname();
   const scrolled = useScrolled();
   const [open, setOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const [headerBottom, setHeaderBottom] = useState(76);
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
+
+  // Anchor the mobile drawer to the header's actual bottom edge. The site-wide
+  // banner sits above the sticky header and scrolls away, so the header's bottom
+  // in the viewport shifts (banner visible ≈115px, scrolled ≈81px, tablet adds
+  // the utility bar) — a hardcoded offset clipped the first drawer link.
+  useEffect(() => {
+    if (!open) return;
+    const measure = () => {
+      const el = headerRef.current;
+      if (el) setHeaderBottom(el.getBoundingClientRect().bottom);
+    };
+    measure();
+    window.addEventListener("scroll", measure, { passive: true });
+    window.addEventListener("resize", measure);
+    return () => {
+      window.removeEventListener("scroll", measure);
+      window.removeEventListener("resize", measure);
+    };
+  }, [open]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
@@ -37,7 +58,7 @@ export function SiteHeader() {
   );
 
   return (
-    <header className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+    <header ref={headerRef} className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
         <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
@@ -138,7 +159,7 @@ export function SiteHeader() {
             />
             <motion.nav
               className="fixed inset-x-0 z-40 overflow-y-auto border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
-              style={{ top: "calc(4.75rem + env(safe-area-inset-top, 0px))", maxHeight: "calc(100svh - 4.75rem - env(safe-area-inset-top, 0px))" }}
+              style={{ top: headerBottom, maxHeight: `calc(100svh - ${headerBottom}px)` }}
               initial={{ opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
