@@ -320,8 +320,8 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  <S>“Lady Jane”</S> is incorrect and should never be used, this is the title for daughters of a
-                  senior peer Duke, Marquis, or Earl.
+                  “Lady Jane” is incorrect and should never be used — this is the title for daughters of a senior
+                  peer: a Duke, Marquis, or Earl.
                 </P>
                 <P>
                   A Scottish barony is a{" "}
