@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import { Cormorant_Garamond, Quicksand } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -125,6 +126,18 @@ export default function RootLayout({
               '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xb0q6mjkpd");',
           }}
         />
+        <Link
+          href="/scottish-baronies-explained"
+          className="group block bg-gold text-navy-deep transition-colors hover:bg-gold-light"
+        >
+          <span className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-center font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em]">
+            <span>Scottish Baronies, Explained</span>
+            <span className="hidden text-navy-deep/70 sm:inline">— the record set straight, with primary sources</span>
+            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
+              →
+            </span>
+          </span>
+        </Link>
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
