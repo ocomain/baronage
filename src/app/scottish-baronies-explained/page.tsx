@@ -363,7 +363,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           becoming the new holder.
         </p>
         <p className="mt-4 border-l-2 border-gold/50 pl-4 text-[0.95em] italic">
-          A note from this site: a growing number of barons wish to reduce the commercial aspect of baronies. By
+          A note from this site: a growing number of barons wish to reduce the <em>in commercio</em> aspect of baronies. By
           signing{" "}
           <Link href="/pledge" className={intLink}>
             The Pledge
@@ -649,7 +649,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </Link>{" "}
           is a declaration of honour by which a baron commits their barony to{" "}
           <strong className="font-semibold text-navy">hereditary descent</strong> within the family line. A growing
-          number of barons have taken it, wishing to reduce the commercial transfer of baronies. It cannot legally
+          number of barons have taken it, wishing to reduce the <em>in commercio</em> transfer of baronies. It cannot legally
           alter a barony — it operates in honour rather than law — but its practical effect is on future{" "}
           <strong className="font-semibold text-navy">recognition</strong> upon the Roll of Scottish Barons, should a
           pledged barony later be sold outside the family.
