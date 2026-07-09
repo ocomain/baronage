@@ -49,7 +49,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-07-08";
+const DATE_MODIFIED = "2026-07-09";
 const REVIEWED_LABEL = "July 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -242,7 +242,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
-    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.",
+    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. In the words of the Act (s. 63): “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.",
     body: (
       <>
         <p>
@@ -252,7 +252,10 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           ended the feudal system and severed the dignity from the land.
           Extant baronies were expressly preserved, but the feudal aspects and the word <em>“feudal”</em> are now dated
           as a descriptor of a living barony — the titles were retained specifically as{" "}
-          <strong className="font-semibold text-navy">personal, non-territorial dignities</strong>.
+          <strong className="font-semibold text-navy">personal, non-territorial dignities</strong>. In the words of
+          the Act (s. 63): <em>“an estate held in barony ceases to exist as a feudal estate, the dignity of baron,
+          though retained, shall not attach to the land”</em> — and{" "}
+          <em>“nothing in this Act affects the dignity of baron”</em>.
         </p>
         <p className="mt-4">
           Lord Lyon Sellar, in 2009, accordingly termed them{" "}
