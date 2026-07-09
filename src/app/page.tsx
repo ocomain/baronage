@@ -204,11 +204,11 @@ export default function HomePage() {
           <Reveal>
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <Eyebrow>The Baronage</Eyebrow>
+                <Eyebrow>Armorial</Eyebrow>
                 <h2 className="mt-4 text-4xl text-navy sm:text-5xl">A selection of supporters</h2>
               </div>
               <p className="max-w-xs font-serif text-lg italic text-muted">
-                From the Roll of Scottish Barons.
+                Supporting the Roll of Scottish Barons
               </p>
             </div>
           </Reveal>
