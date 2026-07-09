@@ -80,7 +80,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "Scotland Act 2000",
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
-    text: "On the abolition of the feudal system, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity, protected in Scots law.",
+    text: "On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”.",
   },
 ];
 
