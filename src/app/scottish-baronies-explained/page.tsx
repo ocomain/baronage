@@ -353,7 +353,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can a Scottish barony be bought and sold?",
-    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register, a non-statutory private register — not an official register — that records the legal transfer of baronies (the transfers voluntarily submitted), record on the order of one to two transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald of the Isle of Skye was reported as offered for sale at more than £1 million.",
+    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register, a non-statutory private register — not an official register — that records the legal transfer of baronies (the transfers voluntarily submitted), record a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald of the Isle of Skye was reported as offered for sale at more than £1 million.",
     body: (
       <>
         <p>
@@ -387,8 +387,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           >
             annual reports of the Custodian
           </a>{" "}
-          (publicly available for 2021–2025); these record on the order of{" "}
-          <strong className="font-semibold text-navy">one to two transfers in a typical year</strong> — and a recorded
+          (publicly available for 2021–2025); these record a handful of transfers in a typical year — and a recorded
           transfer is not necessarily a commercial sale, since assignations within families and by bequest can
           sometimes pass through the same register. Baronies generally remain within families across generations; a barony can only be bought
           if a holder chooses to part with one, and few do. Families are not selling their heirlooms.
