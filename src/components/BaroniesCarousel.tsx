@@ -132,7 +132,18 @@ export function BaroniesCarousel() {
     };
   }, []);
 
-  const rail = baronies.filter((b) => !b.pageOnly);
+  // Homepage rail: armorial order minus pageOnly cards, then any homeAfter
+  // placement overrides (homepage-only; the armorial keeps its own order).
+  const rail: typeof baronies = [];
+  const deferred: typeof baronies = [];
+  for (const b of baronies) {
+    if (b.pageOnly) continue;
+    (b.homeAfter ? deferred : rail).push(b);
+  }
+  for (const b of deferred) {
+    const at = rail.findIndex((x) => x.name === b.homeAfter);
+    rail.splice(at === -1 ? rail.length : at + 1, 0, b);
+  }
   const row = [...rail, ...rail];
   return (
     <div className="marquee">
