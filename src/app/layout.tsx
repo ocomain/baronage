@@ -128,11 +128,11 @@ export default function RootLayout({
         />
         <Link
           href="/scottish-baronies-explained"
-          className="group block bg-gold text-navy-deep transition-colors hover:bg-gold-light"
+          className="group block bg-oxblood text-parchment-50 transition-colors hover:bg-oxblood-deep"
         >
           <span className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-center font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em]">
-            <span>Scottish Baronies, Explained</span>
-            <span className="hidden text-navy-deep/70 sm:inline">— the record set straight</span>
+            <span>Click here for Scottish Baronies, Explained</span>
+            <span className="hidden text-parchment-200/85 sm:inline">— the record set straight</span>
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
               →
             </span>
