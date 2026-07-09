@@ -69,12 +69,34 @@ export function BaroniesCarousel() {
     let startX = 0;
     let startLeft = 0;
     let moved = false;
+    let inView = false;
+
+    // Only auto-glide while the carousel is actually on screen, so a card near
+    // the front (e.g. the Windsor Herald) is still in view when the reader
+    // scrolls down to this section instead of having drifted off already.
+    const io =
+      typeof IntersectionObserver !== "undefined"
+        ? new IntersectionObserver(
+            (entries) => {
+              inView = entries[0]?.isIntersecting ?? false;
+            },
+            { threshold: 0 }
+          )
+        : null;
+    if (io) io.observe(el);
+    else inView = true; // no observer support → always glide
 
     const tick = (now: number) => {
       const dt = now - last;
       last = now;
       const half = el.scrollWidth / 2;
-      if (!dragging) {
+      if (dragging) {
+        // user is in control — keep the loop seamless at the edges only
+        if (half > 0) {
+          if (el.scrollLeft >= half) el.scrollLeft -= half;
+          else if (el.scrollLeft <= 0) el.scrollLeft += half;
+        }
+      } else if (inView) {
         // resync after any user scroll, then advance the float accumulator
         if (pos < 0 || Math.abs(el.scrollLeft - pos) > 2) pos = el.scrollLeft;
         pos += Math.min(dt, 50) * 0.035; // ~35px/s; clamped so tab-switches never jump
@@ -83,11 +105,8 @@ export function BaroniesCarousel() {
           else if (pos <= 0) pos += half;
         }
         el.scrollLeft = pos;
-      } else if (half > 0) {
-        // user is in control — keep the loop seamless at the edges only
-        if (el.scrollLeft >= half) el.scrollLeft -= half;
-        else if (el.scrollLeft <= 0) el.scrollLeft += half;
       }
+      // idle + off-screen → paused, so the front cards stay put until seen
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -124,6 +143,7 @@ export function BaroniesCarousel() {
     el.addEventListener("click", swallowClick, true);
     return () => {
       cancelAnimationFrame(raf);
+      io?.disconnect();
       el.removeEventListener("pointerdown", down);
       el.removeEventListener("pointermove", move);
       el.removeEventListener("pointerup", up);
