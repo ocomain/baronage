@@ -12,10 +12,12 @@ export type Barony = {
   sub?: string;
   /** profile on roll.baronage.com */
   roll?: string;
+  /** homepage conveyor only: place this card immediately after the named card (armorial order is unaffected) */
+  homeAfter?: string;
 };
 
 export const baronies: Barony[] = [
-  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie-arms.webp" },
+  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie-arms.webp", homeAfter: "Pittenweem" },
   { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird-brim.webp" },
   { dignity: "Lord Baron", name: "Pittenweem", roll: "https://roll.baronage.com/claes-zangeberg.html", img: "/arms/pittenweem.webp" },
   {
@@ -32,7 +34,7 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
   { dignity: "Baroness", name: "Greenan", img: "/arms/greenan.webp", pageOnly: true },
   { dignity: "Baron", name: "Bachuil", roll: "https://roll.baronage.com/baron/niall-livingstone-of-bachuil", img: "/arms/bachuil.webp", note: "Chief of his Name" },
-  { dignity: "Lord Baron", name: "Leslie", roll: "https://roll.baronage.com/giacomo-merello.html", img: "/arms/leslie.webp" },
+  { dignity: "Lord Baron", name: "Leslie", roll: "https://roll.baronage.com/giacomo-merello.html", img: "/arms/leslie.webp", pageOnly: true },
   { dignity: "Baron", name: "Bannockburn", roll: "https://roll.baronage.com/baron/hope-vere-anderson", img: "/arms/bannockburn.webp" },
   { dignity: "Baron", name: "Biggar", roll: "https://roll.baronage.com/baron/charles-ross-of-biggar", img: "/arms/biggar.webp" },
   { dignity: "Baron", name: "Balvill", roll: "https://roll.baronage.com/baron/mark-hopking", img: "/arms/balvill.webp" },
