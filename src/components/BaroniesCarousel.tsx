@@ -152,7 +152,7 @@ export function BaroniesCarousel() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={b.img}
-                  alt={`Coat of arms — ${b.dignity} of ${b.name}`}
+                  alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
                   decoding="async"
                   draggable={false}
                   width={160}
@@ -166,15 +166,33 @@ export function BaroniesCarousel() {
               )}
             </div>
             <figcaption className="mt-5 text-center">
-              <span className="block font-sans text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-gold-deep">
-                {b.dignity} of
-              </span>
-              <span className="mt-1 block font-display text-xl text-navy">{b.name}</span>
-              {b.note ? (
-                <span className="mx-auto mt-1.5 block font-serif text-base italic leading-snug text-gold-deep">
-                  {b.note}
-                </span>
-              ) : null}
+              {b.officer ? (
+                <>
+                  <span className="block whitespace-nowrap font-display text-lg leading-tight text-navy">{b.name}</span>
+                  {b.note ? (
+                    <span className="mx-auto mt-1.5 block font-serif text-base italic leading-snug text-gold-deep">
+                      {b.note}
+                    </span>
+                  ) : null}
+                  {b.sub ? (
+                    <span className="mt-1 block whitespace-nowrap font-display text-[0.8rem] italic leading-none tracking-wide text-gold-deep">
+                      {b.sub}
+                    </span>
+                  ) : null}
+                </>
+              ) : (
+                <>
+                  <span className="block font-sans text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-gold-deep">
+                    {b.dignity} of
+                  </span>
+                  <span className="mt-1 block font-display text-xl text-navy">{b.name}</span>
+                  {b.note ? (
+                    <span className="mx-auto mt-1.5 block font-serif text-base italic leading-snug text-gold-deep">
+                      {b.note}
+                    </span>
+                  ) : null}
+                </>
+              )}
             </figcaption>
           </figure>
         ))}
