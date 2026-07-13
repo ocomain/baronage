@@ -32,7 +32,7 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Haliburton", img: "/arms/haliburton.webp", pageOnly: true },
   { dignity: "Baroness", name: "Redcastle", img: "/arms/redcastle.webp", pageOnly: true },
   { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
-  { dignity: "Baron", name: "Winchburgh", roll: "https://roll.baronage.com/baron/michael-lyons", img: "/arms/winchburgh.webp", pageOnly: true },
+  { dignity: "Baron", name: "Winchburgh", roll: "https://roll.baronage.com/baron/michael-lyons", img: "/arms/winchburgh-arms.webp", pageOnly: true },
   { dignity: "Baron", name: "Bachuil", roll: "https://roll.baronage.com/baron/niall-livingstone-of-bachuil", img: "/arms/bachuil.webp", note: "Chief of his Name" },
   { dignity: "Lord Baron", name: "Leslie", roll: "https://roll.baronage.com/giacomo-merello.html", img: "/arms/leslie.webp", pageOnly: true },
   { dignity: "Baron", name: "Bannockburn", roll: "https://roll.baronage.com/baron/hope-vere-anderson", img: "/arms/bannockburn.webp" },
@@ -40,7 +40,7 @@ export const baronies: Barony[] = [
   { dignity: "Baron", name: "Balvill", roll: "https://roll.baronage.com/baron/mark-hopking", img: "/arms/balvill.webp" },
   {
     dignity: "Baron",
-    name: "Moncrieffe",
+    name: "Moncreiffe",
     img: "/arms/moncrieffe.webp",
     note: "Chief of his Name",
   },
