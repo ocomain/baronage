@@ -70,7 +70,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "Lord Clyde’s dictum · 1992",
     href: "https://archive.org/details/1992-lord-clydes-dictum",
-    text: "A barony falls into the class of noble — as opposed to ignoble — feus: a territorial dignity conferred by the Crown.",
+    text: "A barony falls into the class of noble — as opposed to ignoble — feus: a territorial dignity conferred by the Crown. The essential feature of a barony title is the noble quality of the feudal grant.",
   },
   {
     source: "The Institutional Writers",
