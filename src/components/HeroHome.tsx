@@ -99,7 +99,8 @@ export function HeroHome() {
             className="rise mx-auto mt-6 max-w-2xl text-base leading-relaxed text-parchment-200/85 sm:text-lg"
             style={{ animationDelay: "0.26s" }}
           >
-            The ancient nobility of Scotland — verified, recorded, and preserved for future generations.
+            The ancient nobility of the Baronage of Scotland — verified, recorded, and preserved for future
+            generations.
           </p>
 
           <div className="rise mt-8 flex justify-center" style={{ animationDelay: "0.32s" }}>
