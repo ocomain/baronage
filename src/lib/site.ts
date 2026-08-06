@@ -1,7 +1,7 @@
 export const site = {
   name: "Baronage of Scotland",
   legalName: "Baronage of Scotland Association",
-  tagline: "The ancient nobility of Scotland — verified, recorded, and preserved for future generations.",
+  tagline: "The ancient nobility of the Baronage of Scotland — verified, recorded, and preserved for future generations.",
   email: "secretary@baronage.com",
   addressLines: ["5 South Charlotte Street", "Edinburgh", "EH2 4AN"],
   established: "Keepers of the Roll of Scottish Barons",
