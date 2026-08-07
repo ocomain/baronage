@@ -73,7 +73,7 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. Historically, barons were untitled nobility as baron was a description not a title, the first hereditary titles were lords and earls. Today, a holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland, like France and much of continental Europe, recognised both peerage and non-peerage nobility — the baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
+    a: "Yes. Historically, barons were untitled nobility as baron was a description not a title, the first hereditary titles were lords and earls. Today, a holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland followed France and much of continental Europe, recognising both peerage and non-peerage titled nobility — the Scottish baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
     body: (
       <>
         <p>
@@ -90,10 +90,10 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           used to distinguish a Scottish baron from a peer.
         </p>
         <p className="mt-4">
-          Scotland, like France and much of continental Europe, recognised{" "}
-          <strong className="font-semibold text-navy">both peerage and non-peerage nobility</strong> — the baron
-          belongs to the latter. Scots nobiliary practice followed continental custom in this, which is why a barony
-          can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992
+          Scotland followed France and much of continental Europe, recognising{" "}
+          <strong className="font-semibold text-navy">both peerage and non-peerage titled nobility</strong> — the
+          Scottish baron belongs to the latter. Scots nobiliary practice followed continental custom in this, which
+          is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992
           dictum as heritable <strong className="font-semibold text-navy">titles of honour</strong>.
         </p>
       </>
@@ -242,7 +242,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
-    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. In the words of the Act (s. 63): “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”. In plain terms: this was the abolition of the feudal barony, retaining the dignity of baron — so the “feudal baron” is now incorrect: a defunct historical term with no meaning in law. The term lingers — other organisations can still be found writing “feudal barony” from habit — but legacy usage does not revive a legal category the 2000 Act closed. In law there is no such thing as a feudal baron today: since 28 November 2004 there has been no feudal tenure in Scotland for a barony to be feudal of — the feudal barony itself was extinguished, leaving only the title of baron, without the word “feudal”. The statute, not custom, settles the terminology. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; the holder is correctly described as a minor baron, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.",
+    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. In the words of the Act (s. 63): “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”. In plain terms: this was the abolition of the feudal barony, retaining the dignity of baron — so the “feudal baron” is now incorrect: a defunct historical term with no meaning in law. The term lingers — other organisations can still be found writing “feudal barony” from habit — but legacy usage does not revive a legal category the 2000 Act closed. In law there is no such thing as a feudal baron today: since 28 November 2004 there has been no feudal tenure in Scotland for a barony to be feudal of — the feudal barony itself was extinguished, leaving only the title of baron, without the word “feudal”. The statute, not custom, settles the terminology. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; collectively the minor barons of Scotland, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.",
     body: (
       <>
         <p>
@@ -275,9 +275,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           pre-2004 character of a barony, and simply “barony” or “personal dignity” for its present one. For the
           titleholder,{" "}
           <strong className="font-semibold text-navy">baron or lord or earl in the Baronage of Scotland</strong> is
-          the correct modern description; the holder is correctly described as a{" "}
-          <strong className="font-semibold text-navy">minor baron</strong>, the term used by the Court of the Lord
-          Lyon for this rank of the ancient nobility.
+          the correct modern description; collectively the{" "}
+          <strong className="font-semibold text-navy">minor barons of Scotland</strong>, the term used by the Court
+          of the Lord Lyon for this rank of the ancient nobility.
         </p>
         <p className="mt-4">
           The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament
