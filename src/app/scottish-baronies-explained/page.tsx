@@ -276,7 +276,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           titleholder,{" "}
           <strong className="font-semibold text-navy">baron or lord or earl in the Baronage of Scotland</strong> is
           the correct modern description; collectively, the{" "}
-          <strong className="font-semibold text-navy">minor barons of Scotland</strong>, the term used by the Court
+          <strong className="font-semibold text-navy">minor barons</strong> of Scotland, the term used by the Court
           of the Lord Lyon for this rank of the ancient nobility.
         </p>
         <p className="mt-4">
