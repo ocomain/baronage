@@ -24,6 +24,8 @@ export type CouncilMember = {
   link?: { href: string; label: string };
   /** object-position for the wide pop-up banner (defaults to pos) */
   popPos?: string;
+  /** Optional different image for the wide pop-up banner (defaults to img) */
+  popImg?: string;
 };
 
 /** Council portrait card — tap/click opens a biography pop-up. */
@@ -43,13 +45,13 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
     m.img ? (
       m.fit === "contain" ? (
         <FadeImg
-          src={m.img}
+          src={large ? m.popImg ?? m.img : m.img}
           alt={m.alt ?? m.name}
           className={`h-full w-full object-contain p-4 transition duration-700 ${large ? "" : "group-hover:scale-[1.04]"}`}
         />
       ) : (
         <FadeImg
-          src={m.img}
+          src={large ? m.popImg ?? m.img : m.img}
           alt={m.alt ?? m.name}
           className={`h-full w-full object-cover transition duration-700 ${large ? "" : "group-hover:scale-105"}`}
           style={{ objectPosition: (large ? m.popPos ?? m.pos : m.pos) ?? "center" }}
