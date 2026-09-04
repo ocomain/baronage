@@ -55,7 +55,8 @@ const members: CouncilMember[] = [
     alt: "Gordon MacGregor, genealogist and author of the Red Book of Scotland",
     link: { href: "https://www.redbookofscotland.co.uk", label: "Red Book ↗" },
     also: "Genealogist & author of the Red Book\nforeword by Lord Lyon Morrow",
-    img: "/council/macgregor.jpg",
+    img: "/council/macgregor2.jpg",
+    popImg: "/council/macgregor-pop.jpg",
     bio: "Gordon MacGregor is one of Scotland\u2019s foremost genealogists, with over thirty years of commissioned research including work for the Court of the Lord Lyon. He is the author of the Red Book of Scotland — an eighteen-volume, 16,500-page account of the families who shaped Scotland from the medieval era to the present, with a foreword by Lord Lyon Morrow — held by the National Records of Scotland and the National Library of Scotland. He also serves as Consultant Historian for Taymouth Castle (Discovery Properties).",
   },
 ];
