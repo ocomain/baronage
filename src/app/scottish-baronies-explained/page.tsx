@@ -929,7 +929,6 @@ const FAQ_ORDER = [
   "is-a-scottish-baron-a-nobleman",
   "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
   "can-a-scottish-barony-be-bought-and-sold",
-  "what-is-the-difference-between-the-scottish-barony-register-and-the-roll",
   "what-is-the-pledge-and-what-does-it-change",
   "how-does-succession-to-a-barony-work",
   "what-did-the-2004-change-actually-do",
@@ -940,6 +939,7 @@ const FAQ_ORDER = [
   "will-the-lord-lyon-recognise-a-baron-as-a-baron",
   "what-is-the-difference-between-a-barony-and-a-lordship-of-the-manor",
   "how-does-a-scottish-barony-differ-from-an-english-or-irish-feudal-barony",
+  "what-is-the-difference-between-the-scottish-barony-register-and-the-roll",
 ];
 const orderedFaqs = FAQ_ORDER.map((slug) => faqs.find((f) => slugify(f.q) === slug)).filter(
   (f): f is (typeof faqs)[number] => Boolean(f),
