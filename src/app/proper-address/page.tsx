@@ -205,7 +205,7 @@ const DIGITAL: { head: ReactNode; key: string; entry: ReactNode; example?: React
       <>
         <S>“Mr The Baron of Inverness”</S>
         <Or />
-        <S>“Ms The Lady Lochaber”</S>
+        <S>“Ms The Lady Inverness”</S>
       </>
     ),
   },
@@ -309,14 +309,14 @@ export default function ProperAddressPage() {
                 </P>
                 <Forms>
                   <F>
-                    <S>(The) Lady Lochaber</S>
+                    <S>(The) Lady Inverness</S>
                     <Or />
-                    <S>Jane, Lady Lochaber</S>
+                    <S>Jane, Lady Inverness</S>
                   </F>
                   <F>
-                    <S>(The Much Honoured / The) Baroness of Lochaber</S>
+                    <S>(The Much Honoured / The) Baroness of Inverness</S>
                     <Or />
-                    <S>(The Much Hon.) Jane Smith, Baroness of Lochaber</S>
+                    <S>(The Much Hon.) Jane Smith, Baroness of Inverness</S>
                   </F>
                 </Forms>
                 <P>
@@ -363,10 +363,10 @@ export default function ProperAddressPage() {
                     <S>Prof Inverness</S>
                   </F>
                   <F>
-                    <S>Dr The Lady Lochaber</S>{" "}
+                    <S>Dr The Lady Inverness</S>{" "}
                     <S>(Jane Smith, 5th baroness)</S>
                     <Or />
-                    <S>Dr Lady Lochaber</S>
+                    <S>Dr Lady Inverness</S>
                   </F>
                 </Forms>
                 <P>
@@ -389,9 +389,9 @@ export default function ProperAddressPage() {
                     <S>Dear Baron</S>
                   </F>
                   <F>
-                    <S>Dear Lady Lochaber</S>
+                    <S>Dear Lady Inverness</S>
                     <Or />
-                    <S>Dear Baroness of Lochaber</S>
+                    <S>Dear Baroness of Inverness</S>
                     <Or />
                     <S>Dear Baroness</S>
                   </F>
