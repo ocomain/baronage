@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { HiddenPreview } from "@/components/HiddenPreview";
 import { ButtonLink, Container, ExternalArrow, Eyebrow, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
+import { RegisterComparison } from "@/components/RegisterComparison";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -67,13 +68,6 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: Re
     href: "https://www.courtofthelordlyon.scot",
     linkLabel: "courtofthelordlyon.scot",
     body: "Scotland’s heraldic authority and a court of law. The Lyon Court’s letters patent, matriculations and official gazette notices are the Roll’s primary sources: where a dignity is evidenced under the hand of the Lord Lyon, no further proof is asked. The Court is wholly independent of this Association and of every private body within the baronial community.",
-  },
-  {
-    name: "The Scottish Barony Register",
-    href: "https://scottishbaronyregister.org",
-    linkLabel: "scottishbaronyregister.org",
-    nofollow: true,
-    body: "A non-statutory private register — not an official register — that records the legal transfer of baronies (the transfers voluntarily submitted). Established by members of the Scottish legal profession upon the abolition of feudal tenure in 2004, under a Custodian whose certification the Lord Lyon accepts as evidence of title. We recognise the Register as an authoritative source for inclusion on the Roll, and we recommend that every holder of a Scottish barony record their legal title there. The Roll is complementary to the Register, not in competition with it: the Register records transfers of ownership since 2004, while the Roll also documents the wider historic baronage — dignities held by dynastic succession, by chiefs, baronets and peers — which have never changed families in the modern era and therefore appear in no register of transfers. For these, the records of the Lyon Office stand as primary evidence.",
   },
   {
     name: "The Convention of the Baronage of Scotland",
@@ -312,6 +306,32 @@ export default function TheRollPage() {
               <div className="mt-8">
                 <PdfLink href="/guidelines.pdf" label="Roll Inclusion Guidelines.pdf" />
               </div>
+            </div>
+          </Reveal>
+        </Container>
+      </Section>
+
+      <Section tone="parchment" id="two-records-two-jobs" className="border-t border-parchment-300/60 !py-12 sm:!py-14">
+        <Container size="prose">
+          <Reveal>
+            <SectionHeading align="start" eyebrow="Register vs. Roll" title="Two records, two jobs" />
+          </Reveal>
+          <Reveal>
+            <div className="prose-heritage mt-8">
+              <p>
+                The Scottish Barony Register (SBR) is a private register of legal transfers, established in 2004 by
+                members of the Scottish legal profession, under a Custodian whose certification the Lord Lyon accepts
+                as evidence of title. We recognise it as an authoritative source, and recommend that every holder of a
+                Scottish barony record their legal title there. The Roll is complementary to the Register, not in
+                competition with it: it also documents the wider historic baronage — dignities held by dynastic
+                succession, by chiefs, baronets and peers — for which the records of the Lyon Office stand as primary
+                evidence. Set side by side, the two serve different jobs:
+              </p>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="mt-8">
+              <RegisterComparison />
             </div>
           </Reveal>
         </Container>

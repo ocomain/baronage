@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { Footnote } from "@/components/Footnote";
+import { RegisterComparison } from "@/components/RegisterComparison";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -377,7 +378,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can a Scottish barony be bought and sold?",
-    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Custodian's annual reports of the Scottish Barony Register, a non-statutory private register — not an official register — that records the legal transfer of baronies (the transfers voluntarily submitted), record a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald was reported as offered for sale at more than £1 million.",
+    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. In practice the market is very small — the Scottish Barony Register publishes annual reports of the Custodian, recording a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald was reported as offered for sale at more than £1 million.",
     body: (
       <>
         <p>
@@ -400,9 +401,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           In practice, the market is very small. The{" "}
           <a href="https://scottishbaronyregister.org" target="_blank" rel="nofollow noopener noreferrer" className={extLink}>
             Scottish Barony Register
+          </a>{" "}
+          (see{" "}
+          <a href="#what-is-the-difference-between-the-scottish-barony-register-and-the-roll" className={intLink}>
+            how the SBR and the Roll differ
           </a>
-          , a non-statutory private register — not an official register — that records the legal transfer of baronies
-          (the transfers voluntarily submitted), publishes{" "}
+          ) publishes{" "}
           <a
             href="https://scottishbaronyregister.org/annual-reports"
             target="_blank"
@@ -437,6 +441,40 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         (intestate descent). Transfer volume: Annual Reports of the Custodian, Scottish Barony Register, 2021–2025.
         Valuation: Scottish Law Commission estimate from 1997 evidence; 2002 press reports on the Barony of MacDonald.
         The prevalence of family retention over sale is a market observation, not a rule of law.
+      </>
+    ),
+  },
+  {
+    q: "What is the difference between the Scottish Barony Register and the Roll?",
+    a: "The Scottish Barony Register (SBR) and the Roll of Scottish Barons are both non-statutory private registers — neither is an official register. The SBR, established in 2004 by members of the Scottish legal profession under a Custodian, records legal transfers of baronies voluntarily submitted since 28 November 2004; the Lord Lyon accepts the Custodian's certification as evidence of title. The Roll is the Association's open-source verification register, aggregating every Baronage of Scotland title, including dignities held by dynastic succession, by chiefs, baronets and peers, which never transferred and so appear in no register of transfers. Unverified titles are not recognised on the Roll. Holders may also sign the Pledge, committing a barony to hereditary descent. The Roll is free, for life; the SBR charges a recording fee. Complementary, not competing: the SBR records legal assignation, the Roll recognises the title.",
+    body: (
+      <>
+        <p>
+          The Scottish Barony Register (SBR) and the Roll of Scottish Barons are often confused, but they do
+          different jobs: one records legal transfers, the other recognises the title. Set side by side, here is what
+          each records, and what it does not:
+        </p>
+        <div className="mt-6">
+          <RegisterComparison />
+        </div>
+      </>
+    ),
+    authority: (
+      <>
+        Scottish Barony Register —{" "}
+        <a
+          href="https://scottishbaronyregister.org"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className={extLink}
+        >
+          scottishbaronyregister.org
+        </a>
+        . See also{" "}
+        <Link href="/the-roll" className={intLink}>
+          The Roll
+        </Link>{" "}
+        for the Roll’s own account of related organisations, including the SBR, and the Roll’s inclusion criteria.
       </>
     ),
   },
@@ -891,6 +929,7 @@ const FAQ_ORDER = [
   "is-a-scottish-baron-a-nobleman",
   "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
   "can-a-scottish-barony-be-bought-and-sold",
+  "what-is-the-difference-between-the-scottish-barony-register-and-the-roll",
   "what-is-the-pledge-and-what-does-it-change",
   "how-does-succession-to-a-barony-work",
   "what-did-the-2004-change-actually-do",
