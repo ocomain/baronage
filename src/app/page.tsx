@@ -37,7 +37,7 @@ const pillars = [
   {
     numeral: "I",
     title: "The Roll of Scottish Barons",
-    body: "An open, verified public register of the Baronage of Scotland — free, for life, to verify an entry.",
+    body: "An open, verified public roll of the Baronage of Scotland — free, for life, to verify an entry.",
     href: "/the-roll",
   },
   {
