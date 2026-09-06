@@ -56,19 +56,7 @@ const rows: Row[] = [
   },
   {
     label: "Cost",
-    sbr: (
-      <>
-        A recording fee, set by the SBR — see its{" "}
-        <a
-          href="https://scottishbaronyregister.org/forms-and-fees"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={intLink}
-        >
-          forms and fees
-        </a>
-      </>
-    ),
+    sbr: "A recording fee, set by the SBR",
     roll: "Free, for life — nobody pays to be listed",
   },
   {
@@ -176,7 +164,7 @@ export function RegisterComparison() {
 
       <p className="mt-8 leading-relaxed text-ink-soft">
         The Roll treats the SBR as an authoritative source and recommends every holder record their legal title
-        there. The SBR records legal assignations; the Roll documents recognition across the whole baronage.
+        there. The SBR records legal title; the Roll documents recognition across the whole baronage.
         Complementary, not competing.
       </p>
     </div>

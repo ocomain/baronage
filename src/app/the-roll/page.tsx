@@ -212,7 +212,7 @@ export default function TheRollPage() {
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2.5">
                     <span className="inline-flex items-center gap-1.5 rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
-                      <img src="/images/seal-ink.png" alt="" width={57} height={80} className="h-5 w-auto" />
+                      <img src="/images/seal-ink.png" alt="" width={57} height={80} className="h-4 w-auto" />
                       Authenticated Baron
                     </span>
                     <span className="rounded-sm border border-amber-300 bg-amber-100 px-3 py-1 font-sans text-xs text-amber-900">
