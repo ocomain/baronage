@@ -324,6 +324,10 @@ export default function ProperAddressPage() {
                   peer: a Duke, Marquis, or Earl.
                 </P>
                 <P>
+                  The phrase “Lady of Inverness” is wrong if the lady in question does not hold a Scottish barony in
+                  her own right.
+                </P>
+                <P>
                   A Scottish barony is a{" "}
                   <Link
                     href="/scottish-baronies-explained"
