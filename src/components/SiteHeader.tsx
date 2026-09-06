@@ -72,7 +72,7 @@ export function SiteHeader() {
             >
               The Roll of Scottish Barons
             </a>{" "}
-            an open-source title verification register
+            — open-source title verification
           </span>
         </div>
       </div>
