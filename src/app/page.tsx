@@ -282,32 +282,30 @@ export default function HomePage() {
       <Section tone="navyDeep">
         <Container size="prose">
           <Reveal>
-            <div className="relative border border-gold/35 bg-navy/60 p-8 text-center sm:p-12">
-              <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
-              <Eyebrow light>Fundamental to the Roll</Eyebrow>
-              <h2 className="mt-4 text-3xl text-parchment-50 sm:text-4xl">
-                Non-recognition of unverified titles
-              </h2>
+            <div className="relative bg-parchment-50 p-8 text-center shadow-[0_30px_70px_-30px_rgba(8,12,28,0.85)] sm:p-12">
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gold" aria-hidden />
+              <Eyebrow>Fundamental to the Roll</Eyebrow>
+              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Unverified titles are not recognised.</h2>
               <GoldRule className="mt-6" />
-              <p className="mx-auto mt-7 max-w-2xl leading-relaxed text-parchment-200/85">
-                Inclusion on the Roll is free/voluntary pledged or non-pledged but requires adherence to rigorous criteria — only dignities with
-                proven legitimacy are recognised.{" "}
-                <strong className="font-semibold text-parchment-50">
-                  Non-recognition of unverified titles is fundamental.
-                </strong>
+              <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-ink-soft">
+                Inclusion on the Roll is free and voluntary — pledged or not — but requires adherence to rigorous
+                criteria: only dignities of proven legitimacy are recognised.
               </p>
-              <p className="mt-8 font-inscribe text-[0.7rem] uppercase tracking-[0.24em] text-gold">
+              <p className="mx-auto mt-6 max-w-2xl font-serif text-2xl italic leading-snug text-oxblood sm:text-3xl">
+                Non-recognition of unverified titles is fundamental.
+              </p>
+              <p className="mt-9 font-inscribe text-[0.7rem] uppercase tracking-[0.24em] text-gold-deep">
                 Cooperating organisations and Barons agree to
               </p>
               <ul className="mx-auto mt-5 max-w-xl space-y-4 text-left">
-                <li className="flex gap-4 leading-relaxed text-parchment-200/85">
+                <li className="flex gap-4 leading-relaxed text-navy">
                   <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
                   <span>
                     Not recognise the title, honour, rank, and status <em>“baron of”</em> (or higher dignity) for
                     unverified holders.
                   </span>
                 </li>
-                <li className="flex gap-4 leading-relaxed text-parchment-200/85">
+                <li className="flex gap-4 leading-relaxed text-navy">
                   <span className="mt-2.5 h-1.5 w-1.5 flex-none rotate-45 bg-gold" aria-hidden />
                   <span>It is recommended that organisations do not recognise a title not verified on the Roll.</span>
                 </li>
