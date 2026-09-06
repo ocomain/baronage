@@ -56,12 +56,24 @@ const rows: Row[] = [
   },
   {
     label: "Cost",
-    sbr: "A recording fee, set by the SBR",
+    sbr: (
+      <>
+        A recording fee, set by the SBR — see its{" "}
+        <a
+          href="https://scottishbaronyregister.org/forms-and-fees"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={intLink}
+        >
+          forms and fees
+        </a>
+      </>
+    ),
     roll: "Free, for life — nobody pays to be listed",
   },
   {
     label: "Kept by",
-    sbr: "The Custodian",
+    sbr: "The Custodian, a retired solicitor and Writer to His Majesty’s Signet, supported by a board of directors",
     roll: (
       <>
         Maintained under the oversight of the Association’s{" "}
@@ -78,7 +90,7 @@ const rows: Row[] = [
   },
   {
     label: "In a phrase",
-    sbr: "Records legal assignation",
+    sbr: "Records legal title",
     roll: "Recognises the title",
   },
 ];

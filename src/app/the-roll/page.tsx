@@ -211,7 +211,8 @@ export default function TheRollPage() {
                 />
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
+                    <span className="inline-flex items-center gap-1.5 rounded-sm border border-emerald-300 bg-emerald-50 px-3 py-1 font-sans text-xs text-emerald-900">
+                      <img src="/images/seal-ink.png" alt="" width={57} height={80} className="h-5 w-auto" />
                       Authenticated Baron
                     </span>
                     <span className="rounded-sm border border-amber-300 bg-amber-100 px-3 py-1 font-sans text-xs text-amber-900">
@@ -322,8 +323,8 @@ export default function TheRollPage() {
                 The Scottish Barony Register (SBR) is a private register of legal transfers, established in 2004 by
                 members of the Scottish legal profession, under a Custodian whose certification the Lord Lyon accepts
                 as evidence of title. We recognise it as an authoritative source, and recommend that every holder of a
-                Scottish barony record their legal title there. The Roll is complementary to the Register, not in
-                competition with it: it also documents the wider historic baronage — dignities held by dynastic
+                Scottish barony record their legal title there. The Roll is complementary to the SBR, not in
+                competition with it: The Roll also documents the wider historic baronage — dignities held by dynastic
                 succession, by chiefs, baronets and peers — for which the records of the Lyon Office stand as primary
                 evidence. Set side by side, the two serve different jobs:
               </p>
