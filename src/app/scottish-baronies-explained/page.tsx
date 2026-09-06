@@ -50,8 +50,8 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-07-27";
-const REVIEWED_LABEL = "July 2026";
+const DATE_MODIFIED = "2026-09-07";
+const REVIEWED_LABEL = "September 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
 
