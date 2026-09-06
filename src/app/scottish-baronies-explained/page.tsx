@@ -126,12 +126,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Are Scottish barony titles legitimate, or a scam?",
-    a: "They are legitimate. A Scottish barony is a genuine dignity recognised in Scots law: the barons of Scotland were affirmed as a “titled nobility” by the Court of the Lord Lyon in 1943 and by the Court of Session, and section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 expressly preserved the dignity of baron when the feudal system was abolished. What is not a title is a “souvenir plot” — a novelty square of Scottish land sold online with a “Lord” or “Laird” label. Owning one confers no title and no nobility; the Court of the Lord Lyon states that a souvenir plot is not even sufficient to petition for a grant of arms. Nearly every “Scottish title scam” story concerns these souvenir schemes, not genuine baronies, which are an entirely different thing.",
+    a: "They are legitimate. A Scottish barony is a genuine dignity and honour recognised in Scots law: the barons of Scotland were affirmed as a “titled nobility” by the Court of the Lord Lyon in 1943 and by the Court of Session, and section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 expressly preserved the dignity of baron when the feudal system was abolished. What is not a title is a “souvenir plot” — a novelty square of Scottish land sold online with a “Lord” or “Laird” label. Owning one confers no title and no nobility; the Court of the Lord Lyon states that a souvenir plot is not even sufficient to petition for a grant of arms. Nearly every “Scottish title scam” story concerns these souvenir schemes, not genuine baronies, which are an entirely different thing.",
     body: (
       <>
         <p>
           <strong className="font-semibold text-navy">They are legitimate.</strong> A Scottish barony is a genuine
-          dignity recognised in Scots law: the barons of Scotland were affirmed as a{" "}
+          dignity and honour recognised in Scots law: the barons of Scotland were affirmed as a{" "}
           <strong className="font-semibold text-navy">“titled nobility”</strong> by the Court of the Lord Lyon in 1943
           and by the Court of Session, and{" "}
           <a

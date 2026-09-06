@@ -10,7 +10,7 @@ const rows: Row[] = [
   {
     label: "What it is",
     sbr: "A private register of legal transfers, established in 2004 by members of the Scottish legal profession, under a Custodian",
-    roll: "The open-source verification register of the Baronage of Scotland, maintained by the Association",
+    roll: "The open-source verification roll of the Baronage of Scotland, maintained by the Association",
   },
   {
     label: "Official status",
