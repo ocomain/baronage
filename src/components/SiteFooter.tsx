@@ -116,6 +116,15 @@ export function SiteFooter() {
               className="underline decoration-parchment-200/30 underline-offset-2 transition-colors hover:text-parchment-100"
             >
               Copyright &amp; Database Rights
+            </a>{" "}
+            ·{" "}
+            <a
+              href="https://roll.baronage.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-parchment-200/30 underline-offset-2 transition-colors hover:text-parchment-100"
+            >
+              Privacy Notice
             </a>
           </p>
         </div>
