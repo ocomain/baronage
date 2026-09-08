@@ -74,7 +74,7 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: Re
     href: "https://www.scotsbarons.org",
     linkLabel: "scotsbarons.org",
     nofollow: true,
-    body: "The historic representative body of Scotland’s baronage, revived in the twentieth century with the encouragement of Lord Lyon Sir Thomas Innes of Learney. Though quieter in recent years, the Convention holds a distinguished place in the modern history of the baronage, and the Association honours it.",
+    body: "The historic representative body of Scotland’s baronage. Its name recalls the baronage’s ancient place among the Three Estates of the Scottish Parliament, summoned by the Sovereign to counsel and to legislate. In its modern form the Convention was revived in the twentieth century with the encouragement of Lord Lyon Sir Thomas Innes of Learney. It keeps a ceremonial life of long standing: the baronage is represented, at the Minister’s invitation, at morning service in St Giles’ Cathedral on St Andrew’s Day and at the opening of the General Assembly, processing from the Signet Library; four of its members attended the Coronation of Queen Elizabeth II in 1953; in 2012 Marcus Humphrey of Dinnet CBE was received in audience by The Queen at Buckingham Palace to present the Convention’s Loyal Address; and at the National Service of Thanksgiving and Dedication for King Charles III and Queen Camilla at St Giles’ in July 2023, the new Elizabeth Sword was borne by Dame Katherine Grainger with Humphrey of Dinnet as her escort. Though quieter in recent years, the Convention holds a distinguished place in the modern history of the baronage, and the Association honours it.",
   },
   {
     name: "The Registry of Scots Nobility",
