@@ -60,7 +60,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "Lord Lyon Robin Blair · 2007 (Note, Petition of Lindberg, Barony of Delvine)",
     href: "https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/",
-    text: "Such jurisdictional and conveyancing privileges which attached to the grant were finally disposed of by section 63 of the 2000 Act. However, that does not affect the noble nature of the dignity as one with its origins, in history, as the consequence of a Crown grant.",
+    text: "The 2000 Act… does not affect the noble nature of the dignity.",
   },
   {
     source: "Scottish Law Commission · Report No 168, 1999",
