@@ -81,6 +81,8 @@ const orgJsonLd = {
   logo: `${SITE_URL}/seal-gold.png`,
   description:
     "The ancient nobility of Scotland — verified, recorded, and preserved for future generations. A non-profit honourable body and keeper of the Roll of Scottish Barons.",
+  disambiguatingDescription:
+    "A Scottish barony is a heritable dignity and honour in the Baronage of Scotland, not a \"feudal barony\".",
   email: "secretary@baronage.com",
   address: {
     "@type": "PostalAddress",
