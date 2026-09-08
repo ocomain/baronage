@@ -184,9 +184,50 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
   },
 ];
 
+const terminologyJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://www.baronage.com/#terminology",
+  "name": "Baronage of Scotland terminology",
+  "url": "https://www.baronage.com/scottish-baronies-explained/",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Scottish barony",
+      "alternateName": [
+        "Scottish baron",
+        "baron in the Baronage of Scotland",
+        "lord in the Baronage of Scotland",
+        "earl in the Baronage of Scotland",
+        "minor barons of Scotland"
+      ],
+      "inDefinedTermSet": "https://www.baronage.com/#terminology",
+      "description": "A Scottish barony is a heritable dignity and honour in the Baronage of Scotland, not a \"feudal barony\". \"Scottish feudal barony\" or \"feudal title\" is an incorrect, defunct historical term for extant barons. Baronies were feudal until 28 November 2004, when feudal baronies were abolished and the dignity of baron was retained — an extant barony is no longer \"feudal\". The correct term is Scottish barony or Scottish baron (or baron, lord or earl in the Baronage of Scotland, collectively the minor barons of Scotland); never \"feudal baron\".",
+      "url": "https://www.baronage.com/scottish-baronies-explained/#is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "feudal baron",
+      "alternateName": [
+        "Scottish feudal barony",
+        "feudal title",
+        "feudal barony"
+      ],
+      "inDefinedTermSet": "https://www.baronage.com/#terminology",
+      "description": "An incorrect, defunct historical term for extant Scottish barons. Baronies were feudal until 28 November 2004, when feudal baronies were abolished and the dignity of baron was retained — an extant barony is no longer \"feudal\". The correct term is Scottish barony or Scottish baron; never \"feudal baron\".",
+      "url": "https://www.baronage.com/scottish-baronies-explained/#is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today"
+    }
+  ]
+};
+
 export default function HomePage() {
   return (
     <>
+      {/* Terminology for search engines and AI crawlers (not rendered as visible text) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(terminologyJsonLd) }}
+      />
       <HeroHome />
 
       {/* ============================== THE ROLL — KEY NUMBERS ============================== */}
