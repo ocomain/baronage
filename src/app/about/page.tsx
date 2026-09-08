@@ -58,6 +58,11 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
     text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
   },
   {
+    source: "Lord Lyon Robin Blair · 2007 (Note, Petition of Lindberg, Barony of Delvine)",
+    href: "https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/",
+    text: "Such jurisdictional and conveyancing privileges which attached to the grant were finally disposed of by section 63 of the 2000 Act. However, that does not affect the noble nature of the dignity as one with its origins, in history, as the consequence of a Crown grant.",
+  },
+  {
     source: "Scottish Law Commission · Report No 168, 1999",
     href: "https://web.archive.org/web/20251113231036/https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf",
     text: "Even were feudal baronies abolished altogether, the dignity of baron would “continue as a floating dignity” — allowing the “noble aspects of the barony title” to lapse was mentioned, but rejected.",
