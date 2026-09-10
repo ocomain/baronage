@@ -271,3 +271,82 @@ body::before {
 html {
   background-color: #faf6ec;
 }
+
+/* ----------------------------- Reading Room papers ----------------------------- */
+/* The paper body is generated HTML (scripts/build-reading-room.mjs), so it is styled
+   here rather than with utility classes. Extends .prose-heritage. */
+.paper-body > :first-child { margin-top: 0; }
+.paper-body p, .paper-body li { text-wrap: pretty; }
+.paper-body a { overflow-wrap: anywhere; }
+.paper-body ul, .paper-body ol { margin: 0 0 1.35rem 1.4rem; padding: 0; }
+.paper-body ul { list-style: disc; }
+.paper-body ol { list-style: decimal; }
+.paper-body li { margin-bottom: 0.5rem; padding-left: 0.2rem; }
+.paper-body li > p { margin-bottom: 0.5rem; }
+.paper-body h2, .paper-body h3 { scroll-margin-top: 8rem; }
+.paper-body h2 + p, .paper-body h3 + p { margin-top: 0; }
+.paper-body blockquote {
+  margin: 1.75rem 0;
+  padding: 0.35rem 0 0.35rem 1.4rem;
+  border-left: 3px solid var(--color-gold);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-navy);
+}
+.paper-body blockquote p { margin-bottom: 0.9rem; }
+.paper-body blockquote p:last-child { margin-bottom: 0; }
+.paper-body hr {
+  height: 1px; border: 0; margin: 2.5rem 0;
+  background: linear-gradient(to right, transparent, rgba(201,162,75,0.5), transparent);
+}
+.paper-body .table-wrap {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid rgba(216, 200, 166, 0.7);
+  border-radius: 2px;
+  background: var(--color-parchment-50);
+  -webkit-overflow-scrolling: touch;
+}
+.paper-body table { width: 100%; min-width: 32rem; border-collapse: collapse; font-size: 0.95rem; }
+.paper-body th {
+  padding: 0.9rem 1rem;
+  background: var(--color-navy);
+  color: var(--color-parchment-50);
+  font-family: var(--font-inscribe);
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-align: left; vertical-align: bottom;
+}
+.paper-body td { padding: 0.9rem 1rem; vertical-align: top; border-top: 1px solid rgba(201,162,75,0.25); line-height: 1.6; }
+.paper-body tbody tr:nth-child(even) { background: #fff; }
+.paper-body sup.fnref { font-size: 0.7em; line-height: 0; vertical-align: super; margin-left: 0.08em; }
+.paper-body sup.fnref a {
+  font-family: var(--font-inscribe); font-weight: 600;
+  color: var(--color-gold-deep); text-decoration: none;
+}
+.paper-body sup.fnref a:hover { color: var(--color-oxblood); }
+
+.paper-notes ol { margin: 0 0 0 1.5rem; padding: 0; list-style: decimal; }
+.paper-notes li { margin-bottom: 0.55rem; padding-left: 0.3rem; scroll-margin-top: 8rem; }
+.paper-notes li:target { background: rgba(201,162,75,0.12); }
+.paper-notes a, .paper-sources a {
+  color: var(--color-oxblood); text-decoration: underline;
+  text-decoration-color: rgba(201,162,75,0.6); overflow-wrap: anywhere;
+}
+.paper-notes .fnback { margin-left: 0.3rem; color: var(--color-gold-deep); text-decoration: none; }
+.paper-notes .fnback:hover { color: var(--color-oxblood); }
+
+.paper-sources ul { margin: 0; padding: 0; list-style: none; }
+.paper-sources li { position: relative; padding-left: 1.1rem; }
+.paper-sources li + li { margin-top: 0.75rem; }
+.paper-sources li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 6px; height: 6px; rotate: 45deg; border: 1px solid var(--color-gold);
+}
+
+@media print {
+  .paper-body h2, .paper-body h3 { break-after: avoid; }
+  .paper-body blockquote, .paper-body .table-wrap, .paper-notes li { break-inside: avoid; }
+  .paper-body sup.fnref a, .paper-notes a, .paper-sources a { color: inherit; }
+}

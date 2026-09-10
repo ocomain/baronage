@@ -131,9 +131,9 @@ export function SiteHeader() {
         </div>
 
         {/* Desktop nav row */}
-        <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-7 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
+        <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-5 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
           {topNavLinks.map((link) => {
-            const cls = `nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
+            const cls = `nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.1em] transition-colors ${
               isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
             }`;
             return link.external ? (
