@@ -322,8 +322,7 @@ export default function ProperAddressPage() {
                 <P>
                   “Lady Jane” is incorrect and should never be used — this is the title for daughters of a senior
                   peer: a Duke, Marquis, or Earl. Forms such as “Lady Jane Inverness” or “Baron John of Inverness” are
-                  often seen, but they too are incorrect: where a forename is used it precedes the style — “Jane, Lady
-                  Inverness”; “John, Baron of Inverness”.
+                  often seen, but are still socially incorrect.
                 </P>
                 <P>
                   The phrase “Lady of Inverness” is wrong if the lady in question does not hold a Scottish barony in
