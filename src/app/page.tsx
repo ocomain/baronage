@@ -279,17 +279,17 @@ export default function HomePage() {
             </Reveal>
             <Reveal className="lg:col-span-8" delay={0.1}>
               <p className="dropcap font-serif text-xl leading-[1.6] text-ink sm:text-2xl">
-                In Scotland, the title “Baron” or “Baroness” is a rank of the ancient nobility of the Baronage of
-                Scotland<Fn n={1} /> — not of the peerage: unlike England, where a baron is the lowest rank of peer, the
-                Scottish peerage rank equivalent to an English baron is the Lord of Parliament. The Scottish baronage,
-                predating the peerage, remains a distinguished part of our
-                noble heritage today, recognised in the nobiliary court and the Court of Session as{" "}
+                In Scotland, the title “Baron” or “Baroness” is a rank, honour and dignity of the ancient nobility of
+                the Baronage of Scotland<Fn n={1} />. It is not a peerage: unlike England, where a baron is the lowest
+                rank of peer, the Scottish peerage rank equivalent to an English baron is the Lord of Parliament. The
+                Scottish baronage, older than the peerage itself, remains a distinguished part of our heritage today,
+                recognised in the nobiliary court and the Court of Session as{" "}
                 <strong className="font-semibold text-navy">titled nobility</strong>
                 <Fn n={1} />, and affirmed in Lord Clyde’s 1992 dictum as heritable{" "}
                 <strong className="font-semibold text-navy">titles of honour</strong>
                 <Fn n={2} /> and for their <em>“noble quality”</em> and former parliamentary rights<Fn n={3} />. Their
-                noble status is further enshrined by the institutional writers, including Sir Thomas Craig, Lord Stair,
-                and Bankton<Fn n={4} />.
+                status is further enshrined by the institutional writers, including Sir Thomas Craig, Lord Stair, and
+                Bankton<Fn n={4} />.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
                 Since the feudal aspects of baronies were abolished in 2004<Fn n={5} />, special legal provisions ensured the{" "}
