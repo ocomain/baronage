@@ -304,7 +304,7 @@ export default function HomePage() {
                 <strong className="font-semibold text-navy">
                   Notably, the heir to the British throne, Prince William, holds the baronage titles Lord of the Isles
                   and Baron of Renfrew
-                  <Fn n={8} />, underscoring the prestige of the baronial tradition. Around thirty Scottish clan chiefs
+                  <Fn n={8} />, underscoring the prestige of the baronial tradition. Around forty Scottish clan chiefs
                   are also barons, with titles and histories rooted deep in antiquity.
                 </strong>{" "}
                 In an age where personal identity and chosen forms
