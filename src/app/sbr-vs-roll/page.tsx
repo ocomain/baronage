@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { pageMetadata } from "@/lib/page-metadata";
 import { Reveal } from "@/components/Reveal";
 import { RegisterComparison } from "@/components/RegisterComparison";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/sbr-vs-roll/" },
+export const metadata: Metadata = pageMetadata({
   title: "The SBR and the Roll",
   description:
     "How the Scottish Barony Register and the Roll of Scottish Barons differ, what each one records, and how they work together.",
-};
+  path: "/sbr-vs-roll/",
+});
 
 export default function SbrVsRollPage() {
   return (
