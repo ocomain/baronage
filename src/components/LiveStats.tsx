@@ -37,7 +37,7 @@ export function LiveStats() {
 
   const items = [
     { value: stats.verified, label: "Verified Barons" },
-    { value: stats.unverified, label: "Unverified Holders" },
+    { value: stats.unverified, label: "Unverified Claimants" },
     { value: stats.pledged, label: "Pledged Hereditary" },
   ];
 
