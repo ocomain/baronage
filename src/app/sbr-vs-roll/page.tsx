@@ -17,6 +17,8 @@ export default function SbrVsRollPage() {
     <>
       <PageHero
         eyebrow="Register vs. Roll"
+        image="/images/scribe.webp"
+        position="center 42%"
         title="Two records, two jobs"
         intro="The Scottish Barony Register and the Roll of Scottish Barons are complementary, not competing. Here is what each one is, what it records, and how they fit together."
       />
