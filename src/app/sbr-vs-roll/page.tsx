@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { RegisterComparison } from "@/components/RegisterComparison";
-import { ButtonLink, Container, Section } from "@/components/primitives";
+import { ButtonLink, Container, Eyebrow, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -23,6 +23,22 @@ export default function SbrVsRollPage() {
 
       <Section tone="parchment" className="!py-12 sm:!py-16">
         <Container size="prose">
+          <Reveal>
+            <aside className="border-l-4 border-gold bg-parchment-100 px-6 py-6 sm:px-8 sm:py-7">
+              <Eyebrow>Legal title and recognition</Eyebrow>
+              <p className="mt-3 font-serif text-xl leading-relaxed text-navy sm:text-2xl">
+                Legal title and recognition are two different things — and the Roll of the Peerage shows why. Andrew
+                Mountbatten Windsor remains Duke of York in law, because only an Act of Parliament can extinguish a
+                peerage; what the King’s removal of his name from the Roll of the Peerage in 2025 withdrew was
+                recognition of the title, not the title itself. A Scottish barony stands on the same footing: only an
+                Act of Parliament can extinguish it. And because baronies are legally assignable, each record has a
+                distinct purpose — the Scottish Barony Register records legal title; the Roll of Scottish Barons records
+                recognition, and the conduct that goes with it, as the Rolls of the Peerage and the Baronetage do in
+                their own spheres.
+              </p>
+            </aside>
+          </Reveal>
+
           <Reveal>
             <div className="prose-heritage">
               <p>
