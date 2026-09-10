@@ -97,7 +97,7 @@ export function SiteHeader() {
             <Link
               href="/members"
               data-active={isActive("/members")}
-              className={`hidden pr-2 font-sans text-[0.6rem] uppercase tracking-[0.14em] transition-colors lg:inline-flex ${
+              className={`nav-link hidden pr-2 font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors lg:inline-flex ${
                 isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
               }`}
             >
