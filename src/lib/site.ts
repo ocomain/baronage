@@ -27,6 +27,7 @@ export const navLinks: NavLink[] = [
   { href: "/sbr-vs-roll", label: "SBR v Roll" },
   { href: "/history", label: "History" },
   { href: "/scottish-baronies-explained", label: "Baronies Explained" },
+  { href: "/reading-room", label: "Reading Room" },
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
   { href: "/pledge", label: "The Pledge" },
