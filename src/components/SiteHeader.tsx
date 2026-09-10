@@ -52,7 +52,10 @@ export function SiteHeader() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   // Top nav omits Charitable Trust and the Baronies Explained FAQ (both remain in the
-  // footer, and the FAQ is in the sitemap); Member's Chamber sits at the end.
+  // footer, and the FAQ is in the sitemap). Member's Chamber is not part of this mapped
+  // row on desktop — it renders in the top row, just left of the gold "Verify Title on
+  // the Roll" button — but stays in the mapped mobile-drawer list below, in its normal
+  // nav order.
   const topNavLinks = navLinks.filter(
     (link) => link.href !== "/charitable-trust" && link.href !== "/scottish-baronies-explained"
   );
@@ -91,6 +94,15 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/members"
+              data-active={isActive("/members")}
+              className={`hidden pr-2 font-sans text-[0.6rem] uppercase tracking-[0.14em] transition-colors lg:inline-flex ${
+                isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
+              }`}
+            >
+              Member’s Chamber
+            </Link>
             <a
               href={ROLL_URL}
               target="_blank"
@@ -134,15 +146,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link
-            href="/members"
-            data-active={isActive("/members")}
-            className={`nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors ${
-              isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
-            }`}
-          >
-            Member’s Chamber
-          </Link>
         </nav>
       </div>
 

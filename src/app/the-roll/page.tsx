@@ -5,7 +5,6 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { HiddenPreview } from "@/components/HiddenPreview";
 import { ButtonLink, Container, ExternalArrow, Eyebrow, GoldRule, PdfLink, Section, SectionHeading } from "@/components/primitives";
-import { RegisterComparison } from "@/components/RegisterComparison";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -415,19 +414,16 @@ export default function TheRollPage() {
           <Reveal>
             <div className="prose-heritage mt-8">
               <p>
-                The Scottish Barony Register (SBR) is a private register of legal transfers, established in 2004 by
-                members of the Scottish legal profession, under a Custodian whose certification the Lord Lyon accepts
-                as evidence of title. We recognise it as an authoritative source, and recommend that every holder of a
-                Scottish barony record their legal title there. The Roll is complementary to the SBR, not in
-                competition with it: The Roll also documents the wider historic baronage — dignities held by dynastic
-                succession, by chiefs, baronets and peers — for which the records of the Lyon Office stand as primary
-                evidence. Set side by side, the two serve different jobs:
+                The Scottish Barony Register and the Roll are complementary, not competing: the SBR records legal
+                title; the Roll recognises titles across the whole baronage.
               </p>
             </div>
           </Reveal>
           <Reveal>
             <div className="mt-8">
-              <RegisterComparison />
+              <ButtonLink href="/sbr-vs-roll" variant="outline">
+                How the SBR and the Roll differ
+              </ButtonLink>
             </div>
           </Reveal>
         </Container>

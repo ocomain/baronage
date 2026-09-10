@@ -457,6 +457,13 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <div className="mt-6">
           <RegisterComparison />
         </div>
+        <p className="mt-6">
+          Read the full comparison:{" "}
+          <Link href="/sbr-vs-roll" className={intLink}>
+            The SBR and the Roll
+          </Link>
+          .
+        </p>
       </>
     ),
     authority: (
