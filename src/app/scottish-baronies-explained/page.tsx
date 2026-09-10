@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { Footnote } from "@/components/Footnote";
-import { RegisterComparison } from "@/components/RegisterComparison";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -455,15 +454,10 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           each records, and what it does not:
         </p>
         <div className="mt-6">
-          <RegisterComparison />
+          <ButtonLink href="/sbr-vs-roll" variant="outline">
+            How the SBR and the Roll differ
+          </ButtonLink>
         </div>
-        <p className="mt-6">
-          Read the full comparison:{" "}
-          <Link href="/sbr-vs-roll" className={intLink}>
-            The SBR and the Roll
-          </Link>
-          .
-        </p>
       </>
     ),
     authority: (
