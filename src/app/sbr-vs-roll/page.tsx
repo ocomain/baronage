@@ -38,6 +38,10 @@ export default function SbrVsRollPage() {
                 recognition, and the conduct that goes with it, as the Rolls of the Peerage and the Baronetage do in
                 their own spheres.
               </p>
+              <p className="mt-4 font-serif text-lg leading-relaxed text-navy sm:text-xl">
+                The Roll is on friendly terms with the Custodian of the Scottish Barony Register: the two records work
+                alongside each other, not against.
+              </p>
             </aside>
           </Reveal>
 
