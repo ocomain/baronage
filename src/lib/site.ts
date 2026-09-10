@@ -23,7 +23,8 @@ export type NavLink = { href: string; label: string; external?: boolean };
 
 /** Primary navigation — mirrors the existing site menu. */
 export const navLinks: NavLink[] = [
-  { href: "/the-roll", label: "The Roll" },
+  { href: "/the-roll", label: "About The Roll" },
+  { href: "/sbr-vs-roll", label: "SBR vs. Roll" },
   { href: "/history", label: "History" },
   { href: "/scottish-baronies-explained", label: "Baronies Explained" },
   { href: "/proper-address", label: "Proper Address" },
