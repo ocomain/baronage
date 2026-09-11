@@ -26,7 +26,8 @@ const mandate = [
       Sellar, in 2009, accordingly termed them “quondam feudal baronies”
       <Footnote n={5}>
         <p>
-          Lord Lyon W. D. H. Sellar (2009), p. 82 — quoted in Donald Draper Campbell,{" "}
+          Lord Lyon W. D. H. Sellar, Note of 1 December 2009 in the petition of Lindley-Highfield of Ballumbie Castle,
+          Baron of Cartsburn (Court of the Lord Lyon) — reproduced in Donald Draper Campbell,{" "}
           <a
             href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
             target="_blank"
@@ -35,7 +36,7 @@ const mandate = [
           >
             Scottish Armory and Heraldry
           </a>{" "}
-          (2019).
+          (2019), p. 82.
         </p>
       </Footnote>{" "}
       — quondam meaning “formerly”). This is set out in full in{" "}
@@ -52,7 +53,7 @@ const mandate = [
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
 
-const citations: { source: string; text: string; href?: string; pop?: boolean; feature?: boolean }[] = [
+const citations: { source: string; text: string; href?: string; pop?: boolean; feature?: boolean; note?: string }[] = [
   {
     source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
     text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
@@ -68,9 +69,10 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
     text: "Even were feudal baronies abolished altogether, the dignity of baron would “continue as a floating dignity” — allowing the “noble aspects of the barony title” to lapse was mentioned, but rejected.",
   },
   {
-    source: "Court of the Lord Lyon · 1943",
+    source: "Court of the Lord Lyon · 26 February 1943",
     href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
-    text: "Finds and Declares that the Barons of Scotland are recognised as a “titled nobility,” of the ancient Feudal Nobility of Scotland.",
+    text: "Finds and Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of Scotland.",
+    note: "Interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26; printed in Innes of Learney, PSAS vol. 79 (1944–45), p. 143 n. 3.",
   },
   {
     source: "Lord Clyde’s dictum · 1992",
@@ -80,10 +82,10 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "The Institutional Writers",
     pop: true,
-    text: "Craig, Stair and Bankton confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate.",
+    text: "Craig, Stair and Bankton confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate. Under the institutional writers nobility ran with the barony lands; since 2004 it runs with the dignity alone.",
   },
   {
-    source: "Scotland Act 2000",
+    source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
     feature: true,
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
     text: "On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”.",
@@ -144,7 +146,20 @@ export default function AboutPage() {
                   charters by which every Scottish barony was created. The motto around its ring preserves the very
                   words of those grants: lands were erected{" "}
                   <em className="text-parchment-100">in liberam baroniam</em> — “into a free barony” — conferring the
-                  rank and dignity of baron upon the grantee and their heirs.
+                  rank and dignity of baron upon the grantee and their heirs. The Crown charter of 6 May 1590 erecting
+                  Spynie <em className="text-parchment-100">in liberam baroniam</em> conferred “
+                  <em className="text-parchment-100">Titulum, Honorem, Ordinem et Statum liberi Baronis</em>” — the
+                  title, honour, order and estate of a free baron — a barony distinct from the peerage of Spynie, which
+                  came by a separate charter of 17 April 1593 (
+                  <a
+                    href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+                  >
+                    Innes of Learney, PSAS 79, p. 113
+                  </a>
+                  , citing Great Seal vol. v, no. 1727).
                 </p>
                 <p>
                   <em className="text-parchment-100">Per cartas nostras</em> — “by our charters” — records the source
@@ -227,9 +242,28 @@ export default function AboutPage() {
                             which it was annexed.”
                           </li>
                         </ol>
+                        <p className="mt-3">
+                          Bankton’s nobility “followed the property of the estate”: it passed, and was lost, with the
+                          land. Section 63 of the{" "}
+                          <a
+                            href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                          >
+                            Abolition of Feudal Tenure etc. (Scotland) Act 2000
+                          </a>{" "}
+                          displaced that rule from 28 November 2004: the dignity of baron is retained but no longer
+                          attaches to the land.
+                        </p>
                       </Footnote>
                     ) : (
                       c.source
+                    )}
+                    {c.note && (
+                      <span className="mt-2 block font-serif text-[0.8rem] normal-case italic tracking-normal text-parchment-200/70">
+                        {c.note}
+                      </span>
                     )}
                   </figcaption>
                 </figure>
@@ -257,9 +291,44 @@ export default function AboutPage() {
           <Reveal>
             <div className="mt-12 border-l-2 border-gold/60 pl-6">
               <p className="font-serif text-lg italic leading-relaxed text-oxblood-deep">
-                The heir to the British throne holds the baronage titles Lord of the Isles and Baron of Renfrew, and around thirty Scottish clan chiefs
-                are also barons — titles rooted deep in antiquity. As Lord Lyon Sir Thomas Innes of Learney stated,
-                Scottish barons are equivalent in rank to Continental barons.
+                The heir to the British throne holds the baronage titles Lord of the Isles and Baron of Renfrew, and around forty Scottish clan chiefs
+                are also barons — titles rooted deep in antiquity. As the Court of the Lord Lyon declared under Lord Lyon
+                Sir Francis Grant in 1945 — printed by his successor, Sir Thomas Innes of Learney — Scottish barons are of
+                baronial race and of rank equivalent to the chiefs of baronial houses on the Continent:
+              </p>
+              <figure className="mt-6">
+                <blockquote className="font-serif text-lg leading-relaxed text-navy">
+                  “That the Petitioner, as feudal Baron of Niddrie-Merschell and Lochtoure is of Baronial Race, and of
+                  rank equivalent to that denominated Hoch Adel, and equivalent to the Chiefs of Baronial Houses, upon
+                  the Continent of Europe, and that by demonstration of the foresaid Ensigns Armorial, he, and his son
+                  and heir-apparent and their successors in the same are to be so accounted, taken, and received
+                  amongst all Nobles and in all places of Honour.”
+                </blockquote>
+                <figcaption className="mt-3 font-sans text-sm text-muted">
+                  Court of the Lord Lyon (Lord Lyon Sir Francis Grant), 19 April 1945, Lyon Register vol. xxxv p. 31;
+                  printed in{" "}
+                  <a
+                    href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                  >
+                    Innes of Learney, PSAS 79, p. 160
+                  </a>
+                  .
+                </figcaption>
+              </figure>
+              <p className="mt-4 text-sm leading-relaxed text-muted">
+                Nobility clauses of this kind no longer appear in Letters Patent:{" "}
+                <a
+                  href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                >
+                  <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85
+                </a>
+                , para [21].
               </p>
             </div>
           </Reveal>
@@ -279,6 +348,33 @@ export default function AboutPage() {
                 there has been no legal requirement to record baronies in Scotland, leading to false or questionable
                 claimants appearing in sources like Debrett’s. We address this by maintaining a strict and verified,
                 public record, ensuring succession is documented with accuracy and legal precision.
+              </p>
+              <p>
+                The Court of the Lord Lyon has, for its part, an evidential practice of its own. Since Lord Lyon Sellar’s{" "}
+                <a
+                  href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Note in the petition of the Baron of Cartsburn
+                </a>{" "}
+                (1 December 2009) and Lord Lyon Morrow’s Note in{" "}
+                <a href="https://courtofthelordlyon.scot/index_htm_files/Menking.pdf" target="_blank" rel="noopener noreferrer">
+                  <em>Menking</em>
+                </a>{" "}
+                (30 April 2015, para 5), an entry in the Scottish Barony Register, with the Custodian’s report as “a
+                person of skill”, has been treated as sufficient “for aught yet seen” to establish the dignity and to
+                bring the petitioner within the Lord Lyon’s jurisdiction — where Lord Lyon Blair had declined to accept
+                the private register in 2006 (
+                <a
+                  href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85
+                </a>
+                , para [23]). The Association’s Roll sits alongside that practice as an open editorial record: nobody
+                pays to be listed, and verification is free.
               </p>
               <p>
                 As a non-political and impartial honourable body, we collaborate with recognised authorities,

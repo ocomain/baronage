@@ -56,9 +56,10 @@ const pillars = [
 
 const timeline = [
   { year: "1320", event: "Barons seal the Declaration of Arbroath" },
-  { year: "1587", event: "Minor barons no longer obliged to attend Parliament, though entitled to sit" },
+  { year: "1587", event: "Shire representation made effective: barons and freeholders elect two commissioners per shire (RPS 1587/7/143)" },
   { year: "1707", event: "Sat among the Three Estates until the Union" },
-  { year: "2000", event: "Dignity preserved in law by the Scotland Act" },
+  { year: "1747", event: "Heritable Jurisdictions Act: regalities abolished and baron courts reduced to petty matters — the barony itself untouched" },
+  { year: "2000", event: "Dignity of baron preserved by s. 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000" },
   { year: "2004", event: "Titles become non-territorial personal dignities" },
 ];
 
@@ -66,10 +67,11 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
   {
     body: (
       <>
-        Lord Lyon Court Ruling (26 February 1943, Vol. IV, p. 26): “Finds and Declares that the (Minor) Barons of
-        Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled
-        nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of
-        Scotland” <em><a href="https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143</a></em>
+        Court of the Lord Lyon, interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a
+        birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26: “Finds and
+        Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of
+        Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the
+        ancient Feudal Nobility of Scotland”. Printed in Innes of Learney, <em><a href="https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143 n. 3</a></em>
       </>
     ),
     subs: [
@@ -182,6 +184,23 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
       </>
     ),
   },
+  {
+    body: (
+      <>
+        Lord Clyde,{" "}
+        <a href="https://archive.org/details/1992-lord-clydes-dictum" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Spencer-Thomas of Buquhollie v. Newell, 1992 SLT 973 at 976</a>: a barony “was at the earliest a
+        territorial dignity as distinct from the later personal peerage.”
+      </>
+    ),
+    subs: [
+      <>
+        Lord Lyon David Sellar,{" "}
+        <a href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Note in the Petition of Sturzenegger of Arran</a>, p. 12: “In Scotland personal peerages began to be
+        created in the mid-15th century, although it took some time for territorial peerages to disappear … there is
+        general agreement that territorial peerages were all but obsolescent by the beginning of the 17th century.”
+      </>,
+    ],
+  },
 ];
 
 const terminologyJsonLd = {
@@ -282,7 +301,7 @@ export default function HomePage() {
                 In Scotland, the title “Baron” or “Baroness” is a rank, honour and dignity of the ancient nobility of
                 the Baronage of Scotland<Fn n={1} />. It is not a peerage: unlike England, where a baron is the lowest
                 rank of peer, the Scottish peerage rank equivalent to an English baron is the Lord of Parliament. The
-                Scottish baronage, older than the peerage itself, remains a distinguished part of our heritage today,
+                Scottish baronage, older than the peerage itself<Fn n={10} />, remains a distinguished part of our heritage today,
                 recognised in the nobiliary court and the Court of Session as{" "}
                 <strong className="font-semibold text-navy">titled nobility</strong>
                 <Fn n={1} />, and affirmed in Lord Clyde’s 1992 dictum as heritable{" "}

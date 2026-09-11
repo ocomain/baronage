@@ -64,7 +64,14 @@ export default function HistoryPage() {
               land, freely inheritable and transferable. The holder of a Scottish barony is correctly described as a{" "}
               <strong className="font-semibold text-navy">minor baron</strong>: a titled noble below the peerage, yet
               above the rank of gentleman and equivalent in rank to continental barons (according to former Lord Lyon
-              Sir Thomas Innes of Learney).
+              Sir Thomas Innes of Learney); see{" "}
+              <Link
+                href="/reading-room/innes-of-learney-1945"
+                className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+              >
+                The Lord Lyon’s Case for the Baronage
+              </Link>
+              .
             </p>
           </Reveal>
           <Reveal>
@@ -78,6 +85,26 @@ export default function HistoryPage() {
                 Scottish Baronies, Explained
               </Link>
               .
+            </p>
+          </Reveal>
+          <Reveal>
+            <p className="mt-7 text-lg leading-relaxed text-ink-soft">
+              Further reading: for the statutes that shaped the baronage between 1428 and 2004, and for what the Treaty
+              of Union did — and did not — do for it, see{" "}
+              <Link
+                href="/reading-room/baronage-in-the-statutes"
+                className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+              >
+                The baronage in the statutes, 1428–2004
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/reading-room/treaty-of-union"
+                className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
+              >
+                The Treaty of Union and the baronage
+              </Link>{" "}
+              in the Reading Room.
             </p>
           </Reveal>
         </Container>
