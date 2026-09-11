@@ -91,6 +91,11 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
     text: "Craig, Stair and Bankton confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate. Under the institutional writers nobility ran with the barony lands; since 2004 it runs with the dignity alone.",
   },
   {
+    source: "Parliament of Scotland · 1567",
+    href: "https://www.rps.ac.uk/trans/1567/12/45",
+    text: "Of law and reason the barons of this realm ought to have vote in Parliament as a part of the nobility.",
+  },
+  {
     source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
     feature: true,
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
