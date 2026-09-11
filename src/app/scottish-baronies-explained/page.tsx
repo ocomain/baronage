@@ -91,6 +91,23 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </Link>
           ).
         </p>
+        <figure className="mt-6 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
+          <blockquote className="font-serif text-2xl italic leading-snug text-navy sm:text-3xl">
+            “…such Feus as had a Jurisdiction annext to them, a Barony, as we call it, do ennoble; for Baronies are
+            establisht only by the Prince’s Erection or Confirmation.”
+          </blockquote>
+          <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
+            Sir George Mackenzie, Lord Advocate —{" "}
+            <a
+              href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={extLink}
+            >
+              The Science of Herauldry (1680)
+            </a>
+          </figcaption>
+        </figure>
         <p className="mt-4">
           The record on the side of “title” is long. A document of 1382 states that{" "}
           <em>Baronia est nomen dignitatis et importat judicaturam</em> — barony is a name of dignity and imports

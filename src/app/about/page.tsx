@@ -64,6 +64,12 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
     text: "The 2000 Act… does not affect the noble nature of the dignity.",
   },
   {
+    source: "Sir Crispin Agnew of Lochnaw QC, for the petitioner · Lyon Court 2007 (Petition of Lindberg, Barony of Delvine)",
+    href: "https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/",
+    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown. Section 1 of the 2000 Act abolished the feudal system of land tenure but did not abolish feudal tenure in relation to dignities which are incorporeal heritage.",
+    note: "The same submission: “All barons are required by the Acts of the Parliament of Scotland to have a coat of Arms”, and “heraldic privilege as defined by the 2000 Act must include a right to apply for a grant of arms”.",
+  },
+  {
     source: "Scottish Law Commission · Report No 168, 1999",
     href: "https://web.archive.org/web/20251113231036/https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf",
     text: "Even were feudal baronies abolished altogether, the dignity of baron would “continue as a floating dignity” — allowing the “noble aspects of the barony title” to lapse was mentioned, but rejected.",
