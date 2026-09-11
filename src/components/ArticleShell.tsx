@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container, GoldRule, Section } from "./primitives";
+import { PaperThumbnail } from "./PaperThumbnail";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
@@ -90,15 +91,15 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               <ul className="mt-4 divide-y divide-parchment-300/70 border-y border-parchment-300/70">
                 {related.map((p) => (
                   <li key={p.slug}>
-                    <Link
-                      href={`/reading-room/${p.slug}`}
-                      className="group flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
-                    >
-                      <span className="font-display text-xl text-navy transition-colors group-hover:text-oxblood">
-                        {p.title}
-                      </span>
-                      <span className="flex-none font-sans text-[0.62rem] uppercase tracking-[0.18em] text-muted">
-                        {p.category} · {p.readingTime}
+                    <Link href={`/reading-room/${p.slug}`} className="group flex items-center gap-4 py-4">
+                      <PaperThumbnail title={p.title} category={p.category} size="sm" className="opacity-80" />
+                      <span className="flex min-w-0 flex-1 flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                        <span className="font-display text-xl text-navy transition-colors group-hover:text-oxblood">
+                          {p.title}
+                        </span>
+                        <span className="flex-none font-sans text-[0.62rem] uppercase tracking-[0.18em] text-muted">
+                          {p.category} · {p.readingTime}
+                        </span>
                       </span>
                     </Link>
                   </li>

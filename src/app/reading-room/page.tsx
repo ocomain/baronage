@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/page-metadata";
 import { Container, GoldRule, Section } from "@/components/primitives";
+import { PaperThumbnail } from "@/components/PaperThumbnail";
 import { readingRoomCategories, readingRoomPapers } from "@/generated/reading-room";
 
 const STANDFIRST =
@@ -34,19 +35,27 @@ export default function ReadingRoomPage() {
             <h2 className="eyebrow !font-semibold">{group.category}</h2>
             <ul className="mt-4 divide-y divide-parchment-300/70 border-y border-parchment-300/70">
               {group.papers.map((paper) => (
-                <li key={paper.slug} className="py-6">
-                  <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
-                    {paper.category}
-                  </p>
-                  <h3 className="mt-2 font-display text-2xl leading-snug text-navy sm:text-3xl">
-                    <Link href={`/reading-room/${paper.slug}`} className="transition-colors hover:text-oxblood">
-                      {paper.title}
-                    </Link>
-                  </h3>
-                  <p className="mt-2 font-serif text-lg italic leading-relaxed text-ink-soft">{paper.subtitle}</p>
-                  <p className="mt-3 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
-                    {paper.readingTime} read
-                  </p>
+                <li key={paper.slug}>
+                  <Link
+                    href={`/reading-room/${paper.slug}`}
+                    className="group flex items-start gap-4 py-6 sm:gap-6 sm:py-8"
+                  >
+                    <PaperThumbnail title={paper.title} category={paper.category} size="responsive" />
+                    <span className="flex min-w-0 flex-1 flex-col gap-2">
+                      <span className="font-display text-[1.35rem] leading-tight text-navy transition-colors group-hover:text-oxblood">
+                        {paper.title}
+                      </span>
+                      <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
+                        {paper.category} · {paper.readingTime} read
+                      </span>
+                      <span className="font-serif text-base italic leading-relaxed text-ink-soft sm:text-lg">
+                        {paper.subtitle}
+                      </span>
+                      <span className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors group-hover:text-oxblood">
+                        Read the paper →
+                      </span>
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ul>
