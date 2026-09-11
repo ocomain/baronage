@@ -19,7 +19,7 @@ export const ROLL_API = "https://roll.baronage.com";
 /** The Secretary's Calendly booking link — "Request a Call Back". */
 export const CALENDLY_URL = "https://calendly.com/secretary-baronage/30min";
 
-export type NavLink = { href: string; label: string; external?: boolean };
+export type NavLink = { href: string; label: string; external?: boolean; /** Small "New" pill shown beside the label in the header only. */ badge?: string };
 
 /** Primary navigation — mirrors the existing site menu. */
 export const navLinks: NavLink[] = [
@@ -34,5 +34,5 @@ export const navLinks: NavLink[] = [
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About Us" },
   { href: "/armorial", label: "Armorial" },
-  { href: "/reading-room", label: "Reading Room" },
+  { href: "/reading-room", label: "Reading Room", badge: "New" },
 ];

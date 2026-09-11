@@ -56,7 +56,8 @@ const pillars = [
 
 const timeline = [
   { year: "1320", event: "Barons seal the Declaration of Arbroath" },
-  { year: "1587", event: "Shire representation made effective: barons and freeholders elect two commissioners per shire (RPS 1587/7/143)" },
+  { year: "1428", event: "Minor barons, as members of Parliament bound to attend on pain of fines, relieved of attendance: the small barons and freeholders “need not come”, sending commissioners of the shire instead (RPS 1428/3/3)" },
+  { year: "1587", event: "Minor barons and freeholders to elect two commissioners per shire, whose presence “shall relieve” the rest of their suit in Parliament — the duty lifted, the right to attend retained (RPS 1587/7/143)" },
   { year: "1707", event: "Sat among the Three Estates until the Union" },
   { year: "1747", event: "Heritable Jurisdictions Act: regalities abolished and baron courts reduced to petty matters — the barony itself untouched" },
   { year: "2000", event: "Dignity of baron preserved by s. 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000" },
@@ -89,7 +90,7 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
         noble</em> as opposed to ignoble feus. That classification is discussed by Craig (Jus Feudale, I.x.16) and
         Bankton (II.iii.83). In Scotland the distinction was recognised between the greater barons and the lesser
         barons, the former acquiring such titles as Duke or Earl. It was at the earliest a territorial dignity as
-        distinct from the later personal peerage. Thus when one was divested of an estate the title of honour ceased
+        distinct from the later personal peerage. Thus when one was divested of an estate the <strong className="font-semibold">title of honour</strong> ceased
         (Bankton, II.iii.84). In the feudal system, however, whether the dignity was that of a baron or of the greater
         dignity of an earldom, the feudal effects were the same (Erskine’s Institute, II.iii.46).” The Baronage of
         Scotland by Sir Robert Douglas (1798), a foundational text on Scottish nobility, describes baronies as{" "}
