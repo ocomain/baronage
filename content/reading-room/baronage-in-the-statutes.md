@@ -1,0 +1,56 @@
+---
+title: "The baronage in the statutes, 1428–2004"
+subtitle: "From the Act of the small barons to section 63 of the 2000 Act: what each statute did for the baronage, with a link to the record"
+slug: baronage-in-the-statutes
+meta_description: "A reference table of the Acts that shaped the Scottish baronage — 1428, 1455, 1567, 1587, 1592, 1672, 1707, 1746, 1874, 1964 and 2000 — with what each did and a link to the record."
+category: Law & Statutes
+published: 2026-09-11
+reviewed: 2026-09-11
+---
+
+# The baronage in the statutes, 1428–2004
+
+*Eleven Acts, from James I at Perth to the Scottish Parliament at Holyrood, made the baronage what it is: an order excused from Parliament in 1428, declared “a part of the nobility” in 1567, brought under the Lyon Court’s registers in 1672, stripped of its jurisdictions in 1746 and 2004, and left with its dignity. This table sets them out in order, with a link to the record of each.*
+
+## How to read the table
+
+Quotations from the Acts of the old Scottish Parliament are taken from the modern translations on the Records of the Parliaments of Scotland site, which also gives the original Scots; its URLs are the permanent citation form, and each opens the record in a frameset.[^1] Quotations from Acts still on the statute book are from legislation.gov.uk, which shows the revised text as in force with its repeal notes. The “Record” column links to the text. Three threads run through the table — representation (1428, 1567, 1587, 1707), heraldry (1592, 1672) and jurisdiction and property (1707, 1746, 1874, 1964, 2000) — and they are drawn together below it.
+
+## The statutes
+
+| Year | Act | What it did for the baronage | Record |
+|---|---|---|---|
+| 1428 | Act of the small barons (James I, Perth, 5 March 1428) | “the small barons and freeholders need not come to parliaments or general councils, so that two or more wise men … be sent from each sheriffdom … who shall be called commissioners of the shire”. Assumes the distinction between great and small barons already existed. | [RPS 1428/3/3](https://www.rps.ac.uk/trans/1428/3/3) |
+| 1455 | Act anent the habits of earls, lords of parliament, burgh commissioners and advocates | First statute to prescribe parliamentary robes: earls in mantles of “grained brown … furred with white”; “the other lords of parliament” — which then included the barons — a red mantle open at the front, “lined with silk or furred with grey ‘gris’ fur or ‘pured’ fur”; burgh commissioners blue cloaks open on the right shoulder. | [RPS 1455/8/12](https://www.rps.ac.uk/trans/1455/8/12) |
+| 1567 | Article 33 of the Parliament of December 1567 | “of law and reason, the barons of this realm ought to have vote in parliament as a part of the nobility” — with a scheme for sheriffs to convene the barons of each shire to choose “one or two of the most qualified and wise barons within the shire to be commissioners”. | [RPS 1567/12/45](https://www.rps.ac.uk/trans/1567/12/45) |
+| 1587 | Declaration concerning the votes of small barons in parliament (James VI) | Revives and enforces the 1428 Act: two commissioners per shire elected yearly by “the king’s freeholders … of good rent”, and “none to have vote in their election but such as have forty shillings land in free tenantry, held of the king”. | [RPS 1587/7/143](https://www.rps.ac.uk/trans/1587/7/143) |
+| 1592 | Lyon King of Arms Act 1592 (c. 29) | Lyon and his heralds to “visite the haill armes of noblemen baronis and gentlemen” and to “distinguische and discerne thame with congruent differences”; penalties for usurped arms. Still in force in part. | [legislation.gov.uk](https://www.legislation.gov.uk/aosp/1592/29) |
+| 1672 | Lyon King of Arms Act 1672 (c. 47) | Ratifies 1592; all “noblemen barons and gentlemen” using arms to register them; the Register to be “the true and unrepeallable rule of all Armes and Bearings in Scotland”; arms may be given “to vertuous and well deserving Persones”. The original text also provided that “it is only allowed for noblemen and bishops to subscribe by their titles, and that all others shall subscribe their christened names … with their surnames, and may, if they please, adject the designations of their lands prefixing the word ‘of’” (words repealed 1995).[^2] | [legislation.gov.uk](https://www.legislation.gov.uk/aosp/1672/47) · [RPS 1672/6/57](https://www.rps.ac.uk/trans/1672/6/57) |
+| 1707 | Union with England Act 1707 (Scottish Parliament) / Union with Scotland Act 1706 (English Parliament) | Art. XVIII: Scots private-right law to remain, alterable only “for evident utility of the subjects within Scotland”. Art. XX: “all heritable Offices, Superiorities, heritable Jurisdictions … be reserved to the Owners thereof as Rights of Property”. Art. XXII (16 peers, 45 commoners) repealed 1964 (Scotland) / 1993 (England). See [The Treaty of Union and the baronage](/reading-room/treaty-of-union/). | [legislation.gov.uk (Scots Act)](https://www.legislation.gov.uk/aosp/1707/7) · [(English Act)](https://www.legislation.gov.uk/aep/Ann/6/11) |
+| 1746 | Heritable Jurisdictions (Scotland) Act 1746 (20 Geo. II c. 43), in force 25 March 1748 | “An Act for taking away and abolishing the Heretable Jurisdictions in Scotland; and for making Satisfaction to the Proprietors thereof”. Regalities, heritable sheriffships etc. abolished with compensation; baron courts kept but cut to petty civil and criminal matters; s. 25 makes any later erection of lands “into a barony, lordship, or earldom” incapable of carrying jurisdiction beyond recovery of rents. Lord Lyon Morrow (2015): after this Act “Lords of Regality became Barons”. | [legislation.gov.uk](https://www.legislation.gov.uk/apgb/Geo2/20/43) · [Menking, paras 14–19](https://courtofthelordlyon.scot/index_htm_files/Menking.pdf) |
+| 1874 | Conveyancing (Scotland) Act 1874 | Entry with the superior implied (s. 4); Crown charters of confirmation and resignation on transfer of a barony no longer needed — transfer thereafter by disposition recorded in the Register of Sasines. | [legislation.gov.uk](https://www.legislation.gov.uk/ukpga/Vict/37-38/94) |
+| 1964 | Succession (Scotland) Act 1964, s. 37(1)(a) | Excludes from the Act “any title, coat of arms, honour or dignity transmissible on the death of the holder thereof” — so an intestate barony still descends by the old rules of heritable succession. | [legislation.gov.uk](https://www.legislation.gov.uk/ukpga/1964/41/section/37) |
+| 2000 | Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63 (in force 28 November 2004) | Jurisdiction and conveyancing privileges of barony cease; “nothing in this Act affects the dignity of baron or any other dignity or office (whether or not of feudal origin)”; the dignity “shall not attach to the land” and “shall be, and shall be transferable only as, incorporeal heritable property”; “dignity” includes “any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”. | [legislation.gov.uk](https://www.legislation.gov.uk/asp/2000/5/section/63) · [Explanatory Notes 195–199](https://www.legislation.gov.uk/asp/2000/5/section/63/notes) |
+
+## Three threads
+
+**Representation.** The Act of 1428 does not create the distinction between great barons and small; it assumes it, excusing the small barons and freeholders from attendance and asking each sheriffdom to send commissioners instead. The Parliament of 1567 states the principle — the barons “ought to have vote in parliament as a part of the nobility” — and the Declaration of 1587 makes shire representation effective, with two commissioners a shire elected by the freeholders of forty shillings land held of the king. Article XXII of the Treaty of Union carried that electoral law over into the Parliament of Great Britain, though the Article itself never mentions barons: see [The Treaty of Union and the baronage](/reading-room/treaty-of-union/). The robes Act of 1455 belongs to the same thread, because it shows barons and Lords of Parliament in the same red mantle: see [Robes, chapeau and insignia of the baronage](/reading-room/robes-and-insignia/).
+
+**Heraldry.** The Acts of 1592 and 1672 put “noblemen barons and gentlemen” under the Lyon Court’s visitation and registers, and the Register of 1672 is still “the true and unrepeallable rule of all Armes and Bearings in Scotland”. This is the setting for the Lyon Court’s findings of 1943–45 on the rank of the minor barons — see [The Lord Lyon’s Case for the Baronage](/reading-room/innes-of-learney-1945/) — and for its practice today: see [The Lord Lyon and the baronage since 2004](/reading-room/lord-lyon-since-2004/).
+
+**Jurisdiction and property.** Article XX of the Union reserved the heritable jurisdictions “as Rights of Property”. The Act of 1746 abolished the greater ones with compensation and left the baron court its petty matters; the Act of 1874 simplified the transfer of a barony; the Act of 1964 kept dignities out of the new code of succession. Section 63 of the 2000 Act ended what remained of jurisdiction and conveyancing privilege and preserved the dignity, defining it to include “any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.[^3] Until 28 November 2004 the barony was a feudal estate in land; since then it has been a dignity held as incorporeal heritable property.
+
+---
+
+### Authority & sources
+
+- Records of the Parliaments of Scotland: [RPS 1428/3/3](https://www.rps.ac.uk/trans/1428/3/3); [RPS 1455/8/12](https://www.rps.ac.uk/trans/1455/8/12); [RPS 1567/12/45](https://www.rps.ac.uk/trans/1567/12/45); [RPS 1587/7/143](https://www.rps.ac.uk/trans/1587/7/143); [RPS 1672/6/57](https://www.rps.ac.uk/trans/1672/6/57).
+- [Lyon King of Arms Act 1592](https://www.legislation.gov.uk/aosp/1592/29) and [Lyon King of Arms Act 1672](https://www.legislation.gov.uk/aosp/1672/47) — revised texts as in force.
+- [Union with England Act 1707](https://www.legislation.gov.uk/aosp/1707/7) and [Union with Scotland Act 1706](https://www.legislation.gov.uk/aep/Ann/6/11).
+- [Heritable Jurisdictions (Scotland) Act 1746](https://www.legislation.gov.uk/apgb/Geo2/20/43); Lord Lyon Morrow, [Note in the Petition of Menking (30 April 2015)](https://courtofthelordlyon.scot/index_htm_files/Menking.pdf), paras 14–19.
+- [Conveyancing (Scotland) Act 1874](https://www.legislation.gov.uk/ukpga/Vict/37-38/94); [Succession (Scotland) Act 1964, s. 37](https://www.legislation.gov.uk/ukpga/1964/41/section/37).
+- [Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63) and [Explanatory Notes, paras 195–199](https://www.legislation.gov.uk/asp/2000/5/section/63/notes).
+
+[^1]: [The Records of the Parliaments of Scotland to 1707](https://www.rps.ac.uk/) (University of St Andrews). The “trans” URLs cited here are the site’s permanent citation form for the modern translation of each record; the original text is reached from the same page.
+[^2]: [Requirements of Writing (Scotland) Act 1995](https://www.legislation.gov.uk/ukpga/1995/7), which repealed the subscription words of the 1672 Act as spent.
+[^3]: [Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63(4)](https://www.legislation.gov.uk/asp/2000/5/section/63), in force 28 November 2004.

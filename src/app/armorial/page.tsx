@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ArmorialGrid } from "@/components/ArmorialGrid";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
@@ -162,6 +163,23 @@ export default function SupportersPage() {
               >
                 Roll of Scottish Barons
               </a>
+            </p>
+            <p className="mt-4 text-center font-serif text-base italic text-muted">
+              On the helm, chapeau and robes of the baronage, see{" "}
+              <Link
+                href="/reading-room/robes-and-insignia"
+                className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+              >
+                Robes, chapeau and insignia of the baronage
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/reading-room/innes-of-learney-1945"
+                className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+              >
+                The Lord Lyon’s Case for the Baronage
+              </Link>{" "}
+              in the Reading Room.
             </p>
           </Reveal>
         </Container>
