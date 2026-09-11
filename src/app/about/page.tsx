@@ -149,7 +149,7 @@ export default function AboutPage() {
                   rank and dignity of baron upon the grantee and their heirs. The Crown charter of 6 May 1590 erecting
                   Spynie <em className="text-parchment-100">in liberam baroniam</em> conferred “
                   <em className="text-parchment-100">Titulum, Honorem, Ordinem et Statum liberi Baronis</em>” — the
-                  title, honour, order and estate of a free baron — a barony distinct from the peerage of Spynie, which
+                  title, honour, rank and status of a free baron — a barony distinct from the peerage of Spynie, which
                   came by a separate charter of 17 April 1593 (
                   <a
                     href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
@@ -254,7 +254,8 @@ export default function AboutPage() {
                             Abolition of Feudal Tenure etc. (Scotland) Act 2000
                           </a>{" "}
                           displaced that rule from 28 November 2004: the dignity of baron is retained but no longer
-                          attaches to the land.
+                          attaches to the land. Section 63(4) adds that “dignity” includes “any quality or precedence
+                          associated with, and any heraldic privilege incidental to, a dignity”.
                         </p>
                       </Footnote>
                     ) : (
@@ -299,7 +300,7 @@ export default function AboutPage() {
               <figure className="mt-6">
                 <blockquote className="font-serif text-lg leading-relaxed text-navy">
                   “That the Petitioner, as feudal Baron of Niddrie-Merschell and Lochtoure is of Baronial Race, and of
-                  rank equivalent to that denominated Hoch Adel, and equivalent to the Chiefs of Baronial Houses, upon
+                  rank equivalent to that denominated Hoch Adel [the high nobility], and equivalent to the Chiefs of Baronial Houses, upon
                   the Continent of Europe, and that by demonstration of the foresaid Ensigns Armorial, he, and his son
                   and heir-apparent and their successors in the same are to be so accounted, taken, and received
                   amongst all Nobles and in all places of Honour.”

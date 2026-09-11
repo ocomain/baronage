@@ -2,11 +2,23 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Wordmark } from "./Wordmark";
 import { ExternalArrow } from "./primitives";
 import { navLinks, ROLL_URL, CALENDLY_URL } from "@/lib/site";
+
+/** Gold "New" pill beside a nav label — marks a recently added section. */
+function NavBadge({ children }: { children: ReactNode }) {
+  return (
+    <span
+      aria-label="new section"
+      className="ml-1.5 inline-block rounded-[2px] bg-gold px-1.5 py-[2px] font-sans text-[0.5rem] font-semibold uppercase leading-none tracking-[0.16em] text-navy-deep"
+    >
+      {children}
+    </span>
+  );
+}
 
 function useScrolled(threshold = 12) {
   const [scrolled, setScrolled] = useState(false);
@@ -133,16 +145,19 @@ export function SiteHeader() {
         {/* Desktop nav row */}
         <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-5 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
           {topNavLinks.map((link) => {
-            const cls = `nav-link font-sans text-[0.7rem] font-medium uppercase tracking-[0.1em] transition-colors ${
+            const cls = `nav-link inline-flex items-center font-sans text-[0.7rem] font-medium uppercase tracking-[0.1em] transition-colors ${
               isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
             }`;
+            const badge = link.badge ? <NavBadge>{link.badge}</NavBadge> : null;
             return link.external ? (
               <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={cls}>
                 {link.label}
+                {badge}
               </a>
             ) : (
               <Link key={link.href} href={link.href} data-active={isActive(link.href)} className={cls}>
                 {link.label}
+                {badge}
               </Link>
             );
           })}
@@ -183,11 +198,12 @@ export function SiteHeader() {
                     ) : (
                       <Link
                         href={link.href}
-                        className={`block py-3.5 font-display text-lg ${
+                        className={`flex items-center py-3.5 font-display text-lg ${
                           isActive(link.href) ? "text-oxblood" : "text-navy"
                         }`}
                       >
                         {link.label}
+                        {link.badge && <NavBadge>{link.badge}</NavBadge>}
                       </Link>
                     )}
                   </li>
