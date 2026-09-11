@@ -21,7 +21,7 @@ const CONTENT_DIR = path.join(ROOT, "content", "reading-room");
 const OUT_FILE = path.join(ROOT, "src", "generated", "reading-room.ts");
 
 /** Editorial order of the index — only categories with papers are shown. */
-const CATEGORIES = ["Heritage & Sources", "Law & Statutes", "The Lyon Court", "Words & Usage", "Robes & Insignia"];
+const CATEGORIES = ["Heritage & Sources", "Words & Usage", "Robes & Insignia", "Law & Statutes", "The Lyon Court"];
 const WPM = 230;
 
 /* ------------------------------ helpers ------------------------------ */
