@@ -56,8 +56,8 @@ const pillars = [
 
 const timeline = [
   { year: "1320", event: "Barons seal the Declaration of Arbroath" },
-  { year: "1428", event: "Minor barons, as members of Parliament bound to attend on pain of fines, relieved of attendance: the small barons and freeholders “need not come”, sending commissioners of the shire instead (RPS 1428/3/3)" },
-  { year: "1587", event: "Minor barons and freeholders to elect two commissioners per shire, whose presence “shall relieve” the rest of their suit in Parliament — the duty lifted, the right to attend retained (RPS 1587/7/143)" },
+  { year: "1428", event: "Minor barons, as members of Parliament bound to attend on pain of fines, relieved of attendance: the small barons and freeholders “need not come”" },
+  { year: "1587", event: "Minor barons and freeholders to elect two commissioners per shire, whose presence “shall relieve” the rest of their suit in Parliament — the duty lifted, the right to attend retained" },
   { year: "1707", event: "Sat among the Three Estates until the Union" },
   { year: "1747", event: "Heritable Jurisdictions Act: regalities abolished and baron courts reduced to petty matters — the barony itself untouched" },
   { year: "2000", event: "Dignity of baron preserved by s. 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000" },
