@@ -19,7 +19,7 @@ Sir Thomas Innes of Learney (1893–1971) was Lord Lyon King of Arms from 1945 t
 
 The paper was printed in the *Proceedings of the Society of Antiquaries of Scotland*, volume 79 (1944–45), pages 111–163, and the Society has placed it online.[^2]
 
-## 1. A title, an honour, an order and an estate
+## 1. A title, an honour, rank and status
 
 Innes opens the legal argument with a Crown charter. On 6 May 1590 the lands of the Bishopric of Moray were erected into the free barony of Spynie, and the charter says in terms that the erection constituted a "Titulum, Honorem, Ordinem et Statum liberi Baronis" — the title, honour, rank and status of a free baron — whose holders "now and for ever shall be called Barons of Spynie" (p. 113). The House of Lords Committee for Privileges later held that this charter created no peerage: the peerage, "ane frie lorde of parliament to be intitulat Lordis of Spynie", came by a separate charter three years later. Innes's point is that the erection of a free barony was itself the grant of a title, distinct from and older than the peerage grant that followed.
 
