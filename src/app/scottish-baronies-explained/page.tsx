@@ -49,7 +49,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-09-07";
+const DATE_MODIFIED = "2026-09-11";
 const REVIEWED_LABEL = "September 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -73,13 +73,34 @@ const intLink =
 const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = [
   {
     q: "Is a Scottish baron a nobleman?",
-    a: "Yes. Historically, barons were untitled nobility as baron was a description not a title, the first hereditary titles were lords and earls. Today, a holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland followed France and much of continental Europe, recognising both peerage and non-peerage titled nobility — the Scottish baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
+    a: "Yes. Whether “baron” was a name of dignity or only a description of a man’s tenure was argued for centuries: Mackenzie records in 1680 that the old barons, “especially where they are Chiefs of Clans”, refused to yield precedence to baronets although “the other pretend that a Baron is no Name of Dignity”. The 1672 Act let only peers and bishops sign by their titles; barons signed by name, “of” their lands. In 1943 the Court of the Lord Lyon found and declared that the minor barons are a “titled nobility”, and that finding has governed the nobiliary court since. The record on the side of “title” is long: a document of 1382 states that Baronia est nomen dignitatis et importat judicaturam — barony is a name of dignity and imports jurisdiction; the Crown charter of 1590 erecting Spynie into a free barony conferred the “title, honour, order and estate of a free baron”; the sheriff-court suit-rolls entered a baron as “A, Baro de B” exactly as an earl was entered “A, Comes de B”; Mary Queen of Scots wrote to “Our traist friend the barroun of Kylrawak”; and Lord Lyon Erskine of Cambo signed himself “Baro de Cambo”. Against it stood Mackenzie’s “other” party, the subscription clause of the 1672 Act, and J. H. Stevenson (1896, 1927), for whom “the mere territorial baron has no title of dignity appropriated to him”. Today, a holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland followed France and much of continental Europe, recognising both peerage and non-peerage titled nobility — the Scottish baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
     body: (
       <>
         <p>
-          Yes. Historically, barons were untitled nobility as baron was a description not a title, the first
-          hereditary titles were lords and earls. Today, a holder of a barony within the Baronage of Scotland is a
-          member of Scotland’s{" "}
+          Yes. Whether “baron” was a name of dignity or only a description of a man’s tenure was argued for
+          centuries: Mackenzie records in 1680 that the old barons, “especially where they are Chiefs of Clans”,
+          refused to yield precedence to baronets although “the other pretend that a Baron is no Name of Dignity”.
+          The 1672 Act let only peers and bishops sign by their titles; barons signed by name, “of” their lands. In
+          1943 the Court of the Lord Lyon found and declared that the minor barons are a{" "}
+          <strong className="font-semibold text-navy">“titled nobility”</strong>, and that finding has governed the
+          nobiliary court since (see{" "}
+          <Link href="/reading-room/innes-of-learney-1945/" className={intLink}>
+            The Lord Lyon’s Case for the Baronage
+          </Link>
+          ).
+        </p>
+        <p className="mt-4">
+          The record on the side of “title” is long. A document of 1382 states that{" "}
+          <em>Baronia est nomen dignitatis et importat judicaturam</em> — barony is a name of dignity and imports
+          jurisdiction. The Crown charter of 1590 erecting Spynie into a free barony conferred the “title, honour,
+          order and estate of a free baron”. The sheriff-court suit-rolls entered a baron as “A, <em>Baro de</em> B”
+          exactly as an earl was entered “A, <em>Comes de</em> B”. Mary Queen of Scots wrote to “Our traist friend
+          the barroun of Kylrawak”, and Lord Lyon Erskine of Cambo signed himself “<em>Baro de Cambo</em>”. Against
+          it stood Mackenzie’s “other” party, the subscription clause of the 1672 Act, and J. H. Stevenson (1896,
+          1927), for whom “the mere territorial baron has no title of dignity appropriated to him”.
+        </p>
+        <p className="mt-4">
+          Today, a holder of a barony within the Baronage of Scotland is a member of Scotland’s{" "}
           <strong className="font-semibold text-navy">titled nobility</strong>, though not a peer. The distinction
           matters: the Scottish equivalent of an English peerage baron is the higher title{" "}
           <strong className="font-semibold text-navy">Lord of Parliament</strong> (the lowest rank of the Scottish
@@ -100,9 +121,20 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
     authority: (
       <>
-        Court of the Lord Lyon, Petition of Maclean of Ardgour (26 February 1943): the Minor Barons of Scotland are
-        recognised in the nobiliary court and the Court of Session as a <em>“titled nobility”</em> and form part of the
-        ancient nobility of Scotland. Lord Lyon David Sellar, 2010 [Ref: 57 Lindberg Ptr, Lyon Court]:{" "}
+        Court of the Lord Lyon, interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a
+        birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26; printed in
+        Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> vol. 79 (1944–45), p. 143 n. 3
+        </a>
+        : <em>“the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of
+        Session recognised as a ‘titled nobility’…”</em> Lord Lyon David Sellar, 2010 [Ref: 57 Lindberg Ptr, Lyon
+        Court]:{" "}
         <em>
           “the dignity of baron has a noble character in that it is a right which historically originated in a Crown
           grant.”
@@ -118,8 +150,44 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         </a>
         : <em>“a barony falls into the class of noble as opposed to ignoble feus… It was at the earliest a territorial
         dignity as distinct from the later personal peerage.”</em> Sir Robert Douglas,{" "}
-        <em>The Baronage of Scotland</em> (1798), a foundational text on Scottish nobility, describes baronies as{" "}
-        <em>“titles of honour”</em> conferred by the Crown with associated dignities.
+        <em>The Baronage of Scotland</em> (1798), p. 1, a foundational text on Scottish nobility:{" "}
+        <em>
+          “There is no nation in Europe where the Gentry, or lesser Barons and Freeholders, enjoyed so much liberty,
+          or had such extensive privileges as those of Scotland.”
+        </em>{" "}
+        On the history of the word:{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), pp. 113
+          (Spynie), 142, 144, 157–161 (suit-rolls, Kilravock, Cambo)
+        </a>
+        ;{" "}
+        <a
+          href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Sir George Mackenzie, <em>Works</em> vol. ii (<em>Science of Herauldry</em>, 1680), pp. 549–550
+        </a>
+        ;{" "}
+        <a href="https://www.rps.ac.uk/trans/1672/6/57" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1672/6/57 (Lyon King at Arms Act, subscription clause)
+        </a>
+        ;{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Lord Lyon Sellar, Note in <em>Sturzenegger of Arran</em>, p. 8 (Stevenson)
+        </a>
+        .
       </>
     ),
   },
@@ -159,7 +227,17 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
     authority: (
       <>
-        Court of the Lord Lyon, Petition of Maclean of Ardgour (1943), and{" "}
+        Court of the Lord Lyon, interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant), Public Register of All
+        Genealogies and Birthbrieves, vol. iv, p. 26, printed in{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Innes of Learney, <em>PSAS</em> 79, p. 143 n. 3
+        </a>
+        , and{" "}
         <em>Spencer-Thomas of Buquhollie v Newell</em> (Court of Session) — recognition as a “titled nobility”;{" "}
         <a
           href="https://www.legislation.gov.uk/asp/2000/5/section/63"
@@ -184,7 +262,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Are Scottish baronies recognised in law?",
-    a: "Yes — by statute. When the feudal system was abolished, the dignity of baron was expressly preserved: section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 provides that nothing in the Act affects the dignity of baron. The Explanatory Notes to the Act confirm that the dignity survives as a personal, non-territorial “floating” dignity, no longer attached to land. A Scottish barony is therefore a recognised dignity in Scots law, held independently of any estate.",
+    a: "Yes — by statute. When the feudal system was abolished, the dignity of baron was expressly preserved: section 63 of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 provides that nothing in the Act affects the dignity of baron. The Explanatory Notes to the Act confirm that the dignity survives as a personal, non-territorial “floating” dignity, no longer attached to land. A Scottish barony is therefore a recognised dignity in Scots law, held independently of any estate. Section 63(4) adds that “dignity” includes any quality or precedence associated with, and any heraldic privilege incidental to, a dignity — the statutory hook on which the Court of the Lord Lyon continues to treat ownership of a barony as bringing a petitioner within its jurisdiction (Menking, 2015, paras 6–8).",
     body: (
       <>
         <p>
@@ -215,6 +293,21 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           attached to land. A Scottish barony is therefore a recognised dignity in Scots law, held independently of any
           estate.
         </p>
+        <p className="mt-4">
+          Subsection (4) goes further than the bare word. It provides that{" "}
+          <a
+            href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={extLink}
+          >
+            <em>“‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to,
+            a dignity”</em>
+          </a>
+          . That is the statutory hook on which the Court of the Lord Lyon continues to treat ownership of a barony as
+          bringing a petitioner within its jurisdiction (Lord Lyon Morrow, Note in the petition of Menking, 30 April
+          2015, paras 6–8).
+        </p>
       </>
     ),
     authority: (
@@ -236,7 +329,18 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         >
           Explanatory Notes
         </a>{" "}
-        — legislation.gov.uk.
+        — legislation.gov.uk. Section 63(4): <em>“‘dignity’ includes any quality or precedence associated with, and any
+        heraldic privilege incidental to, a dignity”</em>. Lord Lyon Morrow,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/Menking.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in the petition of Menking
+        </a>{" "}
+        (30 April 2015), paras 6–8 — ownership of a barony brings the petitioner within the jurisdiction of the Lord
+        Lyon.
       </>
     ),
   },
@@ -497,7 +601,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>{" "}
           states that “laird” is{" "}
           <strong className="font-semibold text-navy">“a description rather than a title”</strong>, and that a souvenir
-          plot is not sufficient to bring a person within the Lyon Court’s jurisdiction to seek a grant of arms.
+          plot is not sufficient to bring a person within the Lyon Court’s jurisdiction to seek a grant of arms. On
+          what “laird” and “lord” have meant in Scotland, see{" "}
+          <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
+            Lairds, lords and barons
+          </Link>
+          .
         </p>
         <p className="mt-4">
           More broadly, it is a common myth that one can simply buy one’s way into the genuine nobility of the United
@@ -540,7 +649,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "What is a territorial designation (TD), and is it the same as a barony?",
-    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a title of nobility; a distinctly Scottish territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission (although the Lord Lyon's recognition of the barony title in the holder's favour is nonetheless helpful), but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for three generations, or 82 years; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a barony or peerage title. TDs belong mainly to lairds (landowners of historic estates) and long-established landed families. A baron may hold one too: where he owns the lands historically associated with his barony and is so recognised by the Lord Lyon, he may be “Surname of [TD]” as well as “Baron of [Barony]” — though the designation and the barony remain distinct. A few Scottish peers also carry a designation in their surname: The Rt Hon Jean Drummond of Megginch, 16th Baroness Strange (d. 2005), had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage Strange, which carries no territorial element; The Rt Hon James Borthwick of that Ilk, 25th Lord Borthwick, and The Rt Hon Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name: The Rt Hon Donald Cameron of Lochiel, Lord Cameron of Lochiel — “Lord Cameron of Lochiel” is a peerage title, distinct from his surname “Cameron of Lochiel”, which carries the territorial designation. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference. The usage is continental in character: the Scots “of” before a placename does the work of the Continent's nobiliary particles — the German von, the French and Spanish de. The territorial “of” does not exist in the United Kingdom outside Scotland: UK institutions such as HM Passport Office and the College of Arms refer “of” surnames to the Lord Lyon, and an “of” surname marks its bearer as Scottish.",
+    a: "No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a title of nobility; a distinctly Scottish territorial designation — the “Surname of Place” form, such as “Kerr of Ardgowan” — is part of a person's family name, not a title of nobility. A baron may use the barony title as a matter of legal right, without the Lord Lyon's permission (although the Lord Lyon's recognition of the barony title in the holder's favour is nonetheless helpful), but a territorial designation must be authorised by the Court of the Lord Lyon and is recognised only where the applicant owns a substantial estate — in Lord Lyon Sellar’s guidance of 5 January 2010, “an ‘estate’, or farm or, at the very least, a house with policies extending to five acres or thereby, outwith a burgh”. In the Kerr of Ardgowan case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated as a separate question, the Court of Session confirming the Lord Lyon's discretion to grant or refuse a territorial designation: in Kerr of Ardgowan v Lord Lyon 2009 SLT 759 the Extra Division held that the Lord Lyon “does indeed enjoy a wide discretion in deciding whether or not to accept a change of name for entry in the Public Register”. A territorial designation becomes a heritable part of the surname, separable from the land, only after it has been held and used for roughly three generations; and owning the caput — the head place of a barony — does not by itself entitle the holder to the matching designation. Many barons today hold no territorial designation, and most people who hold a territorial designation are not barons; the two can coincide, differ, or be unconnected. A territorial designation belongs to the family name (surname), not to a barony or peerage title. TDs belong mainly to lairds (landowners of historic estates) and long-established landed families. A baron may hold one too: where he owns the lands historically associated with his barony and is so recognised by the Lord Lyon, he may be “Surname of [TD]” as well as “Baron of [Barony]” — though the designation and the barony remain distinct. A few Scottish peers also carry a designation in their surname: The Rt Hon Jean Drummond of Megginch, 16th Baroness Strange (d. 2005), had the designation “of Megginch” recognised by the Lord Lyon in her surname, separately from her peerage Strange, which carries no territorial element; The Rt Hon James Borthwick of that Ilk, 25th Lord Borthwick, and The Rt Hon Patrick Johnstone of Annandale and of that Ilk, 11th Earl of Annandale and Hartfell, are others. This is different again from a peerage that merely includes a place-name: The Rt Hon Donald Cameron of Lochiel, Lord Cameron of Lochiel — “Lord Cameron of Lochiel” is a peerage title, distinct from his surname “Cameron of Lochiel”, which carries the territorial designation. “Of that Ilk” is a form of territorial designation used where the surname and the place are the same: “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing, and which form is used is a matter of preference. The custom has a statutory root: the Lyon King of Arms Act 1672 allowed only noblemen and bishops to subscribe by their titles, while “all others shall subscribe their christened names … with their surnames, and may, if they please, adject the designations of their lands prefixing the word ‘of’ to the said designations”; the clause was repealed as spent by the Requirements of Writing (Scotland) Act 1995, but it is the origin of the territorial “of”. The usage is continental in character: the Scots “of” before a placename does the work of the Continent's nobiliary particles — the German von, the French and Spanish de. The territorial “of” does not exist in the United Kingdom outside Scotland: UK institutions such as HM Passport Office and the College of Arms refer “of” surnames to the Lord Lyon, and an “of” surname marks its bearer as Scottish.",
     body: (
       <>
         <p>
@@ -557,7 +666,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
             Will the Lord Lyon recognise a baron as a baron?
           </a>
           ). A territorial designation is different: it must be authorised by the Court of the Lord Lyon, and is
-          recognised only where the applicant owns a substantial estate. In the{" "}
+          recognised only where the applicant owns a substantial estate — in Lord Lyon Sellar’s guidance of 5 January
+          2010, <em>“an ‘estate’, or farm or, at the very least, a house with policies extending to five acres or
+          thereby, outwith a burgh”</em>. In the{" "}
           <a
             href="https://vlex.co.uk/vid/stephen-kerr-of-ardgowan-807229025"
             target="_blank"
@@ -568,11 +679,13 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>{" "}
           case the petitioner was recognised as Baron of Ardgowan, yet the matching territorial designation was treated
           as a separate question — the Court of Session confirming the Lord Lyon’s discretion to grant or refuse a
-          territorial designation.
+          territorial designation. In <em>Kerr of Ardgowan v Lord Lyon</em> 2009 SLT 759 the Extra Division held that
+          the Lord Lyon <em>“does indeed enjoy a wide discretion in deciding whether or not to accept a change of name
+          for entry in the Public Register”</em>.
         </p>
         <p className="mt-4">
           A territorial designation becomes a heritable part of the surname, separable from the land, only after it has
-          been held and used for three generations, or 82 years. And owning the <em>caput</em> — the head place of a
+          been held and used for roughly three generations. And owning the <em>caput</em> — the head place of a
           barony — does not by itself entitle the holder to the matching designation; that too must be authorised by
           the Lord Lyon.
         </p>
@@ -600,6 +713,16 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <em>“Of that Ilk”</em> is a form of territorial designation used where the surname and the place are one and
           the same. “Borthwick of that Ilk” and “Borthwick of Borthwick” mean the same thing; which form is used is a
           matter of preference.
+        </p>
+        <p className="mt-4">
+          The custom has a statutory root. The{" "}
+          <a href="https://www.rps.ac.uk/trans/1672/6/57" target="_blank" rel="noopener noreferrer" className={extLink}>
+            Lyon King of Arms Act 1672
+          </a>{" "}
+          allowed only noblemen and bishops to subscribe by their titles, while <em>“all others shall subscribe their
+          christened names … with their surnames, and may, if they please, adject the designations of their lands
+          prefixing the word ‘of’ to the said designations”</em>. The clause was repealed as spent by the Requirements
+          of Writing (Scotland) Act 1995, but it is the origin of the territorial “of”.
         </p>
         <p className="mt-4">
           The usage is continental in character: the Scots <em>“of”</em> before a placename does the work of the
@@ -631,7 +754,18 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Kerr v Advocate General
         </a>{" "}
         (Court of Session) — the Lord Lyon’s discretion over recognition of a territorial designation, which he ties to
-        ownership of a substantial estate. On the landownership and long-usage requirements: Donald Draper Campbell,{" "}
+        ownership of a substantial estate; reported as <em>Kerr of Ardgowan v Lord Lyon</em> 2009 SLT 759 (Extra
+        Division), quoted in{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Lord Lyon Sellar, Note in <em>Sturzenegger of Arran</em>, pp. 13–14
+        </a>
+        . Lord Lyon Sellar’s guidance of 5 January 2010 (the “five acres … outwith a burgh” test) and the long-usage
+        requirement (“at least three generations”, citing Sir Crispin Agnew): Donald Draper Campbell,{" "}
         <a
           href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
           target="_blank"
@@ -640,13 +774,25 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         >
           Scottish Armory and Heraldry
         </a>{" "}
-        (2019).
+        (2019), pp. 48–50 and 83–84. The 1672 subscription clause:{" "}
+        <a href="https://www.rps.ac.uk/trans/1672/6/57" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1672/6/57
+        </a>{" "}
+        (original text) and{" "}
+        <a href="https://www.legislation.gov.uk/aosp/1672/47" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Lyon King of Arms Act 1672
+        </a>{" "}
+        (revised text, noting the repeal by the{" "}
+        <a href="https://www.legislation.gov.uk/ukpga/1995/7" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Requirements of Writing (Scotland) Act 1995
+        </a>
+        ).
       </>
     ),
   },
   {
     q: "Will the Lord Lyon recognise a baron as a baron?",
-    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. In recent years, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon. The Lord Lyon holds considerable autonomy in this respect: part of that discretion is that the form of address recorded on the grant of arms is the one that should be used for official purposes.",
+    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with a helmet befitting their degree. In recent years, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon. The Lord Lyon holds considerable autonomy in this respect: part of that discretion is that the form of address recorded on the grant of arms is the one that should be used for official purposes. The dignity itself is held as of right under s. 63 of the 2000 Act — recognition by the Lord Lyon is “only ever a matter of grace (and not entitlement)”, as the Court of Session put it (Hamilton of Rockhall v Lord Lyon [2019] CSOH 85). The Lord Lyon has also said that “in Scotland anyone is at liberty to call themselves what they wish subject to it not being the intention to deceive” (Menking, Note of 30 April 2015, para 21).",
     body: (
       <>
         <p>
@@ -677,6 +823,14 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           discretion is that the form of address recorded on the grant of arms is the one that should be used for
           official purposes.
         </p>
+        <p className="mt-4">
+          The dignity itself is held as of right under s. 63 of the 2000 Act — recognition by the Lord Lyon is{" "}
+          <em>“only ever a matter of grace (and not entitlement)”</em>, as the Court of Session put it (
+          <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85). The Lord Lyon has also said that{" "}
+          <em>“in Scotland anyone is at liberty to call themselves what they wish subject to it not being the intention
+          to deceive”</em>{" "}
+          (Menking, Note of 30 April 2015, para 21).
+        </p>
       </>
     ),
     authority: (
@@ -695,7 +849,26 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <a href="https://www.courtofthelordlyon.scot" target="_blank" rel="noopener noreferrer" className={extLink}>
           Court of the Lord Lyon
         </a>
-        .
+        .{" "}
+        <a
+          href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>Hamilton of Rockhall v Lord Lyon King of Arms</em> [2019] CSOH 85
+        </a>{" "}
+        (Court of Session, Outer House) — recognition by the Lord Lyon “only ever a matter of grace (and not
+        entitlement)”. Lord Lyon Morrow,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/Menking.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in the petition of Menking
+        </a>{" "}
+        (30 April 2015), para 21.
       </>
     ),
   },
@@ -831,7 +1004,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>{" "}
           that “laird” is{" "}
           <strong className="font-semibold text-navy">“a description rather than a title”</strong>, and it likewise
-          carries no formal status in law.
+          carries no formal status in law. For what the words themselves have meant, see{" "}
+          <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
+            Lairds, lords and barons
+          </Link>
+          .
         </p>
         <p className="mt-4">
           The claim, made by some, that Scottish baronies are simply the Scottish name for English manors is incorrect:
@@ -859,7 +1036,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "How does a Scottish barony differ from an English or Irish feudal barony?",
-    a: "There are no recognised English or Irish feudal barons today. They developed along different lines. Scotland followed the continental pattern of a titled nobility that extends below the peerage — a class of noble barons, with the territorial “of” that answers to the German von or the French de. In England and Ireland the word “baron” went the other way and became the lowest rank of the peerage; there is no English or Irish equivalent of the Scottish non-peerage titled baron. (The Scottish peerage has its own lowest rank, the Lord of Parliament, discussed above.) The earliest English baronies were baronies by tenure — held per baroniam, directly of the Crown, the tenure itself carrying a duty to attend Parliament — but from the thirteenth century the summons came instead by writ. Under the Tenures Abolition Act 1660 many baronies by tenure were converted into baronies by writ, and the rest ceased to exist as recognised feudal baronies, their lands passing into free socage; the courts then closed the door on the older form, the Fitzwalter case (1670) holding that barony by tenure had long been discontinued and the Berkeley case (1861) confirming that baronies by tenure no longer existed. In Ireland the picture is more tangled: an Irish feudal barony was a customary title denoting land held by feudal obligation rather than a rank of nobility, and separately “barony” in Ireland means an administrative division of a county — like an English hundred — which is not a title at all, though spurious titles have been sold trading on those place-names. The Scottish barony followed neither path: neither a peerage nor a mere tenure, but a dignity of a titled nobility, it survived the abolition of the feudal system in 2004, expressly preserved as a personal, non-territorial dignity.",
+    a: "There are no recognised English or Irish feudal barons today. They developed along different lines. Scotland followed the continental pattern of a titled nobility that extends below the peerage — a class of noble barons, with the territorial “of” that answers to the German von or the French de. In England and Ireland the word “baron” went the other way and became the lowest rank of the peerage; there is no English or Irish equivalent of the Scottish non-peerage titled baron. (The Scottish peerage has its own lowest rank, the Lord of Parliament, discussed above.) The earliest English baronies were baronies by tenure — held per baroniam, directly of the Crown, the tenure itself carrying a duty to attend Parliament — but from the thirteenth century the summons came instead by writ. Under the Tenures Abolition Act 1660 many baronies by tenure were converted into baronies by writ, and the rest ceased to exist as recognised feudal baronies, their lands passing into free socage; the courts then closed the door on the older form, the Fitzwalter case (1670) holding that barony by tenure had long been discontinued and the Berkeley case (1861) confirming that baronies by tenure no longer existed. In Ireland the picture is more tangled: an Irish feudal barony was a customary title denoting land held by feudal obligation rather than a rank of nobility, and separately “barony” in Ireland means an administrative division of a county — like an English hundred — which is not a title at all, though spurious titles have been sold trading on those place-names. The Scottish barony followed neither path: neither a peerage nor a mere tenure, but a dignity of a titled nobility, it survived the abolition of the feudal system in 2004, expressly preserved as a personal, non-territorial dignity. Lord Lyon Sellar put it thus in Sturzenegger of Arran: “Anachronistic and anomalous the position of the former feudal baron may be, but there can be no doubt about the thread of continuity from the earliest days of feudalism in Scotland until the present day.” And on the Heritable Jurisdictions Act, often assumed to have ended the Scottish barony: “Baron courts, however, were not abolished by the Heritable Jurisdictions Act, although their jurisdiction, both civil and criminal, was greatly reduced. … The style of ‘Baron’, although not incorrect, gradually fell into desuetude.”",
     body: (
       <>
         <p>
@@ -902,6 +1079,15 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </a>
           .
         </p>
+        <p className="mt-4">
+          Lord Lyon Sellar put it thus in <em>Sturzenegger of Arran</em>:{" "}
+          <em>“Anachronistic and anomalous the position of the former feudal baron may be, but there can be no doubt
+          about the thread of continuity from the earliest days of feudalism in Scotland until the present day.”</em>{" "}
+          And on the Heritable Jurisdictions Act, often assumed to have ended the Scottish barony:{" "}
+          <em>“Baron courts, however, were not abolished by the Heritable Jurisdictions Act, although their
+          jurisdiction, both civil and criminal, was greatly reduced. … The style of ‘Baron’, although not incorrect,
+          gradually fell into desuetude.”</em>
+        </p>
       </>
     ),
     authority: (
@@ -916,7 +1102,17 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         </a>{" "}
         (conversion of feudal tenures to socage); <em>Fitzwalter</em> case (1670) and the <em>Berkeley</em> Peerage
         case (1861), Committee for Privileges of the House of Lords — barony by tenure obsolete. On Ireland, the
-        distinction between an Irish feudal barony and an administrative barony (a land division of a county).
+        distinction between an Irish feudal barony and an administrative barony (a land division of a county). Lord
+        Lyon Sellar,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in the petition of <em>Sturzenegger of Arran</em>
+        </a>
+        , pp. 7, 10–11 — the “thread of continuity” and the effect of the Heritable Jurisdictions Act on baron courts.
       </>
     ),
   },
@@ -978,7 +1174,19 @@ const sources: ReactNode[] = [
     </a>{" "}
     — legislation.gov.uk.
   </>,
-  <>Court of the Lord Lyon, Petition of Maclean of Ardgour (26 February 1943).</>,
+  <>
+    Court of the Lord Lyon, interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a
+    birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26; printed in{" "}
+    <a
+      href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={extLink}
+    >
+      Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> vol. 79 (1944–45), p. 143 n. 3
+    </a>
+    .
+  </>,
   <>
     <em>Spencer-Thomas of Buquhollie v Newell</em> (Court of Session).
   </>,
@@ -1023,7 +1231,9 @@ const sources: ReactNode[] = [
 
 /** Key terms, single source of truth for the visible glossary and the
  * schema.org DefinedTermSet. */
-const glossary: { term: string; def: string }[] = [
+/** `def` is plain text (it feeds the schema.org DefinedTermSet); `note` is an
+ * optional small-print line of sources or cross-references rendered beneath it. */
+const glossary: { term: string; def: string; note?: ReactNode }[] = [
   {
     term: "Scottish feudal barony",
     def: "A now incorrect and defunct historical term. Baronies were feudal until 28 November 2004, when the feudal system was abolished along with all feudal aspects; extant baronies continue as personal, non-territorial dignities, so a living barony is no longer “feudal”. The precise term for the historic character is “quondam” (formerly) feudal barony.",
@@ -1035,6 +1245,65 @@ const glossary: { term: string; def: string }[] = [
   {
     term: "Minor baron",
     def: "A holder of a Scottish barony — a member of Scotland's titled nobility ranking below the peerage. The term used by the Court of the Lord Lyon to distinguish these barons from barons of the peerage.",
+    note: (
+      <>
+        See also{" "}
+        <Link href="/reading-room/innes-of-learney-1945/" className={intLink}>
+          The Lord Lyon’s Case for the Baronage
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    term: "Barones majores / minores",
+    def: "Greater and lesser barons. The greater barons became the Lords of Parliament and the peerage; the lesser — the “small barons” of the Acts — are the Baronage of Scotland. Under the robes Act of 1455 both wore the same red mantle, and in 1567 Parliament declared the barons “a part of the nobility”. Craig: “Dukes, marquesses, and earls are all comprehended among the barons, and originally they were all known under the latter description.”",
+    note: (
+      <>
+        <a href="https://www.rps.ac.uk/trans/1455/8/12" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1455/8/12
+        </a>{" "}
+        (robes);{" "}
+        <a href="https://www.rps.ac.uk/trans/1567/12/45" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1567/12/45
+        </a>{" "}
+        (“a part of the nobility”); Craig, <em>Jus Feudale</em>, I.12.15; Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , pp. 124–148 (the robes).
+      </>
+    ),
+  },
+  {
+    term: "Freeholder",
+    def: "A vassal holding land directly of the Crown without a grant in free barony. Freeholders and small barons were excused attendance at Parliament together in 1428 and voted together for shire commissioners from 1587 (on forty shillings of land held of the king), but “Freeholders were not Barons and everybody recognised that”; heraldically they had no baronial insignia.",
+    note: (
+      <>
+        <a href="https://www.rps.ac.uk/trans/1428/3/3" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1428/3/3
+        </a>
+        ;{" "}
+        <a href="https://www.rps.ac.uk/trans/1587/7/143" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1587/7/143
+        </a>
+        ; Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , p. 137 n. 1.
+      </>
+    ),
   },
   {
     term: "Quondam feudal barony",
@@ -1051,10 +1320,34 @@ const glossary: { term: string; def: string }[] = [
   {
     term: "Peerage",
     def: "The highest grade of the British nobility. In Scotland its ranks, in ascending order, are Lord of Parliament, Viscount, Earl, Marquess and Duke in the peerage of Scotland. A peerage stands in law whether or not its holder is enrolled, and historically carried a seat in Parliament. It ranks above, and is distinct from, a barony in the Baronage of Scotland.",
+    note: (
+      <>
+        See also{" "}
+        <Link href="/reading-room/innes-of-learney-1945/" className={intLink}>
+          The Lord Lyon’s Case for the Baronage
+        </Link>
+        .
+      </>
+    ),
   },
   {
     term: "Lord of Parliament",
-    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. Lords of Parliament arose in the mid-15th century from among the greater barons — territorial dignities at that stage, the term “peerage” itself settling into use only closer to the Union of 1707. The lesser barons (minor barons) also sat among the nobility in Parliament in their own right: from 1428 they were relieved of the obligation to attend in person, due to the expense and burdens of travel, and an Act of 1587 allowed them to be represented by elected commissioners for the shires, though minor barons retained the legal right to attend in person — which continued until the Union of 1707.",
+    def: "The lowest rank of the Scottish peerage, below Viscount, Earl, Marquess and Duke in the peerage of Scotland — the Scottish equivalent of an English peerage baron, and a higher dignity than a (minor) baron. Lords of Parliament arose from among the greater barons: personal peerages were first created in the mid-fifteenth century; the older territorial dignities were all but obsolete by 1600. The lesser barons (minor barons) also sat among the nobility in Parliament in their own right: from 1428 they were relieved of the obligation to attend in person, due to the expense and burdens of travel, and an Act of 1587 allowed them to be represented by elected commissioners for the shires, though minor barons retained the legal right to attend in person — which continued until the Union of 1707.",
+    note: (
+      <>
+        Lord Lyon Sellar,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in <em>Sturzenegger of Arran</em>
+        </a>
+        , p. 12, following Alexander Grant, “The development of the Scottish peerage”, <em>Scottish Historical
+        Review</em> 57 (1978).
+      </>
+    ),
   },
   {
     term: "Baronetcy",
@@ -1075,6 +1368,199 @@ const glossary: { term: string; def: string }[] = [
   {
     term: "Of that Ilk",
     def: "A form of territorial designation used where a family's surname and its lands share the same name — “Borthwick of that Ilk” means “Borthwick of Borthwick”. The two forms are interchangeable.",
+  },
+  {
+    term: "Representer (of a House)",
+    def: "The person recognised by the Lord Lyon as head of a family — normally the heir of line — and so entitled to its undifferenced arms. “Representer of the Baronial House of X” in Lyon Court Letters Patent denotes the head of a family that formerly held the barony of X — in plain terms, a former baron’s house — and not the present holder of the barony, which may have passed with the land to another owner (as in the 2001 matriculation for Kincaid of Kincaid). Innes of Learney, who writes “Representative” (“Representer” is the Lyon Court’s later Scots form), held that such representers remain barons in the Continental sense — of baronial race, equivalent to the Continental baronial houses — though not barons in Scots law, the barony having passed with the land: “such chapeau, once it is matriculated, descends to the ‘heir and representative’ of such ‘baronial race’—who in the Continental sense is of course a ‘Baron’.” He distinguished “heir male” from “representative”, it being from the latter character that the baronial additaments descend.",
+    note: (
+      <>
+        Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , p. 155 (quoted); p. 154 n. 1 (“‘Heir Male’ is in such terminology a distinct term from ‘Representative’,
+        and it is from the latter character … that baronial exterior additaments descend”); p. 156 (“incorporeally
+        Baronial as the Representatives of Baronial Houses”); p. 142 n. 4. Lord Lyon Sellar,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/craigend.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in <em>Smith of Craigend</em>
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    term: "For aught yet seen",
+    def: "Lyon Court usage for “on the evidence so far”. A recognition “for aught yet seen” is provisional: it stands unless better evidence displaces it. Used since 2009 for barony ownership proved by an entry in the Scottish Barony Register with the Custodian’s report.",
+    note: (
+      <>
+        Lord Lyon Sellar, Note in the petition of Lindley-Highfield of Ballumbie Castle, Baron of Cartsburn (1 December
+        2009), reproduced in Donald Draper Campbell,{" "}
+        <a
+          href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Scottish Armory and Heraldry
+        </a>{" "}
+        (2019), p. 82; Lord Lyon Sellar,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/craigend.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in <em>Smith of Craigend</em>
+        </a>
+        ; Lord Lyon Morrow,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/Menking.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in the petition of Menking
+        </a>{" "}
+        (2015), para 5.
+      </>
+    ),
+  },
+  {
+    term: "Of the genus of barony",
+    def: "Lord Lyon Morrow’s formula (Menking, 2015) for former feudal lordships, regalities and earldoms: dignities of the same kind as a barony, whose holders receive a baron’s additaments and are recorded as holding the lordship or earldom.",
+    note: (
+      <>
+        Lord Lyon Morrow,{" "}
+        <a
+          href="https://courtofthelordlyon.scot/index_htm_files/Menking.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Note in the petition of Menking
+        </a>{" "}
+        (30 April 2015), paras 9–20, 28–35.
+      </>
+    ),
+  },
+  {
+    term: "Additaments",
+    def: "“Symbols signifying a particular rank” added to a coat of arms (Court of Session, 2019): for barons, the baronial helm; formerly also the chapeau, the feudo-baronial mantle and, for pre-1587 baronial houses, supporters — only for baronies held since then continuously in the same family.",
+    note: (
+      <>
+        <a
+          href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85
+        </a>
+        ; Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , pp. 148–157 (the chapeau); Lord Lyon Sellar’s guidance of 5 January 2010, reproduced in Campbell,{" "}
+        <a
+          href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Scottish Armory and Heraldry
+        </a>{" "}
+        (2019), p. 83.
+      </>
+    ),
+  },
+  {
+    term: "Nobility clause",
+    def: "The closing clause of older Lyon Court grants and declarations that the grantee is to be “taken, and received amongst all Nobles and in all places of Honour” — the words of the Wauchope of Niddrie declaration of 19 April 1945. A nobility clause was present in Lord Lyon Blair’s grant to the Baron of Ballencrieff (2007); it has been omitted from grants since.",
+    note: (
+      <>
+        Court of the Lord Lyon (Lord Lyon Sir Francis Grant), 19 April 1945, Lyon Register vol. xxxv p. 31; printed in
+        Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , p. 160 (the words quoted);{" "}
+        <a
+          href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85
+        </a>
+        , para [21] (the Ballencrieff grant of 2007; omitted since).
+      </>
+    ),
+  },
+  {
+    term: "Comes · Dominus · Baro",
+    def: "The Latin rank-words of the sheriff-court rolls — Earl of, Lord of, Baron of — entered as titles (“Intrat A, Baro de B”), corresponding to lands held in free earldom, free lordship and free barony. A “Dominus de X” in a fifteenth-century charter need not be a Lord of Parliament.",
+    note: (
+      <>
+        Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , pp. 157–158;{" "}
+        <a
+          href="https://archive.org/details/inquiryintoorigi00bortuoft/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          Borthwick, <em>An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland</em> (1775)
+        </a>
+        , p. 13.
+      </>
+    ),
+  },
+  {
+    term: "Hoch-adel",
+    def: "The Continental “high nobility” — houses of baronial rank and above, as opposed to the untitled gentry. Lyon Court declarations of 1938–45 (Chisholm; Wauchope of Niddrie) found Scottish barons “of rank equivalent to that denominated Hoch Adel, and equivalent to the Chiefs of Baronial Houses, upon the Continent of Europe”.",
+    note: (
+      <>
+        Court of the Lord Lyon (Lord Lyon Sir Francis Grant), 19 April 1945, Lyon Register vol. xxxv p. 31; printed in
+        Innes of Learney,{" "}
+        <a
+          href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>PSAS</em> 79
+        </a>
+        , p. 160 and n. 6.
+      </>
+    ),
   },
 ];
 
@@ -1244,7 +1730,10 @@ export default function BaroniesExplainedPage() {
             {glossary.map((g) => (
               <div key={g.term}>
                 <dt className="font-display text-lg text-navy">{g.term}</dt>
-                <dd className="mt-1.5 leading-relaxed text-ink-soft">{g.def}</dd>
+                <dd className="mt-1.5 leading-relaxed text-ink-soft">
+                  <p>{g.def}</p>
+                  {g.note && <p className="mt-1.5 font-sans text-sm text-ink-soft/80">{g.note}</p>}
+                </dd>
               </div>
             ))}
           </dl>
