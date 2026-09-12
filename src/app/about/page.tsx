@@ -141,11 +141,8 @@ const citations: {
         “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of
         baron, though retained, shall not attach to the land” — and{" "}
         <span className="text-foil not-italic">“nothing in this Act affects the dignity of baron”</span>; s. 63(4):{" "}
-        <span className="text-foil not-italic">
-          “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a
-          dignity”
-        </span>
-        .
+        “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a
+        dignity”.
       </>
     ),
   },

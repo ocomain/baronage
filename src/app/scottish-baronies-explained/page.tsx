@@ -1385,7 +1385,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Territorial designation (TD)",
-    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility or dignity, and is separate from a barony, although they could be untitled nobility if holding arms; a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
+    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility or dignity, and is separate from a barony, although certainly untitled nobility; a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
   },
   {
     term: "Of that Ilk",
