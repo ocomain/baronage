@@ -12,9 +12,23 @@ export const OG_IMAGE = {
   alt: "Eilean Donan castle at dusk with the seal of the Baronage of Scotland Association",
 };
 
+type OgImage = { url: string; width: number; height: number; alt: string };
+
 /** Page-level metadata with correct link-preview (Open Graph / Twitter) tags.
- *  `path` must start and end with "/" (e.g. "/sbr-vs-roll/"). */
-export function pageMetadata({ title, description, path }: { title: string; description: string; path: string }): Metadata {
+ *  `path` must start and end with "/" (e.g. "/sbr-vs-roll/").
+ *  `image` overrides the shared social image — used by Reading Room papers,
+ *  which generate a card of their own. */
+export function pageMetadata({
+  title,
+  description,
+  path,
+  image = OG_IMAGE,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  image?: OgImage;
+}): Metadata {
   const fullTitle = `${title} · ${SITE_NAME}`;
   return {
     title,
@@ -27,13 +41,13 @@ export function pageMetadata({ title, description, path }: { title: string; desc
       siteName: SITE_NAME,
       type: "website",
       locale: "en_GB",
-      images: [OG_IMAGE],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [OG_IMAGE.url],
+      images: [image.url],
     },
   };
 }

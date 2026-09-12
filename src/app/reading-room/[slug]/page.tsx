@@ -24,6 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: paper.title,
     description: paper.description,
     path: `/reading-room/${paper.slug}/`,
+    image: {
+      url: `${SITE_URL}/og/reading-room/${paper.slug}.png`,
+      width: 1200,
+      height: 630,
+      alt: `${paper.title} — a paper in the Reading Room of the Baronage of Scotland Association`,
+    },
   });
 }
 
