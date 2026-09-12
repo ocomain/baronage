@@ -69,10 +69,10 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
     body: (
       <>
         Court of the Lord Lyon, interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a
-        birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26: “Finds and
+        birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26: <em>“Finds and
         Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of
         Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the
-        ancient Feudal Nobility of Scotland”. Printed in Innes of Learney, <em><a href="https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143 n. 3</a></em>
+        ancient Feudal Nobility of Scotland”</em>. Printed in Innes of Learney, <em><a href="https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143 n. 3</a></em>
       </>
     ),
     subs: [
@@ -421,17 +421,16 @@ export default function HomePage() {
       </Section>
 
       {/* ============================== QUOTE (full-bleed cinematic) ============================== */}
-      <ImageBand image={GLEN_IMG} position="center 42%">
+      <ImageBand image={GLEN_IMG} position="center 42%" size="default">
         <Reveal>
           <p className="eyebrow eyebrow--light">Recognised in Law</p>
-          <blockquote className="mt-7 font-serif text-3xl italic leading-snug text-parchment-50 sm:text-[2.7rem]">
+          <blockquote className="mt-7 font-serif text-2xl italic leading-snug text-parchment-50 sm:text-4xl">
             Finds and Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a{" "}
-            <span className="text-foil not-italic">&lsquo;titled nobility&rsquo;</span>{" "}
-            and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of Scotland.
+            <span className="text-foil not-italic">&lsquo;titled nobility&rsquo;</span>.
             <Fn n={1} />
           </blockquote>
           <cite className="mt-8 block font-inscribe text-xs uppercase not-italic tracking-[0.3em] text-parchment-200/75">
-            Court of the Lord Lyon · Lord Lyon Sir Francis Grant · 1943
+            Lyon Court · Lord Lyon Francis Grant · 1943
           </cite>
         </Reveal>
       </ImageBand>
@@ -494,15 +493,15 @@ export default function HomePage() {
                 <div className="absolute inset-0 translate-x-3 translate-y-3 border border-gold/40" aria-hidden />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/featured/ardblair.webp"
-                  alt="The Baron of Ardblair and Gask"
+                  src="/featured/william.png"
+                  alt="Lord of the Isles and Baron of Renfrew"
                   className="relative h-full w-full object-cover object-top shadow-[0_30px_60px_-30px_rgba(10,16,36,0.7)]"
                 />
               </div>
             </Reveal>
             <Reveal delay={0.12}>
               <Eyebrow>Featured Baron</Eyebrow>
-              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">The Baron of Ardblair and Gask</h2>
+              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Lord of the Isles and Baron of Renfrew</h2>
               <GoldRule className="mt-6" align="start" />
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
                 Each season we honour a member of the baronage whose stewardship exemplifies the Baronial Code —
