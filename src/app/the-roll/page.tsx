@@ -64,15 +64,10 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: Re
   },
   {
     name: "The Court of the Lord Lyon",
-    href: "https://www.courtofthelordlyon.scot",
-    linkLabel: "courtofthelordlyon.scot",
     body: "Scotland’s heraldic authority and a court of law. The Lyon Court’s letters patent, matriculations and official gazette notices are the Roll’s primary sources: where a dignity is evidenced under the hand of the Lord Lyon, no further proof is asked. The Court is wholly independent of this Association and of every private body within the baronial community.",
   },
   {
     name: "The Convention of the Baronage of Scotland",
-    href: "https://www.scotsbarons.org",
-    linkLabel: "scotsbarons.org",
-    nofollow: true,
     body: "The historic representative body of Scotland’s baronage. Its name recalls the baronage’s ancient place among the Three Estates of the Scottish Parliament, summoned by the Sovereign to counsel and to legislate. In its modern form the Convention was revived in the twentieth century with the encouragement of Lord Lyon Sir Thomas Innes of Learney. It keeps a ceremonial life of long standing: the baronage is represented, at the Minister’s invitation, at morning service in St Giles’ Cathedral on St Andrew’s Day and at the opening of the General Assembly, processing from the Signet Library; four of its members attended the Coronation of Queen Elizabeth II in 1953; in 2012 Marcus Humphrey of Dinnet CBE was received in audience by The Queen at Buckingham Palace to present the Convention’s Loyal Address; and at the National Service of Thanksgiving and Dedication for King Charles III and Queen Camilla at St Giles’ in July 2023, the new Elizabeth Sword was borne by Dame Katherine Grainger, with Marcus Humphrey of Dinnet CBE among her escorts, and the Convention itself walked in the procession of representatives of the people of Scotland from Edinburgh Castle to St Giles’. Though quieter in recent years, the Convention holds a distinguished place in the modern history of the baronage, and the Association honours it.",
   },
   {
