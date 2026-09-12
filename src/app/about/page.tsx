@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Seal } from "@/components/Seal";
@@ -71,7 +72,15 @@ const mandate = [
   "Signing Memorandums of Understanding with other baronial and noble organisations, at home and on the Continent.",
 ];
 
-const citations: { source: string; text: string; href?: string; pop?: boolean; feature?: boolean; note?: string }[] = [
+const citations: {
+  source: string;
+  text: string;
+  richText?: ReactNode;
+  href?: string;
+  pop?: boolean;
+  feature?: boolean;
+  note?: string;
+}[] = [
   {
     source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
     text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
@@ -101,12 +110,20 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "Lord Clyde’s dictum · 1992",
     href: "https://archive.org/details/1992-lord-clydes-dictum",
-    text: "The essential feature of a barony title is the noble quality of the feudal grant.",
+    text: "The essential feature of a barony title is the noble quality of the feudal grant… giving the proprietor a territorial rank and dignity… thus when one was divested of an estate the title of honour ceased.",
   },
   {
     source: "The Institutional Writers",
     pop: true,
     text: "Craig, Stair, Bankton and Mackenzie confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate. Under the institutional writers nobility ran with the barony lands; since 2004 it runs with the dignity alone.",
+    richText: (
+      <>
+        Craig, Stair, Bankton and Mackenzie confirm that a grant of lands with rank attached{" "}
+        <span className="text-foil not-italic">ennobles the grantee — nobility</span> following the dignity of the
+        estate. Under the institutional writers nobility ran with the barony lands; since 2004 it runs with the
+        dignity alone.
+      </>
+    ),
   },
   {
     source: "Parliament of Scotland · 1567",
@@ -226,7 +243,7 @@ export default function AboutPage() {
                       c.feature ? "text-2xl sm:text-3xl" : "text-lg"
                     }`}
                   >
-                    <Noble text={c.text} />
+                    {c.richText ?? <Noble text={c.text} />}
                   </blockquote>
                   <figcaption
                     className={`mt-4 font-sans uppercase tracking-[0.18em] text-gold-light ${
