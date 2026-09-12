@@ -1306,7 +1306,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Laird",
-    def: "The Scots word for lord: a description, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, with Lord becoming a word for peers or crown chartered lords in the baronage of Scotland. Lairds if they hold a coat of arms but are not barons are untitled nobility (gentry in the English sense).",
+    def: "The Scots word for lord: a description, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, with Lord being a word for a titled noble, predominantly peers but also crown chartered lords without a greater title (a minor baron holding the higher rank of lord in the baronage of Scotland). Lairds if they hold a coat of arms but are not barons are untitled nobility (gentry in the English sense).",
     note: (
       <>
         See{" "}
@@ -1385,7 +1385,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Territorial designation (TD)",
-    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility, and is separate from a barony: a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
+    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility or dignity, and is separate from a barony, although they could be untitled nobility if holding arms; a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
   },
   {
     term: "Of that Ilk",
@@ -1540,7 +1540,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Comes · Dominus · Baro",
-    def: "The Latin rank-words of the sheriff-court rolls — Earl of, Lord of, Baron of — entered as titles (“Intrat A, Baro de B”), corresponding to lands held in free earldom, free lordship and free barony. A “Dominus de X” in a fifteenth-century charter need not be a Lord of Parliament.",
+    def: "The Latin rank-words of the sheriff-court rolls — Earl of, Lord of, Baron of — entered as titles (“Intrat A, Baro de B”), corresponding to lands held in free earldom, free lordship and free barony. A “Dominus de X” need not be a Lord of Parliament, but a minor baron holding the higher rank of lord in the baronage of Scotland.",
     note: (
       <>
         Innes of Learney,{" "}
