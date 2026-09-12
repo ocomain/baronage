@@ -127,7 +127,22 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
         <strong className="font-semibold">noble titles of a barony</strong>, having the like feudal effects.”
       </>,
       <>
-        Bankton, Institute (II.iii.84): “<em>Nobility</em> followed the property of the estate to which it was annexed.”
+        Sir George Mackenzie, Lord Advocate —{" "}
+        <em>
+          <a
+            href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+          >
+            The Science of Herauldry
+          </a>
+        </em>{" "}
+        (1680): “<strong className="font-semibold">a Barony, as we call it, do ennoble;</strong> for Baronies are
+        establisht only by the Prince’s Erection or Confirmation.”
+      </>,
+      <>
+        Bankton, Institute (II.iii.84): “<strong className="font-semibold">Nobility</strong> followed the property of the estate to which it was annexed.”
       </>,
     ],
   },
