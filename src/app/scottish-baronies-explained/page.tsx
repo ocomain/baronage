@@ -1306,7 +1306,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Laird",
-    def: "The Scots word for lord: a description, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, where that everyday sense stayed with the minor lords and settled into its own word, laird.",
+    def: "The Scots word for lord: a description, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, with Lord becoming a word for peers or crown chartered lords in the baronage of Scotland. Lairds if they hold a coat of arms but are not barons are untitled nobility (gentry in the English sense).",
     note: (
       <>
         See{" "}
