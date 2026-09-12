@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/page-metadata";
-import { Container, GoldRule, Section } from "@/components/primitives";
+import { Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { PaperThumbnail } from "@/components/PaperThumbnail";
 import { readingRoomCategories, readingRoomPapers } from "@/generated/reading-room";
 
@@ -29,6 +29,17 @@ export default function ReadingRoomPage() {
           <p className="mt-4 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">{STANDFIRST}</p>
           <GoldRule className="mt-6" align="start" />
         </header>
+
+        <aside className="mt-10 border-l-4 border-gold bg-parchment-100 px-6 py-6 sm:px-8 sm:py-7">
+          <Eyebrow>Important to read</Eyebrow>
+          <p className="mt-3 font-serif text-lg leading-relaxed text-navy sm:text-xl">
+            Before the papers below, read{" "}
+            <Link href="/scottish-baronies-explained" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
+              Scottish Baronies, Explained
+            </Link>
+            , our FAQ answering the questions people ask most about baronial titles.
+          </p>
+        </aside>
 
         {groups.map((group) => (
           <section key={group.category} aria-label={group.category} className="mt-12">
