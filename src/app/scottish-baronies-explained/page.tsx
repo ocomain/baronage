@@ -1263,6 +1263,10 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
     def: "A now incorrect and defunct historical term. Baronies were feudal until 28 November 2004, when the feudal system was abolished along with all feudal aspects; extant baronies continue as personal, non-territorial dignities, so a living barony is no longer “feudal”. The precise term for the historic character is “quondam” (formerly) feudal barony.",
   },
   {
+    term: "Quondam feudal barony",
+    def: "A barony that was feudal before 28 November 2004. “Quondam” means “formerly”; the phrase (Lord Lyon Sellar, 2009) marks that a barony's feudal character is now historical, the living dignity personal and non-territorial.",
+  },
+  {
     term: "Scottish barony",
     def: "A dignity which can be baron or lord or earl in the Baronage of Scotland — a title of nobility ranking below the peerage. Historically attached to land held of the Crown, it has, since the 2004 reform, been a personal, non-territorial dignity. Its holder is a baron, or “minor baron” — noble, but not a peer.",
   },
@@ -1281,7 +1285,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Barones majores / minores",
-    def: "Greater and lesser barons. The greater barons became the peerage; the lesser — the “small barons” of the Acts — are the Baronage of Scotland. Under the robes Act of 1455 minor barons (who were always members of parliament but later not obligated to attend) and Lords of Parliament were not told apart by dress: they both wore the same red mantle, open at the front and lined with silk or furred with grey. The higher ranks were marked apart by mantles of their own — the earls, under the same Act, in ‘grained’ brown furred with white, and in later usage dukes, marquesses and earls graded by the rows of ermine on their robes. In 1567 Parliament declared the barons “a part of the nobility”. Craig: “Dukes, marquesses, and earls are all comprehended among the barons, and originally they were all known under the latter description.”",
+    def: "Greater and lesser barons. The greater barons became the peerage; the lesser — the “small barons” of the Acts — are the Baronage of Scotland. Under the robes Act of 1455 minor barons (who were always members of parliament but later not obligated to attend) and Lords of Parliament were not told apart by dress: Barons and Lords of Parliament both wore the same red mantle, open at the front and lined with silk or furred with grey. The higher ranks were marked apart by mantles of their own — the earls, under the same Act, in ‘grained’ brown furred with white, and in later usage dukes, marquesses and earls graded by the rows of ermine on their robes. In 1567 Parliament declared the barons “a part of the nobility”. Craig: “Dukes, marquesses, and earls are all comprehended among the barons, and originally they were all known under the latter description.”",
     note: (
       <>
         <a href="https://www.rps.ac.uk/trans/1455/8/12" target="_blank" rel="noopener noreferrer" className={extLink}>
@@ -1306,7 +1310,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Laird",
-    def: "The Scots word for lord: a description, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, with Lord being a word for a titled noble, predominantly peers but also crown chartered lords without a greater title (a minor baron holding the higher rank of lord in the baronage of Scotland). Lairds if they hold a coat of arms but are not barons are untitled nobility (gentry in the English sense).",
+    def: "The Scots word for lord: a description and courtesy, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, with Lord being a word for a titled noble which were predominantly peers but also crown chartered lords without a greater title (a minor baron holding the higher rank of lord in the baronage of Scotland). Lairds if they hold a coat of arms but are not barons are untitled nobility (gentry in the English sense).",
     note: (
       <>
         See{" "}
@@ -1341,10 +1345,6 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
         , p. 137 n. 1.
       </>
     ),
-  },
-  {
-    term: "Quondam feudal barony",
-    def: "A barony that was feudal before 28 November 2004. “Quondam” means “formerly”; the phrase (Lord Lyon Sellar, 2009) marks that a barony's feudal character is now historical, the living dignity personal and non-territorial.",
   },
   {
     term: "Incorporeal hereditament",
@@ -1540,7 +1540,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Comes · Dominus · Baro",
-    def: "The Latin rank-words of the sheriff-court rolls — Earl of, Lord of, Baron of — entered as titles (“Intrat A, Baro de B”), corresponding to lands held in free earldom, free lordship and free barony. A “Dominus de X” need not be a Lord of Parliament, but a minor baron holding the higher rank of lord in the baronage of Scotland.",
+    def: "The Latin rank-words of the sheriff-court rolls — Earl of, Lord of, Baron of — entered as titles (“Intrat A, Baro de B”), corresponding to lands held in free earldom, free lordship and free barony. A “Dominus de X” need not be a Lord of Parliament, but a minor baron holding the higher rank of lord in the baronage of Scotland — interchangeably known as Lord X, Lord of X or Laird of X.",
     note: (
       <>
         Innes of Learney,{" "}
