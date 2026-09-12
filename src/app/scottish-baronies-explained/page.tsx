@@ -1506,7 +1506,16 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
         >
           Scottish Armory and Heraldry
         </a>{" "}
-        (2019), p. 83.
+        (2019), p. 83; on supporters,{" "}
+        <a
+          href="https://www.casemine.com/judgement/uk/5a8ff80a60d03e7f57eb874d"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          <em>Sundry Barons, &amp;c. v The Lord Lyon</em>
+        </a>{" "}
+        (Court of Session, 31 May 1673).
       </>
     ),
   },
