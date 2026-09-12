@@ -93,8 +93,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         </p>
         <figure className="mt-6 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
           <blockquote className="font-serif text-2xl italic leading-snug text-navy sm:text-3xl">
-            “…such Feus as had a Jurisdiction annext to them, a Barony, as we call it, do ennoble; for Baronies are
-            establisht only by the Prince’s Erection or Confirmation.”
+            “…such Feus as had a Jurisdiction annext to them, <strong className="font-semibold">a Barony, as we call
+            it, do ennoble</strong>; for Baronies are establisht only by the Prince’s Erection or Confirmation.”
           </blockquote>
           <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
             Sir George Mackenzie, Lord Advocate —{" "}
@@ -1301,6 +1301,19 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
           <em>PSAS</em> 79
         </a>
         , pp. 124–148 (the robes).
+      </>
+    ),
+  },
+  {
+    term: "Laird",
+    def: "The Scots word for lord: a description, not a title, like “landlord” or “lord of the manor” in England. It is a catch-all term — the neighbours call you laird whether you are a baron or not. In medieval England, likewise, every master of an estate was called a lord; the distinction developed differently in Scotland, where that everyday sense stayed with the minor lords and settled into its own word, laird.",
+    note: (
+      <>
+        See{" "}
+        <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
+          Lairds, lords and barons
+        </Link>{" "}
+        in the Reading Room.
       </>
     ),
   },

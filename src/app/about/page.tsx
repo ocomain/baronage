@@ -84,7 +84,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "Sir Crispin Agnew of Lochnaw QC, for the petitioner · Lyon Court 2007 (Petition of Lindberg, Barony of Delvine)",
     href: "https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/",
-    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown… a barony as we call it, do ennoble… All barons are required by the Acts of Parliament of Scotland to have a coat of arms.",
+    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown… All barons are required by the Acts of Parliament of Scotland to have a coat of arms.",
     note: "The same submission: “All barons are required by the Acts of the Parliament of Scotland to have a coat of Arms”, and “heraldic privilege as defined by the 2000 Act must include a right to apply for a grant of arms”.",
   },
   {
@@ -106,7 +106,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "The Institutional Writers",
     pop: true,
-    text: "Craig, Stair and Bankton confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate. Under the institutional writers nobility ran with the barony lands; since 2004 it runs with the dignity alone.",
+    text: "Craig, Stair, Bankton and Mackenzie confirm that a grant of lands with rank attached ennobles the grantee — nobility following the dignity of the estate. Under the institutional writers nobility ran with the barony lands; since 2004 it runs with the dignity alone.",
   },
   {
     source: "Parliament of Scotland · 1567",
@@ -267,7 +267,22 @@ export default function AboutPage() {
                             effects.”
                           </li>
                           <li className="pl-1">
-                            Bankton, Institute (II.iii.84): “<em className="text-gold-deep">Nobility</em> followed the property of the estate to
+                            Sir George Mackenzie, Lord Advocate —{" "}
+                            <em>
+                              <a
+                                href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                              >
+                                The Science of Herauldry
+                              </a>
+                            </em>{" "}
+                            (1680): “<strong className="font-semibold text-gold-deep">a Barony, as we call it, do ennoble;</strong> for Baronies
+                            are establisht only by the Prince’s Erection or Confirmation.”
+                          </li>
+                          <li className="pl-1">
+                            Bankton, Institute (II.iii.84): “<strong className="font-semibold text-gold-deep">Nobility</strong> followed the property of the estate to
                             which it was annexed.”
                           </li>
                         </ol>
