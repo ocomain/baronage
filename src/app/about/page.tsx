@@ -6,6 +6,24 @@ import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
 import { Footnote } from "@/components/Footnote";
 
+/** Gilds "noble", "nobility", "ennobles" and the quoted 'titled nobility' within plain citation text — the same gold-foil treatment as the homepage's pull-quote. */
+function Noble({ text }: { text: string }) {
+  const parts = text.split(/(‘titled nobility’|ennobl\w*|nobility|nobles?)/gi);
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? (
+          <span key={i} className="text-foil not-italic">
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
 export const metadata: Metadata = {
   alternates: { canonical: "/about/" },
   title: "About the Association",
@@ -66,7 +84,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
   {
     source: "Sir Crispin Agnew of Lochnaw QC, for the petitioner · Lyon Court 2007 (Petition of Lindberg, Barony of Delvine)",
     href: "https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/",
-    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown. Section 1 of the 2000 Act abolished the feudal system of land tenure but did not abolish feudal tenure in relation to dignities which are incorporeal heritage.",
+    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown… a barony as we call it, do ennoble… All barons are required by the Acts of Parliament of Scotland to have a coat of arms.",
     note: "The same submission: “All barons are required by the Acts of the Parliament of Scotland to have a coat of Arms”, and “heraldic privilege as defined by the 2000 Act must include a right to apply for a grant of arms”.",
   },
   {
@@ -75,7 +93,7 @@ const citations: { source: string; text: string; href?: string; pop?: boolean; f
     text: "Even were feudal baronies abolished altogether, the dignity of baron would “continue as a floating dignity” — allowing the “noble aspects of the barony title” to lapse was mentioned, but rejected.",
   },
   {
-    source: "Court of the Lord Lyon · 26 February 1943",
+    source: "Lyon Court · Lord Lyon Francis Grant · 1943",
     href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
     text: "Finds and Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of Scotland.",
     note: "Interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26; printed in Innes of Learney, PSAS vol. 79 (1944–45), p. 143 n. 3.",
@@ -208,7 +226,7 @@ export default function AboutPage() {
                       c.feature ? "text-2xl sm:text-3xl" : "text-lg"
                     }`}
                   >
-                    {c.text}
+                    <Noble text={c.text} />
                   </blockquote>
                   <figcaption
                     className={`mt-4 font-sans uppercase tracking-[0.18em] text-gold-light ${
@@ -238,23 +256,23 @@ export default function AboutPage() {
                           <li className="pl-1">
                             Sir Thomas Craig, Jus Feudale (I.xii.23): “Where the prince makes a grant of lands which
                             have rank attached to them, he{" "}
-                            <strong className="font-semibold">ennobles the grantee</strong> even though no express
-                            conferment of noble rank be made.”
+                            <strong className="font-semibold text-gold-deep">ennobles the grantee</strong> even though no express
+                            conferment of <span className="text-gold-deep">noble</span> rank be made.”
                           </li>
                           <li className="pl-1">
                             Lord Stair, Institutions (II.iii.45): “Erection is, when lands are not only united in one
                             tenement, but are erected into the dignity of a barony; which comprehendeth lordship,
                             earldom, &amp;c. all which are but more{" "}
-                            <strong className="font-semibold">noble titles of a barony</strong>, having the like feudal
+                            <strong className="font-semibold text-gold-deep">noble titles of a barony</strong>, having the like feudal
                             effects.”
                           </li>
                           <li className="pl-1">
-                            Bankton, Institute (II.iii.84): “<em>Nobility</em> followed the property of the estate to
+                            Bankton, Institute (II.iii.84): “<em className="text-gold-deep">Nobility</em> followed the property of the estate to
                             which it was annexed.”
                           </li>
                         </ol>
                         <p className="mt-3">
-                          Bankton’s nobility “followed the property of the estate”: it passed, and was lost, with the
+                          Bankton’s <span className="text-gold-deep">nobility</span> “followed the property of the estate”: it passed, and was lost, with the
                           land. Section 63 of the{" "}
                           <a
                             href="https://www.legislation.gov.uk/asp/2000/5/section/63"
@@ -311,10 +329,10 @@ export default function AboutPage() {
               <figure className="mt-6">
                 <blockquote className="font-serif text-lg leading-relaxed text-navy">
                   “That the Petitioner, as feudal Baron of Niddrie-Merschell and Lochtoure is of Baronial Race, and of
-                  rank equivalent to that denominated Hoch Adel [the high nobility], and equivalent to the Chiefs of Baronial Houses, upon
+                  rank equivalent to that denominated Hoch Adel [the high <span className="text-gold-deep">nobility</span>], and equivalent to the Chiefs of Baronial Houses, upon
                   the Continent of Europe, and that by demonstration of the foresaid Ensigns Armorial, he, and his son
                   and heir-apparent and their successors in the same are to be so accounted, taken, and received
-                  amongst all Nobles and in all places of Honour.”
+                  amongst all <span className="text-gold-deep">Nobles</span> and in all places of Honour.”
                 </blockquote>
                 <figcaption className="mt-3 font-sans text-sm text-muted">
                   Court of the Lord Lyon (Lord Lyon Sir Francis Grant), 19 April 1945, Lyon Register vol. xxxv p. 31;
