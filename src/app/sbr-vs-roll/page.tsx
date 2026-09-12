@@ -33,7 +33,7 @@ export default function SbrVsRollPage() {
                 Legal title and recognition are two different things — and the Roll of the Peerage shows why. Andrew
                 Mountbatten Windsor remains Duke of York in law, because only an Act of Parliament can extinguish a
                 peerage; what the King’s removal of his name from the Roll of the Peerage in 2025 withdrew was
-                recognition of the title, not the title itself. A Scottish barony stands on the same footing: only an
+                recognition of the title, not the legal title. A Scottish barony stands on the same footing: only an
                 Act of Parliament can extinguish it. And because baronies are legally assignable, each record has a
                 distinct purpose — the Scottish Barony Register records legal title; the Roll of Scottish Barons records
                 recognition, and the conduct that goes with it, as the Rolls of the Peerage and the Baronetage do in

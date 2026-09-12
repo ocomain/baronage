@@ -9,7 +9,7 @@ import { Footnote } from "@/components/Footnote";
 
 /** Gilds "noble", "nobility", "ennobles" and the quoted 'titled nobility' within plain citation text — the same gold-foil treatment as the homepage's pull-quote. */
 function Noble({ text }: { text: string }) {
-  const parts = text.split(/(‘titled nobility’|ennobl\w*|nobility|nobles?)/gi);
+  const parts = text.split(/(‘titled nobility’|title of honour|ennobl\w*|nobility|nobles?)/gi);
   return (
     <>
       {parts.map((part, i) =>
@@ -134,7 +134,20 @@ const citations: {
     source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
     feature: true,
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
-    text: "On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”.",
+    text: "On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”; s. 63(4): “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.",
+    richText: (
+      <>
+        On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial,
+        “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of
+        baron, though retained, shall not attach to the land” — and{" "}
+        <span className="text-foil not-italic">“nothing in this Act affects the dignity of baron”</span>; s. 63(4):{" "}
+        <span className="text-foil not-italic">
+          “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a
+          dignity”
+        </span>
+        .
+      </>
+    ),
   },
 ];
 
