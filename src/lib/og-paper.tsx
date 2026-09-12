@@ -82,7 +82,7 @@ export async function renderPaperOgImage(paper: ReadingRoomPaper) {
             {paper.title}
           </div>
 
-          <div style={{ display: "flex", width: 132, height: 2, backgroundColor: "#c9a24b", marginTop: 34 }} />
+          <div style={{ display: "flex", width: 132, height: 2, backgroundColor: "#c9a24b", marginTop: 30 }} />
 
           {standfirst ? (
             <div
@@ -92,7 +92,7 @@ export async function renderPaperOgImage(paper: ReadingRoomPaper) {
                 fontSize: 32,
                 lineHeight: 1.34,
                 color: "#463d2d",
-                marginTop: 26,
+                marginTop: 22,
                 maxWidth: 980,
               }}
             >
@@ -107,7 +107,7 @@ export async function renderPaperOgImage(paper: ReadingRoomPaper) {
             justifyContent: "space-between",
             alignItems: "flex-end",
             borderTop: "1px solid #d8c8a6",
-            paddingTop: 22,
+            paddingTop: 26,
             fontFamily: "Quicksand",
             fontSize: 22,
             letterSpacing: 3,
