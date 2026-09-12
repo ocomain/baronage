@@ -1512,7 +1512,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Nobility clause",
-    def: "The closing clause of older Lyon Court grants and declarations that the grantee is to be “taken, and received amongst all Nobles and in all places of Honour” — the words of the Wauchope of Niddrie declaration of 19 April 1945. A nobility clause was present in Lord Lyon Blair’s grant to the Baron of Ballencrieff (2007); it has been omitted from grants since.",
+    def: "The closing clause of older Lyon Court grants and declarations that the grantee is to be “taken, and received amongst all Nobles and in all places of Honour as Nobles in the Noblesse of Scotland” — the words of the Wauchope of Niddrie declaration of 19 April 1945. A nobility clause was present in Lord Lyon Blair’s grant to the Baron of Ballencrieff (2007); it has been omitted from grants since. According to Innes of Learney: “A [Scottish] coat of arms is the outward indication of [untitled or titled] nobility and arms are officially described as ‘Ensigns of Nobility’. A patent of arms is . . . a Diploma of Nobility. . . .” Clarifying this statement, a later writer on Scottish heraldry has noted: “Technically, a grant of arms from the Lord Lyon is a patent of nobility; the grantee is thereby ‘enrolled with all nobles in the noblesse of Scotland’. This does not constitute a peerage or any title. It is a social distinction, untitled nobility, and has no legal privileges.”",
     note: (
       <>
         Court of the Lord Lyon (Lord Lyon Sir Francis Grant), 19 April 1945, Lyon Register vol. xxxv p. 31; printed in
