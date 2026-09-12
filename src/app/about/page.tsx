@@ -247,20 +247,20 @@ export default function AboutPage() {
             {citations.map((c, i) => (
               <Reveal key={c.source} delay={(i % 2) * 0.1} className={`h-full ${c.feature ? "md:col-span-2" : ""}`}>
                 <figure
-                  className={`flex h-full flex-col border-l-2 ${
-                    c.feature ? "border-gold bg-navy/60 p-8 sm:p-10" : "border-gold/60 bg-navy/40 p-7"
+                  className={`flex h-full flex-col border-l-2 border-gold/60 bg-navy/40 p-7 ${
+                    c.feature ? "md:border-gold md:bg-navy/60 md:p-8 lg:p-10" : ""
                   }`}
                 >
                   <blockquote
-                    className={`font-serif italic leading-relaxed text-parchment-100/90 ${
-                      c.feature ? "text-2xl sm:text-3xl" : "text-lg"
+                    className={`font-serif italic leading-relaxed text-parchment-100/90 text-lg ${
+                      c.feature ? "md:text-2xl lg:text-3xl" : ""
                     }`}
                   >
                     {c.richText ?? <Noble text={c.text} />}
                   </blockquote>
                   <figcaption
-                    className={`mt-4 font-sans uppercase tracking-[0.18em] text-gold-light ${
-                      c.feature ? "text-sm" : "text-xs"
+                    className={`mt-4 font-sans uppercase tracking-[0.18em] text-gold-light text-xs ${
+                      c.feature ? "md:text-sm" : ""
                     }`}
                   >
                     {c.href ? (
