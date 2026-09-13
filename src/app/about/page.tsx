@@ -102,15 +102,15 @@ const citations: {
     text: "Even were feudal baronies abolished altogether, the dignity of baron would “continue as a floating dignity” — allowing the “noble aspects of the barony title” to lapse was mentioned, but rejected.",
   },
   {
+    source: "Lord Clyde’s dictum · 1992",
+    href: "https://archive.org/details/1992-lord-clydes-dictum",
+    text: "The essential feature of a barony title is the noble quality of the feudal grant… giving the proprietor a territorial rank and dignity… thus when one was divested of an estate the title of honour ceased.",
+  },
+  {
     source: "Lyon Court · Lord Lyon Francis Grant · 1943",
     href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
     text: "Finds and Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of Scotland.",
     note: "Interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26; printed in Innes of Learney, PSAS vol. 79 (1944–45), p. 143 n. 3.",
-  },
-  {
-    source: "Lord Clyde’s dictum · 1992",
-    href: "https://archive.org/details/1992-lord-clydes-dictum",
-    text: "The essential feature of a barony title is the noble quality of the feudal grant… giving the proprietor a territorial rank and dignity… thus when one was divested of an estate the title of honour ceased.",
   },
   {
     source: "The Institutional Writers",
