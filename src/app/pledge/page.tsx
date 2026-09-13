@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pledge/" },
   title: "The Pledge",
   description:
-    "The Pledge makes a Scottish barony a pledged hereditary title: it descends by blood within the family and is not in commercio on the Roll of Scottish Barons. In honour, not law.",
+    "The Pledge makes a Scottish barony a pledged hereditary title. Pledged baronies descend by blood, they are not in commercio.",
 };
 
 const pledgeJsonLd = {
@@ -18,8 +18,7 @@ const pledgeJsonLd = {
   "@type": "DefinedTerm",
   name: "Pledged Hereditary Title",
   alternateName: ["Pledged barony", "Hereditary Title (Roll of Scottish Barons)"],
-  description:
-    "Pledged baronies on the Roll of Scottish Barons are not in commercio: the holder has pledged that the barony descends by blood within the family line. The Pledge operates in honour, not law, and legal title is unaffected; its effect is on recognition upon the Roll should a pledged barony be sold outside the family.",
+  description: "Pledged baronies descend by blood, they are not in commercio.",
   url: "https://www.baronage.com/pledge/",
   inDefinedTermSet: {
     "@type": "DefinedTermSet",
@@ -42,7 +41,12 @@ export default function PledgePage() {
       <PageHero
         eyebrow="A Lasting Commitment"
         title="The Pledge"
-        intro="An opportunity to convert a barony into a pledged hereditary title, descending by blood within the family and not in commercio, ensuring legitimacy and principled commitment for future generations."
+        intro={
+          <>
+            An opportunity to convert a barony into a pledged hereditary title. Pledged baronies descend by blood,
+            they are not <em>in commercio</em>.
+          </>
+        }
         video={{
           webm: "/videos/pledge-scribe.webm",
           mp4: "/videos/pledge-scribe.mp4",
