@@ -66,10 +66,10 @@ export default function BaronialCodePage() {
             <aside className="border-l-4 border-gold bg-parchment-100 px-6 py-6 sm:px-8 sm:py-7">
               <Eyebrow>Virtuous and well deserving</Eyebrow>
               <p className="mt-3 font-serif text-xl leading-relaxed text-navy sm:text-2xl">
-                Since the Lyon King of Arms Act 1672 the Lord Lyon has granted arms to “virtuous and well deserving
-                persons” — in Innes of Learney’s words, “persons deserving of being raised to the nobility”, who by the
-                grant become the root of a “noble stok”. The Court of Session took up the phrase in 2019: barony titles
-                are conferred on “persons deserving of being raised to the nobility”.
+                <strong className="font-semibold">
+                  Barony titles are conferred on “persons deserving of being raised to the nobility”
+                </strong>{" "}
+                — the Court of Session’s words in 2019, quoting Innes of Learney.
               </p>
               <p className="mt-4 font-sans text-sm leading-relaxed text-muted">
                 <a
