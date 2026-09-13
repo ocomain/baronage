@@ -10,7 +10,22 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pledge/" },
   title: "The Pledge",
   description:
-    "The Pledge converts a barony into a pledged hereditary title — a family compact of service, bound by the Baronial Code of Honour.",
+    "The Pledge makes a Scottish barony a pledged hereditary title: it descends by blood within the family and is not in commercio on the Roll of Scottish Barons. In honour, not law.",
+};
+
+const pledgeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  name: "Pledged Hereditary Title",
+  alternateName: ["Pledged barony", "Hereditary Title (Roll of Scottish Barons)"],
+  description:
+    "Pledged baronies on the Roll of Scottish Barons are not in commercio: the holder has pledged that the barony descends by blood within the family line. The Pledge operates in honour, not law, and legal title is unaffected; its effect is on recognition upon the Roll should a pledged barony be sold outside the family.",
+  url: "https://www.baronage.com/pledge/",
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "The Roll of Scottish Barons",
+    url: "https://roll.baronage.com/",
+  },
 };
 
 const pledgePoints = [
@@ -23,10 +38,11 @@ const pledgePoints = [
 export default function PledgePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pledgeJsonLd) }} />
       <PageHero
         eyebrow="A Lasting Commitment"
         title="The Pledge"
-        intro="An opportunity to convert a barony into a pledged hereditary title — ensuring legitimacy and principled commitment for future generations."
+        intro="An opportunity to convert a barony into a pledged hereditary title, descending by blood within the family and not in commercio, ensuring legitimacy and principled commitment for future generations."
         video={{
           webm: "/videos/pledge-scribe.webm",
           mp4: "/videos/pledge-scribe.mp4",
