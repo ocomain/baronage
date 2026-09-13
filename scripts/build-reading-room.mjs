@@ -69,8 +69,10 @@ function makeMarked(ids) {
         const text = this.parser.parseInline(tokens);
         const external = /^https?:\/\//i.test(href);
         const attrs = [`href="${escapeAttr(href)}"`];
-        if (title) attrs.push(`title="${escapeAttr(title)}"`);
-        if (external) attrs.push('target="_blank"', 'rel="noopener noreferrer"');
+        // A link title of exactly "nofollow" is a flag, not a tooltip: the site declines to pass ranking to that page.
+        const nofollow = title === "nofollow";
+        if (title && !nofollow) attrs.push(`title="${escapeAttr(title)}"`);
+        if (external) attrs.push('target="_blank"', `rel="${nofollow ? "nofollow " : ""}noopener noreferrer"`);
         return `<a ${attrs.join(" ")}>${text}</a>`;
       },
       table(token) {

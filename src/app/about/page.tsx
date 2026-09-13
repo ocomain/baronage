@@ -107,6 +107,12 @@ const citations: {
     text: "The essential feature of a barony title is the noble quality of the feudal grant… giving the proprietor a territorial rank and dignity… thus when one was divested of an estate the title of honour ceased.",
   },
   {
+    source: "Court of Session · Lady Wolffe · 2019",
+    href: "https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf",
+    text: "Barony titles are conferred on “persons deserving of being raised to the nobility” — the court’s words, taking up Innes of Learney’s description of those granted arms, who by the grant become the root of a “noble stok”.",
+    note: "Hamilton of Rockhall v Lord Lyon King of Arms [2019] CSOH 85, para [101], applying Innes of Learney, Scots Heraldry (2nd ed., 1956), p. 85, quoted at para [14].",
+  },
+  {
     source: "Lyon Court · Lord Lyon Francis Grant · 1943",
     href: "https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares",
     text: "Finds and Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the ancient Feudal Nobility of Scotland.",

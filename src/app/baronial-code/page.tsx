@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
+import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/baronial-code/" },
@@ -59,6 +59,42 @@ export default function BaronialCodePage() {
         intro="The principles and standards that define our collective commitment. By signing The Pledge, each Baron affirms this Code."
         image="/images/knight-helm.webp"
       />
+
+      <Section tone="parchment" className="!pb-0">
+        <Container size="prose">
+          <Reveal>
+            <aside className="border-l-4 border-gold bg-parchment-100 px-6 py-6 sm:px-8 sm:py-7">
+              <Eyebrow>Virtuous and well deserving</Eyebrow>
+              <p className="mt-3 font-serif text-xl leading-relaxed text-navy sm:text-2xl">
+                Since the Lyon King of Arms Act 1672 the Lord Lyon has granted arms to “virtuous and well deserving
+                persons” — in Innes of Learney’s words, “persons deserving of being raised to the nobility”, who by the
+                grant become the root of a “noble stok”. The Court of Session took up the phrase in 2019: barony titles
+                are conferred on “persons deserving of being raised to the nobility”.
+              </p>
+              <p className="mt-4 font-sans text-sm leading-relaxed text-muted">
+                <a
+                  href="https://www.legislation.gov.uk/aosp/1672/47"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                >
+                  Lyon King of Arms Act 1672
+                </a>
+                ; Innes of Learney, <em>Scots Heraldry</em> (2nd ed., 1956), p. 85, as quoted in{" "}
+                <a
+                  href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                >
+                  <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85
+                </a>
+                , paras [14] and [101].
+              </p>
+            </aside>
+          </Reveal>
+        </Container>
+      </Section>
 
       <Section tone="parchment">
         <Container size="prose">
