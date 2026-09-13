@@ -816,7 +816,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Will the Lord Lyon recognise a baron as a baron?",
-    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with additaments and a helmet befitting their degree. In recent years, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon. The Lord Lyon holds considerable autonomy in this respect: part of that discretion is that the form of address recorded on the grant of arms is the one that should be used for official purposes. The dignity itself is held as of right under s. 63 of the 2000 Act. In Hamilton of Rockhall v Lord Lyon [2019] CSOH 85 the Court of Session said a grant of arms is “only ever a matter of grace (and not entitlement)”. That was said of arms, not of the title. The court did not decide whether a baron is entitled to be recognised as a baron. The Lord Lyon has also said that “in Scotland anyone is at liberty to call themselves what they wish subject to it not being the intention to deceive” (Menking, Note of 30 April 2015, para 21).",
+    a: "Maybe — this is at the discretion of the sitting Lord Lyon. Traditionally, in a petition for a grant of arms, where the Lord Lyon determines that the dignity of baron exists, that the petitioner is a “virtuous and well deserving person” — the standard set by the Lyon King of Arms Act 1672 — and exercises his discretion in the petitioner's favour, he will officially recognise the petitioner as “Baron of [the barony]” and grant arms with additaments and a helmet befitting their degree. In recent years, the Lord Lyon routinely treats an entry in the Scottish Barony Register as sufficient evidence that the dignity exists, and may grant arms without recognition. Recognition is not what makes a baron a baron — the dignity is held as of legal right — but recognition by the Lord Lyon is the formal mark of the title within Scotland's heraldic system, and it rests with the judgement of each sitting Lord Lyon. The Lord Lyon holds considerable autonomy in this respect: part of that discretion is that the form of address recorded on the grant of arms is the one that should be used for official purposes. The dignity itself is held as of right under s. 63 of the 2000 Act. In Hamilton of Rockhall v Lord Lyon [2019] CSOH 85 the Court of Session said a grant of arms is “only ever a matter of grace (and not entitlement)”. That was said of arms, not of the title. The court did not decide whether a baron is entitled to be recognised as a baron. The Lord Lyon has also said that “in Scotland anyone is at liberty to call themselves what they wish subject to it not being the intention to deceive” (Menking, Note of 30 April 2015, para 21). No Lord Lyon binds the next. In Hamilton of Rockhall the Court of Session held that no policy or practice of a Lord Lyon is “capable of binding successors in the office of Lord Lyon in the grant of arms” (para 86), and the Lyon Court's own counsel put it plainly: “no Lord Lyon is bound to follow a policy of his predecessor, for none can bind his successor” (para 39). The wording adopted in 2018 is a policy like any other. The next Lord Lyon may restore recognition by name as freely as it was withdrawn.",
     body: (
       <>
         <p>
@@ -857,6 +857,14 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           to deceive”</em>{" "}
           (Menking, Note of 30 April 2015, para 21).
         </p>
+        <p className="mt-4">
+          <strong className="font-semibold text-navy">No Lord Lyon binds the next.</strong> In{" "}
+          <em>Hamilton of Rockhall</em> the Court of Session held that no policy or practice of a Lord Lyon is{" "}
+          <em>“capable of binding successors in the office of Lord Lyon in the grant of arms”</em> (para 86), and the
+          Lyon Court’s own counsel put it plainly: <em>“no Lord Lyon is bound to follow a policy of his predecessor, for
+          none can bind his successor”</em> (para 39). The wording adopted in 2018 is a policy like any other. The next
+          Lord Lyon may restore recognition by name as freely as it was withdrawn.
+        </p>
       </>
     ),
     authority: (
@@ -884,8 +892,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         >
           <em>Hamilton of Rockhall v Lord Lyon King of Arms</em> [2019] CSOH 85
         </a>{" "}
-        (Court of Session, Outer House), paras [84] and [91] — a grant of arms is “only ever a matter of grace (and
-        not entitlement)”; the court did not decide whether a baron is entitled to recognition of the title. Lord Lyon
+        (Court of Session, Outer House), paras [39], [84], [86] and [91] — a grant of arms is “only ever a matter of
+        grace (and not entitlement)”; the court did not decide whether a baron is entitled to recognition of the title;
+        no policy of a Lord Lyon binds his successor in office. Lord Lyon
         Morrow,{" "}
         <a
           href="https://courtofthelordlyon.scot/index_htm_files/Menking.pdf"
