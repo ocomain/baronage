@@ -93,7 +93,7 @@ const citations: {
   {
     source: "Sir Crispin Agnew of Lochnaw QC, for the petitioner · Lyon Court 2007 (Petition of Lindberg, Barony of Delvine)",
     href: "https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/",
-    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown… All barons are required by the Acts of Parliament of Scotland to have a coat of arms.",
+    text: "A barony, although no longer connected to land, remains a noble fief… As owner of a barony Dr Lindberg is in a noble feudal relationship to the Crown.",
     note: "The same submission: “All barons are required by the Acts of the Parliament of Scotland to have a coat of Arms”, and “heraldic privilege as defined by the 2000 Act must include a right to apply for a grant of arms”.",
   },
   {
