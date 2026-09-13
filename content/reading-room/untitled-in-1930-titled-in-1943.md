@@ -1,5 +1,5 @@
 ---
-title: "Untitled in 1930, titled in 1943"
+title: "Untitled or titled nobility?"
 subtitle: "The Lyon Court’s own words on the minor barons, from the Innes of Learney birthbrief to the finding of 1943"
 slug: untitled-in-1930-titled-in-1943
 meta_description: "In 1930 Lord Lyon Grant certified the Innes of Learney family as “minor barons or untitled nobility”. In 1943 the same court found the minor barons “a titled nobility”. The birthbrief, the Esslemont petition between, and what the 1943 finding settled."
@@ -8,7 +8,7 @@ published: 2026-09-13
 reviewed: 2026-09-13
 ---
 
-# Untitled in 1930, titled in 1943
+# Untitled or titled nobility?
 
 *In March 1930 Lord Lyon Sir Francis Grant certified that the House of Innes of Learney was “of the rank of minor barons or untitled nobility of Scotland”. In February 1943 the same Lord Lyon found that the minor barons “are, and have been … recognised as a ‘titled nobility’”. Between the two came the Esslemont petition of 1934. This paper sets the documents side by side.*
 
