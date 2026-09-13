@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Seal } from "@/components/Seal";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
+import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/baronial-code/" },
@@ -64,8 +64,7 @@ export default function BaronialCodePage() {
         <Container size="prose">
           <Reveal>
             <aside className="border-l-4 border-gold bg-parchment-100 px-6 py-6 sm:px-8 sm:py-7">
-              <Eyebrow>Virtuous and well deserving</Eyebrow>
-              <p className="mt-3 font-serif text-xl leading-relaxed text-navy sm:text-2xl">
+              <p className="font-serif text-xl leading-relaxed text-navy sm:text-2xl">
                 <strong className="font-semibold">
                   Barony titles are conferred on “persons deserving of being raised to the nobility”
                 </strong>{" "}
