@@ -1770,7 +1770,7 @@ export default function BaroniesExplainedPage() {
           <GoldRule className="mt-5" align="start" />
           <dl className="mt-8 space-y-6">
             {glossary.map((g) => (
-              <div key={g.term}>
+              <div key={g.term} id={`term-${slugify(g.term)}`} className="scroll-mt-32 lg:scroll-mt-44">
                 <dt className="font-display text-lg text-navy">{g.term}</dt>
                 <dd className="mt-1.5 leading-relaxed text-ink-soft">
                   <p>{g.def}</p>
