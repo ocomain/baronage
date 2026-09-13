@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import type { ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { Seal } from "./Seal";
 import { Container } from "./primitives";
@@ -16,7 +17,7 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  intro?: string;
+  intro?: ReactNode;
   /** Optional full-bleed cinematic photograph behind the masthead. */
   image?: string;
   /** Optional full-bleed looping film, used in place of the photograph. Poster doubles as the reduced-motion fallback. */
