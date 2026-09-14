@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pledge/" },
   title: "The Pledge",
   description:
-    "The Pledge makes a Scottish barony a pledged hereditary title. Pledged baronies descend by blood, they are not in commercio.",
+    "The Pledge makes a Scottish barony a pledged hereditary title. Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio.",
 };
 
 const pledgeJsonLd = {
@@ -18,7 +18,7 @@ const pledgeJsonLd = {
   "@type": "DefinedTerm",
   name: "Pledged Hereditary Title",
   alternateName: ["Pledged barony", "Hereditary Title (Roll of Scottish Barons)"],
-  description: "Pledged baronies descend by blood, they are not in commercio.",
+  description: "Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio.",
   url: "https://www.baronage.com/pledge/",
   inDefinedTermSet: {
     "@type": "DefinedTermSet",

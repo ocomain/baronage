@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Scottish Baronies, Explained — FAQ",
   description:
-    "Is “Scottish feudal barony” still the correct term? No — since the Abolition of Feudal Tenure etc. (Scotland) Act 2000 came into force in 2004, Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ on the Baronage of Scotland, with primary sources.",
+    "Is “Scottish feudal barony” still the correct term? No — since the Abolition of Feudal Tenure etc. (Scotland) Act 2000 came into force in 2004, Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ on the Baronage of Scotland, with primary sources. Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio.",
   keywords: [
     "Scottish feudal barony",
     "Scottish barony",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-09-11";
+const DATE_MODIFIED = "2026-09-14";
 const REVIEWED_LABEL = "September 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -500,7 +500,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can a Scottish barony be bought and sold?",
-    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. Pledged baronies descend by blood, they are not in commercio. In practice the market is very small — the Scottish Barony Register publishes annual reports of the Custodian, recording a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald was reported as offered for sale at more than £1 million.",
+    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio. In practice the market is very small — the Scottish Barony Register publishes annual reports of the Custodian, recording a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald was reported as offered for sale at more than £1 million.",
     body: (
       <>
         <p>
@@ -510,7 +510,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           becoming the new holder.
         </p>
         <p className="mt-4 border-l-2 border-gold/50 pl-4 text-[0.95em] italic">
-          A note from this site: a growing number of barons wish to reduce the <em>in commercio</em> aspect of baronies. By
+          A note from this site: Baronies pledged on the Roll of Scottish Barons descend by blood, they are not{" "}
+          <em>in commercio</em>. A growing number of barons wish to reduce the <em>in commercio</em> aspect of baronies. By
           signing{" "}
           <Link href="/pledge" className={intLink}>
             The Pledge
@@ -909,10 +910,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "What is The Pledge, and what does it change?",
-    a: "The Pledge is a declaration of honour by which a baron commits their barony to hereditary descent within the family line. It cannot legally alter a barony — it operates in honour rather than law — but its practical effect is on future recognition upon the Roll of Scottish Barons should a pledged barony later be sold outside the family. In this the Roll follows the two official Rolls. The Roll of the Peerage separates recognition from legal title: Andrew Mountbatten Windsor remains Duke of York in law, since only an Act of Parliament can extinguish a peerage, yet the King's removal of his name from that Roll in 2025 withdrew official recognition of the title — not his legal entitlement to it. The Roll of the Baronetage goes further: no one is received or styled as a baronet unless entered upon it. The Roll of Scottish Barons is modelled between the two — recognition is paramount, as with the baronetage, while legal title is never affected, as with the peerage.",
+    a: "Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio. The Pledge is a declaration of honour by which a baron commits their barony to hereditary descent within the family line. It cannot legally alter a barony — it operates in honour rather than law — but its practical effect is on future recognition upon the Roll of Scottish Barons should a pledged barony later be sold outside the family. In this the Roll follows the two official Rolls. The Roll of the Peerage separates recognition from legal title: Andrew Mountbatten Windsor remains Duke of York in law, since only an Act of Parliament can extinguish a peerage, yet the King's removal of his name from that Roll in 2025 withdrew official recognition of the title — not his legal entitlement to it. The Roll of the Baronetage goes further: no one is received or styled as a baronet unless entered upon it. The Roll of Scottish Barons is modelled between the two — recognition is paramount, as with the baronetage, while legal title is never affected, as with the peerage.",
     body: (
       <>
         <p>
+          Baronies pledged on the Roll of Scottish Barons descend by blood, they are not <em>in commercio</em>.{" "}
           <Link href="/pledge" className={intLink}>
             The Pledge
           </Link>{" "}

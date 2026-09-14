@@ -7,6 +7,7 @@
     "predev": "npm run build:reading-room",
     "build": "next build",
     "prebuild": "npm run build:reading-room",
+    "postbuild": "node scripts/build-llms-full.mjs",
     "build:reading-room": "node scripts/build-reading-room.mjs",
     "start": "next start"
   },
