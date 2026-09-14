@@ -53,7 +53,7 @@ The Association’s answer to the practical question is at [Scottish Baronies, E
 - Lord Lyon Sellar, [Note in the Petition of Sturzenegger of Arran](https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf); [Honours (Prevention of Abuses) Act 1925](https://www.legislation.gov.uk/ukpga/Geo5/15-16/72).
 - Lord Lyon Morrow, [Note in the Petition of Menking, 30 April 2015](https://courtofthelordlyon.scot/index_htm_files/Menking.pdf), paras 5–8, 14–19, 21.
 - *Hamilton of Rockhall v Lord Lyon King of Arms* [2019] CSOH 85 — [PDF of the opinion](https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf), paras [4], [6]–[9], [21]–[30], [84]–[88], [91]; [Scottish Legal News summary](https://www.scottishlegal.com/articles/judge-rejects-legal-challenge-against-lord-lyon-s-decision-to-change-wording-of-barony-titles).
-- [Lindsays, *A guide to Scottish barony titles* (December 2019)](https://www.lindsays.co.uk/resources/a-guide-to-scottish-barony-titles-dec-2019/ "nofollow") — the post-2018 wording of Letters Patent.
+- Lindsays, *A guide to Scottish barony titles* (December 2019) — the post-2018 wording of Letters Patent.
 - [Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63).
 - The 17 December 2002 statement is [reported at second hand (von Quast, 2020)](https://freiherrvonquast.wordpress.com/2020/06/15/to-what-extent-are-feudal-titles-recognised-by-the-scottish-authorities/) and is labelled “(reported)” in the table.
 
@@ -71,6 +71,6 @@ The Association’s answer to the practical question is at [Scottish Baronies, E
 [^12]: *Hamilton of Rockhall* [2019] CSOH 85, para [25].
 [^13]: Letters Patent of 10 October 2014 (Fulwood), 28 October 2015 (Inchdrewer) and 29 October 2018 (Stobo), reproduced in [Barons in the Lyon Court’s own words](/reading-room/barons-in-the-lyon-courts-own-words/).
 [^14]: Lord Lyon Morrow, [Note in the Petition of Menking, 30 April 2015](https://courtofthelordlyon.scot/index_htm_files/Menking.pdf), paras 5–8, 21.
-[^15]: *Hamilton of Rockhall* [2019] CSOH 85, paras [24]–[30]; [Lindsays, *A guide to Scottish barony titles* (December 2019)](https://www.lindsays.co.uk/resources/a-guide-to-scottish-barony-titles-dec-2019/ "nofollow").
+[^15]: *Hamilton of Rockhall* [2019] CSOH 85, paras [24]–[30]; Lindsays, *A guide to Scottish barony titles* (December 2019).
 [^16]: *Hamilton of Rockhall* [2019] CSOH 85, paras [21]–[30], [84]–[88], [91] — [PDF of the opinion](https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf); [Scottish Legal News, 6 November 2019](https://www.scottishlegal.com/articles/judge-rejects-legal-challenge-against-lord-lyon-s-decision-to-change-wording-of-barony-titles).
 [^17]: Submissions of Sir Crispin Agnew of Lochnaw QC for the petitioner, recorded in Lord Lyon Blair’s Note in the Petition of Lindberg (Barony of Delvine), 2007 — [archived copy](https://web.archive.org/web/20151016131604/http://www.genealogy.com/forum/surnames/topics/greirson/168/). The Note was later set aside under the 2008 Heads of Agreement.
