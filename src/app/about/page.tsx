@@ -55,10 +55,21 @@ const mandate = [
           >
             Scottish Armory and Heraldry
           </a>{" "}
-          (2019), p. 82.
+          (2019), p. 82. Lord Lyon Blair’s warrant of 2005 in the Fulwood petition still speaks of the “feudal
+          Barony” and a “feudal baron”; Sellar’s Letters Patent of 15 December 2010 name the petitioner “Baron of
+          Craigmillar for aught yet seen” (Public Register of All Arms and Bearings, vol. 89, p. 78), and his patent of
+          2012 “baron of Cartsburn” (<em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85, para [25]) — see{" "}
+          <Link
+            href="/reading-room/barons-in-the-lyon-courts-own-words/"
+            className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+          >
+            Barons in the Lyon Court’s own words
+          </Link>
+          .
         </p>
       </Footnote>{" "}
-      — quondam meaning “formerly”). This is set out in full in{" "}
+      — quondam meaning “formerly” — and removed the word “feudal” from his Letters Patent for new grants after the
+      appointed day). This is set out in full in{" "}
       <Link
         href="/scottish-baronies-explained"
         className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
