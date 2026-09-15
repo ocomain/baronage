@@ -26,7 +26,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
     <Section tone="parchment" className="!py-12 sm:!py-16">
       <Container size="prose">
         <article className="min-w-0">
-          {/* Phones: back link above the title (no room beside it). From sm up it sits under the seal. */}
+          {/* Phones only: back link above the title. */}
           <nav aria-label="Breadcrumb" className="mb-8 sm:hidden">
             <Link href="/reading-room" className={`inline-flex ${BACK_LINK}`}>
               <span aria-hidden>←</span> The Reading Room · all papers
@@ -52,11 +52,6 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                 height={56}
                 className="mt-1 h-14 w-14 object-contain opacity-85"
               />
-              <nav aria-label="Breadcrumb" className="hidden sm:block">
-                <Link href="/reading-room" className={`inline-flex whitespace-nowrap ${BACK_LINK}`}>
-                  <span aria-hidden>←</span> The Reading Room · all papers
-                </Link>
-              </nav>
             </div>
           </header>
 
