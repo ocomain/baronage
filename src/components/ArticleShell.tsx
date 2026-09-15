@@ -39,6 +39,14 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               <p className="mt-4 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">{paper.subtitle}</p>
               <p className="mt-5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-muted">
                 {paper.readingTime} read · Reviewed {monthYear(paper.reviewed)}
+                {/* Desktop only: phones already have the back link above the title. */}
+                <span className="hidden sm:inline">
+                  {" "}
+                  ·{" "}
+                  <Link href="/reading-room" className="text-gold-deep transition-colors hover:text-oxblood">
+                    The Reading Room
+                  </Link>
+                </span>
               </p>
               <GoldRule className="mt-6" align="start" />
             </div>
