@@ -43,7 +43,10 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                 <span className="hidden sm:inline">
                   {" "}
                   ·{" "}
-                  <Link href="/reading-room" className="text-gold-deep transition-colors hover:text-oxblood">
+                  <Link
+                    href="/reading-room"
+                    className="text-gold-deep underline decoration-gold/60 underline-offset-4 transition-colors hover:text-oxblood hover:decoration-oxblood/60"
+                  >
                     The Reading Room
                   </Link>
                 </span>
