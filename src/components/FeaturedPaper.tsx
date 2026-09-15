@@ -94,28 +94,31 @@ export function FeaturedPaper() {
       }`}
       style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <div className="relative flex items-start gap-4 border border-gold/50 bg-parchment-50 p-4 pr-11 shadow-[0_24px_60px_-24px_rgba(10,16,36,0.55)] sm:p-5 sm:pr-12">
+      <div className="relative border border-gold/50 bg-parchment-50 p-4 pr-11 shadow-[0_24px_60px_-24px_rgba(10,16,36,0.55)] sm:p-5 sm:pr-12">
         <span className="pointer-events-none absolute inset-1.5 border border-gold/20" aria-hidden />
-        <Link href={HREF} onClick={markSeen} tabIndex={-1} aria-hidden className="relative hidden shrink-0 min-[380px]:block">
-          <PaperThumbnail title={FEATURED_PAPER.title} category={FEATURED_PAPER.category} size="sm" />
-        </Link>
-        <div className="relative min-w-0">
-          <p className="eyebrow text-[0.6rem]">Featured paper</p>
-          <p className="mt-1.5 font-display text-lg leading-snug text-navy sm:text-xl">{FEATURED_PAPER.title}</p>
-          <Link
-            href={HREF}
-            onClick={markSeen}
-            className="mt-3 inline-flex items-center gap-1.5 bg-navy px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
-          >
-            Read the paper <span aria-hidden>→</span>
+        <div className="relative flex items-start gap-4">
+          <Link href={HREF} onClick={markSeen} tabIndex={-1} aria-hidden className="hidden shrink-0 min-[380px]:block">
+            <PaperThumbnail title={FEATURED_PAPER.title} category={FEATURED_PAPER.category} size="sm" />
           </Link>
-          <Link
-            href="/reading-room"
-            className="mt-3 hidden font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:text-oxblood sm:block"
-          >
-            More papers in the Reading Room <span aria-hidden>→</span>
-          </Link>
+          <div className="min-w-0">
+            <p className="eyebrow text-[0.6rem]">Featured paper</p>
+            <p className="mt-1.5 font-display text-lg leading-snug text-navy sm:text-xl">{FEATURED_PAPER.title}</p>
+            <Link
+              href={HREF}
+              onClick={markSeen}
+              className="mt-3 inline-flex items-center gap-1.5 bg-navy px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
+            >
+              Read the paper <span aria-hidden>→</span>
+            </Link>
+          </div>
         </div>
+        {/* Desktop only: a full-width footer line, so the label never wraps beside the thumbnail. */}
+        <Link
+          href="/reading-room"
+          className="relative mt-4 hidden border-t border-parchment-300/70 pt-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-gold-deep transition-colors hover:text-oxblood sm:-mr-7 sm:block"
+        >
+          More papers in the Reading Room <span aria-hidden>→</span>
+        </Link>
         <button
           type="button"
           onClick={dismiss}
