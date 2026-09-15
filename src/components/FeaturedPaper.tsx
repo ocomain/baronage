@@ -8,8 +8,8 @@ import { FEATURED_PAPER } from "@/lib/site";
 
 const HREF = `/reading-room/${FEATURED_PAPER.slug}/`;
 // Both keyed by slug, so featuring a different paper shows the card again to visitors who closed the last one.
-// localStorage: closed with X, or the paper was read — never shown again.
-const SEEN_KEY = `bsa-featured-seen:${FEATURED_PAPER.slug}`;
+// localStorage: closed with X — never shown again.
+const CLOSED_KEY = `bsa-featured-closed:${FEATURED_PAPER.slug}`;
 // sessionStorage: the card has already slid in this visit — show it at once on every later page.
 const REVEALED_KEY = `bsa-featured-revealed:${FEATURED_PAPER.slug}`;
 
@@ -29,9 +29,8 @@ function writeKey(kind: "local" | "session", key: string, value: string) {
 
 /**
  * Non-blocking featured-paper card. Slides in four seconds after a visitor arrives, or once they start
- * scrolling, then stays on every page of the visit until closed with X. Never shown on the paper itself,
- * and never again once closed or once the paper has been read. Sits beneath the mobile menu (z-30 under its
- * z-40 overlay).
+ * scrolling, then stays on every page of the visit until closed with X — reading the paper does not close it.
+ * Hidden while on the paper itself. Sits beneath the mobile menu (z-30 under its z-40 overlay).
  */
 export function FeaturedPaper() {
   const pathname = usePathname();
@@ -40,8 +39,7 @@ export function FeaturedPaper() {
 
   useEffect(() => {
     const onPaper = pathname.replace(/\/?$/, "/") === HREF;
-    if (onPaper) writeKey("local", SEEN_KEY, "1");
-    const ok = !onPaper && readKey("local", SEEN_KEY) === null;
+    const ok = !onPaper && readKey("local", CLOSED_KEY) === null;
     setEligible(ok);
     if (!ok) setShown(false);
   }, [pathname]);
@@ -67,12 +65,11 @@ export function FeaturedPaper() {
     };
   }, [eligible, shown]);
 
-  const markSeen = useCallback(() => writeKey("local", SEEN_KEY, "1"), []);
   const dismiss = useCallback(() => {
-    markSeen();
+    writeKey("local", CLOSED_KEY, "1");
     setShown(false);
     setEligible(false);
-  }, [markSeen]);
+  }, []);
 
   useEffect(() => {
     if (!shown) return;
@@ -97,7 +94,7 @@ export function FeaturedPaper() {
       <div className="relative border border-gold/50 bg-parchment-50 p-4 pr-11 shadow-[0_24px_60px_-24px_rgba(10,16,36,0.55)] sm:p-5 sm:pr-12">
         <span className="pointer-events-none absolute inset-1.5 border border-gold/20" aria-hidden />
         <div className="relative flex items-start gap-4">
-          <Link href={HREF} onClick={markSeen} tabIndex={-1} aria-hidden className="hidden shrink-0 min-[380px]:block">
+          <Link href={HREF} tabIndex={-1} aria-hidden className="hidden shrink-0 min-[380px]:block">
             <PaperThumbnail title={FEATURED_PAPER.title} category={FEATURED_PAPER.category} size="sm" />
           </Link>
           <div className="min-w-0">
@@ -105,7 +102,6 @@ export function FeaturedPaper() {
             <p className="mt-1.5 font-display text-lg leading-snug text-navy sm:text-xl">{FEATURED_PAPER.title}</p>
             <Link
               href={HREF}
-              onClick={markSeen}
               className="mt-3 inline-flex items-center gap-1.5 bg-navy px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
             >
               Read the paper <span aria-hidden>→</span>
@@ -115,7 +111,7 @@ export function FeaturedPaper() {
         {/* Desktop only: a full-width footer line, so the label never wraps beside the thumbnail. */}
         <Link
           href="/reading-room"
-          className="relative mt-4 hidden border-t border-parchment-300/70 pt-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-gold-deep transition-colors hover:text-oxblood sm:-mr-7 sm:block"
+          className="relative mt-4 hidden whitespace-nowrap border-t border-parchment-300/70 pt-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold-deep transition-colors hover:text-oxblood sm:-mr-7 sm:block"
         >
           More papers in the Reading Room <span aria-hidden>→</span>
         </Link>

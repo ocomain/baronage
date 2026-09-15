@@ -5,6 +5,10 @@ import type { ReadingRoomPaper } from "@/generated/reading-room";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
 
+/** Back-to-index link; display (inline-flex / hidden) is set where it is used. */
+const BACK_LINK =
+  "items-center gap-2 border border-gold/40 bg-parchment-50 px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:border-oxblood/40 hover:text-oxblood";
+
 /** "2026-09-11" -> "September 2026" (UTC, so the month never shifts with the build machine's zone). */
 export function monthYear(iso: string) {
   const [y, m] = iso.split("-").map(Number);
@@ -22,11 +26,9 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
     <Section tone="parchment" className="!py-12 sm:!py-16">
       <Container size="prose">
         <article className="min-w-0">
-          <nav aria-label="Breadcrumb" className="mb-8">
-            <Link
-              href="/reading-room"
-              className="inline-flex items-center gap-2 border border-gold/40 bg-parchment-50 px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:border-oxblood/40 hover:text-oxblood"
-            >
+          {/* Phones: back link above the title (no room beside it). From sm up it sits under the seal. */}
+          <nav aria-label="Breadcrumb" className="mb-8 sm:hidden">
+            <Link href="/reading-room" className={`inline-flex ${BACK_LINK}`}>
               <span aria-hidden>←</span> The Reading Room · all papers
             </Link>
           </nav>
@@ -40,15 +42,22 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               </p>
               <GoldRule className="mt-6" align="start" />
             </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={paper.emblem ?? DEFAULT_EMBLEM}
-              alt=""
-              aria-hidden
-              width={56}
-              height={56}
-              className="mt-1 h-14 w-14 flex-none object-contain opacity-85"
-            />
+            <div className="flex flex-none flex-col items-end gap-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={paper.emblem ?? DEFAULT_EMBLEM}
+                alt=""
+                aria-hidden
+                width={56}
+                height={56}
+                className="mt-1 h-14 w-14 object-contain opacity-85"
+              />
+              <nav aria-label="Breadcrumb" className="hidden sm:block">
+                <Link href="/reading-room" className={`inline-flex whitespace-nowrap ${BACK_LINK}`}>
+                  <span aria-hidden>←</span> The Reading Room · all papers
+                </Link>
+              </nav>
+            </div>
           </header>
 
           <div
