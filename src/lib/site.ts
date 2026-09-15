@@ -11,15 +11,13 @@ export const site = {
 export const SITE_URL = "https://www.baronage.com";
 
 /**
- * The Reading Room paper promoted by the slide-in card on a visitor's entry page (components/FeaturedPaper).
- * To feature another paper, change these four fields; visitors who closed the old card will see the new one.
+ * The Reading Room paper promoted by the slide-in card (components/FeaturedPaper).
+ * To feature another paper, change these three fields; visitors who closed the old card will see the new one.
  */
 export const FEATURED_PAPER = {
   slug: "innes-of-learney-1945",
   title: "The Lord Lyon’s Case for the Baronage",
   category: "Heritage & Sources",
-  blurb:
-    "In 1945 the Lord Lyon set out the evidence that Scotland’s minor barons are a titled nobility, with their own robes, chapeau and style.",
 } as const;
 
 /** The live, existing register — a separate app we link out to. */
