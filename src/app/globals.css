@@ -364,3 +364,13 @@ html {
   .paper-body blockquote, .paper-body .table-wrap, .paper-notes li { break-inside: avoid; }
   .paper-body sup.fnref a, .paper-notes a, .paper-sources a { color: inherit; }
 }
+
+/* Background films (.bg-film): never show the browser's own play button. iOS draws one over a paused
+   video when autoplay is refused (e.g. Low Power Mode); the components also swap to the still image then. */
+video.bg-film::-webkit-media-controls,
+video.bg-film::-webkit-media-controls-panel,
+video.bg-film::-webkit-media-controls-overlay-play-button,
+video.bg-film::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}

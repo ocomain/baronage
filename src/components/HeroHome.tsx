@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { Seal } from "./Seal";
 import { ButtonLink, Container } from "./primitives";
@@ -10,7 +10,17 @@ const POSTER = "/videos/hero-poster.webp";
 
 export function HeroHome() {
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
+  // When the phone refuses autoplay (e.g. iOS Low Power Mode), show the still instead of a paused film.
+  const [filmBlocked, setFilmBlocked] = useState(false);
+
+  useEffect(() => {
+    const attempt = videoRef.current?.play();
+    attempt?.catch((err: unknown) => {
+      if (err instanceof DOMException && err.name === "NotAllowedError") setFilmBlocked(true);
+    });
+  }, [reduceMotion]);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
 
@@ -32,20 +42,24 @@ export function HeroHome() {
 
       {/* Eilean Donan at dusk — slow aerial film, drifting gently with scroll */}
       <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
-        {reduceMotion ? (
+        {reduceMotion || filmBlocked ? (
           <div
             className="h-full w-full scale-[1.08] bg-cover bg-center"
             style={{ backgroundImage: `url('${POSTER}')` }}
           />
         ) : (
           <video
-            className="h-full w-full scale-[1.08] object-cover"
+            ref={videoRef}
+            className="bg-film pointer-events-none h-full w-full scale-[1.08] object-cover"
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
             poster={POSTER}
+            controls={false}
+            disablePictureInPicture
+            disableRemotePlayback
           >
             <source src="/videos/hero-loch.webm" type="video/webm" />
             <source src="/videos/hero-loch.mp4" type="video/mp4" />

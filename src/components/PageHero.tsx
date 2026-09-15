@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { Seal } from "./Seal";
@@ -32,8 +32,18 @@ export function PageHero({
   scrim?: "default" | "strong" | "bottom-blur";
 }) {
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
   const hasMedia = Boolean(image || video);
+  // When the phone refuses autoplay (e.g. iOS Low Power Mode), show the poster instead of a paused film.
+  const [filmBlocked, setFilmBlocked] = useState(false);
+
+  useEffect(() => {
+    const attempt = videoRef.current?.play();
+    attempt?.catch((err: unknown) => {
+      if (err instanceof DOMException && err.name === "NotAllowedError") setFilmBlocked(true);
+    });
+  }, [reduceMotion]);
 
   // Same motion language as the homepage hero, a touch quieter:
   // spring-smoothed drift on scroll + a very slow ambient breathe.
@@ -51,7 +61,7 @@ export function PageHero({
       {hasMedia ? (
         <>
           <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
-            {video && !reduceMotion ? (
+            {video && !reduceMotion && !filmBlocked ? (
               <motion.div
                 className="h-full w-full"
                 initial={{ scale: 1.1 }}
@@ -59,7 +69,8 @@ export function PageHero({
                 transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
               >
                 <video
-                  className="h-full w-full object-cover"
+                  ref={videoRef}
+                  className="bg-film pointer-events-none h-full w-full object-cover"
                   style={{ objectPosition: position }}
                   autoPlay
                   muted
@@ -67,6 +78,9 @@ export function PageHero({
                   playsInline
                   preload="auto"
                   poster={video.poster}
+                  controls={false}
+                  disablePictureInPicture
+                  disableRemotePlayback
                 >
                   {video.webm && <source src={video.webm} type="video/webm" />}
                   <source src={video.mp4} type="video/mp4" />
