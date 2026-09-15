@@ -7,9 +7,11 @@ import { PaperThumbnail } from "@/components/PaperThumbnail";
 import { FEATURED_PAPER } from "@/lib/site";
 
 const HREF = `/reading-room/${FEATURED_PAPER.slug}/`;
-// Keyed by slug, so featuring a different paper shows the card again to visitors who closed the last one.
+// Both keyed by slug, so featuring a different paper shows the card again to visitors who closed the last one.
+// localStorage: closed with X, or the paper was read — never shown again.
 const SEEN_KEY = `bsa-featured-seen:${FEATURED_PAPER.slug}`;
-const ENTRY_KEY = "bsa-entry-page";
+// sessionStorage: the card has already slid in this visit — show it at once on every later page.
+const REVEALED_KEY = `bsa-featured-revealed:${FEATURED_PAPER.slug}`;
 
 // Storage can be unavailable (private windows, blocked site data); the card then simply behaves as first-visit.
 function readKey(kind: "local" | "session", key: string): string | null {
@@ -26,9 +28,10 @@ function writeKey(kind: "local" | "session", key: string, value: string) {
 }
 
 /**
- * Non-blocking featured-paper card. Slides in on the page a visitor lands on, four seconds after arrival
- * or once they start scrolling. Never on the paper itself, never again once closed or clicked, and never
- * on a later page of the same visit. Sits beneath the mobile menu (z-30 under its z-40 overlay).
+ * Non-blocking featured-paper card. Slides in four seconds after a visitor arrives, or once they start
+ * scrolling, then stays on every page of the visit until closed with X. Never shown on the paper itself,
+ * and never again once closed or once the paper has been read. Sits beneath the mobile menu (z-30 under its
+ * z-40 overlay).
  */
 export function FeaturedPaper() {
   const pathname = usePathname();
@@ -38,19 +41,21 @@ export function FeaturedPaper() {
   useEffect(() => {
     const onPaper = pathname.replace(/\/?$/, "/") === HREF;
     if (onPaper) writeKey("local", SEEN_KEY, "1");
-    let entry = readKey("session", ENTRY_KEY);
-    if (entry === null) {
-      entry = pathname;
-      writeKey("session", ENTRY_KEY, pathname);
-    }
-    const ok = !onPaper && entry === pathname && readKey("local", SEEN_KEY) === null;
+    const ok = !onPaper && readKey("local", SEEN_KEY) === null;
     setEligible(ok);
     if (!ok) setShown(false);
   }, [pathname]);
 
   useEffect(() => {
-    if (!eligible) return;
-    const reveal = () => setShown(true);
+    if (!eligible || shown) return;
+    const reveal = () => {
+      writeKey("session", REVEALED_KEY, "1");
+      setShown(true);
+    };
+    if (readKey("session", REVEALED_KEY) !== null) {
+      reveal();
+      return;
+    }
     const timer = window.setTimeout(reveal, 4000);
     const onScroll = () => {
       if (window.scrollY > 300) reveal();
@@ -60,7 +65,7 @@ export function FeaturedPaper() {
       window.clearTimeout(timer);
       window.removeEventListener("scroll", onScroll);
     };
-  }, [eligible]);
+  }, [eligible, shown]);
 
   const markSeen = useCallback(() => writeKey("local", SEEN_KEY, "1"), []);
   const dismiss = useCallback(() => {
