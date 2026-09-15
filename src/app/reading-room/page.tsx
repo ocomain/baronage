@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Fragment } from "react";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/page-metadata";
-import { Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
-import { PaperThumbnail } from "@/components/PaperThumbnail";
+import { Container, Eyebrow, Section } from "@/components/primitives";
+import { ReadingRoomGrid, type PaperCard } from "@/components/ReadingRoomGrid";
+import { FEATURED_PAPER } from "@/lib/site";
 import { readingRoomCategories, readingRoomPapers } from "@/generated/reading-room";
 
 const STANDFIRST =
@@ -16,68 +16,63 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ReadingRoomPage() {
-  // Fixed editorial order; only categories that have papers are shown.
-  const groups = readingRoomCategories
-    .map((category) => ({ category, papers: readingRoomPapers.filter((p) => p.category === category) }))
-    .filter((g) => g.papers.length > 0);
+  // Featured paper first, then newest first; papers of the same day keep the editorial category order.
+  const editorial = new Map(readingRoomPapers.map((p, i) => [p.slug, i]));
+  const papers: PaperCard[] = [...readingRoomPapers]
+    .sort(
+      (a, b) =>
+        Number(b.slug === FEATURED_PAPER.slug) - Number(a.slug === FEATURED_PAPER.slug) ||
+        b.published.localeCompare(a.published) ||
+        readingRoomCategories.indexOf(a.category) - readingRoomCategories.indexOf(b.category) ||
+        (editorial.get(a.slug) ?? 0) - (editorial.get(b.slug) ?? 0),
+    )
+    .map(({ slug, title, subtitle, category, readingTime, published }) => ({
+      slug,
+      title,
+      subtitle,
+      category,
+      readingTime,
+      published,
+    }));
+  // Only subjects that have papers get a filter.
+  const categories = readingRoomCategories.filter((c) => papers.some((p) => p.category === c));
 
   return (
-    <Section tone="parchment" className="!py-12 sm:!py-16">
-      <Container size="prose">
-        <header>
-          <p className="eyebrow">Reference</p>
-          <h1 className="mt-4 font-display text-4xl leading-[1.08] text-navy sm:text-5xl">The Reading Room</h1>
-          <p className="mt-4 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">{STANDFIRST}</p>
-          <GoldRule className="mt-6" align="start" />
-        </header>
+    <>
+      {/* Compact masthead, as on the Armorial — the papers themselves are the show */}
+      <section className="bg-navy-deep text-parchment-50 texture-saltire">
+        <Container className="py-12 text-center sm:py-14">
+          <p className="rise eyebrow eyebrow--light">Reference</p>
+          <h1
+            className="rise mt-4 font-display leading-[1.02] text-parchment-50"
+            style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
+          >
+            The Reading Room
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl font-serif text-lg italic leading-relaxed text-parchment-200/85 sm:text-xl">
+            {STANDFIRST}
+          </p>
+        </Container>
+      </section>
 
-        {groups.map((group) => (
-          <Fragment key={group.category}>
-            <section aria-label={group.category} className="mt-12">
-              <h2 className="eyebrow !font-semibold">{group.category}</h2>
-              <ul className="mt-4 divide-y divide-parchment-300/70 border-y border-parchment-300/70">
-                {group.papers.map((paper) => (
-                  <li key={paper.slug}>
-                    <Link
-                      href={`/reading-room/${paper.slug}`}
-                      className="group flex items-start gap-4 py-6 sm:gap-6 sm:py-8"
-                    >
-                      <PaperThumbnail title={paper.title} category={paper.category} size="responsive" />
-                      <span className="flex min-w-0 flex-1 flex-col gap-2">
-                        <span className="font-display text-[1.35rem] leading-tight text-navy transition-colors group-hover:text-oxblood">
-                          {paper.title}
-                        </span>
-                        <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
-                          {paper.category} · {paper.readingTime} read
-                        </span>
-                        <span className="font-serif text-base italic leading-relaxed text-ink-soft sm:text-lg">
-                          {paper.subtitle}
-                        </span>
-                        <span className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors group-hover:text-oxblood">
-                          Read the paper →
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            {group.category === "Heritage & Sources" && (
-              <aside className="mt-12 border-l-4 border-gold bg-parchment-100 px-6 py-6 sm:px-8 sm:py-7">
-                <Eyebrow>Important to read</Eyebrow>
-                <p className="mt-3 font-serif text-lg leading-relaxed text-navy sm:text-xl">
-                  Before the papers below, read{" "}
-                  <Link href="/scottish-baronies-explained" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
-                    Scottish Baronies, Explained
-                  </Link>
-                  , our FAQ answering the questions people ask most about baronial titles.
-                </p>
-              </aside>
-            )}
-          </Fragment>
-        ))}
-      </Container>
-    </Section>
+      <Section tone="parchment" className="!pt-10 sm:!pt-12">
+        <Container>
+          <aside className="mx-auto mb-10 max-w-3xl border-l-4 border-gold bg-parchment-100 px-6 py-4 sm:px-8">
+            <Eyebrow>Important to read</Eyebrow>
+            <p className="mt-2 font-serif text-lg leading-relaxed text-navy">
+              Before the papers below, read{" "}
+              <Link
+                href="/scottish-baronies-explained"
+                className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+              >
+                Scottish Baronies, Explained
+              </Link>
+              , our FAQ answering the questions people ask most about baronial titles.
+            </p>
+          </aside>
+          <ReadingRoomGrid papers={papers} categories={categories} featuredSlug={FEATURED_PAPER.slug} />
+        </Container>
+      </Section>
+    </>
   );
 }
