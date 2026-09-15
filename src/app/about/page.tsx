@@ -222,8 +222,7 @@ export default function AboutPage() {
                   rank and dignity of baron upon the grantee and their heirs. The Crown charter of 6 May 1590 erecting
                   Spynie <em className="text-parchment-100">in liberam baroniam</em> conferred “
                   <em className="text-parchment-100">Titulum, Honorem, Ordinem et Statum liberi Baronis</em>” — the
-                  title, honour, rank and status of a free baron — a barony distinct from the peerage of Spynie, which
-                  came by a separate charter of 17 April 1593 (
+                  title, honour, rank and status of a free baron — a barony distinct from the later peerage of Spynie (
                   <a
                     href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
                     target="_blank"
