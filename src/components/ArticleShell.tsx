@@ -22,16 +22,21 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
     <Section tone="parchment" className="!py-12 sm:!py-16">
       <Container size="prose">
         <article className="min-w-0">
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <Link
+              href="/reading-room"
+              className="inline-flex items-center gap-2 border border-gold/40 bg-parchment-50 px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:border-oxblood/40 hover:text-oxblood"
+            >
+              <span aria-hidden>←</span> The Reading Room · all papers
+            </Link>
+          </nav>
           <header className="flex items-start justify-between gap-6 sm:gap-10">
             <div className="min-w-0">
               <p className="eyebrow">{paper.category}</p>
               <h1 className="mt-4 font-display text-4xl leading-[1.08] text-navy sm:text-5xl">{paper.title}</h1>
               <p className="mt-4 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">{paper.subtitle}</p>
               <p className="mt-5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-muted">
-                {paper.readingTime} read · Reviewed {monthYear(paper.reviewed)} ·{" "}
-                <Link href="/reading-room" className="text-gold-deep transition-colors hover:text-oxblood">
-                  The Reading Room
-                </Link>
+                {paper.readingTime} read · Reviewed {monthYear(paper.reviewed)}
               </p>
               <GoldRule className="mt-6" align="start" />
             </div>

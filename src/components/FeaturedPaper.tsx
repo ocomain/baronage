@@ -102,15 +102,18 @@ export function FeaturedPaper() {
         <div className="relative min-w-0">
           <p className="eyebrow text-[0.6rem]">Featured paper</p>
           <p className="mt-1.5 font-display text-lg leading-snug text-navy sm:text-xl">{FEATURED_PAPER.title}</p>
-          <p className="mt-1.5 hidden font-sans text-[0.8rem] leading-relaxed text-ink-soft sm:block">
-            {FEATURED_PAPER.blurb}
-          </p>
           <Link
             href={HREF}
             onClick={markSeen}
             className="mt-3 inline-flex items-center gap-1.5 bg-navy px-3.5 py-2 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
           >
             Read the paper <span aria-hidden>→</span>
+          </Link>
+          <Link
+            href="/reading-room"
+            className="mt-3 hidden font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:text-oxblood sm:block"
+          >
+            More papers in the Reading Room <span aria-hidden>→</span>
           </Link>
         </div>
         <button
