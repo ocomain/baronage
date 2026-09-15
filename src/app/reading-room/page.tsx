@@ -16,12 +16,17 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ReadingRoomPage() {
-  // Featured paper first, then newest first; papers of the same day keep the editorial category order.
+  // Pinned papers first (featured paper leads), pinned-last papers at the end; the rest newest first,
+  // and papers of the same day keep the editorial category order.
+  const pinnedFirst = [FEATURED_PAPER.slug, "barons-in-the-lyon-courts-own-words", "lairds-lords-and-barons"];
+  const pinnedLast = ["non-peerage-earldoms"];
+  const rank = (slug: string) =>
+    pinnedFirst.includes(slug) ? pinnedFirst.indexOf(slug) - pinnedFirst.length : pinnedLast.includes(slug) ? 1 + pinnedLast.indexOf(slug) : 0;
   const editorial = new Map(readingRoomPapers.map((p, i) => [p.slug, i]));
   const papers: PaperCard[] = [...readingRoomPapers]
     .sort(
       (a, b) =>
-        Number(b.slug === FEATURED_PAPER.slug) - Number(a.slug === FEATURED_PAPER.slug) ||
+        rank(a.slug) - rank(b.slug) ||
         b.published.localeCompare(a.published) ||
         readingRoomCategories.indexOf(a.category) - readingRoomCategories.indexOf(b.category) ||
         (editorial.get(a.slug) ?? 0) - (editorial.get(b.slug) ?? 0),
