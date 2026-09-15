@@ -2,7 +2,7 @@
 title: "Non-peerage Earldoms"
 subtitle: "Lands the Crown erected into an earldom, the peerage dignity of the same name, and forty years of Lyon Court answers on how the holder is styled"
 slug: non-peerage-earldoms
-meta_description: "Two things share the name earldom: the peerage dignity, and lands the Crown erected into an earldom. The charters, the House of Lords cases, Wigtown and Huntly, and the Lyon Court’s differing answers from Annandale in 1983 to Wigtown in 2021."
+meta_description: "Two things share the name earldom: the peerage dignity, and lands the Crown erected into an earldom, whose holders are commonly called feudal earls. The charters, the House of Lords cases, Wigtown and Huntly, and the Lyon Court’s differing answers from Annandale in 1983 to Wigtown in 2021."
 category: The Lyon Court
 published: 2026-09-15
 reviewed: 2026-09-15
@@ -10,7 +10,7 @@ reviewed: 2026-09-15
 
 # Non-peerage Earldoms
 
-*Two things share the name “earldom”: the peerage dignity of earl, and land the Crown erected into an earldom. Since feudal tenure ended in 2004, the second survives as a dignity. The Lyon Court has answered how its holder is styled in several ways. No court has ruled on it. This paper sets out the record and both readings.*
+*Two things share the name “earldom”: the peerage dignity of earl, and land the Crown erected into an earldom. Holders of the second are commonly called feudal earls, though the word has been defunct since feudal tenure ended on 28 November 2004, when the dignity ceased to be feudal. The Association styles such a holder an earl in the Baronage of Scotland, one of the minor barons of Scotland. The Lyon Court has answered the question of style in several ways. No court has ruled on it. This paper sets out the record and both readings.*
 
 ## Two things called an earldom
 
@@ -26,7 +26,7 @@ One line in Lord Hardwicke’s speech in the Cassillis claim of 1762 points the 
 
 The oldest earldoms have been called territorial peerages. In the Sutherland claim Lord Mansfield said that “when peerages were territorial, it cannot be doubted that the dignity followed the estate”. He added that “how long this continued no person has presumed to say”.[^8] Lord Clyde wrote in 1992 that Scotland distinguished “the greater barons and the lesser barons, the former acquiring such titles as Duke or Earl”.[^9] Craig and Bankton counted dukes, marquesses and earls among the barons.[^10] The lesser barons have been called the [untitled nobility](/reading-room/untitled-in-1930-titled-in-1943/). In Scots, “peer” was used of a great noble by about 1475. By the 1560s it was used to deny a laird the rank of peer, and by 1576 it was tied to lords of parliament.[^11]
 
-According to Lord Lyon Sellar, the label “territorial earldom” “does not seem to be found before the 19th century”.[^12] Since 28 November 2004 none of these earldoms is held as feudal land, so this paper uses a neutral name: non-peerage earldoms.
+According to Lord Lyon Sellar, the label “territorial earldom” “does not seem to be found before the 19th century”.[^12] None of these earldoms is held as feudal land now, so this paper uses a neutral name: non-peerage earldoms.
 
 ## How the lands came apart from the peerages
 
