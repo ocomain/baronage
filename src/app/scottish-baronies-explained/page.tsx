@@ -115,8 +115,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         </p>
         <figure className="mt-6 border-l-2 border-gold/60 bg-parchment-50 px-6 py-5">
           <blockquote className="font-serif text-2xl italic leading-snug text-navy sm:text-3xl">
-            “…such Feus as had a Jurisdiction annext to them, <strong className="font-semibold">a Barony, as we call
-            it, do ennoble</strong>; for Baronies are establisht only by the Prince’s Erection or Confirmation.”
+            “…<strong className="font-semibold">a Barony, as we call it, do ennoble</strong>; for Baronies are
+            establisht only by the Prince’s Erection or Confirmation.”
           </blockquote>
           <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.16em] text-muted">
             Sir George Mackenzie, Lord Advocate —{" "}
