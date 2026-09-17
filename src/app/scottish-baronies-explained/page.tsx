@@ -106,8 +106,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
             Great Seal
           </Link>{" "}
-          records the same in 1589: Colville was to be called baron of Culross, and Keith was given the title and
-          honour of baron of Delny. The sheriff-court suit-rolls entered a baron as “A, <em>Baro de</em> B”
+          records in 1589: Colville was <em>to be called baron of Culross</em>, and Keith was given the{" "}
+          <em>title and honour of baron of Delny</em>. The sheriff-court suit-rolls entered a baron as “A, <em>Baro de</em> B”
           exactly as an earl was entered “A, <em>Comes de</em> B”. Mary Queen of Scots wrote to “Our traist friend
           the barroun of Kylrawak”, and Lord Lyon Erskine of Cambo signed himself “<em>Baro de Cambo</em>”. Against
           it stood Mackenzie’s “other” party, the subscription clause of the 1672 Act, and J. H. Stevenson (1896,
