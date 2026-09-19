@@ -49,6 +49,23 @@ export default function SbrVsRollPage() {
           <Reveal>
             <div className="prose-heritage">
               <p>
+                Until 28 November 2004 a barony passed with the land, by a deed recorded in the Register of Sasines.
+                Since that day the dignity “shall not attach to the land”, and is “transferable only as, incorporeal
+                heritable property (and shall not be a right as respects which a deed can be registered in the Land
+                Register of Scotland or recorded in the Register of Sasines)”.{" "}
+                <a
+                  href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold-deep underline decoration-gold/40 underline-offset-2 transition-colors hover:text-oxblood"
+                >
+                  Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63(2)
+                </a>
+                . No public register could take the transfer after that, and the Scottish Barony Register was
+                established to record it in their place — which is why the Lord Lyon accepts the Custodian’s
+                certification as evidence of title.
+              </p>
+              <p>
                 The Scottish Barony Register (SBR) is a private register of legal transfers, established in 2004 by
                 members of the Scottish legal profession, under a Custodian whose certification the Lord Lyon accepts
                 as evidence of title. We recognise it as an authoritative source, and recommend that every holder of a

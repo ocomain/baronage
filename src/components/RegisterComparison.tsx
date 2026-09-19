@@ -13,6 +13,11 @@ const rows: Row[] = [
     roll: "The open-source verification roll of the Baronage of Scotland, maintained by the Association",
   },
   {
+    label: "Who it is for",
+    sbr: "Solicitors and the Lord Lyon: the record relied on when a barony is assigned, and when a petition is presented to the Lyon Court",
+    roll: "The public: an open online record of who holds which dignity, and on what evidence — recognition and conduct, as with the Rolls of the Peerage and the Baronetage",
+  },
+  {
     label: "Official status",
     sbr: "Non-statutory; not an official register. The Custodian’s certification is accepted by the Lord Lyon as evidence of title",
     roll: "Non-statutory; not an official register. Bears on recognition only, never on legal title",
