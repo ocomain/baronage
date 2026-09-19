@@ -83,8 +83,8 @@ const rows: Row[] = [
   },
   {
     label: "In a phrase",
-    sbr: "Replaces the Register of Sasines for baronies: records legal title",
-    roll: "Recognises the title",
+    sbr: "Replaces the Register of Sasines for baronies: records legal title voluntarily submitted",
+    roll: "Recognises the title and catalogues all titles in the Baronage of Scotland",
   },
 ];
 
