@@ -19,7 +19,7 @@ export default function ReadingRoomPage() {
   // Pinned papers first (featured paper leads), pinned-last papers at the end; the rest newest first,
   // and papers of the same day keep the editorial category order.
   const pinnedFirst = [FEATURED_PAPER.slug, "barons-in-the-lyon-courts-own-words", "lairds-lords-and-barons"];
-  const pinnedLast = ["non-peerage-earldoms", "barons-in-the-gazette"];
+  const pinnedLast = ["non-peerage-earldoms", "barons-in-the-gazette", "official-roll-of-the-baronetage-1910"];
   const rank = (slug: string) =>
     pinnedFirst.includes(slug) ? pinnedFirst.indexOf(slug) - pinnedFirst.length : pinnedLast.includes(slug) ? 1 + pinnedLast.indexOf(slug) : 0;
   const editorial = new Map(readingRoomPapers.map((p, i) => [p.slug, i]));
