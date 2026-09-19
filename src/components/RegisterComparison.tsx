@@ -9,7 +9,7 @@ const intLink =
 const rows: Row[] = [
   {
     label: "What it is",
-    sbr: "A private register of legal transfers, established in 2004 by members of the Scottish legal profession, under a Custodian",
+    sbr: "The register that took over from the Register of Sasines for baronies: a private register of legal transfers, established in 2004 by members of the Scottish legal profession, under a Custodian",
     roll: "The open-source verification roll of the Baronage of Scotland, maintained by the Association",
   },
   {
@@ -83,7 +83,7 @@ const rows: Row[] = [
   },
   {
     label: "In a phrase",
-    sbr: "Records legal title",
+    sbr: "Records legal title, where the Register of Sasines once did",
     roll: "Recognises the title",
   },
 ];

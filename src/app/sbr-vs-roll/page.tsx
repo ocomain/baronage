@@ -9,7 +9,7 @@ import { ROLL_URL } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "The SBR and the Roll",
   description:
-    "How the Scottish Barony Register and the Roll of Scottish Barons differ, what each one records, and how they work together.",
+    "The Scottish Barony Register records the legal transfer of a barony, in place of the Register of Sasines since 2004; the Roll of Scottish Barons records recognition. What each one does, and how they work together.",
   path: "/sbr-vs-roll/",
 });
 
@@ -21,7 +21,7 @@ export default function SbrVsRollPage() {
         image="/images/scribe.webp"
         position="center 42%"
         title="Two records, two jobs"
-        intro="The Scottish Barony Register and the Roll of Scottish Barons are complementary, not competing. Here is what each one is, what it records, and how they fit together."
+        intro="Since 2004 a barony can no longer be recorded in the Register of Sasines, and the Scottish Barony Register records the legal transfer in its place. The Roll of Scottish Barons records recognition. Complementary, not competing — here is what each one does."
       />
 
       <Section tone="parchment" className="!py-12 sm:!py-16">
@@ -35,9 +35,9 @@ export default function SbrVsRollPage() {
                 peerage; what the King’s removal of his name from the Roll of the Peerage in 2025 withdrew was
                 recognition of the title, not the legal title. A Scottish barony stands on the same footing: only an
                 Act of Parliament can extinguish it. And because baronies are legally assignable, each record has a
-                distinct purpose — the Scottish Barony Register records legal title; the Roll of Scottish Barons records
-                recognition, and the conduct that goes with it, as the Rolls of the Peerage and the Baronetage do in
-                their own spheres.
+                distinct purpose — the Scottish Barony Register records legal title, in place of the Register of
+                Sasines, which can no longer take a barony; the Roll of Scottish Barons records recognition, and the
+                conduct that goes with it, as the Rolls of the Peerage and the Baronetage do in their own spheres.
               </p>
               <p className="mt-4 font-serif text-lg leading-relaxed text-navy sm:text-xl">
                 The Roll is on friendly terms with the Custodian of the Scottish Barony Register: the two records work
