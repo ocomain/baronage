@@ -407,7 +407,8 @@ export default function AboutPage() {
                 </figcaption>
               </figure>
               <p className="mt-4 text-sm leading-relaxed text-muted">
-                Nobility clauses of this kind no longer appear in Letters Patent:{" "}
+                Nobility clauses of this kind no longer appear in any Letters Patent, for any petitioner, peers
+                included:{" "}
                 <a
                   href="https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf"
                   target="_blank"
@@ -416,7 +417,7 @@ export default function AboutPage() {
                 >
                   <em>Hamilton of Rockhall v Lord Lyon</em> [2019] CSOH 85
                 </a>
-                , para [21].
+                , paras [21]–[22] and [40].
               </p>
             </div>
           </Reveal>
