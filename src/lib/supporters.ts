@@ -24,7 +24,7 @@ export const baronies: Barony[] = [
     dignity: "Baron",
     name: "Drum",
     roll: "https://roll.baronage.com/baron/alexander-irvine",
-    img: "/arms/drum-lp.webp",
+    img: "/arms/drum-2026.webp",
     note: "Chief of his Name",
   },
   { dignity: "Baron", name: "Kirkbuddo", roll: "https://roll.baronage.com/baron/jean-yves-de-la-sabliere", img: "/arms/kirkbuddo.webp" },
