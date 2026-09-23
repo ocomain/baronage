@@ -563,8 +563,8 @@ export default function ProperAddressPage() {
                 <P>
                   The Roll of Scottish Barons styles the holder of an earldom in the form the Lyon Court has used for
                   that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
-                  continues to the successor; otherwise the Roll uses the Court’s own descriptive form, holder of the
-                  earldom.
+                  continues to the successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon
+                  Court used for Annandale in 1983 and the ceiling Lord Lyon Sellar set in 2010.
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -574,7 +574,7 @@ export default function ProperAddressPage() {
                     <N>(spoken Lochaber or The Earl)</N>
                   </F>
                   <F>
-                    Otherwise: <S>The Much Honoured Holder of the Earldom of Lochaber in the baronage of Scotland</S>
+                    Otherwise: <S>The Much Honoured Baron of the Earldom of Lochaber</S>
                     <N>(spoken Lochaber)</N>
                   </F>
                   <F>
