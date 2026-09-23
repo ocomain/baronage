@@ -560,11 +560,22 @@ export default function ProperAddressPage() {
                   Honoured) can be put before the name, this prefix honorific is used to distinguish Scottish Barons from
                   honourifics attaching to peers.
                 </P>
+                <P>
+                  The Roll of Scottish Barons styles the holder of an earldom in the form the Lyon Court has used for
+                  that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
+                  continues to the successor; otherwise the Roll uses the Court’s own descriptive form, holder of the
+                  earldom.
+                </P>
                 <P>Earldom example:</P>
                 <Forms>
                   <F>
-                    Scottish baronial Earl: <S>The Much Honoured Earl Baron of Lochaber</S>
+                    Where a Lord Lyon has recognised the earldom’s holder as Earl:{" "}
+                    <S>The Much Honoured Earl of Lochaber in the baronage of Scotland</S>
                     <N>(spoken Lochaber or The Earl)</N>
+                  </F>
+                  <F>
+                    Otherwise: <S>The Much Honoured Holder of the Earldom of Lochaber in the baronage of Scotland</S>
+                    <N>(spoken Lochaber)</N>
                   </F>
                   <F>
                     Peer: <S>The Right Hon The Earl of Lochaber</S>
