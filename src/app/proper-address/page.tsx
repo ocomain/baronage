@@ -660,7 +660,9 @@ export default function ProperAddressPage() {
                 <P>
                   Both forms remain in use, and “Lord X” is not confined to peers, so “The Much Honoured
                   Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix marking the
-                  baronage. The line not to cross is “Baron X” without “of”, which is the form of a peerage barony; a
+                  baronage. The convention is the one the baronage has always used for women: a baroness or a baron’s
+                  wife is “Lady Inverness”, so the holder of a lordship is “Lord Lochaber”, while a baron remains “Baron
+                  of Inverness”. The line not to cross is “Baron X” without “of”, which is the form of a peerage barony; a
                   Scots baron is “Baron of X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
                   description in 1427.<Ref n={5} />
                 </P>
