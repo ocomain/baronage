@@ -774,23 +774,34 @@ export default function ProperAddressPage() {
                   recommended practices for filling out typical fields in computer systems, such as databases, online
                   forms, and digital directories. Always think of how it will be presented in that system:
                 </P>
-                <ol className="my-6 list-decimal space-y-8 pl-7 marker:font-inscribe marker:text-gold-deep">
-                  {DIGITAL.map((d) => (
-                    <li key={d.key} className="font-serif text-xl leading-[1.8] text-ink">
-                      <S>{d.head}</S>
-                      <p className="mt-1.5">{d.entry}</p>
+                <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-parchment-300/70 bg-parchment-300/70 md:grid-cols-2">
+                  {DIGITAL.map((d, i) => (
+                    <div
+                      key={d.key}
+                      className={`flex h-full flex-col bg-parchment-50 p-6 sm:p-7 ${d.key === "worst-case" ? "md:col-span-2" : ""}`}
+                    >
+                      <div className="flex items-baseline gap-3">
+                        <span className="font-inscribe text-[0.68rem] tabular-nums tracking-[0.2em] text-gold-deep">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <h3 className="font-display text-[1.25rem] leading-snug text-navy">{d.head}</h3>
+                      </div>
+                      <div className="gold-rule gold-rule--start mt-3 text-gold/70">
+                        <span className="gold-rule__gem" />
+                      </div>
+                      <p className="mt-4 font-serif text-lg leading-relaxed text-ink">{d.entry}</p>
                       {d.example && (
-                        <p className="mt-1.5">
-                          <span className="mr-2.5 align-[0.18em] font-sans text-[0.6rem] font-medium uppercase tracking-[0.18em] text-gold-deep">
-                            Example
+                        <div className="mt-4 border border-navy/15 bg-white/70 px-4 py-3 shadow-[inset_0_1px_2px_rgba(8,12,28,0.06)]">
+                          <span className="block font-sans text-[0.58rem] font-medium uppercase tracking-[0.2em] text-gold-deep">
+                            Example entry
                           </span>
-                          {d.example}
-                        </p>
+                          <p className="mt-1 font-serif text-lg leading-relaxed text-ink">{d.example}</p>
+                        </div>
                       )}
-                      {d.note && <p className="mt-1.5 font-serif text-lg italic leading-relaxed text-muted">{d.note}</p>}
-                    </li>
+                      {d.note && <p className="mt-4 font-serif text-base italic leading-relaxed text-muted">{d.note}</p>}
+                    </div>
                   ))}
-                </ol>
+                </div>
                 <P>
                   By following these guidelines, you can ensure that baronial titles are correctly represented and
                   respected in digital systems, maintaining the dignity and historical heritage of the title.
