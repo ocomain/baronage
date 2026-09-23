@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { Footnote } from "@/components/Footnote";
 import { Reveal } from "@/components/Reveal";
 import { Container, Section } from "@/components/primitives";
 
@@ -53,13 +54,9 @@ function Or() {
 function N({ children }: { children: ReactNode }) {
   return <em className="font-normal"> {children}</em>;
 }
-/** Superscript reference to the numbered sources at the end of a section. */
+/** Numbered marker that opens its source in a pop-up card (same component as the Explained page). */
 function Ref({ n }: { n: number }) {
-  return (
-    <sup className="ml-0.5 font-sans text-[0.7em] text-oxblood">
-      <a href={`#hd-ref-${n}`} className="no-underline hover:underline">{n}</a>
-    </sup>
-  );
+  return <Footnote n={n}>{HIGHER_SOURCES[n - 1]}</Footnote>;
 }
 /** External source link inside a reference. */
 function Src({ href, children }: { href: string; children: ReactNode }) {
@@ -69,6 +66,38 @@ function Src({ href, children }: { href: string; children: ReactNode }) {
     </a>
   );
 }
+/** Sources for the higher-dignities note; opened from the numbered markers and from "Authority & sources". */
+const HIGHER_SOURCES: ReactNode[] = [
+  <>
+    James Dalrymple, Viscount Stair, <em>The Institutions of the Law of Scotland</em> (2nd ed., 1693), II.iii.45, p. 222 —{" "}
+    <Src href="https://archive.org/details/bim_early-english-books-1641-1700_the-institutions-of-the-_stair-james-dalrymple-_1693/page/n227">archive.org</Src>.
+  </>,
+  <>
+    William Borthwick, <em>An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland</em> (1775), p. 3 (“Lord Barons”; the term recurs at pp. 4, 16, 18 and 19) —{" "}
+    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/3/mode/2up">archive.org</Src>; John Lodge, <em>The Peerage of Ireland</em> (rev. ed., 1789), vol. V, pp. 40–41, decree of 1634 on precedency between “the Lord Baron of Trimlestown and the Lord Baron of Dunsany” —{" "}
+    <Src href="https://archive.org/details/peerageofireland05lodg">archive.org</Src>.
+  </>,
+  <>
+    Borthwick (1775), p. 21: “In the year 1416, William Lord Graham gets a charter of the barony of Mellenok, in which he is designed, Willielmo Domino Graham. And the same Lord gets a charter of the lands of Aldmontrose, dated the 4th August 1420, Willielmo Domino de Graham”, the charters being “on the record of the great seal” —{" "}
+    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. Patrick Graham was created Lord Graham, a Lord of Parliament, in 1445.
+  </>,
+  <>
+    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes —{" "}
+    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. Reproduced above.
+  </>,
+  <>
+    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163.
+  </>,
+  <>
+    Annandale: Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell”, recorded in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, and discussed in Lord Lyon Sellar’s{" "}
+    <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (c. 2010), pp. 19–22. Lord Lyon Blair’s recognitions: Crawfurd-Lindsay, Letters Patent 30 May 2007; Breadalbane, warrant 12 April 2006; Rothes, warrant 5 September 2006 and Letters Patent 6 August 2007 (Sellar, pp. 4–5). Sellar’s ruling that such an owner “has no claim to a style greater than that of baron”: the same Note. Full record in{" "}
+    <Link href="/reading-room/non-peerage-earldoms/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Non-peerage Earldoms</Link>.
+  </>,
+  <>
+    One unit: Crawfurd and Lindsay, charter of 1 March 1648, ratified{" "}
+    <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected “in liberam baroniam de Ballinbreich” (RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
+  </>,
+];
 function Sec({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section id={id} className="scroll-mt-32">
@@ -699,36 +728,20 @@ export default function ProperAddressPage() {
                     Lord Graham until 1445.
                   </p>
                 </div>
-                <ol className="mt-8 list-decimal space-y-2 pl-6 font-serif text-base leading-relaxed text-ink/85">
-                  <li id="hd-ref-1">
-                    James Dalrymple, Viscount Stair, <em>The Institutions of the Law of Scotland</em> (2nd ed., 1693), II.iii.45, p. 222 —{" "}
-                    <Src href="https://archive.org/details/bim_early-english-books-1641-1700_the-institutions-of-the-_stair-james-dalrymple-_1693/page/n227">archive.org</Src>.
-                  </li>
-                  <li id="hd-ref-2">
-                    William Borthwick, <em>An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland</em> (1775), p. 3 (“Lord Barons”; the term recurs at pp. 4, 16, 18 and 19) —{" "}
-                    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/3/mode/2up">archive.org</Src>; John Lodge, <em>The Peerage of Ireland</em> (rev. ed., 1789), vol. V, pp. 40–41, decree of 1634 on precedency between “the Lord Baron of Trimlestown and the Lord Baron of Dunsany” —{" "}
-                    <Src href="https://archive.org/details/peerageofireland05lodg">archive.org</Src>.
-                  </li>
-                  <li id="hd-ref-3">
-                    Borthwick (1775), p. 21: “In the year 1416, William Lord Graham gets a charter of the barony of Mellenok, in which he is designed, Willielmo Domino Graham. And the same Lord gets a charter of the lands of Aldmontrose, dated the 4th August 1420, Willielmo Domino de Graham”, the charters being “on the record of the great seal” —{" "}
-                    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. Patrick Graham was created Lord Graham, a Lord of Parliament, in 1445.
-                  </li>
-                  <li id="hd-ref-4">
-                    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes —{" "}
-                    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. Reproduced above.
-                  </li>
-                  <li id="hd-ref-5">
-                    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163.
-                  </li>
-                  <li id="hd-ref-6">
-                    Annandale: Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell”, recorded in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, and discussed in Lord Lyon Sellar’s{" "}
-                    <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (c. 2010), pp. 19–22. Lord Lyon Blair’s recognitions: Crawfurd-Lindsay, Letters Patent 30 May 2007; Breadalbane, warrant 12 April 2006; Rothes, warrant 5 September 2006 and Letters Patent 6 August 2007 (Sellar, pp. 4–5). Sellar’s ruling that such an owner “has no claim to a style greater than that of baron”: the same Note. Full record in{" "}
-                    <Link href="/reading-room/non-peerage-earldoms/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Non-peerage Earldoms</Link>.
-                  </li>
-                  <li id="hd-ref-7">
-                    One unit: Crawfurd and Lindsay, charter of 1 March 1648, ratified{" "}
-                    <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected “in liberam baroniam de Ballinbreich” (RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
-                  </li>
+                <p className="mt-8">
+                  <Footnote n={0} heading="Authority & sources" label="Authority & sources" triggerClassName="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-gold-deep underline decoration-dotted decoration-gold/40 underline-offset-4 transition-colors hover:text-oxblood">
+                    <ol className="list-decimal space-y-3 pl-5">
+                      {HIGHER_SOURCES.map((src, i) => (
+                        <li key={i}>{src}</li>
+                      ))}
+                    </ol>
+                  </Footnote>
+                </p>
+                {/* Crawlable copy of the sources — the pop-up renders its content only when opened. */}
+                <ol hidden>
+                  {HIGHER_SOURCES.map((src, i) => (
+                    <li key={i}>{src}</li>
+                  ))}
                 </ol>
                 <P>Lordship example:</P>
                 <Forms>
