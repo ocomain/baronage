@@ -10,7 +10,7 @@ reviewed: 2026-09-15
 
 # Non-peerage Earldoms
 
-*Two things share the name “earldom”: the peerage dignity of earl, and land the Crown erected into an earldom. Holders of the second are commonly called feudal earls, though the word has been defunct since feudal tenure ended on 28 November 2004, when the dignity ceased to be feudal. The Association styles such a holder an earl in the Baronage of Scotland, one of the minor barons of Scotland. The Lyon Court has answered the question of style in several ways. No court has ruled on it. This paper sets out the record and both readings.*
+*Two things share the name “earldom”: the peerage dignity of earl, and land the Crown erected into an earldom. Holders of the second are commonly called feudal earls, though the word has been defunct since feudal tenure ended on 28 November 2004, when the dignity ceased to be feudal. Such a holder is an earl in the Baronage of Scotland, one of the minor barons of Scotland. The Roll of Scottish Barons styles him Baron of the Earldom, the form the Lyon Court used for Annandale in 1983, or Earl where a Lord Lyon has recognised a holder of that earldom in an earl’s style. The Lyon Court has answered the question of style in several ways. No court has ruled on it. This paper sets out the record and both readings.*
 
 ## Two things called an earldom
 
@@ -102,6 +102,13 @@ Of the passages in Stair and Erskine Sellar wrote: “it suggests to me that in 
 Lord Lyon Morrow took a third course. In Menking the petitioner asked for insignia “appropriate to the dignity of Lord in the Baronage of Scotland”. Of earlier grants Morrow said, “I do not regard these decisions as setting any precedent”. He held that “such higher feudal dignities are of the genus of barony”, so “the additaments would be as a baron”. He recognised that Menking “holds the Lordship and Regality of the Garioch being of the genus of barony”, and proposed the same approach for “all future petitioners involving feudal and other dignities”.[^46] The later patents name the earldom and style no one earl.[^47][^48]
 
 The phrase “genus of barony” has not been found before 2015.[^52] Morrow wrote that “Craig states clearly” that such dignities “are all of the genus of barony”. Craig’s Latin says that dukes, marquises and earls are included under the name “Baro”.[^46][^10] Whether that makes them a genus of barony is a question of reading. “Baronage of Scotland” is much older, and names an order of people, not a kind of dignity. Douglas’s *Baronage of Scotland* (1798) was an account of “the Gentry of that Kingdom”. In 1943 the Lyon Court wrote of “the estait of the Baronage (i.e. Barones Minores)”. The Rothes and Menking petitioners both used the phrase.[^53]
+
+The 1983 form has a history. Innes of Learney recorded in 1945 that where a peer held a feudal barony, “his feudal Baronies are added to his style in the form ‘Baron of the Barony of X——’”, and in the same note that a 1932 matriculation which gave “Baron of the Barony of Moniack” was “a form now corrected from verifying the old practice as simply ‘Baron of X——’ down to late in the nineteenth century, and since resumed”.[^62] It was the peerage-conveyancing description of the nineteenth and early twentieth centuries. The Esslemont Memorial of 1934 objected to it being substituted for the ancient title, and after Lord Lyon Grant recorded “Baron of Esslemont” the Court recorded barons as “Baron of X”.[^62] The longer form reappears in Innes of Edingight’s Annandale patent of 1983, applied to an earldom, where the short form has no true equivalent.[^36]
+
+<figure class="paper-figure">
+<img src="/images/innes-1945-p158-baron-of-the-barony.webp" alt="Innes of Learney, PSAS 79 (1944–45), p. 158: where a peer held a feudal barony it was added to his style in the form ‘Baron of the Barony of X’." width="1320" height="453" loading="lazy">
+<figcaption>Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 158: the peerage form “Baron of the Barony of X”, and the sheriff-court rolls’ “Dominus de B” and “Baro de B”. Reproduced from the Society’s <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer">open-access PDF</a>.</figcaption>
+</figure>
 
 ## The two readings
 
@@ -202,3 +209,5 @@ For how the Association styles lords and earls in the Baronage of Scotland, see 
 [^59]: *Hamilton of Rockhall v Lord Lyon King of Arms* [2019] CSOH 85, paras [2] and [26] — [PDF of the opinion](https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf).
 [^60]: Sellar, Arran Note, p. 10.
 [^61]: Scottish Law Commission, Report No 168, para 2.30. Beyond a passage on the Principality (para 2.28, p. 18: it “comprises the hereditary lands of the Stewarts and the Earldom of Carrick and the Isles”), the report does not discuss earldoms.
+
+[^62]: Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, [*PSAS* 79 (1944–45)](http://journals.socantscot.org/index.php/psas/article/download/8229/8197/), p. 158 and n. 2 (Fraser of Reelig, matriculation of 10 February 1932, Lyon Register vol. xxx, p. 22); the Esslemont Memorial, pp. 162–163; see [The Esslemont petition of 1934](/reading-room/esslemont-petition-1934/).
