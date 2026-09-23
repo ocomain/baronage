@@ -579,8 +579,10 @@ export default function ProperAddressPage() {
                 <P>
                   The Roll of Scottish Barons styles the holder of an earldom in the form the Lyon Court has used for
                   that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
-                  continues to the successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon
-                  Court used for Annandale in 1983 and the ceiling Lord Lyon Sellar set in 2010.
+                  continues to the successor; otherwise the holder is styled Baron of the Earldom, the form{" "}
+                  <Src href="https://www.thegazette.co.uk/Edinburgh/issue/21460/page/51/data.pdf">the Lyon Court used for Annandale in 1983</Src>{" "}
+                  and{" "}
+                  <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">the ceiling Lord Lyon Sellar set in 2010</Src>.
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -609,27 +611,7 @@ export default function ProperAddressPage() {
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
                   Lord of Graham in 1420, before the Lord of Parliament honour of 1445.<Ref n={3} /> The medieval
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
-                  B”.<Ref n={4} /> Both forms remain in use, and “Lord X” is not confined to peers, so “The Much Honoured
-                  Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix marking the
-                  baronage. The line not to cross is “Baron X” without “of”, which is the form of a peerage barony; a
-                  Scots baron is “Baron of X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
-                  description in 1427.<Ref n={5} /> Lordships, earldoms and marquisates are nobler titles of a barony, so
-                  their holders are barons whose barony carries the nobler name, and typically only the senior rank is
-                  referenced, e.g. The Earl, or Lord Lochaber. “Earl in the baronage of Scotland” names the class; a
-                  holder’s style follows the rule above: Earl where a Lord Lyon has recognised a holder of that earldom
-                  in an earl’s style (at present Crawfurd-Lindsay, Rothes and Breadalbane, recognised under Lord Lyon
-                  Blair in 2006–07), otherwise Baron of the Earldom, the form the Lyon Court used for Annandale in 1983,
-                  unless the Lyon Court gives that holder another style.<Ref n={6} /> Some earldoms were erected by the
-                  Crown as an earldom, lordship and barony in one unit; others sit on a barony of another
-                  name.<Ref n={7} /> For the history of these words see{" "}
-                  <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
-                    Lairds, lords and barons
-                  </Link>{" "}
-                  and the{" "}
-                  <Link href="/scottish-baronies-explained/#term-comes-dominus-baro" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
-                    glossary
-                  </Link>
-                  .
+                  B”.<Ref n={4} />
                 </P>
                 <figure className="mt-8">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -646,6 +628,13 @@ export default function ProperAddressPage() {
                     in the sheriff-court rolls, and the peerage form “Baron of the Barony of X”.
                   </figcaption>
                 </figure>
+                <P>
+                  Both forms remain in use, and “Lord X” is not confined to peers, so “The Much Honoured
+                  Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix marking the
+                  baronage. The line not to cross is “Baron X” without “of”, which is the form of a peerage barony; a
+                  Scots baron is “Baron of X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
+                  description in 1427.<Ref n={5} />
+                </P>
                 <figure className="mt-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -660,38 +649,25 @@ export default function ProperAddressPage() {
                     The same page: “Baron McCorquodale”, a non-peerage description of 1427.
                   </figcaption>
                 </figure>
-                <ol className="mt-8 list-decimal space-y-2 pl-6 font-serif text-base leading-relaxed text-ink/85">
-                  <li id="hd-ref-1">
-                    James Dalrymple, Viscount Stair, <em>The Institutions of the Law of Scotland</em> (2nd ed., 1693), II.iii.45, p. 222 —{" "}
-                    <Src href="https://archive.org/details/bim_early-english-books-1641-1700_the-institutions-of-the-_stair-james-dalrymple-_1693/page/n227">archive.org</Src>.
-                  </li>
-                  <li id="hd-ref-2">
-                    William Borthwick, <em>An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland</em> (1775), p. 3 (“Lord Barons”; the term recurs at pp. 4, 16, 18 and 19) —{" "}
-                    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/3/mode/2up">archive.org</Src>; John Lodge, <em>The Peerage of Ireland</em> (rev. ed., 1789), vol. V, pp. 40–41, decree of 1634 on precedency between “the Lord Baron of Trimlestown and the Lord Baron of Dunsany” —{" "}
-                    <Src href="https://archive.org/details/peerageofireland05lodg">archive.org</Src>. Both sources use the form of Lords of Parliament; no example for a non-peerage lord has been found.
-                  </li>
-                  <li id="hd-ref-3">
-                    Borthwick (1775), p. 21: “In the year 1416, William Lord Graham gets a charter of the barony of Mellenok, in which he is designed, Willielmo Domino Graham. And the same Lord gets a charter of the lands of Aldmontrose, dated the 4th August 1420, Willielmo Domino de Graham”, the charters being “on the record of the great seal” —{" "}
-                    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. Patrick Graham was created Lord Graham, a Lord of Parliament, in 1445.
-                  </li>
-                  <li id="hd-ref-4">
-                    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes —{" "}
-                    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. Reproduced above.
-                  </li>
-                  <li id="hd-ref-5">
-                    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163.
-                  </li>
-                  <li id="hd-ref-6">
-                    Annandale: Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell”, recorded in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, and discussed in Lord Lyon Sellar’s{" "}
-                    <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (c. 2010), pp. 19–22. Lord Lyon Blair’s recognitions: Crawfurd-Lindsay, Letters Patent 30 May 2007; Breadalbane, warrant 12 April 2006; Rothes, warrant 5 September 2006 and Letters Patent 6 August 2007 (Sellar, pp. 4–5). Sellar’s ruling that such an owner “has no claim to a style greater than that of baron”: the same Note. Full record in{" "}
-                    <Link href="/reading-room/non-peerage-earldoms/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Non-peerage Earldoms</Link>.
-                  </li>
-                  <li id="hd-ref-7">
-                    One unit: Crawfurd and Lindsay, charter of 1 March 1648, ratified{" "}
-                    <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected “in liberam baroniam de Ballinbreich” (RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
-                  </li>
-                </ol>
-                <div className="mt-8 border-y border-parchment-300/70 py-6 text-center">
+                <P>
+                  Lordships, earldoms and marquisates are nobler titles of a barony, so
+                  their holders are barons whose barony carries the nobler name, and typically only the senior rank is
+                  referenced, e.g. The Earl, or Lord Lochaber. “Earl in the baronage of Scotland” names the class; a
+                  holder’s style follows the rule above: Earl where a Lord Lyon has recognised a holder of that earldom
+                  in an earl’s style (at present Crawfurd-Lindsay, Rothes and Breadalbane, recognised under Lord Lyon
+                  Blair in 2006–07), otherwise Baron of the Earldom, the form the Lyon Court used for Annandale in 1983,
+                  unless the Lyon Court gives that holder another style.<Ref n={6} /> Some earldoms were erected by the
+                  Crown as an earldom, lordship and barony in one unit; others sit on a barony of another
+                  name.<Ref n={7} /> For the history of these words see{" "}
+                  <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
+                    Lairds, lords and barons
+                  </Link>{" "}
+                  and the{" "}
+                  <Link href="/scottish-baronies-explained/#term-comes-dominus-baro" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
+                    glossary
+                  </Link>
+                  .
+                </P>                <div className="mt-10 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">
                     William Borthwick, 1775 —{" "}
                     <a
@@ -723,6 +699,37 @@ export default function ProperAddressPage() {
                     Lord Graham until 1445.
                   </p>
                 </div>
+                <ol className="mt-8 list-decimal space-y-2 pl-6 font-serif text-base leading-relaxed text-ink/85">
+                  <li id="hd-ref-1">
+                    James Dalrymple, Viscount Stair, <em>The Institutions of the Law of Scotland</em> (2nd ed., 1693), II.iii.45, p. 222 —{" "}
+                    <Src href="https://archive.org/details/bim_early-english-books-1641-1700_the-institutions-of-the-_stair-james-dalrymple-_1693/page/n227">archive.org</Src>.
+                  </li>
+                  <li id="hd-ref-2">
+                    William Borthwick, <em>An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland</em> (1775), p. 3 (“Lord Barons”; the term recurs at pp. 4, 16, 18 and 19) —{" "}
+                    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/3/mode/2up">archive.org</Src>; John Lodge, <em>The Peerage of Ireland</em> (rev. ed., 1789), vol. V, pp. 40–41, decree of 1634 on precedency between “the Lord Baron of Trimlestown and the Lord Baron of Dunsany” —{" "}
+                    <Src href="https://archive.org/details/peerageofireland05lodg">archive.org</Src>.
+                  </li>
+                  <li id="hd-ref-3">
+                    Borthwick (1775), p. 21: “In the year 1416, William Lord Graham gets a charter of the barony of Mellenok, in which he is designed, Willielmo Domino Graham. And the same Lord gets a charter of the lands of Aldmontrose, dated the 4th August 1420, Willielmo Domino de Graham”, the charters being “on the record of the great seal” —{" "}
+                    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. Patrick Graham was created Lord Graham, a Lord of Parliament, in 1445.
+                  </li>
+                  <li id="hd-ref-4">
+                    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes —{" "}
+                    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. Reproduced above.
+                  </li>
+                  <li id="hd-ref-5">
+                    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163.
+                  </li>
+                  <li id="hd-ref-6">
+                    Annandale: Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell”, recorded in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, and discussed in Lord Lyon Sellar’s{" "}
+                    <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (c. 2010), pp. 19–22. Lord Lyon Blair’s recognitions: Crawfurd-Lindsay, Letters Patent 30 May 2007; Breadalbane, warrant 12 April 2006; Rothes, warrant 5 September 2006 and Letters Patent 6 August 2007 (Sellar, pp. 4–5). Sellar’s ruling that such an owner “has no claim to a style greater than that of baron”: the same Note. Full record in{" "}
+                    <Link href="/reading-room/non-peerage-earldoms/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Non-peerage Earldoms</Link>.
+                  </li>
+                  <li id="hd-ref-7">
+                    One unit: Crawfurd and Lindsay, charter of 1 March 1648, ratified{" "}
+                    <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected “in liberam baroniam de Ballinbreich” (RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
+                  </li>
+                </ol>
                 <P>Lordship example:</P>
                 <Forms>
                   <F>
