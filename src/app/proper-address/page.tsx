@@ -578,7 +578,7 @@ export default function ProperAddressPage() {
                     <N>(spoken Lochaber)</N>
                   </F>
                   <F>
-                    Peer: <S>The Right Hon The Earl of Lochaber</S>
+                    Peer: <S>The Right Honourable The Earl of Lochaber</S>
                     <N>(spoken Lord Lochaber or The Earl)</N>
                   </F>
                 </Forms>
@@ -632,7 +632,7 @@ export default function ProperAddressPage() {
                     <N>(spoken Lochaber)</N>
                   </F>
                   <F>
-                    Peer: <S>The Right Hon The Lord Lochaber</S>
+                    Peer: <S>The Right Honourable The Lord Lochaber</S>
                     <N>(spoken Lord Lochaber)</N>
                   </F>
                 </Forms>
