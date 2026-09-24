@@ -66,6 +66,20 @@ function Src({ href, children }: { href: string; children: ReactNode }) {
     </a>
   );
 }
+/** Sources for the designation-and-barony forms in Written Address. */
+const TD_SOURCES: ReactNode = (
+  <ol className="list-decimal space-y-3 pl-5">
+    <li>
+      Court of the Lord Lyon, “Rolls of the Chiefs, and Heads of Territorial Houses … Officially Recognised”, <em>The Edinburgh Gazette</em>, 19 August 2005: entries print the designation and the barony together where they differ, e.g. “Newlands of Lauriston, Baron of Miltonhaven” (matriculated 6 October 2003, Lyon Register 85/36) —{" "}
+      <Src href="https://www.thegazette.co.uk/notice/E-25893-1107-293">The Gazette</Src>. The same form appears in earlier notices, e.g. “Teall of Teallach Baron of Huntly”, 4 April 1997, p. 777.
+    </li>
+    <li>
+      Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45): the Esslemont matriculation of 4 September 1934, Lyon Register vol. xxxi, p. 20, in which Gordon of Hallhead was “duly described as Baron of Esslemont”, p. 160 n. 1; and “The Baron of Hallhead-Esslemont duly received both chapeau and designation, consistently with the statute and the ancient precedents of Lyon Court”, p. 163 —{" "}
+      <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. See{" "}
+      <Link href="/reading-room/esslemont-petition-1934/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">The Esslemont petition of 1934</Link>.
+    </li>
+  </ol>
+);
 /** Sources for the higher-dignities note; opened from the numbered markers and from "Authority & sources". */
 const HIGHER_SOURCES: ReactNode[] = [
   <>
@@ -337,6 +351,33 @@ export default function ProperAddressPage() {
                   <strong className="font-bold">John Inverness</strong>. The holder may also retain their family name,
                   with or without TD, but is not typically used for daily life.
                 </Aside>
+                <P>
+                  Where the territorial designation and the barony have different names, both are written, as the Lyon
+                  Court’s own Gazette notices do: “[Surname] of Kildonan, Baron of Inverness”. The two may also be joined.
+                  In the Esslemont petition of 1934 the petitioner, Gordon of Hallhead, whose barony was Esslemont, was
+                  recorded in the Lyon Register as “Baron of Esslemont”, and Sir Thomas Innes of Learney, writing as Lord
+                  Lyon in 1945, called him “The Baron of Hallhead-Esslemont”, who “duly received both chapeau and
+                  designation, consistently with the statute and the ancient precedents of Lyon Court”. On that usage a
+                  baron may be known by designation and barony together, and his wife by the designation, as a laird’s
+                  wife always has been.
+                </P>
+                <Forms>
+                  <F>
+                    Formal: <S>[Surname] of Kildonan, Baron of Inverness</S>
+                  </F>
+                  <F>
+                    Joined: <S>The Much Honoured Baron of Kildonan-Inverness</S>
+                  </F>
+                  <F>
+                    Wife: <S>Lady Kildonan</S>
+                  </F>
+                </Forms>
+                <p className="mt-2">
+                  <Footnote n={0} heading="Authority & sources" label="Authority & sources" triggerClassName="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-gold-deep underline decoration-dotted decoration-gold/40 underline-offset-4 transition-colors hover:text-oxblood">
+                    {TD_SOURCES}
+                  </Footnote>
+                </p>
+                <div hidden>{TD_SOURCES}</div>
                 <div className="my-6 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">
                     As published in{" "}
