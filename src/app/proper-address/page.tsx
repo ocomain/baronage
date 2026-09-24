@@ -118,6 +118,11 @@ const HIGHER_SOURCES: ReactNode[] = [
   <>
     Lord Lyon Sellar, <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (petition of 10 February 2006; Note c. 2010), reported as <em>Sturzenegger, Petitioner (No 2)</em> 2015 SLT (Lyon Ct) 2: of the passages in Stair and Erskine, “it suggests to me that in terms of the feudal grant the owner has no claim to a style greater than that of baron”; the petition for recognition as “Feudal Earl of Arran” was refused.
   </>,
+  <>
+    Innes of Learney (1945), p. 157 (“a subsisting yet very ancient ‘Order’ in the Realm of Scotland”); Act of the Parliament of Scotland, 20 December 1567, article 33: “the barons of this realm ought to have vote in parliament as a part of the nobility” —{" "}
+    <Src href="https://www.rps.ac.uk/trans/1567/12/45">RPS 1567/12/45</Src>; quoted by Innes at p. 132. See{" "}
+    <Link href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Innes of Learney, 1945</Link>.
+  </>,
 ];
 function Sec({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
@@ -648,12 +653,12 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
                 <Aside>
-                  A baron, lord, earl or marquis in the baronage of Scotland is a baron: the higher names are, in
-                  Stair’s words, “but more noble titles of a barony”.<Ref n={1} /> The Esslemont Memorial of 1934,
-                  upheld by Lord Lyon Grant and printed by Innes of Learney, called the Scottish baronage “truly
-                  constitutional barons”, “the only remaining example of the original feudal and territorial baronage
-                  by tenure”, entitled to be known “according to the custom of the Kingdom of Scotland” as Baron of
-                  their barony.<Ref n={5} />
+                  A baron, lord, earl or marquis in the baronage of Scotland are ranks within one Order, and all are
+                  barons of the Kingdom of Scotland: the higher names are, in Stair’s words, “but more noble titles of
+                  a barony”.<Ref n={1} /> Innes of Learney called it “a subsisting yet very ancient ‘Order’ in the
+                  Realm of Scotland”, and Parliament in 1567 declared that “the barons of this realm ought to have vote
+                  in Parliament as a part of the nobility”.<Ref n={10} /> The Esslemont Memorial of 1934, upheld by
+                  Lord Lyon Grant and printed by Innes, called them “truly constitutional barons”.<Ref n={5} />
                 </Aside>
                 <P>
                   In Scotland marquis follows the french spelling as a rule. Over 90% of titles in the Baronage of
