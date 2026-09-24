@@ -136,154 +136,6 @@ function Sec({ id, title, children }: { id: string; title: string; children: Rea
   );
 }
 
-const DIGITAL: { head: ReactNode; key: string; entry: ReactNode; example?: ReactNode; note?: ReactNode }[] = [
-  {
-    key: "title-free",
-    head: "Title Field (Free Text)",
-    entry: (
-      <>
-        If the title field allows free text, type <S>“The Much Honoured”</S> as the prefix. Or type the title{" "}
-        <S>“The Baron of [Placename]”</S>.
-      </>
-    ),
-  },
-  {
-    key: "title-dropdown",
-    head: "Title Field (Drop-Down List)",
-    entry: (
-      <>
-        If the title field uses a drop-down list, select <S>“Baron”</S>
-        <Or />
-        <S>“Baroness”</S>
-        <Or />
-        <S>“Lady”</S> as appropriate.
-      </>
-    ),
-    example: <>Select “Baron” from the drop-down list.</>,
-  },
-  {
-    key: "first-name",
-    head: "First Name Field",
-    entry: (
-      <>
-        Enter the christian name of the baron. Or type <S>“The Baron of”</S>
-        <Or />
-        <S>“The Much Honoured”</S>
-        <Or />
-        <S>“The Baron of [Placename]”</S> if the system primarily uses first names.
-      </>
-    ),
-    example: <S>“John”</S>,
-  },
-  {
-    key: "surname",
-    head: "Surname Field",
-    entry: (
-      <>
-        Enter the full baronial title in the surname field, following the format <S>“Baron of [Placename]”</S> or
-        optionally <S>“[Familyname] The Baron of [Placename]”</S>.
-      </>
-    ),
-    example: (
-      <>
-        <S>“Baron of Inverness”</S>
-        <Or />
-        <S>“Smith The Baron of Inverness”</S>
-      </>
-    ),
-  },
-  {
-    key: "surname-title-selected",
-    head: "Surname Field (if you selected, for example, Baron in the title field)",
-    entry: (
-      <>
-        If your title is already in the title field, put <S>“of [Placename]”</S>
-        <Or />
-        <S>“[Familyname] of [Placename]”</S> to accurately represent the baronial title.
-      </>
-    ),
-    example: (
-      <>
-        <S>“of Inverness”</S>
-        <Or />
-        <S>“Smith of Inverness”</S>
-      </>
-    ),
-  },
-  {
-    key: "surname-baron-first-name",
-    head: "Surname Field (if you typed “The Baron of [Placename]” in the first name field)",
-    entry: <S>The Much Honoured</S>,
-  },
-  {
-    key: "display-name",
-    head: "Display Name or Full Name Field",
-    entry: <>For systems that use a single display name or full name field, enter the name in the following format:</>,
-    example: (
-      <>
-        <S>“The Much Hon Baron of Inverness”</S>
-        <Or />
-        <S>“The Baron of Inverness”</S>
-        <Or />
-        <S>“John, Baron of Inverness”</S>
-        <Or />
-        <S>“The Baron”</S>
-      </>
-    ),
-  },
-  {
-    key: "correspondence",
-    head: "Addressing the Baron in Correspondence",
-    entry: (
-      <>
-        In digital correspondence, ensure that the salutation reflects the correct title — the prefix normally reserved
-        for Mr or Dr is replaced with The Much Hon. and the surname with Baron of Inverness.
-      </>
-    ),
-    example: (
-      <>
-        <S>“Dear Baron of Inverness”</S>
-        <Or />
-        <S>“Dear The Much Hon. Baron of Inverness”</S>
-      </>
-    ),
-  },
-  {
-    key: "email-signature",
-    head: "Email Signature",
-    entry: <>If including the title in an email signature, format it as follows:</>,
-    example: (
-      <>
-        <S>“John Smith, Baron of Inverness”</S>
-        <Or />
-        <S>“The Baron of Inverness”</S>
-        <Or />
-        <S>“John, Baron of Inverness”</S>
-        <Or />
-        <S>“The Baron”</S>
-      </>
-    ),
-    note: <>However, Much Hon can be useful for replacing the Mr title field on digital platforms.</>,
-  },
-  {
-    key: "worst-case",
-    head: "Worst case",
-    entry: (
-      <>
-        Note that if the title field only allows for Mr / Ms, for example, entering <S>“The Baron of [Placename]”</S>
-        <Or />
-        <S>“The Lady [Placename]”</S> in the surname field ensures that it will at least format as:
-      </>
-    ),
-    example: (
-      <>
-        <S>“Mr The Baron of Inverness”</S>
-        <Or />
-        <S>“Ms The Lady Inverness”</S>
-      </>
-    ),
-  },
-];
 
 export default function ProperAddressPage() {
   return (
@@ -842,33 +694,63 @@ export default function ProperAddressPage() {
                 </P>
                 <DigitalAddressSimulator />
                 <p className="mt-10 font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Field by field</p>
-                <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-parchment-300/70 bg-parchment-300/70 md:grid-cols-2">
-                  {DIGITAL.map((d, i) => (
-                    <div
-                      key={d.key}
-                      className={`flex h-full flex-col bg-parchment-50 p-6 sm:p-7 ${d.key === "worst-case" ? "md:col-span-2" : ""}`}
-                    >
-                      <div className="flex items-baseline gap-3">
-                        <span className="font-inscribe text-[0.68rem] tabular-nums tracking-[0.2em] text-gold-deep">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <h3 className="font-display text-[1.25rem] leading-snug text-navy">{d.head}</h3>
-                      </div>
-                      <div className="gold-rule gold-rule--start mt-3 text-gold/70">
-                        <span className="gold-rule__gem" />
-                      </div>
-                      <p className="mt-4 font-serif text-lg leading-relaxed text-ink">{d.entry}</p>
-                      {d.example && (
-                        <div className="mt-4 border border-navy/15 bg-white/70 px-4 py-3 shadow-[inset_0_1px_2px_rgba(8,12,28,0.06)]">
-                          <span className="block font-sans text-[0.58rem] font-medium uppercase tracking-[0.2em] text-gold-deep">
-                            Example entry
-                          </span>
-                          <p className="mt-1 font-serif text-lg leading-relaxed text-ink">{d.example}</p>
-                        </div>
-                      )}
-                      {d.note && <p className="mt-4 font-serif text-base italic leading-relaxed text-muted">{d.note}</p>}
-                    </div>
-                  ))}
+                <div className="mt-4 overflow-x-auto">
+                  <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
+                    <thead>
+                      <tr className="border-b border-navy/20 text-left font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep">
+                        <th className="py-2 pr-4">Field</th>
+                        <th className="py-2 pr-4">Enter</th>
+                        <th className="py-2">So that it reads</th>
+                      </tr>
+                    </thead>
+                    <tbody className="[&_td]:border-b [&_td]:border-parchment-300/70 [&_td]:py-3 [&_td]:pr-4 [&_td]:align-top">
+                      <tr>
+                        <td>Title, drop-down</td>
+                        <td><S>Baron</S><Or /><S>Baroness</S><Or /><S>Lady</S></td>
+                        <td>Baron John of Inverness</td>
+                      </tr>
+                      <tr>
+                        <td>Title, free text</td>
+                        <td><S>The Much Honoured</S><Or /><S>The Baron of Inverness</S></td>
+                        <td>The Much Honoured John Smith, Baron of Inverness</td>
+                      </tr>
+                      <tr>
+                        <td>Title, only Mr / Ms</td>
+                        <td><S>Mr</S>, with <S>The Baron of Inverness</S> in the surname</td>
+                        <td>Mr John The Baron of Inverness <N>(worst case)</N></td>
+                      </tr>
+                      <tr>
+                        <td>First name</td>
+                        <td><S>John</S></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Surname</td>
+                        <td>
+                          <S>of Inverness</S><Or /><S>Smith of Inverness</S> after a drop-down title;{" "}
+                          <S>Smith, Baron of Inverness</S> after a free-text title
+                        </td>
+                        <td>Dear Baron of Inverness <N>(the greeting a system builds from title and surname)</N></td>
+                      </tr>
+                      <tr>
+                        <td>Display or full name</td>
+                        <td>
+                          <S>The Much Hon Baron of Inverness</S><Or /><S>The Baron of Inverness</S><Or /><S>John, Baron of Inverness</S><Or /><S>The Baron</S>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Correspondence</td>
+                        <td><S>Dear Baron of Inverness</S><Or /><S>Dear The Much Hon. Baron of Inverness</S></td>
+                        <td>Never Mr Smith, Baron Smith or Baron Inverness</td>
+                      </tr>
+                      <tr>
+                        <td>Email signature</td>
+                        <td>From-name <S>The Baron</S>; signature <S>John, Baron of Inverness</S> over <S>The Much Honoured Baron of Inverness</S></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <P>
                   By following these guidelines, you can ensure that baronial titles are correctly represented and
