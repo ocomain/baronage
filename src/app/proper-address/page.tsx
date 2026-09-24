@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
+  { id: "verbal", label: "Verbal Address" },
   { id: "written", label: "Written Address" },
   { id: "salutation", label: "Salutation in Letters" },
-  { id: "verbal", label: "Verbal Address" },
   { id: "children", label: "Children of a Baron" },
   { id: "special", label: "Special Considerations" },
   { id: "dowager", label: "Widow or Dowager" },
@@ -326,6 +326,31 @@ export default function ProperAddressPage() {
         <Container size="prose">
           <div className="space-y-14">
             <Reveal>
+              <Sec id="verbal" title="Verbal Address">
+                <P>In conversation, a Scottish Baron should be addressed by their title and the name of the barony:</P>
+                <Forms>
+                  <F>
+                    Third party reference “<S>The Baron</S>” “<S>The Baroness</S>”
+                  </F>
+                  <F>
+                    Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness) then
+                  </F>
+                  <F>
+                    <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
+                  </F>
+                  <F>
+                    <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
+                  </F>
+                </Forms>
+                <P>
+                  It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
+                  “Mr / Mrs Smith” or “Esq.” is certainly incorrect. Some wives of highland clan chief-barons prefer{" "}
+                  <S>Madam</S>.
+                </P>
+              </Sec>
+            </Reveal>
+
+            <Reveal>
               <Sec id="written" title="Written Address">
                 <P>
                   When addressing a Scottish Baron in writing, for some barons they hold a territorial designation and
@@ -489,31 +514,6 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Alternatively, only the barony can be used: <S>Dear Inverness</S>, but this format is never for a lady.
-                </P>
-              </Sec>
-            </Reveal>
-
-            <Reveal>
-              <Sec id="verbal" title="Verbal Address">
-                <P>In conversation, a Scottish Baron should be addressed by their title and the name of the barony:</P>
-                <Forms>
-                  <F>
-                    Third party reference “<S>The Baron</S>” / “<S>The Baroness</S>”
-                  </F>
-                  <F>
-                    Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness) then
-                  </F>
-                  <F>
-                    <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
-                  </F>
-                  <F>
-                    <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
-                  </F>
-                </Forms>
-                <P>
-                  It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
-                  “Mr / Mrs Smith” or “Esq.” is certainly incorrect. Some wives of highland clan chief-barons prefer{" "}
-                  <S>Madam</S>.
                 </P>
               </Sec>
             </Reveal>
