@@ -357,16 +357,18 @@ export default function ProperAddressPage() {
                   In the Esslemont petition of 1934 the petitioner, Gordon of Hallhead, whose barony was Esslemont, was
                   recorded in the Lyon Register as “Baron of Esslemont”, and Sir Thomas Innes of Learney, writing as Lord
                   Lyon in 1945, called him “The Baron of Hallhead-Esslemont”, who “duly received both chapeau and
-                  designation, consistently with the statute and the ancient precedents of Lyon Court”. On that usage a
-                  baron may be known by designation and barony together, and his wife by the designation, as a laird’s
-                  wife always has been.
+                  designation, consistently with the statute and the ancient precedents of Lyon Court”. The joined form is
+                  a social style, Innes referring to the man as he was known; the title recorded and recognised by the
+                  Lyon Court was “Baron of Esslemont”. On that usage a baron may be known socially by designation and
+                  barony together, his recorded title remaining “Baron of [Barony]”, and his wife by the designation, as
+                  a laird’s wife always has been.
                 </P>
                 <Forms>
                   <F>
                     Formal: <S>[Surname] of Kildonan, Baron of Inverness</S>
                   </F>
                   <F>
-                    Joined: <S>The Much Honoured Baron of Kildonan-Inverness</S>
+                    Joined, social: <S>The Much Honoured Baron of Kildonan-Inverness</S>
                   </F>
                   <F>
                     Wife: <S>Lady Kildonan</S>
