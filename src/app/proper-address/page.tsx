@@ -332,11 +332,8 @@ export default function ProperAddressPage() {
           <div className="space-y-14">
             <Reveal>
               <Sec id="verbal" title="Address">
-                <P>A Scottish Baron should be addressed by their title and the name of the barony:</P>
+                <P>A Scottish Baron is referred to as “<S>The Baron</S>” / “<S>The Baroness</S>”</P>
                 <Forms>
-                  <F>
-                    Scots barons are referred to as “<S>The Baron</S>” or “<S>The Baroness</S>”
-                  </F>
                   <F>
                     Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness)
                   </F>
@@ -652,13 +649,13 @@ export default function ProperAddressPage() {
 
             <Reveal>
               <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
-                <Aside>
+                <p className="mt-6 font-serif text-xl font-bold italic leading-[1.8] text-navy">
                   A baron, lord, earl or marquis in the baronage of Scotland are all barons of the Kingdom of Scotland:
                   the higher ranks are, in Stair’s words, “but more noble titles of a barony”.<Ref n={1} /> Innes of
                   Learney called the baronage “a subsisting yet very ancient ‘Order’ in the Realm of Scotland”, and Parliament in 1567 declared that “the barons of this realm ought to have vote
                   in Parliament as a part of the nobility”.<Ref n={10} /> The Esslemont Memorial of 1934, upheld by
                   Lord Lyon Grant and printed by Innes, called them “truly constitutional barons”.<Ref n={5} />
-                </Aside>
+                </p>
                 <P>
                   Over 90% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
                   the nobler titles of lord, earl and marquis. Baron of somewhat distinguishes from peers (there are not
