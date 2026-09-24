@@ -341,10 +341,10 @@ export default function ProperAddressPage() {
                     Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness) then
                   </F>
                   <F>
-                    <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
+                    In person: <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
                   </F>
                   <F>
-                    <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
+                    In person: <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
                   </F>
                 </Forms>
                 <P>
@@ -660,13 +660,13 @@ export default function ProperAddressPage() {
                   Lord Lyon Grant and printed by Innes, called them “truly constitutional barons”.<Ref n={5} />
                 </Aside>
                 <P>
-                  In Scotland marquis follows the french spelling as a rule. Over 90% of titles in the Baronage of
-                  Scotland are Baron of, however there are a small number of very rare titles that are but nobler titles
-                  of baron. Baron of somewhat distinguishes from peers (there are not many titles in the peerage that
-                  use of for baron, for example many Irish peers are baron of). However, to distinguish Earl of or
-                  Marquis of which could be confused with the peerage the prefix honorific style The Much Hon. (The Much
-                  Honoured) can be put before the name, this prefix honorific is used to distinguish Scottish Barons from
-                  honourifics attaching to peers.
+                  Over 90% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
+                  the nobler titles of lord, earl and marquis. Baron of somewhat distinguishes from peers (there are not
+                  many titles in the peerage that use of for baron, for example many Irish peers are baron of). However,
+                  to distinguish Earl of or Marquis of which could be confused with the peerage the prefix honorific
+                  style The Much Hon. (The Much Honoured) can be put before the name, this prefix honorific is used to
+                  distinguish Scottish Barons from honourifics attaching to peers. In Scotland marquis follows the French
+                  spelling as a rule.
                 </P>
                 <P>
                   The Roll of Scottish Barons styles the holder of an earldom in the form the Lyon Court has used for
