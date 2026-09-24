@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { DigitalAddressSimulator } from "@/components/DigitalAddressSimulator";
 import { Footnote } from "@/components/Footnote";
 import { Reveal } from "@/components/Reveal";
 import { Container, Section } from "@/components/primitives";
@@ -220,13 +221,13 @@ const DIGITAL: { head: ReactNode; key: string; entry: ReactNode; example?: React
     entry: <>For systems that use a single display name or full name field, enter the name in the following format:</>,
     example: (
       <>
-        <S>“The Much Hon. John Smith, Baron of Inverness.”</S>
+        <S>“The Much Hon Baron of Inverness”</S>
         <Or />
-        <S>“The Much Honoured Baron of Inverness”</S>
-        <Or />
-        <S>“John The Baron of Inverness”</S>
+        <S>“The Baron of Inverness”</S>
         <Or />
         <S>“John, Baron of Inverness”</S>
+        <Or />
+        <S>“The Baron”</S>
       </>
     ),
   },
@@ -255,9 +256,11 @@ const DIGITAL: { head: ReactNode; key: string; entry: ReactNode; example?: React
       <>
         <S>“John Smith, Baron of Inverness”</S>
         <Or />
-        <S>“John The Baron of Inverness”</S>
+        <S>“The Baron of Inverness”</S>
         <Or />
         <S>“John, Baron of Inverness”</S>
+        <Or />
+        <S>“The Baron”</S>
       </>
     ),
     note: <>However, Much Hon can be useful for replacing the Mr title field on digital platforms.</>,
@@ -837,6 +840,8 @@ export default function ProperAddressPage() {
                   recommended practices for filling out typical fields in computer systems, such as databases, online
                   forms, and digital directories. Always think of how it will be presented in that system:
                 </P>
+                <DigitalAddressSimulator />
+                <p className="mt-10 font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Field by field</p>
                 <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-parchment-300/70 bg-parchment-300/70 md:grid-cols-2">
                   {DIGITAL.map((d, i) => (
                     <div
