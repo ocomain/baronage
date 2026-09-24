@@ -623,7 +623,7 @@ export default function ProperAddressPage() {
                   <F>
                     Where a Lord Lyon has recognised the earldom’s holder as Earl:{" "}
                     <S>The Much Honoured Earl of Lochaber in the baronage of Scotland</S>
-                    <N>(spoken Lochaber or The Earl)</N>
+                    <N>(spoken Lochaber)</N>
                   </F>
                   <F>
                     Otherwise: <S>The Much Honoured Baron of the Earldom of Lochaber</S>
@@ -688,7 +688,7 @@ export default function ProperAddressPage() {
                 <P>
                   Lordships, earldoms and marquisates are nobler titles of a barony, so
                   their holders are barons whose barony carries the nobler name, and typically only the senior rank is
-                  referenced, e.g. The Earl, or Lord Lochaber. “Earl in the baronage of Scotland” names the class; a
+                  referenced, e.g. The Earl, The Lord, The Baron. “Earl in the baronage of Scotland” names the class; a
                   holder’s style follows the rule above: Earl where a Lord Lyon has recognised a holder of that earldom
                   in an earl’s style (at present Crawfurd-Lindsay, Rothes and Breadalbane, recognised under Lord Lyon
                   Blair in 2006–07), otherwise Baron of the Earldom, the form the Lyon Court used for Annandale in 1983,
