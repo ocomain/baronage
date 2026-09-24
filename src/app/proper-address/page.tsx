@@ -97,6 +97,13 @@ const HIGHER_SOURCES: ReactNode[] = [
     One unit: Crawfurd and Lindsay, charter of 1 March 1648, ratified{" "}
     <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected “in liberam baroniam de Ballinbreich” (RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
   </>,
+  <>
+    Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, recognising Percy Wentworth Hope Johnstone of Annandale and that Ilk as “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell” and Chief of Clan Johnstone; recorded in the Lyon Court’s notice in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, Lyon Register 66/71 —{" "}
+    <Src href="https://www.thegazette.co.uk/Edinburgh/issue/21460/page/51/data.pdf">The Gazette</Src>; discussed by Lord Lyon Sellar, Note in the Petition of Sturzenegger of Arran (c. 2010), pp. 19–22.
+  </>,
+  <>
+    Lord Lyon Sellar, <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (petition of 10 February 2006; Note c. 2010), reported as <em>Sturzenegger, Petitioner (No 2)</em> 2015 SLT (Lyon Ct) 2: of the passages in Stair and Erskine, “it suggests to me that in terms of the feudal grant the owner has no claim to a style greater than that of baron”; the petition for recognition as “Feudal Earl of Arran” was refused.
+  </>,
 ];
 function Sec({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
@@ -608,10 +615,8 @@ export default function ProperAddressPage() {
                 <P>
                   The Roll of Scottish Barons styles the holder of an earldom in the form the Lyon Court has used for
                   that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
-                  continues to the successor; otherwise the holder is styled Baron of the Earldom, the form{" "}
-                  <Src href="https://www.thegazette.co.uk/Edinburgh/issue/21460/page/51/data.pdf">the Lyon Court used for Annandale in 1983</Src>{" "}
-                  and{" "}
-                  <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">the ceiling Lord Lyon Sellar set in 2010</Src>.
+                  continues to the successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon
+                  Court used for Annandale in 1983<Ref n={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={9} />
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -638,7 +643,7 @@ export default function ProperAddressPage() {
                   seventeenth century.<Ref n={2} /> A Scots baron who is not a lord is only ever called a baron. Non-peerage
                   lords have been written both “Lord X” and “Lord of X” since the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
-                  Lord of Graham in 1420, before the Lord of Parliament honour of 1445.<Ref n={3} /> The medieval
+                  Lord of Graham in 1420, before he received the Lord of Parliament honour of 1445.<Ref n={3} /> The medieval
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
                   B”.<Ref n={4} />
                 </P>
