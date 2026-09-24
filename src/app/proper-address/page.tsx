@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
-  { id: "verbal", label: "Verbal Address" },
+  { id: "verbal", label: "Address" },
   { id: "written", label: "Written Address" },
   { id: "salutation", label: "Salutation in Letters" },
   { id: "children", label: "Children of a Baron" },
@@ -331,14 +331,14 @@ export default function ProperAddressPage() {
         <Container size="prose">
           <div className="space-y-14">
             <Reveal>
-              <Sec id="verbal" title="Verbal Address">
-                <P>In conversation, a Scottish Baron should be addressed by their title and the name of the barony:</P>
+              <Sec id="verbal" title="Address">
+                <P>A Scottish Baron should be addressed by their title and the name of the barony:</P>
                 <Forms>
                   <F>
-                    Third party reference “<S>The Baron</S>” “<S>The Baroness</S>”
+                    Scots barons are referred to as “<S>The Baron</S>” or “<S>The Baroness</S>”
                   </F>
                   <F>
-                    Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness) then
+                    Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness)
                   </F>
                   <F>
                     In person: <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
