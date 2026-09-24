@@ -86,7 +86,7 @@ const HIGHER_SOURCES: ReactNode[] = [
     <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. Reproduced above.
   </>,
   <>
-    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163.
+    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163; the Esslemont Memorial’s words “preferred for formal purposes by English and British lords”, p. 163.
   </>,
   <>
     Annandale: Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell”, recorded in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, and discussed in Lord Lyon Sellar’s{" "}
@@ -663,12 +663,15 @@ export default function ProperAddressPage() {
                   </figcaption>
                 </figure>
                 <P>
-                  Both forms remain in use, and “Lord X” is not confined to peers, so “The Much Honoured
-                  Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix marking the
-                  baronage. The convention is the one the baronage has always used for women: a baroness or a baron’s
-                  wife is “Lady Inverness”, so the holder of a lordship is “Lord Lochaber”, while a baron remains “Baron
-                  of Inverness”. The line not to cross is “Baron X” without “of”, which is the form of a peerage barony; a
-                  Scots baron is “Baron of X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
+                  Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
+                  equally of judges of the Court of Session and courtesy lords, and it is the male counterpart of
+                  “Lady X”, the form the baronage has always used for a baroness or a baron’s wife. So “The Much
+                  Honoured Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix
+                  marking the baronage, while a baron remains “Baron of Inverness”. “Baron X” is different. In Britain
+                  it is the formal designation of one thing only, a peer of the rank of baron, the form the Esslemont
+                  Memorial of 1934 noted is “preferred for formal purposes by English and British lords”; no one else
+                  uses it, and the Scottish form has always been “Baron of X”. That is the line not to cross: a Scots
+                  baron is “Baron of X”, never “Baron X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
                   description in 1427.<Ref n={5} />
                 </P>
                 <figure className="mt-6">
