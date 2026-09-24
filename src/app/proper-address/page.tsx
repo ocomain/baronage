@@ -654,8 +654,8 @@ export default function ProperAddressPage() {
               <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
                 <Aside>
                   A baron, lord, earl or marquis in the baronage of Scotland are ranks within one Order, and all are
-                  barons of the Kingdom of Scotland: the higher names are, in Stair’s words, “but more noble titles of
-                  a barony”.<Ref n={1} /> Innes of Learney called it “a subsisting yet very ancient ‘Order’ in the
+                  barons of the Kingdom of Scotland: the higher dignities and honours are, in Stair’s words, “but more
+                  noble titles of a barony”.<Ref n={1} /> Innes of Learney called it “a subsisting yet very ancient ‘Order’ in the
                   Realm of Scotland”, and Parliament in 1567 declared that “the barons of this realm ought to have vote
                   in Parliament as a part of the nobility”.<Ref n={10} /> The Esslemont Memorial of 1934, upheld by
                   Lord Lyon Grant and printed by Innes, called them “truly constitutional barons”.<Ref n={5} />
