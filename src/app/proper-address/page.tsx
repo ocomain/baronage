@@ -351,6 +351,25 @@ export default function ProperAddressPage() {
                   <strong className="font-bold">John Inverness</strong>. The holder may also retain their family name,
                   with or without TD, but is not typically used for daily life.
                 </Aside>
+                <div className="my-6 border-y border-parchment-300/70 py-6 text-center">
+                  <p className="font-serif text-base italic leading-relaxed text-ink">
+                    As published in{" "}
+                    <a
+                      href="https://announcements.telegraph.co.uk/marketplace/advert/livingstone-of-bachuil-notices_61304"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                    >
+                      The Telegraph
+                    </a>{" "}
+                    — the premier baron:
+                  </p>
+                  <p className="mt-3 font-serif text-xl font-bold text-navy">Niall, Baron of Bachuil</p>
+                  <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic leading-relaxed text-ink">
+                    Bachuil chaired a Titles and Usages Committee and published the paper “The Use and Abuse of
+                    Titles”, presented to the Court of the Lord Lyon and the Scottish Parliament.
+                  </p>
+                </div>
                 <P>
                   Where the territorial designation and the barony have different names, both are written, as the Lyon
                   Court’s own Gazette notices do: “[Surname] of Kildonan, Baron of Inverness”. The two may also be joined.
@@ -380,25 +399,7 @@ export default function ProperAddressPage() {
                   </Footnote>
                 </p>
                 <div hidden>{TD_SOURCES}</div>
-                <div className="my-6 border-y border-parchment-300/70 py-6 text-center">
-                  <p className="font-serif text-base italic leading-relaxed text-ink">
-                    As published in{" "}
-                    <a
-                      href="https://announcements.telegraph.co.uk/marketplace/advert/livingstone-of-bachuil-notices_61304"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
-                    >
-                      The Telegraph
-                    </a>{" "}
-                    — the premier baron:
-                  </p>
-                  <p className="mt-3 font-serif text-xl font-bold text-navy">Niall, Baron of Bachuil</p>
-                  <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic leading-relaxed text-ink">
-                    Bachuil chaired a Titles and Usages Committee and published the paper “The Use and Abuse of
-                    Titles”, presented to the Court of the Lord Lyon and the Scottish Parliament.
-                  </p>
-                </div>
+                <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
                   Wives or female barons are entitled to <S>Lady</S> <em>or</em> <S>Baroness of</S>
                 </P>
@@ -435,6 +436,7 @@ export default function ProperAddressPage() {
                   convention, not entitlement. As titles of nobility are considered part of a person’s name and
                   identity, her title is reflected in a British passport as her legal name.
                 </P>
+                <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>In cases where the Baron is entitled to post-nominal letters, these should follow, such as:</P>
                 <Forms>
                   <F>
@@ -499,6 +501,9 @@ export default function ProperAddressPage() {
               <Sec id="verbal" title="Verbal Address">
                 <P>In conversation, a Scottish Baron should be addressed by their title and the name of the barony:</P>
                 <Forms>
+                  <F>
+                    Third party reference <S>The Baron</S> / <S>The Baroness</S>
+                  </F>
                   <F>
                     Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness) then
                   </F>
