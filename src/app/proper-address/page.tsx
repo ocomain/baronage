@@ -647,6 +647,14 @@ export default function ProperAddressPage() {
 
             <Reveal>
               <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
+                <Aside>
+                  A baron, lord, earl or marquis in the baronage of Scotland is a baron: the higher names are, in
+                  Stair’s words, “but more noble titles of a barony”.<Ref n={1} /> The Esslemont Memorial of 1934,
+                  upheld by Lord Lyon Grant and printed by Innes of Learney, called the Scottish baronage “truly
+                  constitutional barons”, “the only remaining example of the original feudal and territorial baronage
+                  by tenure”, entitled to be known “according to the custom of the Kingdom of Scotland” as Baron of
+                  their barony.<Ref n={5} />
+                </Aside>
                 <P>
                   In Scotland marquis follows the french spelling as a rule. Over 90% of titles in the Baronage of
                   Scotland are Baron of, however there are a small number of very rare titles that are but nobler titles
