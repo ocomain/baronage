@@ -222,6 +222,17 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
       </>,
     ],
   },
+  {
+    body: (
+      <>
+        Act of the Parliament of Scotland, 20 December 1567, article 33: “the barons of this realm ought to have vote in
+        parliament as a part of the nobility” —{" "}
+        <a href="https://www.rps.ac.uk/trans/1567/12/45" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">RPS 1567/12/45</a>; quoted by Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”,{" "}
+        <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">PSAS 79 (1944–45)</a>, p. 132. See{" "}
+        <a href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Innes of Learney, 1945</a>.
+      </>
+    ),
+  },
 ];
 
 const terminologyJsonLd = {
@@ -327,7 +338,9 @@ export default function HomePage() {
                 <strong className="font-semibold text-navy">titled nobility</strong>
                 <Fn n={1} />, and affirmed in Lord Clyde’s 1992 dictum as heritable{" "}
                 <strong className="font-semibold text-navy">titles of honour</strong>
-                <Fn n={2} /> and for their <em>“noble quality”</em> and former parliamentary rights<Fn n={3} />. Their
+                <Fn n={2} /> and for their <em>“noble quality”</em> and former parliamentary rights<Fn n={3} />, Parliament itself having
+                declared in 1567 that <em>“the barons of this realm ought to have vote in Parliament as a part of the
+                nobility”</em><Fn n={11} />. Their
                 status is further enshrined by the institutional writers, including Sir Thomas Craig, Lord Stair, and
                 Bankton<Fn n={4} />.
               </p>
