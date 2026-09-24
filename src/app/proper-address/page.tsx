@@ -498,7 +498,7 @@ export default function ProperAddressPage() {
                 <P>In conversation, a Scottish Baron should be addressed by their title and the name of the barony:</P>
                 <Forms>
                   <F>
-                    Third party reference <S>The Baron</S> / <S>The Baroness</S>
+                    Third party reference “<S>The Baron</S>” / “<S>The Baroness</S>”
                   </F>
                   <F>
                     Third person introduction <S>The Baron</S> (of Inverness and Lady Inverness) then
