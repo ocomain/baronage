@@ -472,7 +472,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "What did the 2004 change actually do?",
-    a: "It converted baronies from territorial dignities into personal ones. Before 2004 a barony was tied to a defined estate and its caput (the head place of the barony). After 2004 the dignity floats free of any land: it is an incorporeal dignity, comparable in legal status to a hereditary peerage, baronetcy, or coat of arms, but conferring no right to land.",
+    a: "It converted baronies from territorial dignities into personal ones. Before 2004 a barony was tied to a defined estate and its caput (the head place of the barony). After 2004 the dignity floats free of any land: it is an incorporeal dignity, comparable in legal status to a hereditary peerage, baronetcy, or coat of arms, but conferring no right to land. It is sometimes said that since 2004 a barony confers no status or legal privilege. The Act says otherwise: section 63(4) preserves the dignity’s “quality or precedence” and its “heraldic privilege”, and the Lyon Court has continued to act on both.",
     body: (
       <>
         <p>
@@ -481,6 +481,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <strong className="font-semibold text-navy">“floats” free of any land</strong>: it is an incorporeal dignity,
           comparable in legal status to a hereditary peerage, baronetcy, or coat of arms, but conferring no right to
           land.
+        </p>
+        <p>
+          It is sometimes said that since 2004 a barony confers no status or legal privilege. The Act says otherwise:
+          section 63(4) preserves the dignity’s “quality or precedence” and its “heraldic privilege”, and the Lyon Court
+          has continued to act on both.
         </p>
       </>
     ),
@@ -1329,6 +1334,23 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
           <em>PSAS</em> 79
         </a>
         , pp. 124–148 (the robes).
+      </>
+    ),
+  },
+  {
+    term: "Constitutional baron",
+    def: "A baron by the law and constitution of Scotland: the barons formed an estate of Parliament (Act of 1567: “the barons of this realm ought to have vote in Parliament as a part of the nobility”), and were recognised by Crown, Parliament and the Lyon Court by the style “Baron of X”. The Esslemont Memorial of 1934, upheld by Lord Lyon Grant and printed by Innes of Learney in 1945, called them “truly constitutional barons”, as against barons created by patent under the English peerage and the “much inferior baronages of the Continent”.",
+    note: (
+      <>
+        See{" "}
+        <Link href="/reading-room/esslemont-petition-1934/" className={intLink}>
+          The Esslemont petition of 1934
+        </Link>{" "}
+        and{" "}
+        <Link href="/reading-room/innes-of-learney-1945/" className={intLink}>
+          Innes of Learney, 1945
+        </Link>
+        .
       </>
     ),
   },
