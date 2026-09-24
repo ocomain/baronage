@@ -30,6 +30,11 @@ Innes prints the Memorial’s conclusion in full:[^8]
 
 “Baron of Bradwardine” is Scott’s laird of Tully-Veolan in *Waverley*; Innes notes that Scott “was quite correct” to style him so, the title having been “very widely used in daily life” in a broad belt round the Highland line.[^9] Article XXII of the Treaty of Union is the Memorial’s claim, not a finding; what the Treaty did and did not do for the baronage is examined in [The Treaty of Union and the baronage](/reading-room/treaty-of-union/).
 
+<figure class="paper-figure">
+<img src="/images/innes-1945-p158-baron-of-the-barony.webp" alt="Innes of Learney, PSAS 79 (1944–45), p. 158: where a peer held a feudal barony it was added to his style in the form ‘Baron of the Barony of X’; the sheriff-court rolls entered ‘Intrat A, Dominus de B’ or ‘Intrat A, Baro de B’." width="1320" height="453" loading="lazy">
+<figcaption>Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 158: the “peerage-conveyancing description” the Memorial objected to, “Baron of the Barony of X”, was the form in which a peer’s feudal baronies were added to his style. Reproduced from the Society’s <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer">open-access PDF</a>.</figcaption>
+</figure>
+
 ## The decision
 
 “After consideration of the evidence then adduced, the Lord Lyon, on 4th September 1934, found the claim established, and awarded the chapeau.”[^4] The matriculation is at Lyon Register vol. xxxi, p. 20, and in it Gordon of Hallhead was “duly described as Baron of Esslemont”.[^5] Innes sums up: “The Baron of Hallhead-Esslemont duly received both chapeau and designation, consistently with the statute and the ancient precedents of Lyon Court.”[^8] Because the petition had been brought for the son, the decision “also decided the right in this insignia, of the heir-apparent of the reigning Baron”, and became the precedent for Raemoir in volume xxxv.[^4] Only afterwards was it found that the 1934 decision “agreed with the (then unnoticed) precedent decided by Lyon Court 28th November 1835” in Ainslie of Pilton.[^4]
