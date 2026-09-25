@@ -79,7 +79,6 @@ export function DigitalAddressSimulator() {
   const [first, setFirst] = useState("John");
   const [surname, setSurname] = useState("Smith");
   const [barony, setBarony] = useState("Inverness");
-  const [pledged, setPledged] = useState(false);
   const [sig, setSig] = useState<SigStyle>("short");
 
   const F = first.trim() || "John";
@@ -116,13 +115,13 @@ export function DigitalAddressSimulator() {
     `The ${R} of ${B}`,
     `${F}, ${R} of ${B}`,
     `The ${R}`,
-    ...(pledged ? [`${F} ${B}`] : []),
+    `${F} ${B} (Pledged titles)`,
   ];
   const [fDisplay, setFDisplay] = useState(displayOptions[0]);
   useEffect(() => {
     if (!displayOptions.includes(fDisplay)) setFDisplay(displayOptions[0]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [F, B, R, pledged]);
+  }, [F, B, R]);
 
   // What a typical system builds from those fields.
   const join = (...xs: string[]) => xs.map((x) => x.trim()).filter(Boolean).join(" ");
@@ -193,10 +192,6 @@ export function DigitalAddressSimulator() {
           />
         </div>
       </div>
-      <label className="mt-3 flex items-center gap-2 font-serif text-base text-ink">
-        <input type="checkbox" checked={pledged} onChange={(e) => setPledged(e.target.checked)} className="accent-gold-deep" />
-        The title is Pledged (hereditary), so it may replace the family name in daily use
-      </label>
 
       <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
         {/* The mock form */}
@@ -280,7 +275,7 @@ export function DigitalAddressSimulator() {
           </div>
           <div className={outBox}>
             <p className={labelCls}>Display name, where shown</p>
-            <p className="mt-2 font-display text-2xl leading-snug text-navy">{fDisplay}</p>
+            <p className="mt-2 font-display text-2xl leading-snug text-navy">{fDisplay.replace(" (Pledged titles)", "")}</p>
           </div>
           <p className="font-serif text-sm italic text-muted">
             Never “Mr {S}”, “{R} {S}” or “{R} {B}”. Salutation in letters: “{correct}”.
