@@ -67,7 +67,14 @@ function Src({ href, children }: { href: string; children: ReactNode }) {
     </a>
   );
 }
-/** Sources for the designation-and-barony forms in Written Address. */
+/** Source for post-nominal letters following the baronial title. */
+const POSTNOMINAL_SOURCE: ReactNode = (
+  <>
+    Birthday Honours 2005, Diplomatic Service and Overseas List, 11 June 2005, Order of the British Empire, OBE: “Robert Brown GILLESPIE, Baron of Blackhall — For services to British business interests, especially engineering, in France”, p. 2 —{" "}
+    <Src href="http://news.bbc.co.uk/1/shared/bsp/hi/pdfs/birthhons_foreign_11_06_05.pdf">PDF (BBC News)</Src>. The official list prints the barony as part of the name; the honour follows it.
+  </>
+);
+/** Sources for the Written Address forms (designation and barony; post-nominals). */
 const TD_SOURCES: ReactNode = (
   <ol className="list-decimal space-y-3 pl-5">
     <li>
@@ -79,6 +86,7 @@ const TD_SOURCES: ReactNode = (
       <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. See{" "}
       <Link href="/reading-room/esslemont-petition-1934/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">The Esslemont petition of 1934</Link>.
     </li>
+    <li>{POSTNOMINAL_SOURCE}</li>
   </ol>
 );
 /** Sources for the higher-dignities note; opened from the numbered markers and from "Authority & sources". */
@@ -315,7 +323,9 @@ export default function ProperAddressPage() {
                   identity, her title is reflected in a British passport as her legal name.
                 </P>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
-                <P>In cases where the Baron is entitled to post-nominal letters, these should follow, such as:</P>
+                <P>
+                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={3}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
+                </P>
                 <Forms>
                   <F>
                     <S>The Baron of Inverness, CBE</S>
