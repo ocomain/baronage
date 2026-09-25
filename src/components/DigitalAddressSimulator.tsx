@@ -114,7 +114,9 @@ export function DigitalAddressSimulator() {
     `The ${R}`,
     `Much Hon ${R} of ${B}`,
     `The ${R} of ${B}`,
-    `${F}, ${holder === "baron" ? `${R} of ${B}` : `Lady ${B}`} (Pledged titles)`,
+    ...(holder === "baron"
+      ? [`${F}, ${R} of ${B} (Pledged titles)`]
+      : [`${F}, Lady ${B} (Pledged titles)`, `${F}, ${R} of ${B} (Pledged titles)`]),
     `${F} ${B} (Pledged titles)`,
   ];
   const [fDisplay, setFDisplay] = useState(displayOptions[0]);
@@ -131,7 +133,12 @@ export function DigitalAddressSimulator() {
   const greetingOk = greeting === correct || greeting === `Dear ${R} of ${B}` || greeting === `Dear Lady ${B}`;
 
   const email = {
-    short: { from: `The ${R}`, user: holder === "baron" ? "thebaron" : "thebaroness", signoff: "Kind regards,", lines: [`${F}, ${R} of ${B}`, `The Much Honoured ${R} of ${B}`] },
+    short: {
+      from: `The ${R}`,
+      user: holder === "baron" ? "thebaron" : "thebaroness",
+      signoff: "Kind regards,",
+      lines: [fDisplay.startsWith(`${F}, Lady `) ? `${F}, Lady ${B}` : `${F}, ${R} of ${B}`, `The Much Honoured ${R} of ${B}`],
+    },
     formal: { from: `The ${R} of ${B}`, user: holder === "baron" ? "thebaron" : "thebaroness", signoff: "Yours sincerely,", lines: [`The Much Hon. ${F} ${S}, ${R} of ${B}`] },
     professional: { from: `${F} ${B}`, user: holder === "baron" ? "thebaron" : "thebaroness", signoff: "Kind regards,", lines: [`${F} ${B}`, `The ${R} of ${B}`] },
   }[sig];
