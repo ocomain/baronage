@@ -336,7 +336,7 @@ export default function HomePage() {
                 Scottish baronage, older than the peerage itself<Fn n={10} />, remains a distinguished part of our heritage today,
                 recognised in the nobiliary court and the Court of Session as{" "}
                 <strong className="font-semibold text-navy">titled nobility</strong>
-                <Fn n={1} />, and affirmed in Lord Clyde’s 1992 dictum as heritable{" "}
+                <Fn n={1} />, and affirmed in Lord Clyde’s 1992 dictum as{" "}
                 <strong className="font-semibold text-navy">titles of honour</strong>
                 <Fn n={2} /> and for their <em>“noble quality”</em> and former parliamentary rights<Fn n={3} />, Parliament itself having
                 declared in 1567 that <em>“the barons of this realm ought to have vote in Parliament as a part of the
@@ -349,7 +349,7 @@ export default function HomePage() {
                 <strong className="font-semibold text-navy">dignity of baron</strong> was retained as a
                 non-territorial<Fn n={6} />, floating dignity<Fn n={6} />, protected in Scots law<Fn n={7} /> and
                 recognised within UK legal frameworks, including its continued ennoblement<Fn n={5} /> as noted in the
-                Scottish Law Commission report for the Scottish Parliament<Fn n={5} />. The <em>“Baron of X”</em> as a
+                Scottish Law Commission report for the Scottish Parliament<Fn n={5} />. <em>“The Baron of X”</em> as a
                 title of nobility is the holder’s name and identity, legally recognised and eligible in British
                 passports and official documents.
               </p>
