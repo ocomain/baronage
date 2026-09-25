@@ -314,7 +314,7 @@ export function DigitalAddressSimulator() {
           <div className="border-b border-parchment-300/70 px-5 py-3 font-sans text-sm text-ink-soft">
             <p>
               <span className="inline-block w-16 text-muted">From</span>
-              <span className="text-navy">{email.from}</span> <span className="text-muted">&lt;{addr}&gt;</span>
+              <span className="font-semibold text-navy">{email.from}</span> <span className="font-normal text-muted">&lt;{addr}&gt;</span>
             </p>
             <p>
               <span className="inline-block w-16 text-muted">To</span>Secretary
