@@ -111,9 +111,9 @@ export function DigitalAddressSimulator() {
   }, [mode, holder, F, S, B]);
 
   const displayOptions = [
+    `The ${R}`,
     `Much Hon ${R} of ${B}`,
     `The ${R} of ${B}`,
-    `The ${R}`,
     `${F}, ${holder === "baron" ? `${R} of ${B}` : `Lady ${B}`} (Pledged titles)`,
     `${F} ${B} (Pledged titles)`,
   ];
@@ -133,7 +133,7 @@ export function DigitalAddressSimulator() {
   const email = {
     short: { from: `The ${R}`, user: holder === "baron" ? "thebaron" : "thebaroness", signoff: "Kind regards,", lines: [`${F}, ${R} of ${B}`, `The Much Honoured ${R} of ${B}`] },
     formal: { from: `The ${R} of ${B}`, user: holder === "baron" ? "thebaron" : "thebaroness", signoff: "Yours sincerely,", lines: [`The Much Hon. ${F} ${S}, ${R} of ${B}`] },
-    professional: { from: `${F} ${B}`, user: F.toLowerCase().replace(/[^a-z]/g, ""), signoff: "Kind regards,", lines: [`${F} ${B}`, `The ${R} of ${B}`] },
+    professional: { from: `${F} ${B}`, user: holder === "baron" ? "thebaron" : "thebaroness", signoff: "Kind regards,", lines: [`${F} ${B}`, `The ${R} of ${B}`] },
   }[sig];
   const addr = `${email.user}@${B.toLowerCase().replace(/[^a-z]/g, "")}.scot`;
 
