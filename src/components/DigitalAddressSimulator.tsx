@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 
 type Holder = "baron" | "baroness";
 type TitleMode = "dropdown" | "free" | "mrms";
-type SigStyle = "short" | "formal" | "pledged";
+type SigStyle = "short" | "formal" | "professional";
 type Preset = { name: string; title: string; first: string; surname: string };
 
 const labelCls = "font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep";
@@ -132,11 +132,11 @@ export function DigitalAddressSimulator() {
   const greetingOk = greeting === correct || greeting === `Dear ${R} of ${B}` || greeting === `Dear Lady ${B}`;
 
   const email = {
-    short: { from: `The ${R}`, signoff: "Kind regards,", lines: [`${F}, ${R} of ${B}`, `The Much Honoured ${R} of ${B}`] },
-    formal: { from: `The ${R} of ${B}`, signoff: "Yours sincerely,", lines: [`${F} ${S}`, `The Much Honoured ${R} of ${B}`] },
-    pledged: { from: `${F} ${B}`, signoff: "Kind regards,", lines: [`${F} ${B}`, `The Much Honoured ${R} of ${B}`] },
+    short: { from: `The ${R}`, user: "thebaron", signoff: "Kind regards,", lines: [`${F}, ${R} of ${B}`, `The Much Honoured ${R} of ${B}`] },
+    formal: { from: `The ${R} of ${B}`, user: "thebaron", signoff: "Yours sincerely,", lines: [`${F} ${S}`, `The Much Honoured ${R} of ${B}`] },
+    professional: { from: `${F} ${B}`, user: F.toLowerCase().replace(/[^a-z]/g, ""), signoff: "Kind regards,", lines: [`${F} ${B}`, `The ${R} of ${B}`] },
   }[sig];
-  const addr = `${holder}@${B.toLowerCase().replace(/[^a-z]/g, "")}.scot`;
+  const addr = `${email.user}@${B.toLowerCase().replace(/[^a-z]/g, "")}.scot`;
 
   const titleList = mode === "dropdown" ? DROPDOWN : MRMS;
 
@@ -299,13 +299,14 @@ export function DigitalAddressSimulator() {
             options={[
               { label: "Short from-name", value: "short" },
               { label: "Formal", value: "formal" },
-              ...(pledged ? [{ label: "Pledged, daily use", value: "pledged" as SigStyle }] : []),
+              { label: "Professional", value: "professional" },
             ]}
           />
         </div>
         <p className="mt-2 font-serif text-base leading-relaxed text-ink">
-          Keep the from-name short and let the signature carry the full style. “The {R}” as a from-name reads well in a
-          crowded inbox; the signature beneath says who that is.
+          {sig === "professional"
+            ? `For working correspondence the title can be played down: “${F} ${B}” as the from-name, the title stated once in the signature. This form treats the barony as the family name, which the Roll recommends for Pledged titles.`
+            : `Keep the from-name short and let the signature carry the full style. “The ${R}” as a from-name reads well in a crowded inbox; the signature beneath says who that is.`}
         </p>
         <div className="mt-4 border border-navy/15 bg-white shadow-[0_14px_34px_-24px_rgba(8,12,28,0.5)]">
           <div className="border-b border-parchment-300/70 px-5 py-3 font-sans text-sm text-ink-soft">
