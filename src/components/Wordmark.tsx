@@ -9,8 +9,9 @@ export function Wordmark({ className = "" }: { className?: string }) {
         <span className="font-display text-xl font-medium tracking-tight text-navy sm:text-2xl">
           Baronage of Scotland
         </span>
-        <span className="mt-1.5 whitespace-nowrap font-sans text-[0.55rem] font-semibold uppercase tracking-[0.34em] text-gold-deep">
-          Association <span className="text-black">Non-profit</span>
+        <span className="mt-1.5 flex items-baseline gap-2 whitespace-nowrap">
+          <span className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.28em] text-gold-deep">Association</span>
+          <span className="font-sans text-[0.55rem] font-semibold uppercase tracking-[0.3em] text-muted">Non-profit</span>
         </span>
       </span>
     </span>
