@@ -103,11 +103,11 @@ export function HeroHome() {
             Baronage <span className="font-serif font-normal italic text-gold-light">of</span> Scotland
           </h1>
           <p
-            className="rise mt-3 flex items-baseline justify-center gap-3 font-sans uppercase"
+            className="rise mt-3 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 font-sans uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            <span className="text-base font-bold tracking-[0.4em] text-gold-light sm:text-xl">Association</span>
-            <span className="text-[0.62rem] font-semibold tracking-[0.3em] text-parchment-200/70 sm:text-xs">Non-profit</span>
+            <span className="whitespace-nowrap text-base font-bold tracking-[0.4em] text-gold-light sm:text-3xl sm:tracking-[0.42em]">Association</span>
+            <span className="whitespace-nowrap text-[0.62rem] font-semibold tracking-[0.3em] text-parchment-200/70 sm:text-xs">Non-profit</span>
           </p>
 
           <p
