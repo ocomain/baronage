@@ -163,7 +163,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           <em>PSAS</em> vol. 79 (1944–45), p. 143 n. 3
         </a>
         : <em>“the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of
-        Session recognised as a ‘titled nobility’…”</em> Lord Lyon David Sellar, 2010 [Ref: 57 Lindberg Ptr, Lyon
+        Session recognised as a ‘titled nobility’…”</em> Innes of Learney on the Act of 1567 (same paper, p. 132):{" "}
+        <em>“This clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its
+        constitutional sense, and as an ‘Order’ or ‘Estate’”</em>. Lord Lyon David Sellar, 2010 [Ref: 57 Lindberg Ptr, Lyon
         Court]:{" "}
         <em>
           “the dignity of baron has a noble character in that it is a right which historically originated in a Crown
@@ -1402,7 +1404,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Peerage",
-    def: "The highest grade of the British nobility. In Scotland its ranks, in ascending order, are Lord of Parliament, Viscount, Earl, Marquess and Duke in the peerage of Scotland. A peerage stands in law whether or not its holder is enrolled, and historically carried a seat in Parliament. It ranks above, and is distinct from, a barony in the Baronage of Scotland.",
+    def: "The highest grade of the British nobility. In Scotland its ranks, in ascending order, are Lord of Parliament, Viscount, Earl, Marquess and Duke in the peerage of Scotland. A peerage stands in law whether or not its holder is enrolled, and historically carried a seat in Parliament. It ranks above, and is distinct from, a barony in the Baronage of Scotland. In sixteenth-century usage the Peerage was, in Innes of Learney’s words, what “on English terminology got loosely called ‘the Nobility’”, while Parliament in 1567 acknowledged the Baronage as “a part of the nobility”; the Lyon King of Arms Acts of 1592 and 1672 use “noblemen” in that narrower sense, so “noblemen, barons and gentlemen” means peers, barons and gentlemen (PSAS 79, p. 136).",
     note: (
       <>
         See also{" "}
