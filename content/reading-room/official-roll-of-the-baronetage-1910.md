@@ -2,7 +2,7 @@
 title: "A dignity in disarray: the baronets’ Roll of 1910"
 subtitle: "The Crown sold the dignity, men assumed it, and the Crown’s own rule was rescinded at the holders’ objection. The baronets formed a body, and twelve years later a Royal Warrant gave them a Roll that restored its credibility."
 slug: official-roll-of-the-baronetage-1910
-meta_description: "Created to be sold, later assumed without right, the baronetage was set in order by a Royal Warrant of 1910 and an official Roll that admits only on proof. The precedent for the Roll of Scottish Barons."
+meta_description: "A dignity in disarray: sold by the Crown, then assumed without right. A Royal Warrant of 1910 and an official Roll admitting only on proof restored its credibility. The precedent for the Roll of Scottish Barons."
 category: Heritage & Sources
 published: 2026-09-19
 reviewed: 2026-09-19
