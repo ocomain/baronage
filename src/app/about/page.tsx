@@ -87,12 +87,11 @@ const citations: {
   source: string;
   text: string;
   richText?: ReactNode;
-  /** rendered under the source line */
-  note?: ReactNode;
   href?: string;
   pop?: boolean;
   feature?: boolean;
-  note?: string;
+  /** rendered under the source line */
+  note?: ReactNode;
 }[] = [
   {
     source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
@@ -320,11 +319,6 @@ export default function AboutPage() {
                       </span>
                     )}
                   </figcaption>
-                  {c.note && (
-                    <p className="mt-4 border-t border-gold/20 pt-4 font-serif text-[0.95rem] leading-relaxed text-parchment-200/80">
-                      {c.note}
-                    </p>
-                  )}
                 </figure>
               </Reveal>
             ))}
