@@ -1,6 +1,6 @@
 ---
-title: "A dignity that was sold: the baronets’ Roll of 1910"
-subtitle: "The Crown sold the dignity, men assumed it, and the Crown’s own rule was rescinded at the holders’ objection. The baronets formed a body, and twelve years later a Royal Warrant gave them a Roll that admitted only on proof."
+title: "A dignity in disarray: the baronets’ Roll of 1910"
+subtitle: "The Crown sold the dignity, men assumed it, and the Crown’s own rule was rescinded at the holders’ objection. The baronets formed a body, and twelve years later a Royal Warrant gave them a Roll that restored its credibility."
 slug: official-roll-of-the-baronetage-1910
 meta_description: "Created to be sold, later assumed without right, the baronetage was set in order by a Royal Warrant of 1910 and an official Roll that admits only on proof. The precedent for the Roll of Scottish Barons."
 category: Heritage & Sources
@@ -8,7 +8,7 @@ published: 2026-09-19
 reviewed: 2026-09-19
 ---
 
-# A dignity that was sold: the baronets’ Roll of 1910
+# A dignity in disarray: the baronets’ Roll of 1910
 
 *The baronetage was created in 1611 to be sold, and for a century it was. By the nineteenth century the dignity was troubled by men who had simply assumed it. On 8 February 1910 King Edward VII signed a Royal Warrant creating an official Roll of Baronets, to be kept at the Home Office. Its preamble gives the reason: “persons have assumed the title of Baronet without any just right.” From then on no one left off the Roll was to be received as a baronet, or named as one in any official document. The Roll of 1910 is a lesson in method: not argument, but a public record that admits on proof.*
 
