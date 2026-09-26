@@ -106,7 +106,7 @@ export function HeroHome() {
             className="rise mt-3 flex items-baseline justify-center gap-3 font-sans uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            <span className="text-sm font-bold tracking-[0.4em] text-gold-light sm:text-base">Association</span>
+            <span className="text-base font-bold tracking-[0.4em] text-gold-light sm:text-xl">Association</span>
             <span className="text-[0.62rem] font-semibold tracking-[0.3em] text-parchment-200/70 sm:text-xs">Non-profit</span>
           </p>
 
