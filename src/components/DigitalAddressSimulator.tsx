@@ -17,9 +17,10 @@ type Preset = { name: string; title: string; first: string; surname: string };
 const labelCls = "font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep";
 const fieldCls =
   "mt-1 w-full border border-navy/20 bg-white px-3 py-2 font-sans text-base text-ink shadow-[inset_0_1px_2px_rgba(8,12,28,0.06)] outline-none focus:border-gold";
-const chipBase = "cursor-pointer border px-2.5 py-1 font-sans text-[0.72rem] tracking-wide transition-colors";
-const chipOn = `${chipBase} border-gold bg-gold/15 text-navy`;
-const chipOff = `${chipBase} border-parchment-300 bg-parchment-50 text-ink-soft hover:border-gold/60`;
+const chipBase =
+  "inline-flex cursor-pointer items-center gap-1.5 rounded-full border px-3.5 py-2 font-sans text-sm font-medium leading-none transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60";
+const chipOn = `${chipBase} border-navy bg-navy text-parchment-50 shadow-[0_6px_16px_-10px_rgba(8,12,28,0.6)]`;
+const chipOff = `${chipBase} border-navy/35 bg-white text-navy hover:border-navy hover:bg-parchment-100`;
 const outBox = "border border-gold/40 bg-white px-5 py-4";
 
 const DROPDOWN = ["Mr", "Mrs", "Ms", "Miss", "Dr", "Baron", "Baroness", "Lady", "Lord", "Sir", "Prof"];
@@ -30,25 +31,33 @@ function Chips<T extends string>({
   value,
   onPick,
   ariaLabel,
+  prompt,
 }: {
   options: { label: string; value: T }[];
   value: T;
   onPick: (v: T) => void;
   ariaLabel: string;
+  /** Optional line above the buttons telling the reader they can be pressed. */
+  prompt?: string;
 }) {
   return (
-    <div className="mt-1.5 flex flex-wrap gap-1.5" role="group" aria-label={ariaLabel}>
-      {options.map((o) => (
-        <button
-          key={o.label}
-          type="button"
-          onClick={() => onPick(o.value)}
-          className={o.value === value ? chipOn : chipOff}
-          aria-pressed={o.value === value}
-        >
-          {o.label}
-        </button>
-      ))}
+    <div>
+      {prompt && <p className="mt-1 font-sans text-xs text-ink-soft">{prompt}</p>}
+      <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={ariaLabel}>
+        {options.map((o) => {
+          const on = o.value === value;
+          return (
+            <button key={o.label} type="button" onClick={() => onPick(o.value)} className={on ? chipOn : chipOff} aria-pressed={on}>
+              {on && (
+                <svg viewBox="0 0 16 16" className="h-3 w-3 shrink-0" aria-hidden="true">
+                  <path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
+              {o.label}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -292,19 +301,18 @@ export function DigitalAddressSimulator() {
 
       {/* Email signature */}
       <div className="mt-10 border-t border-parchment-300/70 pt-6">
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <p className="font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Email signature</p>
-          <Chips
-            ariaLabel="Signature style"
-            value={sig}
-            onPick={setSig}
-            options={[
-              { label: "Short from-name", value: "short" },
-              { label: "Formal", value: "formal" },
-              { label: "Professional", value: "professional" },
-            ]}
-          />
-        </div>
+        <p className="font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Email signature</p>
+        <Chips
+          ariaLabel="Signature style"
+          prompt="Tap a style to see the from-name and signature change below:"
+          value={sig}
+          onPick={setSig}
+          options={[
+            { label: "Short from-name", value: "short" },
+            { label: "Formal", value: "formal" },
+            { label: "Professional", value: "professional" },
+          ]}
+        />
         <p className="mt-2 font-serif text-base leading-relaxed text-ink">
           {sig === "professional"
             ? `For working correspondence the title can be played down: “${F} ${B}” as the from-name, the title stated once in the signature. This form treats the barony as the family name, which the Roll recommends for Pledged titles.`
