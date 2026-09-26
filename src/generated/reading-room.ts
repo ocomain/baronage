@@ -40,8 +40,8 @@ export const readingRoomPapers: ReadingRoomPaper[] = [
   },
   {
     "slug": "official-roll-of-the-baronetage-1910",
-    "title": "A dignity that was sold: the baronets’ Roll of 1910",
-    "subtitle": "The Crown sold the dignity, men assumed it, and the Crown’s own rule was rescinded at the holders’ objection. The baronets formed a body, and twelve years later a Royal Warrant gave them a Roll that admitted only on proof.",
+    "title": "A dignity in disarray: the baronets’ Roll of 1910",
+    "subtitle": "The Crown sold the dignity, men assumed it, and the Crown’s own rule was rescinded at the holders’ objection. The baronets formed a body, and twelve years later a Royal Warrant gave them a Roll that restored its credibility.",
     "description": "Created to be sold, later assumed without right, the baronetage was set in order by a Royal Warrant of 1910 and an official Roll that admits only on proof. The precedent for the Roll of Scottish Barons.",
     "category": "Heritage & Sources",
     "readingTime": "8 min",
