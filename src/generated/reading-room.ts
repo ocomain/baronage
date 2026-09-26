@@ -40,9 +40,9 @@ export const readingRoomPapers: ReadingRoomPaper[] = [
   },
   {
     "slug": "official-roll-of-the-baronetage-1910",
-    "title": "The baronets’ Roll of 1910",
-    "subtitle": "How a dignity troubled by wrongful assumptions was set in order by a Roll that admitted only on proof",
-    "description": "In 1910 a Royal Warrant of Edward VII created the Official Roll of Baronets to correct wrongful assumptions of the title, and cancelled three warrants of George III. How it came about, its key clauses, and who keeps the Roll today.",
+    "title": "A dignity that was sold: the baronets’ Roll of 1910",
+    "subtitle": "The Crown sold the dignity, men assumed it, and the Crown’s own rule was rescinded at the holders’ objection. The baronets formed a body, and twelve years later a Royal Warrant gave them a Roll that admitted only on proof.",
+    "description": "Created to be sold, later assumed without right, the baronetage was set in order by a Royal Warrant of 1910 and an official Roll that admits only on proof. The precedent for the Roll of Scottish Barons.",
     "category": "Heritage & Sources",
     "readingTime": "8 min",
     "published": "2026-09-19",
