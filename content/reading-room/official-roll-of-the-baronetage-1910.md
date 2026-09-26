@@ -10,7 +10,7 @@ reviewed: 2026-09-19
 
 # A dignity in disarray: the baronets’ Roll of 1910
 
-*The baronetage was in a state of disarray. Titles were bought from the Crown, and other abuses followed, above all the title assumed by men with no right to it; a Crown rule against the practice was rescinded at the baronets’ own objection. A body was formed in 1898, which became the Standing Council of the Baronetage, and in 1910 an official Roll was approved by Royal Warrant, admitting a name only on proof. In the Association’s judgement it restored the order’s credibility. This is the precedent for the Association’s Roll of Scottish Barons and its Pledge.*
+*The baronetage was in a state of disarray. Titles were bought from the Crown, and other abuses followed, above all the title assumed by men with no right to it; a Crown rule against the practice was rescinded at the baronets’ own objection. A body was formed in 1898, which became the Standing Council of the Baronetage, and in 1910 an official Roll was approved by Royal Warrant, admitting a name only on proof. It restored the order’s credibility. This is the precedent for the Association’s Roll of Scottish Barons and its Pledge.*
 
 ## A state of disarray: titles bought
 
@@ -40,7 +40,7 @@ The baronets’ body had a hand in the instrument. When the Roll was prepared, t
 
 ## Credibility restored
 
-The Roll settled the question by proof, not argument. The first Roll carried “the names of 1,309 baronets”. Rules for petitioners were drawn up by the Privy Council, and between December 1911 and 1913 “formal hearings of four disputed cases have been held”: two claimants were placed on the Roll, and “in the other two cases the advice of the Committee was that the names of the claimants should not be placed on the Roll.” Entry proved nothing for ever: each name “can and will be cancelled at any time on the production of evidence, or on an adjudication by a competent legal tribunal, against the validity of the claim.”[^7] Government guidance on the Warrant still states its purpose as being “to safeguard the status of holders of baronetcies and to prevent abuse.”[^14] In the Association’s judgement the Roll restored the credibility of the order: a name meant nothing on its own, only proof put it on the Roll, and only the Roll was recognised.
+The Roll settled the question by proof, not argument. The first Roll carried “the names of 1,309 baronets”. Rules for petitioners were drawn up by the Privy Council, and between December 1911 and 1913 “formal hearings of four disputed cases have been held”: two claimants were placed on the Roll, and “in the other two cases the advice of the Committee was that the names of the claimants should not be placed on the Roll.” Entry proved nothing for ever: each name “can and will be cancelled at any time on the production of evidence, or on an adjudication by a competent legal tribunal, against the validity of the claim.”[^7] Government guidance on the Warrant still states its purpose as being “to safeguard the status of holders of baronetcies and to prevent abuse.”[^14] The Roll restored the credibility of the order: a name meant nothing on its own, only proof put it on the Roll, and only the Roll was recognised.
 
 ## The precedent
 
