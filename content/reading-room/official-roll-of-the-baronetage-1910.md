@@ -10,11 +10,17 @@ reviewed: 2026-09-19
 
 # The baronets’ Roll of 1910
 
-*On 8 February 1910 King Edward VII signed a Royal Warrant creating an official Roll of Baronets, to be kept at the Home Office. Its preamble gives the reason: “persons have assumed the title of Baronet without any just right.” From then on no one left off the Roll was to be received as a baronet, or named as one in any official document. The Roll of 1910 is a lesson in method: not argument, but a public record that admits on proof.*
+*The baronetage was created in 1611 to be sold, and for a century it was. By the nineteenth century the dignity was troubled by men who had simply assumed it. On 8 February 1910 King Edward VII signed a Royal Warrant creating an official Roll of Baronets, to be kept at the Home Office. Its preamble gives the reason: “persons have assumed the title of Baronet without any just right.” From then on no one left off the Roll was to be received as a baronet, or named as one in any official document. The Roll of 1910 is a lesson in method: not argument, but a public record that admits on proof.*
+
+## A dignity that was sold
+
+The baronetage was instituted to raise money. J. H. Round’s article in the 1911 *Encyclopaedia Britannica* opens with it: “The object of its institution was to raise money for the crown, as was also done by the sale of peerage dignities under this sovereign.” Each grantee paid for thirty soldiers in Ulster at 8d. a day for three years: “This amounted to £1095, which was the sum paid for the honour.” James promised to keep the order select, to no more than two hundred men of £1,000 a year and armigerous descent, “but these qualifications were before long abandoned.”[^25]
+
+His son sold harder. “Creations became one of his devices for raising money; blank patents were hawked about, and in 1641 Nicholas wrote that baronetcies were to be had for £400 or even for £350; a patent was offered about this time to Mr Wrottesley of Wrottesley for £300.” At the Restoration the honour was “bestowed so lavishly” that a letter of 3 June 1660 “describes it as ‘too common,’ and offers to procure it for any one in return for £300 or £400.”[^25]
 
 ## A dignity in disorder
 
-The baronetage is a hereditary dignity instituted by James VI and I in May 1611, ranking below the peerage.[^1] By the end of the nineteenth century its difficulty was men using the title without proof. The 1911 *Encyclopaedia Britannica*, in John Horace Round’s article “Baronet”, records efforts “to purge the order of wrongful assumptions, an evil to which the baronetage of Nova Scotia is peculiarly exposed, owing to the dignity being descendible to collateral heirs male of the grantee as well as to those of his body.”[^1]
+The baronetage is a hereditary dignity instituted by James VI and I in May 1611, ranking below the peerage.[^1] Bought dignities bred assumed ones. Round records that “in consequence of the wrongful assumption of baronetcies, an old and then increasing evil, a royal warrant was issued” in 1783, requiring proof before recognition; “in consequence of the opposition of the baronets themselves” that rule “was rescinded and the evil remained unabated.”[^25] By the end of the nineteenth century the difficulty was still men using the title without proof. The 1911 *Encyclopaedia Britannica*, in John Horace Round’s article “Baronet”, records efforts “to purge the order of wrongful assumptions, an evil to which the baronetage of Nova Scotia is peculiarly exposed, owing to the dignity being descendible to collateral heirs male of the grantee as well as to those of his body.”[^1]
 
 The Crown had tried before. The 1910 Warrant recalls that “by Warrants under the hand of Our Royal Predecessor King George the Third further Rules were established for the prevention of abuses touching the status of Baronets.”[^2] Those Warrants, of 3 December 1783, 24 February 1785 and 30 September 1789, had not ended the abuses. Clause XII of the 1910 Warrant declared them “cancelled and made void and of no effect.”[^3]
 
@@ -58,7 +64,7 @@ The Roll itself has changed hands. By the Transfer of Functions (Miscellaneous) 
 
 The Warrant of 1910 did not itself decide who was entitled to be a baronet. It decided how the question would be tested. A claim was entered on proof, exhibited to a King of Arms and, if doubted, referred to a Law Officer and the Privy Council. A name not entered carried no recognition, whatever a family believed. The lesson is one of method: a dignity troubled by wrongful or doubtful claims is set in order by a public roll that admits on proof and leaves the unproven off.
 
-The Association’s [Roll of Scottish Barons](/the-roll/), at [roll.baronage.com](https://roll.baronage.com), works on the same principle. It is an open, verified and impartial public register; each entry publishes the credentials on which it rests, and the non-recognition of unverified titles is fundamental to its work. Nothing on it is asked to be taken on trust.[^24]
+The sequence is the precedent. A dignity sold by the Crown, then assumed by men with no right to it; a Crown rule rescinded at the holders’ own objection; the holders forming their own body in 1898; and, twelve years later, a Royal Warrant and an official Roll that admitted on proof. The Scottish baronage stands where the baronetage stood: baronies are bought and sold, the Lyon Court no longer recognises them by name, and titles are assumed. The Association’s [Roll of Scottish Barons](/the-roll/), at [roll.baronage.com](https://roll.baronage.com), is the baronets’ answer applied to it: an open, verified public register, each entry publishing the credentials on which it rests, the unverified left off. The [Pledge](/pledge/) goes one step further than 1910, binding a title to blood so that it cannot again be sold. Nothing on the Roll is asked to be taken on trust.[^24]
 
 ---
 
@@ -98,3 +104,4 @@ The Association’s [Roll of Scottish Barons](/the-roll/), at [roll.baronage.com
 [^22]: Transfer of Functions (Miscellaneous) Order 2001 (SI 2001/3500), Sch. 1, “Ceremonial” — [legislation.gov.uk](https://www.legislation.gov.uk/uksi/2001/3500/schedule/1/crossheading/ceremonial/made).
 [^23]: The Standing Council of the Baronetage, [“Official Roll”](https://www.baronetage.org/official-roll/).
 [^24]: [The Roll of Scottish Barons](/the-roll/), this site.
+[^25]: *Encyclopaedia Britannica*, 11th edn (1911), vol. 3, “Baronet”, by J. H. Round, pp. 440–441 — [Wikisource](https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Baronet). Round gives the 1783 warrant as 6 December; the 1910 Warrant recites 3 December.
