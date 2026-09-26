@@ -10,9 +10,9 @@ reviewed: 2026-09-19
 
 # A dignity in disarray: the baronets’ Roll of 1910
 
-*By the nineteenth century the baronetage was in disarray. The Crown had sold the dignity from its creation in 1611, Charles I hawked blank patents for a few hundred pounds, and men assumed the title outright, without any right to it. A Crown rule against the practice was rescinded at the baronets’ own objection. In 1898 the baronets formed a body of their own, which became the Standing Council of the Baronetage. In 1910 a Royal Warrant gave the order an official Roll that admitted a name only on proof. The Association’s Roll of Scottish Barons and its Pledge stand on that precedent.*
+*The baronetage was in a state of disarray. Titles were bought from the Crown, and other abuses followed, above all the title assumed by men with no right to it; a Crown rule against the practice was rescinded at the baronets’ own objection. A body was formed in 1898, which became the Standing Council of the Baronetage, and in 1910 an official Roll was approved by Royal Warrant, admitting a name only on proof. In the Association’s judgement it restored the order’s credibility. This is the precedent for the Association’s Roll of Scottish Barons and its Pledge.*
 
-## Sold
+## A state of disarray: titles bought
 
 The baronetage was instituted to raise money. J. H. Round’s article in the 1911 *Encyclopaedia Britannica* opens with the purpose: “The object of its institution was to raise money for the crown, as was also done by the sale of peerage dignities under this sovereign.” Each grantee paid for thirty soldiers in Ulster at 8d. a day for three years: “This amounted to £1095, which was the sum paid for the honour.” James promised to hold the order to two hundred men of £1,000 a year and armigerous descent. “But these qualifications were before long abandoned.”[^1]
 
@@ -24,13 +24,13 @@ Bought dignities bred assumed ones. In 1783, “in consequence of the wrongful a
 
 Assumption went on openly. In 1834 Richard Broun, whose father had assumed a Nova Scotia baronetcy, sought privileges for the order and was refused; a petition for a badge “met with the same fate in 1836.” Refused a knighthood as a baronet’s heir apparent, Broun “publicly assumed the honour in 1842, a foolish and futile act.”[^1]
 
-## The baronets organise, 1898
+## A body is formed, 1898
 
 Their body was born of a grievance about precedence, not proof. “A fresh agitation was aroused in 1897 by an order giving the sons of life peers precedence over baronets, some of whom formed themselves, in 1898, into ‘the Honourable Society of the Baronetage’ for the maintenance of its privileges. But a royal warrant was issued on the 15th of August 1898, confirming the precedence complained of as an infringement of their rights.”[^1] The Crown ruled against them on the very point that had brought them together, and the body did not dissolve.
 
 It was “reconstituted in July 1903 as the Standing Council of the Baronetage as a permanent organisation to deal with all affairs of the Degree.”[^3] It won invitations for representatives of the order to the coronation of Edward VII, and it turned to the graver matter: it sought “to purge the order of wrongful assumptions, an evil to which the baronetage of Nova Scotia is peculiarly exposed, owing to the dignity being descendible to collateral heirs male of the grantee as well as to those of his body.”[^4]
 
-## The Roll, 1910
+## An official Roll is approved, 1910
 
 The Home Office took the question up. A committee appointed on 3 November 1905 was “to consider and report what steps should be taken to safeguard the status of holders of Baronetcies, and to prevent the assumption of the title of Baronet by persons who have no right thereto.” It reported on 12 December 1906.[^5] The Commons was told in March 1907 that the committee “have presented their Report, and it will shortly be laid before Parliament.”[^6] The committee had found, *The Times* later reported, “that a certain number of persons had assumed the title of baronet, either wrongfully, or on a very doubtful basis”, and had recommended “the preparation by the Home Office of a Roll of Baronets to include all persons who should for the future be officially recognized and entitled to the dignity.”[^7]
 
@@ -40,11 +40,11 @@ The baronets’ body had a hand in the instrument. When the Roll was prepared, t
 
 ## Credibility restored
 
-The Roll settled the question by proof, not argument. The first Roll carried “the names of 1,309 baronets”. Rules for petitioners were drawn up by the Privy Council, and between December 1911 and 1913 “formal hearings of four disputed cases have been held”: two claimants were placed on the Roll, and “in the other two cases the advice of the Committee was that the names of the claimants should not be placed on the Roll.” Entry proved nothing for ever: each name “can and will be cancelled at any time on the production of evidence, or on an adjudication by a competent legal tribunal, against the validity of the claim.”[^7] Government guidance on the Warrant still states its purpose as being “to safeguard the status of holders of baronetcies and to prevent abuse.”[^14] In the Association’s judgement the remedy matched the disease: a name meant nothing on its own, only proof put it on the Roll, and only the Roll was recognised.
+The Roll settled the question by proof, not argument. The first Roll carried “the names of 1,309 baronets”. Rules for petitioners were drawn up by the Privy Council, and between December 1911 and 1913 “formal hearings of four disputed cases have been held”: two claimants were placed on the Roll, and “in the other two cases the advice of the Committee was that the names of the claimants should not be placed on the Roll.” Entry proved nothing for ever: each name “can and will be cancelled at any time on the production of evidence, or on an adjudication by a competent legal tribunal, against the validity of the claim.”[^7] Government guidance on the Warrant still states its purpose as being “to safeguard the status of holders of baronetcies and to prevent abuse.”[^14] In the Association’s judgement the Roll restored the credibility of the order: a name meant nothing on its own, only proof put it on the Roll, and only the Roll was recognised.
 
 ## The precedent
 
-The sequence is the model. A dignity sold by the Crown, then assumed by men with no right to it; a Crown rule rescinded at the holders’ own objection; the holders forming a body of their own in 1898; and, twelve years on, a Royal Warrant and an official Roll that admitted only on proof. The Scottish baronage stands where the baronetage stood: baronies are bought and sold, titles are assumed without right, and [no public authority keeps a register of them](/the-roll/). The Association’s [Roll of Scottish Barons](/the-roll/), at [roll.baronage.com](https://roll.baronage.com), is the baronets’ answer applied to it: a public register that admits on proof, leaves the unverified off, and asks no payment for a place on it. The [Pledge](/pledge/) goes one step further than 1910, binding a title to blood so that it cannot again be sold.[^15]
+The sequence is the precedent. A dignity in disarray, its titles bought and other abuses tolerated; a body formed in 1898 that became the Standing Council; an official Roll approved in 1910 that restored the order’s credibility. The Scottish baronage stands where the baronetage stood: baronies are bought and sold, titles are assumed without right, and [no public authority keeps a register of them](/the-roll/). The Association’s [Roll of Scottish Barons](/the-roll/), at [roll.baronage.com](https://roll.baronage.com), is the baronets’ answer applied to it: a public register that admits on proof, leaves the unverified off, and asks no payment for a place on it. The [Pledge](/pledge/) goes one step further than 1910, binding a title to blood so that it cannot again be sold.[^15]
 
 ---
 
