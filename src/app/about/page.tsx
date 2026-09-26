@@ -145,7 +145,7 @@ const citations: {
   {
     source: "Parliament of Scotland · 1567",
     href: "https://www.rps.ac.uk/trans/1567/12/45",
-    text: "Of law and reason the barons of this realm ought to have vote in Parliament as a part of the nobility.",
+    text: "The barons of this realm ought to have vote in Parliament as a part of the nobility.",
   },
   {
     source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
