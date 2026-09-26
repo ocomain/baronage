@@ -229,7 +229,7 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
         parliament as a part of the nobility” —{" "}
         <a href="https://www.rps.ac.uk/trans/1567/12/45" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">RPS 1567/12/45</a>; quoted by Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”,{" "}
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">PSAS 79 (1944–45)</a>, p. 132. See{" "}
-        <a href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Innes of Learney, 1945</a>.
+        <a href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Innes of Learney, 1945</a>. Innes’s reading of the Act (pp. 132, 136): it “clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’”; the three estates “were constituted by distinguishing the Baronage from the Peerage (which on English terminology got loosely called ‘the Nobility’), though, as we have seen, Parliament carefully and explicitly acknowledge in 1567 that the Baronage was ‘a part of the nobility’”; and “This statute is confined to Barons,—not Freeholders” (p. 136 n. 2).
       </>
     ),
   },

@@ -146,6 +146,25 @@ const citations: {
     source: "Parliament of Scotland · 1567",
     href: "https://www.rps.ac.uk/trans/1567/12/45",
     text: "The barons of this realm ought to have vote in Parliament as a part of the nobility.",
+    richText: (
+      <>
+        <Noble text="The barons of this realm ought to have vote in Parliament as a part of the nobility." />
+        <span className="mt-3 block text-[0.92em] not-italic text-parchment-200/80">
+          Lord Lyon Innes of Learney: the Act “clarifies the (obvious) nobiliary fact, that the Barons are a part of
+          ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’”; it “is confined to Barons,—not
+          Freeholders” (
+          <a
+            href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+          >
+            PSAS 79, pp. 132, 136
+          </a>
+          ).
+        </span>
+      </>
+    ),
   },
   {
     source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
