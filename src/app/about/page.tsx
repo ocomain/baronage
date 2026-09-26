@@ -90,8 +90,10 @@ const citations: {
   href?: string;
   pop?: boolean;
   feature?: boolean;
-  /** rendered under the source line */
+  /** small italic line under the source */
   note?: ReactNode;
+  /** a reading of the quotation, set large under the source line */
+  gloss?: ReactNode;
 }[] = [
   {
     source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
@@ -147,7 +149,7 @@ const citations: {
     source: "Parliament of Scotland · 1567",
     href: "https://www.rps.ac.uk/trans/1567/12/45",
     text: "The barons of this realm ought to have vote in Parliament as a part of the nobility.",
-    note: (
+    gloss: (
       <>
         Lord Lyon Innes of Learney: the Act “clarifies the (obvious) nobiliary fact, that the Barons are a part of
         ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’”; it “is confined to Barons,—not
@@ -319,6 +321,11 @@ export default function AboutPage() {
                       </span>
                     )}
                   </figcaption>
+                  {c.gloss && (
+                    <p className="mt-5 border-t border-gold/25 pt-5 font-serif text-lg leading-relaxed text-parchment-100/90">
+                      {c.gloss}
+                    </p>
+                  )}
                 </figure>
               </Reveal>
             ))}
