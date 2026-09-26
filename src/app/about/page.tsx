@@ -152,8 +152,8 @@ const citations: {
     gloss: (
       <>
         Lord Lyon Innes of Learney: the Act “clarifies the (obvious) nobiliary fact, that the Barons are a part of
-        ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’”; it “is confined to Barons,—not
-        Freeholders” (
+        ‘<span className="text-foil">The Nobility</span>’ in its constitutional sense, and as an ‘Order’ or ‘Estate’”;
+        it “is confined to Barons,—not Freeholders” (
         <a
           href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
           target="_blank"
@@ -322,7 +322,7 @@ export default function AboutPage() {
                     )}
                   </figcaption>
                   {c.gloss && (
-                    <p className="mt-5 border-t border-gold/25 pt-5 font-serif text-lg leading-relaxed text-parchment-100/90">
+                    <p className="mt-5 border-t border-gold/25 pt-5 font-serif text-[0.95rem] leading-relaxed text-parchment-100/90">
                       {c.gloss}
                     </p>
                   )}
