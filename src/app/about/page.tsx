@@ -151,8 +151,12 @@ const citations: {
     text: "The barons of this realm ought to have vote in Parliament as a part of the nobility.",
     gloss: (
       <>
-        Lord Lyon Innes of Learney: the Act “clarifies the (obvious) nobiliary fact, that the Barons are a part of
-        ‘<span className="text-foil">The Nobility</span>’ in its constitutional sense, and as an ‘Order’ or ‘Estate’” (
+        Lord Lyon Innes of Learney: the Act{" "}
+        <em>
+          “clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘
+          <span className="text-foil">The Nobility</span>’ in its constitutional sense, and as an ‘Order’ or ‘Estate’”
+        </em>{" "}
+        (
         <a
           href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
           target="_blank"
