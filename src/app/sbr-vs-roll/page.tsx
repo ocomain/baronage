@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 import { Reveal } from "@/components/Reveal";
 import { RegisterComparison } from "@/components/RegisterComparison";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/primitives";
+import { RollCounts } from "@/components/RollCounts";
 import { ROLL_URL } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -12,6 +13,15 @@ export const metadata: Metadata = pageMetadata({
     "The Scottish Barony Register records the legal transfer of a barony, in place of the Register of Sasines since 2004; the Roll of Scottish Barons records recognition. What each one does, and how they work together.",
   path: "/sbr-vs-roll/",
 });
+
+const OFFICIAL_Q = "Is there an official register of Scottish baronies?";
+const OFFICIAL_A =
+  "No. Since 28 November 2004 a barony cannot be registered in the Land Register of Scotland or recorded in the Register of Sasines (Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63(2)), and no statute has created a register in their place. The Scottish Barony Register (SBR) is a private, non-statutory register. It replaces the Register of Sasines for the transfers of baronies voluntarily submitted to it since 2004, and records legal title, as the Register of Sasines did, and no more: it does not recognise or decline to recognise a title. The Roll of Scottish Barons does a different job: it recognises the title and catalogues the whole Baronage of Scotland, including dignities held by dynastic succession, chiefs, baronets and peers, which pass by inheritance and so have never appeared in any register of transfers. Nothing on the Roll is taken on trust: the evidence for every entry is published beside it.";
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [{ "@type": "Question", name: OFFICIAL_Q, acceptedAnswer: { "@type": "Answer", text: OFFICIAL_A } }],
+};
 
 export default function SbrVsRollPage() {
   return (
@@ -47,7 +57,45 @@ export default function SbrVsRollPage() {
           </Reveal>
 
           <Reveal>
-            <div className="prose-heritage">
+            <section id="official-register" className="mt-12 scroll-mt-32" aria-labelledby="official-register-q">
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+              />
+              <h2 id="official-register-q" className="font-display text-3xl leading-tight text-navy sm:text-4xl">
+                {OFFICIAL_Q}
+              </h2>
+              <div className="prose-heritage mt-5">
+                <p>
+                  No. Since 28 November 2004 a barony cannot be registered in the Land Register of Scotland or
+                  recorded in the Register of Sasines,{" "}
+                  <a
+                    href="https://www.legislation.gov.uk/asp/2000/5/section/63"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold-deep underline decoration-gold/40 underline-offset-2 transition-colors hover:text-oxblood"
+                  >
+                    under the 2000 Act
+                  </a>
+                  , and no statute has created a register in their place. The Scottish Barony Register (SBR) is a
+                  private, non-statutory register. It replaces the Register of Sasines for the transfers of baronies
+                  voluntarily submitted to it since 2004, and records legal title, as the Register of Sasines did, and
+                  no more: it does not recognise or decline to recognise a title. At its update of 9 August 2026 the
+                  SBR listed 214 baronies, the holder’s name shown as private for 143 of them.
+                </p>
+                <p>
+                  The Roll of Scottish Barons does a different job. It recognises the title and catalogues the whole
+                  Baronage of Scotland, including dignities held by dynastic succession, chiefs, baronets and peers,
+                  which pass by inheritance and so have never appeared in any register of transfers. <RollCounts />{" "}
+                  Nothing on the Roll is taken on trust: the evidence for every entry is published beside it, so
+                  anyone can judge the authority for themselves.
+                </p>
+              </div>
+            </section>
+          </Reveal>
+
+          <Reveal>
+            <div className="prose-heritage mt-12">
               <p>
                 The Scottish Barony Register (SBR) replaces the Register of Sasines for baronies, which{" "}
                 <a
