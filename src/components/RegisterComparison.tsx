@@ -167,11 +167,6 @@ export function RegisterComparison() {
         </div>
       </div>
 
-      <p className="mt-8 leading-relaxed text-ink-soft">
-        The Roll treats the SBR as an authoritative source and recommends every holder record their legal title
-        there. The SBR records legal title; the Roll documents recognition across the whole baronage.
-        Complementary, not competing.
-      </p>
     </div>
   );
 }
