@@ -397,8 +397,7 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir may be addressed with the courtesy title “Younger of Barony,”<Footnote n={1}>{HEIR_SOURCE}</Footnote> and
-                  oldest daughter “Maid”:
+                  The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={1}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <Forms>
@@ -411,15 +410,22 @@ export default function ProperAddressPage() {
                     <N>(spoken Barony)</N>
                   </F>
                   <F>
+                    Wife of heir: <S>Mrs Smith, Younger of Barony</S>
+                  </F>
+                </Forms>
+                <P>
+                  Where there is no son and a daughter is the heir, some families style her “Maid of Barony”, a usage best
+                  kept where the family already has it:
+                </P>
+                <Forms>
+                  <F>
                     <S>Maid of Barony</S>
                     <Or />
                     <S>Miss Jane Smith, Maid of Barony</S>
                     <N>(some prefer Maiden)</N>
                   </F>
-                  <F>
-                    Wife of heir: <S>Mrs Smith, Younger of Barony</S>
-                  </F>
                 </Forms>
+                <P>Unmarried daughters otherwise use the designation, as shown below.</P>
                 <P>If a baron holds a territorial designation, the TD typically takes precedence:</P>
                 <Forms>
                   <F>
@@ -427,6 +433,9 @@ export default function ProperAddressPage() {
                   </F>
                   <F>
                     Wife of heir: <S>Mrs Smith of TD, yr</S>
+                  </F>
+                  <F>
+                    Eldest daughter: <S>Miss Smith of TD</S>
                   </F>
                   <F>
                     Younger daughters: <S>Miss Mary Smith of TD</S>
@@ -694,8 +703,8 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  The heir to these higher dignities is the same as a baron “Younger of Lochaber” for a son, and for the
-                  oldest daughter “Maid of Lochaber”. Earls in the Baronage of Scotland, typically hold lordship or
+                  The heir to these higher dignities is the same as a baron’s: “Younger of Lochaber” for a son, and, where
+                  a daughter is the heir, “Maid of Lochaber”. Earls in the Baronage of Scotland, typically hold lordship or
                   barony subsidiary titles. For Pledged title holders, the Roll recommends special disposition allowing
                   their children use of their junior titles during their lifetimes, similar to courtesy titles in the
                   peerage but more like the Spanish nobility’s practice of subtitle transfer during a lifetime. This is a
