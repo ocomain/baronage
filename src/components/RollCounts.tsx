@@ -11,6 +11,10 @@ type Stats = { verified: number; dignities: number; unverified: number; pledged:
  * values from {@link ROLL_API}/api/stats replace them on mount.
  */
 const FALLBACK: Stats = { verified: 244, dignities: 325, unverified: 197, pledged: 137 };
+/** The date the FALLBACK figures were taken; replaced by today's date once live figures load. */
+const FALLBACK_DATE = "27 September 2026";
+const today = () =>
+  new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/London" });
 
 const isStats = (d: unknown): d is Stats =>
   !!d &&
@@ -22,13 +26,17 @@ const isStats = (d: unknown): d is Stats =>
 /** The Roll's live figures, written as a sentence for running text. */
 export function RollCounts() {
   const [s, setS] = useState<Stats>(FALLBACK);
+  const [asOf, setAsOf] = useState(FALLBACK_DATE);
 
   useEffect(() => {
     const ctrl = new AbortController();
     fetch(`${ROLL_API}/api/stats`, { signal: ctrl.signal })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((d) => {
-        if (isStats(d)) setS(d);
+        if (isStats(d)) {
+          setS(d);
+          setAsOf(today());
+        }
       })
       .catch(() => {
         /* keep FALLBACK */
@@ -38,7 +46,7 @@ export function RollCounts() {
 
   return (
     <>
-      It records <span className="tabular-nums">{s.verified}</span> verified holders with{" "}
+      As of {asOf} it records <span className="tabular-nums">{s.verified}</span> verified holders with{" "}
       <span className="tabular-nums">{s.dignities}</span> dignities in the baronage of Scotland between them;{" "}
       <span className="tabular-nums">{s.pledged}</span> of the holders are entered as pledged hereditary, and a
       further <span className="tabular-nums">{s.unverified}</span> claims await verification and are not on the Roll.
