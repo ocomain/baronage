@@ -212,10 +212,6 @@ export function DigitalAddressSimulator() {
       <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
         {/* The mock form */}
         <div className="border border-navy/15 bg-white shadow-[0_14px_34px_-24px_rgba(8,12,28,0.5)]">
-          <div className="border-b border-parchment-300/70 px-5 py-3">
-            <p className="font-sans text-sm font-semibold text-navy">Create your account</p>
-            <p className="font-sans text-xs text-muted">Step 1 of 3 · Your details</p>
-          </div>
           <div className="space-y-4 px-5 py-5">
             <div>
               <span className={labelCls}>Recommended entries</span>
