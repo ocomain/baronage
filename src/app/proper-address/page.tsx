@@ -575,10 +575,8 @@ export default function ProperAddressPage() {
                 <P>
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
                   and “Baron of X” are interchangeable, as the holder prefers, and both are correct, a lordship being, in
-                  Stair’s words, one of the “more noble titles of a barony”.<Ref n={1} /> “Lord Baron of X” is an
-                  ancient combined form: Borthwick records that “the earliest appearance of peers in Scotland is under
-                  the description of Lord Barons”, and it was the style of the Irish lords of Parliament in the
-                  seventeenth century.<Ref n={2} /> A Scots baron who is not a lord is only ever called a baron. Non-peerage
+                  Stair’s words, one of the “more noble titles of a barony”.<Ref n={1} /> A Scots baron who is not a lord
+                  is only ever called a baron. “Lord Baron of X” is an ancient combined form.<Ref n={2} /> Non-peerage
                   lords have been written both “Lord X” and “Lord of X” since the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
                   Lord of Graham in 1420, before he received the Lord of Parliament honour of 1445.<Ref n={3} /> The medieval
