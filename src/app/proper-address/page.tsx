@@ -67,6 +67,15 @@ function Src({ href, children }: { href: string; children: ReactNode }) {
     </a>
   );
 }
+/** Source for the heir's style, "Younger of" (and "Master" for a peer's heir). */
+const HEIR_SOURCE: ReactNode = (
+  <>
+    <em>An Introductory Survey of the Sources and Literature of Scots Law</em>, Stair Society, vol. 1 (1936), p. 433:
+    “Whilst the heir-apparent of a feudal baron is invariably styled ‘younger of’, the heir, whether apparent or
+    presumptive, of an earl or peerage-lord is ‘Master’.” Quoted in the{" "}
+    <Src href="https://dsl.ac.uk/entry/snd/maister_n1_v">Dictionaries of the Scots Language, “Maister”</Src>, sense 3.
+  </>
+);
 /** Source for post-nominal letters following the baronial title. */
 const POSTNOMINAL_SOURCE: ReactNode = (
   <>
@@ -388,8 +397,10 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir may be addressed with the courtesy title “Younger of Barony,” and oldest daughter “Maid”:
+                  The heir may be addressed with the courtesy title “Younger of Barony,”<Footnote n={1}>{HEIR_SOURCE}</Footnote> and
+                  oldest daughter “Maid”:
                 </P>
+                <div hidden>{HEIR_SOURCE}</div>
                 <Forms>
                   <F>
                     <S>Younger of Barony</S>
