@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
 
 const OFFICIAL_Q = "Is there an official register of Scottish baronies?";
 const OFFICIAL_A =
-  "No. Since 28 November 2004 a barony cannot be registered in the Land Register of Scotland or recorded in the Register of Sasines (Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63(2)), and no statute has created a register in their place. The Scottish Barony Register (SBR) is a private, non-statutory register. It replaces the Register of Sasines for the transfers of baronies voluntarily submitted to it since 2004, and records legal title, as the Register of Sasines did, and no more: it does not recognise or decline to recognise a title. The Roll of Scottish Barons does a different job: it recognises the title and catalogues the whole Baronage of Scotland, including dignities held by dynastic succession, chiefs, baronets and peers, which pass by inheritance and so have never appeared in any register of transfers. Nothing on the Roll is taken on trust: the evidence for every entry is published beside it.";
+  "No. Since 28 November 2004 a barony cannot be registered in the Land Register of Scotland or recorded in the Register of Sasines (Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63(2)), and no statute has created a register in their place. The Scottish Barony Register (SBR) is a private, non-statutory register. It replaces the Register of Sasines for the transfers of baronies voluntarily submitted to it since 2004, and records legal title, no more: it does not recognise or decline to recognise a title. The Roll of Scottish Barons does a different job: it recognises the title and catalogues the whole Baronage of Scotland, including dignities held by dynastic succession, chiefs, baronets and peers, which pass by inheritance and so have never appeared in any register of transfers. Nothing on the Roll is taken on trust: the evidence for every entry is published beside it.";
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -79,8 +79,7 @@ export default function SbrVsRollPage() {
                   </a>
                   , and no statute has created a register in their place. The Scottish Barony Register (SBR) is a
                   private, non-statutory register. It replaces the Register of Sasines for the transfers of baronies
-                  voluntarily submitted to it since 2004, and records legal title, as the Register of Sasines did, and
-                  no more: it does not recognise or decline to recognise a title. At its update of 9 August 2026 the
+                  voluntarily submitted to it since 2004, and records legal title, no more: it does not recognise or decline to recognise a title. At its update of 9 August 2026 the
                   SBR listed 214 baronies, the holder’s name shown as private for 143 of them.
                 </p>
                 <p>
@@ -97,22 +96,9 @@ export default function SbrVsRollPage() {
           <Reveal>
             <div className="prose-heritage mt-12">
               <p>
-                The Scottish Barony Register (SBR) replaces the Register of Sasines for baronies, which{" "}
-                <a
-                  href="https://www.legislation.gov.uk/asp/2000/5/section/63"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gold-deep underline decoration-gold/40 underline-offset-2 transition-colors hover:text-oxblood"
-                >
-                  since 2004 can no longer be recorded there
-                </a>
-                . That is the difference from the Roll. It is a private register of legal transfers, established in
-                2004 by members of the Scottish legal profession, under a Custodian whose certification the Lord Lyon
-                accepts as evidence of title. We recognise it as an authoritative source, and recommend that every holder of a
-                Scottish barony record their legal title there. The Roll is complementary to the SBR, not in
-                competition with it: The Roll also documents the wider historic baronage — dignities held by dynastic
-                succession, by chiefs, baronets and peers — for which the records of the Lyon Office stand as primary
-                evidence. Set side by side, the two serve different jobs:
+                The Lord Lyon accepts the SBR Custodian’s certification as evidence of title. We recognise the SBR
+                as an authoritative source, and recommend that every holder of a Scottish barony record their legal
+                title there. Side by side:
               </p>
             </div>
           </Reveal>
