@@ -11,7 +11,7 @@ type Stats = { verified: number; unverified: number; pledged: number };
  * are never blank and never wrong by more than the gap since the last deploy.
  * The live values from {@link ROLL_API}/api/stats replace these on mount.
  */
-const FALLBACK: Stats = { verified: 201, unverified: 200, pledged: 91 };
+const FALLBACK: Stats = { verified: 244, unverified: 197, pledged: 137 };
 
 const isStats = (d: unknown): d is Stats =>
   !!d &&
