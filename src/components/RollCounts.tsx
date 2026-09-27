@@ -3,18 +3,19 @@
 import { useEffect, useState } from "react";
 import { ROLL_API } from "@/lib/site";
 
-type Stats = { verified: number; unverified: number; pledged: number };
+type Stats = { verified: number; baronies: number; unverified: number; pledged: number };
 
 /**
  * Last-known counts from the Roll's D1 database (27 September 2026). Rendered at
  * build time and kept if JavaScript is off or the API is unreachable; the live
  * values from {@link ROLL_API}/api/stats replace them on mount.
  */
-const FALLBACK: Stats = { verified: 244, unverified: 197, pledged: 137 };
+const FALLBACK: Stats = { verified: 244, baronies: 300, unverified: 197, pledged: 137 };
 
 const isStats = (d: unknown): d is Stats =>
   !!d &&
   typeof (d as Stats).verified === "number" &&
+  typeof (d as Stats).baronies === "number" &&
   typeof (d as Stats).unverified === "number" &&
   typeof (d as Stats).pledged === "number";
 
@@ -37,9 +38,10 @@ export function RollCounts() {
 
   return (
     <>
-      It records <span className="tabular-nums">{s.verified}</span> verified entries,{" "}
-      <span className="tabular-nums">{s.pledged}</span> of them pledged hereditary titles; a further{" "}
-      <span className="tabular-nums">{s.unverified}</span> claims await verification and are not on the Roll.
+      It records <span className="tabular-nums">{s.verified}</span> verified holders with{" "}
+      <span className="tabular-nums">{s.baronies}</span> baronies between them;{" "}
+      <span className="tabular-nums">{s.pledged}</span> of the holders are entered as pledged hereditary, and a
+      further <span className="tabular-nums">{s.unverified}</span> claims await verification and are not on the Roll.
     </>
   );
 }
