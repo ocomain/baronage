@@ -7,10 +7,10 @@ import { PaperThumbnail } from "@/components/PaperThumbnail";
 import { FEATURED_PAPER } from "@/lib/site";
 
 const HREF = `/reading-room/${FEATURED_PAPER.slug}/`;
-// Both keyed by slug, so featuring a different paper shows the card again to visitors who closed the last one.
-// localStorage: closed with X — never shown again.
+// Both in sessionStorage and keyed by slug, so they last for one visit only.
+// Closed with X — hidden for the rest of this visit; it shows again on the next.
 const CLOSED_KEY = `bsa-featured-closed:${FEATURED_PAPER.slug}`;
-// sessionStorage: the card has already slid in this visit — show it at once on every later page.
+// The card has already slid in this visit — show it at once on every later page.
 const REVEALED_KEY = `bsa-featured-revealed:${FEATURED_PAPER.slug}`;
 
 // Storage can be unavailable (private windows, blocked site data); the card then simply behaves as first-visit.
@@ -29,8 +29,9 @@ function writeKey(kind: "local" | "session", key: string, value: string) {
 
 /**
  * Non-blocking featured-paper card. Slides in four seconds after a visitor arrives, or once they start
- * scrolling, then stays on every page of the visit until closed with X — reading the paper does not close it.
- * Hidden while on the paper itself. Sits beneath the mobile menu (z-30 under its z-40 overlay).
+ * scrolling, then stays on every page of the visit until closed with X, which hides it for the rest of
+ * that visit only — reading the paper does not close it, and Esc (which closes reference pop-ups) never
+ * touches it. Hidden while on the paper itself. Sits beneath the mobile menu (z-30 under its z-40 overlay).
  */
 export function FeaturedPaper() {
   const pathname = usePathname();
@@ -38,8 +39,15 @@ export function FeaturedPaper() {
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
+    // Until 2026-09-28 a close was kept for good in localStorage; clear it so those visitors see the card again.
+    try {
+      localStorage.removeItem(CLOSED_KEY);
+    } catch {}
+  }, []);
+
+  useEffect(() => {
     const onPaper = pathname.replace(/\/?$/, "/") === HREF;
-    const ok = !onPaper && readKey("local", CLOSED_KEY) === null;
+    const ok = !onPaper && readKey("session", CLOSED_KEY) === null;
     setEligible(ok);
     if (!ok) setShown(false);
   }, [pathname]);
@@ -66,19 +74,10 @@ export function FeaturedPaper() {
   }, [eligible, shown]);
 
   const dismiss = useCallback(() => {
-    writeKey("local", CLOSED_KEY, "1");
+    writeKey("session", CLOSED_KEY, "1");
     setShown(false);
     setEligible(false);
   }, []);
-
-  useEffect(() => {
-    if (!shown) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") dismiss();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [shown, dismiss]);
 
   if (!eligible) return null;
 
