@@ -17,9 +17,6 @@ type Preset = { name: string; title: string; first: string; surname: string };
 const labelCls = "font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep";
 const fieldCls =
   "mt-1 w-full border border-navy/20 bg-white px-3 py-2 font-sans text-base text-ink shadow-[inset_0_1px_2px_rgba(8,12,28,0.06)] outline-none focus:border-gold";
-/** A form field the simulator fills in for the reader: looks entered, cannot be typed into. */
-const filledCls =
-  "mt-1 w-full cursor-default border border-navy/10 bg-parchment-50 px-3 py-2 font-sans text-base text-ink outline-none";
 const chipBase =
   "inline-flex cursor-pointer items-center gap-1.5 rounded-full border px-3.5 py-2 font-sans text-sm font-medium leading-none transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60";
 const chipOn = `${chipBase} border-navy bg-navy text-parchment-50 shadow-[0_6px_16px_-10px_rgba(8,12,28,0.6)]`;
@@ -88,33 +85,46 @@ function presetsFor(mode: TitleMode, holder: Holder, F: string, S: string, B: st
 export function DigitalAddressSimulator() {
   const [holder, setHolder] = useState<Holder>("baron");
   const [mode, setMode] = useState<TitleMode>("dropdown");
-  const [first, setFirst] = useState("John");
-  const [surname, setSurname] = useState("Smith");
-  const [barony, setBarony] = useState("Inverness");
   const [sig, setSig] = useState<SigStyle>("short");
 
-  const F = first.trim() || "John";
-  const S = surname.trim() || "Smith";
-  const B = barony.trim() || "Inverness";
+  // The reader's names, read from what they type into the form itself: first name, family name and
+  // barony. Each keeps its last good value while a field holds a title rather than a name.
+  const [F, setF] = useState("John");
+  const [S, setS] = useState("Smith");
+  const [B, setB] = useState("Inverness");
   const R = holder === "baron" ? "Baron" : "Baroness";
+  const TITLE_WORD = /\b(the|baron|baroness|lady|lord|much|hon|honoured|mr|mrs|ms)\b/i;
+  const readFirst = (v: string) => {
+    const t = v.trim();
+    if (t && !TITLE_WORD.test(t) && !/\bof\b/i.test(t)) setF(t);
+  };
+  const readSurname = (v: string) => {
+    const t = v.trim();
+    const of = /\bof\s+([^,]+)$/i.exec(t);
+    if (of && of[1].trim()) setB(of[1].trim());
+    const family = (of ? t.slice(0, of.index) : t).replace(/,.*$/, "").trim();
+    if (family && !TITLE_WORD.test(family)) setS(family);
+  };
 
-  // The mock form. Names are typed once, in "Your details" above; the recommended entry fills the
-  // form's First name and Surname from them (shown, not typed). Only the Title can be changed here.
+  // The mock form's fields: filled by the recommended entries, and free to edit.
   const presets = presetsFor(mode, holder, F, S, B);
   const [presetIdx, setPresetIdx] = useState(0);
-  const current = presets[Math.min(presetIdx, presets.length - 1)];
-  const fFirst = current.first;
-  const fSurname = current.surname;
-  const [fTitle, setFTitle] = useState(current.title);
+  const [fTitle, setFTitle] = useState(presets[0].title);
+  const [fFirst, setFFirst] = useState(presets[0].first);
+  const [fSurname, setFSurname] = useState(presets[0].surname);
   const applyPreset = (i: number) => {
+    const p = presets[i] ?? presets[0];
     setPresetIdx(i);
-    setFTitle((presetsFor(mode, holder, F, S, B)[i] ?? presets[0]).title);
+    setFTitle(p.title);
+    setFFirst(p.first);
+    setFSurname(p.surname);
   };
-  // Re-apply the chosen entry's title whenever the names, holder or form type change.
+  // Re-apply the chosen entry when the holder or form type changes (not while the reader is typing).
   useEffect(() => {
-    setFTitle(current.title);
+    const i = Math.min(presetIdx, presets.length - 1);
+    applyPreset(i);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mode, holder, F, S, B, presetIdx]);
+  }, [mode, holder]);
 
   const displayOptions = [
     `The ${R}`,
@@ -154,26 +164,12 @@ export function DigitalAddressSimulator() {
     <div className="mt-8 border border-parchment-300/70 bg-parchment-50 p-6 sm:p-8">
       <p className="font-inscribe text-[0.68rem] uppercase tracking-[0.22em] text-gold-deep">Worked example</p>
       <p className="mt-2 font-serif text-lg leading-relaxed text-ink">
-        Type your own names, choose the kind of title field the system offers, and fill in the form as you would on a
+        Choose the kind of title field the system offers, then fill in the form with your own names as you would on a
         real site. The panel shows what that system will make of it.
       </p>
 
-      {/* Your details and the system */}
-      <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <label className="block">
-          <span className={labelCls}>Your first name</span>
-          <input className={fieldCls} value={first} onChange={(e) => setFirst(e.target.value)} />
-        </label>
-        <label className="block">
-          <span className={labelCls}>Your family name</span>
-          <input className={fieldCls} value={surname} onChange={(e) => setSurname(e.target.value)} />
-        </label>
-        <label className="block">
-          <span className={labelCls}>Your barony</span>
-          <input className={fieldCls} value={barony} onChange={(e) => setBarony(e.target.value)} />
-        </label>
-      </div>
-      <div className="mt-4 grid gap-4 sm:grid-cols-[auto_1fr]">
+      {/* The holder and the system */}
+      <div className="mt-6 grid gap-4 sm:grid-cols-[auto_1fr]">
         <div>
           <span className={labelCls}>You are</span>
           <Chips
@@ -233,13 +229,26 @@ export function DigitalAddressSimulator() {
             </label>
             <label className="block">
               <span className="font-sans text-xs font-medium text-ink-soft">First name</span>
-              <input className={filledCls} value={fFirst} readOnly tabIndex={-1} />
+              <input
+                className={fieldCls}
+                value={fFirst}
+                onChange={(e) => {
+                  setFFirst(e.target.value);
+                  readFirst(e.target.value);
+                }}
+              />
             </label>
             <label className="block">
               <span className="font-sans text-xs font-medium text-ink-soft">Surname</span>
-              <input className={filledCls} value={fSurname} readOnly tabIndex={-1} />
+              <input
+                className={fieldCls}
+                value={fSurname}
+                onChange={(e) => {
+                  setFSurname(e.target.value);
+                  readSurname(e.target.value);
+                }}
+              />
             </label>
-            <p className="-mt-2 font-sans text-xs text-muted">Filled from your details above.</p>
             <label className="block">
               <span className="font-sans text-xs font-medium text-ink-soft">Display name (if the system has one)</span>
               <select className={fieldCls} value={String(displayIdx)} onChange={(e) => setDisplayIdx(Number(e.target.value))}>
