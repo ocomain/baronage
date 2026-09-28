@@ -1,3 +1,5 @@
+import { NavBadge } from "@/components/NavBadge";
+import { SectionSidebar } from "@/components/SectionSidebar";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
     "The correct forms of address, salutation and precedence for Scottish Barons and Baronesses — written, verbal and digital — preserving the dignity of the title.",
 };
 
-const NAV = [
+const NAV: { id: string; label: string; badge?: string }[] = [
   { id: "verbal", label: "Address" },
   { id: "written", label: "Written Address" },
   { id: "salutation", label: "Salutation in Letters" },
@@ -22,7 +24,7 @@ const NAV = [
   { id: "special", label: "Special Considerations" },
   { id: "dowager", label: "Widow or Dowager" },
   { id: "higher", label: "Higher Dignities" },
-  { id: "digital", label: "Digital Address Guidelines" },
+  { id: "digital", label: "Digital Address Guidelines", badge: "New" },
 ];
 
 /* ---- typographic primitives (serif, high-contrast, like the source) ---- */
@@ -181,10 +183,12 @@ export default function ProperAddressPage() {
         </Container>
       </Section>
 
+      <SectionSidebar items={NAV} anchorId="page-nav" />
+
       {/* In-page quick navigation */}
       <div className="border-y border-parchment-300/60 bg-white">
         <Container size="prose">
-          <nav className="flex flex-wrap gap-x-5 gap-y-2 py-4 text-sm">
+          <nav id="page-nav" className="flex flex-wrap gap-x-5 gap-y-2 py-4 text-sm">
             {NAV.map((n) => (
               <a
                 key={n.id}
@@ -192,6 +196,7 @@ export default function ProperAddressPage() {
                 className="nav-link font-sans text-[0.66rem] uppercase tracking-[0.14em] text-navy/60 transition-colors hover:text-oxblood"
               >
                 {n.label}
+                {n.badge && <NavBadge>{n.badge}</NavBadge>}
               </a>
             ))}
           </nav>

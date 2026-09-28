@@ -2,23 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
 import { ExternalArrow } from "./primitives";
 import { navLinks, ROLL_URL, CALENDLY_URL } from "@/lib/site";
 
-/** Gold "New" pill beside a nav label — marks a recently added section. */
-function NavBadge({ children }: { children: ReactNode }) {
-  return (
-    <span
-      aria-label="new section"
-      className="ml-1.5 inline-block rounded-[2px] bg-gold px-1.5 py-[2px] font-sans text-[0.5rem] font-semibold uppercase leading-none tracking-[0.16em] text-navy-deep"
-    >
-      {children}
-    </span>
-  );
-}
 
 function useScrolled(threshold = 12) {
   const [scrolled, setScrolled] = useState(false);
