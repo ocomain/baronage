@@ -73,7 +73,7 @@ function presetsFor(mode: TitleMode, holder: Holder, F: string, S: string, B: st
   if (mode === "free")
     return [
       { name: `${R} · of ${B}`, title: R, first: F, surname: `of ${B}` },
-      { name: "The Much Honoured", title: "The Much Honoured", first: F, surname: `${S} ${R} of ${B}` },
+      { name: "Much Hon", title: "Much Hon", first: F, surname: `${S} ${R} of ${B}` },
       { name: `The ${R} of ${B}`, title: `The ${R} of ${B}`, first: F, surname: S },
     ];
   return [
