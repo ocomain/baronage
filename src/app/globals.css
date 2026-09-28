@@ -376,6 +376,14 @@ html {
   font-size: 0.7rem; font-style: normal; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--color-muted);
 }
+.paper-body .paper-pullquote__note {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-serif);
+  font-size: 1rem; font-style: italic; line-height: 1.45;
+  color: var(--color-ink-soft);
+}
+.paper-body .paper-anchor { scroll-margin-top: 8rem; }
 .paper-body .paper-findings__note {
   margin: 1.5rem 0 0;
   text-align: center;
