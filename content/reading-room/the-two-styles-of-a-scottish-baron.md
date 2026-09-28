@@ -12,6 +12,19 @@ reviewed: 2026-09-27
 
 *“To our traist freynd the barroun of Kylrawak,” wrote Mary Queen of Scots from Aberdeen on 3 November 1562. Five years later a writ in her name called the same baron “Hucheoun Ros of Kilrawak”. The first gives him his title, the barony, a dignity and title of nobility; the second gives his name, with its territorial designation. A Scottish baron had both, and the records move freely between them. This paper sets out the evidence as it stands: the Kilravock papers, the Forbes, Leys and Irvine charters, and a count across four volumes of Aberdeen and Banff records.*
 
+<section class="paper-findings" aria-label="Key findings">
+<p class="paper-findings__eyebrow">Key findings, checked against the records</p>
+<div class="paper-stats">
+<div class="paper-stat"><span class="paper-stat__value">c. 60</span><span class="paper-stat__label">of some 150 mentions in the Kilravock papers give the title, “baron of Kilravock”</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
+<div class="paper-stat"><span class="paper-stat__value">0</span><span class="paper-stat__label">times a Rose of Kilravock calls himself “laird” in anything he wrote or signed</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
+<div class="paper-stat"><span class="paper-stat__value">80%</span><span class="paper-stat__label">of the territorial designations the Lyon Court gazetted in 1967–79 carry no baron’s mark</span><a class="paper-stat__link" href="#in-the-lyon-register">The evidence</a></div>
+<div class="paper-stat"><span class="paper-stat__value">1672</span><span class="paper-stat__label">the Lyon Register gives the lesser barons a section of their own</span><a class="paper-stat__link" href="#in-the-lyon-register">The evidence</a></div>
+</div>
+<blockquote class="paper-pullquote"><p>“To our right traist freind the Baron of Kilrawack.”</p><cite>The Privy Council of Scotland, 1 August 1632</cite></blockquote>
+<blockquote class="paper-pullquote"><p>“the honored Hugh Rose baron and laird of Kilraock”</p><cite>An Inverness baker’s receipt for his funeral, 11 February 1732</cite></blockquote>
+<p class="paper-findings__note">Every figure and quotation here comes from a record cited in this paper and has been checked against the printed page or the Lyon Court’s notice. The evidence follows, with its sources in the notes.</p>
+</section>
+
 ## Two parties, both with evidence
 
 The argument is old. Sir George Mackenzie recorded in 1680 that the old barons, “especially where they are Chiefs of Clans”, refused to yield precedence to baronets, although “the other pretend that a Baron is no Name of Dignity”.[^1] J. H. Stevenson took the second side for modern scholarship: “the mere territorial baron has no title of dignity appropriated to him”.[^2] Sir Thomas Innes of Learney took the first, marshalling letters, suit-rolls and Lyon Court records in which men are called “Baron of X” outright; in 1943 the Court of the Lord Lyon found the minor barons recognised as a “titled nobility”.[^3]
