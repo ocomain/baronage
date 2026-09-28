@@ -209,10 +209,10 @@ export function DigitalAddressSimulator() {
         </div>
       </div>
 
-      <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
+      <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
         {/* The mock form */}
         <div className="border border-navy/15 bg-white shadow-[0_14px_34px_-24px_rgba(8,12,28,0.5)]">
-          <div className="space-y-4 px-5 py-5">
+          <div className="space-y-4 px-5 pb-5 pt-3">
             <div>
               <span className={labelCls}>Recommended entries</span>
               <Chips
@@ -254,11 +254,6 @@ export function DigitalAddressSimulator() {
                 ))}
               </select>
             </label>
-            <div className="pt-1">
-              <span className="inline-block cursor-default border border-navy bg-navy px-4 py-2 font-sans text-sm font-semibold text-parchment-50">
-                Continue
-              </span>
-            </div>
           </div>
         </div>
 
