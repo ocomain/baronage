@@ -14,15 +14,13 @@ reviewed: 2026-09-27
 
 <section class="paper-findings" aria-label="Key findings">
 <p class="paper-findings__eyebrow">Key findings, checked against the records</p>
-<div class="paper-stats">
-<div class="paper-stat"><span class="paper-stat__value">c. 60</span><span class="paper-stat__label">of some 150 mentions in the Kilravock papers give the title, “baron of Kilravock”</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
+<blockquote class="paper-pullquote"><p>“To our right traist freind the Baron of Kilrawack.”</p><cite>The Privy Council of Scotland, 1 August 1632</cite><span class="paper-pullquote__note">It shows the title used at the top of government.</span></blockquote>
+<div class="paper-stats paper-stats--three">
+<div class="paper-stat"><span class="paper-stat__value">60</span><span class="paper-stat__label">of 150 mentions in the Kilravock papers give the title, “baron of Kilravock”</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">Zero</span><span class="paper-stat__label">times a Rose of Kilravock calls himself “laird” in anything he wrote or signed</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">80%</span><span class="paper-stat__label">of territorial designations are lairds, not barons</span><a class="paper-stat__link" href="#lairds-not-barons">The evidence</a></div>
-<div class="paper-stat"><span class="paper-stat__value">1672</span><span class="paper-stat__label">the Lyon Register gives the minor barons a section of their own</span><a class="paper-stat__link" href="#in-the-lyon-register">The evidence</a></div>
 </div>
-<blockquote class="paper-pullquote"><p>“To our right traist freind the Baron of Kilrawack.”</p><cite>The Privy Council of Scotland, 1 August 1632</cite><span class="paper-pullquote__note">It shows the title used at the top of government.</span></blockquote>
 <blockquote class="paper-pullquote"><p>“the honored Hugh Rose baron and laird of Kilraock”</p><cite>An Inverness baker’s receipt for his funeral, 11 February 1732</cite><span class="paper-pullquote__note">It shows locals and neighbours used laird.</span></blockquote>
-<p class="paper-findings__note">Every figure and quotation here comes from a record cited in this paper and has been checked against the printed page or Lyon’s notice. The evidence follows, with its sources in the notes.</p>
 </section>
 
 ## Two parties, both with evidence
@@ -104,7 +102,7 @@ The Lyon Court’s own records show the same two forms, and explain why the titl
 
 Once entries were made in date order, a change Innes dates to a recommendation of Lord Coulston in 1764, a baron’s status had to be written into the entry itself. Innes cites examples from the Register: “Sir Alexander Colquhoun, Baron of Colquhoun”, Sir George Brisbane, Baron of Brisbane, and “Aylmer Hunter, Baron of Hunterston”.[^53] The Lyon Court’s second register, of genealogies and birthbriefs, used the title freely. The Innes birthbrief, recorded in an earlier volume that no longer survives, is subscribed by the Lord Lyon, Sir Alexander Erskine, “Ego Alexander Areskinus Baro de Cambo”, and names ancestors’ wives as daughters of the “Baronis de Fyvie” and the “Baronis de Gight”.[^54] In the surviving volumes of that register Innes found Lord Lyon Brodie styling himself Baron of Brodie, and in almost every birthbrief with baronial ancestors found them described as “A.B. Baro de C.”, a usage he follows into the nineteenth century.[^55] By his account the Lyon Court’s documents used “simply ‘Baron of X’ down to late in the nineteenth century”; the longer “Baron of the Barony of X” appeared in a matriculation of 1932, and the plain form was “since resumed”, as in the Esslemont matriculation of 1934.[^56]
 
-The same records show that barons were a small minority of those the Lyon Court recorded, and that most lairds with a territorial designation were not barons. In Gordon of Hallhead’s case it was calculated that baronial registrations made up “about 7½ per cent” of the Register.[^57] The Rolls of the Chiefs and Heads of Territorial Houses that the Court printed in the Edinburgh Gazette from 1951 to 2005 point the same way. Not every recognition was gazetted, and until 1967 the Rolls had no mark for a baron at all, so a minor baron recognised as such before then appears only by his name and designation. <span id="lairds-not-barons" class="paper-anchor"></span>Once the mark was introduced, about 80 per cent of the entries printed to 1979 are lairds’ designations without it.[^58]
+<span id="lairds-not-barons" class="paper-anchor"></span>The same records show that barons were a small minority of those the Lyon Court recorded, and that most lairds with a territorial designation were not barons. In Gordon of Hallhead’s case it was calculated that baronial registrations made up “about 7½ per cent” of the Register.[^57] The Rolls of the Chiefs and Heads of Territorial Houses that the Court printed in the Edinburgh Gazette from 1951 to 2005 point the same way. Not every recognition was gazetted, and until 1967 the Rolls had no mark for a baron at all, so a minor baron recognised as such before then appears only by his name and designation. Once the mark was introduced, about 80 per cent of the entries printed to 1979 are lairds’ designations without it.[^58]
 
 ## What the record shows
 

@@ -335,6 +335,9 @@ html {
 @media (min-width: 520px) {
   .paper-body .paper-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+@media (min-width: 640px) {
+  .paper-body .paper-stats--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 .paper-body .paper-stat {
   display: flex; flex-direction: column; align-items: center;
   padding: 1rem 0.75rem 0.9rem;
@@ -363,6 +366,7 @@ html {
   border: 0;
   text-align: center;
 }
+.paper-body .paper-findings__eyebrow + blockquote.paper-pullquote { margin: 0 0 1.5rem; }
 .paper-body blockquote.paper-pullquote p {
   margin: 0;
   font-family: var(--font-display);
