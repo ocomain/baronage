@@ -14,12 +14,12 @@ reviewed: 2026-09-27
 
 <section class="paper-findings" aria-label="Key findings">
 <p class="paper-findings__eyebrow">Key findings, checked against the records</p>
-<blockquote class="paper-pullquote"><p>“To our right traist freind the Baron of Kilrawack.”</p><cite>The Privy Council of Scotland, 1 August 1632</cite><span class="paper-pullquote__note">It shows the title used at the top of government.</span></blockquote>
 <div class="paper-stats paper-stats--three">
 <div class="paper-stat"><span class="paper-stat__value">60</span><span class="paper-stat__label">of 150 mentions in the Kilravock papers give the title, “baron of Kilravock”</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">Zero</span><span class="paper-stat__label">times a Rose of Kilravock calls himself “laird” in anything he wrote or signed</span><a class="paper-stat__link" href="#the-kilravock-papers">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">80%</span><span class="paper-stat__label">of territorial designations are lairds, not barons</span><a class="paper-stat__link" href="#lairds-not-barons">The evidence</a></div>
 </div>
+<blockquote class="paper-pullquote"><p>“To our right traist freind the Baron of Kilrawack.”</p><cite>The Privy Council of Scotland, 1 August 1632</cite><span class="paper-pullquote__note">It shows the title used at the top of government.</span></blockquote>
 <blockquote class="paper-pullquote"><p>“the honored Hugh Rose baron and laird of Kilraock”</p><cite>An Inverness baker’s receipt for his funeral, 11 February 1732</cite><span class="paper-pullquote__note">It shows locals and neighbours used laird.</span></blockquote>
 </section>
 
