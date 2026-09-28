@@ -697,7 +697,7 @@ export default function ProperAddressPage() {
                   ))}
                 </ol>
                 <P>
-                  Formally, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”; socially “Lord X” is also used,
+                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”; socially “Lord X” is also used,
                   just as a baroness may be “Lady X”.
                 </P>
                 <P>Lordship example:</P>
