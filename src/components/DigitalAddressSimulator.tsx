@@ -16,12 +16,12 @@ type Preset = { name: string; title: string; first: string; surname: string };
 
 const labelCls = "font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep";
 const fieldCls =
-  "mt-1 w-full border border-navy/20 bg-white px-3 py-2 font-sans text-base text-ink shadow-[inset_0_1px_2px_rgba(8,12,28,0.06)] outline-none focus:border-gold";
+  "mt-1 w-full border border-navy/20 bg-white px-3 py-1.5 font-sans text-base text-ink shadow-[inset_0_1px_2px_rgba(8,12,28,0.06)] outline-none focus:border-gold";
 const chipBase =
   "inline-flex cursor-pointer items-center gap-1.5 rounded-full border px-3.5 py-2 font-sans text-sm font-medium leading-none transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60";
 const chipOn = `${chipBase} border-navy bg-navy text-parchment-50 shadow-[0_6px_16px_-10px_rgba(8,12,28,0.6)]`;
 const chipOff = `${chipBase} border-navy/35 bg-white text-navy hover:border-navy hover:bg-parchment-100`;
-const outBox = "border border-gold/40 bg-white px-5 py-4";
+const outBox = "border border-gold/40 bg-white px-4 py-3";
 
 const DROPDOWN = ["Mr", "Mrs", "Ms", "Miss", "Dr", "Baron", "Baroness", "Lady", "Lord", "Sir", "Prof"];
 const MRMS = ["Mr", "Mrs", "Ms"];
@@ -203,7 +203,7 @@ export function DigitalAddressSimulator() {
       <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
         {/* The mock form */}
         <div className="border border-navy/15 bg-white shadow-[0_14px_34px_-24px_rgba(8,12,28,0.5)]">
-          <div className="space-y-4 px-5 pb-5 pt-3">
+          <div className="space-y-3 px-5 pb-4 pt-3">
             <div>
               <span className={labelCls}>Recommended entries</span>
               <Chips
@@ -213,31 +213,33 @@ export function DigitalAddressSimulator() {
                 options={presets.map((p, i) => ({ label: p.name, value: String(i) }))}
               />
             </div>
-            <label className="block">
-              <span className="font-sans text-xs font-medium text-ink-soft">Title</span>
-              {mode === "free" ? (
-                <input className={fieldCls} value={fTitle} onChange={(e) => setFTitle(e.target.value)} />
-              ) : (
-                <select className={fieldCls} value={fTitle} onChange={(e) => setFTitle(e.target.value)}>
-                  {titleList.map((t) => (
-                    <option key={t} value={t}>
-                      {t}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </label>
-            <label className="block">
-              <span className="font-sans text-xs font-medium text-ink-soft">First name</span>
-              <input
-                className={fieldCls}
-                value={fFirst}
-                onChange={(e) => {
-                  setFFirst(e.target.value);
-                  readFirst(e.target.value);
-                }}
-              />
-            </label>
+            <div className="grid gap-3 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+              <label className="block">
+                <span className="font-sans text-xs font-medium text-ink-soft">Title</span>
+                {mode === "free" ? (
+                  <input className={fieldCls} value={fTitle} onChange={(e) => setFTitle(e.target.value)} />
+                ) : (
+                  <select className={fieldCls} value={fTitle} onChange={(e) => setFTitle(e.target.value)}>
+                    {titleList.map((t) => (
+                      <option key={t} value={t}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </label>
+              <label className="block">
+                <span className="font-sans text-xs font-medium text-ink-soft">First name</span>
+                <input
+                  className={fieldCls}
+                  value={fFirst}
+                  onChange={(e) => {
+                    setFFirst(e.target.value);
+                    readFirst(e.target.value);
+                  }}
+                />
+              </label>
+            </div>
             <label className="block">
               <span className="font-sans text-xs font-medium text-ink-soft">Surname</span>
               <input
@@ -263,17 +265,17 @@ export function DigitalAddressSimulator() {
         </div>
 
         {/* What the system makes of it */}
-        <div className="space-y-4 lg:sticky lg:top-28 lg:self-start">
+        <div className="space-y-3 lg:sticky lg:top-28 lg:self-start">
           <div className={outBox}>
             <p className={labelCls}>Your name as the system shows it</p>
-            <p className="mt-2 font-display text-2xl leading-snug text-navy sm:text-[1.7rem]" aria-live="polite">
+            <p className="mt-1 font-display text-xl leading-snug text-navy sm:text-2xl" aria-live="polite">
               {profile}
             </p>
             <p className="mt-1 font-sans text-xs text-muted">Title + first name + surname, as most profiles and labels are built.</p>
           </div>
           <div className={outBox}>
             <p className={labelCls}>The greeting in its emails</p>
-            <p className="mt-2 font-display text-2xl leading-snug text-navy" aria-live="polite">
+            <p className="mt-1 font-display text-xl leading-snug text-navy sm:text-2xl" aria-live="polite">
               {greeting}
             </p>
             <p className={`mt-1.5 font-serif text-sm italic ${greetingOk ? "text-gold-deep" : "text-oxblood"}`}>
@@ -287,7 +289,7 @@ export function DigitalAddressSimulator() {
           </div>
           <div className={outBox}>
             <p className={labelCls}>Display name, where shown</p>
-            <p className="mt-2 font-display text-2xl leading-snug text-navy">{fDisplay.replace(" (Pledged titles)", "")}</p>
+            <p className="mt-1 font-display text-xl leading-snug text-navy sm:text-2xl">{fDisplay.replace(" (Pledged titles)", "")}</p>
           </div>
           <p className="font-serif text-sm italic text-muted">
             Never “Mr {S}”, “{R} {S}” or “{R} {B}”. Salutation in letters: “{correct}”.
