@@ -73,7 +73,7 @@ function presetsFor(mode: TitleMode, holder: Holder, F: string, S: string, B: st
   if (mode === "free")
     return [
       { name: `${R} · of ${B}`, title: R, first: F, surname: `of ${B}` },
-      { name: "The Much Honoured", title: "The Much Honoured", first: F, surname: `${S}, ${R} of ${B}` },
+      { name: "The Much Honoured", title: "The Much Honoured", first: F, surname: `${S} ${R} of ${B}` },
       { name: `The ${R} of ${B}`, title: `The ${R} of ${B}`, first: F, surname: S },
     ];
   return [
@@ -102,7 +102,7 @@ export function DigitalAddressSimulator() {
     const t = v.trim();
     const of = /\bof\s+([^,]+)$/i.exec(t);
     if (of && of[1].trim()) setB(of[1].trim());
-    const family = (of ? t.slice(0, of.index) : t).replace(/,.*$/, "").trim();
+    const family = (of ? t.slice(0, of.index) : t).replace(/,.*$/, "").replace(/\s*\b(the\s+)?(baron|baroness|lady|lord)\s*$/i, "").trim();
     if (family && !TITLE_WORD.test(family)) setS(family);
   };
 
