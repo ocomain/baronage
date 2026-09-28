@@ -139,8 +139,9 @@ const HIGHER_SOURCES: ReactNode[] = [
     Lord Lyon Sellar, <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (petition of 10 February 2006; Note c. 2010), reported as <em>Sturzenegger, Petitioner (No 2)</em> 2015 SLT (Lyon Ct) 2: of the passages in Stair and Erskine, “it suggests to me that in terms of the feudal grant the owner has no claim to a style greater than that of baron”; the petition for recognition as “Feudal Earl of Arran” was refused.
   </>,
   <>
-    Innes of Learney (1945), p. 157 (“a subsisting yet very ancient ‘Order’ in the Realm of Scotland”); Act of the Parliament of Scotland, 20 December 1567, article 33: “the barons of this realm ought to have vote in parliament as a part of the nobility” —{" "}
-    <Src href="https://www.rps.ac.uk/trans/1567/12/45">RPS 1567/12/45</Src>; quoted by Innes at p. 132. See{" "}
+    Act of the Parliament of Scotland, 20 December 1567, article 33: “the barons of this realm ought to have vote in parliament as a part of the nobility” —{" "}
+    <Src href="https://www.rps.ac.uk/trans/1567/12/45">RPS 1567/12/45</Src>. Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), p. 132, quoting the Act: “This clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’” —{" "}
+    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. See{" "}
     <Link href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Innes of Learney, 1945</Link>.
   </>,
 ];
@@ -540,11 +541,12 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
                 <p className="mt-6 font-serif text-xl font-bold italic leading-[1.8] text-navy">
-                  A baron, lord, earl or marquis in the baronage of Scotland are all barons of the Kingdom of Scotland:
-                  the higher ranks are, in Stair’s words, “but more noble titles of a barony”.<Ref n={1} /> Innes of
-                  Learney called the baronage “a subsisting yet very ancient ‘Order’ in the Realm of Scotland”, and Parliament in 1567 declared that “the barons of this realm ought to have vote
-                  in Parliament as a part of the nobility”.<Ref n={10} /> The Esslemont Memorial of 1934, upheld by
-                  Lord Lyon Grant and printed by Innes, called them “truly constitutional barons”.<Ref n={5} />
+                  A baron, a lord, earl or marquis in the baronage of Scotland are all barons of the Kingdom of Scotland,
+                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”,<Ref n={1} />{" "}
+                  and the Parliament of Scotland declared in 1567 that “the barons of this realm ought to have vote in
+                  parliament as a part of the nobility”, an Act which, in the words of Lord Lyon Innes of Learney,
+                  “clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its
+                  constitutional sense, and as an ‘Order’ or ‘Estate’”.<Ref n={10} />
                 </p>
                 <P>
                   Over 90% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
@@ -704,6 +706,9 @@ export default function ProperAddressPage() {
                     Scottish baronial lord: <S>The Much Honoured Lord of Lochaber</S><Or /><S>Baron of Lochaber</S>, never
                     Baron Lochaber; socially also <S>Lord Lochaber</S>
                     <N>(spoken Lochaber)</N>
+                  </F>
+                  <F>
+                    Baron without a lordship: <S>The Much Honoured Baron of Lochaber</S>, never Lord
                   </F>
                   <F>
                     Peer: <S>The Right Honourable The Lord Lochaber</S>
