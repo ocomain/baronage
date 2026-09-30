@@ -78,6 +78,13 @@ const HEIR_SOURCE: ReactNode = (
     <Src href="https://dsl.ac.uk/entry/snd/maister_n1_v">Dictionaries of the Scots Language, “Maister”</Src>, sense 3.
   </>
 );
+/** Source for "Lady of X" used by a lady laird in her own right. */
+const LADY_SOURCE: ReactNode = (
+  <>
+    Catherine Maxwell Stuart, 21st Lady of Traquair, signs the welcome on Traquair House’s own site —{" "}
+    <Src href="https://www.traquair.co.uk/about-traquair/">traquair.co.uk, “About Traquair”</Src>.
+  </>
+);
 /** Source for post-nominal letters following the baronial title. */
 const POSTNOMINAL_SOURCE: ReactNode = (
   <>
@@ -98,6 +105,7 @@ const TD_SOURCES: ReactNode = (
       <Link href="/reading-room/esslemont-petition-1934/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">The Esslemont petition of 1934</Link>.
     </li>
     <li>{POSTNOMINAL_SOURCE}</li>
+    <li>{LADY_SOURCE}</li>
   </ol>
 );
 /** Sources for the higher-dignities note; opened from the numbered markers and from "Authority & sources". */
@@ -319,8 +327,15 @@ export default function ProperAddressPage() {
                 <P>
                   “Lady Jane” is incorrect and should never be used — this is the title for daughters of a senior
                   peer: a Duke, Marquis, or Earl. Forms such as “Lady Jane Inverness” or “Baron John of Inverness” are
-                  often seen, but are still socially incorrect. The phrase “Lady of Inverness” is wrong if the lady in
-                  question does not hold a Scottish barony in her own right.
+                  often seen, but are still socially incorrect. The phrase “Lady of Inverness” is wrong unless the lady in
+                  question is a{" "}
+                  <Link
+                    href="/reading-room/lairds-lords-and-barons/"
+                    className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                  >
+                    laird
+                  </Link>{" "}
+                  in her own right.<Footnote n={4}>{LADY_SOURCE}</Footnote>
                 </P>
                 <P>
                   A Scottish barony is a{" "}
