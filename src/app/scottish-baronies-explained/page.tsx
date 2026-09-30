@@ -694,7 +694,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           No — a territorial designation is not the same as a barony, and the two are often confused. A barony is a
           title of nobility. The distinctly Scottish territorial designation “Surname of Place” form, such as
           “Kerr of Ardgowan” — is part of a person’s family name, not a title of nobility. The two are separate, and
-          may or may not coincide.
+          may or may not coincide. Where they did, the records call the same baron by both, the title and the name,
+          often in the same deed: see{" "}
+          <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className={intLink}>
+            Baron of X, or X of Y?
+          </Link>
         </p>
         <p className="mt-4">
           A baron may use the barony title (for example “Baron of X”) as a matter of legal right, without the Lord
@@ -1434,6 +1438,15 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   {
     term: "Territorial designation (TD)",
     def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility or dignity, and is separate from a barony, although certainly untitled nobility; a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
+    note: (
+      <>
+        For the evidence that Scotland’s barons were styled by both title and designation, see{" "}
+        <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className={intLink}>
+          Baron of X, or X of Y?
+        </Link>
+        .
+      </>
+    ),
   },
   {
     term: "Of that Ilk",
