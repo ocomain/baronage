@@ -310,6 +310,21 @@ export default function ProperAddressPage() {
                 <div hidden>{TD_SOURCES}</div>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
+                  A Scottish barony is a{" "}
+                  <Link
+                    href="/scottish-baronies-explained"
+                    className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                  >
+                    personal dignity
+                  </Link>{" "}
+                  held legally by the baron (or baroness in her own right). It does not create a separate legal title for
+                  a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
+                  She shares his rank and assumes the feminine form of his title by courtesy but does not hold it in her
+                  own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
+                  convention, not entitlement. As titles of nobility are considered part of a person’s name and
+                  identity, her title is reflected in a British passport as her legal name.
+                </P>
+                <P>
                   Wives or female barons are entitled to <S>Lady</S> <em>or</em> <S>Baroness of</S>
                 </P>
                 <Forms>
@@ -336,21 +351,6 @@ export default function ProperAddressPage() {
                     laird
                   </Link>{" "}
                   in her own right.<Footnote n={4}>{LADY_SOURCE}</Footnote>
-                </P>
-                <P>
-                  A Scottish barony is a{" "}
-                  <Link
-                    href="/scottish-baronies-explained"
-                    className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
-                  >
-                    personal dignity
-                  </Link>{" "}
-                  held legally by the baron (or baroness in her own right). It does not create a separate legal title for
-                  a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
-                  She shares his rank and assumes the feminine form of his title by courtesy but does not hold it in her
-                  own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
-                  convention, not entitlement. As titles of nobility are considered part of a person’s name and
-                  identity, her title is reflected in a British passport as her legal name.
                 </P>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
