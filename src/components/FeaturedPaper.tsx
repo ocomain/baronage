@@ -7,8 +7,13 @@ import { PaperThumbnail } from "@/components/PaperThumbnail";
 import { FEATURED_PAPER } from "@/lib/site";
 
 const HREF = `/reading-room/${FEATURED_PAPER.slug}/`;
-// Both in sessionStorage and keyed by slug, so they last for one visit only.
-// Closed with X — hidden for the rest of this visit; it shows again on the next.
+// Closed with X — hidden for the rest of this visit, on this site AND on the Roll, and shown again on the
+// next visit. The two sites are separate origins and cannot see each other's storage, so the close is kept
+// in a cookie on .baronage.com that both can read. It lasts 30 minutes and is renewed on every page view,
+// which is what "the rest of the visit" means here. No personal information is stored.
+const CLOSED_COOKIE = "bsa_fp_closed";
+const VISIT_SECONDS = 30 * 60;
+// Fallback when cookies are unavailable: this tab only.
 const CLOSED_KEY = `bsa-featured-closed:${FEATURED_PAPER.slug}`;
 // The card has already slid in this visit — show it at once on every later page.
 const REVEALED_KEY = `bsa-featured-revealed:${FEATURED_PAPER.slug}`;
@@ -27,10 +32,31 @@ function writeKey(kind: "local" | "session", key: string, value: string) {
   } catch {}
 }
 
+function closedCookieSet(): boolean {
+  try {
+    return document.cookie.split("; ").includes(`${CLOSED_COOKIE}=${FEATURED_PAPER.slug}`);
+  } catch {
+    return false;
+  }
+}
+/** Record (or renew) the close for this visit, across www and the Roll. */
+function markClosed() {
+  try {
+    const host = location.hostname;
+    const domain = host === "baronage.com" || host.endsWith(".baronage.com") ? "; domain=.baronage.com" : "";
+    const secure = location.protocol === "https:" ? "; secure" : "";
+    document.cookie = `${CLOSED_COOKIE}=${FEATURED_PAPER.slug}; max-age=${VISIT_SECONDS}; path=/; samesite=lax${secure}${domain}`;
+  } catch {}
+  if (!closedCookieSet()) writeKey("session", CLOSED_KEY, "1");
+}
+function isClosed(): boolean {
+  return closedCookieSet() || readKey("session", CLOSED_KEY) !== null;
+}
+
 /**
  * Non-blocking featured-paper card. Slides in four seconds after a visitor arrives, or once they start
  * scrolling, then stays on every page of the visit until closed with X, which hides it for the rest of
- * that visit only — reading the paper does not close it, and Esc (which closes reference pop-ups) never
+ * that visit only, here and on the Roll — reading the paper does not close it, and Esc (which closes reference pop-ups) never
  * touches it. Hidden while on the paper itself. Sits beneath the mobile menu (z-30 under its z-40 overlay).
  */
 export function FeaturedPaper() {
@@ -47,7 +73,9 @@ export function FeaturedPaper() {
 
   useEffect(() => {
     const onPaper = pathname.replace(/\/?$/, "/") === HREF;
-    const ok = !onPaper && readKey("session", CLOSED_KEY) === null;
+    const closed = isClosed();
+    if (closed) markClosed(); // still browsing: keep it closed for another 30 minutes
+    const ok = !onPaper && !closed;
     setEligible(ok);
     if (!ok) setShown(false);
   }, [pathname]);
@@ -74,7 +102,7 @@ export function FeaturedPaper() {
   }, [eligible, shown]);
 
   const dismiss = useCallback(() => {
-    writeKey("session", CLOSED_KEY, "1");
+    markClosed();
     setShown(false);
     setEligible(false);
   }, []);
