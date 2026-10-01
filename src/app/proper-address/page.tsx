@@ -252,7 +252,7 @@ export default function ProperAddressPage() {
                   >
                     Where “The Much Honoured” comes from
                   </Link>
-                  . A baron’s forms run parallel to a duke’s, each at its own level:
+                  . A baron’s forms run parallel to a duke’s, each at its own level; the duke’s are as the same guide gives them:
                 </p>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
@@ -265,29 +265,34 @@ export default function ProperAddressPage() {
                     </thead>
                     <tbody className="[&_td]:border-b [&_td]:border-parchment-300/70 [&_td]:py-3 [&_td]:pr-4 [&_td]:align-top">
                       <tr>
-                        <td>Written prefix</td>
-                        <td>His Grace</td>
-                        <td><S>The Much Honoured</S></td>
-                      </tr>
-                      <tr>
-                        <td>Title</td>
-                        <td>The Duke of X</td>
-                        <td><S>The Baron of X</S></td>
-                      </tr>
-                      <tr>
-                        <td>Referred to as</td>
-                        <td>The Duke</td>
-                        <td><S>The Baron</S></td>
-                      </tr>
-                      <tr>
-                        <td>In person</td>
+                        <td>Speaking to him, as an equal</td>
                         <td>Duke</td>
                         <td><S>Baron</S></td>
                       </tr>
                       <tr>
-                        <td>Formal address</td>
+                        <td>Speaking about him</td>
+                        <td>The Duke</td>
+                        <td><S>The Baron</S></td>
+                      </tr>
+                      <tr>
+                        <td>Speaking to him deferentially</td>
                         <td>Your Grace</td>
                         <td><S>Your Honour</S></td>
+                      </tr>
+                      <tr>
+                        <td>Formal letter</td>
+                        <td>opens “My Lord Duke”, closes “Your Grace’s most obedient servant”</td>
+                        <td><S>opens “Dear Baron of Inverness”, closes “Your Honour’s humble servant”</S></td>
+                      </tr>
+                      <tr>
+                        <td>Social letter</td>
+                        <td>“Dear Duke”</td>
+                        <td><S>“Dear Baron”</S></td>
+                      </tr>
+                      <tr>
+                        <td>Envelope</td>
+                        <td>His Grace The Duke of Middlesex</td>
+                        <td><S>The Much Honoured Baron of Inverness</S></td>
                       </tr>
                     </tbody>
                   </table>
