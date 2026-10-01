@@ -14,7 +14,8 @@ reviewed: 2026-10-01
 
 <section class="paper-findings" aria-label="Key findings">
 <p class="paper-findings__eyebrow">Key findings, checked against the records</p>
-<div class="paper-stats">
+<div class="paper-stats paper-stats--three">
+<div class="paper-stat"><span class="paper-stat__value">1576</span><span class="paper-stat__label">a baron is addressed as “Right Honourable”, and again in 1579, 1642 and 1685</span><a class="paper-stat__link" href="#not-the-only-form">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">1616</span><span class="paper-stat__label">the earliest Scottish letter found addressed “much honoured”</span><a class="paper-stat__link" href="#a-courtesy-of-the-seventeenth-century">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">1938</span><span class="paper-stat__label">Innes of Learney records it as “the old prefix of a laird or chief”</span><a class="paper-stat__link" href="#recorded-by-a-lord-lyon">The evidence</a></div>
 </div>
@@ -39,9 +40,9 @@ In all of these the baron is addressed as the laird of his lands, or by his name
 
 ## Not the only form
 
-The same barons were addressed in other ways as well, often in grander terms. Three days after Lord Gordon’s letter, another reached the same man “For the right honorable the Laird of Grant”, and in 1646 two letters from the exiled court at St Germain were directed “To our trustie and wellbeloued the Baron of Grant”.[^12] The barons of Kilravock were “the rycht honorabill the Barrone of Kylraok” in 1579, “the richt honorable the Barrone of Kilraik” to the Marquis of Argyll in 1642, and Right Honourable again, as “The Baron of Kilravock”, in a kinsman’s letter of 1685.[^13] One of the Invercauld tradesmen headed his account “The Right honourable Laird of Envercall”.[^11]
+The same barons were addressed in other ways as well, often in grander terms. Three days after Lord Gordon’s letter, another reached the same man “For the right honorable the Laird of Grant”, and in 1646 two letters from the exiled court at St Germain were directed “To our trustie and wellbeloued the Baron of Grant”.[^12] The barons of Kilravock were “the richt honorable and my gud frind and kin the baron of Kilraok” to the Countess of Crawford in 1576, “the rycht honorabill the Barrone of Kylraok” in 1579, “the richt honorable the Barrone of Kilraik” to the Marquis of Argyll in 1642, and Right Honourable again, as “The Baron of Kilravock”, in a kinsman’s letter of 1685.[^13] One of the Invercauld tradesmen headed his account “The Right honourable Laird of Envercall”.[^11]
 
-A baron of the seventeenth century might therefore be Right Honourable, Honourable or Much Honoured, as the writer chose. No rule fixed one of them to his rank. On how the barons themselves were named and titled, see [Baron of X, or X of Y?](/reading-room/the-two-styles-of-a-scottish-baron/)
+A baron of the seventeenth century might therefore be Right Honourable, Honourable or Much Honoured, as the writer chose. No rule fixed one of them to his rank. Where an address names him as “the Baron” and gives a prefix, though, it is Honourable or Right Honourable; “much honoured” goes with “the Laird of”. “The Right Honourable” has since become the settled prefix of peers below a marquess, which is why the baron’s prefix today is the other one. On how the barons themselves were named and titled, see [Baron of X, or X of Y?](/reading-room/the-two-styles-of-a-scottish-baron/)
 
 ## “Your Honour”
 
@@ -109,7 +110,7 @@ For the forms in full, see [Proper Address for Scottish Barons](/proper-address/
 [^10]: *More Culloden Papers*, vol. 1, Fortrose, 29 August 1695, [p. 244](https://archive.org/details/cullodenpapersmo01warruoft/page/n273); *History and Genealogy of the Family of Wauchope of Niddrie-Merschell* (1858), 31 August 1698, [p. 72](https://archive.org/details/historygenealogy00pate/page/n79); *History of the Carnegies*, vol. 2, Pittarrow, 12 April 1708, [p. 262](https://archive.org/details/historyofcarnev200fras/page/n29); *The Chiefs of Grant*, vol. 2, Gordon Castle, 2 September 1719, [p. 106](https://archive.org/details/chiefsofgrantv200fras/page/n179).
 [^11]: *The Records of Invercauld*, Appendix, [pp. 500–501](https://archive.org/details/recordsofinverca00news/page/n552).
 [^12]: *The Chiefs of Grant*, vol. 2: Braichley, 11 April 1645, [p. 76](https://archive.org/details/chiefsofgrantv200fras/page/n145); St Germain, 26 and 28 October 1646, [p. 9](https://archive.org/details/chiefsofgrantv200fras/page/n64).
-[^13]: *A Genealogical Deduction of the Family of Rose of Kilravock*: 25 September 1579, [p. 270](https://archive.org/details/genealogicaldedu00spal/page/n297/mode/1up); 29 June 1642, [p. 330](https://archive.org/details/genealogicaldedu00spal/page/n357/mode/1up); 25 November 1685, [p. 366](https://archive.org/details/genealogicaldedu00spal/page/n393/mode/1up).
+[^13]: *A Genealogical Deduction of the Family of Rose of Kilravock*: 31 July 1576, [p. 268](https://archive.org/details/genealogicaldedu00spal/page/n295/mode/1up); 25 September 1579, [p. 270](https://archive.org/details/genealogicaldedu00spal/page/n297/mode/1up); 29 June 1642, [p. 330](https://archive.org/details/genealogicaldedu00spal/page/n357/mode/1up); 25 November 1685, [p. 366](https://archive.org/details/genealogicaldedu00spal/page/n393/mode/1up).
 [^14]: *The Chiefs of Grant*, vol. 2, letter 93, [p. 52](https://archive.org/details/chiefsofgrantv200fras/page/n119): superscribed “To the richt honorabill the Lard off Grant”.
 [^15]: *The Stirlings of Keir*, [p. 506](https://archive.org/details/stirlingsofkeirt00fras/page/n629): “For the Ry<sup>t</sup>. Honnor<sup>ll</sup> The Laird of Keir”.
 [^16]: *A Genealogical Deduction of the Family of Rose of Kilravock*, letter of John Fraser dated at Alness, 21 October 1709, [pp. 396–397](https://archive.org/details/genealogicaldedu00spal/page/n423/mode/1up), addressed “To the very hon<sup>ble</sup> the Laird of Kilravock, Sheriff of Rosse”. The editor notes that “The Baron has endorsed the paper, A comical synodical rebuke”.
