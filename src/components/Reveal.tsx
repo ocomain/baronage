@@ -36,7 +36,10 @@ export function Reveal({ children, className, delay = 0, as = "div" }: RevealPro
           io.disconnect();
         }
       },
-      { rootMargin: "-80px 0px" },
+      // The zone that counts as "seen" runs from 80px above the bottom of the screen upwards without limit,
+      // so a block that was scrolled or jumped past (a fast flick, an anchor link) is revealed too and can
+      // never be left invisible above the reader.
+      { rootMargin: "100000px 0px -80px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
