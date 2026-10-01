@@ -267,7 +267,7 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Speaking to him, as an equal</td>
                         <td>Duke</td>
-                        <td><S>Baron</S></td>
+                        <td><S>Baron</S><Or /><S>Inverness</S></td>
                       </tr>
                       <tr>
                         <td>Speaking about him</td>
@@ -287,7 +287,7 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Social letter</td>
                         <td>“Dear Duke of Middlesex” or “Dear Duke”</td>
-                        <td><S>“Dear Baron of Inverness” or “Dear Baron”</S></td>
+                        <td><S>“Dear Baron of Inverness”, “Dear Baron”</S><Or /><S>“Dear Inverness”</S></td>
                       </tr>
                       <tr>
                         <td>Envelope</td>
