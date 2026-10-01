@@ -265,6 +265,11 @@ export default function ProperAddressPage() {
                     </thead>
                     <tbody className="[&_td]:border-b [&_td]:border-parchment-300/70 [&_td]:py-3 [&_td]:pr-4 [&_td]:align-top">
                       <tr>
+                        <td>Title</td>
+                        <td>The Duke of X</td>
+                        <td><S>The Baron of X</S></td>
+                      </tr>
+                      <tr>
                         <td>Speaking to him, as an equal</td>
                         <td>Duke</td>
                         <td><S>Baron</S><Or /><S>Inverness</S></td>
