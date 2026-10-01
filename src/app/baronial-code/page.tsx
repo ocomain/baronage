@@ -102,7 +102,7 @@ export default function BaronialCodePage() {
             <div className="relative border border-gold/40 bg-parchment-50 px-6 py-12 shadow-[0_30px_80px_-40px_rgba(10,16,36,0.5)] sm:px-12 sm:py-16">
               <div className="pointer-events-none absolute inset-3 border border-gold/20" aria-hidden />
               <div className="flex flex-col items-center text-center">
-                <Seal className="h-16 w-16" />
+                <Seal size="xs" className="h-16 w-16" />
                 <p className="eyebrow mt-5">In Nine Articles</p>
                 <h2 className="mt-3 font-display text-3xl text-navy sm:text-4xl">The Code of Honour</h2>
                 <GoldRule className="mt-6" />

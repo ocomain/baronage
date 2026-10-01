@@ -94,7 +94,7 @@ export default function PledgePage() {
           <Reveal>
             <div className="relative border border-gold/30 bg-navy-deep/60 p-8 text-center sm:p-12">
               <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
-              <Seal className="mx-auto h-16 w-16" />
+              <Seal size="xs" className="mx-auto h-16 w-16" />
               <p className="eyebrow eyebrow--light mt-6">The Baronial Pledge</p>
               <GoldRule className="mt-5" />
               <blockquote className="mt-8 font-serif text-xl italic leading-relaxed text-parchment-100/90 sm:text-2xl">
