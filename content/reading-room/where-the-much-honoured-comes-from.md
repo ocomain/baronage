@@ -15,7 +15,7 @@ reviewed: 2026-10-01
 <section class="paper-findings" aria-label="Key findings">
 <p class="paper-findings__eyebrow">Key findings, checked against the records</p>
 <div class="paper-stats paper-stats--three">
-<div class="paper-stat"><span class="paper-stat__value">1576</span><span class="paper-stat__label">a baron is addressed as “Right Honourable”, and again in 1579, 1642 and 1685</span><a class="paper-stat__link" href="#not-the-only-form">The evidence</a></div>
+<div class="paper-stat"><span class="paper-stat__value">1576</span><span class="paper-stat__label">barons addressed “Right Honourable” by peers, 16th–17th centuries</span><a class="paper-stat__link" href="#not-the-only-form">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">1616</span><span class="paper-stat__label">the earliest Scottish letter found addressed “much honoured”</span><a class="paper-stat__link" href="#a-courtesy-of-the-seventeenth-century">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">1938</span><span class="paper-stat__label">Innes of Learney records it as “the old prefix of a laird or chief”</span><a class="paper-stat__link" href="#recorded-by-a-lord-lyon">The evidence</a></div>
 </div>
@@ -40,7 +40,7 @@ In all of these the baron is addressed as the laird of his lands, or by his name
 
 ## Not the only form
 
-The same barons were addressed in other ways as well, often in grander terms. Three days after Lord Gordon’s letter, another reached the same man “For the right honorable the Laird of Grant”, and in 1646 two letters from the exiled court at St Germain were directed “To our trustie and wellbeloued the Baron of Grant”.[^12] The barons of Kilravock were “the richt honorable and my gud frind and kin the baron of Kilraok” to the Countess of Crawford in 1576, “the rycht honorabill the Barrone of Kylraok” in 1579, “the richt honorable the Barrone of Kilraik” to the Marquis of Argyll in 1642, and Right Honourable again, as “The Baron of Kilravock”, in a kinsman’s letter of 1685.[^13] One of the Invercauld tradesmen headed his account “The Right honourable Laird of Envercall”.[^11]
+The same barons were addressed in other ways as well, often in grander terms. Three days after Lord Gordon’s letter, another reached the same man “For the right honorable the Laird of Grant”, and in 1646 two letters from the exiled court at St Germain were directed “To our trustie and wellbeloued the Baron of Grant”.[^12] The barons of Kilravock were “the richt honorable and my gud frind and kin the baron of Kilraok” to the Countess of Crawford in 1576, “the rycht honorabill the Barrone of Kylraok” to the Earl of Crawford in 1579, “the richt honorable the Barrone of Kilraik” to the Marquis of Argyll in 1642, and Right Honourable again, as “The Baron of Kilravock”, in a kinsman’s letter of 1685.[^13] One of the Invercauld tradesmen headed his account “The Right honourable Laird of Envercall”.[^11]
 
 A baron of the seventeenth century might therefore be Right Honourable, Honourable or Much Honoured, as the writer chose. No rule fixed one of them to his rank. Where an address names him as “the Baron” and gives a prefix, though, it is Honourable or Right Honourable; “much honoured” goes with “the Laird of”. “The Right Honourable” has since become the settled prefix of peers below a marquess, which is why the baron’s prefix today is the other one. On how the barons themselves were named and titled, see [Baron of X, or X of Y?](/reading-room/the-two-styles-of-a-scottish-baron/)
 
