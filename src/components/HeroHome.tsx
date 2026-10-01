@@ -47,9 +47,16 @@ export function HeroHome() {
 
       {/* Eilean Donan at dusk — slow aerial film, drifting gently with scroll */}
       <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
-        <div
-          className="h-full w-full scale-[1.08] bg-cover bg-center"
-          style={{ backgroundImage: `url('${POSTER}')` }}
+        {/* A real image, so the browser treats the still as the page's main paint. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={POSTER}
+          alt=""
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          decoding="sync"
+          className="h-full w-full scale-[1.08] object-cover object-center"
         />
         {filmOn && !filmBlocked && (
           <video

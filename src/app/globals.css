@@ -486,3 +486,14 @@ video.bg-film::-webkit-media-controls-start-playback-button {
 @media (prefers-reduced-motion: reduce) {
   .hero-breathe, .seal-float { animation: none; }
 }
+
+/* Scroll reveals (components/Reveal.tsx): a block below the screen is hidden after load, then fades and rises in. */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(26px);
+}
+.reveal-show {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}

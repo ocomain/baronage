@@ -1,12 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
-
-const variants: Variants = {
-  hidden: { opacity: 0, y: 26 },
-  show: { opacity: 1, y: 0 },
-};
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -16,19 +10,50 @@ type RevealProps = {
   as?: "div" | "li" | "section" | "span";
 };
 
-/** Fade + rise on scroll into view. Respects prefers-reduced-motion via framer-motion. */
+/**
+ * Fade + rise on scroll into view.
+ *
+ * Content is served visible. After the page has loaded, a block that is still
+ * below the screen is hidden and then revealed as it scrolls in; a block already
+ * on screen is left alone, so nothing the reader can see ever waits for scripts.
+ * Plain CSS transitions (see .reveal-* in globals.css); respects reduced motion.
+ */
 export function Reveal({ children, className, delay = 0, as = "div" }: RevealProps) {
-  const MotionTag = motion[as];
+  const ref = useRef<HTMLElement | null>(null);
+  const [state, setState] = useState<"static" | "hidden" | "show">("static");
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (el.getBoundingClientRect().top < window.innerHeight - 80) return; // already on screen
+
+    setState("hidden");
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setState("show");
+          io.disconnect();
+        }
+      },
+      { rootMargin: "-80px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  const Tag = as as "div";
+  const cls = [className, state === "hidden" ? "reveal-hidden" : state === "show" ? "reveal-show" : ""]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <MotionTag
-      className={className}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
-      variants={variants}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+    <Tag
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className={cls || undefined}
+      style={state === "show" && delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
-    </MotionTag>
+    </Tag>
   );
 }
