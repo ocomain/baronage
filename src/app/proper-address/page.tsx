@@ -282,12 +282,12 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Formal letter</td>
                         <td>opens “My Lord Duke”, closes “Your Grace’s most obedient servant”</td>
-                        <td><S>opens “Dear Baron of Inverness”, closes “Your Honour’s humble servant”</S></td>
+                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S></td>
                       </tr>
                       <tr>
                         <td>Social letter</td>
-                        <td>“Dear Duke”</td>
-                        <td><S>“Dear Baron”</S></td>
+                        <td>“Dear Duke of Middlesex” or “Dear Duke”</td>
+                        <td><S>“Dear Baron of Inverness” or “Dear Baron”</S></td>
                       </tr>
                       <tr>
                         <td>Envelope</td>
