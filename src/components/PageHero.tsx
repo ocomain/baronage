@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { Seal } from "./Seal";
 import { Container } from "./primitives";
+import { useDeferredFilm } from "@/lib/useDeferredFilm";
 
 export function PageHero({
   eyebrow,
@@ -38,12 +39,16 @@ export function PageHero({
   // When the phone refuses autoplay (e.g. iOS Low Power Mode), show the poster instead of a paused film.
   const [filmBlocked, setFilmBlocked] = useState(false);
 
+  // The poster paints first; the film starts once the page has loaded and settled.
+  const filmOn = useDeferredFilm(reduceMotion);
+
   useEffect(() => {
+    if (!filmOn) return;
     const attempt = videoRef.current?.play();
     attempt?.catch((err: unknown) => {
       if (err instanceof DOMException && err.name === "NotAllowedError") setFilmBlocked(true);
     });
-  }, [reduceMotion]);
+  }, [filmOn]);
 
   // Same motion language as the homepage hero, a touch quieter:
   // spring-smoothed drift on scroll + a very slow ambient breathe.
@@ -61,16 +66,15 @@ export function PageHero({
       {hasMedia ? (
         <>
           <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
-            {video && !reduceMotion && !filmBlocked ? (
-              <motion.div
-                className="h-full w-full"
-                initial={{ scale: 1.1 }}
-                animate={{ scale: [1.1, 1.16, 1.1] }}
-                transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
-              >
+            <div className={`relative h-full w-full ${reduceMotion ? "scale-110" : "hero-breathe"}`}>
+              <div
+                className="h-full w-full bg-cover"
+                style={{ backgroundImage: `url('${video ? video.poster : image}')`, backgroundPosition: position }}
+              />
+              {video && filmOn && !filmBlocked && (
                 <video
                   ref={videoRef}
-                  className="bg-film pointer-events-none h-full w-full object-cover"
+                  className="bg-film pointer-events-none absolute inset-0 h-full w-full object-cover"
                   style={{ objectPosition: position }}
                   autoPlay
                   muted
@@ -85,16 +89,8 @@ export function PageHero({
                   {video.webm && <source src={video.webm} type="video/webm" />}
                   <source src={video.mp4} type="video/mp4" />
                 </video>
-              </motion.div>
-            ) : (
-              <motion.div
-                className="h-full w-full bg-cover"
-                style={{ backgroundImage: `url('${video ? video.poster : image}')`, backgroundPosition: position }}
-                initial={{ scale: 1.1 }}
-                animate={reduceMotion ? undefined : { scale: [1.1, 1.16, 1.1] }}
-                transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
-              />
-            )}
+              )}
+            </div>
           </motion.div>
           {scrim === "bottom-blur" ? (
             <div

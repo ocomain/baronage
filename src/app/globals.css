@@ -464,3 +464,25 @@ video.bg-film::-webkit-media-controls-start-playback-button {
   display: none !important;
   -webkit-appearance: none;
 }
+
+/* Ambient motion for hero imagery ("breathe") and the homepage seal ("float"). CSS keyframes run on the
+   compositor, so they cost nothing on the main thread; they used to be driven by JavaScript every frame. */
+@keyframes hero-breathe {
+  0%, 100% { transform: scale(1.1); }
+  50% { transform: scale(1.16); }
+}
+.hero-breathe {
+  transform: scale(1.1);
+  animation: hero-breathe 36s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes seal-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.seal-float {
+  animation: seal-float 7s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-breathe, .seal-float { animation: none; }
+}

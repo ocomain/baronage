@@ -5,6 +5,7 @@ import { motion, useScroll, useSpring, useTransform, useReducedMotion } from "fr
 import { Seal } from "./Seal";
 import { ButtonLink, Container } from "./primitives";
 import { ROLL_URL } from "@/lib/site";
+import { useDeferredFilm } from "@/lib/useDeferredFilm";
 
 const POSTER = "/videos/hero-poster.webp";
 
@@ -15,12 +16,16 @@ export function HeroHome() {
   // When the phone refuses autoplay (e.g. iOS Low Power Mode), show the still instead of a paused film.
   const [filmBlocked, setFilmBlocked] = useState(false);
 
+  // The poster paints first; the film starts once the page has loaded and settled.
+  const filmOn = useDeferredFilm(reduceMotion);
+
   useEffect(() => {
+    if (!filmOn) return;
     const attempt = videoRef.current?.play();
     attempt?.catch((err: unknown) => {
       if (err instanceof DOMException && err.name === "NotAllowedError") setFilmBlocked(true);
     });
-  }, [reduceMotion]);
+  }, [filmOn]);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
 
@@ -42,15 +47,14 @@ export function HeroHome() {
 
       {/* Eilean Donan at dusk — slow aerial film, drifting gently with scroll */}
       <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
-        {reduceMotion || filmBlocked ? (
-          <div
-            className="h-full w-full scale-[1.08] bg-cover bg-center"
-            style={{ backgroundImage: `url('${POSTER}')` }}
-          />
-        ) : (
+        <div
+          className="h-full w-full scale-[1.08] bg-cover bg-center"
+          style={{ backgroundImage: `url('${POSTER}')` }}
+        />
+        {filmOn && !filmBlocked && (
           <video
             ref={videoRef}
-            className="bg-film pointer-events-none h-full w-full scale-[1.08] object-cover"
+            className="bg-film pointer-events-none absolute inset-0 h-full w-full scale-[1.08] object-cover"
             autoPlay
             muted
             loop
@@ -88,12 +92,9 @@ export function HeroHome() {
 
           {/* Seal — gentle float */}
           <div className="rise mt-5 flex justify-center" style={{ animationDelay: "0.06s" }}>
-            <motion.div
-              animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Seal className="h-24 w-24 drop-shadow-[0_14px_40px_rgba(0,0,0,0.55)] sm:h-32 sm:w-32" />
-            </motion.div>
+            <div className="seal-float">
+              <Seal size="sm" className="h-24 w-24 drop-shadow-[0_14px_40px_rgba(0,0,0,0.55)] sm:h-32 sm:w-32" />
+            </div>
           </div>
 
           <h1

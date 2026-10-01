@@ -79,6 +79,7 @@ export function BaroniesCarousel() {
         ? new IntersectionObserver(
             (entries) => {
               inView = entries[0]?.isIntersecting ?? false;
+              if (inView) kick();
             },
             { threshold: 0 }
           )
@@ -106,14 +107,21 @@ export function BaroniesCarousel() {
         }
         el.scrollLeft = pos;
       }
-      // idle + off-screen → paused, so the front cards stay put until seen
-      raf = requestAnimationFrame(tick);
+      // idle + off-screen → the loop stops altogether, so it costs nothing until the carousel is seen
+      raf = inView || dragging ? requestAnimationFrame(tick) : 0;
     };
-    raf = requestAnimationFrame(tick);
+    // (Re)start the loop; a no-op while it is already running.
+    function kick() {
+      if (raf) return;
+      last = performance.now();
+      raf = requestAnimationFrame(tick);
+    }
+    if (!io) kick();
 
     const down = (e: PointerEvent) => {
       if (e.pointerType !== "mouse") return; // touch pans natively
       dragging = true;
+      kick();
       moved = false;
       startX = e.clientX;
       startLeft = el.scrollLeft;
@@ -184,6 +192,7 @@ export function BaroniesCarousel() {
                 <img
                   src={b.img}
                   alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
+                  loading="lazy"
                   decoding="async"
                   draggable={false}
                   width={160}

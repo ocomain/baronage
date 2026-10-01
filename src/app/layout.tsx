@@ -122,11 +122,12 @@ export default function RootLayout({
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "15c0a029804c41d8b4c3223aeee42148"}'
         ></script>
-        {/* Microsoft Clarity — heatmaps & session recordings */}
+        {/* Microsoft Clarity — heatmaps & session recordings. Loaded two seconds after the page has finished
+            loading, so its script does not compete with the first paint. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xb0q6mjkpd");',
+              '(function(c,l,a,r,i){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};function go(){setTimeout(function(){var t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;var y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);},2000)}if(l.readyState==="complete")go();else c.addEventListener("load",go,{once:true});})(window, document, "clarity", "script", "xb0q6mjkpd");',
           }}
         />
         <Link

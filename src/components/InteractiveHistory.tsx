@@ -39,7 +39,7 @@ const chapters: Chapter[] = [
     title: "Defenders of Scottish sovereignty",
     body: "During the Wars of Independence, barons — many of them knights — stood as key defenders of Scotland against English incursions. Their dedication was immortalised in the Declaration of Arbroath of 1320, sealed by some forty Scottish barons.",
     kind: "emblem",
-    src: "/seal-gold.png",
+    src: "/seal-gold.webp",
   },
   {
     id: "dignity",
@@ -119,7 +119,7 @@ export function InteractiveHistory() {
               ) : (
                 <div className="flex aspect-[4/5] w-full items-center justify-center bg-navy-deep texture-saltire">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={ch.src} alt={ch.title} className="max-h-[78%] w-auto object-contain p-2" />
+                  <img src={ch.src} alt={ch.title} loading="lazy" decoding="async" className="max-h-[78%] w-auto object-contain p-2" />
                 </div>
               )}
             </div>

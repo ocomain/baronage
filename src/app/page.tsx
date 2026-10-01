@@ -526,8 +526,12 @@ export default function HomePage() {
                 <div className="absolute inset-0 translate-x-3 translate-y-3 border border-gold/40" aria-hidden />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/featured/william.png"
+                  src="/featured/william.webp"
                   alt="Lord of the Isles and Baron of Renfrew"
+                  width={438}
+                  height={408}
+                  loading="lazy"
+                  decoding="async"
                   className="relative h-full w-full object-cover object-top shadow-[0_30px_60px_-30px_rgba(10,16,36,0.7)]"
                 />
               </div>
