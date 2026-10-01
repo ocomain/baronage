@@ -229,7 +229,63 @@ export default function ProperAddressPage() {
                   <F>
                     In person: <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
                   </F>
+                  <F>
+                    Formal address: <S>Your Honour</S>
+                  </F>
                 </Forms>
+                <P>
+                  “<S>Your Honour</S>” is the old formal address of a baron, the spoken counterpart of the written
+                  prefix “The Much Honoured”. Neighbours, ministers, merchants and tenants used it to barons from the
+                  1620s to the 1770s: “May it pleas your Honour”, the tenants of Glenshee wrote to the Laird of
+                  Invercauld in 1776. <em>Titles and Forms of Address</em> (1955) records both forms together: “The
+                  prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured; in address, Your Honour”. The
+                  evidence is set out in{" "}
+                  <Link
+                    href="/reading-room/where-the-much-honoured-comes-from/#your-honour"
+                    className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood"
+                  >
+                    Where “The Much Honoured” comes from
+                  </Link>
+                  . A baron’s forms run parallel to a duke’s, each at its own level:
+                </P>
+                <div className="mt-4 overflow-x-auto">
+                  <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
+                    <thead>
+                      <tr className="border-b border-navy/20 text-left font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep">
+                        <th className="py-2 pr-4"></th>
+                        <th className="py-2 pr-4">A duke</th>
+                        <th className="py-2">A baron</th>
+                      </tr>
+                    </thead>
+                    <tbody className="[&_td]:border-b [&_td]:border-parchment-300/70 [&_td]:py-3 [&_td]:pr-4 [&_td]:align-top">
+                      <tr>
+                        <td>Written prefix</td>
+                        <td>His Grace</td>
+                        <td><S>The Much Honoured</S></td>
+                      </tr>
+                      <tr>
+                        <td>Title</td>
+                        <td>The Duke of X</td>
+                        <td><S>The Baron of X</S></td>
+                      </tr>
+                      <tr>
+                        <td>Referred to as</td>
+                        <td>The Duke</td>
+                        <td><S>The Baron</S></td>
+                      </tr>
+                      <tr>
+                        <td>In person</td>
+                        <td>Duke</td>
+                        <td><S>Baron</S></td>
+                      </tr>
+                      <tr>
+                        <td>Formal address</td>
+                        <td>Your Grace</td>
+                        <td><S>Your Honour</S></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <P>
                   It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
                   “Mr / Mrs Smith” or “Esq.” is certainly incorrect. Some wives of highland clan chief-barons prefer{" "}
