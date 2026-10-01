@@ -14,13 +14,11 @@ reviewed: 2026-10-01
 
 <section class="paper-findings" aria-label="Key findings">
 <p class="paper-findings__eyebrow">Key findings, checked against the records</p>
-<div class="paper-stats paper-stats--three">
+<div class="paper-stats">
 <div class="paper-stat"><span class="paper-stat__value">1616</span><span class="paper-stat__label">the earliest Scottish letter found addressed “much honoured”</span><a class="paper-stat__link" href="#a-courtesy-of-the-seventeenth-century">The evidence</a></div>
-<div class="paper-stat"><span class="paper-stat__value">23 of 65</span><span class="paper-stat__label">Scottish examples to 1750 were addressed to men who held baronies</span><a class="paper-stat__link" href="#barons-addressed-as-much-honoured">The evidence</a></div>
 <div class="paper-stat"><span class="paper-stat__value">1938</span><span class="paper-stat__label">Innes of Learney records it as “the old prefix of a laird or chief”</span><a class="paper-stat__link" href="#recorded-by-a-lord-lyon">The evidence</a></div>
 </div>
-<blockquote class="paper-pullquote"><p>“For the much honoured The Laird of Grant.”</p><cite>The Commission of the General Assembly, 12 May 1649</cite><span class="paper-pullquote__note">It shows the Kirk addressing a baron by the phrase.</span></blockquote>
-<blockquote class="paper-pullquote"><p>“or if a baron, ‘The Much Honoured, the Baron of Dunfallandy’”</p><cite>Sir Thomas Innes of Learney, Lord Lyon</cite><span class="paper-pullquote__note">It shows a Lord Lyon giving the baron’s form.</span></blockquote>
+<blockquote class="paper-pullquote"><p>“or if a baron, ‘The Much Honoured, the Baron of Dunfallandy’”</p><cite>Sir Thomas Innes of Learney, Lord Lyon, 1952</cite><span class="paper-pullquote__note">It shows a Lord Lyon giving the baron’s form.</span></blockquote>
 </section>
 
 ## A courtesy of the seventeenth century
@@ -49,7 +47,7 @@ A baron of the seventeenth century might therefore be Right Honourable, Honourab
 
 The phrase passed out of ordinary use, and it was Sir Thomas Innes of Learney, Lord Lyon from 1945 to 1969, who put it on record. In *The Tartans of the Clans and Families of Scotland*, first published in 1938, he wrote: “The old prefix of a laird or chief was ‘The Much Honoured’”.[^14] The guide *Titles and Forms of Address* carried the same point in its edition of 1955, and named the barons: “The prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured; in address, Your Honour”, adding that these forms “have latterly been overlooked in Scotland”.[^15]
 
-In the editions of Frank Adam’s *Clans, Septs and Regiments of the Scottish Highlands* that Innes revised as Lord Lyon, the passage gives the baron’s form in terms. Letters, he says, “should be and still sometimes are addressed, e.g. ‘The Much Honoured, the Laird of Glenfalloch,’ or if a baron, ‘The Much Honoured, the Baron of Dunfallandy’”.[^16] *Debrett’s Correct Form* of 1970 says the same of the prefix to which chiefs, chieftains and lairds are entitled, “‘The Much Honoured’, which is not much used today”.[^17]
+In the edition of Frank Adam’s *Clans, Septs and Regiments of the Scottish Highlands* that Innes revised as Lord Lyon in 1952, the passage gives the baron’s form in terms. Letters, he says, “should be and still sometimes are addressed, e.g. ‘The Much Honoured, the Laird of Glenfalloch,’ or if a baron, ‘The Much Honoured, the Baron of Dunfallandy’”.[^16] *Debrett’s Correct Form* of 1970 says the same of the prefix to which chiefs, chieftains and lairds are entitled, “‘The Much Honoured’, which is not much used today”.[^17]
 
 ## The baron’s prefix today
 
@@ -92,7 +90,7 @@ In present use it also does a plain job: it marks a baron off from a peer. The p
 [^13]: *A Genealogical Deduction of the Family of Rose of Kilravock*: 25 September 1579, [p. 270](https://archive.org/details/genealogicaldedu00spal/page/n297/mode/1up); 29 June 1642, [p. 330](https://archive.org/details/genealogicaldedu00spal/page/n357/mode/1up); 25 November 1685, [p. 366](https://archive.org/details/genealogicaldedu00spal/page/n393/mode/1up).
 [^14]: Innes of Learney, *The Tartans of the Clans and Families of Scotland* (W. & A. K. Johnston, 1938; the same sentence in later printings).
 [^15]: *Titles and Forms of Address*, 9th ed. (1955), under “Chiefs of Scottish Clans and Territorial Houses”, [archive.org](https://archive.org/details/titlesandformsof017862mbp).
-[^16]: Frank Adam, *The Clans, Septs and Regiments of the Scottish Highlands*, revised by Sir Thomas Innes of Learney, [p. 410](https://archive.org/details/bwb_S0-BUT-001/page/n441). The passage is in the editions he revised after becoming Lord Lyon; it is not in the first edition of 1908.
+[^16]: Frank Adam, *The Clans, Septs and Regiments of the Scottish Highlands*, revised by Sir Thomas Innes of Learney, [p. 410](https://archive.org/details/bwb_S0-BUT-001/page/n441). The passage is in the edition of 1952 (W. & A. K. Johnston) and in later ones; the page linked is from a later printing. It is not in the first edition of 1908.
 [^17]: *Debrett’s Correct Form*, ed. P. Montague-Smith (1970), in the chapter on the Scottish chief, chieftain or laird, [archive.org](https://archive.org/details/debrettscorrectf0000mont).
 [^18]: *Debrett’s Distinguished People of Today* (1989), entry for the Baron of Leslie, [archive.org](https://archive.org/details/debrettsdistingu0000unse).
 [^19]: The Convention of the Baronage of Scotland, “Male Barons”, as captured on [14 June 2002](https://web.archive.org/web/20020614003107/http://www.scotsbarons.org/male_barons.htm).
