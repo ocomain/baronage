@@ -234,12 +234,18 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
+                  It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
+                  “Mr / Mrs Smith” or “Esq.” is certainly incorrect. Some wives of highland clan chief-barons prefer{" "}
+                  <S>Madam</S>.
+                </P>
+                <P>
                   “<S>Your Honour</S>” is the old formal address of a baron, the spoken counterpart of the written
-                  prefix “The Much Honoured”. Neighbours, ministers, merchants and tenants used it to barons from the
-                  1620s to the 1770s: “May it pleas your Honour”, the tenants of Glenshee wrote to the Laird of
-                  Invercauld in 1776. <em>Titles and Forms of Address</em> (1955) records both forms together: “The
-                  prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured; in address, Your Honour”. The
-                  evidence is set out in{" "}
+                  prefix “The Much Honoured”.
+                </P>
+                <p className="mt-4 font-serif text-base leading-relaxed text-ink">
+                  Used to barons from the 1620s to the 1770s (“May it pleas your Honour”, the tenants of Glenshee to
+                  the Laird of Invercauld, 1776) and recorded in <em>Titles and Forms of Address</em> (1955): “The
+                  prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured; in address, Your Honour”. See{" "}
                   <Link
                     href="/reading-room/where-the-much-honoured-comes-from/#your-honour"
                     className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood"
@@ -247,7 +253,7 @@ export default function ProperAddressPage() {
                     Where “The Much Honoured” comes from
                   </Link>
                   . A baron’s forms run parallel to a duke’s, each at its own level:
-                </P>
+                </p>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
                     <thead>
@@ -286,11 +292,6 @@ export default function ProperAddressPage() {
                     </tbody>
                   </table>
                 </div>
-                <P>
-                  It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
-                  “Mr / Mrs Smith” or “Esq.” is certainly incorrect. Some wives of highland clan chief-barons prefer{" "}
-                  <S>Madam</S>.
-                </P>
               </Sec>
             </Reveal>
 
