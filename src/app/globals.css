@@ -430,6 +430,8 @@ html {
   color: var(--color-gold-deep); text-decoration: none;
 }
 .paper-body sup.fnref a:hover { color: var(--color-oxblood); }
+/* A marker that directly follows another: "5,6", not "56". */
+.paper-body sup.fnref--adj::before { content: ","; margin-right: 0.08em; }
 
 .paper-notes ol { margin: 0 0 0 1.5rem; padding: 0; list-style: decimal; }
 .paper-notes li { margin-bottom: 0.55rem; padding-left: 0.3rem; scroll-margin-top: 8rem; }
@@ -493,13 +495,17 @@ html {
   .paper-print .paper-body h3 { font-size: 12.5pt; margin-top: 12pt; margin-bottom: 4pt; color: #000; break-after: avoid; }
   .paper-print .paper-body strong { color: #000; }
   .paper-print .paper-body a { color: inherit; text-decoration: none; }
-  .paper-print .paper-body sup.fnref { vertical-align: baseline; position: relative; top: -0.42em; font-size: 0.62em; margin-left: 0.05em; }
+  .paper-print .paper-body sup.fnref { vertical-align: baseline; position: relative; top: -0.4em; font-size: 0.7em; margin-left: 0.05em; }
   .paper-print .paper-body sup.fnref a { color: inherit; font-family: var(--font-serif); font-weight: 600; }
-  .paper-print .paper-body blockquote { break-inside: avoid; color: #000; }
+  /* Long quotations may run over a page; only the short pull-quote is kept whole. */
+  .paper-print .paper-body blockquote { break-inside: auto; color: #000; }
+  .paper-print .paper-body blockquote.paper-pullquote { break-inside: avoid; }
+  .paper-print h2 { break-after: avoid; }
   .paper-print .paper-body li { margin-bottom: 3pt; }
 
   /* Key findings: keep the three figures in a row, drop the on-page jump links. */
   .paper-print .paper-findings { break-inside: avoid; padding: 10pt 12pt; border: 0.5pt solid #999; margin: 12pt 0; }
+  .paper-print .paper-findings__eyebrow { color: #000; }
   .paper-print .paper-stat__link { display: none !important; }
   .paper-print .paper-stat__value { font-size: 20pt; color: #000; }
   .paper-print .paper-stat__label { font-size: 8.5pt; color: #222; }
@@ -520,16 +526,25 @@ html {
   .paper-print section[aria-labelledby="notes"],
   .paper-print aside { max-width: none; margin-top: 18pt; }
   .paper-print section[aria-labelledby="notes"] { border-top: 0.5pt solid #999; padding-top: 10pt; }
-  .paper-print aside { border: 0.5pt solid #999; padding: 10pt 12pt; }
+  /* A rule above, not a box: a box that runs over a page prints with its frame broken. */
+  .paper-print aside { border: 0; border-top: 0.5pt solid #999; padding: 10pt 0 0; }
+  .paper-print aside > div:first-child { border-bottom: 0; padding-bottom: 0; }
+  .paper-print aside h2 { color: #000; break-after: avoid; }
+  .paper-print .paper-sources li::before { border-color: #555; }
   .paper-print #notes { font-size: 13.5pt; color: #000; }
-  .paper-print .paper-notes, .paper-print .paper-sources { font-size: 9.5pt; line-height: 1.35; color: #000; }
+  .paper-print .paper-notes, .paper-print .paper-sources { font-size: 10pt; line-height: 1.35; color: #000; }
   .paper-print .paper-notes li { break-inside: avoid; margin-bottom: 3pt; }
   .paper-print .paper-sources li + li { margin-top: 4pt; }
   .paper-print .paper-notes a, .paper-print .paper-sources a { color: inherit; text-decoration: none; }
   .paper-print .paper-notes .fnback { display: none; }
   .paper-print .paper-notes a[href^="http"]::after,
   .paper-print .paper-sources a[href^="http"]::after {
-    content: " <" attr(href) ">"; font-size: 0.85em; color: #333; overflow-wrap: anywhere; word-break: break-all;
+    content: " <" attr(href) ">"; font-size: 0.85em; color: #333; overflow-wrap: anywhere;
+  }
+  /* Links to other pages of this site: write the full address. */
+  .paper-print .paper-notes a[href^="/"]::after,
+  .paper-print .paper-sources a[href^="/"]::after {
+    content: " <www.baronage.com" attr(href) ">"; font-size: 0.85em; color: #333; overflow-wrap: anywhere;
   }
 }
 
