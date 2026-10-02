@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container, GoldRule, Section } from "./primitives";
 import { PaperThumbnail } from "./PaperThumbnail";
+import { PrintButton } from "./PrintButton";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
@@ -19,15 +20,16 @@ export function monthYear(iso: string) {
  * Shell for a Reading Room paper — a compact masthead on parchment (no hero),
  * the generated body at reading measure, endnotes, the "Authority & sources"
  * box (same treatment as the Explained page's authority pop-ups), and links to
- * other papers. Server component; nothing fixed or sticky, so it prints cleanly.
+ * other papers. Server component. On paper it prints as a plain document: see the
+ * print rules for .paper-print in globals.css.
  */
 export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; related: ReadingRoomPaper[] }) {
   return (
-    <Section tone="parchment" className="!py-12 sm:!py-16">
+    <Section tone="parchment" className="!py-12 sm:!py-16 print:!py-0">
       <Container size="prose">
-        <article className="min-w-0">
+        <article className="paper-print min-w-0">
           {/* Phones only: back link above the title. */}
-          <nav aria-label="Breadcrumb" className="mb-8 sm:hidden">
+          <nav aria-label="Breadcrumb" className="no-print mb-8 sm:hidden">
             <Link href="/reading-room" className={`inline-flex ${BACK_LINK}`}>
               <span aria-hidden>←</span> The Reading Room · all papers
             </Link>
@@ -40,7 +42,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               <p className="mt-5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-muted">
                 {paper.readingTime} read · Reviewed {monthYear(paper.reviewed)}
                 {/* Desktop only: phones already have the back link above the title. */}
-                <span className="hidden sm:inline">
+                <span className="no-print hidden sm:inline">
                   {" "}
                   ·{" "}
                   <Link
@@ -50,6 +52,15 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                     The Reading Room
                   </Link>
                 </span>
+                <span className="no-print">
+                  {" "}
+                  ·{" "}
+                  <PrintButton className="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep underline decoration-gold/60 underline-offset-4 transition-colors hover:text-oxblood hover:decoration-oxblood/60" />
+                </span>
+              </p>
+              {/* Paper only: where the essay came from. */}
+              <p className="print-only paper-print__source">
+                Baronage of Scotland Association · The Reading Room · www.baronage.com/reading-room/{paper.slug}/
               </p>
               <GoldRule className="mt-6" align="start" />
             </div>
@@ -104,7 +115,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
           )}
 
           {related.length > 0 && (
-            <section aria-labelledby="more-papers" className="mt-14 max-w-[68ch]">
+            <section aria-labelledby="more-papers" className="no-print mt-14 max-w-[68ch]">
               <h2 id="more-papers" className="eyebrow !font-semibold">
                 More from the Reading Room
               </h2>
@@ -128,7 +139,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </section>
           )}
 
-          <p className="mt-10">
+          <p className="no-print mt-10">
             <Link
               href="/reading-room"
               className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:text-oxblood"
