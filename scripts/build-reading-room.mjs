@@ -122,7 +122,10 @@ function linkFootnoteRefs(body, defs, file) {
     const id = count === 1 ? `fnref-${label}` : `fnref-${label}-${count}`;
     return `<sup class="fnref" id="${id}"><a href="#fn-${label}" aria-label="Footnote ${label}">${label}</a></sup>`;
   });
-  return { body: out, order };
+  // Two markers with nothing between them ("[^5][^6]") would read as one number ("56"): mark the second,
+  // and the stylesheet puts a comma before it.
+  const spaced = out.replace(/<\/sup><sup class="fnref"/g, '</sup><sup class="fnref fnref--adj"');
+  return { body: spaced, order };
 }
 
 /** Split the trailing "### Authority & sources" section (and any `---` rule before it) from the body. */
