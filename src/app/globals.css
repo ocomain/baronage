@@ -460,6 +460,9 @@ html {
 @media print {
   .reveal-hidden { opacity: 1 !important; transform: none !important; }
 
+  /* The canvas is parchment on screen (html rule above); on paper it must be white, or the unused part of the
+     last page prints as a tinted block. */
+  html:has(.paper-print) { background: #fff !important; }
   body:has(.paper-print) { background: #fff !important; color: #000; }
   /* The site-wide film grain (body::before) would print as grey speckle. */
   body:has(.paper-print)::before, body:has(.paper-print)::after { display: none !important; }
