@@ -52,11 +52,9 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                     The Reading Room
                   </Link>
                 </span>
-                <span className="no-print">
-                  {" "}
-                  ·{" "}
-                  <PrintButton className="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep underline decoration-gold/60 underline-offset-4 transition-colors hover:text-oxblood hover:decoration-oxblood/60" />
-                </span>
+              </p>
+              <p className="no-print mt-5">
+                <PrintButton />
               </p>
               {/* Paper only: where the essay came from. */}
               <p className="print-only paper-print__source">
@@ -139,7 +137,11 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </section>
           )}
 
-          <p className="no-print mt-10">
+          <p className="no-print mt-12">
+            <PrintButton />
+          </p>
+
+          <p className="no-print mt-8">
             <Link
               href="/reading-room"
               className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep transition-colors hover:text-oxblood"
