@@ -57,7 +57,7 @@ function isClosed(): boolean {
  * Non-blocking featured-paper card. Slides in four seconds after a visitor arrives, or once they start
  * scrolling, then stays on every page of the visit until closed with X, which hides it for the rest of
  * that visit only, here and on the Roll — reading the paper does not close it, and Esc (which closes reference pop-ups) never
- * touches it. Hidden while on the paper itself. Sits beneath the mobile menu (z-30 under its z-40 overlay).
+ * touches it. Hidden throughout the Reading Room. Sits beneath the mobile menu (z-30 under its z-40 overlay).
  */
 export function FeaturedPaper() {
   const pathname = usePathname();
@@ -72,10 +72,11 @@ export function FeaturedPaper() {
   }, []);
 
   useEffect(() => {
-    const onPaper = pathname.replace(/\/?$/, "/") === HREF;
+    // Anywhere in the Reading Room (the index and every paper) the visitor is already among the papers.
+    const inReadingRoom = pathname.replace(/\/?$/, "/").startsWith("/reading-room/");
     const closed = isClosed();
     if (closed) markClosed(); // still browsing: keep it closed for another 30 minutes
-    const ok = !onPaper && !closed;
+    const ok = !inReadingRoom && !closed;
     setEligible(ok);
     if (!ok) setShown(false);
   }, [pathname]);
