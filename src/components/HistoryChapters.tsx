@@ -150,16 +150,23 @@ export function HistoryChapters() {
 
   return (
     <div>
-      {chapters.map((c) => (
+      {chapters.map((c, i) => (
         <section
           key={c.numeral}
           className="sticky top-0 flex h-[100svh] items-center overflow-hidden border-t border-gold/30"
           aria-label={`Chapter ${c.numeral}: ${c.title}`}
         >
-          <div
-            className="absolute inset-0 -z-20 bg-cover bg-center"
-            style={{ backgroundImage: `url('${c.img}')`, backgroundPosition: c.pos ?? "center" }}
+          {/* A real image, not a CSS background: the first plate loads at once with priority, the rest as they near the screen. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={c.img}
+            alt=""
             aria-hidden
+            loading={i === 0 ? "eager" : "lazy"}
+            fetchPriority={i === 0 ? "high" : "auto"}
+            decoding={i === 0 ? "sync" : "async"}
+            className="absolute inset-0 -z-20 h-full w-full object-cover"
+            style={{ objectPosition: c.pos ?? "center" }}
           />
           <div
             className="absolute inset-0 -z-10"
