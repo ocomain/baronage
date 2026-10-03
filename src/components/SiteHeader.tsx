@@ -66,8 +66,9 @@ export function SiteHeader() {
     <header ref={headerRef} className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2 font-inscribe text-[0.62rem] uppercase tracking-[0.24em]">
-          <span className="text-parchment-200/75">
+        {/* Large for older readers: grows with the window and may run past the content column to the right. */}
+        <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2.5 font-inscribe text-[clamp(0.66rem,1.15vw,1rem)] uppercase tracking-[0.16em]">
+          <span className="text-parchment-200/75 lg:whitespace-nowrap">
             We maintain{" "}
             <a
               href={ROLL_URL}
