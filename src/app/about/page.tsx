@@ -96,7 +96,7 @@ const citations: {
   gloss?: ReactNode;
 }[] = [
   {
-    source: "Lord Lyon David Sellar · 2010 (57 Lindberg Ptr, Lyon Court)",
+    source: "Lord Lyon David Sellar · 2010 (quoting 57 Lindberg Ptr, Lyon Court)",
     text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant.",
   },
   {
@@ -123,7 +123,7 @@ const citations: {
   {
     source: "Court of Session · Lady Wolffe · 2019",
     href: "https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf",
-    text: "Barony titles are conferred on “persons deserving of being raised to the nobility” — the court’s words, taking up Innes of Learney’s description of those granted arms, who by the grant become the root of a “noble stok”.",
+    text: "Barony titles are conferred on “persons deserving of being raised to the nobility” — the Court of Session’s words in 2019, quoting Innes of Learney.",
     note: "Hamilton of Rockhall v Lord Lyon King of Arms [2019] CSOH 85, para [101], applying Innes of Learney, Scots Heraldry (2nd ed., 1956), p. 85, quoted at para [14].",
   },
   {
@@ -173,12 +173,10 @@ const citations: {
     source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
     feature: true,
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
-    text: "On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial, “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”; s. 63(4): “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.",
+    text: "On the abolition of feudal baronies, the dignity of baron was expressly preserved: “nothing in this Act affects the dignity of baron”; s. 63(4): “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.",
     richText: (
       <>
-        On the abolition of feudal baronies, the dignity of baron was expressly preserved as a non-territorial,
-        “floating” dignity in Scots law: “an estate held in barony ceases to exist as a feudal estate, the dignity of
-        baron, though retained, shall not attach to the land” — and{" "}
+        On the abolition of feudal baronies, the dignity of baron was expressly preserved:{" "}
         <span className="text-foil not-italic">“nothing in this Act affects the dignity of baron”</span>; s. 63(4):{" "}
         “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a
         dignity”.
@@ -216,7 +214,55 @@ export default function AboutPage() {
         position="center 60%"
       />
 
+      {/* The emblem and its motto */}
       <Section tone="navyDeep" className="!pb-10 sm:!pb-12">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <Reveal>
+              <div className="relative mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-gold/30 bg-navy/50 sm:max-w-sm">
+                <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
+                <Seal className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="eyebrow eyebrow--light">Our Emblem</p>
+              <h2 className="mt-4 font-display text-3xl leading-tight text-parchment-50 sm:text-4xl">
+                In Liberam Baroniam · Per Cartas Nostras
+              </h2>
+              <GoldRule className="mt-6" align="start" />
+              <p className="mt-6 font-serif text-xl italic leading-relaxed text-gold-light">
+                “Into a free barony · By our charters”
+              </p>
+              <div className="mt-6 space-y-4 leading-relaxed text-parchment-200/85">
+                <p>
+                  Our emblem is an engraved seal, recalling the wax seals on the Crown charters by which every Scottish
+                  barony was created. The motto keeps the words of those grants: lands were erected{" "}
+                  <em className="text-parchment-100">in liberam baroniam</em>, “into a free barony”, conferring the
+                  rank and dignity of baron on the grantee and their heirs. The charter of 6 May 1590 erecting Spynie
+                  conferred “<em className="text-parchment-100">Titulum, Honorem, Ordinem et Statum liberi Baronis</em>”,
+                  the title, honour, rank and status of a free baron (
+                  <a
+                    href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+                  >
+                    Innes of Learney, PSAS 79, p. 113
+                  </a>
+                  , citing Great Seal vol. v, no. 1727).
+                </p>
+                <p>
+                  <em className="text-parchment-100">Per cartas nostras</em>, “by our charters”, records the source of
+                  that honour. The shield at the centre stands for the baronage itself, the ancient nobility of
+                  Scotland, whose titles the Association and the Roll exist to verify and preserve.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="navyDeep" className="!pt-10 sm:!pt-12">
         <Container>
           <Reveal>
             <SectionHeading
@@ -332,55 +378,6 @@ export default function AboutPage() {
                 </figure>
               </Reveal>
             ))}
-          </div>
-        </Container>
-      </Section>
-
-
-      {/* The emblem and its motto */}
-      <Section tone="navyDeep" className="!pt-10 sm:!pt-12">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            <Reveal>
-              <div className="relative mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-gold/30 bg-navy/50 sm:max-w-sm">
-                <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
-                <Seal className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="eyebrow eyebrow--light">Our Emblem</p>
-              <h2 className="mt-4 font-display text-3xl leading-tight text-parchment-50 sm:text-4xl">
-                In Liberam Baroniam · Per Cartas Nostras
-              </h2>
-              <GoldRule className="mt-6" align="start" />
-              <p className="mt-6 font-serif text-xl italic leading-relaxed text-gold-light">
-                “Into a free barony · By our charters”
-              </p>
-              <div className="mt-6 space-y-4 leading-relaxed text-parchment-200/85">
-                <p>
-                  Our emblem is an engraved seal, recalling the wax seals on the Crown charters by which every Scottish
-                  barony was created. The motto keeps the words of those grants: lands were erected{" "}
-                  <em className="text-parchment-100">in liberam baroniam</em>, “into a free barony”, conferring the
-                  rank and dignity of baron on the grantee and their heirs. The charter of 6 May 1590 erecting Spynie
-                  conferred “<em className="text-parchment-100">Titulum, Honorem, Ordinem et Statum liberi Baronis</em>”,
-                  the title, honour, rank and status of a free baron (
-                  <a
-                    href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
-                  >
-                    Innes of Learney, PSAS 79, p. 113
-                  </a>
-                  , citing Great Seal vol. v, no. 1727).
-                </p>
-                <p>
-                  <em className="text-parchment-100">Per cartas nostras</em>, “by our charters”, records the source of
-                  that honour. The shield at the centre stands for the baronage itself, the ancient nobility of
-                  Scotland, whose titles the Association and the Roll exist to verify and preserve.
-                </p>
-              </div>
-            </Reveal>
           </div>
         </Container>
       </Section>
