@@ -123,7 +123,7 @@ const citations: {
   {
     source: "Court of Session · Lady Wolffe · 2019",
     href: "https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf",
-    text: "Barony titles are conferred on “persons deserving of being raised to the nobility” — the Court of Session’s words in 2019, quoting Innes of Learney.",
+    text: "Barony titles are conferred on “persons deserving of being raised to the nobility” — Lady Wolffe’s words in the Court of Session in 2019, quoting Innes of Learney.",
     note: "Hamilton of Rockhall v Lord Lyon King of Arms [2019] CSOH 85, para [101], applying Innes of Learney, Scots Heraldry (2nd ed., 1956), p. 85, quoted at para [14].",
   },
   {
