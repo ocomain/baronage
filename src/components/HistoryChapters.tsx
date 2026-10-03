@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 type Chapter = {
   numeral: string;
@@ -157,17 +158,19 @@ export function HistoryChapters() {
           aria-label={`Chapter ${c.numeral}: ${c.title}`}
         >
           {/* A real image, not a CSS background: the first plate loads at once with priority, the rest as they near the screen. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={c.img}
-            alt=""
-            aria-hidden
-            loading={i === 0 ? "eager" : "lazy"}
-            fetchPriority={i === 0 ? "high" : "auto"}
-            decoding={i === 0 ? "sync" : "async"}
-            className="absolute inset-0 -z-20 h-full w-full object-cover"
-            style={{ objectPosition: c.pos ?? "center" }}
-          />
+          <picture aria-hidden>
+            <source media={PHONE_MEDIA} srcSet={phoneImage(c.img)} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={c.img}
+              alt=""
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "auto"}
+              decoding={i === 0 ? "sync" : "async"}
+              className="absolute inset-0 -z-20 h-full w-full object-cover"
+              style={{ objectPosition: c.pos ?? "center" }}
+            />
+          </picture>
           <div
             className="absolute inset-0 -z-10"
             style={{

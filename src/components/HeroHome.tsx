@@ -6,6 +6,7 @@ import { Seal } from "./Seal";
 import { ButtonLink, Container } from "./primitives";
 import { ROLL_URL } from "@/lib/site";
 import { useDeferredFilm } from "@/lib/useDeferredFilm";
+import { PHONE_MEDIA, imageForScreen, phoneImage } from "@/lib/heroImage";
 
 const POSTER = "/videos/hero-poster.webp";
 
@@ -42,22 +43,20 @@ export function HeroHome() {
       ref={ref}
       className="relative isolate flex min-h-[calc(100svh-9rem)] items-center overflow-hidden bg-navy-deep text-parchment-50"
     >
-      {/* Poster loads instantly while the film arrives */}
-      <link rel="preload" as="image" href={POSTER} fetchPriority="high" />
-
       {/* Eilean Donan at dusk — slow aerial film, drifting gently with scroll */}
       <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
         {/* A real image, so the browser treats the still as the page's main paint. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={POSTER}
-          alt=""
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          decoding="sync"
-          className="h-full w-full scale-[1.08] object-cover object-center"
-        />
+        <picture className="block h-full w-full">
+          <source media={PHONE_MEDIA} srcSet={phoneImage(POSTER)} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={POSTER}
+            alt=""
+            fetchPriority="high"
+            decoding="sync"
+            className="h-full w-full scale-[1.08] object-cover object-center"
+          />
+        </picture>
         {filmOn && !filmBlocked && (
           <video
             ref={videoRef}
@@ -67,7 +66,7 @@ export function HeroHome() {
             loop
             playsInline
             preload="auto"
-            poster={POSTER}
+            poster={imageForScreen(POSTER)}
             controls={false}
             disablePictureInPicture
             disableRemotePlayback

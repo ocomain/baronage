@@ -6,6 +6,7 @@ import { motion, useScroll, useSpring, useTransform, useReducedMotion } from "fr
 import { Seal } from "./Seal";
 import { Container } from "./primitives";
 import { useDeferredFilm } from "@/lib/useDeferredFilm";
+import { PHONE_MEDIA, imageForScreen, phoneImage } from "@/lib/heroImage";
 
 export function PageHero({
   eyebrow,
@@ -36,6 +37,7 @@ export function PageHero({
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
   const hasMedia = Boolean(image || video);
+  const still = (video ? video.poster : image) ?? "";
   // When the phone refuses autoplay (e.g. iOS Low Power Mode), show the poster instead of a paused film.
   const [filmBlocked, setFilmBlocked] = useState(false);
 
@@ -67,10 +69,19 @@ export function PageHero({
         <>
           <motion.div className="absolute inset-0 -z-20" style={{ y: bgY }} aria-hidden>
             <div className={`relative h-full w-full ${reduceMotion ? "scale-110" : "hero-breathe"}`}>
-              <div
-                className="h-full w-full bg-cover"
-                style={{ backgroundImage: `url('${video ? video.poster : image}')`, backgroundPosition: position }}
-              />
+              {/* A real image, not a CSS background, so the browser finds it at once and loads it first. */}
+              <picture className="block h-full w-full">
+                <source media={PHONE_MEDIA} srcSet={phoneImage(still)} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={still}
+                  alt=""
+                  fetchPriority="high"
+                  decoding="sync"
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: position }}
+                />
+              </picture>
               {video && filmOn && !filmBlocked && (
                 <video
                   ref={videoRef}
@@ -81,7 +92,7 @@ export function PageHero({
                   loop
                   playsInline
                   preload="auto"
-                  poster={video.poster}
+                  poster={imageForScreen(video.poster)}
                   controls={false}
                   disablePictureInPicture
                   disableRemotePlayback
