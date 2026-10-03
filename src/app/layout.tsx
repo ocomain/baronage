@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s · Baronage of Scotland Association",
   },
   description:
-    "Scottish barons, the ancient nobility of Scotland: the non-profit Association keeps the Roll of Scottish Barons, an open register of verified titles.",
+    "Scottish barons, the ancient nobility of Scotland: the non-profit Association keeps the Roll of Scottish Barons, the open register of titles held today.",
   keywords: [
     "Baronage of Scotland Association",
     "Scottish Barons",
