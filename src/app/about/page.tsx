@@ -178,7 +178,7 @@ const citations: {
   {
     source: "Parliament of Scotland · 1592",
     href: "https://www.rps.ac.uk/trans/1592/4/72",
-    text: "…the nobility, earls, lords and barons, ancient heritors of lands, livings and possessions…",
+    text: "…the nobility, earls, lords and barons…",
     note: "Act regarding the age and qualities of the lords of session, 1592 (RPS 1592/4/72).",
   },
   {
