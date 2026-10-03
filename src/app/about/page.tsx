@@ -170,6 +170,18 @@ const citations: {
     ),
   },
   {
+    source: "Parliament of Scotland · 1540",
+    href: "https://www.rps.ac.uk/trans/1540/12/30",
+    text: "…every noble man, such as an earl, lord, knight and baron…",
+    note: "Act on the manner of harness, weapons and armour, 1540 (RPS 1540/12/30).",
+  },
+  {
+    source: "Parliament of Scotland · 1592",
+    href: "https://www.rps.ac.uk/trans/1592/4/72",
+    text: "…the nobility, earls, lords and barons, ancient heritors of lands, livings and possessions…",
+    note: "Act regarding the age and qualities of the lords of session, 1592 (RPS 1592/4/72).",
+  },
+  {
     source: "Abolition of Feudal Tenure etc. (Scotland) Act 2000 · s. 63 · in force 28 November 2004",
     feature: true,
     href: "https://www.legislation.gov.uk/asp/2000/5/section/63",
