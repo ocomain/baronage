@@ -77,7 +77,8 @@ export function SiteHeader() {
             >
               The Roll of Scottish Barons
             </a>{" "}
-            — open-source title verification
+            {/* Owner's figure, 2026-10-04: hereditary peers among the verified entries on the Roll. */}
+            — now with 41 peers of the realm verified with Scottish baronies
           </span>
         </div>
       </div>

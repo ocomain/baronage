@@ -68,7 +68,7 @@ export default function BaronialCodePage() {
                 <strong className="font-semibold">
                   Barony titles are conferred on “persons deserving of being raised to the nobility”
                 </strong>{" "}
-                — the Court of Session’s words in 2019, quoting Innes of Learney.
+                — Lady Wolffe’s words in the Court of Session in 2019, quoting Innes of Learney.
               </p>
               <p className="mt-4 font-sans text-sm leading-relaxed text-muted">
                 <a
