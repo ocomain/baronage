@@ -229,9 +229,6 @@ export default function ProperAddressPage() {
                   <F>
                     In person: <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
                   </F>
-                  <F>
-                    Formal address: <S>Your Honour</S>
-                  </F>
                 </Forms>
                 <P>
                   It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
@@ -270,14 +267,14 @@ export default function ProperAddressPage() {
                         <td><S>The Baron of X</S></td>
                       </tr>
                       <tr>
-                        <td>Speaking to him, as an equal</td>
-                        <td>Duke</td>
-                        <td><S>Baron</S> (or Inverness)</td>
-                      </tr>
-                      <tr>
                         <td>Speaking about him</td>
                         <td>The Duke</td>
                         <td><S>The Baron</S></td>
+                      </tr>
+                      <tr>
+                        <td>Speaking to him, as an equal</td>
+                        <td>Duke</td>
+                        <td><S>Baron</S> (or Inverness)</td>
                       </tr>
                       <tr>
                         <td>Speaking to him deferentially</td>
@@ -523,10 +520,7 @@ export default function ProperAddressPage() {
                     Wife of heir: <S>Mrs Smith of TD, yr</S>
                   </F>
                   <F>
-                    Eldest daughter: <S>Miss Smith of TD</S>
-                  </F>
-                  <F>
-                    Younger daughters: <S>Miss Mary Smith of TD</S>
+                    Daughters: <S>Miss Mary Smith of TD</S>
                   </F>
                 </Forms>
               </Sec>
