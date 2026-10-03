@@ -5,7 +5,7 @@ slug: robes-and-insignia
 meta_description: "The dress and insignia of the Scottish baronage — the red robe of 1455, the circular mantle with five buttons, the chapeau, supporters and the style ‘Baron of X’ — drawn from Innes of Learney’s 1945 paper and the Lyon Court’s later guidance."
 category: Robes & Insignia
 published: 2026-09-11
-reviewed: 2026-09-11
+reviewed: 2026-10-03
 ---
 
 # Robes, chapeau and insignia of the baronage
@@ -32,7 +32,7 @@ The chapeau is now largely a matter of record rather than of new grant. Lord Lyo
 
 ## Supporters
 
-Mackenzie explained in 1680 why “our old Barons who are not Lords, and hold only their Lands in free Barony, have supporters in their Achievement”: they had been “originally Heritable Counsellers to the King, as Members of Parliament”. In 1673 “sundry barons” successfully maintained against the Lord Lyon that “they were as good Barons after that Act (1587) as before”.[^6] Supporters remain with the baronial houses that held their barony before 1587 and have held it continuously in the same family since; barons of later erection, or who have acquired a barony by purchase, are not entitled to them.[^7]
+Mackenzie explained in 1680 why “our old Barons, who are not Lords, and hold only their Lands in free Barony, have Supporters in their Atchievement”: they had been “originally heritable Counsellers to the King, as Members of Parliament”. In June 1673 “sundry Barons” brought a process against the Lord Lyon for refusing them supporters, pleading that the Act of 1587 “nowise debars them; but allenarly [only] dispenses with their absence”. The report records no judgment; Innes of Learney wrote that the barons “successfully maintained” their case.[^6] The Lord Lyon’s guidance of 2010 keeps supporters for “representatives of baronial houses who had a seat in Parliament until 1587”; in Campbell’s summary, barons “owning baronies erected after 1587 or acquiring baronies by purchase are not entitled to supporters”.[^7]
 
 ## The title in use
 
@@ -44,7 +44,8 @@ The paper ends with the evidence that “Baron of X” was the style of the coun
 
 - Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, *Proceedings of the Society of Antiquaries of Scotland*, vol. 79 (1944–45), pp. 111–163 — [open access PDF](http://journals.socantscot.org/index.php/psas/article/download/8229/8197/) (robes pp. 124–148; chapeau pp. 148–157; title pp. 157–163). In copyright until 2041; quoted, not reproduced.
 - Act of 4 August 1455 on the habits of earls, lords of parliament and burgh commissioners — [RPS 1455/8/12](https://www.rps.ac.uk/trans/1455/8/12); Declaration concerning the votes of small barons, 1587 — [RPS 1587/7/143](https://www.rps.ac.uk/trans/1587/7/143).
-- Sir George Mackenzie, *The Science of Herauldry* (1680), in [*Works*, vol. ii (1722)](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2), pp. 545, 550.
+- Sir George Mackenzie, *Observations upon the Laws and Customs of Nations as to Precedency* (1680), in [*Works*, vol. ii (1722)](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n552), pp. 545, 550.
+- Fountainhall, “Sundry Barons, &c. against The Lord Lyon”, June 1673, in M. P. Brown, [*Supplement to the Dictionary of the Decisions of the Court of Session*, vol. iii (1826)](https://archive.org/details/supplementtodic01sessgoog/page/n13), pp. 6–7.
 - Alexander Nisbet, [*A System of Heraldry* (1722; 1816 reprint)](https://archive.org/details/systemofheraldry01nisbuoft) — external ornaments and the baronial chapeau.
 - Lord Lyon’s general guidance on baronial additaments, 5 January 2010, and the helms and supporters of barons, in [D. D. Campbell, *Scottish Armory and Heraldry* (2019)](https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf), pp. 6, 7, 9–10, 83.
 - The December 2002 statement of Lord Lyon Blair is [reported at second hand (von Quast, 2020)](https://freiherrvonquast.wordpress.com/2020/06/15/to-what-extent-are-feudal-titles-recognised-by-the-scottish-authorities/).
@@ -54,6 +55,6 @@ The paper ends with the evidence that “Baron of X” was the style of the coun
 [^3]: Innes of Learney, pp. 127–129, 139–140, 147.
 [^4]: Innes of Learney, pp. 148–157 (Dolphinton p. 153; Hallhead p. 154; the colours pp. 154–156).
 [^5]: The December 2002 statement is [reported at second hand (von Quast, 2020)](https://freiherrvonquast.wordpress.com/2020/06/15/to-what-extent-are-feudal-titles-recognised-by-the-scottish-authorities/) and has not been verified against the Lyon Court’s archived website; Lord Lyon’s general guidance on baronial additaments, 5 January 2010, and the helms assigned to barons, in [D. D. Campbell, *Scottish Armory and Heraldry* (2019)](https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf), pp. 6, 83.
-[^6]: Sir George Mackenzie, *The Science of Herauldry* (1680), in [*Works*, vol. ii (1722)](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2), pp. 545, 550; Innes of Learney, pp. 142, 144.
-[^7]: Lord Lyon’s general guidance of 5 January 2010; Campbell (2019), pp. 9–10.
+[^6]: Sir George Mackenzie, *Observations upon the Laws and Customs of Nations as to Precedency* (1680), in [*Works*, vol. ii (1722)](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n552), p. 545; Fountainhall, “Sundry Barons, &c. against The Lord Lyon”, June 1673, in [Brown’s *Supplement*, vol. iii (1826)](https://archive.org/details/supplementtodic01sessgoog/page/n13), pp. 6–7; Innes of Learney, pp. 142, 144.
+[^7]: Lord Lyon’s [general guidance of 5 January 2010](https://web.archive.org/web/20100925150122/http://www.lyon-court.com:80/lordlyon/616.html) (archived copy); Campbell (2019), pp. 9–10.
 [^8]: Innes of Learney, pp. 157–163 (Kilravock p. 158; “Baron of the Barony” p. 158 n. 2; esquire p. 161).

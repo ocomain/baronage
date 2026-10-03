@@ -6,7 +6,7 @@ meta_description: "In 1945 the Lord Lyon, Sir Thomas Innes of Learney, set out t
 category: Heritage & Sources
 reading_time: 9 min
 published: 2026-09-11
-reviewed: 2026-09-11
+reviewed: 2026-10-03
 ---
 
 # The Lord Lyon's Case for the Baronage
@@ -31,7 +31,7 @@ Precedence followed. The Nova Scotia baronetcy patents of 1625 rank the new baro
 
 The barons were never a separate estate below the nobility; they were the nobility's larger half. Under the first Scottish statute on parliamentary robes, passed by James II in August 1455, the earls wore brown mantles furred with ermine while "the uther lords of parliament" — a phrase which, Innes shows, then embraced the barons — wore "ane mantell of rede … lynit with silk or furyt with cristy gray grece or purray" (p. 130). Great barons and small wore the same red robe, opening at the front like the earls', while the burgh commissioners were given cloaks fastened on the shoulder.
 
-When the Estates were reorganised after the Reformation, Parliament said so expressly. The Act of 20 December 1567 begins: "Of law and reason the barons of this realm ought to have vote in Parliament as a part of the nobility" (p. 132).[^3] Even after the Act of 1587 settled representation by shire commissioners, the barons did not accept that anything had been taken from them: in 1673 "sundry barons" maintained successfully against the Lord Lyon, in claiming their supporters, "that they were as good Barons after that Act (1587) as before" (p. 144).
+When the Estates were reorganised after the Reformation, Parliament said so expressly. The Act of 20 December 1567 begins: "Of law and reason the barons of this realm ought to have vote in Parliament as a part of the nobility" (p. 132).[^3] Even after the Act of 1587 settled representation by shire commissioners, the barons did not accept that anything had been taken from them: Innes writes that they "successfully maintained, in claiming their supporters, that 'they were as good Barons after that Act (1587) as before'" (p. 144). The report of the case he cites, of June 1673, gives the barons' plea that the Act "nowise debars them" but records no judgment ([Brown's *Supplement*, vol. iii, pp. 6–7](https://archive.org/details/supplementtodic01sessgoog/page/n13)).
 
 This is the setting of the 1943 finding, which Innes prints in full (p. 143 n. 3):
 
