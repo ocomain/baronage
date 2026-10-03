@@ -258,7 +258,7 @@ export default function AboutPage() {
             <Reveal>
               <div className="relative mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-gold/30 bg-navy/50 sm:max-w-sm">
                 <div className="pointer-events-none absolute inset-3 border border-gold/15" aria-hidden />
-                <Seal className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
+                <Seal loading="lazy" className="h-48 w-48 drop-shadow-[0_18px_45px_rgba(0,0,0,0.5)] sm:h-60 sm:w-60" />
               </div>
             </Reveal>
             <Reveal delay={0.1}>
