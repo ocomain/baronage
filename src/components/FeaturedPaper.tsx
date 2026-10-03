@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { PaperThumbnail } from "@/components/PaperThumbnail";
 import { FEATURED_PAPER } from "@/lib/site";
 
@@ -58,11 +58,16 @@ function isClosed(): boolean {
  * scrolling, then stays on every page of the visit until closed with X, which hides it for the rest of
  * that visit only, here and on the Roll — reading the paper does not close it, and Esc (which closes reference pop-ups) never
  * touches it. Hidden throughout the Reading Room. Sits beneath the mobile menu (z-30 under its z-40 overlay).
+ * If it would cover a page's own floating menu (anything marked data-clear-of-featured-paper, e.g. the section
+ * list on Proper Address), it slips away for the rest of that page. Not a close: nothing is stored, and it
+ * shows again on the next page.
  */
 export function FeaturedPaper() {
   const pathname = usePathname();
   const [eligible, setEligible] = useState(false);
   const [shown, setShown] = useState(false);
+  const [cleared, setCleared] = useState(false);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     // Until 2026-09-28 a close was kept for good in localStorage; clear it so those visitors see the card again.
@@ -78,8 +83,35 @@ export function FeaturedPaper() {
     if (closed) markClosed(); // still browsing: keep it closed for another 30 minutes
     const ok = !inReadingRoom && !closed;
     setEligible(ok);
+    setCleared(false);
     if (!ok) setShown(false);
   }, [pathname]);
+
+  // Never sit on top of a page's floating menu: if the two would overlap, the card slips away for this page.
+  useEffect(() => {
+    if (!shown || cleared) return;
+    const check = () => {
+      const card = ref.current?.getBoundingClientRect();
+      if (!card) return;
+      for (const el of document.querySelectorAll<HTMLElement>("[data-clear-of-featured-paper]")) {
+        const r = el.getBoundingClientRect();
+        if (r.width === 0 || Number(getComputedStyle(el).opacity) < 0.5) continue;
+        if (r.left < card.right && r.right > card.left && r.top < card.bottom && r.bottom > card.top) {
+          setCleared(true);
+          return;
+        }
+      }
+    };
+    check();
+    const tick = window.setInterval(check, 800); // catches the menu fading in
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      window.clearInterval(tick);
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, [shown, cleared]);
 
   useEffect(() => {
     if (!eligible || shown) return;
@@ -112,10 +144,11 @@ export function FeaturedPaper() {
 
   return (
     <aside
+      ref={ref}
       aria-label="Featured paper"
-      inert={!shown}
+      inert={!shown || cleared}
       className={`fixed inset-x-4 bottom-4 z-30 transition-all duration-500 ease-out motion-reduce:transition-none sm:inset-x-auto sm:bottom-6 sm:right-6 sm:w-[24rem] ${
-        shown ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
+        shown && !cleared ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
       }`}
       style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}
     >

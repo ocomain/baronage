@@ -12,7 +12,8 @@ type Item = { id: string; label: string; badge?: string };
  *  - Narrower screens: a "Sections" pill fixed bottom-right that opens a
  *    full-screen list; picking a section closes it and jumps there.
  * Both appear once the in-page menu (`anchorId`) has scrolled away. The pill
- * lifts above the featured-paper card whenever that card is on screen.
+ * lifts above the featured-paper card whenever that card is on screen; the
+ * list is marked so the card slips away rather than overlap it.
  */
 export function SectionSidebar({ items, anchorId }: { items: Item[]; anchorId: string }) {
   const [visible, setVisible] = useState(false);
@@ -81,6 +82,7 @@ export function SectionSidebar({ items, anchorId }: { items: Item[]; anchorId: s
       {/* Wide screens: fixed chapter list on the right */}
       <aside
         aria-label="On this page"
+        data-clear-of-featured-paper
         style={{ top, maxHeight: `calc(100vh - ${top + 40}px)` }}
         className={`fixed right-4 z-40 hidden w-[160px] overflow-y-auto border-l-2 border-gold bg-parchment-50/95 py-3 pl-3 pr-2.5 shadow-[0_10px_30px_-18px_rgba(12,21,48,0.45)] backdrop-blur-sm transition-opacity duration-300 min-[1180px]:block ${
           visible ? "opacity-100" : "pointer-events-none opacity-0"
