@@ -66,8 +66,8 @@ export function SiteHeader() {
     <header ref={headerRef} className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
       {/* Utility bar */}
       <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
-        {/* Large for older readers: grows with the window and may run past the content column to the right. */}
-        <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2.5 font-inscribe text-[clamp(0.66rem,1.15vw,1rem)] uppercase tracking-[0.16em]">
+        {/* Large for older readers: grows with the window but stays inside the content column. */}
+        <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2.5 font-inscribe text-[clamp(0.66rem,1.1vw,0.9rem)] uppercase tracking-[0.16em]">
           <span className="text-parchment-200/75 lg:whitespace-nowrap">
             We maintain{" "}
             <a
@@ -79,7 +79,7 @@ export function SiteHeader() {
               The Roll of Scottish Barons
             </a>{" "}
             {/* Verified entries on the Roll marked as peers, counted 2026-10-04: 41 hereditary, 2 life peers, the Duke of Rothesay. */}
-            — now with 44 peers of the realm verified with Scottish baronies
+            — now with 44 peers verified with Scottish baronies
           </span>
         </div>
       </div>
