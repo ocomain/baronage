@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PaperThumbnail } from "@/components/PaperThumbnail";
+import { KEY_STORE, NEW_KEY_STORE } from "@/lib/subscriber";
 
 /** The light fields the index needs — never the paper bodies, which would bloat the client payload. */
 export type PaperCard = {
@@ -32,6 +33,14 @@ export function ReadingRoomGrid({
   featuredSlug: string;
 }) {
   const [active, setActive] = useState<string>(ALL);
+  // A subscriber arriving by their link (or returning on the same device) is told the papers are open.
+  const [subscriber, setSubscriber] = useState(false);
+  useEffect(() => {
+    try {
+      setSubscriber(!!(localStorage.getItem(KEY_STORE) || localStorage.getItem(NEW_KEY_STORE)));
+    } catch {}
+  }, []);
+
   const count = (c: string) => (c === ALL ? papers.length : papers.filter((p) => p.category === c).length);
 
   return (
@@ -60,6 +69,12 @@ export function ReadingRoomGrid({
           );
         })}
       </div>
+
+      {subscriber && (
+        <p role="status" className="mt-6 border border-gold/40 bg-parchment-50 px-4 py-3 font-serif text-base text-ink-soft">
+          Thank you for subscribing. The subscriber papers are open on this device.
+        </p>
+      )}
 
       <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {papers.map((p) => (

@@ -4,14 +4,14 @@ import { useId, useState } from "react";
 import { EMAIL_SIGNUP } from "@/lib/site";
 
 /**
- * Email sign-up for the Association's papers and news. Posts straight to the Zoho Campaigns
+ * Email sign-up for the Association's free newsletter (papers and news). Posts straight to the Zoho Campaigns
  * sign-up form (into a hidden frame, so the visitor stays on the page); Zoho sends the
  * confirmation email. Renders nothing until EMAIL_SIGNUP.action is set in lib/site.
  */
 export function EmailSignup({
   variant = "header",
-  label = "Papers & news by email",
-  sentMessage = "Thank you. Please check your inbox to confirm.",
+  label = "Free newsletter by email",
+  sentMessage = "Please check your inbox to confirm.",
   className = "",
 }: {
   /** "header": the compact one-line form in the site header. "block": full width (mobile menu, subscriber papers). */

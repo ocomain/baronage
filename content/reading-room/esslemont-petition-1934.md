@@ -6,6 +6,8 @@ meta_description: "In 1934 Lord Lyon Sir Francis Grant, after proof, awarded Gor
 category: The Lyon Court
 published: 2026-09-13
 reviewed: 2026-09-13
+gated: part
+reading_time: "7 min"
 ---
 
 # The Esslemont petition of 1934
@@ -45,7 +47,7 @@ One further point from the proof has outlived it. The Lyon Register never conjoi
 
 ## Then and now
 
-Read the Memorial’s complaint again. What Hallhead objected to in 1934 was a conveyancer’s phrase, *Baron of the Barony of B——*, replacing the baron’s title, *Baron of B*, and so “conveying to the public and to foreigners that the feudal Baronage of Scotland are not truly constitutional barons”. In 2006 Lord Lyon Blair recognised Margaret Hamilton of Rockhall only as “Holder of the Barony of Lag”; in 2015 the Menking formula recorded that a petitioner “holds the [dignity] … being of the genus of barony”; from 2018 Letters Patent name no barony at all.[^12] The wording the Lyon Court was asked to reject in 1934, it rejected: Grant recorded “Baron of Esslemont”. The dignity itself is held under s. 63 of the 2000 Act whatever a patent says;[^13] the 1934 decision is the Lyon Court’s own answer to how that dignity is written.
+Read the Memorial’s complaint again. What Hallhead objected to in 1934 was a conveyancer’s phrase, *Baron of the Barony of B——*, replacing the baron’s title, *Baron of B*, and so “conveying to the public and to foreigners that the feudal Baronage of Scotland are not truly constitutional barons”. The wording the Lyon Court was asked to reject in 1934, it rejected: Grant recorded “Baron of Esslemont”. The dignity itself is held under s. 63 of the 2000 Act whatever a patent says;[^12] the 1934 decision is the Lyon Court’s own answer to how that dignity is written.
 
 The one document this paper does not reproduce is the matriculation itself, Lyon Register vol. xxxi, p. 20. An extract from the Lyon Office would complete the record.
 
@@ -56,7 +58,7 @@ The one document this paper does not reproduce is the matriculation itself, Lyon
 - Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, *Proceedings of the Society of Antiquaries of Scotland*, vol. 79 (1944–45), pp. 143 n. 3, 153–154, 157–163 — [open access PDF](http://journals.socantscot.org/index.php/psas/article/download/8229/8197/). In copyright; quoted for the purpose of record.
 - Lyon Register, vol. xxxi, p. 20 (Gordon of Hallhead, Baron of Esslemont, 4 September 1934); vol. iv, p. 2 (Ainslie of Pilton, 26 January 1836); vol. xxxv, p. 24 (Carnegy of Lour, 28 February 1945) and p. 31 (Wauchope of Niddrie, 19 April 1945) — as cited by Innes.
 - J. Grant Smith, *Records of Banffshire*, pp. 16, 131, 140 (rolls of freeholders 1672; Sheriff Depute’s order 1713; meeting of barons and freeholders 1720) — as cited by Innes.
-- [The Lord Lyon and the baronage since 2004](/reading-room/lord-lyon-since-2004/) and [Barons in the Lyon Court’s own words](/reading-room/barons-in-the-lyon-courts-own-words/) (the wording of 2006, 2015 and 2018); [The Lord Lyon’s Case for the Baronage](/reading-room/innes-of-learney-1945/) (a reader’s guide to the paper).
+- [The Lord Lyon and the baronage since 2004](/reading-room/lord-lyon-since-2004/) and [Barons in the Lyon Court’s own words](/reading-room/barons-in-the-lyon-courts-own-words/); [The Lord Lyon’s Case for the Baronage](/reading-room/innes-of-learney-1945/) (a reader’s guide to the paper).
 - [Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63).
 
 [^1]: Innes of Learney, [*PSAS* 79](http://journals.socantscot.org/index.php/psas/article/download/8229/8197/), pp. 153–154 (Fortune, 30 August 1910, Lyon Reg. vol. xx p. 74; Brock, 17 and 19 July 1913, vol. xxii pp. 13–14; Playfair, 4 June 1917, vol. xxiii p. 28).
@@ -70,5 +72,4 @@ The one document this paper does not reproduce is the matriculation itself, Lyon
 [^9]: Innes of Learney, *PSAS* 79, p. 157.
 [^10]: Court of the Lord Lyon (Lord Lyon Sir Francis Grant), interlocutor of 26 February 1943, Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26, printed in *PSAS* 79, p. 143 n. 3; Wauchope of Niddrie, 19 April 1945, Lyon Reg. vol. xxxv, p. 31, printed at p. 160.
 [^11]: Innes of Learney, *PSAS* 79, p. 154.
-[^12]: *Hamilton of Rockhall v Lord Lyon King of Arms* [2019] CSOH 85, paras [7], [27] and [29] — [PDF of the opinion](https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf); Lord Lyon Morrow, [Note in the Petition of Menking, 30 April 2015](https://courtofthelordlyon.scot/index_htm_files/Menking.pdf), para 30.
-[^13]: [Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63).
+[^12]: [Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63).

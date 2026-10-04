@@ -38,7 +38,7 @@ export default function ReadingRoomPage() {
       category,
       readingTime,
       published,
-      gated,
+      gated: gated === "full",
     }));
   // Only subjects that have papers get a filter.
   const categories = readingRoomCategories.filter((c) => papers.some((p) => p.category === c));
