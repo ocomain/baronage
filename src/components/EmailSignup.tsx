@@ -12,12 +12,14 @@ export function EmailSignup({
   variant = "header",
   label = "Free newsletter by email",
   sentMessage = "Please check your inbox to confirm.",
+  buttonLabel = "Sign up",
   className = "",
 }: {
   /** "header": the compact one-line form in the site header. "block": full width (mobile menu, subscriber papers). */
   variant?: "header" | "block";
   label?: string;
   sentMessage?: string;
+  buttonLabel?: string;
   className?: string;
 }) {
   const [sent, setSent] = useState(false);
@@ -67,7 +69,7 @@ export function EmailSignup({
               block ? "px-5 text-[0.68rem] tracking-[0.2em]" : "px-3.5 text-[0.58rem] tracking-[0.2em]"
             }`}
           >
-            Sign up
+            {buttonLabel}
           </button>
         </div>
       </form>

@@ -11,5 +11,3 @@ reading_time: "7 min"
 ---
 
 # The Lord Lyon and the baronage since 2004
-
-*The dignity of baron is held under section 63 of the 2000 Act whether or not the Lyon Court mentions it. What the Lyon Court says in Letters Patent is another matter, and it has changed more than once since the appointed day. This is the record, date by date.*
