@@ -16,10 +16,12 @@ export function PaperBody({
 }) {
   return (
     <>
-      <div
-        className="prose-heritage paper-body mt-10 max-w-[68ch] text-[1.05rem] leading-relaxed"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      {html && (
+        <div
+          className="prose-heritage paper-body mt-10 max-w-[68ch] text-[1.05rem] leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      )}
 
       {children}
 

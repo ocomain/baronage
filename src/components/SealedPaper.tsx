@@ -120,19 +120,20 @@ export function SealedPaper({
         aria-labelledby="subscriber-paper"
         className="sealed-gate no-print mt-10 max-w-[68ch] border border-gold/40 bg-parchment-50 p-6 sm:p-8"
       >
-        <p className="eyebrow">{mode === "full" ? "Subscriber paper" : "For subscribers"}</p>
+        <p className="eyebrow">{mode === "full" ? "Free subscriber paper" : "Free for subscribers"}</p>
         <h2 id="subscriber-paper" className="mt-3 font-display text-2xl leading-tight text-navy sm:text-3xl">
-          {mode === "full" ? "The full paper is sent to subscribers" : "This paper has a further part for subscribers"}
+          {mode === "full" ? "Read this paper free" : "Read the rest of this paper free"}
         </h2>
         <p className="mt-4 font-serif text-lg leading-relaxed text-ink-soft">
           {badLink ? "That link did not open the paper. Enter your email address below and we will send a fresh one. " : ""}
-          Enter your email address to receive the Association’s free newsletter. Confirm from the email we send you, and
-          the link that follows opens the full paper. New papers and news will follow as they are published, and you can
-          unsubscribe at any time.
+          <strong className="font-semibold text-navy">There is no charge.</strong> Enter your email address to receive the
+          Association’s free newsletter. Confirm from the email we send you, and the link that follows opens the full
+          paper. You can unsubscribe at any time.
         </p>
         <EmailSignup
           variant="block"
           label="Your email address"
+          buttonLabel="Read free"
           sentMessage="Please check your inbox and confirm: the link that follows opens the full paper."
           className="mt-6"
         />

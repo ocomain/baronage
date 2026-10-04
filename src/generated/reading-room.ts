@@ -167,10 +167,10 @@ export const readingRoomPapers: ReadingRoomPaper[] = [
     "reviewed": "2026-09-20",
     "emblem": null,
     "gated": "full",
-    "html": "<p><em>The dignity of baron is held under section 63 of the 2000 Act whether or not the Lyon Court mentions it. What the Lyon Court says in Letters Patent is another matter, and it has changed more than once since the appointed day. This is the record, date by date.</em></p>",
+    "html": "",
     "sourcesHtml": "",
     "footnotesHtml": "",
-    "wordCount": 50
+    "wordCount": 0
   },
   {
     "slug": "barons-in-the-lyon-courts-own-words",
