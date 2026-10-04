@@ -383,9 +383,9 @@ export default function TheRollPage() {
                   </li>
                   <li className="leading-relaxed text-ink-soft">
                     <strong className="font-semibold text-navy">“Hereditary Title.”</strong> The badge is defined openly
-                    on the Roll itself: “All Scottish baronial dignities are heritable. The Roll displays a
-                    ‘Hereditary Title’ badge where hereditary succession is pledged, or where the dignity is treated as
-                    dynastic.” It describes the Roll’s treatment of succession; it asserts no category of property law.
+                    on the Roll itself: “All Scottish baronial dignities are heritable. The Roll displays this badge where a
+                    barony is pledged on the Roll: by its holder’s signed Pledge, or, where it has been inherited across
+                    generations, by the Roll’s own pledge to recognise it only within the family.” It describes the Roll’s treatment of succession; it asserts no category of property law.
                   </li>
                   <li className="leading-relaxed text-ink-soft">
                     <strong className="font-semibold text-navy">“Verified.”</strong> Verification on the Roll means
