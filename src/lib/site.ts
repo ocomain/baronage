@@ -35,9 +35,22 @@ export const CALENDLY_URL = "https://calendly.com/secretary-baronage/30min";
  * sign-up form. While `action` is empty the form is not shown anywhere.
  */
 export const EMAIL_SIGNUP: { action: string; emailField: string; hidden: Record<string, string> } = {
-  action: "",
+  // Zoho Campaigns (EU): list "Papers and news", form "Website sign-up".
+  action: "https://zcv2-zcmp.maillist-manage.eu/weboptin.zc",
   emailField: "CONTACT_EMAIL",
-  hidden: {},
+  hidden: {
+    submitType: "optinCustomView",
+    emailReportId: "",
+    formType: "QuickForm",
+    zx: "14ae56fdcb",
+    zcvers: "2.0",
+    oldListIds: "",
+    mode: "OptinCreateView",
+    zcld: "140f5995a1afea32",
+    zctd: "",
+    zc_trackCode: "ZCFORMVIEW",
+    zc_formIx: "3zf3eb8dfbad4a3e935f2b447cf6bdea2ad6d74bb03cadb27da66f5e9f94f4ec54",
+  },
 };
 
 export type NavLink = { href: string; label: string; external?: boolean; /** Small "New" pill shown beside the label in the header only. */ badge?: string };
