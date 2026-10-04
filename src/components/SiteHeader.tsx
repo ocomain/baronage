@@ -79,7 +79,7 @@ export function SiteHeader() {
               The Roll of Scottish Barons
             </a>{" "}
             {/* Verified entries on the Roll marked as peers, counted 2026-10-04: 41 hereditary, 2 life peers, the Duke of Rothesay. */}
-            — now with 44 peers verified with Scottish baronies
+            — now with 44 peers verified holding Scottish baronies
           </span>
         </div>
       </div>
