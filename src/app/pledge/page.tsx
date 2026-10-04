@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pledge/" },
   title: "The Pledge",
   description:
-    "The Pledge makes a Scottish barony a pledged hereditary title. Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio.",
+    "The Pledge is an undertaking in honour, not in law, to keep a Scottish barony in the family, treated by the Roll as hereditary and not in commercio.",
 };
 
 const pledgeJsonLd = {
