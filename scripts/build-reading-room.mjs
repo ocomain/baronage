@@ -10,7 +10,17 @@
  * headings get slugified ids, external links open in a new tab, tables are
  * wrapped for horizontal scrolling, and the trailing "### Authority & sources"
  * section is split out so the shell can render it in its own box.
+ *
+ * Subscriber papers: a paper marked `gated: true` keeps only its opening in
+ * content/reading-room/. Its full text lives in content/reading-room-sealed/
+ * (local only, never committed) and is published as public/sealed/<slug>.json,
+ * encrypted with the subscriber key (key.txt in that local folder). The key
+ * travels in the link subscribers are emailed: /reading-room/<slug>/#key=<key>.
+ * A machine without the local folder (the deploy build) skips the sealing and
+ * uses the committed sealed files.
  */
+import { createCipheriv, createHash, randomBytes } from "node:crypto";
+import { existsSync } from "node:fs";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -19,6 +29,8 @@ import { Marked } from "marked";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT_DIR = path.join(ROOT, "content", "reading-room");
 const OUT_FILE = path.join(ROOT, "src", "generated", "reading-room.ts");
+const SEALED_DIR = path.join(ROOT, "content", "reading-room-sealed");
+const SEALED_OUT = path.join(ROOT, "public", "sealed");
 
 /** Editorial order of the index — only categories with papers are shown. */
 const CATEGORIES = ["Heritage & Sources", "Words & Usage", "Robes & Insignia", "Law & Statutes", "The Lyon Court"];
@@ -144,8 +156,8 @@ function splitSources(body) {
 const countWords = (text) => (text.match(/[\p{L}\p{N}][\p{L}\p{N}'’.-]*/gu) || []).length;
 
 /* ------------------------------ build ------------------------------ */
-async function buildPaper(file) {
-  const raw = await readFile(path.join(CONTENT_DIR, file), "utf8");
+async function buildPaper(file, dir = CONTENT_DIR) {
+  const raw = await readFile(path.join(dir, file), "utf8");
   const { data, body: fmBody } = parseFrontMatter(raw, file);
 
   for (const key of ["title", "subtitle", "slug", "meta_description", "category", "published"]) {
@@ -198,6 +210,7 @@ async function buildPaper(file) {
     published,
     reviewed,
     emblem: data.emblem || null,
+    gated: data.gated === "true",
     html,
     sourcesHtml,
     footnotesHtml,
@@ -205,10 +218,43 @@ async function buildPaper(file) {
   };
 }
 
+/** Encrypt the full text of each subscriber paper into public/sealed/ (only where the local folder exists). */
+async function sealPapers(papers) {
+  if (existsSync(SEALED_DIR)) {
+    const keyFile = path.join(SEALED_DIR, "key.txt");
+    if (!existsSync(keyFile)) await writeFile(keyFile, `${randomBytes(32).toString("base64url")}\n`, { mode: 0o600 });
+    const key = Buffer.from((await readFile(keyFile, "utf8")).trim(), "base64url");
+    if (key.length !== 32) throw new Error("content/reading-room-sealed/key.txt must hold a 32-byte base64url key");
+    await mkdir(SEALED_OUT, { recursive: true });
+    for (const file of (await readdir(SEALED_DIR)).filter((f) => f.endsWith(".md")).sort()) {
+      const full = await buildPaper(file, SEALED_DIR);
+      if (!papers.some((p) => p.slug === full.slug && p.gated)) {
+        throw new Error(`reading-room-sealed/${file}: content/reading-room/${full.slug}.md must exist with "gated: true"`);
+      }
+      const plain = Buffer.from(JSON.stringify({ html: full.html, footnotesHtml: full.footnotesHtml, sourcesHtml: full.sourcesHtml }));
+      // The IV is taken from the text itself, so an unchanged paper seals to the same bytes (no churn in git).
+      const iv = createHash("sha256").update(plain).digest().subarray(0, 12);
+      const cipher = createCipheriv("aes-256-gcm", key, iv);
+      const data = Buffer.concat([cipher.update(plain), cipher.final(), cipher.getAuthTag()]);
+      await writeFile(
+        path.join(SEALED_OUT, `${full.slug}.json`),
+        `${JSON.stringify({ iv: iv.toString("base64"), data: data.toString("base64") })}\n`
+      );
+      console.log(`  sealed ${full.slug}  ${full.wordCount} words`);
+    }
+  }
+  for (const p of papers.filter((p) => p.gated)) {
+    if (!existsSync(path.join(SEALED_OUT, `${p.slug}.json`))) {
+      throw new Error(`${p.slug} is gated but public/sealed/${p.slug}.json is missing`);
+    }
+  }
+}
+
 async function main() {
   const files = (await readdir(CONTENT_DIR)).filter((f) => f.endsWith(".md")).sort();
   const papers = [];
   for (const file of files) papers.push(await buildPaper(file));
+  await sealPapers(papers);
 
   const slugs = new Set();
   for (const p of papers) {
@@ -237,6 +283,8 @@ export type ReadingRoomPaper = {
   published: string;
   reviewed: string;
   emblem: string | null;
+  /** Subscriber paper: \`html\` holds only the opening; the full text is in public/sealed/<slug>.json. */
+  gated: boolean;
   html: string;
   sourcesHtml: string;
   footnotesHtml: string;

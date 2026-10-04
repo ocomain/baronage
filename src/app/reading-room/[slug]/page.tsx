@@ -58,7 +58,8 @@ export default async function ReadingRoomPaperPage({ params }: Props) {
     dateModified: paper.reviewed,
     about: { "@type": "Thing", name: "Baronage of Scotland" },
     articleSection: paper.category,
-    wordCount: paper.wordCount,
+    // A subscriber paper carries only its opening on the page.
+    ...(paper.gated ? { isAccessibleForFree: false } : { wordCount: paper.wordCount }),
     inLanguage: "en-GB",
     mainEntityOfPage: url,
     url,

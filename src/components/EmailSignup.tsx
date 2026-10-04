@@ -8,14 +8,25 @@ import { EMAIL_SIGNUP } from "@/lib/site";
  * sign-up form (into a hidden frame, so the visitor stays on the page); Zoho sends the
  * confirmation email. Renders nothing until EMAIL_SIGNUP.action is set in lib/site.
  */
-export function EmailSignup({ variant = "header", className = "" }: { variant?: "header" | "drawer"; className?: string }) {
+export function EmailSignup({
+  variant = "header",
+  label = "Papers & news by email",
+  sentMessage = "Thank you. Please check your inbox to confirm.",
+  className = "",
+}: {
+  /** "header": the compact one-line form in the site header. "block": full width (mobile menu, subscriber papers). */
+  variant?: "header" | "block";
+  label?: string;
+  sentMessage?: string;
+  className?: string;
+}) {
   const [sent, setSent] = useState(false);
   const id = useId();
   const frame = `signup-frame-${id.replace(/[^a-zA-Z0-9]/g, "")}`;
 
   if (!EMAIL_SIGNUP.action) return null;
 
-  const drawer = variant === "drawer";
+  const block = variant === "block";
 
   return (
     <div className={className}>
@@ -30,12 +41,12 @@ export function EmailSignup({ variant = "header", className = "" }: { variant?: 
         <label
           htmlFor={`${id}-email`}
           className={`block font-sans font-semibold uppercase leading-none text-gold-deep ${
-            drawer ? "text-[0.68rem] tracking-[0.2em]" : "text-[0.55rem] tracking-[0.24em]"
+            block ? "text-[0.68rem] tracking-[0.2em]" : "text-[0.55rem] tracking-[0.24em]"
           }`}
         >
-          Papers &amp; news by email
+          {label}
         </label>
-        <div className={`flex ${drawer ? "mt-3" : "mt-[6px] h-[34px]"}`}>
+        <div className={`flex ${block ? "mt-3" : "mt-[6px] h-[34px]"}`}>
           <input
             id={`${id}-email`}
             type="email"
@@ -44,7 +55,7 @@ export function EmailSignup({ variant = "header", className = "" }: { variant?: 
             required
             placeholder="Email address"
             className={`min-w-0 rounded-l-sm border border-r-0 border-parchment-300 bg-parchment-50 text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-gold ${
-              drawer ? "flex-1 px-4 py-3 text-base" : "w-40 px-3 text-[0.8rem] xl:w-60"
+              block ? "flex-1 px-4 py-3 text-base" : "w-40 px-3 text-[0.8rem] xl:w-60"
             }`}
           />
           {Object.entries(EMAIL_SIGNUP.hidden).map(([name, value]) => (
@@ -53,7 +64,7 @@ export function EmailSignup({ variant = "header", className = "" }: { variant?: 
           <button
             type="submit"
             className={`rounded-r-sm bg-navy font-sans font-semibold uppercase text-parchment-50 transition-colors hover:bg-navy-deep ${
-              drawer ? "px-5 text-[0.68rem] tracking-[0.2em]" : "px-3.5 text-[0.58rem] tracking-[0.2em]"
+              block ? "px-5 text-[0.68rem] tracking-[0.2em]" : "px-3.5 text-[0.58rem] tracking-[0.2em]"
             }`}
           >
             Sign up
@@ -62,11 +73,11 @@ export function EmailSignup({ variant = "header", className = "" }: { variant?: 
       </form>
       <p
         role="status"
-        className={`font-display leading-snug text-navy ${drawer ? "text-lg" : "max-w-[17rem] text-[1.05rem]"} ${
+        className={`font-display leading-snug text-navy ${block ? "text-lg" : "max-w-[17rem] text-[1.05rem]"} ${
           sent ? "" : "hidden"
         }`}
       >
-        Thank you. Please check your inbox to confirm.
+        {sentMessage}
       </p>
       <iframe name={frame} title="Email sign-up" tabIndex={-1} aria-hidden className="hidden" />
     </div>

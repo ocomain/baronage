@@ -42,5 +42,6 @@ next-env.d.ts
 
 # local-only
 originals/
+content/reading-room-sealed/
 .claude/
 HANDOVER.md
