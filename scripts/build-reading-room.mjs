@@ -16,7 +16,7 @@
  * passages left out of that file. Its full text lives in content/reading-room-sealed/
  * (local only, never committed) and is published as public/sealed/<slug>.json,
  * encrypted with the subscriber key (key.txt in that local folder). The key
- * travels in the link subscribers are emailed: /reading-room/<slug>/#key=<key>.
+ * travels in the link subscribers are given: /reading-room/#key=<key>.
  * A machine without the local folder (the deploy build) skips the sealing and
  * uses the committed sealed files.
  */
@@ -225,9 +225,18 @@ async function buildPaper(file, dir = CONTENT_DIR) {
 async function sealPapers(papers) {
   if (existsSync(SEALED_DIR)) {
     const keyFile = path.join(SEALED_DIR, "key.txt");
-    if (!existsSync(keyFile)) await writeFile(keyFile, `${randomBytes(32).toString("base64url")}\n`, { mode: 0o600 });
-    const key = Buffer.from((await readFile(keyFile, "utf8")).trim(), "base64url");
-    if (key.length !== 32) throw new Error("content/reading-room-sealed/key.txt must hold a 32-byte base64url key");
+    // The subscriber key is short and made of letters and digits only, so it survives being copied by hand
+    // from a plain-text link; the encryption key is its SHA-256.
+    if (!existsSync(keyFile)) {
+      const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+      const token = Array.from(randomBytes(20), (b) => alphabet[b % alphabet.length]).join("");
+      await writeFile(keyFile, `${token}\n`, { mode: 0o600 });
+    }
+    const token = (await readFile(keyFile, "utf8")).trim();
+    if (!/^[A-Za-z0-9]{16,}$/.test(token)) {
+      throw new Error("content/reading-room-sealed/key.txt must hold the subscriber key: 16 or more letters and digits");
+    }
+    const key = createHash("sha256").update(token).digest();
     await mkdir(SEALED_OUT, { recursive: true });
     for (const file of (await readdir(SEALED_DIR)).filter((f) => f.endsWith(".md")).sort()) {
       const full = await buildPaper(file, SEALED_DIR);

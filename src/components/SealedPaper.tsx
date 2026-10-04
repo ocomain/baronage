@@ -14,7 +14,8 @@ async function unseal(slug: string, key: string): Promise<FullPaper> {
   const res = await fetch(`/sealed/${slug}.json`);
   if (!res.ok) throw new Error("sealed paper not found");
   const { iv, data } = (await res.json()) as { iv: string; data: string };
-  const raw = bytes(key.replace(/-/g, "+").replace(/_/g, "/"));
+  // The encryption key is the SHA-256 of the subscriber key (see scripts/build-reading-room.mjs).
+  const raw = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(key));
   const cryptoKey = await crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["decrypt"]);
   const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: bytes(iv) }, cryptoKey, bytes(data));
   return JSON.parse(new TextDecoder().decode(plain));
