@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",
 };
 
-const members: CouncilMember[] = [
+// Temporarily hidden from the page (owner, 2026-10-04). Empty this set to show everyone again.
+const HIDDEN_MARKS = new Set<string>(["B"]);
+
+const allMembers: CouncilMember[] = [
   {
     mark: "B",
     name: "Brady, Baron of Balvaird",
@@ -60,6 +63,8 @@ const members: CouncilMember[] = [
     bio: "Gordon MacGregor is one of Scotland\u2019s foremost genealogists, with over thirty years of commissioned research including work for the Court of the Lord Lyon. He is the author of the Red Book of Scotland — an eighteen-volume, 16,500-page account of the families who shaped Scotland from the medieval era to the present, with a foreword by Lord Lyon Morrow — held by the National Records of Scotland and the National Library of Scotland. He also serves as Consultant Historian for Taymouth Castle (Discovery Properties).",
   },
 ];
+
+const members = allMembers.filter((m) => !HIDDEN_MARKS.has(m.mark));
 
 const councilJsonLd = {
   "@context": "https://schema.org",
@@ -146,7 +151,11 @@ export default function GoverningCouncilPage() {
             </div>
           </Reveal>
 
-          <div className="mt-20 grid grid-cols-1 gap-x-6 gap-y-12 sm:mt-28 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            className={`mt-20 grid grid-cols-1 gap-x-6 gap-y-12 sm:mt-28 sm:grid-cols-2 ${
+              members.length === 3 ? "lg:mx-auto lg:max-w-4xl lg:grid-cols-3" : "lg:grid-cols-4"
+            }`}
+          >
             {members.map((m, i) => (
               <Reveal key={m.mark} delay={(i % 4) * 0.08}>
                 <CouncilCard m={m} />
