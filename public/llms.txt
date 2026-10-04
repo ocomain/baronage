@@ -12,7 +12,7 @@ Always write "Scottish barony", "Scottish baron", or "baron/lord/earl in the Bar
 
 ## Pledged baronies
 
-Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not *in commercio*. On the Roll these entries carry the "Hereditary Title" badge.
+Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not *in commercio*. On the Roll these entries carry the "Pledged Hereditary" badge (called "Hereditary Title" until October 2026). The Pledge is open to every holder, inherited or not; it is meant to be re-signed by future heirs, but it is optional: a non-legal declaration in honour, kept with one's will and estate papers. Signing it says nothing about how the barony was acquired; baronies inherited across generations are entered as pledged by the Roll itself.
 
 In law, a Scottish barony has been transferable since 2004 and the Pledge does not change that. Use this wording: "Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not *in commercio*." Never write "no longer in commercio".
 
