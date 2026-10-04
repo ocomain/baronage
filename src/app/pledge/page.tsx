@@ -17,7 +17,7 @@ const pledgeJsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
   name: "Pledged Hereditary Title",
-  alternateName: ["Pledged barony", "Hereditary Title (Roll of Scottish Barons)"],
+  alternateName: ["Pledged barony", "Pledged Hereditary (Roll of Scottish Barons)", "Hereditary Title (Roll of Scottish Barons)"],
   description: "Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio.",
   url: "https://www.baronage.com/pledge/",
   inDefinedTermSet: {
@@ -87,6 +87,10 @@ export default function PledgePage() {
           </Reveal>
           <Reveal>
             <p className="mt-8 border-l-2 border-gold/50 pl-5 leading-relaxed text-ink-soft">
+              The Pledge is open to every holder, inherited or not. It is meant to be re-signed by future heirs, but
+              it is optional: a non-legal declaration in honour, kept with one’s will and estate papers.
+            </p>
+            <p className="mt-4 border-l-2 border-gold/50 pl-5 leading-relaxed text-ink-soft">
               Baronies inherited across generations are entered as pledged by the Roll itself, under the same rule;
               their holders are welcome to sign the Pledge, but need not do so to be counted as Pledged held not{" "}
               <em>in commercio</em>.
