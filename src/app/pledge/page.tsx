@@ -88,10 +88,8 @@ export default function PledgePage() {
           <Reveal>
             <p className="mt-8 border-l-2 border-gold/50 pl-5 leading-relaxed text-ink-soft">
               The Pledge is open to every holder, inherited or not. It is meant to be re-signed by future heirs, but
-              it is optional: a non-legal declaration in honour, kept with one’s will and estate papers.
-            </p>
-            <p className="mt-4 border-l-2 border-gold/50 pl-5 leading-relaxed text-ink-soft">
-              Baronies inherited across generations are entered as pledged by the Roll itself, under the same rule;
+              it is optional: a non-legal declaration in honour, kept with one’s will and estate papers. Baronies
+              inherited across generations are entered as pledged by the Roll itself, under the same rule;
               their holders are welcome to sign the Pledge, but need not do so to be counted as Pledged held not{" "}
               <em>in commercio</em>.
             </p>
