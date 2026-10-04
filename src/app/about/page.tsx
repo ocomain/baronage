@@ -36,7 +36,7 @@ const mandate = [
   "Advocacy for the titles of the Baronage of Scotland, one of the historic Three Estates.",
   "Legal protection of the historic rights and heritage of the baronage, upholding the principles of honour.",
   "Keeper of the open-source verification Roll of Scottish Barons.",
-  "Offering barons The Pledge — converting a barony into a pledged hereditary title, bound by the Baronial Code.",
+  "Offering barons The Pledge — pledging a barony as a hereditary title, bound by the Baronial Code.",
   "Representing barons in their engagement with government.",
   (
     <>
