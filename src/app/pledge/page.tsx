@@ -85,6 +85,13 @@ export default function PledgePage() {
               ))}
             </ul>
           </Reveal>
+          <Reveal>
+            <p className="mt-8 border-l-2 border-gold/50 pl-5 leading-relaxed text-ink-soft">
+              Baronies inherited across generations are entered as pledged by the Roll itself, under the same rule;
+              their holders are welcome to sign the Pledge, but need not do so to be counted as Pledged held not{" "}
+              <em>in commercio</em>.
+            </p>
+          </Reveal>
         </Container>
       </Section>
 
