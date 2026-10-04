@@ -43,7 +43,8 @@ export default function PledgePage() {
         title="The Pledge"
         intro={
           <>
-            An opportunity to convert a barony into a pledged hereditary title. Pledged baronies descend by blood,
+            An opportunity to pledge a barony as a hereditary title, ensuring legitimacy and principled commitment for
+            future generations. Pledged baronies descend by blood,
             they are not <em>in commercio</em>.
           </>
         }
