@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
+import { EmailSignup } from "./EmailSignup";
 import { ExternalArrow } from "./primitives";
 import { navLinks, ROLL_URL, CALENDLY_URL } from "@/lib/site";
 
@@ -96,6 +97,8 @@ export function SiteHeader() {
           <Link href="/" aria-label="Baronage of Scotland Association — home" className="text-navy">
             <Wordmark />
           </Link>
+
+          <EmailSignup className="hidden lg:block" />
 
           <div className="flex items-center gap-3">
             <Link
@@ -219,6 +222,7 @@ export function SiteHeader() {
               >
                 Request a Call Back
               </a>
+              <EmailSignup variant="drawer" className="mt-7 border-t border-parchment-300/70 pt-6" />
             </motion.nav>
           </>
         )}

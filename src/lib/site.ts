@@ -29,6 +29,17 @@ export const ROLL_API = "https://roll.baronage.com";
 /** The Secretary's Calendly booking link — "Request a Call Back". */
 export const CALENDLY_URL = "https://calendly.com/secretary-baronage/30min";
 
+/**
+ * Email sign-up (components/EmailSignup, shown in the header and the mobile menu).
+ * `action`, `emailField` and the `hidden` fields come from the embed code of the Zoho Campaigns
+ * sign-up form. While `action` is empty the form is not shown anywhere.
+ */
+export const EMAIL_SIGNUP: { action: string; emailField: string; hidden: Record<string, string> } = {
+  action: "",
+  emailField: "CONTACT_EMAIL",
+  hidden: {},
+};
+
 export type NavLink = { href: string; label: string; external?: boolean; /** Small "New" pill shown beside the label in the header only. */ badge?: string };
 
 /** Primary navigation — mirrors the existing site menu. */
