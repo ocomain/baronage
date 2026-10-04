@@ -12,7 +12,8 @@
  * section is split out so the shell can render it in its own box.
  *
  * Subscriber papers: a paper marked `gated: true` keeps only its opening in
- * content/reading-room/. Its full text lives in content/reading-room-sealed/
+ * content/reading-room/; one marked `gated: part` stays public except for the
+ * passages left out of that file. Its full text lives in content/reading-room-sealed/
  * (local only, never committed) and is published as public/sealed/<slug>.json,
  * encrypted with the subscriber key (key.txt in that local folder). The key
  * travels in the link subscribers are emailed: /reading-room/<slug>/#key=<key>.
@@ -172,6 +173,8 @@ async function buildPaper(file, dir = CONTENT_DIR) {
   const published = isoDate(data.published, "published", file);
   const reviewed = data.reviewed ? isoDate(data.reviewed, "reviewed", file) : published;
   if (data.emblem && !data.emblem.startsWith("/images/")) throw new Error(`${file}: emblem must be a path under /images`);
+  if (data.gated && !["true", "part"].includes(data.gated)) throw new Error(`${file}: gated must be "true" or "part"`);
+  const gated = data.gated === "true" ? "full" : data.gated === "part" ? "part" : null;
 
   // Drop a leading HTML comment (implementation notes) and a leading H1 that duplicates the title.
   let body = fmBody.replace(/^\s*<!--[\s\S]*?-->\s*/, "");
@@ -210,7 +213,7 @@ async function buildPaper(file, dir = CONTENT_DIR) {
     published,
     reviewed,
     emblem: data.emblem || null,
-    gated: data.gated === "true",
+    gated,
     html,
     sourcesHtml,
     footnotesHtml,
@@ -229,7 +232,7 @@ async function sealPapers(papers) {
     for (const file of (await readdir(SEALED_DIR)).filter((f) => f.endsWith(".md")).sort()) {
       const full = await buildPaper(file, SEALED_DIR);
       if (!papers.some((p) => p.slug === full.slug && p.gated)) {
-        throw new Error(`reading-room-sealed/${file}: content/reading-room/${full.slug}.md must exist with "gated: true"`);
+        throw new Error(`reading-room-sealed/${file}: content/reading-room/${full.slug}.md must exist with "gated: true" or "gated: part"`);
       }
       const plain = Buffer.from(JSON.stringify({ html: full.html, footnotesHtml: full.footnotesHtml, sourcesHtml: full.sourcesHtml }));
       // The IV is taken from the text itself, so an unchanged paper seals to the same bytes (no churn in git).
@@ -283,8 +286,11 @@ export type ReadingRoomPaper = {
   published: string;
   reviewed: string;
   emblem: string | null;
-  /** Subscriber paper: \`html\` holds only the opening; the full text is in public/sealed/<slug>.json. */
-  gated: boolean;
+  /**
+   * Subscriber paper. "full": \`html\` holds only the opening. "part": the paper is public except for some
+   * passages. Either way the full text is in public/sealed/<slug>.json.
+   */
+  gated: "full" | "part" | null;
   html: string;
   sourcesHtml: string;
   footnotesHtml: string;

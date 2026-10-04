@@ -4,7 +4,7 @@ import { PaperThumbnail } from "./PaperThumbnail";
 import { PaperBody } from "./PaperBody";
 import { PrintButton } from "./PrintButton";
 import { SealedPaper } from "./SealedPaper";
-import { KEY_STORE, UNSEALING } from "@/lib/subscriber";
+import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
@@ -23,7 +23,7 @@ export function monthYear(iso: string) {
  * Shell for a Reading Room paper — a compact masthead on parchment (no hero),
  * the generated body at reading measure, endnotes, the "Authority & sources"
  * box (same treatment as the Explained page's authority pop-ups), and links to
- * other papers. A subscriber paper (gated) shows its opening and the sign-up instead. Server component. On paper it prints as a plain document: see the
+ * other papers. A subscriber paper (gated) shows its public text and the sign-up instead. Server component. On paper it prints as a plain document: see the
  * print rules for .paper-print in globals.css.
  */
 export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; related: ReadingRoomPaper[] }) {
@@ -57,7 +57,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                 </span>
               </p>
               {/* A subscriber paper offers printing once it has been opened (see SealedPaper). */}
-              {!paper.gated && (
+              {paper.gated !== "full" && (
                 <p className="no-print mt-5">
                   <PrintButton />
                 </p>
@@ -86,10 +86,16 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               {/* Runs before first paint: with a subscriber key at hand, hold the sign-up box back while the paper opens. */}
               <script
                 dangerouslySetInnerHTML={{
-                  __html: `try{if(/key=/.test(location.hash)||localStorage.getItem("${KEY_STORE}"))document.documentElement.classList.add("${UNSEALING}")}catch(e){}`,
+                  __html: `try{if(/key=/.test(location.hash)||localStorage.getItem("${KEY_STORE}")||localStorage.getItem("${NEW_KEY_STORE}"))document.documentElement.classList.add("${UNSEALING}")}catch(e){}`,
                 }}
               />
-              <SealedPaper slug={paper.slug} teaserHtml={paper.html} />
+              <SealedPaper
+                slug={paper.slug}
+                mode={paper.gated}
+                html={paper.html}
+                footnotesHtml={paper.footnotesHtml}
+                sourcesHtml={paper.sourcesHtml}
+              />
             </>
           ) : (
             <PaperBody html={paper.html} footnotesHtml={paper.footnotesHtml} sourcesHtml={paper.sourcesHtml} />
@@ -120,7 +126,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </section>
           )}
 
-          {!paper.gated && (
+          {paper.gated !== "full" && (
             <p className="no-print mt-12">
               <PrintButton />
             </p>

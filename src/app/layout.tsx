@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FeaturedPaper } from "@/components/FeaturedPaper";
 import { SITE_URL } from "@/lib/site";
+import { NEW_KEY_STORE } from "@/lib/subscriber";
 
 // Matches the brand fonts used on roll.baronage.com
 const cormorant = Cormorant_Garamond({
@@ -110,6 +111,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html:
               'var __m={"#page-2":"/proper-address/","#governing-council":"/governing-council/","#about":"/about/"};var __t=__m[location.hash];if(__t)location.replace(__t);',
+          }}
+        />
+        {/* A subscriber's link (#key=…) may land on any page: keep the key for the subscriber papers and tidy the address. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var __k=location.hash.match(/key=([A-Za-z0-9_-]+)/);if(__k){localStorage.setItem("${NEW_KEY_STORE}",__k[1]);history.replaceState(null,"",location.pathname+location.search)}}catch(e){}`,
           }}
         />
         <script

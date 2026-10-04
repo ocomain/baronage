@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { EmailSignup } from "./EmailSignup";
 import { PaperBody } from "./PaperBody";
 import { PrintButton } from "./PrintButton";
-import { KEY_STORE, UNSEALING } from "@/lib/subscriber";
-
+import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 
 type FullPaper = { html: string; footnotesHtml: string; sourcesHtml: string };
 
@@ -22,26 +21,55 @@ async function unseal(slug: string, key: string): Promise<FullPaper> {
 }
 
 /**
- * A subscriber paper. The page itself carries only the opening and the sign-up; the full text is an
- * encrypted file (public/sealed/<slug>.json), so it is in no page a search engine or AI crawler can read.
- * The link in the subscriber's email ends in #key=…; opening it once unlocks every subscriber paper on
- * that device.
+ * The keys to try, newest first: one still in the address (only when storage is blocked — otherwise the
+ * inline script in app/layout has already moved it into storage), one that arrived in a link and has not
+ * opened a paper yet, and the one remembered on this device. A mistyped or out-of-date link therefore
+ * never locks out a subscriber whose device already holds a good key.
  */
-export function SealedPaper({ slug, teaserHtml }: { slug: string; teaserHtml: string }) {
+function readKeys() {
+  const fromHash = window.location.hash.match(/key=([A-Za-z0-9_-]+)/)?.[1];
+  let fresh: string | null = null;
+  let stored: string | null = null;
+  try {
+    fresh = localStorage.getItem(NEW_KEY_STORE);
+    stored = localStorage.getItem(KEY_STORE);
+  } catch {
+    // Storage blocked (private window): the link still opens the paper for this visit.
+  }
+  const keys = [fromHash, fresh, stored].filter((k, i, all): k is string => !!k && all.indexOf(k) === i);
+  return { keys, fromLink: !!(fromHash || fresh) };
+}
+
+/**
+ * A subscriber paper. The page itself carries only the public text and the sign-up; the full text is an
+ * encrypted file (public/sealed/<slug>.json), so it is in no page a search engine or AI crawler can read.
+ * The link a subscriber is given ends in #key=…; opening it once unlocks every subscriber paper on that
+ * device.
+ */
+export function SealedPaper({
+  slug,
+  mode,
+  html,
+  footnotesHtml,
+  sourcesHtml,
+}: {
+  slug: string;
+  /** "full": only the opening is public. "part": the paper is public except for some passages. */
+  mode: "full" | "part";
+  html: string;
+  footnotesHtml: string;
+  sourcesHtml: string;
+}) {
   const [full, setFull] = useState<FullPaper | null>(null);
   const [badLink, setBadLink] = useState(false);
 
+  // Arriving from another page of the site: hold the sign-up box back before the first paint.
+  useLayoutEffect(() => {
+    if (readKeys().keys.length) document.documentElement.classList.add(UNSEALING);
+  }, []);
+
   useEffect(() => {
-    const fromLink = window.location.hash.match(/key=([A-Za-z0-9_-]+)/)?.[1];
-    let stored: string | null = null;
-    try {
-      stored = localStorage.getItem(KEY_STORE);
-    } catch {
-      // Storage blocked (private window): the link still opens the paper for this visit.
-    }
-    // The key in the link is tried first; a key already remembered on this device is the fallback,
-    // so a mistyped or out-of-date link never locks out a subscriber.
-    const keys = [fromLink, stored].filter((k, i, all): k is string => !!k && all.indexOf(k) === i);
+    const { keys, fromLink } = readKeys();
     let live = true;
     (async () => {
       for (const key of keys) {
@@ -50,8 +78,11 @@ export function SealedPaper({ slug, teaserHtml }: { slug: string; teaserHtml: st
           if (!live) return;
           try {
             localStorage.setItem(KEY_STORE, key);
+            localStorage.removeItem(NEW_KEY_STORE);
           } catch {}
-          if (fromLink) window.history.replaceState(null, "", window.location.pathname + window.location.search);
+          if (/key=/.test(window.location.hash)) {
+            window.history.replaceState(null, "", window.location.pathname + window.location.search);
+          }
           setFull(paper);
           return;
         } catch {
@@ -59,6 +90,9 @@ export function SealedPaper({ slug, teaserHtml }: { slug: string; teaserHtml: st
         }
       }
       if (!live) return;
+      try {
+        localStorage.removeItem(NEW_KEY_STORE);
+      } catch {}
       if (fromLink) setBadLink(true);
       document.documentElement.classList.remove(UNSEALING);
     })();
@@ -71,36 +105,38 @@ export function SealedPaper({ slug, teaserHtml }: { slug: string; teaserHtml: st
     return (
       <>
         <PaperBody html={full.html} footnotesHtml={full.footnotesHtml} sourcesHtml={full.sourcesHtml} />
-        <p className="no-print mt-12">
-          <PrintButton />
-        </p>
+        {mode === "full" && (
+          <p className="no-print mt-12">
+            <PrintButton />
+          </p>
+        )}
       </>
     );
   }
 
   return (
-    <>
-      <PaperBody html={teaserHtml} />
+    <PaperBody html={html} footnotesHtml={footnotesHtml} sourcesHtml={sourcesHtml}>
       <aside
         aria-labelledby="subscriber-paper"
         className="sealed-gate no-print mt-10 max-w-[68ch] border border-gold/40 bg-parchment-50 p-6 sm:p-8"
       >
-        <p className="eyebrow">Subscriber paper</p>
+        <p className="eyebrow">{mode === "full" ? "Subscriber paper" : "For subscribers"}</p>
         <h2 id="subscriber-paper" className="mt-3 font-display text-2xl leading-tight text-navy sm:text-3xl">
-          The full paper is sent to subscribers
+          {mode === "full" ? "The full paper is sent to subscribers" : "This paper has a further part for subscribers"}
         </h2>
         <p className="mt-4 font-serif text-lg leading-relaxed text-ink-soft">
           {badLink ? "That link did not open the paper. Enter your email address below and we will send a fresh one. " : ""}
-          Enter your email address to join the Association’s mailing list. The link in the confirmation email opens
-          the full paper, and new papers and news will follow as they are published. You can unsubscribe at any time.
+          Enter your email address to receive the Association’s free newsletter. Confirm from the email we send you, and
+          the link that follows opens the full paper. New papers and news will follow as they are published, and you can
+          unsubscribe at any time.
         </p>
         <EmailSignup
           variant="block"
           label="Your email address"
-          sentMessage="Thank you. Please check your inbox: the link in our email opens the full paper."
+          sentMessage="Please check your inbox and confirm: the link that follows opens the full paper."
           className="mt-6"
         />
       </aside>
-    </>
+    </PaperBody>
   );
 }

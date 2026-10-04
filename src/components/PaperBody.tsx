@@ -2,13 +2,26 @@
  * The body of a Reading Room paper: the generated text at reading measure, the endnotes, and the
  * "Authority & sources" box. Shared by the server shell and by SealedPaper (subscriber papers).
  */
-export function PaperBody({ html, footnotesHtml, sourcesHtml }: { html: string; footnotesHtml?: string; sourcesHtml?: string }) {
+export function PaperBody({
+  html,
+  footnotesHtml,
+  sourcesHtml,
+  children,
+}: {
+  html: string;
+  footnotesHtml?: string;
+  sourcesHtml?: string;
+  /** Rendered between the text and the notes (the subscriber sign-up box). */
+  children?: React.ReactNode;
+}) {
   return (
     <>
       <div
         className="prose-heritage paper-body mt-10 max-w-[68ch] text-[1.05rem] leading-relaxed"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+
+      {children}
 
       {footnotesHtml && (
         <section aria-labelledby="notes" className="mt-12 max-w-[68ch] border-t border-parchment-300/70 pt-8">
