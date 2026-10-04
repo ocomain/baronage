@@ -45,8 +45,8 @@ const pillars = [
     title: "The Pledge",
     body: (
       <>
-        A family compact of service, bound by the Baronial Code. Pledged baronies descend by blood, they are not{" "}
-        <em>in commercio</em>.
+        A family compact of service, bound by the Baronial Code. Pledged baronies are treated by the Roll as hereditary and
+        not <em>in commercio</em>.
       </>
     ),
     href: "/pledge",
