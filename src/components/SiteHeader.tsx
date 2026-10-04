@@ -8,7 +8,7 @@ import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
 import { EmailSignup } from "./EmailSignup";
 import { ExternalArrow } from "./primitives";
-import { navLinks, ROLL_URL, CALENDLY_URL } from "@/lib/site";
+import { navMenu, ROLL_URL, CALENDLY_URL } from "@/lib/site";
 
 
 function useScrolled(threshold = 12) {
@@ -26,12 +26,22 @@ export function SiteHeader() {
   const pathname = usePathname();
   const scrolled = useScrolled();
   const [open, setOpen] = useState(false);
+  // Desktop drop-down currently open (the parent item's href), if any.
+  const [menu, setMenu] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const [headerBottom, setHeaderBottom] = useState(76);
 
   useEffect(() => {
     setOpen(false);
+    setMenu(null);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!menu) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenu(null);
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [menu]);
 
   // Anchor the mobile drawer to the header's actual bottom edge. The site-wide
   // banner sits above the sticky header and scrolls away, so the header's bottom
@@ -54,14 +64,15 @@ export function SiteHeader() {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
-  // Top nav omits Charitable Trust and the Baronies Explained FAQ (both remain in the
-  // footer, and the FAQ is in the sitemap). Member's Chamber is not part of this mapped
-  // row on desktop — it renders in the top row, just left of the gold "Verify Title on
-  // the Roll" button — but stays in the mapped mobile-drawer list below, in its normal
-  // nav order.
-  const topNavLinks = navLinks.filter(
-    (link) => link.href !== "/charitable-trust" && link.href !== "/scottish-baronies-explained"
-  );
+  // The header shows navMenu: seven items, three of them with a short list beneath (Guide,
+  // The Pledge, About). Charitable Trust stays in the footer only. Member's Chamber is not
+  // part of this row on desktop — it renders in the top row, just left of the gold "Verify
+  // Title on the Roll" button — but is listed in the mobile drawer below.
+  // A parent is marked active on its own page and on its children's pages; a Reading Room
+  // paper listed under Guide leaves "Reading Room" as the active item.
+  const groupActive = (item: (typeof navMenu)[number]) =>
+    isActive(item.href) ||
+    (item.children ?? []).some((c) => !c.href.startsWith("/reading-room") && isActive(c.href));
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
@@ -138,22 +149,69 @@ export function SiteHeader() {
         </div>
 
         {/* Desktop nav row */}
-        <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-5 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
-          {topNavLinks.map((link) => {
+        <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-7 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
+          {navMenu.map((item) => {
+            const active = groupActive(item);
             const cls = `nav-link inline-flex items-center font-sans text-[0.7rem] font-medium uppercase tracking-[0.1em] transition-colors ${
-              isActive(link.href) ? "text-oxblood" : "text-navy/75 hover:text-navy"
+              active ? "text-oxblood" : "text-navy/75 hover:text-navy"
             }`;
-            const badge = link.badge ? <NavBadge>{link.badge}</NavBadge> : null;
-            return link.external ? (
-              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={cls}>
-                {link.label}
-                {badge}
-              </a>
-            ) : (
-              <Link key={link.href} href={link.href} data-active={isActive(link.href)} className={cls}>
-                {link.label}
-                {badge}
-              </Link>
+            const badge = item.badge ? <NavBadge>{item.badge}</NavBadge> : null;
+            if (!item.children) {
+              return (
+                <Link key={item.href} href={item.href} data-active={active} className={cls}>
+                  {item.label}
+                  {badge}
+                </Link>
+              );
+            }
+            const shown = menu === item.href;
+            return (
+              <div
+                key={item.href}
+                className="relative flex items-center"
+                onMouseEnter={() => setMenu(item.href)}
+                onMouseLeave={() => setMenu((m) => (m === item.href ? null : m))}
+                onFocus={() => setMenu(item.href)}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setMenu((m) => (m === item.href ? null : m));
+                }}
+              >
+                <Link
+                  href={item.href}
+                  data-active={active}
+                  aria-haspopup="true"
+                  aria-expanded={shown}
+                  onClick={() => setMenu(null)}
+                  className={cls}
+                >
+                  {item.label}
+                  <svg viewBox="0 0 12 12" aria-hidden className="ml-1.5 h-2.5 w-2.5 opacity-70">
+                    <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+                {/* The list sits flush under the row (pt-3 bridges the gap, so the pointer never leaves it). */}
+                <div
+                  className={`absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 transition-opacity duration-150 ${
+                    shown ? "visible opacity-100" : "invisible opacity-0"
+                  }`}
+                >
+                  <ul className="min-w-[15rem] border border-gold/40 bg-parchment-50 py-2 shadow-[0_18px_40px_-20px_rgba(12,21,48,0.55)]">
+                    {item.children.map((c) => (
+                      <li key={c.href}>
+                        <Link
+                          href={c.href}
+                          onClick={() => setMenu(null)}
+                          className={`block px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] transition-colors hover:bg-parchment-100 ${
+                            isActive(c.href) ? "text-oxblood" : "text-navy/80 hover:text-navy"
+                          }`}
+                        >
+                          {c.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             );
           })}
         </nav>
@@ -179,27 +237,32 @@ export function SiteHeader() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <ul className="flex flex-col divide-y divide-parchment-300/70">
-                {topNavLinks.map((link) => (
-                  <li key={link.href}>
-                    {link.external ? (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block py-3.5 font-display text-lg text-navy"
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className={`flex items-center py-3.5 font-display text-lg ${
-                          isActive(link.href) ? "text-oxblood" : "text-navy"
-                        }`}
-                      >
-                        {link.label}
-                        {link.badge && <NavBadge>{link.badge}</NavBadge>}
-                      </Link>
+                {navMenu.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={`flex items-center py-3.5 font-display text-lg ${
+                        isActive(item.href) ? "text-oxblood" : "text-navy"
+                      }`}
+                    >
+                      {item.label}
+                      {item.badge && <NavBadge>{item.badge}</NavBadge>}
+                    </Link>
+                    {item.children && (
+                      <ul className="mb-3 ml-1 border-l border-gold/40 pl-4">
+                        {item.children.map((c) => (
+                          <li key={c.href}>
+                            <Link
+                              href={c.href}
+                              className={`block py-2.5 font-serif text-base ${
+                                isActive(c.href) ? "text-oxblood" : "text-navy/80"
+                              }`}
+                            >
+                              {c.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     )}
                   </li>
                 ))}

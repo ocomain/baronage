@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/the-roll",
     "/sbr-vs-roll",
+    "/guide",
     "/scottish-baronies-explained",
     "/reading-room",
     "/armorial",

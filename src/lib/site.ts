@@ -59,6 +59,7 @@ export type NavLink = { href: string; label: string; external?: boolean; /** Sma
 export const navLinks: NavLink[] = [
   { href: "/the-roll", label: "The Roll" },
   { href: "/sbr-vs-roll", label: "SBR v Roll" },
+  { href: "/guide", label: "Guide" },
   { href: "/history", label: "History" },
   { href: "/scottish-baronies-explained", label: "Baronies Explained" },
   { href: "/proper-address", label: "Proper Address" },
@@ -67,6 +68,32 @@ export const navLinks: NavLink[] = [
   { href: "/charitable-trust", label: "Charitable Trust" },
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },
+  { href: "/armorial", label: "Armorial" },
+  { href: "/reading-room", label: "Reading Room", badge: "New" },
+];
+
+export type NavMenuItem = NavLink & { children?: NavLink[] };
+
+/**
+ * Header menu (owner 2026-10-05: the ten-item row was crowded). Seven items; an item with
+ * children opens a short list on desktop and shows it indented in the phone menu. The parent
+ * is itself a page, so nothing is reachable only through a drop-down.
+ */
+export const navMenu: NavMenuItem[] = [
+  { href: "/the-roll", label: "The Roll" },
+  { href: "/sbr-vs-roll", label: "SBR v Roll" },
+  {
+    href: "/guide",
+    label: "Guide",
+    children: [
+      { href: "/proper-address", label: "Proper Address" },
+      { href: "/scottish-baronies-explained", label: "Baronies Explained" },
+      { href: "/history", label: "History" },
+      { href: "/reading-room/robes-and-insignia", label: "Robes & Chapeau" },
+    ],
+  },
+  { href: "/pledge", label: "The Pledge", children: [{ href: "/baronial-code", label: "Baronial Code" }] },
+  { href: "/about", label: "About", children: [{ href: "/governing-council", label: "Governing Council" }] },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
 ];
