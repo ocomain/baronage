@@ -18,7 +18,7 @@ const pledgeJsonLd = {
   "@type": "DefinedTerm",
   name: "Pledged Hereditary Title",
   alternateName: ["Pledged barony", "Hereditary Title (Roll of Scottish Barons)"],
-  description: "Baronies pledged on the Roll of Scottish Barons descend by blood, they are not in commercio.",
+  description: "Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio.",
   url: "https://www.baronage.com/pledge/",
   inDefinedTermSet: {
     "@type": "DefinedTermSet",
@@ -44,8 +44,7 @@ export default function PledgePage() {
         intro={
           <>
             An opportunity to pledge a barony as a hereditary title, ensuring legitimacy and principled commitment for
-            future generations. Pledged baronies descend by blood,
-            they are not <em>in commercio</em>.
+            future generations. Pledged baronies are treated by the Roll as hereditary and not <em>in commercio</em>.
           </>
         }
         video={{
