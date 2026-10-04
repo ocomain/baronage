@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const principles = [
   {
     title: "A Pledged Hereditary Title",
-    body: "Each Baron commits to The Pledge — an undertaking in honour, not in law — to preserve their barony as a hereditary title within the family bloodline for future generations.",
+    body: "Barons who take The Pledge undertake, in honour and not in law, to preserve their barony within the family for future generations.",
   },
   {
     title: "Honour and Integrity",
@@ -33,7 +33,7 @@ const principles = [
     body: "Work to preserve the rich history and traditions of the Scottish baronage, ensuring our ancestors’ legacy is passed down.",
   },
   {
-    title: "Forfeiture of Title",
+    title: "Forfeiture of Recognition",
     body: "Should a Baron be convicted of a serious crime, as judged by their fellow barons, they shall forfeit their title recognition on the Roll (does not affect title succession recognition).",
   },
   {
