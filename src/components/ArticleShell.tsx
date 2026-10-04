@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { Container, GoldRule, Section } from "./primitives";
 import { PaperThumbnail } from "./PaperThumbnail";
+import { PaperBody } from "./PaperBody";
 import { PrintButton } from "./PrintButton";
+import { SealedPaper } from "./SealedPaper";
+import { KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
@@ -20,7 +23,7 @@ export function monthYear(iso: string) {
  * Shell for a Reading Room paper — a compact masthead on parchment (no hero),
  * the generated body at reading measure, endnotes, the "Authority & sources"
  * box (same treatment as the Explained page's authority pop-ups), and links to
- * other papers. Server component. On paper it prints as a plain document: see the
+ * other papers. A subscriber paper (gated) shows its opening and the sign-up instead. Server component. On paper it prints as a plain document: see the
  * print rules for .paper-print in globals.css.
  */
 export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; related: ReadingRoomPaper[] }) {
@@ -53,9 +56,12 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                   </Link>
                 </span>
               </p>
-              <p className="no-print mt-5">
-                <PrintButton />
-              </p>
+              {/* A subscriber paper offers printing once it has been opened (see SealedPaper). */}
+              {!paper.gated && (
+                <p className="no-print mt-5">
+                  <PrintButton />
+                </p>
+              )}
               {/* Paper only: where the essay came from. */}
               <p className="print-only paper-print__source">
                 Baronage of Scotland Association · The Reading Room · www.baronage.com/reading-room/{paper.slug}/
@@ -75,41 +81,18 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </div>
           </header>
 
-          <div
-            className="prose-heritage paper-body mt-10 max-w-[68ch] text-[1.05rem] leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: paper.html }}
-          />
-
-          {paper.footnotesHtml && (
-            <section aria-labelledby="notes" className="mt-12 max-w-[68ch] border-t border-parchment-300/70 pt-8">
-              <h2 id="notes" className="font-display text-2xl text-navy">
-                Notes
-              </h2>
-              <div
-                className="paper-notes mt-4 text-sm leading-relaxed text-ink-soft"
-                dangerouslySetInnerHTML={{ __html: paper.footnotesHtml }}
+          {paper.gated ? (
+            <>
+              {/* Runs before first paint: with a subscriber key at hand, hold the sign-up box back while the paper opens. */}
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `try{if(/key=/.test(location.hash)||localStorage.getItem("${KEY_STORE}"))document.documentElement.classList.add("${UNSEALING}")}catch(e){}`,
+                }}
               />
-            </section>
-          )}
-
-          {paper.sourcesHtml && (
-            <aside
-              aria-labelledby="authority-sources"
-              className="mt-12 max-w-[68ch] border border-gold/40 bg-parchment-50 p-6 sm:p-8"
-            >
-              <div className="border-b border-parchment-300/70 pb-3">
-                <h2
-                  id="authority-sources"
-                  className="font-inscribe text-[0.7rem] font-normal uppercase tracking-[0.22em] text-gold-deep"
-                >
-                  Authority &amp; sources
-                </h2>
-              </div>
-              <div
-                className="paper-sources mt-4 space-y-3 font-serif text-[0.95rem] leading-relaxed text-ink-soft [&_strong]:text-navy"
-                dangerouslySetInnerHTML={{ __html: paper.sourcesHtml }}
-              />
-            </aside>
+              <SealedPaper slug={paper.slug} teaserHtml={paper.html} />
+            </>
+          ) : (
+            <PaperBody html={paper.html} footnotesHtml={paper.footnotesHtml} sourcesHtml={paper.sourcesHtml} />
           )}
 
           {related.length > 0 && (
@@ -137,9 +120,11 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </section>
           )}
 
-          <p className="no-print mt-12">
-            <PrintButton />
-          </p>
+          {!paper.gated && (
+            <p className="no-print mt-12">
+              <PrintButton />
+            </p>
+          )}
 
           <p className="no-print mt-8">
             <Link

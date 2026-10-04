@@ -31,13 +31,14 @@ export default function ReadingRoomPage() {
         readingRoomCategories.indexOf(a.category) - readingRoomCategories.indexOf(b.category) ||
         (editorial.get(a.slug) ?? 0) - (editorial.get(b.slug) ?? 0),
     )
-    .map(({ slug, title, subtitle, category, readingTime, published }) => ({
+    .map(({ slug, title, subtitle, category, readingTime, published, gated }) => ({
       slug,
       title,
       subtitle,
       category,
       readingTime,
       published,
+      gated,
     }));
   // Only subjects that have papers get a filter.
   const categories = readingRoomCategories.filter((c) => papers.some((p) => p.category === c));

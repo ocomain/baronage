@@ -222,7 +222,7 @@ export function SiteHeader() {
               >
                 Request a Call Back
               </a>
-              <EmailSignup variant="drawer" className="mt-7 border-t border-parchment-300/70 pt-6" />
+              <EmailSignup variant="block" className="mt-7 border-t border-parchment-300/70 pt-6" />
             </motion.nav>
           </>
         )}

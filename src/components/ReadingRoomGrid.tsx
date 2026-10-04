@@ -12,6 +12,7 @@ export type PaperCard = {
   category: string;
   readingTime: string;
   published: string;
+  gated: boolean;
 };
 
 const ALL = "All papers";
@@ -92,6 +93,7 @@ export function ReadingRoomGrid({
                 </span>
                 <span className="mt-3 flex items-center gap-3 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.18em] sm:mt-auto sm:pt-5 sm:text-[0.62rem]">
                   <span className="text-muted">{p.readingTime} read</span>
+                  {p.gated && <span className="text-muted">Subscribers</span>}
                   <span className="text-gold-deep transition-colors group-hover:text-oxblood">
                     Read <span aria-hidden>→</span>
                   </span>

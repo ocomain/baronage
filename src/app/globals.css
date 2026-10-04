@@ -590,3 +590,6 @@ video.bg-film::-webkit-media-controls-start-playback-button {
   transform: none;
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/* Subscriber papers: while a remembered key is opening the paper, the sign-up box stays out of sight (see SealedPaper). */
+.unsealing .sealed-gate { display: none; }
