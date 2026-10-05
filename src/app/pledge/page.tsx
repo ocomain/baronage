@@ -17,7 +17,7 @@ const pledgeJsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
   name: "Pledged Hereditary Title",
-  alternateName: ["Pledged barony", "Hereditary pledged upon the Roll (Roll of Scottish Barons)", "Hereditary on the Roll (Roll of Scottish Barons)", "Pledged Hereditary (Roll of Scottish Barons)", "Hereditary Title (Roll of Scottish Barons)"],
+  alternateName: ["Pledged barony", "Hereditary on the Roll (Roll of Scottish Barons)", "Pledged Hereditary (Roll of Scottish Barons)", "Hereditary Title (Roll of Scottish Barons)"],
   description: "Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio.",
   url: "https://www.baronage.com/pledge/",
   inDefinedTermSet: {
