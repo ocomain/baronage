@@ -55,4 +55,10 @@ export const guideEntries: GuideEntry[] = [
     summary: "Bailie, clerk, officer and dempster: what each did in a baron’s court. Since 2004 the court and its officers are ceremonial only.",
     kind: "Paper",
   },
+  {
+    href: "/reading-room/heraldry-and-flags-of-a-baron",
+    title: "The arms and flags of a baron",
+    summary: "The helm, chapeau and supporters, and the five heraldic flags with their sizes. Only the banner comes with the arms; the others are granted by the Lord Lyon.",
+    kind: "Paper",
+  },
 ];
