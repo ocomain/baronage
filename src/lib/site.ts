@@ -93,7 +93,6 @@ export const navMenu: NavMenuItem[] = [
     label: "Guide",
     children: [
       { href: "/proper-address", label: "Proper Address" },
-      { href: "/about", label: "About & Nobility" },
       { href: "/scottish-baronies-explained", label: "Baronies Explained" },
       { href: "/history", label: "History" },
       { href: "/reading-room/robes-and-insignia", label: "Robes & Chapeau" },
