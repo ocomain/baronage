@@ -281,7 +281,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(terminologyJsonLd) }}
       />
       <HeroHome />
-      <EasyStart />
 
       {/* ============================== THE ROLL — KEY NUMBERS ============================== */}
       <section className="border-t-2 border-gold/40 border-b border-b-parchment-300/60 bg-parchment texture-parchment py-8 sm:py-9">
@@ -291,6 +290,9 @@ export default function HomePage() {
           </Reveal>
         </Container>
       </section>
+
+      {/* The main things a visitor comes to do. Sits under the live figures, which belong with the hero. */}
+      <EasyStart />
 
       {/* ============================== TOUR OF THE BARONIES ============================== */}
       <Section tone="parchment" className="pt-16 pb-10 sm:pt-20 sm:pb-12">
