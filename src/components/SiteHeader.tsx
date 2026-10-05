@@ -210,17 +210,31 @@ export function SiteHeader() {
                 >
                   <ul className="min-w-[15rem] border border-gold/40 bg-parchment-50 py-2 shadow-[0_18px_40px_-20px_rgba(12,21,48,0.55)]">
                     {/* Where selfInList is set, the parent page comes first in its own list: visitors do not expect the heading itself to be a link. */}
-                    {(item.selfInList ? [{ href: item.href, label: item.selfLabel ?? item.label }, ...item.children] : item.children).map((c) => (
+                    {(item.selfInList ? [{ href: item.href, label: item.selfLabel ?? item.label, external: false }, ...item.children] : item.children).map((c) => (
                       <li key={c.href}>
-                        <Link
-                          href={c.href}
-                          onClick={() => setMenu(null)}
-                          className={`block px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] transition-colors hover:bg-parchment-100 ${
-                            (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href)) ? "text-oxblood" : "text-navy/80 hover:text-navy"
-                          }`}
-                        >
-                          {c.label}
-                        </Link>
+                        {c.external ? (
+                          <a
+                            href={c.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`Opens ${c.href.replace(/^https?:\/\//, "").replace(/\/$/, "")} in a new window`}
+                            onClick={() => setMenu(null)}
+                            className="flex items-center gap-1.5 px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] text-navy/80 transition-colors hover:bg-parchment-100 hover:text-navy"
+                          >
+                            {c.label}
+                            <ExternalArrow className="h-3 w-3" />
+                          </a>
+                        ) : (
+                          <Link
+                            href={c.href}
+                            onClick={() => setMenu(null)}
+                            className={`block px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] transition-colors hover:bg-parchment-100 ${
+                              (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href)) ? "text-oxblood" : "text-navy/80 hover:text-navy"
+                            }`}
+                          >
+                            {c.label}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -270,7 +284,7 @@ export function SiteHeader() {
                   // A group: tapping the heading unfolds its list (it does not leave the page).
                   const unfolded = group === item.href;
                   const entries = item.selfInList
-                    ? [{ href: item.href, label: item.selfLabel ?? item.label }, ...item.children]
+                    ? [{ href: item.href, label: item.selfLabel ?? item.label, external: false }, ...item.children]
                     : item.children;
                   return (
                     <li key={item.href}>
@@ -295,16 +309,28 @@ export function SiteHeader() {
                         <ul className="mb-3 ml-1 border-l border-gold/40 pl-4">
                           {entries.map((c) => (
                             <li key={c.href}>
-                              <Link
-                                href={c.href}
-                                className={`block py-3 font-serif text-lg ${
-                                  (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href))
-                                    ? "text-oxblood"
-                                    : "text-navy/80"
-                                }`}
-                              >
-                                {c.label}
-                              </Link>
+                              {c.external ? (
+                                <a
+                                  href={c.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-2 py-3 font-serif text-lg text-navy/80"
+                                >
+                                  {c.label}
+                                  <ExternalArrow className="h-3.5 w-3.5" />
+                                </a>
+                              ) : (
+                                <Link
+                                  href={c.href}
+                                  className={`block py-3 font-serif text-lg ${
+                                    (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href))
+                                      ? "text-oxblood"
+                                      : "text-navy/80"
+                                  }`}
+                                >
+                                  {c.label}
+                                </Link>
+                              )}
                             </li>
                           ))}
                         </ul>

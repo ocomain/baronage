@@ -700,7 +700,8 @@ html.ez aside[aria-label="Featured paper"] button[aria-label="Close featured pap
 .ez-start-in{max-width:64rem;padding-block:2.75rem}
 .ez-start-h{font-size:2.1rem;line-height:1.15}
 .ez-rows{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:1.6rem}
-@media (min-width:768px){.ez-rows{grid-template-columns:1fr 1fr}}
+@media (min-width:768px){.ez-rows{grid-template-columns:1fr 1fr}.ez-rows > li:last-child:nth-child(odd){grid-column:1 / -1}}
+html.ez .ez-rows > li:last-child:nth-child(odd){grid-column:auto}
 .ez-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:100%;min-height:4.4rem;padding:.75rem 1.1rem;background:#fff;border:1px solid rgba(19,30,58,.3);color:var(--color-navy);text-decoration:none;transition:background-color .15s,color .15s,border-color .15s}
 .ez-row:hover,.ez-row:focus-visible{background:var(--color-navy);border-color:var(--color-navy);color:var(--color-parchment-50)}
 .ez-row-text{display:flex;flex-direction:column;gap:.1rem;min-width:0}
