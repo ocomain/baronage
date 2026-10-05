@@ -62,7 +62,6 @@ export const navLinks: NavLink[] = [
   { href: "/the-roll", label: "The Roll" },
   { href: INDEX_URL, label: "Index of Baronies", external: true },
   { href: "/sbr-vs-roll", label: "SBR v Roll" },
-  { href: "/guide", label: "Guide" },
   { href: "/history", label: "History" },
   { href: "/scottish-baronies-explained", label: "Baronies Explained" },
   { href: "/proper-address", label: "Proper Address" },
@@ -77,7 +76,7 @@ export const navLinks: NavLink[] = [
 
 export type NavMenuItem = NavLink & {
   children?: NavLink[];
-  /** Desktop drop-down starts with the parent page itself (visitors do not expect the heading to be a link). Not for Guide, which is only a hub. */
+  /** Desktop drop-down starts with the parent page itself (visitors do not expect the heading to be a link). Not for Guide, which has no page of its own. */
   selfInList?: boolean;
   /** Wording for that first entry, where it should say more than the heading does. */
   selfLabel?: string;
@@ -99,7 +98,7 @@ export const navMenu: NavMenuItem[] = [
     ],
   },
   {
-    // Clicking the word "Guide" opens the FAQ explainer (owner 2026-10-05); the /guide/ hub page stays, linked from the footer.
+    // "Guide" is a heading only: clicking it opens the FAQ explainer (owner 2026-10-05). There is no /guide/ page.
     href: "/scottish-baronies-explained",
     label: "Guide",
     children: [
