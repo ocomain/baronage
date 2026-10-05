@@ -708,3 +708,6 @@ html.ez .ez-row-go{width:3rem;height:3rem;font-size:1.5rem}
 
 /* once the page is scrolled, the dark strip above the logo steps aside so the pinned header stays shallow */
 html.ez header:has(> div[class*="border-gold/30"]) > div:first-child{display:none}
+
+/* while the phone menu is open, the text-size switch steps aside (it would sit on the menu's last rows) */
+body:has(header nav.fixed) .ez-switch{display:none}
