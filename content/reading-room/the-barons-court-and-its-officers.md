@@ -12,17 +12,6 @@ reviewed: 2026-10-05
 
 *On 21 July 1620 the baron court of Urie in Kincardineshire met in a barn at Woodhead. The clerk wrote down who was there: the bailie, the clerk, the officer and the dempster. This paper sets out, from the court books that survive in print, what a baron’s court was, who its officers were and what each of them did, how Parliament cut the court down in 1746 and ended its last powers in 2004, and what remains: a court and officers kept for ceremony, with no power to judge.*
 
-<section class="paper-findings" aria-label="Key findings">
-<p class="paper-findings__eyebrow">Key findings, checked against the records</p>
-<div class="paper-stats paper-stats--three">
-<div class="paper-stat"><span class="paper-stat__value">1620</span><span class="paper-stat__label">a sitting at Urie names the whole court: bailie, clerk, officer and dempster</span><a class="paper-stat__link" href="#a-court-in-session">The evidence</a></div>
-<div class="paper-stat"><span class="paper-stat__value">£2</span><span class="paper-stat__label">the most a baron’s court could award in an ordinary case after 1748, with fines stopped at £1</span><a class="paper-stat__link" href="#cut-down-1654-and-1746">The evidence</a></div>
-<div class="paper-stat"><span class="paper-stat__value">2004</span><span class="paper-stat__label">the last power to judge ended on 28 November; the court is now ceremonial</span><a class="paper-stat__link" href="#2004-and-today">The evidence</a></div>
-</div>
-<blockquote class="paper-pullquote"><p>“The judges of the court were the suitors.”</p><cite>W. Croft Dickinson, 1937</cite><span class="paper-pullquote__note">The baron or his bailie presided. The tenants who owed attendance gave the judgment.</span></blockquote>
-<blockquote class="paper-pullquote"><p>“In practice barons’ courts are held now only for ceremonial purposes.”</p><cite>Scottish Law Commission, 1999</cite><span class="paper-pullquote__note">Written while the court still had its last powers on paper.</span></blockquote>
-</section>
-
 ## The short answer
 
 - **A barony came with a court.** The Crown’s grant of a barony gave its holder a share of the King’s justice over the people on his lands.
@@ -50,6 +39,8 @@ So a barony carried a court for civil disputes and for *bloodwites*, the fines f
 The capital power was narrow, and in most baronies it fell out of use. A baron with pit and gallows could try a thief taken “red-hand”, with the stolen goods on him; otherwise the thief went before the King’s justiciar. Dickinson found “no case of slaughter coming before the court of Carnwath” between 1523 and 1542. The greater jurisdictions kept their courts of life and limb longer, but by the seventeenth century, he wrote, “the records of baron courts are generally devoid of actions involving life and limb.”[^7]
 
 ## Who sat in the court
+
+<blockquote class="paper-pullquote paper-pullquote--text"><p>“The judges of the court were the suitors.”</p><cite>W. Croft Dickinson, 1937</cite></blockquote>
 
 A baron’s court was not one man sitting in judgment. It was a meeting of the barony. The baron’s tenants owed him *suit of court*: they had to attend, usually at three head courts in the year, and were fined if they stayed away.[^8] These suitors were the judges. Dickinson is emphatic: “the presiding officer was *not* a judge. His sole task was to ensure that the court observed the correct procedure and the proper rules of law.” He quotes the old maxim, *Curia domini debet facere judicium et non dominus*, the lord’s court gives the judgment and not the lord, and concludes: “The judges of the court were the suitors.”[^9]
 
@@ -148,7 +139,9 @@ John Erskine’s *Institute* sums up what was left of the criminal side: the res
 
 ## Fading out, 1748 to 2004
 
-Some courts carried on with what remained. The Stitchill book runs to 21 November 1807, and its last entry reads: “This day a Head Court was held when the tenants and householders appeared and paid their fines and there being no other business before the Court it was adjourned till next Court day.” No later court is recorded.[^49]
+<blockquote class="paper-pullquote paper-pullquote--text"><p>“… and there being no other business before the Court it was adjourned till next Court day.”</p><cite>The last entry in the Stitchill court book, 21 November 1807</cite></blockquote>
+
+Some courts carried on with what remained. The Stitchill book runs to 21 November 1807. On that day “a Head Court was held when the tenants and householders appeared and paid their fines”, and the court was adjourned. No later court is recorded.[^49]
 
 In the burghs of barony the baron-bailie lasted longer, as a local magistrate. Dalkeith in 1868 was “governed by a baron-bailie under the Duke of Buccleuch”, and Fraserburgh in the 1880s still counted “a baron bailie” among those who governed it.[^50] But the landed baron’s own court was going out of use. In 1892 the editor of the Urie book wrote: “A Baron still retains the right of holding Courts,—a privilege, however, of which he has altogether ceased to take advantage.”[^51] Sir Crispin Agnew of Lochnaw reports that commissioners inquiring into the Scottish courts in 1870 found “only two or three baron courts were handling more than a few cases each year”. They recommended that the bailies’ jurisdiction be withdrawn, and nothing was done.[^52]
 
@@ -159,6 +152,8 @@ By the 1990s lawyers disagreed whether a baron’s court had any legal power lef
 Sir Crispin Agnew, then Rothesay Herald, had come to the same point in 1994: “There is and was no reason why a baron should not operate a quasi court for ceremonial purposes or have used the officers of his court for purposes other than those of operating his court of law.”[^56]
 
 ## 2004 and today
+
+<blockquote class="paper-pullquote paper-pullquote--text"><p>“… nothing in this Act affects the dignity of baron”</p><cite>Abolition of Feudal Tenure etc. (Scotland) Act 2000, section 63(1)</cite></blockquote>
 
 The Commission recommended that “Any surviving criminal or civil jurisdiction of barony courts should be abolished”, and the Scottish Parliament did so.[^57] Section 63(1) of the Abolition of Feudal Tenure etc. (Scotland) Act 2000 reads: “Any jurisdiction of, and any conveyancing privilege incidental to, barony shall on the appointed day cease to exist; but nothing in this Act affects the dignity of baron or any other dignity or office (whether or not of feudal origin).”[^58] The appointed day was 28 November 2004. The official notes to the Act call the old jurisdiction “obsolete for all practical purposes”.[^59]
 
