@@ -5,6 +5,7 @@ export function NavBadge({ children }: { children: ReactNode }) {
   return (
     <span
       aria-label="new section"
+      data-ez-keep
       className="ml-1.5 inline-block rounded-[2px] bg-gold px-1.5 py-[2px] align-middle font-sans text-[0.5rem] font-semibold uppercase leading-none tracking-[0.16em] text-navy-deep"
     >
       {children}

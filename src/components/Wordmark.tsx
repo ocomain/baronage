@@ -3,7 +3,7 @@ import { Seal } from "./Seal";
 /* Header lockup: the charter "free barony" seal (the logo) + the Association name. */
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`flex items-center gap-3 ${className}`}>
+    <span data-ez-keep className={`flex items-center gap-3 ${className}`}>
       <Seal tone="ink" size="xs" alt="Baronage of Scotland charter seal" className="h-[50px] w-[46px]" />
       <span className="flex flex-col leading-none">
         <span className="font-display text-[clamp(1.25rem,6vw,1.5rem)] font-medium leading-none text-navy sm:text-2xl">

@@ -5,6 +5,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FeaturedPaper } from "@/components/FeaturedPaper";
+import { EasyRead } from "@/components/EasyRead";
 import { SITE_URL } from "@/lib/site";
 import { NEW_KEY_STORE } from "@/lib/subscriber";
 
@@ -106,6 +107,13 @@ export default function RootLayout({
       className={`${cormorant.variable} ${quicksand.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-parchment text-ink">
+        {/* Extra large text: apply the stored choice (shared with the Roll by cookie) before the page paints */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var __e=document.cookie.match(/(?:^|; )bsa_ez=([01])/);if((__e?__e[1]:localStorage.getItem("ez"))==="1")document.documentElement.classList.add("ez")}catch(e){}',
+          }}
+        />
         {/* Legacy one-page anchors from the old Canva site -> new pages */}
         <script
           dangerouslySetInnerHTML={{
@@ -157,6 +165,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <FeaturedPaper />
+        <EasyRead />
       </body>
     </html>
   );
