@@ -97,6 +97,8 @@ export const navMenu: NavMenuItem[] = [
       { href: "/scottish-baronies-explained", label: "Baronies Explained" },
       { href: "/history", label: "History" },
       { href: "/reading-room/robes-and-insignia", label: "Robes & Chapeau" },
+      { href: "/reading-room/the-barons-court-and-its-officers", label: "Court & Officers" },
+      { href: "/reading-room/heraldry-and-flags-of-a-baron", label: "Arms & Flags" },
     ],
   },
   { href: "/pledge", label: "The Pledge", selfInList: true, children: [{ href: "/baronial-code", label: "Baronial Code" }] },
