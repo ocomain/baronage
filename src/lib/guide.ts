@@ -26,6 +26,12 @@ export const guideEntries: GuideEntry[] = [
     kind: "Page",
   },
   {
+    href: "/about",
+    title: "About & Nobility",
+    summary: "The Association, and the statutes, courts and writers that affirm the baronage as a noble dignity.",
+    kind: "Page",
+  },
+  {
     href: "/scottish-baronies-explained",
     title: "Baronies, Explained",
     summary: "Plain answers to the common questions: what a barony is, what changed in 2004, and how one passes.",
