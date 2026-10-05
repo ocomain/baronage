@@ -10,15 +10,19 @@ const rows: { href: string; title: string; line: string; external?: boolean }[] 
   { href: CALENDLY_URL, title: "Ask the Secretary to call you", line: "Choose a time and we will telephone.", external: true },
 ];
 
-/** The main things a visitor comes to do, as large rows that can be clicked anywhere. */
+/**
+ * The main things a visitor comes to do, each a row that can be clicked anywhere.
+ * Standard view: a compact grid, two across. Extra-large view (html.ez): tall rows, one per line.
+ * Sizes are in globals.css (.ez-start, .ez-rows, .ez-row).
+ */
 export function EasyStart() {
   return (
-    <section className="ez-only border-b border-parchment-300/70 bg-parchment-50" aria-labelledby="ez-start-h">
-      <div className="mx-auto w-full max-w-4xl px-5 py-12 sm:px-8">
-        <h2 id="ez-start-h" className="text-center font-display text-4xl text-navy">
+    <section className="ez-start border-b border-parchment-300/70 bg-parchment-50" aria-labelledby="ez-start-h">
+      <div className="ez-start-in mx-auto w-full px-5 sm:px-8">
+        <h2 id="ez-start-h" className="ez-start-h text-center font-display text-navy">
           Where would you like to go?
         </h2>
-        <ul className="mt-8 flex flex-col gap-4">
+        <ul className="ez-rows">
           {rows.map((r) => {
             const inner = (
               <>
