@@ -28,6 +28,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   // Desktop drop-down currently open (the parent item's href), if any.
   const [menu, setMenu] = useState<string | null>(null);
+  // Phone menu: which group (Guide, The Pledge, About) is unfolded, if any.
+  const [group, setGroup] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const [headerBottom, setHeaderBottom] = useState(76);
 
@@ -35,6 +37,14 @@ export function SiteHeader() {
     setOpen(false);
     setMenu(null);
   }, [pathname]);
+
+  // Opening the phone menu unfolds the group the current page belongs to; otherwise all are folded.
+  useEffect(() => {
+    if (!open) return;
+    const here = navMenu.find((item) => item.children && groupActive(item));
+    setGroup(here ? here.href : null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   useEffect(() => {
     if (!menu) return;
@@ -70,9 +80,12 @@ export function SiteHeader() {
   // Title on the Roll" button — but is listed in the mobile drawer below.
   // A parent is marked active on its own page and on its children's pages; a Reading Room
   // paper listed under Guide leaves "Reading Room" as the active item.
+  // A page listed under Guide that has a menu item of its own (About) stays under its own item.
   const groupActive = (item: (typeof navMenu)[number]) =>
     isActive(item.href) ||
-    (item.children ?? []).some((c) => !c.href.startsWith("/reading-room") && isActive(c.href));
+    (item.children ?? []).some(
+      (c) => !c.href.startsWith("/reading-room") && !navMenu.some((top) => top.href === c.href) && isActive(c.href)
+    );
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
@@ -238,35 +251,67 @@ export function SiteHeader() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <ul className="flex flex-col divide-y divide-parchment-300/70">
-                {navMenu.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className={`flex items-center py-3.5 font-display text-lg ${
-                        isActive(item.href) ? "text-oxblood" : "text-navy"
-                      }`}
-                    >
-                      {item.label}
-                      {item.badge && <NavBadge>{item.badge}</NavBadge>}
-                    </Link>
-                    {item.children && (
-                      <ul className="mb-3 ml-1 border-l border-gold/40 pl-4">
-                        {item.children.map((c) => (
-                          <li key={c.href}>
-                            <Link
-                              href={c.href}
-                              className={`block py-2.5 font-serif text-base ${
-                                isActive(c.href) ? "text-oxblood" : "text-navy/80"
-                              }`}
-                            >
-                              {c.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
+                {navMenu.map((item) => {
+                  if (!item.children) {
+                    return (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className={`flex items-center py-3.5 font-display text-lg ${
+                            isActive(item.href) ? "text-oxblood" : "text-navy"
+                          }`}
+                        >
+                          {item.label}
+                          {item.badge && <NavBadge>{item.badge}</NavBadge>}
+                        </Link>
+                      </li>
+                    );
+                  }
+                  // A group: tapping the heading unfolds its list (it does not leave the page).
+                  const unfolded = group === item.href;
+                  const entries = item.selfInList
+                    ? [{ href: item.href, label: item.selfLabel ?? item.label }, ...item.children]
+                    : item.children;
+                  return (
+                    <li key={item.href}>
+                      <button
+                        type="button"
+                        onClick={() => setGroup(unfolded ? null : item.href)}
+                        aria-expanded={unfolded}
+                        className={`flex w-full items-center justify-between py-3.5 text-left font-display text-lg ${
+                          groupActive(item) ? "text-oxblood" : "text-navy"
+                        }`}
+                      >
+                        {item.label}
+                        <svg
+                          viewBox="0 0 12 12"
+                          aria-hidden
+                          className={`h-4 w-4 transition-transform ${unfolded ? "rotate-180" : ""}`}
+                        >
+                          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </button>
+                      {unfolded && (
+                        <ul className="mb-3 ml-1 border-l border-gold/40 pl-4">
+                          {entries.map((c) => (
+                            <li key={c.href}>
+                              <Link
+                                href={c.href}
+                                className={`block py-3 font-serif text-lg ${
+                                  (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href))
+                                    ? "text-oxblood"
+                                    : "text-navy/80"
+                                }`}
+                              >
+                                {c.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
                 <li>
                   <Link
                     href="/members"
