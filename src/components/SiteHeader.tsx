@@ -197,7 +197,7 @@ export function SiteHeader() {
                 >
                   <ul className="min-w-[15rem] border border-gold/40 bg-parchment-50 py-2 shadow-[0_18px_40px_-20px_rgba(12,21,48,0.55)]">
                     {/* Where selfInList is set, the parent page comes first in its own list: visitors do not expect the heading itself to be a link. */}
-                    {(item.selfInList ? [{ href: item.href, label: item.label }, ...item.children] : item.children).map((c) => (
+                    {(item.selfInList ? [{ href: item.href, label: item.selfLabel ?? item.label }, ...item.children] : item.children).map((c) => (
                       <li key={c.href}>
                         <Link
                           href={c.href}
