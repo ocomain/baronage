@@ -196,13 +196,14 @@ export function SiteHeader() {
                   }`}
                 >
                   <ul className="min-w-[15rem] border border-gold/40 bg-parchment-50 py-2 shadow-[0_18px_40px_-20px_rgba(12,21,48,0.55)]">
-                    {item.children.map((c) => (
+                    {/* The parent page comes first in its own list: visitors do not expect the heading itself to be a link. */}
+                    {[{ href: item.href, label: item.label }, ...item.children].map((c) => (
                       <li key={c.href}>
                         <Link
                           href={c.href}
                           onClick={() => setMenu(null)}
                           className={`block px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] transition-colors hover:bg-parchment-100 ${
-                            isActive(c.href) ? "text-oxblood" : "text-navy/80 hover:text-navy"
+                            (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href)) ? "text-oxblood" : "text-navy/80 hover:text-navy"
                           }`}
                         >
                           {c.label}

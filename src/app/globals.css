@@ -593,3 +593,105 @@ video.bg-film::-webkit-media-controls-start-playback-button {
 
 /* Subscriber papers: while a remembered key is opening the paper, the sign-up box stays out of sight (see SealedPaper). */
 .unsealing .sealed-gate { display: none; }
+
+/* ==================================================================================
+   "EXTRA LARGE TEXT" VIEW  (owner, 5 October 2026)
+   Same question and switch as roll.baronage.com. Apart from the switch, the question
+   and the .ez-row list, every rule below applies only while <html> has the class "ez".
+   ================================================================================== */
+/* ---------- "Text size" switch ---------- */
+.ez-switch{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:56;display:flex;align-items:center;background:#131e3a;color:#faf6ec;border-radius:9999px;padding:5px;box-shadow:0 8px 24px rgba(10,16,36,.4);font-family:var(--font-sans);white-space:nowrap}
+.ez-switch-l{padding:0 10px 0 16px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.ez-switch button{all:unset;cursor:pointer;padding:13px 20px;border-radius:9999px;font-size:16px;font-weight:700;color:#faf6ec}
+.ez-switch button[aria-pressed=true]{background:#faf6ec;color:#131e3a}
+.ez-switch button:focus-visible{outline:2px solid #c9a24b;outline-offset:2px}
+html.ez-card-up .ez-switch{bottom:calc(var(--ez-card-h, 150px) + 28px)}
+
+/* ---------- first-visit question: "Do you need extra large text?" ---------- */
+html.ez-asking{overflow:hidden}
+.ez-ask{position:fixed;inset:0;z-index:4000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(10,16,36,.74)}
+.ez-ask-card{position:relative;box-sizing:border-box;width:100%;max-width:580px;background:#faf6ec;border:1px solid rgba(201,162,75,.6);box-shadow:0 30px 80px -20px rgba(0,0,0,.65);padding:36px 34px 30px;text-align:center;outline:none}
+.ez-ask-card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,75,.28);pointer-events:none}
+.ez-ask-seal{display:block;height:64px;width:auto;margin:0 auto 14px}
+.ez-ask h2{margin:0 0 26px;font-family:var(--font-display);font-weight:600;font-size:40px;line-height:1.15;color:#131e3a}
+.ez-ask-btns{position:relative;display:flex;flex-direction:column;gap:14px}
+.ez-ask-btns button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:center;min-height:74px;padding:10px 20px;border:2px solid #131e3a;font-family:var(--font-sans);font-size:22px;font-weight:700;letter-spacing:.03em;line-height:1.2;text-align:center}
+.ez-ask-btns button.ez-ask-yes{background:#131e3a;color:#faf6ec}
+.ez-ask-btns button.ez-ask-yes:hover{background:#6e1423;border-color:#6e1423}
+.ez-ask-btns button.ez-ask-no{background:#fff;color:#131e3a}
+.ez-ask-btns button.ez-ask-no:hover{background:#f1ecdf}
+.ez-ask-btns button:focus-visible{outline:4px solid #c9a24b;outline-offset:3px}
+.ez-ask-note{position:relative;margin:22px 0 0;font-family:var(--font-sans);font-size:17px;line-height:1.5;color:#463d2d}
+@media (max-width:640px){
+  .ez-switch{left:12px;transform:none;bottom:12px}
+  .ez-switch-l{display:none}
+  .ez-switch button{padding:12px 14px;font-size:15px}
+  .ez-ask{align-items:flex-end;padding:0}
+  .ez-ask-card{max-width:none;border-width:1px 0 0;padding:28px 20px calc(26px + env(safe-area-inset-bottom,0px))}
+  .ez-ask h2{font-size:33px;margin-bottom:22px}
+  .ez-ask-btns button{min-height:70px;font-size:21px}
+}
+
+.ez-only{display:none}
+html.ez .ez-only{display:block}
+
+/* ---- 1. everything about a fifth larger (text, spacing and buttons together) ---- */
+html.ez{font-size:118.75%}
+@media (max-width:640px){html.ez{font-size:110%}}
+html.ez header [data-ez-keep] [class*="text-[0.72rem]"]{font-size:11.5px!important}
+html.ez header [data-ez-keep] [class*="text-[0.55rem]"]{font-size:8.8px!important}
+html.ez header [data-ez-keep] [class*="mt-[0.34rem]"]{margin-top:5.4px}
+@media (max-width:640px){html.ez header [data-ez-keep] [class*="text-[clamp"]{font-size:clamp(20px,6vw,24px)}}
+
+/* ---- 2. no small print: labels, captions and notes come up to reading size ---- */
+html.ez main :not([data-ez-keep] *)[class*="text-[0.5"],
+html.ez main :not([data-ez-keep] *)[class*="text-[0.6"],
+html.ez main :not([data-ez-keep] *)[class*="text-[0.7"],
+html.ez main :not([data-ez-keep] *).text-xs,
+html.ez footer [class*="text-[0.6"], html.ez footer [class*="text-[0.7"], html.ez footer .text-xs,
+html.ez main .eyebrow, html.ez footer .eyebrow{font-size:.9rem!important;letter-spacing:.08em!important;line-height:1.5}
+html.ez main .text-sm, html.ez footer .text-sm{font-size:1rem!important}
+html.ez body > a [class*="text-[0.6"]{font-size:.8rem!important;letter-spacing:.1em!important}
+
+/* ---- 3. stronger contrast: no grey-on-cream, no dimmed text on navy ---- */
+html.ez main .text-muted, html.ez main .text-ink-soft{color:var(--color-ink)!important}
+html.ez main [class*="text-parchment-200/"], html.ez footer [class*="text-parchment-200/"],
+html.ez main [class*="text-parchment-100/"]{color:var(--color-parchment-50)!important}
+html.ez main [class*="text-navy/"], html.ez header [class*="text-navy/"]{color:var(--color-navy)!important}
+
+/* ---- 4. menu and header: larger words, taller targets ---- */
+html.ez header nav .nav-link{font-size:.86rem;letter-spacing:.06em;padding-block:.55rem}
+html.ez header nav ul a{font-size:.86rem;min-height:3.1rem;display:flex;align-items:center}
+html.ez header :not([data-ez-keep] *)[class*="text-[0.5"],
+html.ez header :not([data-ez-keep] *)[class*="text-[0.6"],
+html.ez header :not([data-ez-keep] *)[class*="text-[0.7"]{font-size:.8rem!important;letter-spacing:.08em!important}
+html.ez header a.bg-gold{padding:1rem 1.3rem}
+html.ez header input{font-size:.9rem!important}
+
+/* ---- 5. buttons: big, plain, easy to hit ---- */
+html.ez .btn{min-height:3.6rem;padding:1rem 2.2rem;font-size:.95rem!important;letter-spacing:.09em!important;font-weight:600}
+html.ez a:focus-visible, html.ez button:focus-visible{outline:4px solid var(--color-gold);outline-offset:3px}
+
+/* ---- 6. links inside text: always underlined, thicker line ---- */
+html.ez main p a:not(.btn){text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* ---- 7. reference numbers: a round button instead of a tiny superscript ---- */
+html.ez button[aria-label^="Show footnote"]{display:inline-flex;align-items:center;justify-content:center;min-width:1.9rem;height:1.9rem;margin:0 .15rem;padding:0 .3rem;border:2px solid var(--color-gold)!important;border-radius:999px;background:#fff!important;color:var(--color-navy);text-decoration:none;font-size:.82rem;line-height:1;vertical-align:middle}
+
+/* ---- 8. the featured-paper card: a close button nobody can miss ---- */
+html.ez aside[aria-label="Featured paper"] button[aria-label="Close featured paper"]{width:3rem;height:3rem;right:.5rem;top:.5rem;border-radius:999px;background:var(--color-navy);color:var(--color-parchment-50);font-size:1.7rem}
+
+/* ---- 9. "Where would you like to go?" : rows that can be clicked anywhere ---- */
+.ez-row{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;min-height:5.4rem;padding:1.05rem 1.5rem;background:#fff;border:2px solid var(--color-navy);color:var(--color-navy);text-decoration:none;transition:background-color .15s,color .15s}
+.ez-row:hover,.ez-row:focus-visible{background:var(--color-navy);color:var(--color-parchment-50)}
+.ez-row-text{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+.ez-row-title{font-family:var(--font-display);font-size:1.75rem;font-weight:600;line-height:1.15}
+.ez-row-line{font-size:1rem;line-height:1.4}
+.ez-row-go{flex:none;display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:999px;background:var(--color-navy);color:var(--color-parchment-50);font-size:1.5rem;line-height:1;transition:background-color .15s,color .15s}
+.ez-row:hover .ez-row-go,.ez-row:focus-visible .ez-row-go{background:var(--color-gold);color:var(--color-navy-deep)}
+
+/* the "Sections" pill on long pages sits above the text-size switch on phones */
+@media (max-width:1179px){button[aria-haspopup="dialog"].fixed.right-4{bottom:calc(76px + env(safe-area-inset-bottom,0px))!important}}
+
+/* once the page is scrolled, the dark strip above the logo steps aside so the pinned header stays shallow */
+html.ez header:has(> div[class*="border-gold/30"]) > div:first-child{display:none}

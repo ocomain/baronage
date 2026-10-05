@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { EasyStart } from "@/components/EasyStart";
 import { HeroHome } from "@/components/HeroHome";
 import { BaroniesCarousel } from "@/components/BaroniesCarousel";
 import { ImageBand } from "@/components/ImageBand";
@@ -280,6 +281,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(terminologyJsonLd) }}
       />
       <HeroHome />
+      <EasyStart />
 
       {/* ============================== THE ROLL — KEY NUMBERS ============================== */}
       <section className="border-t-2 border-gold/40 border-b border-b-parchment-300/60 bg-parchment texture-parchment py-8 sm:py-9">
