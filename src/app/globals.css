@@ -310,6 +310,8 @@ html {
   font-size: 0.95rem; font-style: italic; line-height: 1.5;
   color: var(--color-muted);
 }
+/* A tall diagram: narrower on screen so it fits a window; in print it is allowed more of the page. */
+.paper-body .paper-figure--tall img { max-width: 34rem; margin-left: auto; margin-right: auto; }
 /* Key findings panel at the head of a paper: figures, pull quotes, fact-check note */
 .paper-body .paper-findings {
   margin: 2rem 0 2.75rem;
@@ -514,6 +516,7 @@ html {
   /* Figures and tables. */
   .paper-print .paper-figure { break-inside: avoid; margin: 12pt 0; }
   .paper-print .paper-figure img { max-height: 105mm; width: auto; max-width: 100%; margin-left: auto; margin-right: auto; box-shadow: none; }
+  .paper-print .paper-figure--tall img { max-height: 185mm; }
   .paper-print .paper-figure figcaption { font-size: 9.5pt; color: #222; }
   .paper-print .table-wrap { overflow: visible; border: 0; margin: 10pt 0; }
   .paper-print table { min-width: 0; font-size: 9.5pt; }

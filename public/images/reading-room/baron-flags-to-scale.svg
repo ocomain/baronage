@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1375" width="900" height="1375" role="img" aria-labelledby="t d">
+<title id="t">The five heraldic flags, drawn to the same scale</title>
+<desc id="d">A square banner 0.90 metres each way; a tapering standard 3.5 metres long with a split rounded end; a guidon 2.40 metres long with a rounded end; a pennon 1.20 metres long ending in a point; and a triangular pinsel 0.60 metres high and 1.35 metres long. A figure 1.75 metres tall is shown for scale.</desc>
+<rect width="900" height="1375" fill="#faf6ec"/>
+<defs><pattern id="arms" width="1" height="1" patternContentUnits="objectBoundingBox"><rect width="1" height="1" fill="#faf6ec"/><path d="M0,0.78 L0.5,0.36 L1,0.78 L1,0.98 L0.5,0.56 L0,0.98 Z" fill="#131e3a"/><circle cx="0.22" cy="0.22" r="0.1" fill="#c9a24b" stroke="#131e3a" stroke-width="0.012"/><circle cx="0.78" cy="0.22" r="0.1" fill="#c9a24b" stroke="#131e3a" stroke-width="0.012"/><circle cx="0.5" cy="0.86" r="0.085" fill="#c9a24b" stroke="#131e3a" stroke-width="0.012"/></pattern></defs>
+<text x="40" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#5c5648" font-style="italic">All five to the same scale</text>
+<line x1="670.0" y1="44" x2="840.0" y2="44" stroke="#2a2a2a" stroke-width="3"/><line x1="670.0" y1="34" x2="670.0" y2="54" stroke="#2a2a2a" stroke-width="3"/><line x1="840.0" y1="34" x2="840.0" y2="54" stroke="#2a2a2a" stroke-width="3"/>
+<text x="755.0" y="30" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#2a2a2a">1 metre</text>
+<line x1="70" y1="86" x2="70" y2="279.0" stroke="#8a6a2f" stroke-width="7" stroke-linecap="round"/>
+<rect x="74" y="100" width="153.0" height="153.0" fill="url(#arms)" stroke="#131e3a" stroke-width="3"/>
+<text x="253.0" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#131e3a">1. Banner</text>
+<text x="253.0" y="188" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#2a2a2a">0.90 m (36 inches) square</text>
+<text x="253.0" y="222" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-style="italic" fill="#5c5648">The arms fill the whole flag</text>
+<line x1="70" y1="309.0" x2="70" y2="553.0" stroke="#8a6a2f" stroke-width="7" stroke-linecap="round"/>
+<clipPath id="cs"><path d="M74,323.0 L643.5,374.0 A25.5,25.5 0 0 1 643.5,425.0 L612.9,425.0 L643.5,425.0 A25.5,25.5 0 0 1 643.5,476.0 L74,527.0 Z"/></clipPath><g clip-path="url(#cs)">
+<polygon points="74,323.0 669.0,374.0 669.0,399.5 74,374.0" fill="#e6dcc2"/>
+<polygon points="74,374.0 669.0,399.5 669.0,425.0 74,425.0" fill="#131e3a"/>
+<polygon points="74,425.0 669.0,425.0 669.0,450.5 74,476.0" fill="#e6dcc2"/>
+<polygon points="74,476.0 669.0,450.5 669.0,476.0 74,527.0" fill="#131e3a"/>
+<rect x="74" y="323.0" width="183.6" height="204.0" fill="url(#arms)"/><line x1="257.6" y1="323.0" x2="257.6" y2="527.0" stroke="#131e3a" stroke-width="3"/>
+<circle cx="303.6" cy="425.0" r="32" fill="#faf6ec" stroke="#131e3a" stroke-width="3"/>
+<polygon points="349.6,313.0 375.6,313.0 413.6,537.0 387.6,537.0" fill="#c9a24b" stroke="#131e3a" stroke-width="2"/>
+<circle cx="447.6" cy="425.0" r="28" fill="#faf6ec" stroke="#131e3a" stroke-width="3"/>
+<polygon points="489.6,313.0 515.6,313.0 553.6,537.0 527.6,537.0" fill="#c9a24b" stroke="#131e3a" stroke-width="2"/>
+<circle cx="579.6" cy="425.0" r="22" fill="#faf6ec" stroke="#131e3a" stroke-width="3"/>
+</g>
+<path d="M74,323.0 L643.5,374.0 A25.5,25.5 0 0 1 643.5,425.0 L612.9,425.0 L643.5,425.0 A25.5,25.5 0 0 1 643.5,476.0 L74,527.0 Z" fill="none" stroke="#131e3a" stroke-width="3"/>
+<text x="86" y="579.0" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#131e3a">2. Standard</text>
+<text x="86" y="617.0" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#2a2a2a">A baron: 3½ m (4 yards)</text>
+<text x="86" y="651.0" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-style="italic" fill="#5c5648">Arms or the Saltire next to the pole</text>
+<line x1="70" y1="689.0" x2="70" y2="892.2" stroke="#8a6a2f" stroke-width="7" stroke-linecap="round"/>
+<clipPath id="cg"><path d="M74,703.0 L441.2,743.8000000000001 A40.800000000000004,40.800000000000004 0 0 1 441.2,825.4 L74,866.2 Z"/></clipPath><g clip-path="url(#cg)"><polygon points="74,703.0 482.0,743.8000000000001 482.0,784.6 74,784.6" fill="#e6dcc2"/><polygon points="74,784.6 482.0,784.6 482.0,825.4 74,866.2" fill="#131e3a"/></g>
+<circle cx="152" cy="784.6" r="40" fill="#faf6ec" stroke="#131e3a" stroke-width="3"/>
+<rect x="244" y="767.6" width="170" height="34" rx="4" fill="#c9a24b" stroke="#131e3a" stroke-width="2"/>
+<path d="M74,703.0 L441.2,743.8000000000001 A40.800000000000004,40.800000000000004 0 0 1 441.2,825.4 L74,866.2 Z" fill="none" stroke="#131e3a" stroke-width="3"/>
+<text x="86" y="918.2" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#131e3a">3. Guidon</text>
+<text x="86" y="956.2" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#2a2a2a">2.40 m (8 feet)</text>
+<line x1="70" y1="994.2" x2="70" y2="1135.384" stroke="#8a6a2f" stroke-width="7" stroke-linecap="round"/>
+<clipPath id="cp"><path d="M74,1008.2 L278.0,1058.7920000000001 L74,1109.384 Z"/></clipPath><g clip-path="url(#cp)"><rect x="74" y="1008.2" width="204.0" height="50.592000000000006" fill="#e6dcc2"/><rect x="74" y="1058.7920000000001" width="204.0" height="50.592000000000006" fill="#131e3a"/></g>
+<circle cx="118" cy="1058.7920000000001" r="26" fill="#faf6ec" stroke="#131e3a" stroke-width="3"/>
+<path d="M74,1008.2 L278.0,1058.7920000000001 L74,1109.384 Z" fill="none" stroke="#131e3a" stroke-width="3"/>
+<text x="312.0" y="1048.2" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#131e3a">4. Pennon</text>
+<text x="312.0" y="1086.2" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#2a2a2a">1.20 m (4 feet)</text>
+<line x1="70" y1="1173.384" x2="70" y2="1315.384" stroke="#8a6a2f" stroke-width="7" stroke-linecap="round"/>
+<path d="M74,1187.384 L303.5,1238.384 L74,1289.384 Z" fill="#131e3a" stroke="#131e3a" stroke-width="3"/>
+<circle cx="124" cy="1238.384" r="30" fill="#faf6ec" stroke="#c9a24b" stroke-width="5"/>
+<text x="337.5" y="1227.384" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#131e3a">5. Pinsel</text>
+<text x="337.5" y="1265.384" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#2a2a2a">0.60 m high, 1.35 m long</text>
+<g fill="#5c5648" opacity="0.85"><circle cx="790" cy="1038.114" r="20.23"/><path d="M760,1074.413 Q790,1056.413 820,1074.413 L826,1172.584 L812,1172.584 L808,1315.384 L793,1315.384 L790,1184.484 L787,1315.384 L772,1315.384 L768,1172.584 L754,1172.584 Z"/></g>
+<text x="790" y="1349.384" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic" fill="#5c5648">1.75 m</text>
+</svg>
