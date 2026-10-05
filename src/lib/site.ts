@@ -22,6 +22,8 @@ export const FEATURED_PAPER = {
 
 /** The live, existing register — a separate app we link out to. */
 export const ROLL_URL = "https://roll.baronage.com/";
+/** The Index of Scottish Baronies: council member Balvaird's research index, a sub-site like the Roll (public beta since 5 October 2026). */
+export const INDEX_URL = "https://baronies.baronage.com/";
 
 /** Roll API origin (no trailing slash) — D1-backed endpoints, e.g. /api/stats. */
 export const ROLL_API = "https://roll.baronage.com";
@@ -58,6 +60,7 @@ export type NavLink = { href: string; label: string; external?: boolean; /** Sma
 /** Primary navigation — mirrors the existing site menu. */
 export const navLinks: NavLink[] = [
   { href: "/the-roll", label: "The Roll" },
+  { href: INDEX_URL, label: "Index of Baronies", external: true },
   { href: "/sbr-vs-roll", label: "SBR v Roll" },
   { href: "/guide", label: "Guide" },
   { href: "/history", label: "History" },
@@ -86,7 +89,12 @@ export type NavMenuItem = NavLink & {
  * is itself a page, so nothing is reachable only through a drop-down.
  */
 export const navMenu: NavMenuItem[] = [
-  { href: "/the-roll", label: "The Roll" },
+  {
+    href: "/the-roll",
+    label: "The Roll",
+    selfInList: true,
+    children: [{ href: INDEX_URL, label: "Index of Baronies", external: true }],
+  },
   { href: "/sbr-vs-roll", label: "SBR v Roll" },
   {
     // Clicking the word "Guide" opens the FAQ explainer (owner 2026-10-05); the /guide/ hub page stays, linked from the footer.
