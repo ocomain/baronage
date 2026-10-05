@@ -89,7 +89,8 @@ export const navMenu: NavMenuItem[] = [
   { href: "/the-roll", label: "The Roll" },
   { href: "/sbr-vs-roll", label: "SBR v Roll" },
   {
-    href: "/guide",
+    // Clicking the word "Guide" opens the FAQ explainer (owner 2026-10-05); the /guide/ hub page stays, linked from the footer.
+    href: "/scottish-baronies-explained",
     label: "Guide",
     children: [
       { href: "/proper-address", label: "Proper Address" },
