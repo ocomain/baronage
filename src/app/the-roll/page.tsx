@@ -266,14 +266,15 @@ export default function TheRollPage() {
               </div>
               <figcaption className="mt-5 font-sans text-xs uppercase tracking-[0.16em] text-muted">
                 An entry as published — credentials, original documents and the signed Baronial Pledge, Barony of
-                Hartsyde ·{" "}
+                Hartsyde
+                {/* A button, not a text link: nobody clicked it as a link (owner, from the recordings). */}
                 <a
                   href="https://roll.baronage.com/baron/jean-guy-philip-boisserolles-de-st-julien"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gold-deep transition-colors hover:text-oxblood"
+                  className="mt-4 flex w-fit items-center gap-2 rounded-sm bg-navy px-5 py-3 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-parchment-50 transition-colors hover:bg-oxblood"
                 >
-                  view the live entry ↗
+                  View the live entry <span aria-hidden>↗</span>
                 </a>
               </figcaption>
             </figure>
