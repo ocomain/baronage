@@ -8,7 +8,7 @@ import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
 import { EmailSignup } from "./EmailSignup";
 import { ExternalArrow } from "./primitives";
-import { navMenu, ROLL_URL, CALENDLY_URL } from "@/lib/site";
+import { navMenu, ROLL_URL, CALENDLY_URL, type NavLink } from "@/lib/site";
 
 
 function useScrolled(threshold = 12) {
@@ -210,7 +210,7 @@ export function SiteHeader() {
                 >
                   <ul className="min-w-[15rem] border border-gold/40 bg-parchment-50 py-2 shadow-[0_18px_40px_-20px_rgba(12,21,48,0.55)]">
                     {/* Where selfInList is set, the parent page comes first in its own list: visitors do not expect the heading itself to be a link. */}
-                    {(item.selfInList ? [{ href: item.href, label: item.selfLabel ?? item.label, external: false }, ...item.children] : item.children).map((c) => (
+                    {(item.selfInList ? [{ href: item.href, label: item.selfLabel ?? item.label } as NavLink, ...item.children] : item.children).map((c) => (
                       <li key={c.href}>
                         {c.external ? (
                           <a
@@ -223,6 +223,7 @@ export function SiteHeader() {
                           >
                             {c.label}
                             <ExternalArrow className="h-3 w-3" />
+                            {c.badge && <NavBadge>{c.badge}</NavBadge>}
                           </a>
                         ) : (
                           <Link
@@ -284,7 +285,7 @@ export function SiteHeader() {
                   // A group: tapping the heading unfolds its list (it does not leave the page).
                   const unfolded = group === item.href;
                   const entries = item.selfInList
-                    ? [{ href: item.href, label: item.selfLabel ?? item.label, external: false }, ...item.children]
+                    ? [{ href: item.href, label: item.selfLabel ?? item.label } as NavLink, ...item.children]
                     : item.children;
                   return (
                     <li key={item.href}>
@@ -318,6 +319,7 @@ export function SiteHeader() {
                                 >
                                   {c.label}
                                   <ExternalArrow className="h-3.5 w-3.5" />
+                                  {c.badge && <NavBadge>{c.badge}</NavBadge>}
                                 </a>
                               ) : (
                                 <Link

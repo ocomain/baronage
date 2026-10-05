@@ -152,7 +152,7 @@ export function FeaturedPaper() {
       }`}
       style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <div className="relative border border-gold/50 bg-parchment-50 p-4 pr-11 shadow-[0_24px_60px_-24px_rgba(10,16,36,0.55)] sm:p-5 sm:pr-12">
+      <div className="relative border border-gold/50 bg-parchment-50 p-4 pr-[54px] shadow-[0_24px_60px_-24px_rgba(10,16,36,0.55)] sm:p-5 sm:pr-[58px]">
         <span className="pointer-events-none absolute inset-1.5 border border-gold/20" aria-hidden />
         <div className="relative flex items-start gap-4">
           <Link href={HREF} tabIndex={-1} aria-hidden className="hidden shrink-0 min-[380px]:block">
@@ -172,7 +172,7 @@ export function FeaturedPaper() {
         {/* Desktop only: a full-width footer line, so the label never wraps beside the thumbnail. */}
         <Link
           href="/reading-room"
-          className="relative mt-4 hidden whitespace-nowrap border-t border-parchment-300/70 pt-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold-deep transition-colors hover:text-oxblood sm:-mr-7 sm:block"
+          className="relative mt-4 hidden whitespace-nowrap border-t border-parchment-300/70 pt-3 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold-deep transition-colors hover:text-oxblood sm:-mr-[38px] sm:block"
         >
           More papers in the Reading Room <span aria-hidden>→</span>
         </Link>
@@ -180,9 +180,13 @@ export function FeaturedPaper() {
           type="button"
           onClick={dismiss}
           aria-label="Close featured paper"
-          className="absolute right-1.5 top-1.5 flex h-9 w-9 items-center justify-center font-sans text-xl leading-none text-ink-soft transition-colors hover:text-oxblood"
+          title="Close"
+          // The big round navy X from the Roll's card: easy to see and to hit (owner 2026-10-05).
+          className="absolute right-2.5 top-2.5 z-[1] flex h-[38px] w-[38px] items-center justify-center rounded-full bg-navy text-parchment-50 shadow-[0_2px_8px_rgba(10,16,36,0.3)] transition-colors hover:bg-oxblood focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-gold"
         >
-          ×
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden className="h-[18px] w-[18px]">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
         </button>
       </div>
     </aside>

@@ -84,7 +84,7 @@ export type NavMenuItem = NavLink & {
 };
 
 /**
- * Header menu (owner 2026-10-05: the ten-item row was crowded). Seven items; an item with
+ * Header menu (owner 2026-10-05: the ten-item row was crowded). Six items; an item with
  * children opens a short list on desktop and shows it indented in the phone menu. The parent
  * is itself a page, so nothing is reachable only through a drop-down.
  */
@@ -93,9 +93,11 @@ export const navMenu: NavMenuItem[] = [
     href: "/the-roll",
     label: "The Roll",
     selfInList: true,
-    children: [{ href: INDEX_URL, label: "Index of Baronies", external: true }],
+    children: [
+      { href: "/sbr-vs-roll", label: "SBR v Roll" },
+      { href: INDEX_URL, label: "Index of Baronies", external: true, badge: "New" },
+    ],
   },
-  { href: "/sbr-vs-roll", label: "SBR v Roll" },
   {
     // Clicking the word "Guide" opens the FAQ explainer (owner 2026-10-05); the /guide/ hub page stays, linked from the footer.
     href: "/scottish-baronies-explained",

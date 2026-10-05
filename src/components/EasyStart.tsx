@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { EmailSignup } from "@/components/EmailSignup";
 import { ROLL_URL, INDEX_URL, CALENDLY_URL } from "@/lib/site";
 
 const rows: { href: string; title: string; line: string; external?: boolean }[] = [
   { href: ROLL_URL, title: "Check a title on the Roll", line: "Search the Roll of Scottish Barons by name or title.", external: true },
-  { href: INDEX_URL, title: "Look up a barony", line: "The Index of Scottish Baronies (beta): by county or A to Z.", external: true },
+  { href: INDEX_URL, title: "Look up a barony", line: "The Index of Scottish Baronies (beta), by county.", external: true },
   { href: "/proper-address", title: "How to address a baron", line: "In speech, in letters and on forms." },
   { href: "/scottish-baronies-explained", title: "What is a Scottish barony?", line: "Plain answers to the common questions." },
   { href: "/pledge", title: "The Pledge", line: "A commitment, in honour, to keep a barony in the family." },
@@ -12,7 +13,7 @@ const rows: { href: string; title: string; line: string; external?: boolean }[] 
 ];
 
 /**
- * The main things a visitor comes to do, each a row that can be clicked anywhere.
+ * The main things a visitor comes to do, each a row that can be clicked anywhere, and the newsletter sign-up as the last cell.
  * Standard view: a compact grid, two across. Extra-large view (html.ez): tall rows, one per line.
  * Sizes are in globals.css (.ez-start, .ez-rows, .ez-row).
  */
@@ -50,6 +51,12 @@ export function EasyStart() {
               </li>
             );
           })}
+          {/* Last cell: the free newsletter, so the grid ends on a full row (owner 2026-10-05). */}
+          <li>
+            <div className="ez-row ez-row--form">
+              <EmailSignup variant="block" className="w-full" />
+            </div>
+          </li>
         </ul>
       </div>
     </section>
