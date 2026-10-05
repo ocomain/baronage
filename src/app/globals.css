@@ -389,6 +389,16 @@ html {
   font-size: 1rem; font-style: italic; line-height: 1.45;
   color: var(--color-ink-soft);
 }
+/* A pull quote set in the running text of a paper, between two fine rules. */
+.paper-body blockquote.paper-pullquote.paper-pullquote--text {
+  margin: 2.5rem auto;
+  padding: 1.5rem 0.75rem 1.4rem;
+  max-width: 38rem;
+  border-top: 1px solid rgba(201, 162, 75, 0.5);
+  border-bottom: 1px solid rgba(201, 162, 75, 0.5);
+}
+.paper-body h2 + blockquote.paper-pullquote.paper-pullquote--text,
+.paper-body h3 + blockquote.paper-pullquote.paper-pullquote--text { margin-top: 1.4rem; }
 .paper-body .paper-anchor { scroll-margin-top: 8rem; }
 .paper-body .paper-findings__note {
   margin: 1.5rem 0 0;
@@ -512,6 +522,7 @@ html {
   .paper-print .paper-stat__value { font-size: 20pt; color: #000; }
   .paper-print .paper-stat__label { font-size: 8.5pt; color: #222; }
   .paper-print blockquote.paper-pullquote p { font-size: 14pt; }
+  .paper-print blockquote.paper-pullquote.paper-pullquote--text { break-inside: avoid; margin: 12pt 0; padding: 8pt 0; border-color: #999; }
 
   /* Figures and tables. */
   .paper-print .paper-figure { break-inside: avoid; margin: 12pt 0; }
