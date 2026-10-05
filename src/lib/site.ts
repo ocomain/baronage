@@ -72,7 +72,11 @@ export const navLinks: NavLink[] = [
   { href: "/reading-room", label: "Reading Room", badge: "New" },
 ];
 
-export type NavMenuItem = NavLink & { children?: NavLink[] };
+export type NavMenuItem = NavLink & {
+  children?: NavLink[];
+  /** Desktop drop-down starts with the parent page itself (visitors do not expect the heading to be a link). Not for Guide, which is only a hub. */
+  selfInList?: boolean;
+};
 
 /**
  * Header menu (owner 2026-10-05: the ten-item row was crowded). Seven items; an item with
@@ -92,8 +96,8 @@ export const navMenu: NavMenuItem[] = [
       { href: "/reading-room/robes-and-insignia", label: "Robes & Chapeau" },
     ],
   },
-  { href: "/pledge", label: "The Pledge", children: [{ href: "/baronial-code", label: "Baronial Code" }] },
-  { href: "/about", label: "About", children: [{ href: "/governing-council", label: "Governing Council" }] },
+  { href: "/pledge", label: "The Pledge", selfInList: true, children: [{ href: "/baronial-code", label: "Baronial Code" }] },
+  { href: "/about", label: "About", selfInList: true, children: [{ href: "/governing-council", label: "Governing Council" }] },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
 ];
