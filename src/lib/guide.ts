@@ -49,4 +49,10 @@ export const guideEntries: GuideEntry[] = [
     summary: "The red robe of 1455, the chapeau and supporters: what a baron wore, and what the Lyon Register keeps of it.",
     kind: "Paper",
   },
+  {
+    href: "/reading-room/the-barons-court-and-its-officers",
+    title: "The baron’s court and its officers",
+    summary: "Bailie, clerk, officer and dempster: what each did in a baron’s court. Since 2004 the court and its officers are ceremonial only.",
+    kind: "Paper",
+  },
 ];
