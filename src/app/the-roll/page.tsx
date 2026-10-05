@@ -210,7 +210,7 @@ export default function TheRollPage() {
                       Enrolled
                     </span>
                     <span className="rounded-sm border border-amber-300 bg-amber-100 px-3 py-1 font-sans text-xs text-amber-900">
-                      🛡️ Pledged Hereditary
+                      🛡️ Hereditary <span className="text-[0.8em]">on the Roll</span>
                     </span>
                   </div>
                   <p className="mt-4 font-serif text-xl text-navy">The Much Honoured Baron of Hartsyde</p>
@@ -383,7 +383,7 @@ export default function TheRollPage() {
                     of the name.
                   </li>
                   <li className="leading-relaxed text-ink-soft">
-                    <strong className="font-semibold text-navy">“Pledged Hereditary.”</strong> The badge is defined openly
+                    <strong className="font-semibold text-navy">“Hereditary on the Roll.”</strong> The badge is defined openly
                     on the Roll itself: “All Scottish baronial dignities are heritable. The Roll displays this badge where a
                     barony is pledged on the Roll: by its holder’s signed Pledge, or, where it has been inherited across
                     generations, by the Roll’s own pledge to recognise it only within the family.” It describes the Roll’s treatment of succession; it asserts no category of property law.
