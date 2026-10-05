@@ -715,6 +715,7 @@ html.ez .ez-rows > li:last-child:nth-child(odd){grid-column:auto}
 .ez-row--form{padding-block:.55rem}
 .ez-row--form:hover,.ez-row--form:focus-within{background:#fff;color:var(--color-navy);border-color:var(--color-gold)}
 .ez-row--form form > div{margin-top:.4rem}
+.ez-row--form form label{color:var(--color-navy)}
 .ez-row--form input[type=email]{padding-block:.5rem}
 html.ez .ez-row--form{padding-block:1rem}
 html.ez .ez-row--form input[type=email]{padding-block:.8rem;font-size:1.05rem}
