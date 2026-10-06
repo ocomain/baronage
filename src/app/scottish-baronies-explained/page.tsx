@@ -6,7 +6,7 @@ import { Footnote } from "@/components/Footnote";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Scottish Baronies, Explained — FAQ",
+  title: "Scottish Barons, Explained — FAQ",
   description:
     "Is “Scottish feudal barony” still the correct term? No — since the Abolition of Feudal Tenure etc. (Scotland) Act 2000 came into force in 2004, Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ on the Baronage of Scotland, with primary sources. Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/scottish-baronies-explained/" },
   openGraph: {
     type: "article",
-    title: "Scottish Baronies, Explained",
+    title: "Scottish Barons, Explained",
     description:
       "Distinct from peerages, altered fundamentally by legislation in 2004, and often described with out-of-date terminology. What the law and the institutional sources actually say.",
     url: "/scottish-baronies-explained/",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Scottish Baronies, Explained — the Baronage of Scotland Association",
+        alt: "Scottish Barons, Explained — the Baronage of Scotland Association",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scottish Baronies, Explained",
+    title: "Scottish Barons, Explained",
     description:
       "Since the 2004 reform, Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ with primary sources.",
     images: ["/og.jpg"],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-10-04";
+const DATE_MODIFIED = "2026-10-06";
 const REVIEWED_LABEL = "October 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -378,7 +378,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Is “Scottish feudal barony” or “feudal baron” or “feudal title” the correct term today?",
-    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. In the words of the Act (s. 63): “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”. In plain terms: this was the abolition of the feudal barony, retaining the dignity of baron — so the “feudal baron” is now incorrect: a defunct historical term with no meaning in law. The term lingers — other organisations can still be found writing “feudal barony” from habit — but legacy usage does not revive a legal category the 2000 Act closed. In law there is no such thing as a feudal baron today: since 28 November 2004 there has been no feudal tenure in Scotland for a barony to be feudal of — the feudal barony itself was extinguished, leaving only the title of baron, without the word “feudal”. The statute, not custom, settles the terminology. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; collectively, the minor barons of Scotland, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.",
+    a: "No longer. Until 2004 these were properly called feudal baronies, because the dignity was attached to land held of the Crown. The Abolition of Feudal Tenure etc. (Scotland) Act 2000, in force 28 November 2004, ended the feudal system and severed the dignity from the land. Extant baronies were expressly preserved as personal, non-territorial dignities — so the feudal aspects and the word “feudal” are now out of date as a descriptor of a living barony. In the words of the Act (s. 63): “an estate held in barony ceases to exist as a feudal estate, the dignity of baron, though retained, shall not attach to the land” — and “nothing in this Act affects the dignity of baron”. In plain terms: this was the abolition of the feudal barony, retaining the dignity of baron — so the “feudal baron” is now incorrect: a defunct historical term with no meaning in law. The term lingers — other organisations can still be found writing “feudal barony” from habit — but legacy usage does not revive a legal category the 2000 Act closed. In law there is no such thing as a feudal baron today: since 28 November 2004 there has been no feudal tenure in Scotland for a barony to be feudal of — the feudal barony itself was extinguished, leaving only the title of baron, without the word “feudal”. The statute, not custom, settles the terminology. Lord Lyon Sellar in 2009 accordingly termed them “quondam feudal baronies” — quondam meaning “formerly”. For the titleholder, baron or lord or earl in the Baronage of Scotland is the correct modern description; collectively, the minor barons of Scotland, the term used by the Court of the Lord Lyon for this rank of the ancient nobility. The Scottish Law Commission’s 1999 report that led to the Act drew the same line: the Scottish Parliament could “abolish feudal baronies altogether” while allowing “the dignity of baron, derived from the former connection with the Crown as feudal superior, to continue as a floating dignity” (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing the “noble aspects of the barony title” to lapse along with the abolition of the feudal relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues. The abolition itself, with the Act, the Explanatory Notes and the Law Commission quoted, is set out on the Index of Scottish Baronies.",
     body: (
       <>
         <p>
@@ -424,7 +424,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           </em>{" "}
           (p. 24); its discussion paper had mentioned, but rejected, the possibility of allowing
           the <em>“noble aspects of the barony title”</em> to lapse along with the abolition of the feudal
-          relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues.
+          relationship (para. 2.34). The feudal framework was abolished; the noble dignity continues. The abolition
+          itself, with the Act, the Explanatory Notes and the Law Commission quoted, is set out on the{" "}
+          <a href="https://baronies.baronage.com/what-is-a-barony/#feudal" className={intLink}>
+            Index of Scottish Baronies
+          </a>
+          .
         </p>
       </>
     ),
@@ -1674,7 +1679,7 @@ const jsonLd = {
       "@type": "FAQPage",
       "@id": `${PAGE_URL}#faq`,
       url: PAGE_URL,
-      name: "Scottish Baronies, Explained",
+      name: "Scottish Barons, Explained",
       description:
         "An evidence-based FAQ on the Baronage of Scotland: why “feudal baron” is out of date since the 2004 reform, and what the law and institutional sources actually say.",
       inLanguage: "en-GB",
@@ -1711,7 +1716,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Scottish Baronies, Explained", item: PAGE_URL },
+        { "@type": "ListItem", position: 2, name: "Scottish Barons, Explained", item: PAGE_URL },
       ],
     },
     {
@@ -1740,7 +1745,7 @@ export default function BaroniesExplainedPage() {
             className="rise mt-4 font-display leading-[1.02] text-parchment-50"
             style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
           >
-            Scottish Baronies, Explained
+            Scottish Barons, Explained
           </h1>
           <p
             className="rise mx-auto mt-5 max-w-3xl text-xl leading-relaxed text-parchment-100 sm:text-2xl"
@@ -1748,6 +1753,19 @@ export default function BaroniesExplainedPage() {
           >
             Distinct from peerages, altered by legislation in 2004, and often described with terminology that is now
             out of date. What the law and the institutional sources actually say.
+          </p>
+          <p
+            className="rise mx-auto mt-5 max-w-3xl text-base leading-relaxed text-parchment-200 sm:text-lg"
+            style={{ animationDelay: "0.2s" }}
+          >
+            This page is about the baron. For what a barony is, how one was made, and why it is no longer a feudal
+            barony, see the Index of Scottish Baronies:{" "}
+            <a
+              href="https://baronies.baronage.com/what-is-a-barony/"
+              className="text-parchment-50 underline decoration-parchment-50/40 underline-offset-4 transition-colors hover:text-gold"
+            >
+              What is a barony in Scotland?
+            </a>
           </p>
           <p
             className="rise mt-6 font-sans text-[0.7rem] uppercase tracking-[0.18em] text-parchment-200/60"
