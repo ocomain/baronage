@@ -619,7 +619,9 @@ video.bg-film::-webkit-media-controls-start-playback-button {
 .ez-switch button{all:unset;cursor:pointer;padding:13px 20px;border-radius:9999px;font-size:16px;font-weight:700;color:#faf6ec}
 .ez-switch button[aria-pressed=true]{background:#faf6ec;color:#131e3a}
 .ez-switch button:focus-visible{outline:2px solid #c9a24b;outline-offset:2px}
-html.ez-card-up .ez-switch{bottom:calc(var(--ez-card-h, 150px) + 28px)}
+/* Lifted above the featured-paper card with transform, not by changing "bottom": a change of position counted as the page
+   jumping in the speed figures (Clarity, 6 October 2026). Same distance as before. */
+html.ez-card-up .ez-switch{transform:translateX(-50%) translateY(calc(-1 * (var(--ez-card-h, 150px) + 14px)))}
 
 /* ---------- first-visit question: "Do you need extra large text?" ---------- */
 html.ez-asking{overflow:hidden}
@@ -638,6 +640,7 @@ html.ez-asking{overflow:hidden}
 .ez-ask-note{position:relative;margin:22px 0 0;font-family:var(--font-sans);font-size:17px;line-height:1.5;color:#463d2d}
 @media (max-width:640px){
   .ez-switch{left:12px;transform:none;bottom:12px}
+  html.ez-card-up .ez-switch{transform:translateY(calc(-1 * (var(--ez-card-h, 150px) + 16px)))}
   .ez-switch-l{display:none}
   .ez-switch button{padding:12px 14px;font-size:15px}
   .ez-ask{align-items:flex-end;padding:0}
