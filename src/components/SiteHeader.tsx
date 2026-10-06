@@ -87,10 +87,9 @@ export function SiteHeader() {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
-  // The header shows navMenu: seven items, three of them with a short list beneath (Guide,
-  // The Pledge, About). Charitable Trust stays in the footer only. Member's Chamber is not
-  // part of this row on desktop — it renders in the top row, just left of the gold "Verify
-  // Title on the Roll" button — but is listed in the mobile drawer below.
+  // The header shows navMenu: seven items, four of them with a short list beneath (The Roll,
+  // Guide, The Pledge, About), Member's Chamber last (owner 2026-10-06, back in the row now that
+  // there is space). Charitable Trust stays in the footer only.
   // A parent is marked active on its own page and on its children's pages; a Reading Room
   // paper listed under Guide leaves "Reading Room" as the active item.
   // A page listed under Guide that has a menu item of its own (About) stays under its own item.
@@ -143,15 +142,6 @@ export function SiteHeader() {
           <EmailSignup className="hidden lg:block" />
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/members"
-              data-active={isActive("/members")}
-              className={`nav-link hidden pr-2 font-sans text-[0.7rem] font-medium uppercase tracking-[0.13em] transition-colors lg:inline-flex ${
-                isActive("/members") ? "text-oxblood" : "text-navy/75 hover:text-navy"
-              }`}
-            >
-              Member’s Chamber
-            </Link>
             <a
               href={ROLL_URL}
               target="_blank"
@@ -348,16 +338,6 @@ export function SiteHeader() {
                     </li>
                   );
                 })}
-                <li>
-                  <Link
-                    href="/members"
-                    className={`block py-3.5 font-display text-lg ${
-                      isActive("/members") ? "text-oxblood" : "text-navy"
-                    }`}
-                  >
-                    Member’s Chamber
-                  </Link>
-                </li>
               </ul>
               <a
                 href={CALENDLY_URL}
