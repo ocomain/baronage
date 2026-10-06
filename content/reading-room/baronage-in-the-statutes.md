@@ -2,7 +2,7 @@
 title: "The baronage in the statutes, 1428–2004"
 subtitle: "From the Act of the small barons to section 63 of the 2000 Act: what each statute did for the baronage, with a link to the record"
 slug: baronage-in-the-statutes
-meta_description: "A reference table of the Acts that shaped the Scottish baronage — 1428, 1455, 1567, 1587, 1592, 1597, 1661, 1663, 1672, 1681, 1707, 1746, 1874, 1964 and 2000 — with what each did and a link to the record."
+meta_description: "A reference table of the Acts that shaped the Scottish baronage, from 1428 to 2004, with what each did and a link to the record."
 category: Law & Statutes
 published: 2026-09-11
 reviewed: 2026-10-03

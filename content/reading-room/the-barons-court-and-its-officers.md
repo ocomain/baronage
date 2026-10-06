@@ -2,7 +2,7 @@
 title: "The baron’s court and its officers"
 subtitle: "Bailie, clerk, officer and dempster: what each did in a Scottish baron’s court, how Parliament cut the court down, and what is left of it today"
 slug: the-barons-court-and-its-officers
-meta_description: "What a Scottish baron’s court was and who served in it, from the court books of Carnwath, Urie, Stitchill and Forbes: the bailie, the clerk, the officer with his horn and white wand, and the dempster. How the Act of 1746 cut the court down, when its last powers ended in 2004, and why the court and its officers are ceremonial today."
+meta_description: "What a Scottish baron’s court was and who served in it: bailie, clerk, officer and dempster. How 1746 cut it down, and why it is ceremonial today."
 category: Law & Statutes
 published: 2026-10-05
 reviewed: 2026-10-05

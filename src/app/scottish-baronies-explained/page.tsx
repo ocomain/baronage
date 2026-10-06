@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Scottish Barons, Explained — FAQ",
   description:
-    "Is “Scottish feudal barony” still the correct term? No — since the Abolition of Feudal Tenure etc. (Scotland) Act 2000 came into force in 2004, Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ on the Baronage of Scotland, with primary sources. Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio.",
+    "Is “Scottish feudal barony” still correct? No: since 2004 Scottish baronies are personal, non-territorial dignities. An evidence-based FAQ with primary sources.",
   keywords: [
     "Scottish feudal barony",
     "Scottish barony",

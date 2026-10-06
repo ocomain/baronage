@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/proper-address/" },
   title: "Proper Address for Scottish Barons",
   description:
-    "The correct forms of address, salutation and precedence for Scottish Barons and Baronesses — written, verbal and digital — preserving the dignity of the title.",
+    "The correct forms of address, salutation and precedence for Scottish Barons and Baronesses, written, spoken and online.",
 };
 
 const NAV: { id: string; label: string; badge?: string }[] = [

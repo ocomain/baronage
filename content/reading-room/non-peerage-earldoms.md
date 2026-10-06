@@ -2,7 +2,7 @@
 title: "Non-peerage Earldoms"
 subtitle: "Lands the Crown erected into an earldom, the peerage dignity of the same name, and forty years of Lyon Court answers on how the holder is styled"
 slug: non-peerage-earldoms
-meta_description: "Two things share the name earldom: the peerage dignity, and lands the Crown erected into an earldom, whose holders are commonly called feudal earls. The charters, the House of Lords cases, Wigtown and Huntly, and the Lyon Court’s differing answers since Annandale in 1983."
+meta_description: "Two things share the name earldom: the peerage dignity, and lands erected into an earldom. The charters, the Lords cases and the Lyon Court’s answers since 1983."
 category: The Lyon Court
 published: 2026-09-15
 reviewed: 2026-09-15

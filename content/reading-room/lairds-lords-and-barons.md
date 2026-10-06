@@ -2,7 +2,7 @@
 title: "Lairds, lords and barons: what the words meant"
 subtitle: "Laird and lord are one word; laird was never a rank; and what made a laird a baron was not the word but the Crown’s erection of his lands in free barony"
 slug: lairds-lords-and-barons
-meta_description: "Laird and lord are the same word, and laird was never a rank. From the Dictionary of the Older Scottish Tongue, Mackenzie, Borthwick and the sheriff-court rolls: what the words meant, and what made a laird a baron."
+meta_description: "Laird and lord are the same word, and laird was never a rank. From the dictionaries and the sheriff-court rolls: what made a laird a baron."
 category: Words & Usage
 published: 2026-09-11
 reviewed: 2026-09-11

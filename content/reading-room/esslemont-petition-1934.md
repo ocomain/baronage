@@ -2,7 +2,7 @@
 title: "The Esslemont petition of 1934"
 subtitle: "How the baronial chapeau came back, and the Lyon Court recorded a baron as “Baron of Esslemont” rather than “Baron of the Barony of”"
 slug: esslemont-petition-1934
-meta_description: "In 1934 Lord Lyon Sir Francis Grant, after proof, awarded Gordon of Hallhead the baronial chapeau and recorded him as Baron of Esslemont. The Memorial that won the case, in full, and why its argument is the argument of today."
+meta_description: "In 1934 Lord Lyon Grant awarded Gordon of Hallhead the baronial chapeau and recorded him as Baron of Esslemont. The Memorial that won the case, in full."
 category: The Lyon Court
 published: 2026-09-13
 reviewed: 2026-09-13

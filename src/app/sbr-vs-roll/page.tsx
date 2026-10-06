@@ -10,7 +10,7 @@ import { ROLL_URL } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "The SBR and the Roll",
   description:
-    "The Scottish Barony Register records the legal transfer of a barony, in place of the Register of Sasines since 2004; the Roll of Scottish Barons records recognition. What each one does, and how they work together.",
+    "The Scottish Barony Register records the legal transfer of a barony; the Roll of Scottish Barons records recognition. What each does, and how they work together.",
   path: "/sbr-vs-roll/",
 });
 

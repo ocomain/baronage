@@ -2,7 +2,7 @@
 title: "The Lord Lyon's Case for the Baronage"
 subtitle: "A reader's guide to Innes of Learney's 1945 paper, The Robes of the Feudal Baronage of Scotland"
 slug: innes-of-learney-1945
-meta_description: "In 1945 the Lord Lyon, Sir Thomas Innes of Learney, set out the evidence that Scotland's minor barons are a titled nobility with their own robes, chapeau and style. A guide to the paper, with page references and sources."
+meta_description: "In 1945 Lord Lyon Innes of Learney set out the evidence that Scotland’s minor barons are a titled nobility with their own robes, chapeau and style."
 category: Heritage & Sources
 reading_time: 9 min
 published: 2026-09-11

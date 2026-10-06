@@ -2,7 +2,7 @@
 title: "Officially Recognised: the Lyon Court’s Rolls in the Gazette"
 subtitle: "The Rolls of the Chiefs, and Heads of Territorial Houses, 1951 to 2005: official recognition of names and territorial designations, the mark for a minor baron, and the one word never used"
 slug: barons-in-the-gazette
-meta_description: "From 1951 to 2005 the Court of the Lord Lyon published its Rolls of the Chiefs, and Heads of Territorial Houses in The Edinburgh Gazette: thirty-six notices of names officially recognised. They recognised territorial designations, not baronies; a mark showed a minor baron. Not one uses the word “feudal”."
+meta_description: "Thirty-six Edinburgh Gazette notices, 1951 to 2005, of names recognised by the Lyon Court: territorial designations, not baronies, and never the word “feudal”."
 category: The Lyon Court
 published: 2026-09-19
 reviewed: 2026-09-20

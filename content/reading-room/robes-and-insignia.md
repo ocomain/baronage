@@ -2,7 +2,7 @@
 title: "Robes, chapeau and insignia of the baronage"
 subtitle: "The red robe of 1455, the five-buttoned mantle, the chapeau and supporters — what a Scottish baron wore, and what the Lyon Register keeps of it"
 slug: robes-and-insignia
-meta_description: "The dress and insignia of the Scottish baronage — the red robe of 1455, the circular mantle with five buttons, the chapeau, supporters and the style ‘Baron of X’ — drawn from Innes of Learney’s 1945 paper and the Lyon Court’s later guidance."
+meta_description: "The dress and insignia of the Scottish baronage: the red robe of 1455, the mantle, the chapeau and supporters, from Innes of Learney and the Lyon Court’s guidance."
 category: Robes & Insignia
 published: 2026-09-11
 reviewed: 2026-10-03
