@@ -31,8 +31,8 @@ The Roll of Scottish Barons recognises the title and catalogues the whole Barona
 
 ## Key pages
 
-- Scottish Baronies, Explained: https://www.baronage.com/scottish-baronies-explained/
-- Full text of Scottish Baronies, Explained (plain text): https://www.baronage.com/llms-full.txt
+- Scottish Barons, Explained: https://www.baronage.com/scottish-baronies-explained/
+- Full text of Scottish Barons, Explained (plain text): https://www.baronage.com/llms-full.txt
 - Why "feudal baron" is a defunct term: https://www.baronage.com/scottish-baronies-explained/#is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today
 - The Roll of Scottish Barons: https://roll.baronage.com/
 - Index of the Roll: https://roll.baronage.com/directory
