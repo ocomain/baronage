@@ -2,7 +2,7 @@
 title: "Barons in the Lyon Court’s own words"
 subtitle: "From Erskine of Cambo to the Letters Patent of Fulwood, Inchdrewer and Stobo: how Lords Lyon have named barons, and what their Letters Patent show"
 slug: barons-in-the-lyon-courts-own-words
-meta_description: "From its earliest surviving registers the Lyon Court called barons barons, and Lords Lyon signed as barons themselves. Five Letters Patent and a matriculation, from 1992 to 2018, are set out in the Court’s own words."
+meta_description: "From its earliest registers the Lyon Court called barons barons. Five Letters Patent and a matriculation, 1992 to 2018, in the Court’s own words."
 category: The Lyon Court
 published: 2026-09-13
 reviewed: 2026-09-20

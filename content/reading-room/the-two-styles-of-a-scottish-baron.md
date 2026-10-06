@@ -2,7 +2,7 @@
 title: "Baron of X, or X of Y?"
 subtitle: "A name and a title: the evidence that Scotland’s barons were called by both, often by the same writer and sometimes in the same deed"
 slug: the-two-styles-of-a-scottish-baron
-meta_description: "Was “baron” a Scottish title or a description of tenure? The evidence as it stands: the Kilravock papers, from the Privy Council to the barons’ own signatures, the Forbes, Leys and Irvine charters and a count across four volumes of Aberdeen and Banff records show the same men styled “Baron of X” and “X of Y”, and when each was used."
+meta_description: "Was “baron” a title or a description of tenure? Charters, signatures and four volumes of Aberdeen and Banff records show when “Baron of X” and “X of Y” were used."
 category: Words & Usage
 published: 2026-09-27
 reviewed: 2026-09-27

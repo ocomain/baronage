@@ -2,7 +2,7 @@
 title: "The arms and flags of a baron"
 subtitle: "What a Scottish baron may bear and fly: the helm, chapeau and supporters, the banner that comes with the arms, and the four flags that need the Lord Lyon’s grant"
 slug: heraldry-and-flags-of-a-baron
-meta_description: "A plain guide to the heraldry of a Scottish baron, from Innes of Learney’s Scots Heraldry, the Lyon Court’s own guidance and the patents it has issued: how arms are held, the helm, chapeau and supporters, the baron’s banner, and the standard, guidon, pennon and pinsel, with sizes and pictures."
+meta_description: "A plain guide to a Scottish baron’s heraldry: how arms are held, the helm, chapeau and supporters, and the banner, standard, guidon, pennon and pinsel."
 category: Robes & Insignia
 published: 2026-10-05
 reviewed: 2026-10-05

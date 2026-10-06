@@ -2,7 +2,7 @@
 title: "Where “The Much Honoured” comes from"
 subtitle: "Four centuries of a Scottish courtesy: who was addressed as “much honoured” and “your Honour”, how a Lord Lyon recorded it, and how it marks a baron off from a peer"
 slug: where-the-much-honoured-comes-from
-meta_description: "The evidence for the prefix “The Much Honoured”: Scottish letters from 1616, barons addressed by it from the 1640s, Innes of Learney’s record of it as the old prefix of a laird or chief, and its use by Scottish barons today."
+meta_description: "The evidence for “The Much Honoured”: Scottish letters from 1616, barons addressed by it from the 1640s, Innes of Learney’s record, and its use today."
 category: Words & Usage
 published: 2026-10-01
 reviewed: 2026-10-01

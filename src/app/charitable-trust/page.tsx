@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/charitable-trust/" },
   title: "The Baron’s Charitable Trust",
   description:
-    "Channelling the influence and resources of the baronage into meaningful action — empowering young people, supporting charitable causes and preserving Scotland’s heritage.",
+    "Channelling the influence and resources of the baronage into action: empowering young people, supporting charitable causes and preserving Scotland’s heritage.",
 };
 
 const initiatives = [

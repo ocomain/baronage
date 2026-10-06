@@ -2,7 +2,7 @@
 title: "The Treaty of Union and the baronage"
 subtitle: "What Articles XVIII, XX, XXII and XXIII of 1707 did — and did not do — for the Scottish baronage"
 slug: treaty-of-union
-meta_description: "Did the Treaty of Union guarantee the rights of the Scottish baronage? Article by article — XVIII, XX, XXII and XXIII — what the Union of 1707 did and did not do for the order, with the texts linked."
+meta_description: "Did the Treaty of Union guarantee the rights of the Scottish baronage? Articles XVIII, XX, XXII and XXIII: what 1707 did and did not do, with the texts linked."
 category: Law & Statutes
 published: 2026-09-11
 reviewed: 2026-09-11
