@@ -153,7 +153,7 @@ export default function RootLayout({
             <span>
               <span className="sm:hidden">Click for</span>
               <span className="hidden sm:inline">Click here for</span>{" "}
-              Scottish Baronies, Explained
+              Scottish Barons, Explained
             </span>
             <span className="hidden text-parchment-200/85 sm:inline">— the record set straight</span>
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const more = [
-  { href: "/scottish-baronies-explained", label: "Scottish Baronies, Explained" },
+  { href: "/scottish-baronies-explained", label: "Scottish Barons, Explained" },
   { href: "/reading-room/baronage-in-the-statutes", label: "The baronage in the statutes, 1428–2004" },
   { href: "/reading-room/treaty-of-union", label: "The Treaty of Union and the baronage" },
   { href: "/reading-room/innes-of-learney-1945", label: "The Lord Lyon’s Case for the Baronage" },
