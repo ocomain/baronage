@@ -75,7 +75,7 @@ So a Gazette entry is good evidence, but its absence proves nothing.
 
 The word “feudal” does not appear in any of the thirty-six notices. Every notice page, from 1951 to 2005, was searched for it. It was not found once, not even in the note that explains the Minor Baron’s mark.[^31]
 
-The Lyon Court’s own word, in the Gazette, was always “Minor Baron”. When the series began in January 1951, Sir Thomas Innes of Learney had been Lord Lyon for some years. The notices are signed by his Lyon Clerk, not by him.[^5][^32] About five years earlier, in 1945, Innes of Learney had given his own paper to the Society of Antiquaries of Scotland, and titled it “The Robes of the Feudal Baronage of Scotland”.[^33] The Gazette never used his word. Why “feudal” is the wrong word for a barony today is set out in [Scottish Baronies, Explained](/scottish-baronies-explained/#is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today).
+The Lyon Court’s own word, in the Gazette, was always “Minor Baron”. When the series began in January 1951, Sir Thomas Innes of Learney had been Lord Lyon for some years. The notices are signed by his Lyon Clerk, not by him.[^5][^32] About five years earlier, in 1945, Innes of Learney had given his own paper to the Society of Antiquaries of Scotland, and titled it “The Robes of the Feudal Baronage of Scotland”.[^33] The Gazette never used his word. Why “feudal” is the wrong word for a barony today is set out in [Scottish Barons, Explained](/scottish-baronies-explained/#is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today).
 
 ## How the Roll of Scottish Barons uses them
 
