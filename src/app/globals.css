@@ -25,7 +25,7 @@
 
   --color-gold: #c9a24b;
   --color-gold-light: #e6cf93;
-  --color-gold-deep: #936f24;
+  --color-gold-deep: #876621; /* was #936f24; darkened 2026-10-06 so small gold print reaches 4.5:1 on parchment */
 
   /* Fonts — matched to roll.baronage.com: Cormorant Garamond (display) + Quicksand (sans) */
   --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
@@ -624,6 +624,9 @@ video.bg-film::-webkit-media-controls-start-playback-button {
 html.ez-card-up .ez-switch{transform:translateX(-50%) translateY(calc(-1 * (var(--ez-card-h, 150px) + 14px)))}
 
 /* ---------- first-visit question: "Do you need extra large text?" ---------- */
+/* The question (and the Proper Address section list) lock the page while open. Keep the scrollbar's space while locked,
+   or the whole page shifts sideways by the scrollbar's width on desktops (a layout shift on every first visit). */
+html{scrollbar-gutter:stable}
 html.ez-asking{overflow:hidden}
 .ez-ask{position:fixed;inset:0;z-index:4000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(10,16,36,.74)}
 .ez-ask-card{position:relative;box-sizing:border-box;width:100%;max-width:580px;background:#faf6ec;border:1px solid rgba(201,162,75,.6);box-shadow:0 30px 80px -20px rgba(0,0,0,.65);padding:36px 34px 30px;text-align:center;outline:none}
@@ -733,8 +736,13 @@ html.ez .ez-row-go{width:3rem;height:3rem;font-size:1.5rem}
 /* the "Sections" pill on long pages sits above the text-size switch on phones */
 @media (max-width:1179px){button[aria-haspopup="dialog"].fixed.right-4{bottom:calc(76px + env(safe-area-inset-bottom,0px))!important}}
 
-/* once the page is scrolled, the dark strip above the logo steps aside so the pinned header stays shallow */
-html.ez header:has(> div[class*="border-gold/30"]) > div:first-child{display:none}
+/* once the page is scrolled, the pinned header slides up by the height of the dark strip above the logo, so it
+   stays shallow. A transform, not display:none: removing the strip moved the whole page 51px each time (a layout
+   shift Clarity counted on every scroll back to the top). Wide screens only: below 1024px the phone menu is a fixed
+   element inside the header, and a transformed header would anchor it wrongly. --strip-h is set by SiteHeader. */
+@media (min-width:1024px){
+  html.ez header[data-scrolled="true"]{transform:translateY(calc(-1 * var(--strip-h,0px)));transition:transform .2s ease-out}
+}
 
 /* while the phone menu is open, the text-size switch steps aside (it would sit on the menu's last rows) */
 body:has(header nav.fixed) .ez-switch{display:none}

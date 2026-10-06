@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
 import { EmailSignup } from "./EmailSignup";
@@ -31,7 +30,21 @@ export function SiteHeader() {
   // Phone menu: which group (Guide, The Pledge, About) is unfolded, if any.
   const [group, setGroup] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const stripRef = useRef<HTMLDivElement>(null);
   const [headerBottom, setHeaderBottom] = useState(76);
+
+  // Extra large text view: once scrolled, the header slides up by the dark strip's height (globals.css,
+  // html.ez header[data-scrolled]). The height lives in --strip-h on the header, kept current here.
+  useEffect(() => {
+    const strip = stripRef.current;
+    const header = headerRef.current;
+    if (!strip || !header) return;
+    const set = () => header.style.setProperty("--strip-h", `${strip.offsetHeight}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(strip);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -88,9 +101,14 @@ export function SiteHeader() {
     );
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 bg-parchment-50" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+    <header
+      ref={headerRef}
+      data-scrolled={scrolled}
+      className="sticky top-0 z-50 bg-parchment-50"
+      style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}
+    >
       {/* Utility bar */}
-      <div className="hidden bg-navy-deep text-parchment-200/80 md:block">
+      <div ref={stripRef} className="hidden bg-navy-deep text-parchment-200/80 md:block">
         {/* Large for older readers: grows with the window but stays inside the content column. */}
         <div className="mx-auto flex max-w-6xl items-center justify-start px-8 py-2.5 font-inscribe text-[clamp(0.66rem,1.1vw,0.9rem)] uppercase tracking-[0.16em]">
           <span className="text-parchment-200/75 lg:whitespace-nowrap">
@@ -246,25 +264,15 @@ export function SiteHeader() {
         </nav>
       </div>
 
-      {/* Mobile drawer */}
-      <AnimatePresence>
-        {open && (
-          <>
-            <motion.div
-              className="fixed inset-0 top-0 z-40 bg-navy-deep/40 lg:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setOpen(false)}
-            />
-            <motion.nav
-              className="fixed inset-x-0 z-40 overflow-y-auto border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
-              style={{ top: headerBottom, maxHeight: `calc(100svh - ${headerBottom}px)` }}
-              initial={{ opacity: 0, y: -16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            >
+      {/* Mobile drawer. Plain elements, no slide-in: the animation made the tap take twice as long to show
+          anything on phones (measured 2026-10-06), and older visitors prefer a menu that is simply there. */}
+      {open && (
+        <>
+          <div className="fixed inset-0 top-0 z-40 bg-navy-deep/40 lg:hidden" onClick={() => setOpen(false)} />
+          <nav
+            className="fixed inset-x-0 z-40 overflow-y-auto border-b border-gold/30 bg-parchment-50 px-6 pb-8 pt-4 shadow-heritage lg:hidden"
+            style={{ top: headerBottom, maxHeight: `calc(100svh - ${headerBottom}px)` }}
+          >
               <ul className="flex flex-col divide-y divide-parchment-300/70">
                 {navMenu.map((item) => {
                   if (!item.children) {
@@ -360,10 +368,9 @@ export function SiteHeader() {
                 Request a Call Back
               </a>
               <EmailSignup variant="block" className="mt-7 border-t border-parchment-300/70 pt-6" />
-            </motion.nav>
-          </>
-        )}
-      </AnimatePresence>
+          </nav>
+        </>
+      )}
     </header>
   );
 }

@@ -115,8 +115,8 @@ export function PaperThumbnail({
     >
       <div className="flex h-full flex-col items-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={SEAL} alt="" className={`flex-none object-contain opacity-70 ${cfg.seal} ${cfg.sealMb}`} />
-        <p className={`w-full text-center font-sans font-semibold uppercase text-gold-deep/80 ${cfg.eyebrow} ${cfg.eyebrowMb}`}>
+        <img src={SEAL} alt="" width={57} height={80} className={`flex-none object-contain opacity-70 ${cfg.seal} ${cfg.sealMb}`} />
+        <p className={`w-full text-center font-sans font-semibold uppercase text-gold-deep ${cfg.eyebrow} ${cfg.eyebrowMb}`}>
           {category}
         </p>
         <p className={`line-clamp-3 w-full text-center font-display text-navy ${cfg.title} ${cfg.titleMb}`}>{title}</p>

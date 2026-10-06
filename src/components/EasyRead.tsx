@@ -47,15 +47,21 @@ export function EasyRead() {
   }, []);
 
   const choose = (v: boolean) => {
-    document.documentElement.classList.toggle("ez", v);
     writeChoice(v ? "1" : "0");
     setOn(v);
     setAsking(false);
-    // label the visit in Microsoft Clarity, as the Roll does, so recordings can be filtered by text size
-    try {
-      (window as unknown as { clarity?: (...a: unknown[]) => void }).clarity?.("set", "text_size", v ? "extra-large" : "standard");
-    } catch {}
-    window.dispatchEvent(new Event("resize"));
+    // The question closes (or the switch flips) in this frame; the page is re-laid out at the new size in
+    // the next one. Doing both at once kept the tap waiting up to a second on long pages (measured 2026-10-06).
+    requestAnimationFrame(() =>
+      setTimeout(() => {
+        document.documentElement.classList.toggle("ez", v);
+        // label the visit in Microsoft Clarity, as the Roll does, so recordings can be filtered by text size
+        try {
+          (window as unknown as { clarity?: (...a: unknown[]) => void }).clarity?.("set", "text_size", v ? "extra-large" : "standard");
+        } catch {}
+        window.dispatchEvent(new Event("resize"));
+      }, 0)
+    );
   };
 
   useEffect(() => {
