@@ -94,7 +94,7 @@ export const navMenu: NavMenuItem[] = [
     selfInList: true,
     children: [
       { href: "/sbr-vs-roll", label: "SBR v Roll" },
-      { href: INDEX_URL, label: "Index of Baronies", external: true, badge: "New" },
+      { href: INDEX_URL, label: "Index of 1,872 baronies", external: true, badge: "New" },
     ],
   },
   {
