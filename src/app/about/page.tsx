@@ -74,7 +74,7 @@ const mandate = [
         href="/scottish-baronies-explained"
         className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
       >
-        Scottish Barons, Explained
+        Scottish Baronies, Explained
       </Link>
       .
     </>

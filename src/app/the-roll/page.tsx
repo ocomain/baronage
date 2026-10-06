@@ -56,7 +56,7 @@ const organisations: { name: string; href?: string; linkLabel?: string; body: Re
           href="/scottish-baronies-explained#what-is-the-pledge-and-what-does-it-change"
           className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
         >
-          Scottish Barons, Explained
+          Scottish Baronies, Explained
         </Link>
         .
       </>
