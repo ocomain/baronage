@@ -137,7 +137,7 @@ export default function TheRollPage() {
             {features.map((f, i) => (
               <Reveal key={f.title} delay={i * 0.1} className="h-full">
                 <div className="flex h-full flex-col bg-parchment-50 p-8">
-                  <h3 className="text-xl text-navy">{f.title}</h3>
+                  <h2 className="text-xl text-navy">{f.title}</h2>
                   <div className="gold-rule gold-rule--start mt-4 text-gold/70">
                     <span className="gold-rule__gem" />
                   </div>
@@ -240,6 +240,8 @@ export default function TheRollPage() {
                   <img
                     src="/images/hartsyde-patent.webp"
                     alt="Original letters patent document, as displayed on the Hartsyde entry"
+                    width={440}
+                    height={263}
                     loading="lazy"
                     decoding="async"
                     draggable={false}
@@ -254,6 +256,8 @@ export default function TheRollPage() {
                   <img
                     src="/images/hartsyde-pledge.webp"
                     alt="Signed Baronial Pledge document, as displayed on the Hartsyde entry"
+                    width={440}
+                    height={316}
                     loading="lazy"
                     decoding="async"
                     draggable={false}
