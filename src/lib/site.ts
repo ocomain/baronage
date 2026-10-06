@@ -83,7 +83,7 @@ export type NavMenuItem = NavLink & {
 };
 
 /**
- * Header menu (owner 2026-10-05: the ten-item row was crowded). Six items; an item with
+ * Header menu (owner 2026-10-05: the ten-item row was crowded). Seven items; an item with
  * children opens a short list on desktop and shows it indented in the phone menu. The parent
  * is itself a page, so nothing is reachable only through a drop-down.
  */
@@ -114,4 +114,6 @@ export const navMenu: NavMenuItem[] = [
   { href: "/about", label: "About", selfInList: true, selfLabel: "About & Nobility", children: [{ href: "/governing-council", label: "Governing Council" }] },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
+  // Back in the main row, right of Reading Room (owner 2026-10-06: there is space again on desktop).
+  { href: "/members", label: "Member’s Chamber" },
 ];
