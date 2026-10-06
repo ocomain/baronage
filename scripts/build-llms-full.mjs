@@ -125,7 +125,7 @@ if (sections.length === 0) fail("No FAQ sections found — page structure may ha
 
 // --- Assemble the markdown file -----------------------------------------
 const lines = [];
-lines.push("# Scottish Baronies, Explained — Baronage of Scotland Association");
+lines.push("# Scottish Barons, Explained — Baronage of Scotland Association");
 lines.push("");
 lines.push(`> Source: ${SOURCE_PAGE} · Last modified: ${dateModified}`);
 lines.push("");
