@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     "Distinguished, voluntary members entrusted with the leadership and strategic direction of the Baronage of Scotland Association.",
 };
 
-// Temporarily hidden from the page (owner, 2026-10-04). Empty this set to show everyone again.
-const HIDDEN_MARKS = new Set<string>(["B"]);
+// Marks hidden from the page (Balvaird was hidden 2026-10-04 and shown again 2026-10-09 at the owner's word). Add a mark here to hide a member.
+const HIDDEN_MARKS = new Set<string>([]);
 
 const allMembers: CouncilMember[] = [
   {
