@@ -18,6 +18,8 @@ reviewed: 2026-10-10
 - **It rested the baronets’ claim on them.** A Scottish baronet was noble, it argued, because he ranked above the barons and was nearly always a baron himself.
 - **It listed what a baron had:** a seat in Parliament, the name “Noblemen” in Acts of Parliament, the style “Right Honourable”, pit and gallows, robes by statute and supporters to his arms. On the seat in Parliament it quoted Mackenzie: the barons “never lost that privilege”.
 - **It said the dignity of baron was alive.** The book calls it “an hereditary dignity”, thought obsolete by many but “in fact” still held: by the heir to the throne, as Baron of Renfrew, and by a score of the baronets in its own pages.
+- **Most of it checks out.** Of his seven points about the barons, six hold against the records and the seventh holds in part.
+- **The law keeps the dignity.** The Act of 2000 says that nothing in it “affects the dignity of baron”, and that a dignity includes “any quality or precedence associated with” it.
 
 ## Who was arguing, and why
 
@@ -75,13 +77,51 @@ The book is dedicated to the infant Prince of Wales as “Knight and Baron of Re
 
 Two things stand out. Broun knew the dignity was alive: on his own showing it was held by the heir to the throne and by a score of the baronets in his book. And by 1843 many people had already come to think of it as a thing of the past. The law had not changed. The public had forgotten.
 
-## What it shows, and what it does not
+## Was Broun right about the barons?
 
-Broun was a partisan, and his campaign failed. *The Spectator* judged the Committee’s proceedings “for ignorant folly and self-sufficient audacity” to be “almost unequalled in the annals of impudence and humbug”.[^8] His book is no authority for what a baronet may wear, and what it says of the barons is only as good as the Acts and the writers it cites. The papers here go to those sources direct.
+Broun was a partisan, and his campaign failed. *The Spectator* judged the Committee’s proceedings “for ignorant folly and self-sufficient audacity” to be “almost unequalled in the annals of impudence and humbug”.[^8] His book is no authority for what a baronet may wear.
 
-It is evidence of something else. Broun had every reason to set baronets as high as he could, and he ranked the baronet “superior to Baron”. Yet when he needed a nobility to build on, he reached for the barons, and the Committee, having heard him, passed its resolutions unanimously.[^4]
+What it says of the barons is another matter, because it can be checked. Here are his seven points from p. 239, each set against the records.
 
-The neglect it recorded is the reason for the Association’s work. The dignity of baron was never abolished: the Act of 2000 that ended feudal tenure says in terms that nothing in it “affects the dignity of baron”.[^9] A dignity that is real in law, and has “long been considered obsolete” by the public, needs a public record of who holds it. That record is [the Roll](/the-roll/).
+| Broun said the barons… | What the records show | Was he right? |
+|---|---|---|
+| had a seat and voice in Parliament | In 1428 the small barons were told they “need not come” in person, and each sheriffdom was to send commissioners instead. In December 1567 Parliament recorded that “the barons of this realm ought to have vote in parliament as a part of the nobility”. Mackenzie, 1680: they “were Members of Parliament with us, as such, and never lost that Priviledge, though for their convenience, they were allowed to be represented by two of their number”.[^9] | **Yes** |
+| were called “Noblemen” in Acts of Parliament | The Act of 1567 calls them “a part of the nobility”. Later Acts keep the word “noblemen” for the peers and name the barons beside them: “noblemen barons and gentlemen”, in the Lyon King of Arms Act of 1672.[^10] | **Yes**, in the older Acts |
+| were styled “Lovit Cousin” by the King | Some were; the barons as a class were not. In the royal letters “cousin” is the word for an earl or a lord, and a baron is “our lovit” (our beloved) or “traist freind” (trusty friend). In 1555 the Queen Regent wrote of “oure rycht traist cousing the erle of Athole” in a letter addressed “To our traist ffrend the Barroun of Kylrawach”. But James VI in 1571 called a laird who was no peer “oure weilbelovit cousing, Mathew Campbell of Lowdoun, knycht”.[^11] | **In part**: “lovit” for barons, “cousin” for a few |
+| had the style “Right Honourable” | Peers addressed barons in those words from the sixteenth century to the eighteenth: the Earl of Crawford to “the rycht honorabill the Barrone of Kylraok” in 1579, Lord Lovat “To the Right Honorable the Laird of Grant” in 1714–15. It was a courtesy in use, not a rule.[^12] | **Yes**, as a courtesy |
+| had the power of pit and gallows | Where the charter gave it. Stair, 1681: a barony’s jurisdiction “will not reach to Capital Punishment, unless the same be exprest, as it uses to be when the Priviledge of Pit and Gallows are exprest”. The Act of 1746 took the capital power away.[^13] | **Yes**, where the charter said so |
+| had robes by statute | The Act of 4 August 1455 gave “the other lords of parliament” a red mantle, open at the front. Innes of Learney showed that the phrase then covered the barons.[^14] | **Yes**, on Innes’s reading |
+| carried supporters by prescription | Mackenzie, 1680: “all our Chiefs of Families, and old Barons in Scotland, may use Supporters”. The Lyon Court has applied it to the old baronial houses: the heirs of barons liable to be called to Parliament before 1587 “are entitled as of right to obtain grants of supporters”.[^15] | **Yes**, for the old baronial houses |
+
+Six of the seven hold, and the seventh holds in part. That matters more than the fate of the baronets’ coronet. Broun had every reason to set baronets as high as he could, and he ranked the baronet “superior to Baron”. Yet when he needed a nobility to build on, he reached for the barons, and the Committee, having heard him, passed its resolutions unanimously.[^4]
+
+## Never taken away
+
+Two things in that table have gone. The old Scots Parliament sat for the last time in 1707. The baron’s jurisdiction was cut down in 1746 and ended in 2004. The Act that ended it saved everything else, in terms:
+
+> “Any jurisdiction of, and any conveyancing privilege incidental to, barony shall on the appointed day cease to exist; but nothing in this Act affects the dignity of baron or any other dignity or office (whether or not of feudal origin).”
+
+The same section says what a dignity includes: “any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.[^16] Whatever quality and precedence belonged to the dignity of baron before the Act belongs to it still.
+
+The Crown’s own usage shows the dignity in being. In 1469 Parliament annexed “the barony of Renfrew, with the lands and tenandries of the same” to “the eldest prince of the kings of Scotland our successors in perpetuity”. The notice of the letters patent of 13 February 2023, which created Prince William Prince of Wales, still names him “Baron of Renfrew”.[^17]
+
+## Revived, not invented
+
+What had faded by 1843 was public knowledge of the dignity, not the dignity. It was recovered in the twentieth century, in the Lyon Court. The man who did most to make the case was Sir Thomas Innes of Learney: Carrick Pursuivant, then Albany Herald, and Lord Lyon from 1945 to 1969.
+
+In 1934 the Court, under Lord Lyon Sir Francis Grant, heard proof, awarded Gordon of Hallhead the baron’s chapeau and recorded him as “Baron of Esslemont”. In 1943 it found that the minor barons “are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’”. In 1945 Innes, by then Lord Lyon, set out the evidence in print, in what is still the fullest account of the baronage.[^18]
+
+He created nothing. His evidence is the evidence in the table above: the Act of 1455, the Act of 1567, the charters of the Great Seal, Mackenzie. He went back to the precedents and applied them.
+
+## The Roll and the Pledge
+
+The Association works in the same way. It claims nothing new for barons. It asks two things of those who hold the dignity.
+
+The first is proof. The dignity is real in law, and no public authority keeps a register of who holds it. [The Roll of Scottish Barons](/the-roll/) is that record: public, free, and entered only on evidence. Its precedent is the baronets’ own official Roll of 1910, which ended a long [disarray](/reading-room/official-roll-of-the-baronetage-1910/) by the same means.
+
+The second is honour. A dignity that can now be bought and sold needs holders who will keep faith with it. Those who sign [the Pledge](/pledge/) undertake, in honour and not in law, to preserve their barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/).
+
+The baronets of 1843 knew what a baron was, and built their case on him. Parliament, in 2000, left the dignity as it found it. The Roll and the Pledge are there so that the public can know it again.
 
 ---
 
@@ -90,6 +130,10 @@ The neglect it recorded is the reason for the Association’s work. The dignity 
 - Sir Richard Broun, *The Baronetage for 1843; being a Genealogical Account of the Families forming the Sixth Degree of Dignity Hereditary, or High Nobility, in the British Empire* (London, 1843) — [archive.org](https://archive.org/details/india.history.resource.87504).
 - *The Spectator*, 15 April 1843, “Broun’s Baronetage”, pp. 352–353 — [archive.spectator.co.uk](https://archive.spectator.co.uk/article/15th-april-1843/16/brouns-baronetage).
 - Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63).
+- The Records of the Parliaments of Scotland to 1707 — [rps.ac.uk](https://www.rps.ac.uk/): Acts of 1428, 1455, 1469 and 1567.
+- *A Genealogical Deduction of the Family of Rose of Kilravock* (Spalding Club, 1848) — [archive.org](https://archive.org/details/genealogicaldedu00spal).
+- Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, *PSAS* 79 (1944–45), pp. 111–163 — [open access PDF](http://journals.socantscot.org/index.php/psas/article/download/8229/8197/).
+- *The London Gazette*, issue 63979, 24 February 2023, p. 3638 — [notice 4290979](https://www.thegazette.co.uk/notice/4290979).
 
 [^1]: Broun, *The Baronetage for 1843*, [p. 222](https://archive.org/details/india.history.resource.87504/page/n235/mode/1up) (“Founded 15th July, 1840”) and [p. 16](https://archive.org/details/india.history.resource.87504/page/n27/mode/1up) for the insignia. The title page names Broun as “Hon. Secretary of the Committee of the Baronetage for Privileges”. For the claims and their refusal by “every Minister”, *The Spectator*, 15 April 1843, [p. 352](https://archive.spectator.co.uk/article/15th-april-1843/16/brouns-baronetage).
 [^2]: Broun, *The Baronetage for 1843*, pp. 14–[15](https://archive.org/details/india.history.resource.87504/page/n26/mode/1up).
@@ -99,4 +143,13 @@ The neglect it recorded is the reason for the Association’s work. The dignity 
 [^6]: Ibid., [p. 14](https://archive.org/details/india.history.resource.87504/page/n25/mode/1up).
 [^7]: Ibid., dedication, pp. [v](https://archive.org/details/india.history.resource.87504/page/n6/mode/1up)–vi.
 [^8]: *The Spectator*, 15 April 1843, “Broun’s Baronetage”, [p. 352](https://archive.spectator.co.uk/article/15th-april-1843/16/brouns-baronetage).
-[^9]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(1)](https://www.legislation.gov.uk/asp/2000/5/section/63).
+[^9]: Act of 5 March 1428, [RPS 1428/3/3](https://www.rps.ac.uk/trans/1428/3/3); Parliament of December 1567, [RPS 1567/12/45](https://www.rps.ac.uk/trans/1567/12/45); Sir George Mackenzie, *The Science of Herauldry* (1680), ch. XXXI, [p. 94](https://archive.org/details/bim_early-english-books-1641-1700_the-science-of-herauldry_mackenzie-sir-george_1680/page/n155/mode/1up). The Acts are set out in [The baronage in the statutes](/reading-room/baronage-in-the-statutes/).
+[^10]: [RPS 1567/12/45](https://www.rps.ac.uk/trans/1567/12/45); Lyon King of Arms Act 1672, [legislation.gov.uk](https://www.legislation.gov.uk/aosp/1672/47). Broun cites further Acts, of Robert I, James V and 1592, at pp. 13–14; they have not been checked for this paper.
+[^11]: *A Genealogical Deduction of the Family of Rose of Kilravock* (Spalding Club, 1848): the Queen Regent’s letter of 27 June 1555, [p. 220](https://archive.org/details/genealogicaldedu00spal/page/n247/mode/1up), and a summons of James IV, executed in July 1511, “at the instance of oure louit Huchoun Ross of Kilrawok”, [p. 181](https://archive.org/details/genealogicaldedu00spal/page/n208/mode/1up). James VI’s letter of 22 January 1571 is printed in *The Exchequer Rolls of Scotland*, vol. XX, [p. 61](https://archive.org/details/rotuliscaccariir20scot/page/n130/mode/1up), note; Campbell of Loudoun was hereditary sheriff of Ayr. Mackenzie says that the style “familiar Counseller” is given to “all Officers of State who are not Earls, because they cannot be called Cousins”: *Works*, vol. ii (1722), [p. 540](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n547/mode/1up). Broun gives no source for the phrase.
+[^12]: *Family of Rose of Kilravock*, 25 September 1579, [p. 270](https://archive.org/details/genealogicaldedu00spal/page/n297/mode/1up); Sir William Fraser, *The Chiefs of Grant*, vol. 2, [p. 287](https://archive.org/details/chiefsofgrantv200fras/page/n364). More examples, and the limits of the usage, are in [Where “The Much Honoured” comes from](/reading-room/where-the-much-honoured-comes-from/).
+[^13]: Stair, *The Institutions of the Law of Scotland* (1681), Title 13, § 62, [p. 276](https://archive.org/details/bim_early-english-books-1641-1700_the-institutions-of-the-_stair-james-dalrymple-_1681/page/n303/mode/1up); Heritable Jurisdictions (Scotland) Act 1746, s. 17. See [The baron’s court and its officers](/reading-room/the-barons-court-and-its-officers/).
+[^14]: [RPS 1455/8/12](https://www.rps.ac.uk/trans/1455/8/12); Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, *Proceedings of the Society of Antiquaries of Scotland*, vol. 79 (1944–45), p. 130 — [open access PDF](http://journals.socantscot.org/index.php/psas/article/download/8229/8197/). See [Robes, chapeau and insignia](/reading-room/robes-and-insignia/).
+[^15]: Mackenzie, *The Science of Herauldry* (1680), ch. XXXI, [p. 94](https://archive.org/details/bim_early-english-books-1641-1700_the-science-of-herauldry_mackenzie-sir-george_1680/page/n155/mode/1up); Innes of Learney, *Scots Heraldry* (1978 ed.), p. 71. See [The arms and flags of a baron](/reading-room/heraldry-and-flags-of-a-baron/).
+[^16]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(1) and (4)](https://www.legislation.gov.uk/asp/2000/5/section/63). The appointed day was 28 November 2004.
+[^17]: Act of 27 November 1469, [RPS A1469/2](https://www.rps.ac.uk/trans/A1469/2); *The London Gazette*, issue 63979, 24 February 2023, p. 3638 — [notice](https://www.thegazette.co.uk/notice/4290979).
+[^18]: Lyon Register, vol. xxxi, p. 20 (4 September 1934), as cited by Innes; interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant), Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26, printed by Innes at p. 143 n. 3; Innes of Learney, *PSAS* 79 (1944–45), pp. 111–163, read 27 October 1945. See [The Esslemont petition of 1934](/reading-room/esslemont-petition-1934/), [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/) and [The Lord Lyon’s Case for the Baronage](/reading-room/innes-of-learney-1945/).
