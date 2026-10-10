@@ -3,6 +3,7 @@ import { Container, GoldRule, Section } from "./primitives";
 import { PaperThumbnail } from "./PaperThumbnail";
 import { PaperBody } from "./PaperBody";
 import { PaperActions } from "./PaperActions";
+import { HeaderOffset } from "./HeaderOffset";
 import { SealedPaper } from "./SealedPaper";
 import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
@@ -31,6 +32,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
     <Section tone="parchment" className="!py-12 sm:!py-16 print:!py-0">
       <Container size="prose">
         <article className="paper-print min-w-0">
+          <HeaderOffset />
           {/* Phones only: back link above the title. */}
           <nav aria-label="Breadcrumb" className="no-print mb-8 sm:hidden">
             <Link href="/reading-room" className={`inline-flex ${BACK_LINK}`}>
