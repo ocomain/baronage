@@ -3,6 +3,7 @@ import { Container, GoldRule, Section } from "./primitives";
 import { PaperThumbnail } from "./PaperThumbnail";
 import { PaperBody } from "./PaperBody";
 import { PrintButton } from "./PrintButton";
+import { EmailFriendLink } from "./EmailFriendLink";
 import { SealedPaper } from "./SealedPaper";
 import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
@@ -57,11 +58,10 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                 </span>
               </p>
               {/* A subscriber paper offers printing once it has been opened (see SealedPaper). */}
-              {paper.gated !== "full" && (
-                <p className="no-print mt-5">
-                  <PrintButton />
-                </p>
-              )}
+              <p className="no-print mt-5 flex flex-wrap gap-3">
+                {paper.gated !== "full" && <PrintButton />}
+                <EmailFriendLink title={paper.title} slug={paper.slug} />
+              </p>
               {/* Paper only: where the essay came from. */}
               <p className="print-only paper-print__source">
                 Baronage of Scotland Association · The Reading Room · www.baronage.com/reading-room/{paper.slug}/
@@ -126,11 +126,10 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </section>
           )}
 
-          {paper.gated !== "full" && (
-            <p className="no-print mt-12">
-              <PrintButton />
-            </p>
-          )}
+          <p className="no-print mt-12 flex flex-wrap gap-3">
+            {paper.gated !== "full" && <PrintButton />}
+            <EmailFriendLink title={paper.title} slug={paper.slug} />
+          </p>
 
           <p className="no-print mt-8">
             <Link
