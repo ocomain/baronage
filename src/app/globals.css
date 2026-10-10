@@ -621,14 +621,15 @@ video.bg-film::-webkit-media-controls-start-playback-button {
    and the .ez-row list, every rule below applies only while <html> has the class "ez".
    ================================================================================== */
 /* ---------- "Text size" switch ---------- */
-.ez-switch{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:56;display:flex;align-items:center;background:#131e3a;color:#faf6ec;border-radius:9999px;padding:5px;box-shadow:0 8px 24px rgba(10,16,36,.4);font-family:var(--font-sans);white-space:nowrap}
+/* Bottom LEFT on www (owner 2026-10-10; the Roll keeps its pill bottom-centre). */
+.ez-switch{position:fixed;left:14px;bottom:14px;z-index:56;display:flex;align-items:center;background:#131e3a;color:#faf6ec;border-radius:9999px;padding:5px;box-shadow:0 8px 24px rgba(10,16,36,.4);font-family:var(--font-sans);white-space:nowrap}
 .ez-switch-l{padding:0 10px 0 16px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
 .ez-switch button{all:unset;cursor:pointer;padding:13px 20px;border-radius:9999px;font-size:16px;font-weight:700;color:#faf6ec}
 .ez-switch button[aria-pressed=true]{background:#faf6ec;color:#131e3a}
 .ez-switch button:focus-visible{outline:2px solid #c9a24b;outline-offset:2px}
 /* Lifted above the featured-paper card with transform, not by changing "bottom": a change of position counted as the page
    jumping in the speed figures (Clarity, 6 October 2026). Same distance as before. */
-html.ez-card-up .ez-switch{transform:translateX(-50%) translateY(calc(-1 * (var(--ez-card-h, 150px) + 14px)))}
+html.ez-card-up .ez-switch{transform:translateY(calc(-1 * (var(--ez-card-h, 150px) + 14px)))}
 
 /* ---------- first-visit question: "Do you need extra large text?" ---------- */
 /* The question (and the Proper Address section list) lock the page while open. Keep the scrollbar's space while locked,
@@ -649,7 +650,7 @@ html.ez-asking{overflow:hidden}
 .ez-ask-btns button:focus-visible{outline:4px solid #c9a24b;outline-offset:3px}
 .ez-ask-note{position:relative;margin:22px 0 0;font-family:var(--font-sans);font-size:17px;line-height:1.5;color:#463d2d}
 @media (max-width:640px){
-  .ez-switch{left:12px;transform:none;bottom:12px}
+  .ez-switch{left:12px;bottom:12px}
   html.ez-card-up .ez-switch{transform:translateY(calc(-1 * (var(--ez-card-h, 150px) + 16px)))}
   .ez-switch-l{display:none}
   .ez-switch button{padding:12px 14px;font-size:15px}
