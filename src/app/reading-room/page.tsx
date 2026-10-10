@@ -40,8 +40,10 @@ export default function ReadingRoomPage() {
       published,
       gated: gated === "full",
     }));
-  // Subjects in the order they first appear in the editorial order above, so the featured paper's subject leads.
-  const categories = [...new Set(papers.map((p) => p.category))];
+  // The subject headings, in the owner's order (10 Oct 2026); a subject not named here goes last.
+  const SUBJECT_ORDER = ["Heritage & Sources", "Words & Usage", "The Lyon Court", "Robes & Insignia", "Law & Statutes"];
+  const place = (c: string) => (SUBJECT_ORDER.includes(c) ? SUBJECT_ORDER.indexOf(c) : SUBJECT_ORDER.length);
+  const categories = [...new Set(papers.map((p) => p.category))].sort((a, b) => place(a) - place(b));
 
   return (
     <>
