@@ -167,6 +167,20 @@ export default function TheRollPage() {
                 those interested in Scotland’s heritage.
               </p>
               <p>
+                <strong className="font-semibold text-navy">Why a Roll?</strong> A century ago the baronetage was{" "}
+                <Link href="/reading-room/official-roll-of-the-baronetage-1910/" className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep">
+                  in disarray
+                </Link>
+                : titles were bought, and assumed without right, and in 1900 the baronets’ own Registrar wrote that
+                there was “not in existence a single tribunal” to test a claim. The remedy, approved by Royal Warrant
+                in 1910, was an official Roll that admitted a name only on proof. The Roll of Scottish Barons applies
+                the same remedy to the baronage: it claims nothing new for barons, and asks only for proof.{" "}
+                <Link href="/reading-room/earls-lords-and-barons-1843/" className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep">
+                  Read how the baronets pleaded the barons’ nobility
+                </Link>
+                .
+              </p>
+              <p>
                 <strong className="font-semibold text-navy">
                   Because the Roll is open source, nothing is asked to be taken on trust.
                 </strong>{" "}
