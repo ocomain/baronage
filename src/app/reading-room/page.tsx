@@ -40,8 +40,8 @@ export default function ReadingRoomPage() {
       published,
       gated: gated === "full",
     }));
-  // Only subjects that have papers get a filter.
-  const categories = readingRoomCategories.filter((c) => papers.some((p) => p.category === c));
+  // Subjects in the order they first appear in the editorial order above, so the featured paper's subject leads.
+  const categories = [...new Set(papers.map((p) => p.category))];
 
   return (
     <>

@@ -19,7 +19,7 @@ export type PaperCard = {
 const ALL = "All papers";
 
 /**
- * The Reading Room index as a card grid, after the Armorial, with subject filters. Every card is in the
+ * The Reading Room index as card grids under subject headings, after the Armorial, with subject filters. Every card is in the
  * prerendered HTML; filtering only hides cards, so search engines and readers without JavaScript still get
  * the whole library.
  */
@@ -42,6 +42,8 @@ export function ReadingRoomGrid({
   }, []);
 
   const count = (c: string) => (c === ALL ? papers.length : papers.filter((p) => p.category === c).length);
+  // Shown under subject headings, in the order the subjects are given; within a subject the editorial order holds.
+  const groups = categories.map((c) => ({ name: c, papers: papers.filter((p) => p.category === c) }));
 
   return (
     <>
@@ -76,9 +78,19 @@ export function ReadingRoomGrid({
         </p>
       )}
 
-      <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {papers.map((p) => (
-          <li key={p.slug} hidden={active !== ALL && p.category !== active}>
+      <div className="mt-10 space-y-12 sm:space-y-14">
+        {groups.map((g) => (
+          <section key={g.name} aria-label={g.name} hidden={active !== ALL && g.name !== active}>
+            <div className="flex items-baseline gap-4">
+              <h2 className="font-display text-2xl leading-tight text-navy sm:text-3xl">{g.name}</h2>
+              <span className="h-px flex-1 bg-gold/45" aria-hidden />
+              <span className="flex-none font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
+                {g.papers.length} {g.papers.length === 1 ? "paper" : "papers"}
+              </span>
+            </div>
+            <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {g.papers.map((p) => (
+          <li key={p.slug}>
             {/* Phones: a compact row (thumbnail left, text right). From sm up: a framed card, as on the Armorial. */}
             <Link
               href={`/reading-room/${p.slug}`}
@@ -96,9 +108,6 @@ export function ReadingRoomGrid({
                       Featured
                     </span>
                   )}
-                  <span className="font-sans text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-gold-deep sm:text-[0.6rem]">
-                    {p.category}
-                  </span>
                 </span>
                 <span className="mt-1.5 block font-display text-xl leading-tight text-navy transition-colors group-hover:text-oxblood sm:mt-2 sm:text-2xl">
                   {p.title}
@@ -116,8 +125,11 @@ export function ReadingRoomGrid({
               </span>
             </Link>
           </li>
+              ))}
+            </ul>
+          </section>
         ))}
-      </ul>
+      </div>
     </>
   );
 }
