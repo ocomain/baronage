@@ -107,19 +107,19 @@ The Crown still uses it. In 1469 Parliament annexed “the barony of Renfrew, wi
 
 ## Revived, not invented
 
-By 1843 the public had forgotten the dignity. The law had not. It was recovered in the twentieth century, in the Lyon Court, and the man who did most to make the case was Sir Thomas Innes of Learney, Lord Lyon from 1945 to 1969.
+By 1843 the public had forgotten the dignity. The law had not. Its standing was recovered in the twentieth century, in the Lyon Court, and the man who did most to make the case was Sir Thomas Innes of Learney, Lord Lyon from 1945 to 1969.
 
 In 1934 the Court recorded Gordon of Hallhead as “Baron of Esslemont” and awarded him the baron’s chapeau. In 1943 it found that the minor barons are “recognised as a ‘titled nobility’”. In October 1945 Innes, by then Lord Lyon, set out the evidence in a paper read to the Society of Antiquaries of Scotland.[^18]
 
-He created nothing. His evidence is in the table above: the Acts of 1455 and 1567, the charters of the Great Seal, Mackenzie. He went back to the precedents and applied them.
+None of it was his invention. The Acts of 1455 and 1567, the charters of the Great Seal and Mackenzie were there before him, and the Court’s findings of 1934 and 1943 were made under his predecessor. He went back to the precedents and applied them.
 
 ## The Roll and the Pledge
 
-The Association works in the same way. It claims nothing new for barons. It asks two things of those who hold the dignity.
+The Baronage of Scotland Association works in the same way. It claims nothing new for barons. It asks two things of those who hold the dignity.
 
-**Proof.** No public authority keeps a register of who holds a barony. [The Roll of Scottish Barons](/the-roll/) is that record: public, free, and entered only on evidence. Its precedent is the baronets’ own official Roll of 1910, which ended their [disarray](/reading-room/official-roll-of-the-baronetage-1910/) by the same means.
+**Proof.** A barony cannot be entered in the Land Register or the Register of Sasines, and no public authority keeps a record of who holds one.[^19] [The Roll of Scottish Barons](/the-roll/) is that record: public, free, and entered only on evidence. Its precedent is the baronets’ own official Roll of 1910, which ended their [disarray](/reading-room/official-roll-of-the-baronetage-1910/) by the same means.
 
-**Honour.** A barony can now be bought and sold, and a dignity for sale is not believed: that was the baronets’ trouble. Those who sign [the Pledge](/pledge/) undertake, in honour and not in law, to preserve their barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The Roll treats pledged baronies as hereditary and not *in commercio*.
+**Honour.** In 2019 a judge of the Court of Session took it that barony titles are conferred on “persons deserving of being raised to the nobility”, and thought “the de facto promotion of a secondary market in barony titles” to be “out of step” with that.[^20] [The Pledge](/pledge/) is the answer of those who hold the dignity. It is open to every holder, inherited or not. Those who sign it undertake, in honour and not in law, to preserve their barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The Roll treats pledged baronies as hereditary and not *in commercio*.
 
 The baronets of 1843 knew what a baron was, and built their case on him. Parliament, in 2000, left the dignity as it found it. The Roll and the Pledge are there so that the public can know it again.
 
@@ -153,3 +153,5 @@ The baronets of 1843 knew what a baron was, and built their case on him. Parliam
 [^16]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(1) and (4)](https://www.legislation.gov.uk/asp/2000/5/section/63). The appointed day was 28 November 2004.
 [^17]: Act of 27 November 1469, [RPS A1469/2](https://www.rps.ac.uk/trans/A1469/2); *The London Gazette*, issue 63979, 24 February 2023, p. 3638 — [notice](https://www.thegazette.co.uk/notice/4290979).
 [^18]: Lyon Register, vol. xxxi, p. 20 (4 September 1934, under Lord Lyon Sir Francis Grant), as cited by Innes; interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant), Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26, printed by Innes at p. 143 n. 3; Innes of Learney, *PSAS* 79 (1944–45), pp. 111–163, read 27 October 1945. See [The Esslemont petition of 1934](/reading-room/esslemont-petition-1934/), [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/) and [The Lord Lyon’s Case for the Baronage](/reading-room/innes-of-learney-1945/).
+[^19]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(2)](https://www.legislation.gov.uk/asp/2000/5/section/63): the dignity “shall not be a right as respects which a deed can be registered in the Land Register of Scotland or recorded in the Register of Sasines”. How the Roll tests an entry is set out in its [verification rules](https://roll.baronage.com/verification).
+[^20]: *Hamilton of Rockhall v Lord Lyon King of Arms* [2019] CSOH 85, para [101] (Lady Wolffe) — [the opinion](https://freiherrvonquast.wordpress.com/wp-content/uploads/2020/06/margaret-hamilton-of-rockhall-v-lord-lyon-king-of-arms-2019-csoh-85-case.pdf). The words about nobility are Innes of Learney’s, from *Scots Heraldry*, p. 85, which she quotes. The remark was made in passing: “it is not necessary to decide this question”, and “I reserve my opinion on this issue.”

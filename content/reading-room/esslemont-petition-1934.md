@@ -5,7 +5,7 @@ slug: esslemont-petition-1934
 meta_description: "In 1934 Lord Lyon Grant awarded Gordon of Hallhead the baronial chapeau and recorded him as Baron of Esslemont. The Memorial that won the case, in full."
 category: The Lyon Court
 published: 2026-09-13
-reviewed: 2026-09-13
+reviewed: 2026-10-10
 gated: part
 reading_time: "7 min"
 ---
@@ -50,6 +50,12 @@ One further point from the proof has outlived it. The Lyon Register never conjoi
 Read the Memorial’s complaint again. What Hallhead objected to in 1934 was a conveyancer’s phrase, *Baron of the Barony of B——*, replacing the baron’s title, *Baron of B*, and so “conveying to the public and to foreigners that the feudal Baronage of Scotland are not truly constitutional barons”. The wording the Lyon Court was asked to reject in 1934, it rejected: Grant recorded “Baron of Esslemont”. The dignity itself is held under s. 63 of the 2000 Act whatever a patent says;[^12] the 1934 decision is the Lyon Court’s own answer to how that dignity is written.
 
 The one document this paper does not reproduce is the matriculation itself, Lyon Register vol. xxxi, p. 20. An extract from the Lyon Office would complete the record.
+
+## The Roll and the Pledge
+
+The Court of 1934 recorded the baron only after proof. The Memorial put the test in a line: a petitioner must establish, “if need be by production of charters”, that “he is in fact a ‘baron’”. The Roll asks the same of every holder.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

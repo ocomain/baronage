@@ -5,7 +5,7 @@ slug: the-barons-court-and-its-officers
 meta_description: "What a Scottish baron’s court was and who served in it: bailie, clerk, officer and dempster. How 1746 cut it down, and why it is ceremonial today."
 category: Law & Statutes
 published: 2026-10-05
-reviewed: 2026-10-05
+reviewed: 2026-10-10
 ---
 
 # The baron’s court and its officers
@@ -176,6 +176,12 @@ The court that once tried thieves and settled the price of ale is now an honour 
 **“The court met on a moot hill.”** Sometimes it met on a mound, and some charters reserve a hill-top for the purpose. But Dickinson found “nothing in our record to indicate” that the courts at Carnwath did, and adds that the head place of a barony “was not bound to be a castle or castle-mound.”[^67]
 
 **“The bailie and the dempster wore robes of office.”** No record read for this paper says so. The officer’s horn and white wand are the only insignia found. Agnew refers his readers to a booklet of 1989, Colin Forester’s *The Insignia of the Baronage of Scotland and their Courts*, for the officers’ “robes and insignia”; it has not been seen for this paper.[^30]
+
+## The Roll and the Pledge
+
+The court has gone. The dignity it belonged to has not: “nothing in this Act affects the dignity of baron”. Who holds that dignity is what the Roll records.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

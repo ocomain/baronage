@@ -5,7 +5,7 @@ slug: baronage-in-the-statutes
 meta_description: "A reference table of the Acts that shaped the Scottish baronage, from 1428 to 2004, with what each did and a link to the record."
 category: Law & Statutes
 published: 2026-09-11
-reviewed: 2026-10-03
+reviewed: 2026-10-10
 ---
 
 # The baronage in the statutes, 1428–2004
@@ -45,6 +45,12 @@ Quotations from the Acts of the old Scottish Parliament are taken from the moder
 **Heraldry.** The Acts of 1592 and 1672 put “noblemen barons and gentlemen” (“noblemen” meaning [peers](/scottish-baronies-explained/#term-peerage): ‘the Nobility’ in the narrow English sense, of which the barons were nonetheless ‘a part’) under the Lyon Court’s visitation and registers, and the Register of 1672 is still “the true and unrepeallable rule of all Armes and Bearings in Scotland”. This is the setting for the Lyon Court’s findings of 1943–45 on the rank of the minor barons — see [The Lord Lyon’s Case for the Baronage](/reading-room/innes-of-learney-1945/) — and for its practice today: see [The Lord Lyon and the baronage since 2004](/reading-room/lord-lyon-since-2004/).
 
 **Jurisdiction and property.** Article XX of the Union reserved the heritable jurisdictions “as Rights of Property”. The Act of 1746 abolished the greater ones with compensation and left the baron court its petty matters; the Act of 1874 simplified the transfer of a barony; the Act of 1964 kept dignities out of the new code of succession. Section 63 of the 2000 Act ended what remained of jurisdiction and conveyancing privilege and preserved the dignity, defining it to include “any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.[^3] Until 28 November 2004 the barony was a feudal estate in land; since then it has been a dignity held as incorporeal heritable property.
+
+## The Roll and the Pledge
+
+Parliament has twice put the barons’ standing on the record: “a part of the nobility” in 1567, and in 2000 a dignity that “nothing in this Act affects”. What no Act provides is a public record of who holds a barony: under [section 63(2)](https://www.legislation.gov.uk/asp/2000/5/section/63) it cannot be entered in the Land Register or the Register of Sasines.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

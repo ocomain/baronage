@@ -5,7 +5,7 @@ slug: robes-and-insignia
 meta_description: "The dress and insignia of the Scottish baronage: the red robe of 1455, the mantle, the chapeau and supporters, from Innes of Learney and the Lyon Court’s guidance."
 category: Robes & Insignia
 published: 2026-09-11
-reviewed: 2026-10-03
+reviewed: 2026-10-10
 ---
 
 # Robes, chapeau and insignia of the baronage
@@ -37,6 +37,12 @@ Mackenzie explained in 1680 why “our old Barons, who are not Lords, and hold o
 ## The title in use
 
 The paper ends with the evidence that “Baron of X” was the style of the country and of the records: Mary Queen of Scots to “Our traist friend the barroun of Kylrawak”; the ballads of Deeside — “The Baron o’ Brackley”, “The Baron of Leys”; the Scots College at Douai registering “Roger Lindsay, filius baronis de Mains”; Lord Lyon Erskine of Cambo signing himself “Baro de Cambo”; the Banffshire sheriff in 1713 ordering production of charters “that it may be known who are barons and who have power to vote”. The correct form, Innes ruled, is simply “Baron of X”, never “Baron of the Barony of X”; and “esquire” is never added, the baron being the higher degree.[^8] Many of the achievements in the Association’s [Armorial](/armorial/) show the baronial helm; the older insignia survive in the Lyon Register and in the portraits Innes described.
+
+## The Roll and the Pledge
+
+What a baron wore was fixed by statute and by grant. Who is entitled to it depends on who holds the dignity, and that is what the Roll records.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

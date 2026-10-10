@@ -5,7 +5,7 @@ slug: barons-in-the-gazette
 meta_description: "Thirty-six Edinburgh Gazette notices, 1951 to 2005, of names recognised by the Lyon Court: territorial designations, not baronies, and never the word “feudal”."
 category: The Lyon Court
 published: 2026-09-19
-reviewed: 2026-09-20
+reviewed: 2026-10-10
 ---
 
 # Officially Recognised: the Lyon Court’s Rolls in the Gazette
@@ -80,6 +80,12 @@ The Lyon Court’s own word, in the Gazette, was always “Minor Baron”. When 
 ## How the Roll of Scottish Barons uses them
 
 No single rule held across the series. The mark changed shape from notice to notice, the barony was named from 1988 but not every time, entries were missed, printed late or printed without their mark, and Burke’s and the Gazette each contain slips. A marked entry is Lyon Court evidence that a man was a minor baron. It may not name his barony, and its absence proves nothing. The sources also contain human error. The notice of 16 July 2002 prints “ordinary sure” for “ordinary name”. Burke’s list dates one matriculation “6 May 19978”, and gives Auchmacoy’s register page as 64/5 where the Gazette has 65/5.[^34] The mark itself could be dropped. The notice of 19 August 2005 prints “\* Cairns of Finavon” with no dagger, though his Letters Patent were officially recognised by the Lord Lyon King of Arms on 8 August 2003.[^35] So the [Roll of Scottish Barons](https://roll.baronage.com) checks each record against the others, and against Letters Patent and other Lyon Court and government records, wherever it can.
+
+## The Roll and the Pledge
+
+From 1967 to 2005 the Lyon Court marked minor barons in its gazetted Rolls. The Rolls were never complete, and the series has stopped.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

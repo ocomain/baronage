@@ -5,7 +5,7 @@ slug: untitled-in-1930-titled-in-1943
 meta_description: "In 1930 Lord Lyon Grant certified the Innes of Learney family as “untitled nobility”; in 1943 the same court found the minor barons “a titled nobility”."
 category: The Lyon Court
 published: 2026-09-13
-reviewed: 2026-09-13
+reviewed: 2026-10-10
 gated: part
 reading_time: "4 min"
 ---
@@ -47,6 +47,12 @@ The Continental comparison moved with it. In 1930 the family was “equal in ran
 ## What the two documents show
 
 Read together, 1930 and 1943 are not the Lyon Court changing its mind about the barons. They are the Court settling a description that had been loosely used. Innes himself records the ambiguity: an impression had formed that the title of baron “was not used at all and contrariwise that it was applied to any large landowner”, and “both these views are wrong”; his own tentative suggestion of 1934, that chapeaux might be graded by the date of erection, gave way on “subsequent consideration” to the position that all barons are equally “a ‘titled nobility’ in the feudal sense”.[^5] The 1930 birthbrief, with its “untitled nobility” and its “Baron of the Barony of”, belongs to that loose usage. The proof of 1934 put the evidence on the record, and the finding of 1943 is declaratory, not a new rule: the minor barons “are, and have been” recognised as a titled nobility. From 1943 the position stands settled in the Court’s own register. The minor barons of Scotland are a titled nobility, and always were. The documents of 1930 and 1943 are the record of the last time the Court examined the question with evidence, and of the answer it gave.
+
+## The Roll and the Pledge
+
+In 1934 the Court took proof before it settled the form, and in 1943 it made its finding. The Roll takes the same course with each holder: evidence first.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 
