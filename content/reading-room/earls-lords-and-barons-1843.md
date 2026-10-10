@@ -1,6 +1,6 @@
 ---
-title: "Earls, Lords, and Barons: how the baronets pleaded the barons’ nobility"
-subtitle: "In 1843 a committee of baronets, claiming to be noble, rested its case on the barons of Scotland, “a class of nobles who ever ranked INTER MAGNATES”"
+title: "“A class of nobles”: how the baronets pleaded the barons’ nobility"
+subtitle: "In 1843 a committee of baronets, claiming to be noble, built its case on the barons of Scotland, “called ‘Noblemen’ in Acts of Parliament”"
 slug: earls-lords-and-barons-1843
 meta_description: "In 1843 the baronets, claiming nobility, rested their case on the barons of Scotland, “a class of nobles”. What their own book says, page by page."
 category: Heritage & Sources
@@ -8,7 +8,7 @@ published: 2026-10-10
 reviewed: 2026-10-10
 ---
 
-# Earls, Lords, and Barons: how the baronets pleaded the barons’ nobility
+# “A class of nobles”: how the baronets pleaded the barons’ nobility
 
 *In 1843 a committee of baronets wanted the world to accept that baronets were noble. To prove it they pointed to the barons of Scotland, whose nobility they took as settled, and said that a baronet ranked above them. Their book survives and anyone can read it. This paper sets out what it says about the barons, and what that shows.*
 
@@ -16,7 +16,7 @@ reviewed: 2026-10-10
 
 - **The baronets’ own book called the barons of Scotland “a class of nobles”.** The nobility of Scotland, it said, had three grades: “Earls, Lords, and Barons”.
 - **It rested the baronets’ claim on them.** A Scottish baronet was noble, it argued, because he ranked above the barons and was nearly always a baron himself.
-- **It listed what a baron had:** a seat in Parliament, the name “Noblemen” in Acts of Parliament, the style “Right Honourable”, pit and gallows, robes by statute and supporters to his arms.
+- **It listed what a baron had:** a seat in Parliament, the name “Noblemen” in Acts of Parliament, the style “Right Honourable”, pit and gallows, robes by statute and supporters to his arms. On the seat in Parliament it quoted Mackenzie: the barons “never lost that privilege”.
 - **It also recorded, in 1843, that the dignity of baron “has long been considered obsolete”.** It was not obsolete then, and it is not now. But the neglect is old.
 
 ## Who was arguing, and why
@@ -37,16 +37,22 @@ The argument runs from the barons to the baronets, not the other way. The barons
 
 ## What they said a baron had
 
-<figure class="paper-figure">
-<img src="/images/reading-room/broun-1843-p239-barons.webp" alt="The upper part of page 239 of Broun’s Baronetage for 1843, beginning: the nobility of Scotland consisted of three grades, Earls, Lords, and Barons." width="970" height="600" loading="lazy">
-<figcaption>“Earls, Lords, and Barons”: Broun’s account of the barons of Scotland, as he gave it to the Committee. Sir Richard Broun, <em>The Baronetage for 1843</em>, <a href="https://archive.org/details/india.history.resource.87504/page/n252/mode/1up" target="_blank" rel="noopener noreferrer">p. 239</a>.</figcaption>
+<figure class="paper-figure paper-figure--tall">
+<img src="/images/reading-room/broun-1843-p239.webp" alt="Page 239 of Broun’s Baronetage for 1843. It begins: the nobility of Scotland consisted of three grades, Earls, Lords, and Barons. It goes on to quote Sir George Mackenzie: of old Barons might use Supporters de jure, for they were Members of Parliament with us as such, and never lost that privilege. It ends by calling the baronets of Scotland Hereditary Chiefs, Hereditary Knights, Hereditary Barons, and Hereditary Baronets." width="970" height="1710" loading="lazy" style="max-width: 40rem;">
+<figcaption>The whole page. “Earls, Lords, and Barons” is at the top; Mackenzie’s sentence that the barons “were Members of Parliament with us as such, and never lost that privilege” is a third of the way down; “Hereditary Barons” is near the foot. Sir Richard Broun, <em>The Baronetage for 1843</em>, <a href="https://archive.org/details/india.history.resource.87504/page/n252/mode/1up" target="_blank" rel="noopener noreferrer">p. 239</a>.</figcaption>
 </figure>
 
 The English heralds had questioned the Lord Lyon’s practice of assigning supporters to Scottish baronets. Broun answered them before the Committee on 18 September 1841, with a description of the barons, whom he called “the most numerous and not least powerful section” of the great men of Scotland:
 
 > “As such, they had personal right to seat and voice in Parliament, INTER MAGNATES; they were styled ‘*Lovit Cousin*’ by the King; were called ‘*Noblemen*’ in Acts of Parliament; had ascribed to them the style ‘*Right Honourable;*’ exercised the power of pit and gallows within their respective Baronies; enjoyed, by statute, robes and apparel, of a kind similar to those worn by the ranks above them; and carried by prescription Supported Arms.”[^4]
 
-Most of these are tested against the records in papers here: the seat in Parliament and the Acts in [The baronage in the statutes](/reading-room/baronage-in-the-statutes/), the court in [The baron’s court and its officers](/reading-room/the-barons-court-and-its-officers/), the robes in [Robes, chapeau and insignia](/reading-room/robes-and-insignia/), the supporters in [The arms and flags of a baron](/reading-room/heraldry-and-flags-of-a-baron/), and “Right Honourable” in [Where “The Much Honoured” comes from](/reading-room/where-the-much-honoured-comes-from/).
+For the last point he calls Sir George Mackenzie, “the best heraldic and legal authority of his age”:
+
+<blockquote class="paper-pullquote paper-pullquote--text"><p>“they were Members of Parliament with us as such, and never lost that privilege”</p><cite>Sir George Mackenzie on the barons, as Broun quoted him in 1843</cite></blockquote>
+
+The sentence in full reads: “And that of old Barons might use Supporters *de jure*, seems most certain, for they were Members of Parliament with us as such, and never lost that privilege.”[^4] Mackenzie’s own text, of 1680, is quoted in [The arms and flags of a baron](/reading-room/heraldry-and-flags-of-a-baron/).
+
+The other points are tested against the records in papers here: the seat in Parliament and the Acts in [The baronage in the statutes](/reading-room/baronage-in-the-statutes/), the court in [The baron’s court and its officers](/reading-room/the-barons-court-and-its-officers/), the robes in [Robes, chapeau and insignia](/reading-room/robes-and-insignia/), and “Right Honourable” in [Where “The Much Honoured” comes from](/reading-room/where-the-much-honoured-comes-from/).
 
 ## Barons in the baronets’ own book
 
