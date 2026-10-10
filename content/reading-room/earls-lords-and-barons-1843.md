@@ -39,10 +39,10 @@ The argument runs from the barons to the baronets, not the other way. The barons
 
 <figure class="paper-figure">
 <img src="/images/reading-room/broun-1843-p239-barons.webp" alt="The upper part of page 239 of Broun’s Baronetage for 1843, beginning: the nobility of Scotland consisted of three grades, Earls, Lords, and Barons." width="970" height="600" loading="lazy">
-<figcaption>“Earls, Lords, and Barons”: the Committee’s account of the barons of Scotland. Sir Richard Broun, <em>The Baronetage for 1843</em>, <a href="https://archive.org/details/india.history.resource.87504/page/n252/mode/1up" target="_blank" rel="noopener noreferrer">p. 239</a>.</figcaption>
+<figcaption>“Earls, Lords, and Barons”: Broun’s account of the barons of Scotland, as he gave it to the Committee. Sir Richard Broun, <em>The Baronetage for 1843</em>, <a href="https://archive.org/details/india.history.resource.87504/page/n252/mode/1up" target="_blank" rel="noopener noreferrer">p. 239</a>.</figcaption>
 </figure>
 
-The English heralds had questioned the Lord Lyon’s practice of assigning supporters to Scottish baronets. The Committee answered with a description of the barons, whom it called “the most numerous and not least powerful section” of the great men of Scotland:
+The English heralds had questioned the Lord Lyon’s practice of assigning supporters to Scottish baronets. Broun answered them before the Committee on 18 September 1841, with a description of the barons, whom he called “the most numerous and not least powerful section” of the great men of Scotland:
 
 > “As such, they had personal right to seat and voice in Parliament, INTER MAGNATES; they were styled ‘*Lovit Cousin*’ by the King; were called ‘*Noblemen*’ in Acts of Parliament; had ascribed to them the style ‘*Right Honourable;*’ exercised the power of pit and gallows within their respective Baronies; enjoyed, by statute, robes and apparel, of a kind similar to those worn by the ranks above them; and carried by prescription Supported Arms.”[^4]
 
@@ -55,7 +55,7 @@ Most of these are tested against the records in papers here: the seat in Parliam
 <figcaption>The Committee’s specimen for Scotland, with the coronet, mantle, collar, badge and supporters it had adopted. The baronet shown is the secretary’s father, whom the caption styles “Baron of Colstoun”. <em>The Baronetage for 1843</em>, <a href="https://archive.org/details/india.history.resource.87504/page/n73/mode/1up" target="_blank" rel="noopener noreferrer">plate facing p. 61</a>.</figcaption>
 </figure>
 
-The book practises what it argues. Its specimen engraving for Scotland is captioned “Arms of the HON. SIR JAMES BROUN, Knight, Baron of Colstoun, Baronet of Scotland and Nova Scotia, and Chief of his Name.” In the entries some twenty-two living Scottish baronets are given a baron’s style beside the baronetcy: “feudal baron of Innerquharity”, “free baron of Colquhoun”, “Baron of Lochnaw”.[^5] Of the Scottish baronets as a body the Committee says: “They are Hereditary Chiefs, Hereditary Knights, Hereditary Barons, and Hereditary Baronets.”[^4]
+The book practises what it argues. Its specimen engraving for Scotland is captioned “Arms of the HON. SIR JAMES BROUN, Knight, Baron of Colstoun, Baronet of Scotland and Nova Scotia, and Chief of his Name.” In the entries some twenty-two living Scottish baronets are given a baron’s style beside the baronetcy: “feudal baron of Innerquharity”, “free baron of Colquhoun”, “Baron of Lochnaw”.[^5] Of the Scottish baronets as a body Broun told the Committee: “They are Hereditary Chiefs, Hereditary Knights, Hereditary Barons, and Hereditary Baronets.”[^4]
 
 Broun also says where a baron’s title came from: “The title of Baron in Scotland was anciently conferred by erecting lands into a free barony”. He prints the Crown charter of 20 June 1589 that gave James Colville of Culross the “*Titulum, Honorem et Statum* LIBERI BARONIS”, the charter cited from the Register of the Great Seal in [Lairds, lords and barons](/reading-room/lairds-lords-and-barons/).[^6]
 
@@ -71,7 +71,7 @@ Two things stand out. By 1843 the baron’s dignity was already thought by many 
 
 Broun was a partisan, and his campaign failed. *The Spectator* judged the Committee’s proceedings “for ignorant folly and self-sufficient audacity” to be “almost unequalled in the annals of impudence and humbug”.[^8] His book is no authority for what a baronet may wear, and what it says of the barons is only as good as the Acts and the writers it cites. The papers here go to those sources direct.
 
-It is evidence of something else. The Committee had every reason to set baronets as high as it could, and it ranked the baronet “superior to Baron”.[^4] Yet when it needed a nobility to build on, it reached for the barons.
+It is evidence of something else. Broun had every reason to set baronets as high as he could, and he ranked the baronet “superior to Baron”. Yet when he needed a nobility to build on, he reached for the barons, and the Committee, having heard him, passed its resolutions unanimously.[^4]
 
 The neglect it recorded is the reason for the Association’s work. The dignity of baron was never abolished: the Act of 2000 that ended feudal tenure says in terms that nothing in it “affects the dignity of baron”.[^9] A dignity that is real in law, and has “long been considered obsolete” by the public, needs a public record of who holds it. That record is [the Roll](/the-roll/).
 
@@ -86,7 +86,7 @@ The neglect it recorded is the reason for the Association’s work. The dignity 
 [^1]: Broun, *The Baronetage for 1843*, [p. 222](https://archive.org/details/india.history.resource.87504/page/n235/mode/1up) (“Founded 15th July, 1840”) and [p. 16](https://archive.org/details/india.history.resource.87504/page/n27/mode/1up) for the insignia. The title page names Broun as “Hon. Secretary of the Committee of the Baronetage for Privileges”. For the claims and their refusal by “every Minister”, *The Spectator*, 15 April 1843, [p. 352](https://archive.spectator.co.uk/article/15th-april-1843/16/brouns-baronetage).
 [^2]: Broun, *The Baronetage for 1843*, pp. 14–[15](https://archive.org/details/india.history.resource.87504/page/n26/mode/1up).
 [^3]: Ibid., pp. [13](https://archive.org/details/india.history.resource.87504/page/n24/mode/1up)–14. For the Acts themselves see [The baronage in the statutes](/reading-room/baronage-in-the-statutes/).
-[^4]: Ibid., [p. 239](https://archive.org/details/india.history.resource.87504/page/n252/mode/1up), in the Committee’s address on “Exterior Heraldic Ornaments”; the heralds’ remark is at p. 238. The italics are in the original.
+[^4]: Ibid., [p. 239](https://archive.org/details/india.history.resource.87504/page/n252/mode/1up), in the “exposition” Broun made to the Committee on 18 September 1841 ([pp. 225–226](https://archive.org/details/india.history.resource.87504/page/n238/mode/1up)), which the contents page calls the “Address on Exterior Heraldic Ornaments”; the heralds’ remark is at p. 238. The Committee, “having heard the Exposition made by the Hon. Secretary”, then “unanimously passed a series of Resolutions” (p. 273). The italics are in the original.
 [^5]: Ibid., plate facing [p. 61](https://archive.org/details/india.history.resource.87504/page/n73/mode/1up); the entries are at pp. 64 (Ogilvie), 62 (Colquhoun) and 67 (Agnew). The count is from a search of the book’s text and is approximate. “Baron of Colstoun” is the book’s own style for Sir James: its entry for the family gives his residence as Lochmaben, Dumfriesshire, and lists “Colstoun, near Haddington” among its “Ancient Seats” ([p. 82](https://archive.org/details/india.history.resource.87504/page/n95/mode/1up)).
 [^6]: Ibid., [p. 14](https://archive.org/details/india.history.resource.87504/page/n25/mode/1up).
 [^7]: Ibid., dedication, pp. [v](https://archive.org/details/india.history.resource.87504/page/n6/mode/1up)–vi.
