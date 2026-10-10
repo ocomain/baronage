@@ -283,7 +283,14 @@ html {
 .paper-body ol { list-style: decimal; }
 .paper-body li { margin-bottom: 0.5rem; padding-left: 0.2rem; }
 .paper-body li > p { margin-bottom: 0.5rem; }
-.paper-body h2, .paper-body h3 { scroll-margin-top: 8rem; }
+/* In-page links in a paper (section headings, footnotes and their back-links) stop clear of the sticky
+   header. --header-h is the header's measured height, set by HeaderOffset; the fallbacks cover the
+   first paint (the header is about 83px on a phone, 122px on a tablet and 164px on a desktop). */
+:root { --paper-anchor-top: calc(var(--header-h, 5.25rem) + 1.25rem); }
+@media (min-width: 768px) { :root { --paper-anchor-top: calc(var(--header-h, 7.75rem) + 1.25rem); } }
+@media (min-width: 1024px) { :root { --paper-anchor-top: calc(var(--header-h, 10.25rem) + 1.25rem); } }
+.paper-body h2, .paper-body h3 { scroll-margin-top: var(--paper-anchor-top); }
+.paper-body sup[id^="fnref-"] { scroll-margin-top: var(--paper-anchor-top); }
 .paper-body h2 + p, .paper-body h3 + p { margin-top: 0; }
 .paper-body blockquote {
   margin: 1.75rem 0;
@@ -399,7 +406,7 @@ html {
 }
 .paper-body h2 + blockquote.paper-pullquote.paper-pullquote--text,
 .paper-body h3 + blockquote.paper-pullquote.paper-pullquote--text { margin-top: 1.4rem; }
-.paper-body .paper-anchor { scroll-margin-top: 8rem; }
+.paper-body .paper-anchor { scroll-margin-top: var(--paper-anchor-top); }
 .paper-body .paper-findings__note {
   margin: 1.5rem 0 0;
   text-align: center;
@@ -446,7 +453,7 @@ html {
 .paper-body sup.fnref--adj::before { content: ","; margin-right: 0.08em; }
 
 .paper-notes ol { margin: 0 0 0 1.5rem; padding: 0; list-style: decimal; }
-.paper-notes li { margin-bottom: 0.55rem; padding-left: 0.3rem; scroll-margin-top: 8rem; }
+.paper-notes li { margin-bottom: 0.55rem; padding-left: 0.3rem; scroll-margin-top: var(--paper-anchor-top); }
 .paper-notes li:target { background: rgba(201,162,75,0.12); }
 .paper-notes a, .paper-sources a {
   color: var(--color-oxblood); text-decoration: underline;
