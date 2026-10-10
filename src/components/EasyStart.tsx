@@ -4,7 +4,7 @@ import { ROLL_URL, INDEX_URL, CALENDLY_URL } from "@/lib/site";
 
 const rows: { href: string; title: string; line: string; external?: boolean }[] = [
   { href: ROLL_URL, title: "Check a title on the Roll", line: "Search the Roll of Scottish Barons by name or title.", external: true },
-  { href: INDEX_URL, title: "Look up a barony", line: "The Index of 1,872 baronies (beta).", external: true },
+  { href: INDEX_URL, title: "Look up 1,872 baronies", line: "The Index of 1,872 baronies (beta).", external: true },
   { href: "/proper-address", title: "How to address a baron", line: "In speech, in letters and on forms." },
   { href: "/scottish-baronies-explained", title: "What is a Scottish barony?", line: "Plain answers to the common questions." },
   { href: "/pledge", title: "The Pledge", line: "A commitment, in honour, to keep a barony in the family." },
