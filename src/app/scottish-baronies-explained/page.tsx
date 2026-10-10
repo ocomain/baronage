@@ -49,7 +49,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-10-06";
+const DATE_MODIFIED = "2026-10-10";
 const REVIEWED_LABEL = "October 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -523,7 +523,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   },
   {
     q: "Can a Scottish barony be bought and sold?",
-    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio. In practice the market is very small — the Scottish Barony Register publishes annual reports of the Custodian, recording a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations. Where sales have occurred the sums indicate scarcity value: the Scottish Law Commission, from 1997 market evidence, estimated a barony of no particular distinction at approximately £60,000, and in 2002 the Barony of MacDonald was reported as offered for sale at more than £1 million.",
+    a: "Technically, in law, yes: since the 2004 reform baronies are freely transferable dignities and may pass by inheritance, bequest, gift, or assignation. Baronies pledged on the Roll of Scottish Barons are treated by the Roll as hereditary and not in commercio. In practice the market is very small — the Scottish Barony Register publishes annual reports of the Custodian, recording a handful of transfers in a typical year, and a recorded transfer is not necessarily a commercial sale, since family assignations and bequests pass through the same register. Baronies generally remain within families across generations; a barony can only be bought if a holder chooses to part with one, and few do.",
     body: (
       <>
         <p>
@@ -566,11 +566,6 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           sometimes pass through the same register. Baronies generally remain within families across generations; a barony can only be bought
           if a holder chooses to part with one, and few do. Families are not selling their heirlooms.
         </p>
-        <p className="mt-4">
-          Where sales have occurred, the sums indicate scarcity value. The Scottish Law Commission, working from 1997
-          market evidence, estimated a barony “of no particular distinction” at approximately £60,000, and in 2002 the
-          Barony of MacDonald was reported to have been offered for sale at more than £1 million.
-        </p>
       </>
     ),
     authority: (
@@ -585,7 +580,6 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Succession (Scotland) Act 1964
         </a>{" "}
         (intestate descent). Transfer volume: Annual Reports of the Custodian, Scottish Barony Register, 2021–2025.
-        Valuation: Scottish Law Commission estimate from 1997 evidence; 2002 press reports on the Barony of MacDonald.
         The prevalence of family retention over sale is a market observation, not a rule of law.
       </>
     ),
