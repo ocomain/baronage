@@ -110,7 +110,7 @@ export default function PledgePage() {
                 Baronial Code of Honour
               </Link>
               .{" "}
-              <Link href="/reading-room/earls-lords-and-barons-1843/" className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep">
+              <Link href="/reading-room/how-the-baronets-pleaded-the-barons-nobility/" className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep">
                 Read how the baronets pleaded the barons’ nobility
               </Link>
               .
