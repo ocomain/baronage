@@ -34,6 +34,8 @@ export function PaperActions({
   const [open, setOpen] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
   const [error, setError] = useState("");
+  // True when the sender ticked the newsletter box and the sign-up went through (Zoho then asks them to confirm).
+  const [newsletter, setNewsletter] = useState(false);
   const id = useId();
 
   const url = `${SITE_URL}/reading-room/${slug}/`;
@@ -58,11 +60,13 @@ export function PaperActions({
           email: field("email"),
           comment: field("comment"),
           url,
+          newsletter: f.get("newsletter") === "on",
           website: field("website"),
         }),
       });
-      const data: { ok?: boolean; error?: string } = await res.json().catch(() => ({}));
+      const data: { ok?: boolean; error?: string; newsletter?: string } = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
+        setNewsletter(data.newsletter === "sent");
         setState("sent");
         return;
       }
@@ -104,6 +108,9 @@ export function PaperActions({
               <p className="mt-2 font-sans text-[0.95rem] leading-relaxed text-ink-soft">
                 Your friend will have it in a minute or two. If they reply, the reply comes to you.
               </p>
+              {newsletter && (
+                <p className="mt-2 font-sans text-[0.95rem] leading-relaxed text-navy">Please check your inbox to confirm the newsletter.</p>
+              )}
               <button
                 type="button"
                 onClick={() => setState("idle")}
@@ -136,6 +143,14 @@ export function PaperActions({
                     <input id={`${id}-email`} name="email" type="email" required maxLength={254} autoComplete="email" className={FIELD} />
                   </div>
                 </div>
+                {/* The sender's own choice, never the friend's address; unticked unless they tick it. */}
+                <label htmlFor={`${id}-newsletter`} className="flex cursor-pointer items-start gap-3 font-sans text-[0.95rem] leading-snug text-navy">
+                  <input id={`${id}-newsletter`} name="newsletter" type="checkbox" className="mt-0.5 h-5 w-5 flex-none cursor-pointer accent-[#131e3a]" />
+                  <span>
+                    <span className="font-semibold">Also send me the free newsletter</span>
+                    <span className="mt-0.5 block text-[0.88rem] text-ink-soft">We will email you once to confirm.</span>
+                  </span>
+                </label>
                 <div>
                   <label htmlFor={`${id}-comment`} className={LABEL}>
                     A short note <span className="font-normal text-muted">(optional)</span>
