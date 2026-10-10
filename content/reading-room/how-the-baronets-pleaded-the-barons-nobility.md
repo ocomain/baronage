@@ -109,7 +109,7 @@ The Crown still uses it. In 1469 Parliament annexed “the barony of Renfrew, wi
 
 By 1843 the public had forgotten the dignity. The law had not. It was recovered in the twentieth century, in the Lyon Court, and the man who did most to make the case was Sir Thomas Innes of Learney, Lord Lyon from 1945 to 1969.
 
-In 1934 the Court recorded Gordon of Hallhead as “Baron of Esslemont” and awarded him the baron’s chapeau. In 1943 it found that the minor barons are “recognised as a ‘titled nobility’”. In 1945 Innes set out the evidence in print.[^18]
+In 1934 the Court recorded Gordon of Hallhead as “Baron of Esslemont” and awarded him the baron’s chapeau. In 1943 it found that the minor barons are “recognised as a ‘titled nobility’”. In October 1945 Innes, by then Lord Lyon, set out the evidence in a paper read to the Society of Antiquaries of Scotland.[^18]
 
 He created nothing. His evidence is in the table above: the Acts of 1455 and 1567, the charters of the Great Seal, Mackenzie. He went back to the precedents and applied them.
 
