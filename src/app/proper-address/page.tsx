@@ -592,7 +592,7 @@ export default function ProperAddressPage() {
                   </p>
                 </div>
                 <P>
-                  The following section applies only to Pledged bloodline titles; as the title of honour always remains
+                  The following section applies only to Pledged hereditary titles; as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
                   the death of a Scottish Baron, the widow retains the style of “Lady [Barony]” unless the new Baron is
