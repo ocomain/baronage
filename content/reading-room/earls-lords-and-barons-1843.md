@@ -17,7 +17,7 @@ reviewed: 2026-10-10
 - **The baronets’ own book called the barons of Scotland “a class of nobles”.** The nobility of Scotland, it said, had three grades: “Earls, Lords, and Barons”.
 - **It rested the baronets’ claim on them.** A Scottish baronet was noble, it argued, because he ranked above the barons and was nearly always a baron himself.
 - **It listed what a baron had:** a seat in Parliament, the name “Noblemen” in Acts of Parliament, the style “Right Honourable”, pit and gallows, robes by statute and supporters to his arms. On the seat in Parliament it quoted Mackenzie: the barons “never lost that privilege”.
-- **It also recorded, in 1843, that the dignity of baron “has long been considered obsolete”.** It was not obsolete then, and it is not now. But the neglect is old.
+- **It said the dignity of baron was alive.** The book calls it “an hereditary dignity”, thought obsolete by many but “in fact” still held: by the heir to the throne, as Baron of Renfrew, and by a score of the baronets in its own pages.
 
 ## Who was arguing, and why
 
@@ -27,11 +27,13 @@ Every claim depended on baronets being noble, and Broun knew the point was conte
 
 ## The answer they gave
 
-<blockquote class="paper-pullquote paper-pullquote--text"><p>“They have hereditary state and place above a class of nobles who ever ranked INTER MAGNATES”</p><cite>Sir Richard Broun on the baronets and the barons of Scotland, 1843</cite></blockquote>
+<blockquote class="paper-pullquote paper-pullquote--text"><p>“the hereditary nobility of Scotland consisted only of three grades—EARLS, LORDS, and BARONS”</p><cite>Sir Richard Broun, <em>The Baronetage for 1843</em></cite></blockquote>
 
 The answer was the barons. “Nearly all the Baronets of Scotland and Nova Scotia are Barons, and as such formed a constituent portion of the second estate of the realm of Scotland”. Before the reign of James VI, “the hereditary nobility of Scotland consisted only of three grades—EARLS, LORDS, and BARONS.” Broun cites the records of the Scots Parliament for it, and Sir George Mackenzie: “under the word Baron all our nobility are comprehended.”[^3]
 
-With that laid down, the doubt about baronets, he says, “is clearly resolved”. Scottish baronets “have hereditary state and place above a class of nobles who ever ranked INTER MAGNATES, and formed a portion of the PROCERES REGNI”, the great men of the realm.[^2]
+With that laid down, the doubt about baronets, he says, “is clearly resolved”. Scottish baronets “have hereditary state and place above a class of nobles who ever ranked INTER MAGNATES, and formed a portion of the PROCERES REGNI”.[^2]
+
+The Latin is the Latin of the old records. *Inter magnates* means “among the great men”; *proceres regni* means “the nobles of the realm”. In plain words: the barons were a class of nobles who had always ranked among the great men of the kingdom, and a baronet’s place was above theirs.
 
 The argument runs from the barons to the baronets, not the other way. The barons’ nobility is the fixed point. The baronets’ is what had to be proved.
 
@@ -42,9 +44,9 @@ The argument runs from the barons to the baronets, not the other way. The barons
 <figcaption>The whole page. “Earls, Lords, and Barons” is at the top; Mackenzie’s sentence that the barons “were Members of Parliament with us as such, and never lost that privilege” is a third of the way down; “Hereditary Barons” is near the foot. Sir Richard Broun, <em>The Baronetage for 1843</em>, <a href="https://archive.org/details/india.history.resource.87504/page/n252/mode/1up" target="_blank" rel="noopener noreferrer">p. 239</a>.</figcaption>
 </figure>
 
-The English heralds had questioned the Lord Lyon’s practice of assigning supporters to Scottish baronets. Broun answered them before the Committee on 18 September 1841, with a description of the barons, whom he called “the most numerous and not least powerful section” of the great men of Scotland:
+The English heralds had questioned the Lord Lyon’s practice of assigning supporters to Scottish baronets. Broun answered them before the Committee on 18 September 1841, with a description of the barons, whom he called “the most numerous and not least powerful section of the PROCERES REGNI SCOTIÆ”, the nobles of the kingdom of Scotland:
 
-> “As such, they had personal right to seat and voice in Parliament, INTER MAGNATES; they were styled ‘*Lovit Cousin*’ by the King; were called ‘*Noblemen*’ in Acts of Parliament; had ascribed to them the style ‘*Right Honourable;*’ exercised the power of pit and gallows within their respective Baronies; enjoyed, by statute, robes and apparel, of a kind similar to those worn by the ranks above them; and carried by prescription Supported Arms.”[^4]
+> “As such, they had personal right to seat and voice in Parliament, INTER MAGNATES [among the great men]; they were styled ‘*Lovit Cousin*’ [beloved cousin] by the King; were called ‘*Noblemen*’ in Acts of Parliament; had ascribed to them the style ‘*Right Honourable;*’ exercised the power of pit and gallows within their respective Baronies; enjoyed, by statute, robes and apparel, of a kind similar to those worn by the ranks above them; and carried by prescription Supported Arms.”[^4]
 
 For the last point he calls Sir George Mackenzie, “the best heraldic and legal authority of his age”:
 
@@ -52,7 +54,7 @@ For the last point he calls Sir George Mackenzie, “the best heraldic and legal
 
 The sentence in full reads: “And that of old Barons might use Supporters *de jure*, seems most certain, for they were Members of Parliament with us as such, and never lost that privilege.”[^4] Mackenzie’s own text, of 1680, is quoted in [The arms and flags of a baron](/reading-room/heraldry-and-flags-of-a-baron/).
 
-The other points are tested against the records in papers here: the seat in Parliament and the Acts in [The baronage in the statutes](/reading-room/baronage-in-the-statutes/), the court in [The baron’s court and its officers](/reading-room/the-barons-court-and-its-officers/), the robes in [Robes, chapeau and insignia](/reading-room/robes-and-insignia/), and “Right Honourable” in [Where “The Much Honoured” comes from](/reading-room/where-the-much-honoured-comes-from/).
+The other points are tested against the records in papers here: the seat in Parliament and the Acts in [The baronage in the statutes](/reading-room/baronage-in-the-statutes/), the court and its power of pit and gallows, the power of life and death, in [The baron’s court and its officers](/reading-room/the-barons-court-and-its-officers/), the robes in [Robes, chapeau and insignia](/reading-room/robes-and-insignia/), and “Right Honourable” in [Where “The Much Honoured” comes from](/reading-room/where-the-much-honoured-comes-from/).
 
 ## Barons in the baronets’ own book
 
@@ -63,15 +65,15 @@ The other points are tested against the records in papers here: the seat in Parl
 
 The book practises what it argues. Its specimen engraving for Scotland is captioned “Arms of the HON. SIR JAMES BROUN, Knight, Baron of Colstoun, Baronet of Scotland and Nova Scotia, and Chief of his Name.” In the entries some twenty-two living Scottish baronets are given a baron’s style beside the baronetcy: “feudal baron of Innerquharity”, “free baron of Colquhoun”, “Baron of Lochnaw”.[^5] Of the Scottish baronets as a body Broun told the Committee: “They are Hereditary Chiefs, Hereditary Knights, Hereditary Barons, and Hereditary Baronets.”[^4]
 
-Broun also says where a baron’s title came from: “The title of Baron in Scotland was anciently conferred by erecting lands into a free barony”. He prints the Crown charter of 20 June 1589 that gave James Colville of Culross the “*Titulum, Honorem et Statum* LIBERI BARONIS”, the charter cited from the Register of the Great Seal in [Lairds, lords and barons](/reading-room/lairds-lords-and-barons/).[^6]
+Broun also says where a baron’s title came from: “The title of Baron in Scotland was anciently conferred by erecting lands into a free barony”. He prints the Crown charter of 20 June 1589 that gave James Colville of Culross the “*Titulum, Honorem et Statum* LIBERI BARONIS”: in English, the title, honour and status of a free baron. It is the charter cited from the Register of the Great Seal in [Lairds, lords and barons](/reading-room/lairds-lords-and-barons/).[^6]
 
-## “Long been considered obsolete”
+## Not obsolete: the Baron of Renfrew
 
 The book is dedicated to the infant Prince of Wales as “Knight and Baron of Renfrew”, and the first reason given is this:
 
 > “Because, his birth has, in the person of the most exalted subject in the British nation, revived the title, honour, and state in Scotland of BARON,—an hereditary dignity which has long been considered obsolete, although, in fact, it is only merged in the higher degrees of Baronet, Lord, Viscount, Earl, Marquess, and Duke.”[^7]
 
-Two things stand out. By 1843 the baron’s dignity was already thought by many to be a thing of the past. And the man who wrote the sentence knew better: on his own showing the dignity was held by the heir to the throne and by a score of the baronets in his book.
+Two things stand out. Broun knew the dignity was alive: on his own showing it was held by the heir to the throne and by a score of the baronets in his book. And by 1843 many people had already come to think of it as a thing of the past. The law had not changed. The public had forgotten.
 
 ## What it shows, and what it does not
 
