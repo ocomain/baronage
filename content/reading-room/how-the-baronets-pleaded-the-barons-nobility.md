@@ -1,7 +1,7 @@
 ---
 title: "“A class of nobles”: how the baronets pleaded the barons’ nobility"
 subtitle: "In 1843 a committee of baronets, claiming to be noble, built its case on the barons of Scotland, “called ‘Noblemen’ in Acts of Parliament”"
-slug: earls-lords-and-barons-1843
+slug: how-the-baronets-pleaded-the-barons-nobility
 meta_description: "In 1843 the baronets, claiming nobility, rested their case on the barons of Scotland, “a class of nobles”. What their own book says, page by page."
 category: Heritage & Sources
 published: 2026-10-10
