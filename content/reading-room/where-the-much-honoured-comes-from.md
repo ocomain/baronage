@@ -5,7 +5,7 @@ slug: where-the-much-honoured-comes-from
 meta_description: "The evidence for “The Much Honoured”: Scottish letters from 1616, barons addressed by it from the 1640s, Innes of Learney’s record, and its use today."
 category: Words & Usage
 published: 2026-10-01
-reviewed: 2026-10-01
+reviewed: 2026-10-10
 ---
 
 # Where “The Much Honoured” comes from
@@ -84,6 +84,12 @@ For the forms in full, see [Proper Address for Scottish Barons](/proper-address/
 ## What the record shows
 
 “The Much Honoured” is four centuries old in Scotland. Barons were addressed by it from the 1640s, by peers and by the General Assembly, though never by it alone: lairds, chiefs and knights shared it, and the barons were as often Right Honourable. It fell out of everyday use, a Lord Lyon recorded it as the old prefix of laird and chief and gave the baron’s form, and the baronage has kept it. With it went the spoken “Your Honour”, as “Your Grace” goes with a duke. Today “The Much Honoured” is the baron’s prefix in formal address, and it tells him apart from the peer.
+
+## The Roll and the Pledge
+
+A prefix is only as good as the title behind it. The Roll shows, on evidence, who holds the title.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

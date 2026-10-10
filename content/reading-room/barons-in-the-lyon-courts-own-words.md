@@ -5,7 +5,7 @@ slug: barons-in-the-lyon-courts-own-words
 meta_description: "From its earliest registers the Lyon Court called barons barons. Five Letters Patent and a matriculation, 1992 to 2018, in the Court’s own words."
 category: The Lyon Court
 published: 2026-09-13
-reviewed: 2026-09-20
+reviewed: 2026-10-10
 gated: part
 reading_time: "10 min"
 ---
@@ -30,6 +30,12 @@ Under Innes of Edingight the practice stood as it had under Grant. On 25 Novembe
 </figure>
 
 It was still the ordinary practice at the end of the feudal era. When the Court of Session needed an example of the Lyon Court’s practice before the appointed day, it took Letters Patent subscribed by Lord Lyon Blair on 27 July 2007 naming the grantee “Baron of Ballencrieff”, with a nobility clause at the end.[^8]
+
+## The Roll and the Pledge
+
+The Lyon Court’s own instruments named barons as barons for as long as its records run. The Roll publishes such instruments beside each holder’s entry.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

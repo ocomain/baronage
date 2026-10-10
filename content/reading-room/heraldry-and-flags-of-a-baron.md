@@ -5,7 +5,7 @@ slug: heraldry-and-flags-of-a-baron
 meta_description: "A plain guide to a Scottish baron’s heraldry: how arms are held, the helm, chapeau and supporters, and the banner, standard, guidon, pennon and pinsel."
 category: Robes & Insignia
 published: 2026-10-05
-reviewed: 2026-10-05
+reviewed: 2026-10-10
 ---
 
 # The arms and flags of a baron
@@ -179,6 +179,12 @@ A baron who wants a flag has three steps to take. He should hold arms of his own
 **“A shield on a coloured flag is a banner.”** The Lyon Court calls that “quite wrong”. The arms must fill the flag.[^18]
 
 **“Any Scot may fly the Lion Rampant.”** No. The Saltire is the flag for all Scots. The Lion Rampant is the Sovereign’s.[^30]
+
+## The Roll and the Pledge
+
+Arms are evidence as well as ornament: Letters Patent name their holder and what was granted to him. The Roll publishes such instruments beside each holder’s entry.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

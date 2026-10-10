@@ -5,7 +5,7 @@ slug: treaty-of-union
 meta_description: "Did the Treaty of Union guarantee the rights of the Scottish baronage? Articles XVIII, XX, XXII and XXIII: what 1707 did and did not do, with the texts linked."
 category: Law & Statutes
 published: 2026-09-11
-reviewed: 2026-09-11
+reviewed: 2026-10-10
 ---
 
 # The Treaty of Union and the baronage
@@ -35,6 +35,12 @@ The Article that did protect rank protected the peers: “all Peers of Scotland 
 ## What the Union left
 
 The honest summary is that the Union left the baronage as it found it: a subsisting order under Scots private law, with its jurisdictions reserved as property. Its later history — 1746, 1874, 2000 — was made by Parliament under the “evident utility” clause. Article XX describes the eighteenth-century position and the 2000 Act describes today’s. Article XXII, repealed and silent on barons, is not an authority for anything; the present guarantee of the dignity is section 63, and it is a guarantee the Scottish Parliament chose to give.
+
+## The Roll and the Pledge
+
+The Treaty left the baronage to Scots law, and section 63 of the 2000 Act now preserves the dignity. Neither says who holds a barony today. The Roll does, on evidence.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

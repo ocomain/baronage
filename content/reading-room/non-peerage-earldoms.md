@@ -5,7 +5,7 @@ slug: non-peerage-earldoms
 meta_description: "Two things share the name earldom: the peerage dignity, and lands erected into an earldom. The charters, the Lords cases and the Lyon Court’s answers since 1983."
 category: The Lyon Court
 published: 2026-09-15
-reviewed: 2026-09-15
+reviewed: 2026-10-10
 gated: part
 reading_time: "13 min"
 ---
@@ -120,6 +120,12 @@ Sellar noted that neither the 2000 Act nor the Scottish Law Commission’s repor
 Section 63(1) leaves “any other dignity” unaffected but does not say what becomes of it. Section 63(2) names only the dignity of baron. Whether an earldom erected in barony is “an estate held in barony”, and so within s. 63(2), is not addressed. Arran’s earldom was granted in free barony in 1503 and again in 1581.[^34] No decision on the point has been found.[^51]
 
 For how the Association styles lords and earls in the Baronage of Scotland, see its [forms of address](/proper-address/#higher). It records usage and does not decide the legal question.
+
+## The Roll and the Pledge
+
+Lordships and earldoms in the baronage rest, like baronies, on Crown charters. The Roll records their holders on the same evidence.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

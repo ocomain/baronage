@@ -5,7 +5,7 @@ slug: lairds-lords-and-barons
 meta_description: "Laird and lord are the same word, and laird was never a rank. From the dictionaries and the sheriff-court rolls: what made a laird a baron."
 category: Words & Usage
 published: 2026-09-11
-reviewed: 2026-09-11
+reviewed: 2026-10-10
 ---
 
 # Lairds, lords and barons: what the words meant
@@ -63,6 +63,12 @@ Designation and barony can coexist, but are decided separately. In *Kerr of Ardg
 ## Laird today
 
 Laird remains a description, not a title. HM Passport Office records that “The Lord Lyon King of Arms has confirmed that for Scottish Lairds it is not necessary for the words ‘Laird of’ to appear on any part of the passport”,[^21] and the Court of the Lord Lyon said so in terms on its former website: laird “is description rather than a title” and “is not appropriate for the owner of a normal residential property, far less the owner of a small souvenir plot of land” (see [Scottish Baronies, Explained](/scottish-baronies-explained/)).[^23] A souvenir plot of a few square feet does not make its buyer a laird in any sense the Lyon Court recognises: the Court’s current guidance on petitioning for arms states that such plots are “insufficient to bring anyone within the jurisdiction of the Lord Lyon King of Arms”,[^19] and they cannot be registered in the Land Register at all.[^20] A barony is different in kind — a dignity preserved by statute[^24] — which is why the passport guidance provides for “BARON OF (territorial designation)”, where the Passport Office’s “territorial designation” means the name of the barony, but not for “Laird of”.[^21]
+
+## The Roll and the Pledge
+
+What made a laird a baron was a Crown charter, and a charter can be produced. That is the proof the Roll asks for.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

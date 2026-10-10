@@ -6,7 +6,7 @@ meta_description: "In 1945 Lord Lyon Innes of Learney set out the evidence that 
 category: Heritage & Sources
 reading_time: 9 min
 published: 2026-09-11
-reviewed: 2026-10-03
+reviewed: 2026-10-10
 ---
 
 # The Lord Lyon's Case for the Baronage
@@ -21,7 +21,7 @@ The paper was printed in the *Proceedings of the Society of Antiquaries of Scotl
 
 ## 1. A title, an honour, rank and status
 
-Innes opens the legal argument with a Crown charter. On 6 May 1590 the lands of the Bishopric of Moray were erected into the free barony of Spynie, and the charter says in terms that the erection constituted a "Titulum, Honorem, Ordinem et Statum liberi Baronis" — the title, honour, rank and status of a free baron — whose holders "now and for ever shall be called Barons of Spynie" (p. 113). The House of Lords Committee for Privileges later held that this charter created no peerage: the peerage, "ane frie lorde of parliament to be intitulat Lordis of Spynie", came by a separate charter three years later. Innes's point is that the erection of a free barony was itself the grant of a title, distinct from and older than the peerage grant that followed.
+Innes opens the legal argument with a Crown charter. On 6 May 1590 the lands of the Bishopric of Moray were erected into the free barony of Spynie, and the charter says in terms that the erection constituted a "Titulum, Honorem, Ordinem et Statum liberi Baronis" — the title, honour, rank and status of a free baron — whose holders "now and for ever shall be called Barons of Spynie" (p. 113). In the Spynie peerage claim of 1785 the claimant himself admitted that this charter “has nothing to do with Peerage”: the peerage, "ane frie lorde of parliament to be intitulat Lordis of Spynie", came by a separate charter three years later (see [Lairds, lords and barons](/reading-room/lairds-lords-and-barons/)). Innes's point is that the erection of a free barony was itself the grant of a title, distinct from and older than the peerage grant that followed.
 
 He reaches further back for the same principle. A document of 1382 — "long anterior to the existence of 'personal peerage' barons" — states that *Baronia est nomen dignitatis et importat judicaturam*: a barony is a name of dignity and imports jurisdiction (p. 144). Sir George Mackenzie, Lord Advocate under Charles II, put the rule in Scots: "such feus as had a jurisdiction annext to them, a Barony as we call it, do ennoble" (p. 142).
 
@@ -82,6 +82,12 @@ He lets the first historian of the baronage have the last word: "There is no nat
 Innes called the baronage "a subsisting yet very ancient 'Order' in the Realm of Scotland" (p. 157), and printed the Esslemont Memorial's description of its members as "truly [constitutional barons](/scottish-baronies-explained/#term-constitutional-baron)" (p. 163; see [The Esslemont petition of 1934](/reading-room/esslemont-petition-1934/)), and so it remains. When the Abolition of Feudal Tenure etc. (Scotland) Act 2000 took full effect in 2004, it preserved the dignity of baron expressly, defining "dignity" to include "any quality or precedence associated with, and any heraldic privilege incidental to, a dignity" — the very things the paper describes.[^4] A later Lord Lyon, David Sellar, wrote that "there can be no doubt about the thread of continuity from the earliest days of feudalism in Scotland until the present day".[^5] Chapeaux granted before 2004 continue to be displayed and pass to heirs; the representatives of ancient baronial houses keep their blue chapeau and their supporters; a baron petitioning for arms today receives the helm assigned to his degree.[^6] And the style whose history Innes traced from Mary Queen of Scots to the Lyon Register now appears, on production of the Lord Lyon's recognition, in a British passport: "THE HOLDER IS (FORENAMES) (SURNAME), BARON OF (territorial designation)", where the Passport Office's "territorial designation" means the name of the barony.[^7]
 
 The paper is in copyright until 2041. It is quoted here; it can be read in full, free, at the Society of Antiquaries' journal archive.
+
+## The Roll and the Pledge
+
+Innes’s evidence is of one kind: statutes, charters and the Court’s own registers. It is the kind of evidence the Roll asks of a holder today.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 

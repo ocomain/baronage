@@ -5,7 +5,7 @@ slug: the-two-styles-of-a-scottish-baron
 meta_description: "Was “baron” a title or a description of tenure? Charters, signatures and four volumes of Aberdeen and Banff records show when “Baron of X” and “X of Y” were used."
 category: Words & Usage
 published: 2026-09-27
-reviewed: 2026-09-27
+reviewed: 2026-10-10
 ---
 
 # Baron of X, or X of Y?
@@ -108,7 +108,13 @@ Once entries were made in date order, a change Innes dates to a recommendation o
 
 A Scottish baron had a name and a title. “Rose of Kilravock” was his name, the surname with its territorial designation, and the everyday form: the Lyon King of Arms Act of 1672 afterwards set it for subscription, allowing all but peers and bishops to sign with their surnames and to “adject the designations of their lands prefixing the word ‘of’”.[^59] “Baron of Kilravock” was his title, the dignity, used in address by sovereigns, regents and peers, by officers of state and the Privy Council, and by the barons themselves when the barony was in point. To be named by the one was not to lose the other: Hugh Rose used both in the same bond. A territorial designation made a man a laird; only a barony made him a baron. The two need not share a place-name, as Hallhead and Esslemont, or Teallach and Huntly, show; and a baron might hold the title with no territorial designation from it, as some always did and many have since 2004.
 
-That is why the question could be argued for centuries from genuine records on both sides. A charter or a bond will usually show the name; a royal letter will often show the title. The Lyon Court’s own registers recorded barons as barons: in a section of their own from 1672, by title in the entries from the later eighteenth century, and as *Baro de* in the birthbriefs. The style the Court confirmed in 1934 and 1943 was not new; it is the style the sovereigns themselves used. For the words themselves, see [Lairds, lords and barons](/reading-room/lairds-lords-and-barons/); for the Lyon Court’s change of view, [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/); for the form recorded in 1934, [The Esslemont petition of 1934](/reading-room/esslemont-petition-1934/).
+That is why the question could be argued for centuries from genuine records on both sides. A charter or a bond will usually show the name; a royal letter will often show the title. The Lyon Court’s own registers recorded barons as barons: in a section of their own from 1672, by title in the entries from the later eighteenth century, and as *Baro de* in the birthbriefs. The style the Court confirmed in 1934 and 1943 was not new; it is the style the sovereigns themselves used. For the words themselves, see [Lairds, lords and barons](/reading-room/lairds-lords-and-barons/); for how the Lyon Court settled the description, [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/); for the form recorded in 1934, [The Esslemont petition of 1934](/reading-room/esslemont-petition-1934/).
+
+## The Roll and the Pledge
+
+Charters, royal letters and the Lyon Court’s registers are the records counted in this paper. They are the records the Roll cites for each holder.
+
+The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-roll/), which enters a holder only on evidence, and offers [the Pledge](/pledge/): an undertaking, in honour and not in law, to preserve a barony within the family for future generations and to uphold the [Baronial Code of Honour](/baronial-code/). The precedent is [the baronets’ Roll of 1910](/reading-room/official-roll-of-the-baronetage-1910/).
 
 ---
 
