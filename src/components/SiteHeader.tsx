@@ -237,11 +237,12 @@ export function SiteHeader() {
                           <Link
                             href={c.href}
                             onClick={() => setMenu(null)}
-                            className={`block px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] transition-colors hover:bg-parchment-100 ${
+                            className={`flex items-center px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] transition-colors hover:bg-parchment-100 ${
                               (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href)) ? "text-oxblood" : "text-navy/80 hover:text-navy"
                             }`}
                           >
                             {c.label}
+                            {c.badge && <NavBadge>{c.badge}</NavBadge>}
                           </Link>
                         )}
                       </li>
@@ -322,13 +323,14 @@ export function SiteHeader() {
                               ) : (
                                 <Link
                                   href={c.href}
-                                  className={`block py-3 font-serif text-lg ${
+                                  className={`flex items-center py-3 font-serif text-lg ${
                                     (c.href === item.href ? pathname === item.href || pathname === item.href + "/" : isActive(c.href))
                                       ? "text-oxblood"
                                       : "text-navy/80"
                                   }`}
                                 >
                                   {c.label}
+                                  {c.badge && <NavBadge>{c.badge}</NavBadge>}
                                 </Link>
                               )}
                             </li>
