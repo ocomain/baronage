@@ -62,6 +62,20 @@ const ROBES_1606_SOURCE = (
   </>
 );
 
+/** Who has supporters: the Lyon Court's rule and its date, as our papers already quote it. */
+const SUPPORTERS_SOURCE = (
+  <>
+    The Lord Lyon’s guidance of 5 January 2010 keeps supporters for “representatives of baronial houses who had a seat in
+    Parliament until 1587” (
+    <a href="https://web.archive.org/web/20100925150122/http://www.lyon-court.com:80/lordlyon/616.html" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      archived copy
+    </a>
+    ). Innes of Learney: “the heirs of the many minor barons, or ‘Lairds’, who were liable to be called to Parliament prior
+    to 1587 … are entitled as of right to obtain grants of supporters from the Lord Lyon” (<em>Scots Heraldry</em>, 1978
+    ed., p. 71). The barons’ case of June 1673 is in Fountainhall, “Sundry Barons, &amp;c. against The Lord Lyon”.
+  </>
+);
+
 const chapters: GuideChapter[] = [
   {
     numeral: "I",
@@ -125,8 +139,12 @@ const chapters: GuideChapter[] = [
     title: "Supporters",
     lead: (
       <>
-        The old barons bore supporters because they had been heritable counsellors to the King in Parliament. In 1673
-        “sundry barons” took the Lord Lyon to court to keep them.
+        The old barons bore supporters because they had been heritable counsellors to the King in Parliament, so only
+        families who held their barony before 1587 have them
+        <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/60">
+          <Footnote n={3}>{SUPPORTERS_SOURCE}</Footnote>
+        </span>
+        . In 1673 “sundry barons” took the Lord Lyon to court to keep them.
       </>
     ),
     quote: "our old Barons, who are not Lords, and hold only their Lands in free Barony, have Supporters in their Atchievement",
