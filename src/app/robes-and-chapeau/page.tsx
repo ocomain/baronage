@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Footnote } from "@/components/Footnote";
 import { Drawing, GuideChapters, type GuideChapter } from "@/components/GuideChapters";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
@@ -27,12 +28,55 @@ export const metadata: Metadata = {
 const INNES = "http://journals.socantscot.org/index.php/psas/article/download/8229/8197/";
 const MACKENZIE = "https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n552";
 
+/** Why "lords of parliament and barons": the Act's own phrase, and Innes of Learney's reading of it. */
+const LORDS_AND_BARONS_SOURCE = (
+  <>
+    The Act gives the red mantle to “the other lords of parliament” (
+    <a href="https://www.rps.ac.uk/trans/1455/8/12" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      RPS 1455/8/12
+    </a>
+    ). Lord Lyon Innes of Learney: “This makes it clear that the Earls and the Barons were the ‘Lords of Parliament’” (p. 130,
+    note 2); under the Act the greater and the lesser barons “were robed alike” (p. 139). Sir Thomas Innes of Learney, “The
+    Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em>, vol. 79
+    (1944–45) —{" "}
+    <a href={INNES} target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      open access PDF
+    </a>
+    .
+  </>
+);
+
+/** 1605–06: who was robed with whom. Both documents as Innes of Learney prints them. */
+const ROBES_1606_SOURCE = (
+  <>
+    The King’s command of 7 June 1605: dukes, marquises and earls in “red crimson velvet robes lined with white ermine”,
+    lords in “red scarlet robes” (Register of the Privy Council, vol. vii, p. 57). The proclamation of 22 June 1606, from
+    Birrell’s Diary: “Dukes, Marquesses, Earls, Lordis, and Barronis, should show their evidents to be placed and robes to
+    be made in red, lined white.” Both in Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”,{" "}
+    <em>Proceedings of the Society of Antiquaries of Scotland</em>, vol. 79 (1944–45), pp. 138–139, who notes that the
+    proclamation applied the robes to both “Lords” and “Barons” —{" "}
+    <a href={INNES} target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      open access PDF
+    </a>
+    . The buttons: the same paper, pp. 127–129.
+  </>
+);
+
 const chapters: GuideChapter[] = [
   {
     numeral: "I",
     years: "1455",
     title: "The red robe",
-    lead: "Parliament gave lords and barons the same robe. Under “the other lords of parliament”, both wore a red mantle open at the front; the earls’ was brown, furred with white.",
+    lead: (
+      <>
+        Parliament gave the lords of parliament and barons
+        {/* the marker is gold-deep by default, for cream pages; lighter here so it reads on the dark plate */}
+        <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/60">
+          <Footnote n={1}>{LORDS_AND_BARONS_SOURCE}</Footnote>
+        </span>{" "}
+        the same rank of red mantle open at the front. The earls’ was brown, furred with white.
+      </>
+    ),
     quote: "a mantle likewise of red, open at the front, lined with silk or furred with grey ‘gris’ fur or ‘pured’ fur",
     source: { label: "Parliament of Scotland · 4 August 1455", href: "https://www.rps.ac.uk/trans/1455/8/12" },
     img: "/images/guide/robe-of-state.webp",
@@ -42,7 +86,16 @@ const chapters: GuideChapter[] = [
     numeral: "II",
     years: "1606",
     title: "Five buttons",
-    lead: "The older travelling mantle was circular and fastened on the right shoulder: three buttons for a freeholder, five for a baron. In 1606 the Privy Council put lords and barons alike into new robes “in red, lined white” for the Riding of Parliament.",
+    lead: (
+      <>
+        In 1605 James VI gave dukes, marquises and earls crimson velvet lined with ermine, and “Lords” scarlet. The
+        proclamation of 1606 named “Lordis, and Barronis” together
+        <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/60">
+          <Footnote n={2}>{ROBES_1606_SOURCE}</Footnote>
+        </span>
+        , their robes “in red, lined white”. Below them, the freeholder’s mantle had three buttons; the baron’s had five.
+      </>
+    ),
     quote: "nather Commissioners of Burows nor Barons rode, for vant of furnitur",
     source: { label: "Lyon’s record of the Riding · 1606 · Innes of Learney, 1945, pp. 127–129", href: INNES },
     img: "/images/guide/mantle-five-buttons.webp",
