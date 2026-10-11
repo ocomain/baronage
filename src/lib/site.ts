@@ -105,7 +105,7 @@ export const navMenu: NavMenuItem[] = [
       { href: "/scottish-baronies-explained", label: "Baronies Explained" },
       { href: "/proper-address", label: "Proper Address" },
       { href: "/history", label: "History" },
-      { href: "/reading-room/robes-and-insignia", label: "Robes & Chapeau" },
+      { href: "/robes-and-chapeau", label: "Robes & Chapeau" },
       { href: "/reading-room/the-barons-court-and-its-officers", label: "Court & Officers" },
       { href: "/reading-room/heraldry-and-flags-of-a-baron", label: "Arms & Flags" },
     ],
