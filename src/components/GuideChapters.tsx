@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { Footnote } from "@/components/Footnote";
 import { HeaderOffset } from "@/components/HeaderOffset";
 import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
@@ -31,6 +32,8 @@ export type GuideChapter = {
   dark?: boolean;
   /** a drawing shown beside the words (under them on phones) */
   figure?: ReactNode;
+  /** gives the figure a wider column on wide screens (for a long flag or a wide diagram) */
+  figureWide?: boolean;
 };
 
 export const ChapterLink = ({ href, children }: { href: string; children: ReactNode }) => (
@@ -131,7 +134,7 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
             </motion.div>
             {c.figure && (
               <motion.div
-                className="shrink-0 lg:w-[22rem]"
+                className={`shrink-0 ${c.figureWide ? "lg:w-[30rem]" : "lg:w-[22rem]"}`}
                 initial={reduceMotion ? false : { opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ amount: 0.15, once: true }}
@@ -155,5 +158,31 @@ export function Drawing({ src, alt, caption, className = "" }: { src: string; al
       <img src={src} alt={alt} className="mx-auto h-auto w-full drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)]" loading="lazy" decoding="async" />
       <figcaption className="mt-4 font-sans text-[0.68rem] uppercase tracking-[0.18em] text-parchment-200/85">{caption}</figcaption>
     </figure>
+  );
+}
+
+/** A document or diagram shown as a small framed plate, with its caption (for a chapter's `figure`). */
+export function Facsimile({ src, alt, caption, className = "" }: { src: string; alt: string; caption: ReactNode; className?: string }) {
+  return (
+    <figure className={className}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="mx-auto h-auto max-h-[70svh] w-auto max-w-full rounded-sm lg:max-h-[50svh] border border-gold/40 bg-parchment-50 shadow-[0_18px_40px_-18px_rgba(0,0,0,0.75)]"
+      />
+      <figcaption className="mt-3 text-center font-sans text-[0.72rem] leading-relaxed text-parchment-200/85">{caption}</figcaption>
+    </figure>
+  );
+}
+
+/** A numbered reference marker for a chapter's words: the usual pop-up, lightened so it reads on a dark plate. */
+export function Ref({ n, children }: { n: number; children: ReactNode }) {
+  return (
+    <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/60">
+      <Footnote n={n}>{children}</Footnote>
+    </span>
   );
 }
