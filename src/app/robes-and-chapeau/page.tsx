@@ -147,7 +147,7 @@ const chapters: GuideChapter[] = [
         . In 1673 “sundry barons” took the Lord Lyon to court to keep them.
       </>
     ),
-    quote: "our old Barons, who are not Lords, and hold only their Lands in free Barony, have Supporters in their Atchievement",
+    quote: "our old Barons, … hold only their Lands in free Barony, have Supporters in their Atchievement",
     source: { label: "Sir George Mackenzie, Lord Advocate · 1680", href: MACKENZIE },
     img: "/images/guide/supporters-in-stone.webp",
     pos: "74% 50%",
