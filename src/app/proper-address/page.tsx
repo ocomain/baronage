@@ -6,6 +6,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { DigitalAddressSimulator } from "@/components/DigitalAddressSimulator";
 import { Footnote } from "@/components/Footnote";
+import { HeaderOffset } from "@/components/HeaderOffset";
 import { Reveal } from "@/components/Reveal";
 import { Container, Section } from "@/components/primitives";
 
@@ -153,9 +154,45 @@ const HIGHER_SOURCES: ReactNode[] = [
     <Link href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Innes of Learney, 1945</Link>.
   </>,
 ];
+/* Sources for the duke-and-baron table under "Address". Each is set out in full, with every letter cited,
+   in the Reading Room paper "Where 'The Much Honoured' comes from". */
+const MUCH_HONOURED_PAPER = (
+  <Link href="/reading-room/where-the-much-honoured-comes-from/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+    Where “The Much Honoured” comes from
+  </Link>
+);
+const YOUR_HONOUR_SOURCE = (
+  <>
+    <em>Titles and Forms of Address</em>, 9th ed. (1955), under “Chiefs of Scottish Clans and Territorial Houses”: “The
+    prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured; in address, Your Honour” —{" "}
+    <Src href="https://archive.org/details/titlesandformsof017862mbp">archive.org</Src>. In use: “May it pleas your
+    Honour”, the tenants of Glenshee to the Laird of Invercauld, 4 March 1776, <em>The Records of Invercauld</em>,{" "}
+    <Src href="https://archive.org/details/recordsofinverca00news/page/n377">pp. 342–343</Src>. See {MUCH_HONOURED_PAPER}.
+  </>
+);
+const FORMAL_LETTER_SOURCE = (
+  <>
+    Opening: the Marquis of Huntly to the Laird of Grant, 22 December 1677, “Much honored Sir”, <em>The Chiefs of
+    Grant</em>, vol. 2, <Src href="https://archive.org/details/chiefsofgrantv200fras/page/n86">p. 23</Src>; General Mackay to
+    Campbell of Calder, 18 October 1677, “Much Honored Sir”, <em>The Book of the Thanes of Cawdor</em>,{" "}
+    <Src href="https://archive.org/details/bookthanescawdo00innegoog/page/n424">p. 336</Src>. Close: George Stirling to the
+    Laird of Keir, 1673, “your Honouris humble servant”, <em>The Stirlings of Keir</em>,{" "}
+    <Src href="https://archive.org/details/stirlingsofkeirt00fras/page/n629">p. 506</Src>. See {MUCH_HONOURED_PAPER}.
+  </>
+);
+const ENVELOPE_SOURCE = (
+  <>
+    Letters “should be and still sometimes are addressed, e.g. ‘The Much Honoured, the Laird of Glenfalloch,’ or if a
+    baron, ‘The Much Honoured, the Baron of Dunfallandy’”: Frank Adam, <em>The Clans, Septs and Regiments of the Scottish
+    Highlands</em>, revised by Sir Thomas Innes of Learney,{" "}
+    <Src href="https://archive.org/details/bwb_S0-BUT-001/page/n441">p. 410</Src>. The passage is in the edition of 1952
+    (W. &amp; A. K. Johnston) and in later ones; the page linked is from a later printing. It is not in the first edition
+    of 1908.
+  </>
+);
 function Sec({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
-    <section id={id} className="scroll-mt-32">
+    <section id={id} className="anchor-clear">
       <h2 className="font-display text-[1.7rem] font-medium leading-tight text-navy underline decoration-1 underline-offset-[0.32em] sm:text-[2.05rem]">
         {title}
       </h2>
@@ -192,6 +229,7 @@ export default function ProperAddressPage() {
         </Container>
       </Section>
 
+      <HeaderOffset />
       <SectionSidebar items={NAV} anchorId="page-nav" />
 
       {/* In-page quick navigation */}
@@ -279,12 +317,12 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Speaking to him deferentially</td>
                         <td>Your Grace</td>
-                        <td><S>Your Honour</S></td>
+                        <td><S>Your Honour</S><Footnote n={1}>{YOUR_HONOUR_SOURCE}</Footnote></td>
                       </tr>
                       <tr>
                         <td>Formal letter</td>
                         <td>opens “My Lord Duke”, closes “Your Grace’s most obedient servant”</td>
-                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S></td>
+                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S><Footnote n={2}>{FORMAL_LETTER_SOURCE}</Footnote></td>
                       </tr>
                       <tr>
                         <td>Social letter</td>
@@ -294,11 +332,15 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Envelope</td>
                         <td>His Grace The Duke of Middlesex</td>
-                        <td><S>The Much Honoured Baron of Inverness</S></td>
+                        <td><S>The Much Honoured, the Baron of Inverness</S><Footnote n={3}>{ENVELOPE_SOURCE}</Footnote></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                {/* The three references above open in pop-ups; these copies keep them in the page's own HTML. */}
+                <div hidden>{YOUR_HONOUR_SOURCE}</div>
+                <div hidden>{FORMAL_LETTER_SOURCE}</div>
+                <div hidden>{ENVELOPE_SOURCE}</div>
               </Sec>
             </Reveal>
 
@@ -418,7 +460,7 @@ export default function ProperAddressPage() {
                 </P>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
-                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={3}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
+                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={5}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
                 </P>
                 <Forms>
                   <F>
@@ -482,7 +524,7 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={1}>{HEIR_SOURCE}</Footnote>
+                  The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={6}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <Forms>
