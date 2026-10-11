@@ -399,7 +399,7 @@ export default function ProperAddressPage() {
                       </tr>
                       <tr>
                         <td>Envelope</td>
-                        <td>His Grace The Duke of Middlesex</td>
+                        <td>His Grace the Duke of Middlesex</td>
                         <td><S>The Much Honoured, the Baron of Inverness</S><Footnote n={6}>{ENVELOPE_SOURCE}</Footnote></td>
                       </tr>
                     </tbody>
