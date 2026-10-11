@@ -241,11 +241,11 @@ export default function RobesAndChapeauPage() {
               The helm, the banner and the four flags a baron may fly.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <ButtonLink href="/reading-room/heraldry-and-flags-of-a-baron" variant="gold">
+              <ButtonLink href="/arms-and-flags" variant="gold">
                 Arms &amp; Flags
               </ButtonLink>
-              <ButtonLink href="/proper-address" variant="outlineLight">
-                How to address a baron
+              <ButtonLink href="/court-and-officers" variant="outlineLight">
+                Court &amp; Officers
               </ButtonLink>
             </div>
           </Reveal>
