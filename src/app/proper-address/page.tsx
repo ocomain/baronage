@@ -509,8 +509,8 @@ export default function ProperAddressPage() {
                   </Link>{" "}
                   held legally by the baron (or baroness in her own right). It does not create a separate legal title for
                   a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
-                  She shares his rank and assumes the feminine form of his title by courtesy but does not hold it in her
-                  own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
+                  She shares his rank and assumes the feminine form of his title by legal description
+                  <Footnote n={8}>{LADY_TITLE_SOURCE}</Footnote> but does not hold it in her own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
                   convention, not entitlement. As titles of nobility are considered part of a person’s name and
                   identity, her title is reflected in a British passport as her legal name.
                 </P>
@@ -520,7 +520,6 @@ export default function ProperAddressPage() {
                 <Forms>
                   <F>
                     <S>(The) Lady Inverness</S>
-                    <Footnote n={8}>{LADY_TITLE_SOURCE}</Footnote>
                     <Or />
                     <S>Jane, Lady Inverness</S>
                   </F>
