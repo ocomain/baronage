@@ -145,7 +145,12 @@ const chapters: Chapter[] = [
  * plate that the next scrolls over. Each plate carries one line of context and
  * one quotation from the record, linked to its source. Pure sticky stacking
  * (no scroll-hijack), so it degrades gracefully.
+ *
+ * Each plate after the first starts HOLD of a screen further down, so the plate before it stays whole
+ * and still for that much scrolling before it is covered (owner 2026-10-11: the next plate came over
+ * the words before they could be read). The words fade in as soon as a plate begins to arrive, once.
  */
+const HOLD = "mt-[45svh]";
 export function HistoryChapters() {
   const reduceMotion = useReducedMotion();
 
@@ -154,7 +159,7 @@ export function HistoryChapters() {
       {chapters.map((c, i) => (
         <section
           key={c.numeral}
-          className="sticky top-0 flex h-[100svh] items-center overflow-hidden border-t border-gold/30"
+          className={`sticky top-0 flex h-[100svh] items-center overflow-hidden border-t border-gold/30 ${i > 0 ? HOLD : ""}`}
           aria-label={`Chapter ${c.numeral}: ${c.title}`}
         >
           {/* A real image, not a CSS background: the first plate loads at once with priority, the rest as they near the screen. */}
@@ -192,8 +197,8 @@ export function HistoryChapters() {
               className="max-w-2xl"
               initial={reduceMotion ? false : { opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.5 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ amount: 0.15, once: true }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="font-inscribe text-[0.7rem] uppercase tracking-[0.28em] text-gold">
                 Chapter {c.numeral} · {c.years}
