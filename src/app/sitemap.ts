@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/armorial", ["src/app/armorial"]],
     ["/history", ["src/app/history", "src/components/HistoryChapters.tsx"]],
     ["/proper-address", ["src/app/proper-address"]],
+    ["/robes-and-chapeau", ["src/app/robes-and-chapeau", "src/components/GuideChapters.tsx"]],
     ["/baronial-code", ["src/app/baronial-code"]],
     ["/pledge", ["src/app/pledge"]],
     ["/charitable-trust", ["src/app/charitable-trust"]],
