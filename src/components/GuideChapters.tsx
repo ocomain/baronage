@@ -71,7 +71,8 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
           ref={(el) => {
             plates.current[i] = el;
           }}
-          className="sticky top-0 flex min-h-[100svh] items-center overflow-hidden border-t border-gold/30"
+          // mt on every plate but the first: the plate before holds, whole and still, for that much scrolling (as on History)
+          className={`sticky top-0 flex min-h-[100svh] items-center overflow-hidden border-t border-gold/30 ${i > 0 ? "mt-[45svh]" : ""}`}
           aria-label={`${label} ${c.numeral}: ${c.title}`}
         >
           <picture aria-hidden>
@@ -110,8 +111,8 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
               className="max-w-2xl lg:flex-1"
               initial={reduceMotion ? false : { opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.5 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ amount: 0.15, once: true }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="font-inscribe text-[0.7rem] uppercase tracking-[0.28em] text-gold">
                 {label} {c.numeral} · {c.years}
@@ -133,8 +134,8 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
                 className="shrink-0 lg:w-[22rem]"
                 initial={reduceMotion ? false : { opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ amount: 0.5 }}
-                transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ amount: 0.15, once: true }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
                 {c.figure}
               </motion.div>
