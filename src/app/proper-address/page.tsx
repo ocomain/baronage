@@ -77,6 +77,10 @@ const HEIR_SOURCE: ReactNode = (
     “Whilst the heir-apparent of a feudal baron is invariably styled ‘younger of’, the heir, whether apparent or
     presumptive, of an earl or peerage-lord is ‘Master’.” Quoted in the{" "}
     <Src href="https://dsl.ac.uk/entry/snd/maister_n1_v">Dictionaries of the Scots Language, “Maister”</Src>, sense 3.
+    {" "}
+    Innes of Learney: “the heir-apparent prefixes the word ‘younger’ (or ‘ygr.’) to the title”, and “All unmarried
+    daughters bear these titles, but younger sons, younger brothers, and collaterals do not bear the designation of the
+    house”: <Adam page="408" n={439} />.
   </>
 );
 /** Source for "Lady of X" used by a lady laird in her own right. */
@@ -90,7 +94,9 @@ const LADY_SOURCE: ReactNode = (
 const POSTNOMINAL_SOURCE: ReactNode = (
   <>
     Birthday Honours 2005, Diplomatic Service and Overseas List, 11 June 2005, Order of the British Empire, OBE: “Robert Brown GILLESPIE, Baron of Blackhall — For services to British business interests, especially engineering, in France”, p. 2 —{" "}
-    <Src href="http://news.bbc.co.uk/1/shared/bsp/hi/pdfs/birthhons_foreign_11_06_05.pdf">PDF (BBC News)</Src>. The official list prints the barony as part of the name; the honour follows it.
+    <Src href="http://news.bbc.co.uk/1/shared/bsp/hi/pdfs/birthhons_foreign_11_06_05.pdf">PDF (BBC News)</Src>. The official list prints the barony as part of the name; the honour follows it. Innes of Learney gives the rule:
+    such honours “follow after the territorial or chiefly title, e.g. ‘Colonel Hugh Rose of Kilravock, C.B.’”:{" "}
+    <Adam page="410" n={441} />.
   </>
 );
 /** Sources for the Written Address forms (designation and barony; post-nominals). */
@@ -154,6 +160,67 @@ const HIGHER_SOURCES: ReactNode[] = [
     <Link href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Innes of Learney, 1945</Link>.
   </>,
 ];
+/* Sir Thomas Innes of Learney on forms of address, in his revision of Adam's "Clans, Septs and Regiments"
+   (pp. 408–411). Every quotation below was read on the page image (11 October 2026). In copyright: short
+   quotations only. */
+function Adam({ page, n }: { page: string; n: number }) {
+  return (
+    <>
+      Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, revised by Sir Thomas Innes of
+      Learney, <Src href={`https://archive.org/details/bwb_S0-BUT-001/page/n${n}`}>p. {page}</Src> (the page linked is
+      from a later printing)
+    </>
+  );
+}
+const TITLE_ALONE_SOURCE = (
+  <>
+    “In personal address, the title alone is used, e.g. ‘Lochiel,’ ‘Glengarry,’ ‘Monaltrie’—no ‘Mr.’”; and “It is rude,
+    not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”: <Adam page="409" n={440} />.
+  </>
+);
+const ESQUIRE_SOURCE = (
+  <>
+    “‘Esquire’ is not normally added, the designation being taken to infer it.” Where it is used, that is “when the laird
+    or chief is not a baron”: <Adam page="410" n={441} />.
+  </>
+);
+const MADAM_SOURCE = (
+  <>
+    A laird’s wife is “in formal documents, ‘Madam Neilson of Craigcaffie’”: <Adam page="411" n={442} />.
+  </>
+);
+const VISITING_CARD_SOURCE = (
+  <>
+    Territorial and chiefly titles are used upon visiting-cards, “where they may (and strictly should) be on the same line
+    as the name”: <Adam page="410" n={441} />.
+  </>
+);
+const LADY_TITLE_SOURCE = (
+  <>
+    “This feudal title of ‘lady’ is not a ‘courtesy’ but a proper legal description of the female”; “‘Lady Craigcaffie’ is
+    a style still used, e.g. Lyon Court record narrative”: <Adam page="411" n={442} />. The Laird of Drum’s wife is “The
+    Lady Drum”: the same, p. 410, note 1.
+  </>
+);
+const DEAR_SOURCE = (
+  <>
+    In personal letters a laird or chief “is addressed ‘Dear Glenfalloch,’ not ‘Dear Campbell’”: <Adam page="410" n={441} />.
+  </>
+);
+const WIDOW_SOURCE = (
+  <>
+    “Under Scots law, a wife or widow has certain rights in her husband’s estate, and in our law of families and titles she
+    has corresponding rights in the name and title of her husband”: <Adam page="410" n={441} />.
+  </>
+);
+const RECORDS_SOURCE = (
+  <>
+    “official recognition is only accorded where such titles are ordinarily used”; “Signature on cheques is a good test!”
+    He also quotes the editor of the <em>Annuaire de la Noblesse de la France</em>: such titles should be “regularly
+    employed in all registrations of Births, Marriages, or Deaths”: <Adam page="409" n={440} />.
+  </>
+);
+
 /* Sources for the duke-and-baron table under "Address". Each is set out in full, with every letter cited,
    in the Reading Room paper "Where 'The Much Honoured' comes from". */
 const MUCH_HONOURED_PAPER = (
@@ -263,6 +330,7 @@ export default function ProperAddressPage() {
                   </F>
                   <F>
                     In person: <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
+                    <Footnote n={1}>{TITLE_ALONE_SOURCE}</Footnote>
                   </F>
                   <F>
                     In person: <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
@@ -270,8 +338,8 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
-                  “Mr / Mrs Smith” or “Esq.” is certainly incorrect. Some wives of highland clan chief-barons prefer{" "}
-                  <S>Madam</S>.
+                  “Mr / Mrs Smith” or “Esq.” is certainly incorrect.<Footnote n={2}>{ESQUIRE_SOURCE}</Footnote> Some wives of highland clan chief-barons prefer{" "}
+                  <S>Madam</S>.<Footnote n={3}>{MADAM_SOURCE}</Footnote>
                 </P>
                 <P>
                   “<S>Your Honour</S>” is the old formal address of a baron, the spoken counterpart of the written
@@ -317,12 +385,12 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Speaking to him deferentially</td>
                         <td>Your Grace</td>
-                        <td><S>Your Honour</S><Footnote n={1}>{YOUR_HONOUR_SOURCE}</Footnote></td>
+                        <td><S>Your Honour</S><Footnote n={4}>{YOUR_HONOUR_SOURCE}</Footnote></td>
                       </tr>
                       <tr>
                         <td>Formal letter</td>
                         <td>opens “My Lord Duke”, closes “Your Grace’s most obedient servant”</td>
-                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S><Footnote n={2}>{FORMAL_LETTER_SOURCE}</Footnote></td>
+                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S><Footnote n={5}>{FORMAL_LETTER_SOURCE}</Footnote></td>
                       </tr>
                       <tr>
                         <td>Social letter</td>
@@ -332,7 +400,7 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Envelope</td>
                         <td>His Grace The Duke of Middlesex</td>
-                        <td><S>The Much Honoured, the Baron of Inverness</S><Footnote n={3}>{ENVELOPE_SOURCE}</Footnote></td>
+                        <td><S>The Much Honoured, the Baron of Inverness</S><Footnote n={6}>{ENVELOPE_SOURCE}</Footnote></td>
                       </tr>
                     </tbody>
                   </table>
@@ -341,6 +409,10 @@ export default function ProperAddressPage() {
                 <div hidden>{YOUR_HONOUR_SOURCE}</div>
                 <div hidden>{FORMAL_LETTER_SOURCE}</div>
                 <div hidden>{ENVELOPE_SOURCE}</div>
+                <div hidden>
+                  {TITLE_ALONE_SOURCE} {ESQUIRE_SOURCE} {MADAM_SOURCE} {VISITING_CARD_SOURCE} {LADY_TITLE_SOURCE} {DEAR_SOURCE}{" "}
+                  {WIDOW_SOURCE} {RECORDS_SOURCE} {POSTNOMINAL_SOURCE}
+                </div>
               </Sec>
             </Reveal>
 
@@ -390,6 +462,18 @@ export default function ProperAddressPage() {
                   </p>
                 </div>
                 <P>
+                  On a visiting card, the title goes on the same line as the name, never on a line beneath it
+                  <Footnote n={7}>{VISITING_CARD_SOURCE}</Footnote>:
+                </P>
+                <Forms>
+                  <F>
+                    <S>John Smith, Baron of Inverness</S>
+                  </F>
+                  <F>
+                    Not “John Smith” with “Baron of Inverness” on a second line
+                  </F>
+                </Forms>
+                <P>
                   Where the territorial designation and the barony differ, both are written, as the Lyon Court’s
                   Gazette notices do: “[Surname] of Kildonan, Baron of Inverness”. They may also be joined socially:
                   Lord Lyon Innes of Learney, writing in 1945, called the petitioner in the Esslemont case, Gordon of
@@ -436,6 +520,7 @@ export default function ProperAddressPage() {
                 <Forms>
                   <F>
                     <S>(The) Lady Inverness</S>
+                    <Footnote n={8}>{LADY_TITLE_SOURCE}</Footnote>
                     <Or />
                     <S>Jane, Lady Inverness</S>
                   </F>
@@ -456,11 +541,11 @@ export default function ProperAddressPage() {
                   >
                     laird
                   </Link>{" "}
-                  in her own right.<Footnote n={4}>{LADY_SOURCE}</Footnote>
+                  in her own right.<Footnote n={9}>{LADY_SOURCE}</Footnote>
                 </P>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
-                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={5}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
+                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={10}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
                 </P>
                 <Forms>
                   <F>
@@ -516,7 +601,8 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  Alternatively, only the barony can be used: <S>Dear Inverness</S>, but this format is never for a lady.
+                  Alternatively, only the barony can be used: <S>Dear Inverness</S>
+                  <Footnote n={11}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
                 </P>
               </Sec>
             </Reveal>
@@ -524,7 +610,7 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={6}>{HEIR_SOURCE}</Footnote>
+                  The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={12}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <Forms>
@@ -637,7 +723,7 @@ export default function ProperAddressPage() {
                   The following section applies only to Pledged hereditary titles; as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
-                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]” unless the new Baron is
+                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={13}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
                   married. New baron must be related to the dowager. In such cases, she may choose to be styled as:
                 </P>
                 <Forms>
@@ -852,6 +938,10 @@ export default function ProperAddressPage() {
                   displayed correctly and with proper respect for its historical and legal significance. Below are
                   recommended practices for filling out typical fields in computer systems, such as databases, online
                   forms, and digital directories. Always think of how it will be presented in that system:
+                </P>
+                <P>
+                  Use the title on every record and every signature. Official recognition is given only to titles in
+                  ordinary use.<Footnote n={14}>{RECORDS_SOURCE}</Footnote>
                 </P>
                 <DigitalAddressSimulator />
                 <p className="mt-10 font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Field by field</p>
