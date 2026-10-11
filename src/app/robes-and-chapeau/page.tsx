@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: "Robes and Chapeau of a Scottish Baron",
   description:
     "The red robe of 1455, the five-buttoned mantle, the chapeau and supporters: what a Scottish baron wore, in five short chapters from the record.",
+  openGraph: {
+    type: "article",
+    title: "Robes and Chapeau of a Scottish Baron",
+    description: "The red robe of 1455, the five buttons, the chapeau and supporters: what a Scottish baron wore, in the words of the record.",
+    url: "/robes-and-chapeau/",
+    images: [{ url: "/og-robes-and-chapeau.jpg", width: 1200, height: 630, alt: "A red velvet robe of state furred with grey, with the words Robes and Chapeau" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Robes and Chapeau of a Scottish Baron",
+    description: "What a Scottish baron wore, in the words of the record.",
+    images: ["/og-robes-and-chapeau.jpg"],
+  },
 };
 
 const INNES = "http://journals.socantscot.org/index.php/psas/article/download/8229/8197/";
@@ -19,7 +32,7 @@ const chapters: GuideChapter[] = [
     numeral: "I",
     years: "1455",
     title: "The red robe",
-    lead: "Parliament gave the lords of parliament, barons among them, a red mantle open at the front. The earls’ was brown, furred with white.",
+    lead: "Parliament gave lords and barons the same robe. Under “the other lords of parliament”, both wore a red mantle open at the front; the earls’ was brown, furred with white.",
     quote: "a mantle likewise of red, open at the front, lined with silk or furred with grey ‘gris’ fur or ‘pured’ fur",
     source: { label: "Parliament of Scotland · 4 August 1455", href: "https://www.rps.ac.uk/trans/1455/8/12" },
     img: "/images/guide/robe-of-state.webp",
@@ -46,9 +59,10 @@ const chapters: GuideChapter[] = [
     pos: "58% 50%",
     dark: true,
     figure: (
-      <div className="grid grid-cols-2 items-end gap-6 lg:grid-cols-1 lg:gap-10">
-        <Drawing src="/images/guide/chapeau-gules.svg" alt="A red chapeau turned up with ermine" caption={<>Chapeau gules, furred ermine<br />the baron’s cap</>} />
-        <Drawing src="/images/guide/chapeau-azure.svg" alt="A blue chapeau turned up with ermine" caption={<>Chapeau azure<br />representatives of baronial houses</>} className="lg:w-2/3 lg:mx-auto" />
+      <div className="grid grid-cols-2 items-end gap-x-4 gap-y-6 lg:gap-x-6 lg:gap-y-8">
+        <Drawing className="col-span-2 mx-auto w-full max-w-[15rem] lg:max-w-none" src="/images/guide/chapeau-gules.svg" alt="A red chapeau turned up with ermine" caption={<>The baron’s chapeau<br />red, furred ermine</>} />
+        <Drawing src="/images/guide/chapeau-azure.svg" alt="A blue chapeau turned up with ermine" caption={<>The blue chapeau<br />representatives of baronial houses</>} />
+        <Drawing src="/images/guide/chapeau-allodial.svg" alt="A red chapeau with a blue ermine brim" caption={<>The allodial chapeau<br />the Baron of the Bachuil</>} />
       </div>
     ),
   },
@@ -58,8 +72,8 @@ const chapters: GuideChapter[] = [
     title: "Supporters",
     lead: (
       <>
-        The old barons bore supporters, though they were not lords, because they had been heritable counsellors to the
-        King in Parliament. In 1673 “sundry barons” took the Lord Lyon to court to keep them.
+        The old barons bore supporters because they had been heritable counsellors to the King in Parliament. In 1673
+        “sundry barons” took the Lord Lyon to court to keep them.
       </>
     ),
     quote: "our old Barons, who are not Lords, and hold only their Lands in free Barony, have Supporters in their Atchievement",
