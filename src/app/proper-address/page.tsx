@@ -83,6 +83,19 @@ const HEIR_SOURCE: ReactNode = (
     house”: <Adam page="408" n={439} />.
   </>
 );
+/** "The Maid of X" for a daughter who is the heir: two uses in the Bachuil family (owner's references, 2026-10-12). */
+const MAID_SOURCE: ReactNode = (
+  <>
+    “From the Isle of Lismore came Catriona, the Maid of Bachuil heir to the chiefship of the Macleays, and her sister
+    Flora Livingstone of Bachuil.” — the Standing Council of Scottish Chiefs,{" "}
+    <Src href="https://www.clanchiefs.org.uk/heirs-reception-given-by-the-standing-council-of-scottish-chiefs/">
+      “Heirs Reception given by the Standing Council of Scottish Chiefs”
+    </Src>
+    , 15 December 2014, on the reception at the Palace of Holyroodhouse on 28 November 2014. See also the Baron of the
+    Bachuil’s own profile on <Src href="https://uk.linkedin.com/in/niall-bachuil-40a7ab5a">LinkedIn</Src> (sign-in
+    needed).
+  </>
+);
 /** Source for "Lady of X" used by a lady laird in her own right. */
 const LADY_SOURCE: ReactNode = (
   <>
@@ -612,6 +625,7 @@ export default function ProperAddressPage() {
                   The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={12}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
+                <div hidden>{MAID_SOURCE}</div>
                 <Forms>
                   <F>
                     <S>Younger of Barony</S>
@@ -626,8 +640,8 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  Where there is no son and a daughter is the heir, some families style her “Maid of Barony”, a usage best
-                  kept where the family already has it:
+                  Where there is no son and a daughter is the heir, some families style her “Maid of Barony”
+                  <Footnote n={13}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
                 </P>
                 <Forms>
                   <F>
@@ -722,7 +736,7 @@ export default function ProperAddressPage() {
                   The following section applies only to Pledged hereditary titles; as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
-                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={13}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
+                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={14}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
                   married. New baron must be related to the dowager. In such cases, she may choose to be styled as:
                 </P>
                 <Forms>
@@ -940,7 +954,7 @@ export default function ProperAddressPage() {
                 </P>
                 <P>
                   Use the title on every record and every signature. Official recognition is given only to titles in
-                  ordinary use.<Footnote n={14}>{RECORDS_SOURCE}</Footnote>
+                  ordinary use.<Footnote n={15}>{RECORDS_SOURCE}</Footnote>
                 </P>
                 <DigitalAddressSimulator />
                 <p className="mt-10 font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Field by field</p>
