@@ -77,7 +77,7 @@ const HEIR_SOURCE: ReactNode = (
     maister of Forbes” (<Src href="https://www.rps.ac.uk/ms/1584/5/60">Records of the Parliaments of Scotland, 1584/5/60</Src>).
     The Crown today: “Donald Cameron, Younger of Lochiel” (
     <Src href="https://www.thegazette.co.uk/London/issue/50467/page/4069">London Gazette, 21 March 1986, p. 4069</Src>).
-    With “the”: an Act of 1778, “Archibald Grant the younger of Monymusk” (
+    With “the”: an Act of 1778, “Lieutenant Allan Malcolm the younger of Lochore” (
     <Src href="https://archive.org/details/bim_eighteenth-century_anno-regni-georgii-iii-_great-britain_1778/page/n485/mode/1up">
       18 Geo. III, c. 23, p. 486
     </Src>
