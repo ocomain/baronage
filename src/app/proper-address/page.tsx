@@ -615,7 +615,7 @@ export default function ProperAddressPage() {
                 </P>
                 <Forms>
                   <F>
-                    <S>Dear Baron of Inverness</S>
+                    <S>Dear the baron of Inverness</S>
                     <Or />
                     <S>Dear Baron</S>
                   </F>
@@ -638,7 +638,7 @@ export default function ProperAddressPage() {
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
                   The heir is styled “Younger of Barony”, as a peer’s heir is “Master of”. “The” may go before either,
-                  and keeps “Younger” from being read as a surname.<Footnote n={12}>{HEIR_SOURCE}</Footnote>
+                  and keeps “younger” from being read as a surname.<Footnote n={12}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <div hidden>{MAID_SOURCE}</div>
@@ -646,12 +646,10 @@ export default function ProperAddressPage() {
                   <F>
                     <S>Younger of Barony</S>
                     <Or />
-                    <S>The Younger of Barony</S>
-                    <Or />
-                    <S>Mr John Smith, Younger of Barony</S>
+                    <S>Mr John Smith, younger of Barony</S>
                     <Or />
                     <S>Barony yr</S>
-                    <N>(spoken Barony)</N>
+                    <N>(spoken barony or young barony)</N>
                   </F>
                   <F>
                     Wife of heir: <S>Mrs Smith, Younger of Barony</S>
