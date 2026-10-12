@@ -7,6 +7,7 @@ import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
 import { EmailSignup } from "./EmailSignup";
 import { ExternalArrow } from "./primitives";
+import { IndexCountText } from "./IndexCount";
 import { navMenu, ROLL_URL, CALENDLY_URL, type NavLink } from "@/lib/site";
 
 
@@ -229,7 +230,7 @@ export function SiteHeader() {
                             onClick={() => setMenu(null)}
                             className="flex items-center gap-1.5 px-5 py-3 font-sans text-[0.74rem] font-medium uppercase tracking-[0.1em] text-navy/80 transition-colors hover:bg-parchment-100 hover:text-navy"
                           >
-                            {c.label}
+                            {c.liveIndexCount ? <IndexCountText text={c.label} /> : c.label}
                             <ExternalArrow className="h-3 w-3" />
                             {c.badge && <NavBadge>{c.badge}</NavBadge>}
                           </a>
@@ -316,7 +317,7 @@ export function SiteHeader() {
                                   rel="noopener noreferrer"
                                   className="flex items-center gap-2 py-3 font-serif text-lg text-navy/80"
                                 >
-                                  {c.label}
+                                  {c.liveIndexCount ? <IndexCountText text={c.label} /> : c.label}
                                   <ExternalArrow className="h-3.5 w-3.5" />
                                   {c.badge && <NavBadge>{c.badge}</NavBadge>}
                                 </a>

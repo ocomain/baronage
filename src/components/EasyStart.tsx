@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { EmailSignup } from "@/components/EmailSignup";
-import { ROLL_URL, INDEX_URL, CALENDLY_URL } from "@/lib/site";
+import { IndexCountText } from "@/components/IndexCount";
+import { ROLL_URL, INDEX_URL, INDEX_COUNT, CALENDLY_URL, formatCount } from "@/lib/site";
 
-const rows: { href: string; title: string; line: string; external?: boolean }[] = [
+/** `liveIndexCount`: the title contains the Index's count of baronies, which is swapped for the live figure. */
+const rows: { href: string; title: string; line: string; external?: boolean; liveIndexCount?: boolean }[] = [
   { href: ROLL_URL, title: "Check a title on the Roll", line: "Search the Roll of Scottish Barons by name or title.", external: true },
-  { href: INDEX_URL, title: "Look up 1,872 baronies", line: "The Index of Scottish Baronies (beta).", external: true },
+  { href: INDEX_URL, title: `Look up ${formatCount(INDEX_COUNT)} baronies`, line: "The Index of Scottish Baronies (beta).", external: true, liveIndexCount: true },
   { href: "/proper-address", title: "How to address a baron", line: "In speech, in letters and on forms." },
   { href: "/scottish-baronies-explained", title: "What are Scottish baronies?", line: "Plain answers to the common questions." },
   { href: "/pledge", title: "The Pledge", line: "A commitment, in honour, to keep a barony in the family." },
@@ -29,7 +31,7 @@ export function EasyStart() {
             const inner = (
               <>
                 <span className="ez-row-text">
-                  <span className="ez-row-title">{r.title}</span>
+                  <span className="ez-row-title">{r.liveIndexCount ? <IndexCountText text={r.title} /> : r.title}</span>
                   <span className="ez-row-line">{r.line}</span>
                 </span>
                 <span className="ez-row-go" aria-hidden>
