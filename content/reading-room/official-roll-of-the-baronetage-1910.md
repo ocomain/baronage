@@ -5,7 +5,7 @@ slug: official-roll-of-the-baronetage-1910
 meta_description: "How a Royal Warrant and an official Roll of 1910 restored a dignity in disarray: the precedent for the Roll of Scottish Barons."
 category: Heritage & Sources
 published: 2026-09-19
-reviewed: 2026-10-10
+reviewed: 2026-10-12
 ---
 
 # A dignity in disarray: the baronets’ Roll of 1910
@@ -101,5 +101,5 @@ There is a lesson in what failed, too. Broun’s Committee took honours the Crow
 [^18]: *Ibid.*, cl. XII, [p. 1124](https://www.thegazette.co.uk/London/issue/28339/page/1124).
 [^19]: Ministry of Justice, “Guidance Notes on Succession to a Baronetcy other than of Nova Scotia” (rev. January 2023), para. 4 — [archived copy](https://web.archive.org/web/20230329143104/https://www.baronetage.org/media/1276/guidance-notes-baronets-other-than-of-nova-scotia-rev-jan-23.pdf).
 [^20]: The Standing Council of the Baronetage, [“Official Roll”](https://www.baronetage.org/official-roll/) (as at 28 September 2026) and [“History”](https://www.baronetage.org/baronets/history/) (the position at 1 January 2026), both read on 10 October 2026. The Roll shows a baronetcy as dormant or vacant where “no person has proved their succession”.
-[^21]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(2)](https://www.legislation.gov.uk/asp/2000/5/section/63): the dignity “shall be, and shall be transferable only as, incorporeal heritable property (and shall not be a right as respects which a deed can be registered in the Land Register of Scotland or recorded in the Register of Sasines)”.
+[^21]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(2)](https://www.legislation.gov.uk/asp/2000/5/section/63): the dignity becomes an incorporeal hereditament and “shall not be a right as respects which a deed can be registered in the Land Register of Scotland or recorded in the Register of Sasines”.
 [^22]: [The Roll of Scottish Barons](/the-roll/), this site; the Roll’s [verification rules](https://roll.baronage.com/verification).
