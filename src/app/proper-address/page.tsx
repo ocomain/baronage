@@ -73,14 +73,29 @@ function Src({ href, children }: { href: string; children: ReactNode }) {
 /** Source for the heir's style, "Younger of" (and "Master" for a peer's heir). */
 const HEIR_SOURCE: ReactNode = (
   <>
+    Parliament, 1584, in one list: “Robert Dowglas, younger of Lochlevin, Laurence, maister of Oliephant, Johne,
+    maister of Forbes” (<Src href="https://www.rps.ac.uk/ms/1584/5/60">Records of the Parliaments of Scotland, 1584/5/60</Src>).
+    The Crown today: “Donald Cameron, Younger of Lochiel” (
+    <Src href="https://www.thegazette.co.uk/London/issue/50467/page/4069">London Gazette, 21 March 1986, p. 4069</Src>).
+    With “the”: an Act of 1778, “Archibald Grant the younger of Monymusk” (
+    <Src href="https://archive.org/details/bim_eighteenth-century_anno-regni-georgii-iii-_great-britain_1778/page/n485/mode/1up">
+      18 Geo. III, c. 23, p. 486
+    </Src>
+    ). For a peer’s heir the Passport Office enters “MASTER OF [title]” as the surname and adds “THE MASTER OF
+    [title]” (
+    <Src href="https://www.gov.uk/government/publications/titles-included-in-passports/titles-accessible">
+      HM Passport Office, Titles
+    </Src>
+    ).{" "}
     <em>An Introductory Survey of the Sources and Literature of Scots Law</em>, Stair Society, vol. 1 (1936), p. 433:
     “Whilst the heir-apparent of a feudal baron is invariably styled ‘younger of’, the heir, whether apparent or
     presumptive, of an earl or peerage-lord is ‘Master’.” Quoted in the{" "}
     <Src href="https://dsl.ac.uk/entry/snd/maister_n1_v">Dictionaries of the Scots Language, “Maister”</Src>, sense 3.
     {" "}
-    Innes of Learney: “the heir-apparent prefixes the word ‘younger’ (or ‘ygr.’) to the title”, and “All unmarried
-    daughters bear these titles, but younger sons, younger brothers, and collaterals do not bear the designation of the
-    house”: <Adam page="408" n={439} />.
+    Innes of Learney: “the heir-apparent prefixes the word ‘younger’ (or ‘ygr.’) to the title”; officials “might
+    otherwise suppose ‘younger’ to be a surname”, so in deeds he writes the word last; and “All unmarried daughters
+    bear these titles, but younger sons, younger brothers, and collaterals do not bear the designation of the house”:{" "}
+    <Adam page="408" n={439} />.
   </>
 );
 /** "The Maid of X" for a daughter who is the heir: two uses in the Bachuil family (owner's references, 2026-10-12). */
@@ -622,13 +637,16 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir may be addressed with the courtesy title “Younger of Barony”:<Footnote n={12}>{HEIR_SOURCE}</Footnote>
+                  The heir is styled “Younger of Barony”, as a peer’s heir is “Master of”. “The” may go before either,
+                  and keeps “Younger” from being read as a surname.<Footnote n={12}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <div hidden>{MAID_SOURCE}</div>
                 <Forms>
                   <F>
                     <S>Younger of Barony</S>
+                    <Or />
+                    <S>The Younger of Barony</S>
                     <Or />
                     <S>Mr John Smith, Younger of Barony</S>
                     <Or />
