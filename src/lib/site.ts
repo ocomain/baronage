@@ -24,6 +24,16 @@ export const FEATURED_PAPER = {
 export const ROLL_URL = "https://roll.baronage.com/";
 /** The Index of Scottish Baronies: council member Balvaird's research index, a sub-site like the Roll (public beta since 5 October 2026). */
 export const INDEX_URL = "https://baronies.baronage.com/";
+/**
+ * The Index's count of baronies as last known (13 October 2026). Written into the pages at build time and kept if
+ * JavaScript is off or the Index cannot be reached; the live figure from {@link INDEX_COUNT_URL} replaces it on mount
+ * (see IndexCountText).
+ */
+export const INDEX_COUNT = 1871;
+/** The Index publishes its own count here as `{ "baronies": number }`, readable from other origins. */
+export const INDEX_COUNT_URL = "https://baronies.baronage.com/count.json";
+/** A count as printed on the site: 1,871. */
+export const formatCount = (n: number) => n.toLocaleString("en-GB");
 
 /** Roll API origin (no trailing slash) — D1-backed endpoints, e.g. /api/stats. */
 export const ROLL_API = "https://roll.baronage.com";
@@ -55,7 +65,15 @@ export const EMAIL_SIGNUP: { action: string; emailField: string; hidden: Record<
   },
 };
 
-export type NavLink = { href: string; label: string; external?: boolean; /** Small "New" pill shown beside the label in the header only. */ badge?: string };
+export type NavLink = {
+  href: string;
+  label: string;
+  external?: boolean;
+  /** Small "New" pill shown beside the label in the header only. */
+  badge?: string;
+  /** The label contains the Index's count of baronies; the header swaps in the live figure. */
+  liveIndexCount?: boolean;
+};
 
 /** Primary navigation — mirrors the existing site menu. */
 export const navLinks: NavLink[] = [
@@ -94,7 +112,7 @@ export const navMenu: NavMenuItem[] = [
     selfInList: true,
     children: [
       { href: "/sbr-vs-roll", label: "SBR v Roll" },
-      { href: INDEX_URL, label: "Index of 1,872 baronies", external: true, badge: "New" },
+      { href: INDEX_URL, label: `Index of ${formatCount(INDEX_COUNT)} baronies`, external: true, badge: "New", liveIndexCount: true },
     ],
   },
   {
