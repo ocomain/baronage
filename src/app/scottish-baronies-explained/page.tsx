@@ -49,7 +49,7 @@ export const metadata: Metadata = {
  * answers change; both the visible "last reviewed" line and the schema.org
  * dateModified read from here, so they cannot drift. */
 const DATE_PUBLISHED = "2026-07-02";
-const DATE_MODIFIED = "2026-10-10";
+const DATE_MODIFIED = "2026-10-12";
 const REVIEWED_LABEL = "October 2026";
 
 const PAGE_URL = `${SITE_URL}/scottish-baronies-explained/`;
@@ -1401,7 +1401,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Incorporeal hereditament",
-    def: "An intangible form of heritable property that may be owned and inherited without attaching to land. Since 2004 a Scottish barony exists as such a dignity, independent of any estate.",
+    def: "An intangible heritable right that may be held and inherited without attaching to land. Since 2004 a Scottish barony exists as such a dignity, independent of any estate.",
   },
   {
     term: "Caput",
@@ -1434,7 +1434,7 @@ const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Register of Sasines",
-    def: "Scotland's public register of property deeds. After the Conveyancing (Scotland) Act 1874 the transfer of a barony was recorded here; since 2004, baronies are recorded in the separate Scottish Barony Register.",
+    def: "Scotland's public register of land deeds. After the Conveyancing (Scotland) Act 1874 the transfer of a barony was recorded here; since 2004, baronies are recorded in the separate Scottish Barony Register.",
   },
   {
     term: "Territorial designation (TD)",
