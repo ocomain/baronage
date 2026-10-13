@@ -19,7 +19,7 @@ reviewed: 2026-10-13
 - **Barons share it with baronets, chiefs and lairds.** Each adds “younger” to the family’s territorial designation. Only the heir to a peerage is “Master”.
 - **It follows the father’s rank.** One man was “younger” of Stair in 1689 and “master of Stair” in 1690, when his father had become a peer.
 - **Land is not the test.** Since 2004 the dignity of baron does not go with land. No statute, court ruling or Lyon Court text has been found that says a baron’s heir needs a territorial designation.
-- **A baron with no designation uses the barony.** His heir is “Younger of [Barony]”, as a peer’s heir is “Master of [Peerage]”. “The” may go before either.
+- **A baron with no territorial designation uses the barony.** His heir is “Younger of [Barony]”, as a peer’s heir is “Master of [Peerage]”. “The” may go before either.
 
 ## In the record
 
@@ -29,7 +29,7 @@ In 1584 Parliament summoned a list of men for treason. The clerk put the heirs o
 
 The Crown’s Latin says the same. In a Great Seal charter of 1600 the heir is “juniori de Bathgait”, younger of Bathgate, “filio et heredi apparenti”, son and heir apparent, of his father the elder.[^2] And the heir acted under the style: in 1693 “The laird of Calder, younger” was admitted to Parliament for Nairnshire “in place of Sir Hugh Campbell of Calder, his father”.[^3]
 
-The form lasted. In 1986 the London Gazette printed a commission to “Donald Cameron, Younger of Lochiel”.[^4] The Lyon Court’s rolls in the Edinburgh Gazette, down to 2005, carried a note signed by the Lyon Clerk: a family’s name and designation are used by “The eldest son and his wife, with the adjective “younger””.[^5]
+The form lasted. In 1986 the London Gazette printed a commission to “Donald Cameron, Younger of Lochiel”.[^4] The Lyon Court’s rolls in the Edinburgh Gazette, down to 2005, carried a note signed by the Lyon Clerk: a family’s name and territorial designation are used by “The eldest son and his wife, with the adjective “younger””.[^5]
 
 ## Beside the Master
 
@@ -49,25 +49,25 @@ The style is not the barons’ alone. The national dictionary gives it to “the
 
 So the heir of a chief, a laird, a baronet or a baron with a territorial designation is “younger” of it. Only the heir to a peerage is Master.
 
-The word goes after the designation or before it. The Lyon Court’s rolls print “FORBES OF ROTHIEMAY, younger”;[^5] the Gazette prints “Donald Cameron, Younger of Lochiel”.[^4]
+The word goes after the territorial designation or before it. The Lyon Court’s rolls print “FORBES OF ROTHIEMAY, younger”;[^5] the Gazette prints “Donald Cameron, Younger of Lochiel”.[^4]
 
-A baron with no designation has no such name to add the word to. His heir takes the style from the barony itself: “Younger of [Barony]”. Whether he may is the question that follows.
+A baron with no territorial designation has no “of X” in his surname to add the word to. His heir takes the style from the barony itself: “Younger of [Barony]”. Whether he may is the question that follows.
 
 ## Does it need land?
 
 A territorial designation is the “of X” that a landed family adds to its surname. It comes from land. The Lord Lyon’s guidance of 2010 says it “proclaims a relationship with a particular area of land”.[^11]
 
-A barony no longer goes with land. Since 2004 “the dignity of baron, though retained, shall not attach to the land”.[^12] A baron today may hold no land, and so have no designation.
+A barony no longer goes with land. Since 2004 “the dignity of baron, though retained, shall not attach to the land”.[^12] A baron today may hold no land, and so have no territorial designation.
 
-One baronial society says on its website that his son then may not use the style: a baron must first have a designation recognised by the Lord Lyon. It cites no authority.[^13] A paper of 2024 from another society records “a resurgence” of the form “Younger of Exton” for the heir of a baron with no estate, and says it “has not yet gained wide acceptance”.[^14] The Lyon Court has published no rule on the style of a baron’s heir. Its Gazette note speaks only of a family’s “names and designations”.[^5]
+One baronial society says on its website that his son then may not use the style: a baron must first have a territorial designation recognised by the Lord Lyon. It cites no authority.[^13] A paper of 2024 from another society records “a resurgence” of the form “Younger of Exton” for the heir of a baron with no estate, and says it “has not yet gained wide acceptance”.[^14] The Lyon Court has published no rule on the style of a baron’s heir. Its Gazette note speaks only of a family’s “names and designations”.[^5]
 
 What do the records show?
 
-**Named from the barony.** In 1649 Parliament put two heirs on a commission “in place of their said fathers”. One is the “laird of Duncrub, younger”. The other is the “baron of Auchyle, younger”.[^15] In the Lyon Court’s own rolls, “McCUNE OF COLL-EARN, BARON OF ELPHINSTONE” in 1989 is followed by “McCUNE OF ELPHINSTONE, younger” in 1992: on its face, a younger named from the barony. It is one case, and the rolls do not say how the two are related.[^16] The Lord Lyon’s certificate of 1930 says the family’s title “of Learney” is used “irrespective of ownership of the lands”.[^7]
+**Named from the barony.** In 1649 Parliament put two heirs on a commission “in place of their said fathers”. One is the “laird of Duncrub, younger”. The other is the “baron of Auchyle, younger”.[^15] In the Lyon Court’s own rolls, “McCUNE OF COLL-EARN, BARON OF ELPHINSTONE” in 1989 is followed by “McCUNE OF ELPHINSTONE, younger” in 1992: on its face, a younger named from the barony. It is one case, and the rolls do not say how the two are related.[^16]
 
-**Named from the family’s designation.** Where the barony had another name, the old registers style the heir from the designation. In a Great Seal charter of 1631 a father and son are “seniori de Bischoptoun” and “juniori de Bischoptoun”, elder and younger of Bishopton, though their barony is Gogoside. In 1681 “James Gordon, younger of Lesmore” was “infeft in the lands and barony of Newtongarry”.[^17]
+**Named from the territorial designation.** A territorial designation is part of the surname: the “of Bishopton” in Brisbane of Bishopton. It is not the barony, and the two can have different names. Where they did, the old registers name the heir from the surname’s “of X”, not from the barony. In a Great Seal charter of 1631 a father and son are “seniori de Bischoptoun” and “juniori de Bischoptoun”, elder and younger of Bishopton, though their barony is Gogoside. In 1681 “James Gordon, younger of Lesmore” was “infeft in the lands and barony of Newtongarry”.[^17]
 
-Those fathers all held land and were “Surname of X”. Until 2004 every barony was held as land, so no older record can show the heir of a baron who has none.
+Each of those fathers had a territorial designation in his surname: he was “Surname of X”. Until 2004 every barony was held as land, so no older record can show the heir of a baron who has none.
 
 The peerage can: a Master is named from the dignity, whatever the estate.
 
@@ -125,7 +125,7 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^8]: [RPS M1689/6/4](https://www.rps.ac.uk/mss/M1689/6/4) (June 1689); [RPS 1690/4/44](https://www.rps.ac.uk/mss/1690/4/44), commissioners for the sheriffdom of Wigtown: “the viscount of Stair, president of the sessione, the master of Stair”.
 [^9]: *Debrett’s Peerage and Titles of Courtesy* (London, 1921), p. 803: “SALTOUN, BARON. (Fraser.)”, with “Hon. ALEXANDER ARTHUR (Master of Saltoun)”.
 [^10]: *Titles and Forms of Address*, 9th edn (London: A. & C. Black, 1955), [p. 94](https://archive.org/details/titlesandformsof017862mbp/page/n113/mode/1up), of chiefs and lairds: “Their heirs are addressed in writing as: John Mackvicular, younger of Mackvicular”; and [p. 84](https://archive.org/details/titlesandformsof017862mbp/page/n103/mode/1up), “Children of Baronets”.
-[^11]: Lord Lyon Sellar, guidance on baronial additaments and territorial designations, 5 January 2010, from the Lyon Court’s website as [archived on 5 June 2011](https://web.archive.org/web/20110605023529/http://www.lyon-court.com/lordlyon/616.html). On designation and title, see [The two styles of a Scottish baron](/reading-room/the-two-styles-of-a-scottish-baron/).
+[^11]: Lord Lyon Sellar, guidance on baronial additaments and territorial designations, 5 January 2010, from the Lyon Court’s website as [archived on 5 June 2011](https://web.archive.org/web/20110605023529/http://www.lyon-court.com/lordlyon/616.html). On territorial designation and title, see [The two styles of a Scottish baron](/reading-room/the-two-styles-of-a-scottish-baron/).
 [^12]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(2)](https://www.legislation.gov.uk/asp/2000/5/section/63), in force 28 November 2004.
 [^13]: The Convention of the Baronage of Scotland, web page “Male Heir”, read 13 October 2026. The archived copy of 26 December 2004 limits these usages to a baron who has taken the territorial name, but does not have the sentence that the style is otherwise wrong. The copy of 9 May 2006 does.
 [^14]: Forum for the Scottish Baronage, *Forms of Address & Related Matters* (August 2024), endnote 18. The same note says that “the use of ‘Younger’ without territorial reference is acceptable”. The society’s web page on forms of address, read 13 October 2026, says the eldest son of a baron “may be known by his father’s territorial designation with the addition of “younger””, and gives “James McDonald, Younger of X”. On a woman as heir, the same endnote: “Some have suggested the use of ‘Younger’ for a female heir presumptive, as well as for an eldest son, but this is not a style that is generally accepted.”
