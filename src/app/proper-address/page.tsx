@@ -646,7 +646,7 @@ export default function ProperAddressPage() {
                   <F>
                     <S>Younger of Barony</S>
                     <Or />
-                    <S>Mr John Smith, younger of Barony</S>
+                    <S>Mr John Smith, Younger of Barony</S>
                     <Or />
                     <S>Barony yr</S>
                     <N>(spoken barony or young barony)</N>
@@ -663,7 +663,7 @@ export default function ProperAddressPage() {
                   <F>
                     <S>Maid of Barony</S>
                     <Or />
-                    <S>Miss Jane Smith, Maid of Barony</S>
+                    <S>Miss Jane Smith, the Maid of Barony</S>
                     <N>(some prefer Maiden)</N>
                   </F>
                 </Forms>
