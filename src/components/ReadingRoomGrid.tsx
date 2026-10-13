@@ -44,6 +44,12 @@ export function ReadingRoomGrid({
   const count = (c: string) => (c === ALL ? papers.length : papers.filter((p) => p.category === c).length);
   // Shown under subject headings, in the order the subjects are given; within a subject the editorial order holds.
   const groups = categories.map((c) => ({ name: c, papers: papers.filter((p) => p.category === c) }));
+  /**
+   * On wide screens the cards sit three to a row. So that no row is left part empty before the next subject, the last
+   * cards of a subject are set two to a row where the count does not divide by three: one over (4, 7, …) puts the last
+   * four in two rows of two; two over (2, 5, …) puts the last two side by side. Returns the index of the first wide card.
+   */
+  const wideFrom = (n: number) => (n % 3 === 1 && n >= 4 ? n - 4 : n % 3 === 2 ? n - 2 : n);
 
   return (
     <>
@@ -88,9 +94,9 @@ export function ReadingRoomGrid({
                 {g.papers.length} {g.papers.length === 1 ? "paper" : "papers"}
               </span>
             </div>
-            <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {g.papers.map((p) => (
-          <li key={p.slug}>
+            <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6">
+              {g.papers.map((p, i) => (
+          <li key={p.slug} className={i >= wideFrom(g.papers.length) ? "lg:col-span-3" : "lg:col-span-2"}>
             {/* Phones: a compact row (thumbnail left, text right). From sm up: a framed card, as on the Armorial. */}
             <Link
               href={`/reading-room/${p.slug}`}
