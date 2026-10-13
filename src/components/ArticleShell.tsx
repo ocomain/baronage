@@ -4,11 +4,15 @@ import { PaperThumbnail } from "./PaperThumbnail";
 import { PaperBody } from "./PaperBody";
 import { PaperActions } from "./PaperActions";
 import { HeaderOffset } from "./HeaderOffset";
+import { PaperNotePopups } from "./PaperNotePopups";
 import { SealedPaper } from "./SealedPaper";
 import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
+
+/** Papers whose footnote numbers open the note in a pop-up card (owner, 13 Oct 2026: asked for on this paper). */
+const POPUP_NOTES = new Set(["younger-of-and-master-of"]);
 
 /** Back-to-index link; display (inline-flex / hidden) is set where it is used. */
 const BACK_LINK =
@@ -33,6 +37,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
       <Container size="prose">
         <article className="paper-print min-w-0">
           <HeaderOffset />
+          {POPUP_NOTES.has(paper.slug) && <PaperNotePopups />}
           {/* Phones only: back link above the title. */}
           <nav aria-label="Breadcrumb" className="no-print mb-8 sm:hidden">
             <Link href="/reading-room" className={`inline-flex ${BACK_LINK}`}>
