@@ -307,26 +307,10 @@ export default function ProperAddressPage() {
       <PageHero
         eyebrow="Forms of Address & Precedence"
         title="Proper Address for Scottish Barons"
-        intro="Addressing a Scottish Baron correctly honours a line of titleholders stretching back centuries — the correct forms, in written, verbal and digital use."
+        intro="The correct forms, in writing, in speech and online."
         image="/images/charter-seal.webp"
         position="center 40%"
       />
-
-      {/* Lead */}
-      <Section tone="white" className="pb-2 pt-14 sm:pt-16">
-        <Container size="prose">
-          <Reveal>
-            <p className="font-serif text-2xl leading-[1.7] text-ink">
-              Addressing a Scottish Baron correctly is a nod to any selfless contributions they’ve made, and to the
-              long line of titleholders who carried it before—some stretching back over a thousand years. Each title
-              represents generations of leadership, service, and heritage, and using it properly honours the enduring
-              legacy of those who shaped Scotland’s history. Unfortunately, modern practices and digital forms often
-              overlook these traditional distinctions, leading to common errors. Below, we outline the correct forms of
-              address for a Scottish Baron in both written and spoken communication.
-            </p>
-          </Reveal>
-        </Container>
-      </Section>
 
       <HeaderOffset />
       <SectionSidebar items={NAV} anchorId="page-nav" />
