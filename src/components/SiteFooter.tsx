@@ -5,12 +5,20 @@ import { navLinks, site, ROLL_URL, CALENDLY_URL } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="relative isolate overflow-hidden border-t-2 border-gold/40 text-parchment-200/80">
-      {/* Full-bleed castle backdrop — a static image section, the same treatment as the hero */}
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/castle-eilean-donan.webp')" }}
+    <footer className="relative isolate overflow-hidden border-t-2 border-gold/40 bg-navy-deep text-parchment-200/80">
+      {/* Full-bleed castle backdrop — a static image section, the same treatment as the hero.
+          A lazy <img>, not a CSS background: a background downloads with every page although the footer is far
+          below the first screen (53 KB that competed with each page's own hero on a slow phone). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/castle-eilean-donan.webp"
+        alt=""
         aria-hidden
+        width={1376}
+        height={768}
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
       />
       {/* Dark wash to keep the footer content legible over the image */}
       <div
@@ -23,7 +31,7 @@ export function SiteFooter() {
       />
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8">
         <div className="flex flex-col items-center text-center">
-          <Seal size="xs" className="h-16 w-16" />
+          <Seal size="xs" className="h-16 w-16" loading="lazy" />
           <p className="mt-4 font-display text-3xl text-parchment-50">Baronage of Scotland Association</p>
           <p className="mt-3 max-w-md font-serif text-lg italic text-parchment-200/70">{site.tagline}</p>
           <GoldRule className="mt-6" />

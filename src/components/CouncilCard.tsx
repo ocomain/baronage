@@ -10,6 +10,8 @@ export type CouncilMember = {
   name: string;
   also: string | null;
   img: string | null;
+  /** Card-size copy of `img` (about 816px wide) for the portrait card; the pop-up and structured data keep `img`. */
+  cardImg?: string;
   pos?: string;
   fit?: "cover" | "contain";
   bg?: string;
@@ -29,7 +31,7 @@ export type CouncilMember = {
 };
 
 /** Council portrait card — tap/click opens a biography pop-up. */
-export function CouncilCard({ m }: { m: CouncilMember }) {
+export function CouncilCard({ m, first = false }: { m: CouncilMember; /** The first card: its portrait loads at once, ahead of the others. */ first?: boolean }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -45,14 +47,18 @@ export function CouncilCard({ m }: { m: CouncilMember }) {
     m.img ? (
       m.fit === "contain" ? (
         <FadeImg
-          src={large ? m.popImg ?? m.img : m.img}
+          src={large ? m.popImg ?? m.img : m.cardImg ?? m.img}
           alt={m.alt ?? m.name}
+          loading={large || first ? "eager" : "lazy"}
+          fetchPriority={!large && first ? "high" : undefined}
           className={`h-full w-full object-contain p-4 transition duration-700 ${large ? "" : "group-hover:scale-[1.04]"}`}
         />
       ) : (
         <FadeImg
-          src={large ? m.popImg ?? m.img : m.img}
+          src={large ? m.popImg ?? m.img : m.cardImg ?? m.img}
           alt={m.alt ?? m.name}
+          loading={large || first ? "eager" : "lazy"}
+          fetchPriority={!large && first ? "high" : undefined}
           className={`h-full w-full object-cover transition duration-700 ${large ? "" : "group-hover:scale-105"}`}
           style={{ objectPosition: (large ? m.popPos ?? m.pos : m.pos) ?? "center" }}
         />

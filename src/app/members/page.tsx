@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { MemberLogin } from "@/components/MemberLogin";
 import { Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
+import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/members/" },
@@ -41,11 +42,18 @@ export default function MembersPage() {
     <>
       {/* Login — a focused, atmospheric panel rather than a standard sub-page hero */}
       <section className="relative isolate flex flex-col items-center overflow-hidden px-4 pb-12 pt-8 sm:pt-10">
-        <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/great-hall.webp')" }}
-          aria-hidden
-        />
+        {/* A real image (phones get the 960px twin), so the browser finds it at once and loads it first. */}
+        <picture aria-hidden>
+          <source media={PHONE_MEDIA} srcSet={phoneImage("/images/great-hall.webp")} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/great-hall.webp"
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+          />
+        </picture>
         <div
           className="absolute inset-0 -z-10"
           style={{ background: "linear-gradient(180deg, rgba(8,12,28,0.82) 0%, rgba(8,12,28,0.9) 100%)" }}

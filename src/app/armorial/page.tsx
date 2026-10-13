@@ -87,7 +87,7 @@ export default function SupportersPage() {
         </Container>
         <Container>
           <ArmorialGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {baronies.map((b) => (
+            {baronies.map((b, i) => (
               <figure
                 key={b.name}
                 className="group relative flex h-full flex-col items-center border border-parchment-300/70 bg-parchment-50 px-6 pb-8 pt-10 text-center shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)]">
@@ -101,7 +101,10 @@ export default function SupportersPage() {
                         alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
                         width={208}
                         height={208}
-                        loading="eager"
+                        // Only the first row loads with the page; the rest as they near the screen
+                        // (all 25 at once was 0.9 MB before a phone had shown the second coat of arms).
+                        loading={i < 4 ? "eager" : "lazy"}
+                        fetchPriority={i === 0 ? "high" : undefined}
                         decoding="async"
                         draggable={false}
                         className="h-52 w-52 object-contain transition-transform duration-500 group-hover:scale-[1.06]"
