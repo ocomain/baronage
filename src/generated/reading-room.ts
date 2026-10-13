@@ -222,8 +222,8 @@ export const readingRoomPapers: ReadingRoomPaper[] = [
   },
   {
     "slug": "the-barons-privilege-of-trial-by-barons",
-    "title": "Tried by his fellow barons: the baron’s privilege that lasted until 1949",
-    "subtitle": "A peer was tried by peers, and a baron by barons. The peers’ privilege was abolished in 1948; the barons’, by then shared with other landed men, in 1949",
+    "title": "A peer by peers, a baron by barons: the privilege that lasted until 1949",
+    "subtitle": "Each rank was tried by its own. The peers’ privilege was abolished in 1948; the barons’, by then shared with other landed men, in 1949",
     "description": "A peer was tried by peers and a Scottish baron by barons. What the privilege was, who had it, and how both ended, in 1948 and 1949.",
     "category": "Law & Statutes",
     "readingTime": "6 min",
