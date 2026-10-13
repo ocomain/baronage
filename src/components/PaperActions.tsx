@@ -155,6 +155,12 @@ export function PaperActions({
                 <p className="mt-4 font-sans text-[0.95rem] leading-relaxed text-navy">Please check your inbox to confirm the newsletter.</p>
               ) : (
                 <div className="mt-5 border-t border-parchment-300 pt-5">
+                  {/* Plainly for the sender, and only the sender (owner 2026-10-13: "it is not clear"). */}
+                  <p className="font-display text-xl leading-tight text-navy">For you: the free newsletter</p>
+                  <p className="mb-4 mt-1.5 font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+                    We would send it to you at <span className="break-all font-semibold text-navy">{sender.email}</span>. Your friends
+                    are not signed up to anything.
+                  </p>
                   <button
                     type="button"
                     onClick={askForNewsletter}
