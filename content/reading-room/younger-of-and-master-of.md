@@ -98,7 +98,7 @@ There is a practical reason to add “the”. A standard work on the clans, revi
 
 In some families a daughter who is heir is “the Maid of”. Sir Iain Moncreiffe of that Ilk, a herald of the Lyon Court, wrote in 1967: “It is the old Scots custom to call an heiress the Maid of her inheritance.”[^23] No statute, court or Lyon Court rule sets the form.
 
-A woman may also be “Younger”. In 2014 the Standing Council of Scottish Chiefs gave a reception for heirs at the Palace of Holyroodhouse, with the Lord Lyon and the Lyon Clerk among the guests. Among the heirs its account names are “Catriona, the Maid of Bachuil” and “Claire Henderson younger of Fordell”, daughter of the chief of the Hendersons.[^20] It is the earliest record found of a woman so styled: a recent precedent, from the chiefs’ own council. One baronial society’s paper of 2024 says the use “is not a style that is generally accepted”.[^15]
+A woman may also be “Younger”. In 2014 the Standing Council of Scottish Chiefs gave a reception for heirs at the Palace of Holyroodhouse, with the Lord Lyon and the Lyon Clerk among the guests. Among the heirs its account names are “Catriona, the Maid of Bachuil” and “Claire Henderson younger of Fordell”, daughter of the chief of the Hendersons.[^20] It is the earliest record found of a woman so styled: a recent precedent, from the chiefs’ own council. The clan’s own society, in its journal for 2015, gives the style to her brother, as Tanist.[^24] One baronial society’s paper of 2024 says the use “is not a style that is generally accepted”.[^15]
 
 ## The Roll and the Pledge
 
@@ -142,3 +142,4 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^21]: 18 Geo. III c. 23 (1778), [p. 486](https://archive.org/details/bim_eighteenth-century_anno-regni-georgii-iii-_great-britain_1778/page/n485/mode/1up). *The London Gazette*, 3–7 June 1746, [no. 8542](https://archive.org/details/per_london-gazette_the-london-gazette_june-3-7-1746_8542/page/n0/mode/1up), front page. L. G. Pine, *Titles: How the King Became His Majesty* (New York, 1991), p. 163.
 [^22]: Adam, *Clans, Septs and Regiments*, 6th edn (1960), p. 408.
 [^23]: Sir Iain Moncreiffe of that Ilk and David Hicks, *The Highland Clans* (New York, 1967), p. 119, of the chief of the MacDougalls, “known, not as the Maid of Dunollie, but as the Maid of Lorn”. The Scottish National Dictionary, [“Maid”](https://dsl.ac.uk/entry/snd/maid), sense 2, has “the Maid of Lorn(e), the eldest daughter of MacDougall of Lorne”.
+[^24]: *An Canach* (the journal of the Clan Henderson Society), vol. 27, Fall 2015, [p. 25](https://archive.org/details/201509-an-canach-v-27/page/n25/mode/1up): “Tanist / Iain M. Henderson / Younger of Fordell”. A tanist is a chief’s named heir.
