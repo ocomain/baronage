@@ -10,7 +10,7 @@ reviewed: 2026-10-13
 
 # “Younger of” and “Master of”: the record set straight
 
-*The heir to a Scottish title is “Younger of”, unless the title is a peerage, when the heir is “Master of”. The two styles have stood side by side in the records since the 1500s. Where a baron, baronet, chief or laird has a territorial designation, the heir adds “younger” to it. The heir of a baron with none is “Younger of” the barony. Some say he may not be. This paper sets out the record.*
+*The heir to a Scottish title is “Younger”, unless the title is a peerage, when the heir is “Master”. The two styles have stood side by side in the records since the 1500s. Where a baron, baronet, chief or laird has a territorial designation, the heir adds “younger” to it, after it or before it. The heir of a baron with none is “Younger of” the barony. Some say he may not be. This paper sets out the record.*
 
 ## The short answer
 
@@ -48,6 +48,8 @@ A Master is named from his father’s dignity, not from the surname or an estate
 The style is not the barons’ alone. The national dictionary gives it to “the eldest son and heir of a landed proprietor below peerage rank”.[^6] A guide to forms of address of 1955 gives the heirs of chiefs and lairds as “John Mackvicular, younger of Mackvicular”, and says of a baronet’s eldest son: “In Scotland he is styled “younger” of the family description.”[^10]
 
 So the heir of a chief, a laird, a baronet or a baron with a territorial designation is “younger” of it. Only the heir to a peerage is Master.
+
+The word goes after the designation or before it. The Lyon Court’s rolls print “FORBES OF ROTHIEMAY, younger”;[^5] the Gazette prints “Donald Cameron, Younger of Lochiel”.[^4]
 
 A baron with no designation has no such name to add the word to. His heir takes the style from the barony itself: “Younger of [Barony]”. Whether he may is the question that follows.
 
