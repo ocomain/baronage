@@ -92,7 +92,7 @@ It is the same for the Younger. Without: the Crown’s “Donald Cameron, Younge
 
 One limit should be stated. In the old registers the article comes after a name. Standing alone, their phrase is “the young Laird of X”; “the Younger of X” alone is found in print in an editor’s summary of 1885.[^22]
 
-There is a practical reason to add “the”: “Younger” is also a surname. A standard work on the clans, revised by Innes of Learney as Lord Lyon, warns that officials “might otherwise suppose “younger” to be a surname”.[^23] “The” before the word removes the doubt, as it marks the Master. It has long been written so: “Donald Cameron the Younger, of Lochiel” in the London Gazette of 1746, and “Pirie Gordon the Younger of Buthlaw” in a book on titles of 1991.[^21]
+There is a practical reason to add “the”. A standard work on the clans, revised by Innes of Learney as Lord Lyon, warns that officials “might otherwise suppose “younger” to be a surname”.[^23] “The” before the word removes the doubt, as it marks the Master. It has long been written so: “Donald Cameron the Younger, of Lochiel” in the London Gazette of 1746, and “Pirie Gordon the Younger of Buthlaw” in a book on titles of 1991.[^21]
 
 ## A woman as heir
 
