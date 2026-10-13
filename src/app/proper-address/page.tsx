@@ -95,7 +95,11 @@ const HEIR_SOURCE: ReactNode = (
     Innes of Learney: “the heir-apparent prefixes the word ‘younger’ (or ‘ygr.’) to the title”; officials “might
     otherwise suppose ‘younger’ to be a surname”, so in deeds he writes the word last; and “All unmarried daughters
     bear these titles, but younger sons, younger brothers, and collaterals do not bear the designation of the house”:{" "}
-    <Adam page="408" n={439} />.
+    <Adam page="408" n={439} />. See{" "}
+    <Link href="/reading-room/younger-of-and-master-of/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      “Younger of” and “Master of”: the record set straight
+    </Link>
+    .
   </>
 );
 /** "The Maid of X" for a daughter who is the heir: two uses in the Bachuil family (owner's references, 2026-10-12). */
