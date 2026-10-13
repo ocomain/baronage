@@ -100,6 +100,8 @@ In some families a daughter who is heir is “the Maid of”. Sir Iain Moncreiff
 
 A woman may also be “Younger”. In 2014 the Standing Council of Scottish Chiefs gave a reception for heirs at the Palace of Holyroodhouse, with the Lord Lyon and the Lyon Clerk among the guests. Among the heirs its account names are “Catriona, the Maid of Bachuil” and “Claire Henderson younger of Fordell”, daughter of the chief of the Hendersons.[^20] It is the earliest record found of a woman so styled: a recent precedent, from the chiefs’ own council. The clan’s own society, in its journal for 2015, gives the style to her brother, as Tanist.[^24] One baronial society’s paper of 2024 says the use “is not a style that is generally accepted”.[^15]
 
+The Lord Lyon has taken a modern view of equality between men and women. In recent years he has granted women their arms on a shield, where an oval or a lozenge was once usual: see the arms of the Baroness of Redcastle in [the Armorial](/armorial/).
+
 ## The Roll and the Pledge
 
 A Younger takes his style from a barony. The Roll shows, on evidence, who holds it.
