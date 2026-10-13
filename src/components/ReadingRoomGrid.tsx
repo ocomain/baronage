@@ -19,9 +19,10 @@ export type PaperCard = {
 const ALL = "All papers";
 
 /**
- * The Reading Room index as card grids under subject headings, after the Armorial, with subject filters. Every card is in the
- * prerendered HTML; filtering only hides cards, so search engines and readers without JavaScript still get
- * the whole library.
+ * The Reading Room index as one shelf of small files, four to a row on wide screens: a sheet, the subject, the title
+ * and the reading time (owner, 13 October 2026). The papers keep the order the page gives them; the subject filters
+ * above only hide files. Every file is in the prerendered HTML, so search engines and readers without JavaScript
+ * still get the whole library.
  */
 export function ReadingRoomGrid({
   papers,
@@ -42,14 +43,6 @@ export function ReadingRoomGrid({
   }, []);
 
   const count = (c: string) => (c === ALL ? papers.length : papers.filter((p) => p.category === c).length);
-  // Shown under subject headings, in the order the subjects are given; within a subject the editorial order holds.
-  const groups = categories.map((c) => ({ name: c, papers: papers.filter((p) => p.category === c) }));
-  /**
-   * On wide screens the cards sit three to a row. So that no row is left part empty before the next subject, the last
-   * cards of a subject are set two to a row where the count does not divide by three: one over (4, 7, …) puts the last
-   * four in two rows of two; two over (2, 5, …) puts the last two side by side. Returns the index of the first wide card.
-   */
-  const wideFrom = (n: number) => (n % 3 === 1 && n >= 4 ? n - 4 : n % 3 === 2 ? n - 2 : n);
 
   return (
     <>
@@ -84,58 +77,43 @@ export function ReadingRoomGrid({
         </p>
       )}
 
-      <div className="mt-10 space-y-12 sm:space-y-14">
-        {groups.map((g) => (
-          <section key={g.name} aria-label={g.name} hidden={active !== ALL && g.name !== active}>
-            <div className="flex items-baseline gap-4">
-              <h2 className="font-display text-2xl leading-tight text-navy sm:text-3xl">{g.name}</h2>
-              <span className="h-px flex-1 bg-gold/45" aria-hidden />
-              <span className="flex-none font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
-                {g.papers.length} {g.papers.length === 1 ? "paper" : "papers"}
-              </span>
-            </div>
-            <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6">
-              {g.papers.map((p, i) => (
-          <li key={p.slug} className={i >= wideFrom(g.papers.length) ? "lg:col-span-3" : "lg:col-span-2"}>
-            {/* Phones: a compact row (thumbnail left, text right). From sm up: a framed card, as on the Armorial. */}
+      <ul aria-label="Papers" className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
+        {papers.map((p) => (
+          <li key={p.slug} hidden={active !== ALL && p.category !== active}>
+            {/* Phones: a compact row (sheet left, text right). From sm up: a small framed file. */}
             <Link
               href={`/reading-room/${p.slug}`}
-              className="group relative flex h-full items-start gap-4 border border-parchment-300/70 bg-parchment-50 p-4 text-left shadow-[0_18px_40px_-30px_rgba(10,16,36,0.5)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_26px_50px_-28px_rgba(10,16,36,0.6)] sm:flex-col sm:items-center sm:gap-0 sm:px-6 sm:pb-7 sm:pt-9 sm:text-center"
+              className="group relative flex h-full items-center gap-4 border border-parchment-300/70 bg-parchment-50 p-4 text-left shadow-[0_14px_30px_-26px_rgba(10,16,36,0.5)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_22px_40px_-26px_rgba(10,16,36,0.6)] sm:flex-col sm:items-center sm:gap-0 sm:px-4 sm:pb-5 sm:pt-7 sm:text-center"
             >
               <span
-                className="pointer-events-none absolute inset-2.5 hidden border border-gold/0 transition-colors duration-300 group-hover:border-gold/25 sm:block"
+                className="pointer-events-none absolute inset-2 hidden border border-gold/0 transition-colors duration-300 group-hover:border-gold/25 sm:block"
                 aria-hidden
               />
-              <PaperThumbnail title={p.title} category={p.category} size="responsive" />
+              <PaperThumbnail title={p.title} category={p.category} size="sm" />
               <span className="flex min-w-0 flex-1 flex-col sm:w-full sm:items-center">
-                <span className="flex flex-wrap items-center gap-2 sm:mt-6 sm:justify-center">
-                  {p.slug === featuredSlug && (
-                    <span className="bg-gold px-1.5 py-0.5 font-sans text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-navy-deep sm:absolute sm:left-4 sm:top-4 sm:px-2 sm:py-1 sm:text-[0.55rem]">
-                      Featured
-                    </span>
-                  )}
+                {p.slug === featuredSlug && (
+                  <span className="mb-1.5 self-start bg-gold px-1.5 py-0.5 font-sans text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-navy-deep sm:absolute sm:left-3 sm:top-3 sm:mb-0 sm:px-2 sm:py-1 sm:text-[0.55rem]">
+                    Featured
+                  </span>
+                )}
+                <span className="font-sans text-[0.56rem] font-semibold uppercase tracking-[0.18em] text-gold-deep sm:mt-4">
+                  {p.category}
                 </span>
-                <span className="mt-1.5 block font-display text-xl leading-tight text-navy transition-colors group-hover:text-oxblood sm:mt-2 sm:text-2xl">
+                <span className="mt-1 block font-display text-xl leading-tight text-navy transition-colors group-hover:text-oxblood sm:mt-1.5">
                   {p.title}
                 </span>
-                <span className="mt-2 line-clamp-2 font-serif text-[0.95rem] italic leading-snug text-ink-soft sm:mt-3 sm:line-clamp-3 sm:text-base sm:leading-relaxed">
-                  {p.subtitle}
-                </span>
-                <span className="mt-3 flex items-center gap-3 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.18em] sm:mt-auto sm:pt-5 sm:text-[0.62rem]">
-                  <span className="text-muted">{p.readingTime} read</span>
-                  {p.gated && <span className="text-muted">Subscribers</span>}
-                  <span className="text-gold-deep transition-colors group-hover:text-oxblood">
+                <span className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.18em] sm:mt-auto sm:justify-center sm:pt-4 sm:text-[0.62rem]">
+                  <span className="whitespace-nowrap text-muted">{p.readingTime} read</span>
+                  {p.gated && <span className="whitespace-nowrap text-muted">Subscribers</span>}
+                  <span className="whitespace-nowrap text-gold-deep transition-colors group-hover:text-oxblood">
                     Read <span aria-hidden>→</span>
                   </span>
                 </span>
               </span>
             </Link>
           </li>
-              ))}
-            </ul>
-          </section>
         ))}
-      </div>
+      </ul>
     </>
   );
 }
