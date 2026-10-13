@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { Footnote } from "@/components/Footnote";
 import { SITE_URL } from "@/lib/site";
+import { RankLadder } from "@/components/RankLadder";
 
 export const metadata: Metadata = {
   title: "Scottish Baronies, Explained — FAQ",
@@ -219,6 +220,62 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         >
           Lord Lyon Sellar, Note in <em>Sturzenegger of Arran</em>, p. 8 (Stevenson)
         </a>
+        .
+      </>
+    ),
+  },
+  {
+    q: "Where does a Scottish baron rank?",
+    a: "After knights and before esquires. Innes of Learney, later Lord Lyon, set out the record in 1945: the King’s patents to the first baronets (1625) place baronets before knights, barons, esquires and gentlemen, and the Lyon Register (1672) enters baronets, knights and barons together; “their precedence was thus after Knights and before Esquires”. The Act of 2000 that ended feudal tenure keeps “any quality or precedence” that goes with a barony. The royal Scale of General Precedence in Scotland (1905) names “Barons of Scotland” among the peers and has no separate line for other barons.",
+    body: <RankLadder />,
+    authority: (
+      <>
+        <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 113
+        </a>{" "}
+        (the baronets’ patents: “prae omnibus baronibus lie Lairdis, armigeris lie Esquyris, et generosis quibuscunque lie
+        gentelmen”; the Lyon Register; the chapeau: p. 152, Father Hay on the Roslin vault, opened in 1650; p. 153, the
+        petition of Ainslie of Pilton, “heir and representative of the Feudal Barons of Dolphinton”, and the Lyon Court’s
+        interlocutor of 28 November 1835; p. 154, the Lord Lyon “found the claim established, and awarded the chapeau”, 4
+        September 1934);{" "}
+        <a href="https://www.thegazette.co.uk/London/issue/27774/page/2013" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Scale of General Precedence in Scotland, royal warrant of 9 March 1905, <em>London Gazette</em>, 14 March 1905, pp. 2012–2013
+        </a>
+        ;{" "}
+        <a href="https://www.legislation.gov.uk/asp/2000/5/section/63" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Abolition of Feudal Tenure etc. (Scotland) Act 2000, s. 63(4)
+        </a>
+
+        . The coronets:{" "}
+        <a href="https://courtofthelordlyon.scot/blazoning.htm" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Court of the Lord Lyon, “Blazoning”
+        </a>{" "}
+        (“The rank of a Peer is shown by the Coronet”); the numbers of leaves and pearls, and “the caps of crimson velvet
+        turned up with ermine, with a gold tassel on the top”, as in the Earl Marshal’s order of 1 October 1901, in{" "}
+        <a href="https://archive.org/details/completeguidetoh00foxduoft/page/n418/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          A. C. Fox-Davies, <em>A Complete Guide to Heraldry</em> (1909), pp. 365–368
+        </a>
+        ; “the Scots and English have one form of coronets”, and the warrant of 2 June 1665 giving the lords of parliament,
+        “those of the degree of peers”, “a golden circle decorated with six pearls”:{" "}
+        <a href="https://archive.org/details/systemofheraldry02nisbuoft/page/n176/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Nisbet, <em>A System of Heraldry</em>, vol. ii (1816 ed.), pp. 44, 51–52
+        </a>
+        . See{" "}
+        <Link href="/reading-room/the-precedence-of-a-scottish-baron/" className={intLink}>
+          “Never ceded”: the precedence of a Scottish baron
+        </Link>
+        ,{" "}
+        <Link href="/robes-and-chapeau/" className={intLink}>
+          Robes &amp; Chapeau
+        </Link>
+        ,{" "}
+        <Link href="/reading-room/esslemont-petition-1934/" className={intLink}>
+          The Esslemont petition of 1934
+        </Link>{" "}
+        and{" "}
+        <Link href="/reading-room/innes-of-learney-1945/" className={intLink}>
+          The Lord Lyon’s Case for the Baronage
+        </Link>
         .
       </>
     ),
@@ -1184,6 +1241,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
  * are matched to `faqs` by anchor slug, so this is the single place to change. */
 const FAQ_ORDER = [
   "is-a-scottish-baron-a-titled-nobleman",
+  "where-does-a-scottish-baron-rank",
   "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
   "can-a-scottish-barony-be-bought-and-sold",
   "what-is-the-pledge-and-what-does-it-change",
