@@ -9,6 +9,9 @@ const ENDPOINT = "https://baronage-mail.antoin-405.workers.dev/friend";
 /** The same Worker signs the sender up for the newsletter when they ask for it after a send (Zoho then asks them to confirm). */
 const NEWSLETTER_ENDPOINT = "https://baronage-mail.antoin-405.workers.dev/newsletter";
 const NOTE_MAX = 400;
+/** The most friends one send may go to; the Worker holds the same figure. */
+const FRIENDS_MAX = 50;
+const ADDRESS = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const FAILED = "Sorry, the message could not be sent just now.";
 
 const LABEL = "block font-sans text-[0.95rem] font-semibold text-navy";
@@ -17,8 +20,9 @@ const FIELD =
 
 /**
  * The buttons under a paper's title and at its foot: "Print this paper" and "Email to a friend". The second
- * opens a short form (friend's address, the sender's name and address, an optional note); the Association's
- * sender emails the friend once and keeps neither address. Once it has gone, the sender is offered the free
+ * opens a short form (one friend's address or several, the sender's name and address, an optional note); the
+ * Association's sender emails each friend once, separately, so no friend sees another's address, and keeps none
+ * of the addresses (owner 2026-10-13: "I want to send papers to many people"). Once it has gone, the sender is offered the free
  * newsletter with a button of their own (owner 2026-10-13; never a ticked box, never the friend's address), and
  * "Send it to someone else" brings the form back with their own name and address still filled in. Without
  * JavaScript the button is a plain mailto link, and the same link is offered if a send fails. Hidden on paper.
@@ -42,6 +46,8 @@ export function PaperActions({
   const [sender, setSender] = useState({ name: "", email: "" });
   // The newsletter button on the "sent" screen: "done" once Zoho has been asked to send its confirmation email.
   const [newsletter, setNewsletter] = useState<"idle" | "sending" | "done" | "failed">("idle");
+  // How many friends the last send went to, for the words on the "sent" screen.
+  const [sentTo, setSentTo] = useState(1);
   const id = useId();
 
   const url = `${SITE_URL}/reading-room/${slug}/`;
@@ -53,6 +59,21 @@ export function PaperActions({
     e.preventDefault();
     const f = new FormData(e.currentTarget);
     const field = (name: string) => String(f.get(name) ?? "");
+    // One address or several, with commas, semicolons, spaces or new lines between them; repeats are dropped.
+    const friends = [...new Map(field("to").split(/[\s,;]+/).filter(Boolean).map((a) => [a.toLowerCase(), a])).values()];
+    const wrong = friends.find((a) => !ADDRESS.test(a));
+    const problem = !friends.length
+      ? "Please give your friend’s email address."
+      : wrong
+        ? `Please check this address: ${wrong}`
+        : friends.length > FRIENDS_MAX
+          ? `Please send to no more than ${FRIENDS_MAX} people at a time.`
+          : "";
+    if (problem) {
+      setError(problem);
+      setState("failed");
+      return;
+    }
     setState("sending");
     setError("");
     try {
@@ -61,7 +82,7 @@ export function PaperActions({
         credentials: "omit",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          to: field("to"),
+          to: friends,
           name: field("name"),
           email: field("email"),
           comment: field("comment"),
@@ -72,6 +93,7 @@ export function PaperActions({
       const data: { ok?: boolean; error?: string } = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         setSender({ name: field("name"), email: field("email") });
+        setSentTo(friends.length);
         setState("sent");
         return;
       }
@@ -127,7 +149,7 @@ export function PaperActions({
             <div role="status">
               <p className="font-display text-2xl leading-tight text-navy">Sent. Thank you.</p>
               <p className="mt-2 font-sans text-[0.95rem] leading-relaxed text-ink-soft">
-                Your friend will have it in a minute or two. If they reply, the reply comes to you.
+                {sentTo > 1 ? `Your ${sentTo} friends` : "Your friend"} will have it in a minute or two. If they reply, the reply comes to you.
               </p>
               {newsletter === "done" ? (
                 <p className="mt-4 font-sans text-[0.95rem] leading-relaxed text-navy">Please check your inbox to confirm the newsletter.</p>
@@ -165,7 +187,22 @@ export function PaperActions({
                   <label htmlFor={`${id}-to`} className={LABEL}>
                     Your friend’s email
                   </label>
-                  <input id={`${id}-to`} name="to" type="email" required maxLength={254} autoComplete="off" className={FIELD} />
+                  <textarea
+                    id={`${id}-to`}
+                    name="to"
+                    rows={2}
+                    required
+                    maxLength={4000}
+                    autoComplete="off"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    inputMode="email"
+                    aria-describedby={`${id}-to-hint`}
+                    className={`${FIELD} resize-y`}
+                  />
+                  <p id={`${id}-to-hint`} className="mt-1.5 font-sans text-[0.88rem] leading-relaxed text-ink-soft">
+                    To send it to several people, put a comma between the addresses.
+                  </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
@@ -196,7 +233,8 @@ export function PaperActions({
                 </div>
               </div>
               <p className="mt-4 font-sans text-[0.88rem] leading-relaxed text-ink-soft">
-                We send your friend one email with a link to this paper, and we keep neither address.
+                We send each friend one email with a link to this paper, separately, so no friend sees another’s
+                address. We keep none of the addresses.
               </p>
               {state === "failed" && (
                 <p role="alert" className="mt-3 border-l-4 border-oxblood bg-parchment-50 px-4 py-3 font-sans text-[0.95rem] leading-relaxed text-navy">
