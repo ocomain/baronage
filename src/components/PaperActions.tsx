@@ -6,6 +6,8 @@ import { SITE_URL } from "@/lib/site";
 
 /** The Association's own sender for "Email to a friend": a small Worker in front of Resend (see ~/baronage-mail). */
 const ENDPOINT = "https://baronage-mail.antoin-405.workers.dev/friend";
+/** The same Worker signs the sender up for the newsletter when they ask for it after a send (Zoho then asks them to confirm). */
+const NEWSLETTER_ENDPOINT = "https://baronage-mail.antoin-405.workers.dev/newsletter";
 const NOTE_MAX = 400;
 const FAILED = "Sorry, the message could not be sent just now.";
 
@@ -16,8 +18,10 @@ const FIELD =
 /**
  * The buttons under a paper's title and at its foot: "Print this paper" and "Email to a friend". The second
  * opens a short form (friend's address, the sender's name and address, an optional note); the Association's
- * sender emails the friend once and keeps neither address. Without JavaScript the button is a plain mailto
- * link, and the same link is offered if a send fails. Hidden on paper.
+ * sender emails the friend once and keeps neither address. Once it has gone, the sender is offered the free
+ * newsletter with a button of their own (owner 2026-10-13; never a ticked box, never the friend's address), and
+ * "Send it to someone else" brings the form back with their own name and address still filled in. Without
+ * JavaScript the button is a plain mailto link, and the same link is offered if a send fails. Hidden on paper.
  */
 export function PaperActions({
   title,
@@ -34,8 +38,10 @@ export function PaperActions({
   const [open, setOpen] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
   const [error, setError] = useState("");
-  // True when the sender ticked the newsletter box and the sign-up went through (Zoho then asks them to confirm).
-  const [newsletter, setNewsletter] = useState(false);
+  // The sender's own name and address, kept while the panel is open: for the newsletter button and the next send.
+  const [sender, setSender] = useState({ name: "", email: "" });
+  // The newsletter button on the "sent" screen: "done" once Zoho has been asked to send its confirmation email.
+  const [newsletter, setNewsletter] = useState<"idle" | "sending" | "done" | "failed">("idle");
   const id = useId();
 
   const url = `${SITE_URL}/reading-room/${slug}/`;
@@ -60,13 +66,12 @@ export function PaperActions({
           email: field("email"),
           comment: field("comment"),
           url,
-          newsletter: f.get("newsletter") === "on",
           website: field("website"),
         }),
       });
-      const data: { ok?: boolean; error?: string; newsletter?: string } = await res.json().catch(() => ({}));
+      const data: { ok?: boolean; error?: string } = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
-        setNewsletter(data.newsletter === "sent");
+        setSender({ name: field("name"), email: field("email") });
         setState("sent");
         return;
       }
@@ -75,6 +80,22 @@ export function PaperActions({
       setError(FAILED);
     }
     setState("failed");
+  }
+
+  async function askForNewsletter() {
+    setNewsletter("sending");
+    try {
+      const res = await fetch(NEWSLETTER_ENDPOINT, {
+        method: "POST",
+        credentials: "omit",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email: sender.email }),
+      });
+      const data: { ok?: boolean } = await res.json().catch(() => ({}));
+      setNewsletter(res.ok && data.ok ? "done" : "failed");
+    } catch {
+      setNewsletter("failed");
+    }
   }
 
   return (
@@ -108,8 +129,25 @@ export function PaperActions({
               <p className="mt-2 font-sans text-[0.95rem] leading-relaxed text-ink-soft">
                 Your friend will have it in a minute or two. If they reply, the reply comes to you.
               </p>
-              {newsletter && (
-                <p className="mt-2 font-sans text-[0.95rem] leading-relaxed text-navy">Please check your inbox to confirm the newsletter.</p>
+              {newsletter === "done" ? (
+                <p className="mt-4 font-sans text-[0.95rem] leading-relaxed text-navy">Please check your inbox to confirm the newsletter.</p>
+              ) : (
+                <div className="mt-5 border-t border-parchment-300 pt-5">
+                  <button
+                    type="button"
+                    onClick={askForNewsletter}
+                    disabled={newsletter === "sending"}
+                    className="inline-flex min-h-[3rem] cursor-pointer items-center bg-navy px-6 py-2.5 font-sans text-[1.05rem] font-semibold text-parchment-50 transition-colors hover:bg-navy-deep disabled:cursor-wait disabled:opacity-70"
+                  >
+                    {newsletter === "sending" ? "One moment…" : "Yes, send me the free newsletter"}
+                  </button>
+                  <p className="mt-2 font-sans text-[0.88rem] leading-relaxed text-ink-soft">We will email you once to confirm.</p>
+                  {newsletter === "failed" && (
+                    <p role="alert" className="mt-2 font-sans text-[0.95rem] leading-relaxed text-navy">
+                      Sorry, that did not go through. You can sign up with the form at the top of the page.
+                    </p>
+                  )}
+                </div>
               )}
               <button
                 type="button"
@@ -134,23 +172,15 @@ export function PaperActions({
                     <label htmlFor={`${id}-name`} className={LABEL}>
                       Your name
                     </label>
-                    <input id={`${id}-name`} name="name" type="text" required minLength={2} maxLength={60} autoComplete="name" className={FIELD} />
+                    <input id={`${id}-name`} name="name" type="text" required minLength={2} maxLength={60} autoComplete="name" defaultValue={sender.name} className={FIELD} />
                   </div>
                   <div>
                     <label htmlFor={`${id}-email`} className={LABEL}>
                       Your email
                     </label>
-                    <input id={`${id}-email`} name="email" type="email" required maxLength={254} autoComplete="email" className={FIELD} />
+                    <input id={`${id}-email`} name="email" type="email" required maxLength={254} autoComplete="email" defaultValue={sender.email} className={FIELD} />
                   </div>
                 </div>
-                {/* The sender's own choice, never the friend's address; unticked unless they tick it. */}
-                <label htmlFor={`${id}-newsletter`} className="flex cursor-pointer items-start gap-3 font-sans text-[0.95rem] leading-snug text-navy">
-                  <input id={`${id}-newsletter`} name="newsletter" type="checkbox" className="mt-0.5 h-5 w-5 flex-none cursor-pointer accent-[#131e3a]" />
-                  <span>
-                    <span className="font-semibold">Also send me the free newsletter</span>
-                    <span className="mt-0.5 block text-[0.88rem] text-ink-soft">We will email you once to confirm.</span>
-                  </span>
-                </label>
                 <div>
                   <label htmlFor={`${id}-comment`} className={LABEL}>
                     A short note <span className="font-normal text-muted">(optional)</span>
