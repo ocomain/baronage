@@ -61,7 +61,7 @@ A baron may have none, and that is not new. The Lyon Court’s own rolls print �
 
 One baronial society says on its website that the son of such a baron may not use the style: a baron must first have a territorial designation recognised by the Lord Lyon. It cites no authority.[^14] Another, in a paper of 2024, accepts “Younger” for him but not yet “Younger of”. It says “the use of ‘Younger’ without territorial reference is acceptable”, while “Younger of Exton” for the heir of a baron with no estate “has not yet gained wide acceptance”.[^15]
 
-That view treats the “of” as belonging to a territorial designation. But a barony has an “of” of its own. “HOLMAN, BARON OF RICKARTON” has no territorial designation, and the “of” is in his title.[^12] And the heir’s “of” does not depend on an “of” in the father’s style at all. Lord Oliphant, Lord Forbes and Lord Saltoun have none, yet their heirs are “maister of Oliephant”, “maister of Forbes” and “Master of Saltoun”.[^1][^9]
+That view treats the “of” as belonging to a territorial designation. But a barony has an “of” of its own. “HOLMAN, BARON OF RICKARTON” has no territorial designation, and the “of” is in his title.[^12] And the heir’s “of” does not depend on an “of” in the father’s style at all. Lord Oliphant, Lord Forbes and Lord Saltoun have none, yet their heirs are “maister of Oliephant”, “maister of Forbes” and “Master of Saltoun”.[^1][^9] That is the precedent for “Younger of [Barony]”: an heir named from the title itself, not from a territorial designation.
 
 The Lyon Court has published no rule on the style of a baron’s heir. Its Gazette note speaks only of a family’s “names and designations”.[^5]
 
