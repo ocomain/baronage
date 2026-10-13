@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Facsimile, GuideChapters, Ref, type GuideChapter } from "@/components/GuideChapters";
+import { Drawing, Facsimile, GuideChapters, Ref, type GuideChapter } from "@/components/GuideChapters";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 
@@ -44,6 +44,21 @@ const PIT_AND_GALLOWS_SOURCE = (
     Viscount Stair, 1681: a barony’s jurisdiction “will not reach to Capital Punishment, unless the same be exprest, as it
     uses to be when the Priviledge of Pit and Gallows are exprest” — <em>Institutions</em>, Title 13, § 62,{" "}
     <A href={STAIR}>p. 276</A>.
+  </>
+);
+/** The cap of justice: our own drawing from the blazon of one Lord Lyon's grant (owner 2026-10-13). */
+const CAP_SOURCE = (
+  <>
+    Drawn by us from the blazon in the Lord Lyon’s letters patent of 9 May 2005 to the baron-bailie of the Barony of
+    Tranent: “his Cap of Justice as Baron-Baillie Vert doubled Argent stringed Vert, being as from the Liveries of the
+    Barony of Tranent, and environed of two guards Or (of gold braid)”, a cap “limited to the Petitioner as Baron-Baillie
+    of the Barony of Tranent”. The patent records it as matriculated on “the 25th page of the 87th Volume” of the Lyon
+    Register; the blazon is printed in{" "}
+    <A href="https://www.theheraldrysociety.com/members-arms/marcenaro-y-aguirre-osvaldo-enrique/">the Heraldry Society’s Members’ Roll of Arms</A>.
+    The colours are those of that one barony and differ with each grant; the shape is our artist’s. In 2010 Lord Lyon
+    Sellar wrote that “it no longer seems appropriate to grant additaments to baronial officers, for example, baron
+    bailies or baron sergeants” —{" "}
+    <A href="https://web.archive.org/web/20150228064731/http://www.lyon-court.com/lordlyon/616.html">guidance of 5 January 2010</A>.
   </>
 );
 const WAND_SOURCE = (
@@ -94,6 +109,21 @@ const chapters: GuideChapter[] = [
     source: { label: "The Forme and Maner of Baron Courts · in Dickinson, Carnwath, p. lxxix", href: CARNWATH },
     img: "/images/guide/court-commission.webp",
     pos: "72% 50%",
+    dark: true,
+    figure: (
+      <Drawing
+        className="mx-auto w-full max-w-[15rem] lg:max-w-[17rem]"
+        src="/images/guide/cap-of-justice.svg"
+        alt="A green cap with two gold bands, a silver turn-up and green strings"
+        caption={
+          <>
+            A baron-bailie’s cap of justice
+            <br />
+            from a Lord Lyon’s grant of 2005<Ref n={2}>{CAP_SOURCE}</Ref>
+          </>
+        }
+      />
+    ),
   },
   {
     numeral: "III",
@@ -113,7 +143,7 @@ const chapters: GuideChapter[] = [
       <>
         The court’s messenger and enforcer: he summoned the parties and seized goods for its fines. His insignia were a
         horn and a white wand an ell long, which he broke if he was resisted
-        <Ref n={2}>{WAND_SOURCE}</Ref>.
+        <Ref n={3}>{WAND_SOURCE}</Ref>.
       </>
     ),
     quote: "of the quhilk reif & deforsment he brak his wand & tuk witnes",
@@ -129,7 +159,7 @@ const chapters: GuideChapter[] = [
       <>
         One of the tenants, he spoke the court’s judgment, its “doom”, aloud. The tenants who owed attendance were the
         judges, not the baron
-        <Ref n={3}>{SUITORS_SOURCE}</Ref>.
+        <Ref n={4}>{SUITORS_SOURCE}</Ref>.
       </>
     ),
     quote: "gart giff doum be the mouth of Jhone watsone dompstar",
@@ -173,7 +203,7 @@ const chapters: GuideChapter[] = [
       <>
         All jurisdiction ended on 28 November 2004. A baron may still name a bailie, a clerk, an officer and a dempster,
         and hold a court, for ceremony
-        <Ref n={4}>{CEREMONY_SOURCE}</Ref>. It can decide nothing.
+        <Ref n={5}>{CEREMONY_SOURCE}</Ref>. It can decide nothing.
       </>
     ),
     quote: "Any jurisdiction of … barony shall on the appointed day cease to exist; but nothing in this Act affects the dignity of baron",
