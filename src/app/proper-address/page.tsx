@@ -81,7 +81,7 @@ const HEIR_SOURCE: ReactNode = (
     <Src href="https://archive.org/details/bim_eighteenth-century_anno-regni-georgii-iii-_great-britain_1778/page/n485/mode/1up">
       18 Geo. III, c. 23, p. 486
     </Src>
-    ). For a peer’s heir the Passport Office enters “MASTER OF [title]” as the surname and adds “THE MASTER OF
+    ). For a Scottish peer’s heir the Passport Office enters “MASTER OF [title]” as the surname and adds “THE MASTER OF
     [title]” (
     <Src href="https://www.gov.uk/government/publications/titles-included-in-passports/titles-accessible">
       HM Passport Office, Titles
@@ -637,7 +637,7 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir is styled “Younger of Barony”, as a peer’s heir is “Master of”. “The” may go before either,
+                  The heir is styled “Younger of Barony”, as a Scottish peer’s heir is “Master of”. “The” may go before either,
                   and keeps “younger” from being read as a surname.<Footnote n={12}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
