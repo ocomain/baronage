@@ -10,7 +10,7 @@ reviewed: 2026-10-13
 
 # “Younger of” and “Master of”: the record set straight
 
-*The heir to a Scottish title is “Younger of”, unless the title is a peerage, when the heir is “Master of”. The two styles have stood side by side in the records since the 1500s. Where a baron, baronet, chief or laird has a territorial designation, the heir adds “younger” to it, after it or before it. The heir of a baron with none is “Younger of” the barony. Some say he may not be. This paper sets out the record.*
+*The heir to a Scottish title is “Younger”, unless the title is a peerage, when the heir is “Master of”. The two styles have stood side by side in the records since the 1500s. Where a baron, baronet, chief or laird has a territorial designation, the heir adds “younger” to it, after it or before it. The heir of a baron with none is “Younger of” the barony. Some say he may not be. This paper sets out the record.*
 
 ## The short answer
 
