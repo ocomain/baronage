@@ -10,14 +10,14 @@ reviewed: 2026-10-13
 
 # “Younger of” and “Master of”: the record set straight
 
-*The heir to a Scottish title is “Younger”, unless the title is a peerage, when the heir is “Master of”. The two styles have stood side by side in the records since the 1500s. Where a baron, baronet, chief or laird has a territorial designation, the heir adds “younger” to it, after it or before it. The heir of a baron with none is “Younger of” the barony. Some say he may not be. This paper sets out the record.*
+*The heir to a Scottish title is “Younger of”, unless the title is a peerage, when the heir is “Master of”. The two styles have stood side by side in the records since the 1500s. Where a baron, baronet, chief or laird has a territorial designation, the heir adds “younger” to it, after it or before it. The heir of a baron with none is “Younger of [the barony]”. Some say he may not be. This paper sets out the record.*
 
 ## The short answer
 
 - **The style is old and official.** From 1584 to 2005, Parliament, the Great Seal, the Gazette and the Lyon Court’s own rolls write the heir “younger of”.
 - **It is the counterpart of “Master”.** A survey of Scots law of 1936 puts the two in one sentence: the heir of a peer is “Master”, the heir of a baron is “younger of”.
 - **Barons share it with baronets, chiefs and lairds.** Each adds “younger” to the family’s territorial designation. Only the heir to a peerage is “Master”.
-- **It follows the father’s rank.** One man was “younger” of Stair in 1689 and “master of Stair” in 1690, when his father had become a peer.
+- **It follows the father’s rank.** One man was “younger of Stair” in 1689 and “master of Stair” in 1690, when his father had become a peer.
 - **No rule requires a territorial designation.** It is part of a surname and needs the Lord Lyon’s recognition, and many barons have none. No statute, court ruling or Lyon Court text has been found that says a baron’s heir needs one.
 - **A baron with no territorial designation uses the barony.** His heir is “Younger of [Barony]”, as a peer’s heir is “Master of [Peerage]”. The “of” is the barony’s own, as in “Baron of X”. “The” may go before either.
 
