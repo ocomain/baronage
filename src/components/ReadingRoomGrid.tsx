@@ -20,8 +20,8 @@ const ALL = "All papers";
 
 /**
  * The Reading Room index as one shelf of small files, four to a row on wide screens: a sheet, the subject, the title
- * and the reading time (owner, 13 October 2026). The papers keep the order the page gives them; the subject filters
- * above only hide files. Every file is in the prerendered HTML, so search engines and readers without JavaScript
+ * and the reading time (owner, 13 October 2026). The papers run subject by subject, in the order the subjects are
+ * given, exactly as they did when each subject had its own heading; the subject filters above only hide files. Every file is in the prerendered HTML, so search engines and readers without JavaScript
  * still get the whole library.
  */
 export function ReadingRoomGrid({
@@ -43,6 +43,8 @@ export function ReadingRoomGrid({
   }, []);
 
   const count = (c: string) => (c === ALL ? papers.length : papers.filter((p) => p.category === c).length);
+  // Subject by subject, in the order the subjects are given; within a subject the page's order holds.
+  const shelf = categories.flatMap((c) => papers.filter((p) => p.category === c));
 
   return (
     <>
@@ -78,7 +80,7 @@ export function ReadingRoomGrid({
       )}
 
       <ul aria-label="Papers" className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
-        {papers.map((p) => (
+        {shelf.map((p) => (
           <li key={p.slug} hidden={active !== ALL && p.category !== active}>
             {/* Phones: a compact row (sheet left, text right). From sm up: a small framed file. */}
             <Link
