@@ -29,7 +29,7 @@ export const baronies: Barony[] = [
   },
   { dignity: "Baron", name: "Kirkbuddo", roll: "https://roll.baronage.com/baron/jean-yves-de-la-sabliere", img: "/arms/kirkbuddo.webp" },
   { dignity: "Baron", name: "Crawfordjohn", img: "/arms/crawfordjohn.webp", pageOnly: true },
-  { dignity: "Baron", name: "Haliburton", img: "/arms/haliburton-2026.webp", pageOnly: true },
+  { dignity: "Baron", name: "Haliburton", img: "/arms/haliburton-arms-v2.webp", pageOnly: true },
   { dignity: "Baroness", name: "Redcastle", img: "/arms/redcastle.webp", pageOnly: true },
   { dignity: "Baron", name: "Lundie", roll: "https://roll.baronage.com/baron/craig-ward", img: "/arms/lundie.webp" },
   { dignity: "Baron", name: "Winchburgh", roll: "https://roll.baronage.com/baron/michael-lyons", img: "/arms/winchburgh-arms-v2.webp", pageOnly: true },
