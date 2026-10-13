@@ -17,6 +17,8 @@ const VISIT_SECONDS = 30 * 60;
 const CLOSED_KEY = `bsa-featured-closed:${FEATURED_PAPER.slug}`;
 // The card has already slid in this visit — show it at once on every later page.
 const REVEALED_KEY = `bsa-featured-revealed:${FEATURED_PAPER.slug}`;
+// The storybook pages, read by scrolling through full-screen plates: the card is never shown on them (owner 2026-10-14).
+const STORYBOOK_PAGES = ["/history/", "/robes-and-chapeau/", "/court-and-officers/", "/arms-and-flags/"];
 
 // Storage can be unavailable (private windows, blocked site data); the card then simply behaves as first-visit.
 function readKey(kind: "local" | "session", key: string): string | null {
@@ -57,7 +59,8 @@ function isClosed(): boolean {
  * Non-blocking featured-paper card. Slides in four seconds after a visitor arrives, or once they start
  * scrolling, then stays on every page of the visit until closed with X, which hides it for the rest of
  * that visit only, here and on the Roll — reading the paper does not close it, and Esc (which closes reference pop-ups) never
- * touches it. Hidden throughout the Reading Room. Sits beneath the mobile menu (z-30 under its z-40 overlay).
+ * touches it. Hidden throughout the Reading Room and on the four storybook pages (History, Robes & Chapeau,
+ * Court & Officers, Arms & Flags). Sits beneath the mobile menu (z-30 under its z-40 overlay).
  * If it would cover a page's own floating menu (anything marked data-clear-of-featured-paper, e.g. the section
  * list on Proper Address), it slips away for the rest of that page. Not a close: nothing is stored, and it
  * shows again on the next page.
@@ -78,10 +81,12 @@ export function FeaturedPaper() {
 
   useEffect(() => {
     // Anywhere in the Reading Room (the index and every paper) the visitor is already among the papers.
-    const inReadingRoom = pathname.replace(/\/?$/, "/").startsWith("/reading-room/");
+    const path = pathname.replace(/\/?$/, "/");
+    const inReadingRoom = path.startsWith("/reading-room/");
+    const onStorybook = STORYBOOK_PAGES.includes(path);
     const closed = isClosed();
     if (closed) markClosed(); // still browsing: keep it closed for another 30 minutes
-    const ok = !inReadingRoom && !closed;
+    const ok = !inReadingRoom && !onStorybook && !closed;
     setEligible(ok);
     setCleared(false);
     if (!ok) setShown(false);
