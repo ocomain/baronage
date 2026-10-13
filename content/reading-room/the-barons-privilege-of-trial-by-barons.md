@@ -1,6 +1,6 @@
 ---
-title: "Tried by his fellow barons: the baron’s privilege that lasted until 1949"
-subtitle: "A peer was tried by peers, and a baron by barons. The peers’ privilege was abolished in 1948; the barons’, by then shared with other landed men, in 1949"
+title: "A peer by peers, a baron by barons: the privilege that lasted until 1949"
+subtitle: "Each rank was tried by its own. The peers’ privilege was abolished in 1948; the barons’, by then shared with other landed men, in 1949"
 slug: the-barons-privilege-of-trial-by-barons
 meta_description: "A peer was tried by peers and a Scottish baron by barons. What the privilege was, who had it, and how both ended, in 1948 and 1949."
 category: Law & Statutes
@@ -8,7 +8,7 @@ published: 2026-10-13
 reviewed: 2026-10-13
 ---
 
-# Tried by his fellow barons: the baron’s privilege that lasted until 1949
+# A peer by peers, a baron by barons: the privilege that lasted until 1949
 
 *A peer accused of a crime was tried by his fellow peers. Scots law gave a baron a privilege of the same kind: to be tried by barons. This paper sets out what the privilege was, who had it, and when it ended.*
 
