@@ -9,6 +9,7 @@ import { LiveStats } from "@/components/LiveStats";
 import { Footnote } from "@/components/Footnote";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
+import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 export const metadata = { alternates: { canonical: "/" } };
 
@@ -479,14 +480,25 @@ export default function HomePage() {
             <Reveal>
               <div className="relative">
                 <div className="absolute -inset-3 -z-10 border border-gold/30" aria-hidden />
-                <div
-                  className="aspect-[4/5] w-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(10,16,36,0.08), rgba(10,16,36,0.22)), url('${CHARTER_IMG}')`,
-                  }}
-                  role="img"
-                  aria-label="A sealed Scottish charter with red wax seal"
-                />
+                {/* A lazy <img> (phones get the 960px twin), not a CSS background: it is far below the first screen. */}
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <picture>
+                    <source media={PHONE_MEDIA} srcSet={phoneImage(CHARTER_IMG)} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={CHARTER_IMG}
+                      alt="A sealed Scottish charter with red wax seal"
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 h-full w-full object-cover object-center"
+                    />
+                  </picture>
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(rgba(10,16,36,0.08), rgba(10,16,36,0.22))" }}
+                    aria-hidden
+                  />
+                </div>
               </div>
             </Reveal>
             <Reveal delay={0.1}>

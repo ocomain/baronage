@@ -23,6 +23,7 @@ const allMembers: CouncilMember[] = [
     alt: "Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird",
     also: null,
     img: "/council/balvaird-whitetie.webp",
+    cardImg: "/council/balvaird-whitetie-card.webp",
     pos: "center 16%",
     popPos: "center 10%",
     bio: "The Much Hon. Brady Brim-DeForest of Balvaird and Blairlogie, Baron of Balvaird is an Officer of the Most Venerable Order of Saint John and a Knight of the Pontifical Equestrian Order of Saint Sylvester. His armorial bearings are recognised across three jurisdictions — matriculated by the Court of the Lord Lyon in Scotland (2020), and granted by the Chief Herald of Malta (2022) and the College of Arms in London (2025). Balvaird succeeded to the barony in 2017 — a title confirmed by James VI in 1624 — and has pledged it as a hereditary title upon the Roll.",
@@ -158,7 +159,7 @@ export default function GoverningCouncilPage() {
           >
             {members.map((m, i) => (
               <Reveal key={m.mark} delay={(i % 4) * 0.08}>
-                <CouncilCard m={m} />
+                <CouncilCard m={m} first={i === 0} />
               </Reveal>
             ))}
           </div>

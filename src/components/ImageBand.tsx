@@ -4,11 +4,15 @@ import { useRef } from "react";
 import type { ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Container } from "./primitives";
+import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 /**
  * Full-bleed cinematic photograph band with a gentle scroll parallax and a
  * graded overlay — the art-book "image is the design" device used between
  * editorial sections (quotes, calls to action, atmosphere breaks).
+ *
+ * The photograph is a lazy <img>, not a CSS background, so it is fetched only as the band nears the
+ * screen; phones get the 960px twin, so `image` must be listed in scripts/make-phone-images.py.
  */
 export function ImageBand({
   image,
@@ -37,11 +41,20 @@ export function ImageBand({
       className={`relative isolate flex items-center overflow-hidden bg-navy-deep py-32 text-parchment-50 sm:py-44 ${className}`}
     >
       {/* Parallax photograph (scaled so the vertical drift never reveals an edge) */}
-      <motion.div
-        className="absolute inset-0 -z-20 bg-cover"
-        style={{ backgroundImage: `url('${image}')`, backgroundPosition: position, y, scale: 1.18 }}
-        aria-hidden
-      />
+      <motion.div className="absolute inset-0 -z-20" style={{ y, scale: 1.18 }} aria-hidden>
+        <picture className="block h-full w-full">
+          <source media={PHONE_MEDIA} srcSet={phoneImage(image)} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={image}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+            style={{ objectPosition: position }}
+          />
+        </picture>
+      </motion.div>
       {/* Cinematic grade */}
       <div
         className="absolute inset-0 -z-10"
