@@ -39,11 +39,11 @@ const CHAPEAU_DATES: { year: string; text: string }[] = [
 export function RankLadder() {
   return (
     <figure className="my-2">
-      <ol aria-label="The order of rank" className="mx-auto max-w-md border-x-[5px] border-gold/60 px-3 py-1">
+      <ol aria-label="The order of rank" className="mx-auto max-w-sm border-x-4 border-gold/60 px-2.5 py-0.5">
         {RUNGS.map((r, i) => (
           <li
             key={r.name}
-            className={`my-2 flex items-center gap-4 px-4 py-3 ${
+            className={`my-1.5 flex items-center gap-3 px-3 py-1.5 ${
               r.baron
                 ? "bg-navy text-parchment-50 shadow-[0_14px_30px_-18px_rgba(10,16,36,0.7)]"
                 : "border border-parchment-300 bg-parchment-50 text-navy"
@@ -51,24 +51,24 @@ export function RankLadder() {
           >
             <span
               aria-hidden
-              className={`flex h-9 w-9 flex-none items-center justify-center rounded-full font-sans text-base font-semibold ${
+              className={`flex h-7 w-7 flex-none items-center justify-center rounded-full font-sans text-sm font-semibold ${
                 r.baron ? "bg-gold text-navy-deep" : "border border-gold/60 text-gold-deep"
               }`}
             >
               {i + 1}
             </span>
             <span className="min-w-0 flex-1">
-              <span className={`block font-display leading-tight ${r.baron ? "text-3xl" : "text-2xl"}`}>{r.name}</span>
-              {r.note && <span className="mt-0.5 block font-sans text-[0.8rem] leading-snug text-ink-soft">{r.note}</span>}
+              <span className={`block font-display leading-tight ${r.baron ? "text-2xl" : "text-xl"}`}>{r.name}</span>
+              {r.note && <span className="block font-sans text-[0.72rem] leading-snug text-ink-soft">{r.note}</span>}
             </span>
             {r.baron && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/guide/chapeau-gules.svg" alt="" width={72} height={36} loading="lazy" className="h-9 w-auto flex-none" />
+              <img src="/images/guide/chapeau-gules.svg" alt="" width={72} height={36} loading="lazy" className="h-7 w-auto flex-none" />
             )}
           </li>
         ))}
       </ol>
-      <figcaption className="mx-auto mt-5 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
+      <figcaption className="mx-auto mt-3 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
         “Their precedence was thus after Knights and before Esquires.”
         <span className="mt-1 block font-sans text-[0.72rem] font-semibold not-italic uppercase tracking-[0.16em] text-gold-deep">
           Innes of Learney, 1945
