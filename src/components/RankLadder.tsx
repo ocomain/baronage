@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 /**
- * The order of rank drawn as a ladder, the baron's rung marked, with the four dated records it rests on
- * (owner 2026-10-13: precedence "with visuals instead of many words"). Words are kept to the names of the
+ * The order of rank drawn as a ladder, the baron's rung marked, with two dated records under it (owner 2026-10-13:
+ * precedence "with visuals instead of many words"; 2026-10-14 the 1905 and 2000 lines removed, "too much information for FAQ"). Words are kept to the names of the
  * ranks, one sentence of Innes of Learney's, and one line for each date; the sources are listed by the page.
  */
 const RUNGS: { name: string; note?: string; baron?: boolean }[] = [
@@ -17,8 +17,6 @@ const RUNGS: { name: string; note?: string; baron?: boolean }[] = [
 const DATES: { year: string; text: string }[] = [
   { year: "1625", text: "The King’s patents set baronets before knights, barons, esquires and gentlemen." },
   { year: "1672", text: "The Lyon Register enters baronets, knights and barons together, ahead of the gentlemen." },
-  { year: "1905", text: "The King’s scale names “Barons of Scotland” among the peers, and no other barons." },
-  { year: "2000", text: "Parliament keeps “any quality or precedence” that goes with a barony." },
 ];
 
 /** What each rank shows above the shield: the peers' coronets of rank, each drawn with its crimson cap turned up with
