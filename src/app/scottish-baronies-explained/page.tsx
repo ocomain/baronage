@@ -1241,8 +1241,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
  * are matched to `faqs` by anchor slug, so this is the single place to change. */
 const FAQ_ORDER = [
   "is-a-scottish-baron-a-titled-nobleman",
-  "where-does-a-scottish-baron-rank",
   "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
+  "where-does-a-scottish-baron-rank",
   "can-a-scottish-barony-be-bought-and-sold",
   "what-is-the-pledge-and-what-does-it-change",
   "how-does-succession-to-a-barony-work",
