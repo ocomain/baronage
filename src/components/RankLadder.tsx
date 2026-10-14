@@ -123,7 +123,7 @@ export function RankLadder() {
         ))}
       </ul>
       <div className="mt-8 text-center">
-        <p className="font-display text-xl leading-snug text-navy">“Never ceded”: the precedence of a Scottish baron</p>
+        <p className="font-display text-xl leading-snug text-navy">“Never ceded” to knights or baronets: the precedence of a Scottish baron</p>
         <Link
           href="/reading-room/the-precedence-of-a-scottish-baron/"
           className="mt-3 inline-flex items-center gap-1.5 bg-navy px-4 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"

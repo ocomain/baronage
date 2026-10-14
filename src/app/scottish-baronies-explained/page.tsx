@@ -262,7 +262,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         </a>
         . See{" "}
         <Link href="/reading-room/the-precedence-of-a-scottish-baron/" className={intLink}>
-          “Never ceded”: the precedence of a Scottish baron
+          “Never ceded” to knights or baronets: the precedence of a Scottish baron
         </Link>
         ,{" "}
         <Link href="/robes-and-chapeau/" className={intLink}>

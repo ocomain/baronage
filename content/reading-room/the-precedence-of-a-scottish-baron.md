@@ -1,5 +1,5 @@
 ---
-title: "“Never ceded”: the precedence of a Scottish baron"
+title: "“Never ceded” to knights or baronets: the precedence of a Scottish baron"
 subtitle: "The King set his baronets before the barons in 1625, and the barons fought it. They shared a name and a red robe with the lords of parliament, and in 1665 Charles II gave a coronet to “the barons and lords of Parliament”"
 slug: the-precedence-of-a-scottish-baron
 meta_description: "Where a Scottish baron ranks: the baronets’ patents of 1625, the red robe, the coronet warrant of 1665, the King’s Scale of 1905 and the Act of 2000."
@@ -8,7 +8,7 @@ published: 2026-10-14
 reviewed: 2026-10-14
 ---
 
-# “Never ceded”: the precedence of a Scottish baron
+# “Never ceded” to knights or baronets: the precedence of a Scottish baron
 
 *Where does a Scottish baron rank? The Crown gave an answer in 1625, when it set its new baronets before the barons. The barons took the matter to the Estates. This paper sets out what the record fixes, what it leaves open, and what the law keeps today.*
 
