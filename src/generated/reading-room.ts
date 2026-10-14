@@ -238,7 +238,7 @@ export const readingRoomPapers: ReadingRoomPaper[] = [
   },
   {
     "slug": "the-precedence-of-a-scottish-baron",
-    "title": "“Never ceded”: the precedence of a Scottish baron",
+    "title": "“Never ceded” to knights or baronets: the precedence of a Scottish baron",
     "subtitle": "The King set his baronets before the barons in 1625, and the barons fought it. They shared a name and a red robe with the lords of parliament, and in 1665 Charles II gave a coronet to “the barons and lords of Parliament”",
     "description": "Where a Scottish baron ranks: the baronets’ patents of 1625, the red robe, the coronet warrant of 1665, the King’s Scale of 1905 and the Act of 2000.",
     "category": "Law & Statutes",
