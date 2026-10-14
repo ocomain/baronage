@@ -67,11 +67,7 @@ Two legal encyclopaedias read the baron’s place from it.
 
 The *Encyclopaedia of the Laws of Scotland* of 1931 says the old Scots order of precedence below the baronet was given the effect of an Act of Parliament in 1633, and that the warrant of 1905 does not override it. It then takes the barons by name. They once ranked next to the knights. Under the Scale of 1905, with its newer degrees, “they can only rank before esquires”. The writer was Thomas Innes, Carrick Pursuivant, the later Lord Lyon.[^12]
 
-The *Stair Memorial Encyclopaedia* is the standard modern work. Its volume of 1995 has a paragraph headed “The baronage”.
-
-<blockquote class="paper-pullquote paper-pullquote--text"><p>“They rank before esquires and before doctors of divinity, law and physics.”</p><cite>The Laws of Scotland: Stair Memorial Encyclopaedia, 1995, on the baronage</cite></blockquote>
-
-The baronage, it says, has a precedency established by Act of Parliament. Among themselves barons rank by the date on which their lands were erected into a barony. The writer was Sir Crispin Agnew of Lochnaw, Rothesay Herald of Arms.[^13]
+The *Stair Memorial Encyclopaedia* is the standard modern work. Its volume of 1995 has a paragraph headed “The baronage”. The baronage, it says, has a precedency established by Act of Parliament. Barons rank before esquires, and before doctors of divinity, law and physic. Among themselves they rank by the date on which their lands were erected into a barony. The writer was Sir Crispin Agnew of Lochnaw, Rothesay Herald of Arms.[^13]
 
 Stair adds that a right of precedence which comes from an Act of Parliament may well be one a court of law would enforce.[^14]
 
