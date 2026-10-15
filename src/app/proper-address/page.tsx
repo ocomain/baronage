@@ -832,9 +832,9 @@ export default function ProperAddressPage() {
                 <P>
                   Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
                   equally of judges of the Court of Session, courtesy lords and the Lord Lyon himself, and it is the male counterpart of
-                  “Lady X”, the form the baronage has always used for a baroness or a baron’s wife. So “The Much
-                  Honoured Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix
-                  marking the baronage, while a baron remains “Baron of Inverness”. “Baron X” is different. In Britain
+                  “Lady X”, the form the baronage has always used for a baroness or a baron’s wife. So for a lord in the baronage of Scotland “The Much Honoured Lord Lochaber” and “The Much Honoured Lord
+                  of Lochaber” are equally correct, the prefix marking the baronage, while a baron who is not a lord
+                  remains “Baron of Inverness”. “Baron X” is different. In Britain
                   it is the formal designation of one thing only, a peer of the rank of baron, the form the Esslemont
                   Memorial of 1934 noted is “preferred for formal purposes by English and British lords”; no one else
                   uses it, and the Scottish form has always been “Baron of X”. That is the line not to cross: a Scots
