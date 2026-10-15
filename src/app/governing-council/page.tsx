@@ -43,7 +43,7 @@ const allMembers: CouncilMember[] = [
   },
   {
     mark: "K",
-    name: "Antoin, Younger of Kinfauns",
+    name: "Antóin, the Younger of Kinfauns",
     formal: "Younger of Kinfauns",
     alt: "Antoin Commane, Younger of Kinfauns",
     also: "Tanist Clan Commane",
