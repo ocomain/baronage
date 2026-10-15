@@ -168,6 +168,9 @@ const HIGHER_SOURCES: ReactNode[] = [
   </>,
   <>
     Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163; the Esslemont Memorial’s words “preferred for formal purposes by English and British lords”, p. 163.
+    The Lord Lyon’s “Lord” is that of his office: “The Officers of the Court are the Lord Lyon King of Arms and the Lyon Clerk
+    and Keeper of the Records, both appointed by the Sovereign on the recommendation of the First Minister” —{" "}
+    <Src href="https://courtofthelordlyon.scot/about%20us.htm">Court of the Lord Lyon, About us</Src>.
   </>,
   <>
     Annandale: Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell”, recorded in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, and discussed in Lord Lyon Sellar’s{" "}
@@ -828,7 +831,7 @@ export default function ProperAddressPage() {
                 </figure>
                 <P>
                   Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
-                  equally of judges of the Court of Session and courtesy lords, and it is the male counterpart of
+                  equally of judges of the Court of Session, courtesy lords and the Lord Lyon himself, and it is the male counterpart of
                   “Lady X”, the form the baronage has always used for a baroness or a baron’s wife. So “The Much
                   Honoured Lord Lochaber” and “The Much Honoured Lord of Lochaber” are equally correct, the prefix
                   marking the baronage, while a baron remains “Baron of Inverness”. “Baron X” is different. In Britain
