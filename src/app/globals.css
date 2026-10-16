@@ -632,6 +632,8 @@ video.bg-film::-webkit-media-controls-start-playback-button {
 /* Lifted above the featured-paper card with transform, not by changing "bottom": a change of position counted as the page
    jumping in the speed figures (Clarity, 6 October 2026). Same distance as before. */
 html.ez-card-up .ez-switch{transform:translateY(calc(-1 * (var(--ez-card-h, 150px) + 14px)))}
+/* Where the card only touches the switch (tablets), the switch stays in its corner and the card lies over its end. */
+html.ez-card-over .ez-switch{z-index:29}
 
 /* ---------- first-visit question: "Do you need extra large text?" ---------- */
 /* The question (and the Proper Address section list) lock the page while open. Keep the scrollbar's space while locked,
