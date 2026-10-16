@@ -90,6 +90,8 @@ const citations: {
   href?: string;
   pop?: boolean;
   feature?: boolean;
+  /** the source line with its own links, where it names more than one record */
+  sourceRich?: ReactNode;
   /** small italic line under the source */
   note?: ReactNode;
   /** a reading of the quotation, set large under the source line */
@@ -171,6 +173,26 @@ const citations: {
   },
   {
     source: "Parliament of Scotland · 1540 and 1592",
+    sourceRich: (
+      <>
+        <a
+          href="https://www.rps.ac.uk/trans/1540/12/30"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+        >
+          Parliament of Scotland · 1540
+        </a>{" "}
+        <a
+          href="https://www.rps.ac.uk/trans/1592/4/72"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-gold-light/50 underline-offset-4 transition-colors hover:text-parchment-50"
+        >
+          and 1592
+        </a>
+      </>
+    ),
     text: "…every noble man, such as an earl, lord, knight and baron… …the nobility, earls, lords and barons…",
     richText: (
       <>
@@ -399,7 +421,7 @@ export default function AboutPage() {
                         </p>
                       </Footnote>
                     ) : (
-                      c.source
+                      c.sourceRich ?? c.source
                     )}
                     {c.note && (
                       <span className="mt-2 block font-serif text-[0.8rem] normal-case italic tracking-normal text-parchment-200/70">
