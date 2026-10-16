@@ -72,12 +72,24 @@ export function EasyRead() {
     return () => document.removeEventListener("keydown", onKey);
   }, [asking]);
 
-  // Sit above the featured-paper card while it is showing on narrow screens.
+  // The switch keeps to the bottom-left corner. It moves up above the featured-paper card only where the card would
+  // cover it (phones, where the card runs the full width); where the two only touch, as on a tablet, it stays in the
+  // corner and the card may overlap its end slightly (owner 2026-10-16).
   useEffect(() => {
+    const SLIGHT = 40; // px of overlap allowed before the switch moves up
     const check = () => {
       const card = document.querySelector<HTMLElement>('aside[aria-label="Featured paper"]');
-      const up = !!card && Number(getComputedStyle(card).opacity) > 0.5 && window.innerWidth < 1100;
+      const sw = document.querySelector<HTMLElement>(".ez-switch");
+      let overlap = 0;
+      if (card && sw && Number(getComputedStyle(card).opacity) > 0.5) {
+        // Sideways overlap only: the lift is a vertical transform, so left and right are unaffected by it.
+        const c = card.getBoundingClientRect();
+        const w = sw.getBoundingClientRect();
+        overlap = Math.min(c.right, w.right) - Math.max(c.left, w.left);
+      }
+      const up = overlap > SLIGHT;
       document.documentElement.classList.toggle("ez-card-up", up);
+      document.documentElement.classList.toggle("ez-card-over", overlap > 0 && !up);
       if (up && card) document.documentElement.style.setProperty("--ez-card-h", `${Math.round(card.getBoundingClientRect().height)}px`);
     };
     check();
