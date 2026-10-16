@@ -15,7 +15,7 @@ reviewed: 2026-10-13
 ## The short answer
 
 - **A baron had the privilege of trial by barons.** The old law says it in terms: “ane Earle, be Earles; ane Baron, be Barons”.
-- **It was the same kind of privilege as a peer’s.** Mackenzie records that of old only noblemen sat on a nobleman’s jury, and only barons on a baron’s.
+- **It was the same kind of privilege as a peer’s.** Mackenzie records that of old only peers sat on a peer’s jury, and only barons on a baron’s.
 - **The court upheld it.** In 1667 it ordered a jury with a majority of “Barrons holding of the king”.
 - **It was the baron’s own.** It did not pass to his heir, or to a landowner whose lands were not a barony. Later it was opened to landed men generally.
 - **It was used into the 1800s.** In 1838 a landed proprietor was tried in the High Court by a jury with a majority of landed men.
