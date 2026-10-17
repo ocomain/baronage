@@ -49,9 +49,9 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   },
   // Lyon Court interlocutor of 26 February 1943, as on the About page.
   {
-    text: "…Finds and Declares that the Minor Barons of Scotland are, and have been… recognised as a ‘titled nobility’",
+    text: "…Barons of Scotland are… recognised as a ‘titled nobility’",
     source: "Lyon Court · Lord Lyon Francis Grant · 1943",
-    gold: ["are, and have been", "titled nobility"],
+    gold: ["titled nobility"],
   },
 ];
 
