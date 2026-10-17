@@ -20,10 +20,10 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
     note: "Dukes, marquis, earls, viscounts, lords of parliament in the peerage of Scotland",
     scots: "Titled nobility; noblemen; peers (“greater barons” also holding baronies)",
     english: "Nobility; peers",
-    ref: 4,
+    ref: 5,
   },
-  { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy", ref: 5 },
-  { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry", ref: 6 },
+  { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy", ref: 6 },
+  { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry", ref: 7 },
   {
     rank: "Barons",
     note: "Barons and barons of higher dignities in the baronage of Scotland",
@@ -35,11 +35,11 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
     ),
     english: "Commoners, gentry",
     baron: true,
-    ref: 7,
+    ref: 8,
   },
-  { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
-  { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
-  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 9 },
+  { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 9 },
+  { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 9 },
+  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 10 },
 ];
 
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
@@ -89,9 +89,20 @@ function Title() {
         <span aria-hidden className="h-px w-8 bg-gold/70 sm:w-12" />
         <span className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-gold-light sm:text-[0.72rem]">
           in order of precedence
-          <R n={2} light />
+          {/* the note number at a readable size: inside this small line it would be about 7px (owner 2026-10-17: "this is old people looking at the site") */}
+          <span className="text-[1.3rem] tracking-normal">
+            <R n={2} light />
+          </span>
         </span>
         <span aria-hidden className="h-px w-8 bg-gold/70 sm:w-12" />
+      </span>
+      {/* The line for every rank below the peers, moved up from under the table and made punchier (owner 2026-10-17:
+          "better at the top under 'in order of precedence'"; first approved in the papers chat; not to mention passports). */}
+      <span className="mx-auto mt-3 block max-w-xl text-balance font-serif text-[1.1rem] italic leading-snug text-parchment-100">
+        In English usage all below a peer are commoners; but UK law includes Scots law.
+        <span className="text-[1.3rem] not-italic">
+          <R n={3} light />
+        </span>
       </span>
     </>
   );
@@ -126,7 +137,9 @@ export function NoblesseTable() {
               <th scope="col" className={`${headCell} border-l border-gold/20`}>Scots law</th>
               <th scope="col" className={`${headCell} border-l border-gold/20`}>
                 English / UK usage
-                <R n={3} />
+                <span className="text-[1.15rem] tracking-normal">
+                  <R n={4} />
+                </span>
               </th>
             </tr>
           </thead>
@@ -165,7 +178,11 @@ export function NoblesseTable() {
                 <p className="mt-1.5 text-[0.95rem] leading-snug">
                   <span className={label}>
                     English / UK usage
-                    {i === 0 && <R n={3} />}
+                    {i === 0 && (
+                      <span className="text-[1.15rem] tracking-normal">
+                        <R n={4} />
+                      </span>
+                    )}
                   </span>
                   <span className="text-ink-soft">{r.english}</span>
                 </p>
@@ -175,12 +192,6 @@ export function NoblesseTable() {
         </div>
       </div>
     </figure>
-    {/* One line under the whole table, as it holds for every rank below the peers (owner 2026-10-17, approved in the
-        papers chat, word for word; not to mention passports). */}
-    <p className="mx-auto mt-3 max-w-xl text-center font-sans text-[0.9rem] leading-snug text-ink-soft">
-      English usage counts everyone below a peer a commoner; but UK law includes Scots law.
-      <R n={10} />
-    </p>
     </>
   );
 }

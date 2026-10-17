@@ -49,7 +49,7 @@ const REFS: Record<number, ReactNode> = {
       <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>).
     </>
   ),
-  3: (
+  4: (
     <>
       English usage: in law the commoners are all peers of one another, as none of them is noble:{" "}
       <A href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp">
@@ -58,7 +58,7 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  4: (
+  5: (
     <>
       Peers: <A href="https://www.legislation.gov.uk/aosp/1707/7">Treaty of Union, art. XXIII</A> (“Peers of Scotland”);{" "}
       <A href="https://dsl.ac.uk/entry/dost/pere_n_1">
@@ -75,7 +75,7 @@ const REFS: Record<number, ReactNode> = {
       (“With us all are called Barons who hold their Lands of the King in libera baronia”, that is, in free barony).
     </>
   ),
-  5: (
+  6: (
     <>
       Baronets: the patents create the hereditary state, degree, dignity, name, order, title and style of baronet
       (Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>). See{" "}
@@ -85,14 +85,14 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  6: (
+  7: (
     <>
       Knights and barons as noblemen: Act of 10 December 1540, “every noble man, such as an earl, lord, knight and baron”,
       in the modern English of the{" "}
       <A href="https://www.rps.ac.uk/trans/1540/12/30">Records of the Parliaments of Scotland, 1540/12/30</A>.
     </>
   ),
-  7: (
+  8: (
     <>
       Barons: “every noble man, such as an earl, lord, knight and baron” (
       <A href="https://www.rps.ac.uk/trans/1540/12/30">RPS 1540/12/30</A>, modern English); a barony does “ennoble” (Mackenzie,{" "}
@@ -111,7 +111,7 @@ const REFS: Record<number, ReactNode> = {
       whose s. 63 keeps the dignity of baron and “any quality or precedence associated with” it.
     </>
   ),
-  8: (
+  9: (
     <>
       Esquires, chiefs, lairds and gentlemen: the Lyon Court’s grant of 1984 in note 1 was to an armiger without a
       title. See{" "}
@@ -121,7 +121,7 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  9: (
+  10: (
     <>
       The commons:{" "}
       <A href="https://dsl.ac.uk/entry/dost/commoun_n">
@@ -131,7 +131,7 @@ const REFS: Record<number, ReactNode> = {
       <A href={`${MACKENZIE}n559/mode/1up`}>p. 552</A>).
     </>
   ),
-  10: (
+  3: (
     <>
       English usage: in law the commoners are all peers of one another, however far some outrank others, as none of them
       is noble: William Blackstone,{" "}
