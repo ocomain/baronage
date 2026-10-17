@@ -90,9 +90,7 @@ function Title() {
         <span className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-gold-light sm:text-[0.72rem]">
           in order of precedence
           {/* the note number at a readable size: inside this small line it would be about 7px (owner 2026-10-17: "this is old people looking at the site") */}
-          <span className="text-[1.3rem] tracking-normal">
-            <R n={2} light />
-          </span>
+          <R n={2} light big />
         </span>
         <span aria-hidden className="h-px w-8 bg-gold/70 sm:w-12" />
       </span>
@@ -100,9 +98,7 @@ function Title() {
           "better at the top under 'in order of precedence'"; first approved in the papers chat; not to mention passports). */}
       <span className="mx-auto mt-3 block max-w-xl text-balance font-serif text-[1.1rem] italic leading-snug text-parchment-100">
         In English usage all below a peer are commoners; but UK law includes Scots law.
-        <span className="text-[1.3rem] not-italic">
-          <R n={3} light />
-        </span>
+        <R n={3} light big />
       </span>
     </>
   );
@@ -137,9 +133,7 @@ export function NoblesseTable() {
               <th scope="col" className={`${headCell} border-l border-gold/20`}>Scots law</th>
               <th scope="col" className={`${headCell} border-l border-gold/20`}>
                 English / UK usage
-                <span className="text-[1.15rem] tracking-normal">
-                  <R n={4} />
-                </span>
+                <R n={4} big />
               </th>
             </tr>
           </thead>
@@ -154,7 +148,7 @@ export function NoblesseTable() {
                 </th>
                 <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink">
                   {r.scots}
-                  <R n={r.ref} />
+                  <R n={r.ref} big />
                 </td>
                 <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink-soft">{r.english}</td>
               </tr>
@@ -173,16 +167,12 @@ export function NoblesseTable() {
                 <p className="mt-2.5 text-[0.95rem] leading-snug">
                   <span className={label}>Scots law</span>
                   <span className="text-ink">{r.scots}</span>
-                  <R n={r.ref} />
+                  <R n={r.ref} big />
                 </p>
                 <p className="mt-1.5 text-[0.95rem] leading-snug">
                   <span className={label}>
                     English / UK usage
-                    {i === 0 && (
-                      <span className="text-[1.15rem] tracking-normal">
-                        <R n={4} />
-                      </span>
-                    )}
+                    {i === 0 && <R n={4} big />}
                   </span>
                   <span className="text-ink-soft">{r.english}</span>
                 </p>
