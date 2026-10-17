@@ -43,7 +43,7 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   },
   // Innes of Learney, PSAS 79 (1944–45), p. 132, as quoted on the About page.
   {
-    text: "barons are a part of ‘The Nobility’ in its constitutional sense",
+    text: "Barons are a part of ‘The Nobility’ in its constitutional sense",
     source: "Lord Lyon Innes of Learney",
     gold: ["‘The Nobility’"],
   },
