@@ -121,7 +121,7 @@ export function HeroHome() {
             className="rise mx-auto mt-6 max-w-2xl text-base leading-relaxed text-parchment-200/85 sm:text-lg"
             style={{ animationDelay: "0.26s" }}
           >
-            The ancient nobility of the Baronage of Scotland — verified, recorded, and preserved for future
+            The ancient nobility of the baronage of Scotland — verified, recorded, and preserved for future
             generations.
           </p>
 
