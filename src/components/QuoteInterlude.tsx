@@ -31,9 +31,9 @@ const QUOTES: { text: string; source: string }[] = [
     source: "Scottish Law Commission · 1999",
   },
   { text: "…a Barony, as we call it, do ennoble", source: "Mackenzie, Lord Advocate" },
-  // Works, vol. II (1716), p. 534, read on the page image, which prints "Word" with a capital; lower case here at the
-  // owner's wish (2026-10-17), as he wrote it.
-  { text: "Under the word Baron all our Nobility are comprehended", source: "Mackenzie, Lord Advocate" },
+  // Works, vol. II (1716), p. 534, read on the page image, which prints "Under the Word"; lower case for both here at
+  // the owner's wish (2026-10-17).
+  { text: "under the word Baron all our Nobility are comprehended", source: "Mackenzie, Lord Advocate" },
 ];
 
 // Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it", then "still not staying long
