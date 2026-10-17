@@ -11,7 +11,7 @@
 const ROWS: { rank: string; note?: string; scots: string; english: string; baron?: boolean }[] = [
   {
     rank: "Peers",
-    note: "Dukes, marquis, earls, viscounts, lords of parliament in peerage of Scotland",
+    note: "Dukes, marquis, earls, viscounts, lords of parliament in the peerage of Scotland",
     scots: "Titled nobility; noblemen; peers (“greater barons” also holding baronies)",
     english: "Nobility; peers",
   },
