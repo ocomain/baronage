@@ -1,19 +1,12 @@
 import Link from "next/link";
 
 /**
- * The order of rank drawn as a ladder, the baron's rung marked, with two dated records under it (owner 2026-10-13:
+ * Under the table "The Noblesse of Scotland" (NoblesseTable, which since 2026-10-17 carries the list of ranks, the owner
+ * asking for "one combined table"): Innes of Learney's sentence, the coronets and the chapeau, and two dated records.
+ * Formerly: the order of rank drawn as a ladder, the baron's rung marked, with two dated records under it (owner 2026-10-13:
  * precedence "with visuals instead of many words"; 2026-10-14 the 1905 and 2000 lines removed, "too much information for FAQ"). Words are kept to the names of the
  * ranks, one sentence of Innes of Learney's, and one line for each date; the sources are listed by the page.
  */
-const RUNGS: { name: string; note?: string; baron?: boolean }[] = [
-  { name: "Peers", note: "Dukes, marquesses, earls, viscounts, lords of parliament" },
-  { name: "Baronets" },
-  { name: "Knights" },
-  { name: "Barons", baron: true },
-  { name: "Esquires" },
-  { name: "Gentlemen" },
-];
-
 const DATES: { year: string; text: string }[] = [
   { year: "1625", text: "The King’s patents set baronets before knights, barons, esquires and gentlemen." },
   { year: "1672", text: "The Lyon Register enters baronets, knights and barons together, ahead of the gentlemen." },
@@ -39,35 +32,6 @@ const CHAPEAU_DATES: { year: string; text: string }[] = [
 export function RankLadder() {
   return (
     <figure className="my-2">
-      <ol aria-label="The order of rank" className="mx-auto max-w-sm border-x-4 border-gold/60 px-2.5 py-0.5">
-        {RUNGS.map((r, i) => (
-          <li
-            key={r.name}
-            className={`my-1.5 flex items-center gap-3 px-3 py-1.5 ${
-              r.baron
-                ? "bg-navy text-parchment-50 shadow-[0_14px_30px_-18px_rgba(10,16,36,0.7)]"
-                : "border border-parchment-300 bg-parchment-50 text-navy"
-            }`}
-          >
-            <span
-              aria-hidden
-              className={`flex h-7 w-7 flex-none items-center justify-center rounded-full font-sans text-sm font-semibold ${
-                r.baron ? "bg-gold text-navy-deep" : "border border-gold/60 text-gold-deep"
-              }`}
-            >
-              {i + 1}
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className={`block font-display leading-tight ${r.baron ? "text-2xl" : "text-xl"}`}>{r.name}</span>
-              {r.note && <span className="block font-sans text-[0.72rem] leading-snug text-ink-soft">{r.note}</span>}
-            </span>
-            {r.baron && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/guide/chapeau-gules.svg" alt="" width={72} height={36} loading="lazy" className="h-7 w-auto flex-none" />
-            )}
-          </li>
-        ))}
-      </ol>
       <figcaption className="mx-auto mt-3 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
         “Their precedence was thus after Knights and before Esquires.”
         <span className="mt-1 block font-sans text-[0.72rem] font-semibold not-italic uppercase tracking-[0.16em] text-gold-deep">
