@@ -19,6 +19,7 @@ const ROWS: { rank: string; note?: string; scots: string; english: string; baron
   { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry" },
   {
     rank: "Barons",
+    note: "Barons and barons of higher dignities in the baronage of Scotland",
     scots:
       "Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes called untitled nobility, and before 2004 feudal barons (both terms now defunct)",
     english: "Commoners, gentry",
