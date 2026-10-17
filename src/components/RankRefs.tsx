@@ -234,12 +234,17 @@ const REFS: Record<number, ReactNode> = {
   ),
 };
 
-/** A numbered reference marker; `light` for use on the navy title band. */
-export function R({ n, light = false }: { n: number; light?: boolean }) {
-  const marker = (
+/**
+ * A numbered reference marker; `light` for use on the navy title band; `big` for a number at a readable size and in
+ * bold whatever the size of the text around it (owner 2026-10-17: the table's numbers "a bit bigger and clearer").
+ */
+export function R({ n, light = false, big = false }: { n: number; light?: boolean; big?: boolean }) {
+  let marker = (
     <Footnote n={n} heading={`Reference · Note ${n}`}>
       {REFS[n]}
     </Footnote>
   );
-  return light ? <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/50">{marker}</span> : marker;
+  if (light) marker = <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/50">{marker}</span>;
+  if (big) marker = <span className="text-[1.3rem] not-italic leading-none tracking-normal [&_button]:font-bold">{marker}</span>;
+  return marker;
 }
