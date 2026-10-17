@@ -58,6 +58,22 @@ function Gold({ text }: { text: string }) {
   );
 }
 
+/**
+ * The source line. A source in three parts ("Court of Session · Lady Wolffe · 2019") goes on two lines on a phone,
+ * the court above the judge and year (owner 2026-10-17); on wider screens, and for shorter sources, one line.
+ */
+function Source({ text }: { text: string }) {
+  const parts = text.split(" · ");
+  if (parts.length < 3) return <>{text}</>;
+  return (
+    <>
+      <span className="block sm:inline">{parts[0]}</span>
+      <span className="hidden sm:inline"> · </span>
+      {parts.slice(1).join(" · ")}
+    </>
+  );
+}
+
 function shuffled(n: number): number[] {
   const a = Array.from({ length: n }, (_, i) => i);
   for (let i = n - 1; i > 0; i--) {
@@ -163,7 +179,7 @@ export function QuoteInterlude() {
           <Gold text={q.text} />
         </blockquote>
         <figcaption className="mt-6 font-sans text-base font-medium uppercase leading-snug tracking-[0.14em] text-parchment-200/60 sm:text-lg">
-          {q.source}
+          <Source text={q.source} />
         </figcaption>
       </figure>
     </div>
