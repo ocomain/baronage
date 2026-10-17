@@ -29,7 +29,7 @@ const CORONETS: { src: string; rank: string; text: string }[] = [
 
 /** The chapeau's own record, older than the modern grants (owner 2026-10-13: Roslin, and the petition of 1835). */
 const CHAPEAU_DATES: { year: string; text: string; ref: number }[] = [
-  { year: "1650", text: "The Baron of Roslin is found in his vault “laying in his armour with a red velvet cap on his head”.", ref: 14 },
+  { year: "1650", text: "The Baron of Roslin is found in his vault lying in his armour, with a red velvet cap on his head.", ref: 14 }, // modern English (owner 2026-10-17)
   { year: "1835", text: "The Lyon Court allows the heir of the barons of Dolphinton a cap “as being indicative of his descent from the ancient barons of Dolphington”.", ref: 15 },
   { year: "1934", text: "The Lord Lyon “found the claim established, and awarded the chapeau” to the Baron of Esslemont.", ref: 16 },
 ];

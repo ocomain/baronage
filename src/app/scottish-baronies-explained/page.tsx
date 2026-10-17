@@ -281,7 +281,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
           p. 545
         </a>{" "}
         (“With us all are called Barons who hold their Lands of the King in libera baronia”). Baronets: the patents create
-        the “heritable State, Degree, Dignity, Name, Order, Title and Stile of Baronet” (Mackenzie,{" "}
+        the hereditary state, degree, dignity, name, order, title and style of baronet (Mackenzie,{" "}
         <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n554/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
           p. 547
         </a>
@@ -293,7 +293,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
         <a href="https://www.rps.ac.uk/trans/1540/12/30" target="_blank" rel="noopener noreferrer" className={extLink}>
           RPS 1540/12/30
         </a>{" "}
-        (“every nobill man, sic as erle, lord, knycht and baroune”); a barony does “ennoble” (Mackenzie,{" "}
+        (“every noble man, such as an earl, lord, knight and baron”, in the Records’ modern English); a barony does “ennoble” (Mackenzie,{" "}
         <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n590/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
           p. 583
         </a>
@@ -332,8 +332,8 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
           Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 113
         </a>{" "}
-        (the baronets’ patents: “prae omnibus baronibus lie Lairdis, armigeris lie Esquyris, et generosis quibuscunque lie
-        gentelmen”; the Lyon Register; the chapeau: p. 152, Father Hay on the Roslin vault, opened in 1650; p. 153, the
+        (the baronets’ patents, in Sir George Mackenzie’s English of 1680: “before all Knights, called equites aurati, all lesser Barons, commonly called Lairds, and before all other Gentlemen”, “Of Precedency”, in
+        his <em>Works</em>, vol. ii (1716), p. 547; the Lyon Register; the chapeau: p. 152, Father Hay on the Roslin vault, opened in 1650; p. 153, the
         petition of Ainslie of Pilton, “heir and representative of the Feudal Barons of Dolphinton”, and the Lyon Court’s
         interlocutor of 28 November 1835; p. 154, the Lord Lyon “found the claim established, and awarded the chapeau”, 4
         September 1934);{" "}

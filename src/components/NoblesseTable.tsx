@@ -29,7 +29,7 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
     note: "Barons and barons of higher dignities in the baronage of Scotland",
     scots: (
       <>
-        Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes incorrectly {gone("untitled nobility")},
+        Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes {gone("untitled nobility")},
         and before 2004 {gone("feudal barons")} (both terms now defunct)
       </>
     ),
@@ -39,7 +39,7 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
   },
   { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
   { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
-  { rank: "Everyone else", scots: "The commons (the common people)", english: "Commoners", ref: 9 }, // "Plebeians" was not modern English (owner 2026-10-17)
+  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 9 },
 ];
 
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
