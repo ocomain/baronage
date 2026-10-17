@@ -45,6 +45,7 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   {
     text: "Barons are a part of ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’",
     source: "Lord Lyon Innes of Learney",
+    gold: ["‘The Nobility’"],
   },
   // Lyon Court interlocutor of 26 February 1943, as on the About page.
   {
@@ -63,7 +64,9 @@ const NEXT_KEY = "bsa-quote-next";
 
 /** The "noble" words in gold, as on the About page. */
 function Gold({ text, extra = [] }: { text: string; extra?: string[] }) {
-  const words = extra.map((w) => `\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`);
+  const words = extra.map(
+    (w) => `${/^\w/.test(w) ? "\\b" : ""}${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}${/\w$/.test(w) ? "\\b" : ""}`,
+  );
   const parts = text.split(new RegExp(`(${["ennobl\\w*", "nobility", "nobles?", ...words].join("|")})`, "gi"));
   return (
     <>
