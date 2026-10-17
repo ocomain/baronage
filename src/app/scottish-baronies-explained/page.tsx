@@ -231,7 +231,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     body: (
       <>
         <NoblesseTable />
-        <div className="mt-12">
+        <div className="mt-6">
           <RankLadder />
         </div>
       </>
@@ -315,7 +315,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
           Blackstone, <em>Commentaries</em>, Book I, ch. 12 (1765)
         </a>
         .{" "}
-        The ladder:{" "}
+        Precedence and the chapeau:{" "}
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
           Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 113
         </a>{" "}
