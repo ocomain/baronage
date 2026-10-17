@@ -33,9 +33,9 @@ const QUOTES: { text: string; source: string }[] = [
   { text: "…a Barony, as we call it, do ennoble", source: "Mackenzie, Lord Advocate" },
 ];
 
-// Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it"): two seconds and a little
-// more for each word, so the shortest stays about 2.5 seconds and the longest about 3.8.
-const readMs = (text: string) => 1900 + 90 * text.split(/\s+/).length;
+// Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it", then "still not staying long
+// enough"): three seconds and more for each word, so the shortest stays about 3.8 seconds and the longest about 5.7.
+const readMs = (text: string) => 3000 + 130 * text.split(/\s+/).length;
 const SPARE_MS = 3000; // taken down regardless this long after its reading time, should a page be slow
 const ORDER_KEY = "bsa-quote-order";
 const NEXT_KEY = "bsa-quote-next";
@@ -162,7 +162,7 @@ export function QuoteInterlude() {
         <blockquote className="font-serif text-[1.7rem] italic leading-snug text-parchment-50 sm:text-4xl sm:leading-snug">
           <Gold text={q.text} />
         </blockquote>
-        <figcaption className="mt-6 font-sans text-xs uppercase tracking-[0.18em] text-gold-light sm:text-sm">
+        <figcaption className="mt-6 font-sans text-base font-semibold uppercase leading-snug tracking-[0.14em] text-gold-light sm:text-lg">
           {q.source}
         </figcaption>
       </figure>
