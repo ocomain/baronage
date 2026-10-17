@@ -257,7 +257,12 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <a href="https://dsl.ac.uk/entry/dost/pere_n_1" target="_blank" rel="noopener noreferrer" className={extLink}>
           <em>Dictionary of the Older Scottish Tongue</em>, “Pere” n.1, sense 5
         </a>{" "}
-        (“in Scotland, a member of the titled nobility”); the great barons: Sir George Mackenzie,{" "}
+        (“in Scotland, a member of the titled nobility”); the greater barons: “the greater barons and the lesser barons,
+        the former acquiring such titles as Duke or Earl”, Lord Clyde in{" "}
+        <a href="https://archive.org/details/1992-lord-clydes-dictum" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <em>Spencer-Thomas of Buquhollie v Newell</em> 1992 SLT 973
+        </a>
+        ; Sir George Mackenzie,{" "}
         <em>Works</em> vol. ii (1716),{" "}
         <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n557/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
           p. 550

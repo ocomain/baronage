@@ -16,7 +16,7 @@ const DATES: { year: string; text: string }[] = [
  * ermine (owner 2026-10-14, to sit with the chapeau), and the baron's chapeau in a panel of its own. */
 const CORONETS: { src: string; rank: string; text: string }[] = [
   { src: "/images/guide/coronet-duke.svg", rank: "Duke", text: "Eight strawberry leaves" },
-  { src: "/images/guide/coronet-marquess.svg", rank: "Marquess", text: "Four leaves, four pearls" },
+  { src: "/images/guide/coronet-marquess.svg", rank: "Marquis", text: "Four leaves, four pearls" },   // "marquis is correct spelling in scotland" (owner 2026-10-17)
   { src: "/images/guide/coronet-earl.svg", rank: "Earl", text: "Eight pearls on points, eight leaves" },
   { src: "/images/guide/coronet-viscount.svg", rank: "Viscount", text: "Sixteen pearls" },
   { src: "/images/guide/coronet-lord.svg", rank: "Lord of Parliament", text: "Six pearls" },

@@ -11,8 +11,8 @@
 const ROWS: { rank: string; note?: string; scots: string; english: string; baron?: boolean }[] = [
   {
     rank: "Peers",
-    note: "Dukes, marquis, earls, viscounts, lords of parliament in Scottish peerage",
-    scots: "Titled nobility; noblemen; peers (“great barons” also holding baronies)",
+    note: "Dukes, marquis, earls, viscounts, lords of parliament in peerage of Scotland",
+    scots: "Titled nobility; noblemen; peers (“greater barons” also holding baronies)",
     english: "Nobility; peers",
   },
   { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy" },
@@ -107,7 +107,7 @@ export function NoblesseTable() {
             <tr className="border-b border-gold/40 bg-parchment-100">
               <th scope="col" className={headCell}>Rank</th>
               <th scope="col" className={`${headCell} border-l border-gold/20`}>Scots law</th>
-              <th scope="col" className={`${headCell} border-l border-gold/20`}>English usage</th>
+              <th scope="col" className={`${headCell} border-l border-gold/20`}>English / UK usage</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gold/20">
@@ -139,7 +139,7 @@ export function NoblesseTable() {
                   <span className="text-ink">{r.scots}</span>
                 </p>
                 <p className="mt-1.5 text-[0.95rem] leading-snug">
-                  <span className={label}>English usage</span>
+                  <span className={label}>English / UK usage</span>
                   <span className="text-ink-soft">{r.english}</span>
                 </p>
               </li>
