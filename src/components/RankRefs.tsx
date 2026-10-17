@@ -44,8 +44,9 @@ const REFS: Record<number, ReactNode> = {
         “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79
         (1944–45), p. 113
       </A>
-      , from the baronets’ patents of 1625, which set the baronet before all barons (lairds), esquires and gentlemen
-      whatsoever (the patents are in Latin; the English is ours).
+      , from the baronets’ patents of 1625, which set the baronet, in Sir George Mackenzie’s English of 1680,
+      “before all Knights, called equites aurati, all lesser Barons, commonly called Lairds, and before all other Gentlemen” (“Of Precedency”, in his <em>Works</em>, vol. ii (1716),{" "}
+      <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>).
     </>
   ),
   3: (
@@ -126,8 +127,8 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://dsl.ac.uk/entry/dost/commoun_n">
         <em>Dictionary of the Older Scottish Tongue</em>, “Commoun” n.
       </A>{" "}
-      (“the common people”); Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n559/mode/1up`}>p. 552</A>, on
-      the commoner.
+      (“the common people”); “a Plebeian” (Mackenzie, <em>Works</em>, vol. ii,{" "}
+      <A href={`${MACKENZIE}n559/mode/1up`}>p. 552</A>).
     </>
   ),
   10: (
@@ -202,8 +203,8 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://archive.org/details/historyofbaronet00pixluoft/page/n102/mode/1up">
         <em>A History of the Baronetage</em> (1900), p. 83
       </A>
-      , which sets the baronet before all barons (lairds), esquires and gentlemen whatsoever (the patent is in Latin; the
-      English is ours); Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>.
+      ; in Sir George Mackenzie’s English of 1680, the baronet goes “before all Knights, called equites aurati, all lesser Barons, commonly called Lairds, and before all other Gentlemen” (“Of Precedency”, in his{" "}
+      <em>Works</em>, vol. ii (1716), <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>); Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>.
     </>
   ),
   18: (
