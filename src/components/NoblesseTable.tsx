@@ -105,6 +105,7 @@ const label = "mr-1.5 font-sans text-[0.66rem] font-semibold uppercase tracking-
 
 export function NoblesseTable() {
   return (
+    <>
     <figure className="my-2 border border-gold/60 bg-parchment-50 p-1 shadow-[0_22px_48px_-30px_rgba(10,16,36,0.55)]">
       <div className="border border-gold/35">
         {/* ≥ 640px: semantic table, the heading in its first row */}
@@ -174,5 +175,12 @@ export function NoblesseTable() {
         </div>
       </div>
     </figure>
+    {/* One line under the whole table, as it holds for every rank below the peers (owner 2026-10-17, approved in the
+        papers chat, word for word; not to mention passports). */}
+    <p className="mx-auto mt-3 max-w-xl text-center font-sans text-[0.9rem] leading-snug text-ink-soft">
+      English usage counts everyone below a peer a commoner; but UK law includes Scots law.
+      <R n={10} />
+    </p>
+    </>
   );
 }

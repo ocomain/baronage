@@ -133,6 +133,22 @@ const REFS: Record<number, ReactNode> = {
   ),
   10: (
     <>
+      English usage: in law the commoners are all peers of one another, however far some outrank others, as none of them
+      is noble: William Blackstone,{" "}
+      <A href="https://archive.org/details/bim_eighteenth-century_commentaries-on-the-laws_blackstone-william-sir_1765_1/page/n404/mode/1up">
+        <em>Commentaries on the Laws of England</em>, vol. I (Oxford, 1765), book I, ch. 12, p. 391
+      </A>
+      . Scots law: by the <A href="https://www.legislation.gov.uk/aosp/1707/7">Treaty of Union, art. XVIII</A>, the laws of
+      Scotland “remain in the same force as before”, and “no alteration be made in Laws which concern private Right except
+      for evident utility of the subjects within Scotland”. See{" "}
+      <Link href="/reading-room/treaty-of-union/" className={int}>
+        The Treaty of Union
+      </Link>
+      .
+    </>
+  ),
+  11: (
+    <>
       Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>, after the baronets’ patents and the Lyon
       Register. See{" "}
       <Link href="/reading-room/innes-of-learney-1945/" className={int}>
@@ -145,12 +161,12 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  11: (
+  12: (
     <>
       <A href="https://courtofthelordlyon.scot/blazoning.htm">Court of the Lord Lyon, “Blazoning”</A>.
     </>
   ),
-  12: (
+  13: (
     <>
       The numbers of leaves and pearls, and “the caps of crimson velvet turned up with ermine, with a gold tassel on the
       top”, as in the Earl Marshal’s order of 1 October 1901, in{" "}
@@ -165,7 +181,7 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  13: (
+  14: (
     <>
       Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), pp. 152–155</A>: the Roslin “red velvet cap”, and
       that the Lyon Court grants the chapeau in red (p. 155). See{" "}
@@ -175,19 +191,19 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  14: (
+  15: (
     <>
       Father Hay’s account of the Roslin vault, opened in 1650, in Innes of Learney,{" "}
       <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 152</A>.
     </>
   ),
-  15: (
+  16: (
     <>
       The petition of Ainslie of Pilton, “heir and representative of the Feudal Barons of Dolphinton”, and the Lyon
       Court’s interlocutor of 28 November 1835: Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 153</A>.
     </>
   ),
-  16: (
+  17: (
     <>
       The Lord Lyon’s interlocutor of 4 September 1934: Innes of Learney,{" "}
       <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 154</A>. See{" "}
@@ -197,7 +213,7 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  17: (
+  18: (
     <>
       The patent of Sir Robert Gordon, the first baronet, 28 May 1625, printed in F. W. Pixley,{" "}
       <A href="https://archive.org/details/historyofbaronet00pixluoft/page/n102/mode/1up">
@@ -207,7 +223,7 @@ const REFS: Record<number, ReactNode> = {
       <em>Works</em>, vol. ii (1716), <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>); Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>.
     </>
   ),
-  18: (
+  19: (
     <>
       George Seton,{" "}
       <A href="https://archive.org/details/lawpracticeofher00setouoft/page/n111/mode/1up">

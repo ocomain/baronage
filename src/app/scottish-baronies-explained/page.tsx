@@ -327,7 +327,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
         <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
           Blackstone, <em>Commentaries</em>, Book I, ch. 12 (1765)
         </a>
-        .{" "}
+        ; but UK law includes Scots law, which the{" "}
+        <a href="https://www.legislation.gov.uk/aosp/1707/7" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Treaty of Union, art. XVIII
+        </a>{" "}
+        kept “in the same force as before”.{" "}
         Precedence and the chapeau:{" "}
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
           Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 113
