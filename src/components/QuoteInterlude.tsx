@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 /**
- * A short quotation shown for about a second when a visitor clicks from one page of the site to another (owner
+ * A short quotation shown for a few seconds when a visitor clicks from one page of the site to another (owner
  * 2026-10-17: "a small loading screen with a quote"). The owner's own short versions of quotations on the About page,
  * word for word, with the "noble" words in gold as there. Never on the first page of a visit, which is the page search
  * engines judge; never for in-page links, links that open elsewhere, or back and forward; not shown where the device
@@ -33,8 +33,10 @@ const QUOTES: { text: string; source: string }[] = [
   { text: "…a Barony, as we call it, do ennoble", source: "Mackenzie, Lord Advocate" },
 ];
 
-const MIN_MS = 1100; // how long a quote stays up at least
-const MAX_MS = 4000; // taken down regardless, should a page be slow or the click lead nowhere
+// Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it"): two seconds and a little
+// more for each word, so the shortest stays about 2.5 seconds and the longest about 3.8.
+const readMs = (text: string) => 1900 + 90 * text.split(/\s+/).length;
+const SPARE_MS = 3000; // taken down regardless this long after its reading time, should a page be slow
 const ORDER_KEY = "bsa-quote-order";
 const NEXT_KEY = "bsa-quote-next";
 
@@ -89,6 +91,7 @@ export function QuoteInterlude() {
   const [quote, setQuote] = useState<number | null>(null);
   const [shown, setShown] = useState(false);
   const started = useRef(0);
+  const showFor = useRef(0);
   const waiting = useRef(false);
   const timers = useRef<number[]>([]);
 
@@ -117,11 +120,13 @@ export function QuoteInterlude() {
       if (url.origin !== location.origin || samePage(url.pathname, location.pathname)) return;
       if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
       clearTimers();
-      setQuote(nextQuote());
+      const n = nextQuote();
+      setQuote(n);
       setShown(true);
       started.current = Date.now();
+      showFor.current = readMs(QUOTES[n].text);
       waiting.current = true;
-      timers.current.push(window.setTimeout(hide, MAX_MS));
+      timers.current.push(window.setTimeout(hide, showFor.current + SPARE_MS));
     };
     // Capture phase: links that change page without reloading stop the click before it would reach a normal listener.
     document.addEventListener("click", onClick, true);
@@ -132,7 +137,7 @@ export function QuoteInterlude() {
   useEffect(() => {
     if (!waiting.current) return;
     waiting.current = false;
-    timers.current.push(window.setTimeout(hide, Math.max(0, MIN_MS - (Date.now() - started.current))));
+    timers.current.push(window.setTimeout(hide, Math.max(0, showFor.current - (Date.now() - started.current))));
   }, [pathname, hide]);
 
   useEffect(() => {
