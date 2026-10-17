@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FeaturedPaper } from "@/components/FeaturedPaper";
 import { EasyRead } from "@/components/EasyRead";
+import { QuoteInterlude } from "@/components/QuoteInterlude";
 import { SITE_URL } from "@/lib/site";
 import { NEW_KEY_STORE } from "@/lib/subscriber";
 
@@ -166,6 +167,7 @@ export default function RootLayout({
         <SiteFooter />
         <FeaturedPaper />
         <EasyRead />
+        <QuoteInterlude />
       </body>
     </html>
   );
