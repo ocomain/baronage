@@ -106,6 +106,7 @@ export function QuoteInterlude() {
   const pathname = usePathname();
   const [quote, setQuote] = useState<number | null>(null);
   const [shown, setShown] = useState(false);
+  const [quick, setQuick] = useState(false); // closed by a tap or Esc: gone at once, without the fade
   const started = useRef(0);
   const showFor = useRef(0);
   const waiting = useRef(false);
@@ -120,6 +121,11 @@ export function QuoteInterlude() {
     waiting.current = false;
     setShown(false);
   }, []);
+  // A tap or click anywhere on it, or Esc, closes it straight away (owner 2026-10-17).
+  const close = useCallback(() => {
+    setQuick(true);
+    hide();
+  }, [hide]);
 
   // A click on a link to another page of this site puts a quotation up at once, before the page changes.
   useEffect(() => {
@@ -138,6 +144,7 @@ export function QuoteInterlude() {
       clearTimers();
       const n = nextQuote();
       setQuote(n);
+      setQuick(false);
       setShown(true);
       started.current = Date.now();
       showFor.current = readMs(QUOTES[n].text);
@@ -158,19 +165,19 @@ export function QuoteInterlude() {
 
   useEffect(() => {
     if (!shown) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && hide();
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [shown, hide]);
+  }, [shown, close]);
 
   if (quote === null) return null;
   const q = QUOTES[quote];
   return (
     <div
       aria-hidden
-      onClick={hide}
+      onClick={close}
       className={`fixed inset-0 z-[3000] flex cursor-pointer items-center justify-center bg-navy-deep px-6 ${
-        shown ? "opacity-100" : "pointer-events-none opacity-0 transition-opacity duration-500 ease-out"
+        shown ? "opacity-100" : `pointer-events-none opacity-0 ${quick ? "" : "transition-opacity duration-500 ease-out"}`
       }`}
     >
       <figure className="max-w-3xl text-center">
