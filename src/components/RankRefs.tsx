@@ -55,6 +55,11 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp">
         Blackstone, <em>Commentaries on the Laws of England</em>, Book I, ch. 12 (1765)
       </A>
+      . Gentry: in England, below the lords and noblemen come knights, esquires and plain gentlemen, the “second sort of
+      gentlemen”, Sir Thomas Smith,{" "}
+      <A href="https://archive.org/details/derepublicaanglo00smituoft/page/n88/mode/1up">
+        <em>De Republica Anglorum</em> (1583), book I, ed. L. Alston (1906), pp. 31–32
+      </A>
       . Baronets are listed with the peers in <em>Burke’s Peerage &amp; Baronetage</em> and <em>Debrett’s Peerage and
       Baronetage</em>.
     </>
