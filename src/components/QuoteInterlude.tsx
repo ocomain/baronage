@@ -58,22 +58,6 @@ function Gold({ text }: { text: string }) {
   );
 }
 
-/**
- * The source line. A source in three parts ("Court of Session · Lady Wolffe · 2019") goes on two lines on a phone,
- * the court above the judge and year (owner 2026-10-17); on wider screens, and for shorter sources, one line.
- */
-function Source({ text }: { text: string }) {
-  const parts = text.split(" · ");
-  if (parts.length < 3) return <>{text}</>;
-  return (
-    <>
-      <span className="block sm:inline">{parts[0]}</span>
-      <span className="hidden sm:inline"> · </span>
-      {parts.slice(1).join(" · ")}
-    </>
-  );
-}
-
 function shuffled(n: number): number[] {
   const a = Array.from({ length: n }, (_, i) => i);
   for (let i = n - 1; i > 0; i--) {
@@ -185,8 +169,14 @@ export function QuoteInterlude() {
         <blockquote className="font-serif text-[1.7rem] italic leading-snug text-parchment-50 sm:text-4xl sm:leading-snug">
           <Gold text={q.text} />
         </blockquote>
-        <figcaption className="mt-6 font-sans text-base font-medium uppercase leading-snug tracking-[0.14em] text-parchment-200/60 sm:text-lg">
-          <Source text={q.source} />
+        {/* One line on a phone: the longest source (the Court of Session's) a little smaller there so it fits
+            (owner 2026-10-17); every source the same size on wider screens. */}
+        <figcaption
+          className={`mt-6 font-sans font-medium uppercase leading-snug text-parchment-200/60 sm:text-lg sm:tracking-[0.14em] ${
+            q.source.length > 32 ? "text-[13px] tracking-[0.08em]" : "text-[15px] tracking-[0.12em]"
+          }`}
+        >
+          {q.source}
         </figcaption>
       </figure>
     </div>
