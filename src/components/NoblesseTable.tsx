@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { R } from "@/components/RankRefs";
 
 /**
@@ -10,7 +11,10 @@ import { R } from "@/components/RankRefs";
  * gold tint with a gold edge (owner: dark blue there was hard to read).
  * A <table> at ≥640px and a stacked, labelled layout below that width so the page never scrolls sideways on phones.
  */
-const ROWS: { rank: string; note?: string; scots: string; english: string; baron?: boolean; ref: number }[] = [
+/** The two defunct terms in the barons' row are struck through (owner 2026-10-17). */
+const gone = (t: string) => <s className="decoration-ink/70">{t}</s>;
+
+const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; baron?: boolean; ref: number }[] = [
   {
     rank: "Peers",
     note: "Dukes, marquis, earls, viscounts, lords of parliament in the peerage of Scotland",
@@ -23,8 +27,12 @@ const ROWS: { rank: string; note?: string; scots: string; english: string; baron
   {
     rank: "Barons",
     note: "Barons and barons of higher dignities in the baronage of Scotland",
-    scots:
-      "Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes incorrectly untitled nobility, and before 2004 feudal barons (both terms now defunct)",
+    scots: (
+      <>
+        Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes incorrectly {gone("untitled nobility")},
+        and before 2004 {gone("feudal barons")} (both terms now defunct)
+      </>
+    ),
     english: "Commoners, gentry",
     baron: true,
     ref: 7,
