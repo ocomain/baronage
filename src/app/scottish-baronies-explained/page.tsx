@@ -298,7 +298,11 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <Link href="/reading-room/barons-in-the-gazette/" className={intLink}>
           Barons in the Gazette
         </Link>
-        . Esquires, chiefs, lairds and gentlemen: the grant of 1984 above was to an armiger without a title; see{" "}
+        ; “feudal barons” until feudal tenure ended on 28 November 2004 under the{" "}
+        <a href="https://www.legislation.gov.uk/asp/2000/5/section/63" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Abolition of Feudal Tenure etc. (Scotland) Act 2000
+        </a>
+        , whose s. 63 keeps the dignity of baron. Esquires, chiefs, lairds and gentlemen: the grant of 1984 above was to an armiger without a title; see{" "}
         <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
           Lairds, lords and barons
         </Link>

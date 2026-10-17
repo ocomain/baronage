@@ -11,15 +11,16 @@
 const ROWS: { rank: string; note?: string; scots: string; english: string; baron?: boolean }[] = [
   {
     rank: "Peers",
-    note: "Dukes, marquesses, earls, viscounts, lords of parliament in peerage of Scotland",
+    note: "Dukes, marquis, earls, viscounts, lords of parliament in Scottish peerage",
     scots: "Titled nobility; noblemen; peers (“great barons” also holding baronies)",
     english: "Nobility; peers",
   },
-  { rank: "Baronets", scots: "Knighthood (hereditary); noblemen", english: "Commoners in law; often called aristocracy" },
+  { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy" },
   { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry" },
   {
     rank: "Barons",
-    scots: "Titled nobility; noblemen; also incorrectly prior to 1943 untitled nobility (the Lyon Court’s “minor barons”)",
+    scots:
+      "Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes called untitled nobility, and before 2004 feudal barons (both terms now defunct)",
     english: "Commoners, gentry",
     baron: true,
   },
