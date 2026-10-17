@@ -94,8 +94,9 @@ const REFS: Record<number, ReactNode> = {
   ),
   8: (
     <>
-      Barons: “every noble man, such as an earl, lord, knight and baron” (
-      <A href="https://www.rps.ac.uk/trans/1540/12/30">RPS 1540/12/30</A>, modern English); a barony does “ennoble” (Mackenzie,{" "}
+      Barons: “…the nobility, earls, lords and barons…”, Parliament of Scotland, 1592 (
+      <A href="https://www.rps.ac.uk/trans/1592/4/72">RPS 1592/4/72</A>, modern English; the Act of 1540 is in note 7); a
+      barony does “ennoble” (Mackenzie,{" "}
       <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n590/mode/1up`}>p. 583</A>); “recognised as a ‘titled nobility’”, Lyon
       Court interlocutor of 26 February 1943, printed by Innes of Learney, <A href={INNES}><em>PSAS</em> 79, p. 143 n. 3</A>;
       “of the rank of minor barons or untitled nobility of Scotland”, Lyon Court birthbrief of March 1930: see{" "}
