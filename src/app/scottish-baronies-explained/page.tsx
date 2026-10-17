@@ -5,6 +5,7 @@ import { ButtonLink, Container, GoldRule, Section } from "@/components/primitive
 import { Footnote } from "@/components/Footnote";
 import { SITE_URL } from "@/lib/site";
 import { RankLadder } from "@/components/RankLadder";
+import { NoblesseTable } from "@/components/NoblesseTable";
 
 export const metadata: Metadata = {
   title: "Scottish Baronies, Explained — FAQ",
@@ -227,9 +228,85 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
   {
     q: "Where does a Scottish baron rank?",
     a: "After knights and before esquires. Innes of Learney, later Lord Lyon, set out the record in 1945: the King’s patents to the first baronets (1625) place baronets before knights, barons, esquires and gentlemen, and the Lyon Register (1672) enters baronets, knights and barons together; “their precedence was thus after Knights and before Esquires”. The Act of 2000 that ended feudal tenure keeps “any quality or precedence” that goes with a barony. The royal Scale of General Precedence in Scotland (1905) names “Barons of Scotland” among the peers and has no separate line for other barons.",
-    body: <RankLadder />,
+    body: (
+      <>
+        <NoblesseTable />
+        <div className="mt-12">
+          <RankLadder />
+        </div>
+      </>
+    ),
     authority: (
       <>
+        The table. Its heading is the Lyon Court’s nobility clause: the grantee received “as Nobles in the Noblesse of
+        Scotland” (Wauchope of Niddrie declaration, 19 April 1945; see the glossary). The order: Innes of Learney, below,
+        and the baronets’ patents of 1625. Peers:{" "}
+        <a href="https://www.legislation.gov.uk/aosp/1707/7" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Treaty of Union, art. XXIII
+        </a>{" "}
+        (“Peers of Scotland”);{" "}
+        <a href="https://dsl.ac.uk/entry/dost/pere_n_1" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <em>Dictionary of the Older Scottish Tongue</em>, “Pere” n.1, sense 5
+        </a>{" "}
+        (“in Scotland, a member of the titled nobility”); the great barons: Sir George Mackenzie,{" "}
+        <em>Works</em> vol. ii (1716),{" "}
+        <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n557/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 550
+        </a>{" "}
+        (“Now the Lords are called the great Barons, and the rest are called small Barons in the 101 Act, 7 Parl. James
+        I. and ever since”), also{" "}
+        <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n539/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 534
+        </a>{" "}
+        and{" "}
+        <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n552/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 545
+        </a>{" "}
+        (“With us all are called Barons who hold their Lands of the King in libera baronia”). Baronets: the patents create
+        the “heritable State, Degree, Dignity, Name, Order, Title and Stile of Baronet” (Mackenzie,{" "}
+        <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n554/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 547
+        </a>
+        ); see{" "}
+        <Link href="/reading-room/how-the-baronets-pleaded-the-barons-nobility/" className={intLink}>
+          How the baronets pleaded the barons’ nobility
+        </Link>
+        . Knights and barons as noblemen: Act of 10 December 1540,{" "}
+        <a href="https://www.rps.ac.uk/trans/1540/12/30" target="_blank" rel="noopener noreferrer" className={extLink}>
+          RPS 1540/12/30
+        </a>{" "}
+        (“every nobill man, sic as erle, lord, knycht and baroune”); a barony does “ennoble” (Mackenzie,{" "}
+        <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n590/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 583
+        </a>
+        ). Barons: “recognised as a ‘titled nobility’”, Lyon Court interlocutor of 26 February 1943 (printed by Innes,{" "}
+        <em>PSAS</em> 79, p. 143 n. 3); “of the rank of minor barons or untitled nobility of Scotland”, Lyon Court
+        birthbrief of March 1930: see{" "}
+        <Link href="/reading-room/untitled-in-1930-titled-in-1943/" className={intLink}>
+          Untitled in 1930, titled in 1943
+        </Link>{" "}
+        and{" "}
+        <Link href="/reading-room/barons-in-the-gazette/" className={intLink}>
+          Barons in the Gazette
+        </Link>
+        . Esquires, chiefs, lairds and gentlemen: see{" "}
+        <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
+          Lairds, lords and barons
+        </Link>
+        . The commons:{" "}
+        <a href="https://dsl.ac.uk/entry/dost/commoun_n" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <em>Dictionary of the Older Scottish Tongue</em>, “Commoun” n.
+        </a>{" "}
+        (“the common people”); “a Plebeian” (Mackenzie,{" "}
+        <a href="https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n559/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 552
+        </a>
+        ). English usage: the commoners “all are in law peers, in respect of their want of nobility”,{" "}
+        <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Blackstone, <em>Commentaries</em>, Book I, ch. 12 (1765)
+        </a>
+        .{" "}
+        The ladder:{" "}
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
           Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>PSAS</em> 79 (1944–45), p. 113
         </a>{" "}
@@ -1240,9 +1317,9 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
  * detailed, legal and edge-case questions follow. Reorder here — the entries
  * are matched to `faqs` by anchor slug, so this is the single place to change. */
 const FAQ_ORDER = [
+  "where-does-a-scottish-baron-rank", // first (owner 2026-10-17)
   "is-a-scottish-baron-a-titled-nobleman",
   "is-scottish-feudal-barony-or-feudal-baron-or-feudal-title-the-correct-term-today",
-  "where-does-a-scottish-baron-rank",
   "can-a-scottish-barony-be-bought-and-sold",
   "what-is-the-pledge-and-what-does-it-change",
   "how-does-succession-to-a-barony-work",
