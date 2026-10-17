@@ -20,7 +20,7 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   },
   { text: "the 2000 Act… does not affect the noble nature of the dignity", source: "Lord Lyon Robin Blair · 2007" },
   {
-    text: "the dignity of baron has a noble character in that it is a right which historically originated in a Crown grant",
+    text: "the dignity of baron has a noble character",
     source: "Lord Lyon David Sellar · 2010",
   },
   {
