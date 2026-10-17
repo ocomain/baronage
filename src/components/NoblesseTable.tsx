@@ -1,33 +1,37 @@
+import { R } from "@/components/RankRefs";
+
 /**
  * "The Noblesse of Scotland, in order of precedence": the ranks with what Scots law and English usage call each
- * (owner 2026-10-17, wording approved in the papers chat and edited by him the same day; keep it exactly; sources in
- * the FAQ's "Authority & sources"). It replaces the ladder's list of ranks (owner: "it's meant to be one combined
+ * (owner 2026-10-17, wording approved in the papers chat and edited by him the same day; keep it exactly; each point
+ * carries a numbered reference to its source, from RankRefs, at his request the same evening). It replaces the ladder's list of ranks (owner: "it's meant to be one combined
  * table"): the peers keep their line of ranks and the barons' row carries the chapeau. No number column (owner).
  * The heading is part of the table, in a navy title band (owner: "make it part of the table and please make the table
  * look beautifully designed"); a fine double gold frame, gold small-capital column heads, the barons' row in a light
  * gold tint with a gold edge (owner: dark blue there was hard to read).
  * A <table> at ≥640px and a stacked, labelled layout below that width so the page never scrolls sideways on phones.
  */
-const ROWS: { rank: string; note?: string; scots: string; english: string; baron?: boolean }[] = [
+const ROWS: { rank: string; note?: string; scots: string; english: string; baron?: boolean; ref: number }[] = [
   {
     rank: "Peers",
     note: "Dukes, marquis, earls, viscounts, lords of parliament in the peerage of Scotland",
     scots: "Titled nobility; noblemen; peers (“greater barons” also holding baronies)",
     english: "Nobility; peers",
+    ref: 4,
   },
-  { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy" },
-  { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry" },
+  { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy", ref: 5 },
+  { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry", ref: 6 },
   {
     rank: "Barons",
     note: "Barons and barons of higher dignities in the baronage of Scotland",
     scots:
-      "Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes called untitled nobility, and before 2004 feudal barons (both terms now defunct)",
+      "Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes incorrectly untitled nobility, and before 2004 feudal barons (both terms now defunct)",
     english: "Commoners, gentry",
     baron: true,
+    ref: 7,
   },
-  { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry" },
-  { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry" },
-  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners" },
+  { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
+  { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
+  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 9 },
 ];
 
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
@@ -69,11 +73,15 @@ function RankCell({ r }: { r: (typeof ROWS)[number] }) {
 function Title() {
   return (
     <>
-      <span className="block font-display text-[1.75rem] leading-tight text-parchment-50 sm:text-[2.1rem]">The Noblesse of Scotland</span>
+      <span className="block font-display text-[1.75rem] leading-tight text-parchment-50 sm:text-[2.1rem]">
+        The Noblesse of Scotland
+        <R n={1} light />
+      </span>
       <span className="mt-2 flex items-center justify-center gap-3">
         <span aria-hidden className="h-px w-8 bg-gold/70 sm:w-12" />
         <span className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-gold-light sm:text-[0.72rem]">
           in order of precedence
+          <R n={2} light />
         </span>
         <span aria-hidden className="h-px w-8 bg-gold/70 sm:w-12" />
       </span>
@@ -107,7 +115,10 @@ export function NoblesseTable() {
             <tr className="border-b border-gold/40 bg-parchment-100">
               <th scope="col" className={headCell}>Rank</th>
               <th scope="col" className={`${headCell} border-l border-gold/20`}>Scots law</th>
-              <th scope="col" className={`${headCell} border-l border-gold/20`}>English / UK usage</th>
+              <th scope="col" className={`${headCell} border-l border-gold/20`}>
+                English / UK usage
+                <R n={3} />
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gold/20">
@@ -119,7 +130,10 @@ export function NoblesseTable() {
                 >
                   <RankCell r={r} />
                 </th>
-                <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink">{r.scots}</td>
+                <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink">
+                  {r.scots}
+                  <R n={r.ref} />
+                </td>
                 <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink-soft">{r.english}</td>
               </tr>
             ))}
@@ -137,9 +151,13 @@ export function NoblesseTable() {
                 <p className="mt-2.5 text-[0.95rem] leading-snug">
                   <span className={label}>Scots law</span>
                   <span className="text-ink">{r.scots}</span>
+                  <R n={r.ref} />
                 </p>
                 <p className="mt-1.5 text-[0.95rem] leading-snug">
-                  <span className={label}>English / UK usage</span>
+                  <span className={label}>
+                    English / UK usage
+                    {i === 0 && <R n={3} />}
+                  </span>
                   <span className="text-ink-soft">{r.english}</span>
                 </p>
               </li>

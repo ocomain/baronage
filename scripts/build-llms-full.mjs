@@ -109,11 +109,14 @@ while ((am = articleRe.exec(html)) !== null) {
   if (!qMatch) continue;
   const question = inlineToMarkdown(qMatch[1]);
 
+  // The answer ends at its "Authority & sources" link, or, where the answer carries its own numbered references and
+  // shows no such link, at the hidden copy of its sources.
   const bodyMatch = articleHtml.match(
-    /<div class="mt-5 leading-relaxed text-ink-soft">([\s\S]*?)<\/div><p class="mt-6">/
+    /<div class="mt-5 leading-relaxed text-ink-soft">([\s\S]*?)<\/div>(?:<p class="mt-6">|<p hidden="">Authority:)/
   );
   if (!bodyMatch) fail(`Could not find answer body for question: "${question}"`);
-  const bodyParagraphs = extractParagraphs(bodyMatch[1]);
+  // Reference markers (superscript numbers that open a source card) are left out of the plain text.
+  const bodyParagraphs = extractParagraphs(bodyMatch[1].replace(/<sup[^>]*>[\s\S]*?<\/sup>/g, ""));
 
   const authorityMatch = articleHtml.match(/<p hidden="">Authority: ([\s\S]*?)<\/p>/);
   const authorityText = authorityMatch ? inlineToMarkdown(authorityMatch[1]) : "";
