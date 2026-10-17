@@ -43,13 +43,13 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   },
   // Innes of Learney, PSAS 79 (1944–45), p. 132, as quoted on the About page.
   {
-    text: "Barons are a part of ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’",
+    text: "barons are a part of ‘The Nobility’ in its constitutional sense",
     source: "Lord Lyon Innes of Learney",
     gold: ["‘The Nobility’"],
   },
   // Lyon Court interlocutor of 26 February 1943, as on the About page.
   {
-    text: "…Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’",
+    text: "…Finds and Declares that the Minor Barons of Scotland are, and have been… recognised as a ‘titled nobility’",
     source: "Lyon Court · Lord Lyon Francis Grant · 1943",
     gold: ["are, and have been", "titled nobility"],
   },
