@@ -20,7 +20,7 @@ reviewed: 2026-10-14
 - **The barons fought it, and “never ceded” it.** The Estates voted to back their petition, and the King overruled them. Sir George Mackenzie records the claim still alive in 1680.
 - **“Lords and Barons were the same”, and were robed alike.** “Of old”, Mackenzie says. “Baron” was then the common name of the whole nobility, as “peer” is now. The Act of 1455 gave the lords of parliament one red mantle, which Lord Lyon Innes of Learney read as the barons’, great and small.
 - **Charles II gave a coronet to “the barons and lords of Parliament”.** His warrant of 1665 names both. The Baronage of Scotland Association does not claim the coronet today: a baron’s own mark is the chapeau.
-- **The Scale of 1905 left the baronage out.** Its “Barons of Scotland” are the lords of parliament, under the name that rank has had since the Union. The Stair Encyclopaedia says barons have “an undoubted precedence by the law of Scotland”, and that the Lord Lyon has a duty to give them their place.
+- **The Lord Lyon has a duty to give barons their place.** The King’s Scale of 1905 left the baronage out. The standard work on Scots law says barons have “an undoubted precedence by the law of Scotland”, and that the Lord Lyon “has a duty to give that person an appropriate place in the order of precedence on the appropriate occasion”.
 - **The law keeps the precedence.** The Act of 2000 saves “any quality or precedence associated with” the dignity of baron.
 
 ## Named by the King, 1625
@@ -67,7 +67,17 @@ Two legal encyclopaedias read the baron’s place from it.
 
 The *Encyclopaedia of the Laws of Scotland* of 1931 says the old Scots order of precedence below the baronet was given the effect of an Act of Parliament in 1633, and that the warrant of 1905 does not override it. It then takes the barons by name. They once ranked next to the knights. Under the Scale of 1905, with its newer degrees, “they can only rank before esquires”. The writer was Thomas Innes, Carrick Pursuivant, the later Lord Lyon.[^12]
 
+<figure class="paper-figure">
+<img src="/images/reading-room/encyclopaedia-1931-landowners.webp" alt="Section 28 of the article Precedence in the Encyclopaedia of the Laws of Scotland, 1931, headed Landowners: the barones lie lairds hold land in liberam baroniam of the Crown, formerly had precedence next to knights, and under the present warrant can only rank before esquires; by a decision of the Lyon Depute in 1811 they rank before doctors of divinity, law and physic." width="1224" height="636" loading="lazy">
+<figcaption>“They can only rank before esquires”: the <em>Encyclopaedia of the Laws of Scotland</em>, 1931. <a href="https://archive.org/details/bwb_KU-337-846_12/mode/1up?q=%22rank+before+esquires%22" target="_blank" rel="noopener noreferrer">The page</a>.</figcaption>
+</figure>
+
 The *Stair Memorial Encyclopaedia* is the standard modern work. Its volume of 1995 has a paragraph headed “The baronage”. The baronage, it says, has a precedency established by Act of Parliament. Barons rank before esquires, and before doctors of divinity, law and physic. Among themselves they rank by the date on which their lands were erected into a barony. The writer was Sir Crispin Agnew of Lochnaw, Rothesay Herald of Arms.[^13]
+
+<figure class="paper-figure">
+<img src="/images/reading-room/stair-1995-the-baronage.webp" alt="Paragraph 2021 of the Stair Memorial Encyclopaedia, headed The baronage: the baronage has a precedency established by Act of Parliament; they rank before esquires and before doctors of divinity, law and physics; inter se they rank by the date of the erection of their lands into a barony." width="1216" height="320" loading="lazy">
+<figcaption>“The baronage”: <em>The Laws of Scotland: Stair Memorial Encyclopaedia</em>, 1995. <a href="https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22They+rank+before+esquires%22" target="_blank" rel="noopener noreferrer">The page</a>.</figcaption>
+</figure>
 
 Stair adds that a right of precedence which comes from an Act of Parliament may well be one a court of law would enforce.[^14]
 
@@ -114,13 +124,31 @@ Nothing in it says why. When the scale was questioned in the Commons two days la
 
 The dates are worth setting side by side. In 1843 the baronets’ own book called the baron’s “an hereditary dignity which has long been considered obsolete, although, in fact, it is only merged in the higher degrees”.[^30] Seven years before the King’s Scale, a legal encyclopaedia printed the order of precedence then in use in Scotland, the one “recognised by the Lyon King of Arms”. It ran from baronets and knights to esquires and gentlemen, and did not mention barons.[^31] The King’s Scale followed in 1905.
 
-The lawyers have since said what the Scale missed. The encyclopaedia of 1931 has a section on cases the warrant does not cover, and puts the barons in it. The Stair Encyclopaedia goes further. The scales of 1905, it says, do not cover every right of precedence, and seem to have been made without proper thought for the Scots law on the subject. It names barons among those left out who have “an undoubted precedence by the law of Scotland”. In such a case the Lord Lyon, who is charged to see the warrant kept, is bound to find that person a fitting place.[^32]
+## The Lord Lyon’s duty
 
-The Lyon Court had by then returned to the barons itself. It awarded the chapeau to a baron, as a baron, in 1934, and found in 1943 that the minor barons are recognised as a “titled nobility”: see [The Esslemont petition](/reading-room/esslemont-petition-1934/) and [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/).
+The warrant of 1905 gave its keeping to one officer. The Lyon King of Arms, “to whom the cognizance of matters of this nature in Scotland doth properly belong”, is to “see this Order observed and kept”.[^21]
+
+The encyclopaedia of 1931 says what that charge is. The Lord Lyon’s duty “is ministerial to see that the order is observed and kept”, and among his duties is “to rank and order all degrees of subjects in proper and convenient places at coronations, Parliaments … and other public solemnities”. It adds that he “daily determines … who are, or are not, barones lie lairds”, the barons, “and entitled to the privileges—armorial and otherwise—of such”.[^32]
+
+<figure class="paper-figure">
+<img src="/images/reading-room/encyclopaedia-1931-execution-of-precedence.webp" alt="Sections 37 and 38 of the article Precedence in the Encyclopaedia of the Laws of Scotland, 1931: the Lord Lyon daily determines who are, or are not, barones lie lairds and entitled to the privileges of such; then, under the heading Execution of Precedence, the recording and execution of the Warrant of 1905 are committed to the Lyon King of Arms; his duty is ministerial to see that the order is observed and kept; amongst his duties is to rank and order all degrees of subjects in proper and convenient places at coronations, Parliaments and other public solemnities." width="1224" height="1072" loading="lazy">
+<figcaption>“Who are, or are not, barones lie lairds” and “to rank and order all degrees of subjects”: the <em>Encyclopaedia of the Laws of Scotland</em>, 1931. <a href="https://archive.org/details/bwb_KU-337-846_12/mode/1up?q=%22observed+and+kept%22" target="_blank" rel="noopener noreferrer">The page</a>.</figcaption>
+</figure>
+
+The Stair Encyclopaedia of 1995 applies the duty to the barons by name. Its writer, Sir Crispin Agnew of Lochnaw, was himself a herald of the Lyon Court.[^33]
+
+<figure class="paper-figure">
+<img src="/images/reading-room/stair-1995-lord-lyon-duty.webp" alt="Paragraph 2013 of the Stair Memorial Encyclopaedia: the scales annexed to the royal warrant of 1905 are not exhaustive of all rights of precedence; where a person has been omitted from the scales but has an undoubted precedence by the law of Scotland, such as barons, the Lord Lyon, in seeing that the warrant is observed and kept, has a duty to give that person an appropriate place in the order of precedence on the appropriate occasion." width="1208" height="374" loading="lazy">
+<figcaption>The Lord Lyon’s duty: <em>The Laws of Scotland: Stair Memorial Encyclopaedia</em>, 1995. <a href="https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22undoubted+precedence%22" target="_blank" rel="noopener noreferrer">The page</a>.</figcaption>
+</figure>
+
+So a baron left out of a list of precedence is not left without a place in law. The law names the officer whose duty it is to give him one: the Lord Lyon.
+
+The Lyon Court has upheld the barons before. It awarded the chapeau to a baron, as a baron, in 1934, and found in 1943 that the minor barons are recognised as a “titled nobility”: see [The Esslemont petition](/reading-room/esslemont-petition-1934/) and [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/).
 
 ## What the law keeps
 
-The Abolition of Feudal Tenure etc. (Scotland) Act 2000 ended a barony’s jurisdiction and kept the dignity: “nothing in this Act affects the dignity of baron”. It also says what the word covers: “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.[^33]
+The Abolition of Feudal Tenure etc. (Scotland) Act 2000 ended a barony’s jurisdiction and kept the dignity: “nothing in this Act affects the dignity of baron”. It also says what the word covers: “‘dignity’ includes any quality or precedence associated with, and any heraldic privilege incidental to, a dignity”.[^34]
 
 Two things follow. The old answer to the barons, “that a Baron is no Name of Dignity”, is not the law: the statute’s words are “the dignity of baron”. And whatever precedence went with that dignity before the Act goes with it still. Both encyclopaedias were written when a barony went with land. The Act cut that tie in 2004, and kept the dignity with its precedence.
 
@@ -129,7 +157,7 @@ Two things follow. The old answer to the barons, “that a Baron is no Name of D
 - **No line in the King’s Scale.** The warrant of 1905 does not name the baronage. Their place comes from the patents and the Act of 1633, as the two encyclopaedias read them.
 - **Not from the patents’ words alone.** The patents set the baronet above the barons. They do not rank barons against knights or esquires. That barons come before esquires is the reading of the encyclopaedias and of Innes of Learney.
 - **The robe of 1455.** The Act says “lords of parliament”, not barons. That the words then covered the barons is Innes’s reading.
-- **No Act of 1592.** The Convention of the Baronage of Scotland gives the same order, baronets, knights, barons, esquires, gentlemen, and cites “Statutes of 1592” for it, along with the baronets’ patents. The order is right, and so are the patents. The statute is not: the Act of 1592 on the Lyon King of Arms speaks of the arms of “noblemen, barons and gentlemen” and ranks no one, and Scotland had no baronets until 1625. The order comes from the patents and the Act of 1633.[^34]
+- **No Act of 1592.** The Convention of the Baronage of Scotland gives the same order, baronets, knights, barons, esquires, gentlemen, and cites “Statutes of 1592” for it, along with the baronets’ patents. The order is right, and so are the patents. The statute is not: the Act of 1592 on the Lyon King of Arms speaks of the arms of “noblemen, barons and gentlemen” and ranks no one, and Scotland had no baronets until 1625. The order comes from the patents and the Act of 1633.[^35]
 - **No place among the peers.** The Scale of 1905 gives the baronage none, and this paper does not say it does. Stair says the baron’s title is not to be confused with a dignity in the peerage of Scotland.[^22]
 
 ## The Roll and the Pledge
@@ -179,6 +207,7 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^29]: [House of Commons, 16 March 1905](https://api.parliament.uk/historic-hansard/commons/1905/mar/16/scottish-tables-of-precedence), cols 200–201. Article 23 gives the peers of Scotland rank “next and immediately after the Peers of the like orders and degrees in England”: see [The Treaty of Union](/reading-room/treaty-of-union/).
 [^30]: Sir Richard Broun, *The Baronetage for 1843*, dedication, pp. v–vi: see [How the baronets pleaded the barons’ nobility](/reading-room/how-the-baronets-pleaded-the-barons-nobility/).
 [^31]: J. H. Stevenson, “Precedence”, in *Green’s Encyclopaedia of the Law of Scotland*, vol. IX (Edinburgh, 1898), [pp. 386–387](https://archive.org/details/greensencyclopae09chis/page/n397/mode/1up): baronets, knights, “Heralds and other Esquires”, gentlemen.
-[^32]: *Stair Memorial Encyclopaedia*, vol. 16, “Precedence”, para. 2013, [pp. 426–427](https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22undoubted+precedence%22); *Encyclopaedia of the Laws of Scotland*, vol. XII, “Precedence”, s. 25, p. 15: “The Warrant of 1905 is not exhaustive of the rights of precedence in Scotland”.
-[^33]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(1) and (4)](https://www.legislation.gov.uk/asp/2000/5/section/63).
-[^34]: The Convention of the Baronage of Scotland, “Table of Precedence”, on its website, read 14 October 2026: “Statutes of 1592 and the Baronetcy Warrants of Charles I show the non-peerage Table of Precedence as: 1. Baronets, 2. Knights, 3. Barons/Lairds, 4. Esquires, 5. Gentlemen.” The Act: [RPS 1592/4/47](https://www.rps.ac.uk/trans/1592/4/47).
+[^32]: *Encyclopaedia of the Laws of Scotland*, vol. XII (Edinburgh, 1931), “Precedence”, by Thomas Innes, ss. 37–38, [pp. 21–22](https://archive.org/details/bwb_KU-337-846_12/mode/1up?q=%22observed+and+kept%22), citing *Royal College of Surgeons v. Royal College of Physicians*, 1911 S.C. 1058, and Balfour, *Heraldic Tracts*, p. 17. Section 39 adds that the Lord Lyon is responsible for all royal and public ceremonial in Scotland, “including the coronation itself”. In copyright; the passage is quoted.
+[^33]: *The Laws of Scotland: Stair Memorial Encyclopaedia*, vol. 16 (Edinburgh, 1995), “Precedence”, by Sir Crispin Agnew of Lochnaw, Bt, Rothesay Herald of Arms, para. 2013, [pp. 426–427](https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22undoubted+precedence%22). In copyright; the passage is quoted.
+[^34]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63(1) and (4)](https://www.legislation.gov.uk/asp/2000/5/section/63).
+[^35]: The Convention of the Baronage of Scotland, “Table of Precedence”, on its website, read 14 October 2026: “Statutes of 1592 and the Baronetcy Warrants of Charles I show the non-peerage Table of Precedence as: 1. Baronets, 2. Knights, 3. Barons/Lairds, 4. Esquires, 5. Gentlemen.” The Act: [RPS 1592/4/47](https://www.rps.ac.uk/trans/1592/4/47).
