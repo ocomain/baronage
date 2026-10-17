@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { R } from "@/components/RankRefs";
+import { PaperThumbnail } from "@/components/PaperThumbnail";
+
+const PAPER_HREF = "/reading-room/the-precedence-of-a-scottish-baron/";
+const PAPER_TITLE = "“Never ceded” to knights or baronets: the precedence of a Scottish baron";
 
 /**
  * Under the table "The Noblesse of Scotland" (NoblesseTable, which since 2026-10-17 carries the list of ranks, the owner
@@ -98,14 +102,20 @@ export function RankLadder() {
           </li>
         ))}
       </ul>
-      <div className="mt-8 text-center">
-        <p className="font-display text-xl leading-snug text-navy">“Never ceded” to knights or baronets: the precedence of a Scottish baron</p>
-        <Link
-          href="/reading-room/the-precedence-of-a-scottish-baron/"
-          className="mt-3 inline-flex items-center gap-1.5 bg-navy px-4 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
-        >
-          Read the paper <span aria-hidden>→</span>
+      {/* The paper's own little icon beside its title and button, as on the featured-paper card (owner 2026-10-17). */}
+      <div className="mx-auto mt-8 flex max-w-lg items-center gap-4">
+        <Link href={PAPER_HREF} tabIndex={-1} aria-hidden className="shrink-0">
+          <PaperThumbnail title={PAPER_TITLE} category="Law & Statutes" size="sm" />
         </Link>
+        <div className="min-w-0">
+          <p className="font-display text-xl leading-snug text-navy">{PAPER_TITLE}</p>
+          <Link
+            href={PAPER_HREF}
+            className="mt-3 inline-flex items-center gap-1.5 bg-navy px-4 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
+          >
+            Read the paper <span aria-hidden>→</span>
+          </Link>
+        </div>
       </div>
     </figure>
   );
