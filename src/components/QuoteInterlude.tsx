@@ -14,12 +14,12 @@ const QUOTES: { text: string; source: string }[] = [
   { text: "…every noble man, such as an earl, lord, knight and baron", source: "Parliament of Scotland · 1540" },
   { text: "…the nobility, earls, lords and barons…", source: "Parliament of Scotland · 1592" },
   {
-    text: "The barons of this realm ought to have vote in Parliament as a part of the nobility",
+    text: "the barons of this realm ought to have vote in Parliament as a part of the nobility",
     source: "Parliament of Scotland · 1567",
   },
-  { text: "The 2000 Act… does not affect the noble nature of the dignity", source: "Lord Lyon Robin Blair · 2007" },
+  { text: "the 2000 Act… does not affect the noble nature of the dignity", source: "Lord Lyon Robin Blair · 2007" },
   {
-    text: "The dignity of baron has a noble character in that it is a right which historically originated in a Crown grant",
+    text: "the dignity of baron has a noble character in that it is a right which historically originated in a Crown grant",
     source: "Lord Lyon David Sellar · 2010",
   },
   {
