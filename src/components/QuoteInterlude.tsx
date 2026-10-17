@@ -35,6 +35,23 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   // Works, vol. II (1716), p. 534, read on the page image, which prints "Under the Word"; lower case for both here at
   // the owner's wish (2026-10-17).
   { text: "under the word Baron all our Nobility are comprehended", source: "Mackenzie, Lord Advocate" },
+  // Owner 2026-10-17. The Act: s. 63(1) and (4), trimmed at the end; source line his ("needs to be super short").
+  {
+    text: "nothing in this Act affects the dignity of baron… ‘dignity’ includes any quality or precedence",
+    source: "Act of Parliament · 2000",
+    gold: ["dignity of baron"],
+  },
+  // Innes of Learney, PSAS 79 (1944–45), p. 132, as quoted on the About page.
+  {
+    text: "Barons are a part of ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’",
+    source: "Lord Lyon Innes of Learney",
+  },
+  // Lyon Court interlocutor of 26 February 1943, as on the About page.
+  {
+    text: "…Barons of Scotland are, and have been both in this nobiliary Court and in the Court of Session recognised as a ‘titled nobility’",
+    source: "Lyon Court · Lord Lyon Francis Grant · 1943",
+    gold: ["are, and have been", "titled nobility"],
+  },
 ];
 
 // Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it", then "still not staying long
