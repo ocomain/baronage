@@ -8,13 +8,17 @@ import { Footnote } from "@/components/Footnote";
  * authority, in place of the one "Authority & sources" link. These are the sources that link held, divided point by
  * point; numbered in the order they appear on the page. The full list is still copied, hidden, for search engines.
  */
-const ext = "underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood";
-const int = "text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep";
+// Links in the cards in the house red, bold and underlined, so they are plainly links (owner 2026-10-17: the links
+// were "not obvious enough to click"); links to other sites end in an arrow.
+const ext =
+  "font-semibold text-oxblood underline decoration-oxblood/60 decoration-[1.5px] underline-offset-2 transition-colors hover:text-oxblood-deep";
+const int = ext;
 
 function A({ href, children }: { href: string; children: ReactNode }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={ext}>
       {children}
+      <span aria-hidden> ↗</span>
     </a>
   );
 }
@@ -40,13 +44,13 @@ const REFS: Record<number, ReactNode> = {
         “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79
         (1944–45), p. 113
       </A>
-      , from the baronets’ patents of 1625, which set the baronet “prae omnibus baronibus lie Lairdis, armigeris lie
-      Esquyris, et generosis quibuscunque lie gentelmen”.
+      , from the baronets’ patents of 1625, which set the baronet before all barons (lairds), esquires and gentlemen
+      whatsoever (the patents are in Latin; the English is ours).
     </>
   ),
   3: (
     <>
-      English usage: the commoners “all are in law peers, in respect of their want of nobility”,{" "}
+      English usage: in law the commoners are all peers of one another, as none of them is noble:{" "}
       <A href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp">
         Blackstone, <em>Commentaries on the Laws of England</em>, Book I, ch. 12 (1765)
       </A>
@@ -67,12 +71,12 @@ const REFS: Record<number, ReactNode> = {
       ; Sir George Mackenzie, <em>Works</em>, vol. ii (1716), <A href={`${MACKENZIE}n557/mode/1up`}>p. 550</A> (“Now the
       Lords are called the great Barons, and the rest are called small Barons in the 101 Act, 7 Parl. James I. and ever
       since”), also <A href={`${MACKENZIE}n539/mode/1up`}>p. 534</A> and <A href={`${MACKENZIE}n552/mode/1up`}>p. 545</A>{" "}
-      (“With us all are called Barons who hold their Lands of the King in libera baronia”).
+      (“With us all are called Barons who hold their Lands of the King in libera baronia”, that is, in free barony).
     </>
   ),
   5: (
     <>
-      Baronets: the patents create the “heritable State, Degree, Dignity, Name, Order, Title and Stile of Baronet”
+      Baronets: the patents create the hereditary state, degree, dignity, name, order, title and style of baronet
       (Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>). See{" "}
       <Link href="/reading-room/how-the-baronets-pleaded-the-barons-nobility/" className={int}>
         How the baronets pleaded the barons’ nobility
@@ -122,8 +126,8 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://dsl.ac.uk/entry/dost/commoun_n">
         <em>Dictionary of the Older Scottish Tongue</em>, “Commoun” n.
       </A>{" "}
-      (“the common people”); “a Plebeian” (Mackenzie, <em>Works</em>, vol. ii,{" "}
-      <A href={`${MACKENZIE}n559/mode/1up`}>p. 552</A>).
+      (“the common people”); Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n559/mode/1up`}>p. 552</A>, on
+      the commoner.
     </>
   ),
   10: (
@@ -163,7 +167,7 @@ const REFS: Record<number, ReactNode> = {
   13: (
     <>
       Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), pp. 152–155</A>: the Roslin “red velvet cap”, and
-      “Lyon Court accords the chapeau tinctured Gules” (p. 155). See{" "}
+      that the Lyon Court grants the chapeau in red (p. 155). See{" "}
       <Link href="/robes-and-chapeau/" className={int}>
         Robes &amp; Chapeau
       </Link>
@@ -198,8 +202,8 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://archive.org/details/historyofbaronet00pixluoft/page/n102/mode/1up">
         <em>A History of the Baronetage</em> (1900), p. 83
       </A>
-      : “prae omnibus baronibus lie Lairdis, armigeris lie Esquyris, et generosis quibuscunque lie gentelmen”; Innes of
-      Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>.
+      , which sets the baronet before all barons (lairds), esquires and gentlemen whatsoever (the patent is in Latin; the
+      English is ours); Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>.
     </>
   ),
   18: (

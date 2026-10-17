@@ -39,7 +39,7 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
   },
   { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
   { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 8 },
-  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 9 },
+  { rank: "Everyone else", scots: "The commons (the common people)", english: "Commoners", ref: 9 }, // "Plebeians" was not modern English (owner 2026-10-17)
 ];
 
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
