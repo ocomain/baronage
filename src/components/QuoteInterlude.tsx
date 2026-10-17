@@ -43,7 +43,7 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
   },
   // Innes of Learney, PSAS 79 (1944–45), p. 132, as quoted on the About page.
   {
-    text: "Barons are a part of ‘The Nobility’ in its constitutional sense",
+    text: "Barons are a part of ‘The Nobility’ in\nits constitutional sense", // \n: new line on wider screens only (owner)
     source: "Lord Lyon Innes of Learney",
     gold: ["‘The Nobility’"],
   },
@@ -192,7 +192,18 @@ export function QuoteInterlude() {
       <figure className="max-w-3xl text-center">
         <span aria-hidden className="mx-auto mb-7 block h-px w-16 bg-gold/70" />
         <blockquote className="font-serif text-[1.7rem] italic leading-snug text-parchment-50 sm:text-4xl sm:leading-snug">
-          <Gold text={q.text} extra={q.gold} />
+          {q.text.split("\n").map((line, i) => (
+            <span key={i}>
+              {/* A "\n" in a quotation is a line break on wider screens only; phones wrap the line as it falls. */}
+              {i > 0 && (
+                <>
+                  <span className="sm:hidden"> </span>
+                  <br className="hidden sm:inline" />
+                </>
+              )}
+              <Gold text={line} extra={q.gold} />
+            </span>
+          ))}
         </blockquote>
         {/* One line on a phone: the longest source (the Court of Session's) a little smaller there so it fits
             (owner 2026-10-17); every source the same size on wider screens. */}
