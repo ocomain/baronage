@@ -29,8 +29,8 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
     note: "Barons and barons of higher dignities in the baronage of Scotland",
     scots: (
       <>
-        Titled nobility; noblemen; the Lyon Court’s “minor barons”; before 1943 sometimes {gone("untitled nobility")},
-        and before 2004 {gone("feudal barons")} (both terms incorrect and now defunct)
+        Titled nobility; noblemen; “minor barons”; before 1943 sometimes incorrectly {gone("untitled nobility")},
+        and before 2004 {gone("feudal barons")} (both terms are now defunct)
       </>
     ),
     english: "Commoners, gentry",
