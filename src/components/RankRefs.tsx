@@ -82,14 +82,15 @@ const REFS: Record<number, ReactNode> = {
   ),
   6: (
     <>
-      Knights and barons as noblemen: Act of 10 December 1540, “every nobill man, sic as erle, lord, knycht and baroune”,{" "}
+      Knights and barons as noblemen: Act of 10 December 1540, “every noble man, such as an earl, lord, knight and baron”,
+      in the modern English of the{" "}
       <A href="https://www.rps.ac.uk/trans/1540/12/30">Records of the Parliaments of Scotland, 1540/12/30</A>.
     </>
   ),
   7: (
     <>
-      Barons: “every nobill man, sic as erle, lord, knycht and baroune” (
-      <A href="https://www.rps.ac.uk/trans/1540/12/30">RPS 1540/12/30</A>); a barony does “ennoble” (Mackenzie,{" "}
+      Barons: “every noble man, such as an earl, lord, knight and baron” (
+      <A href="https://www.rps.ac.uk/trans/1540/12/30">RPS 1540/12/30</A>, modern English); a barony does “ennoble” (Mackenzie,{" "}
       <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n590/mode/1up`}>p. 583</A>); “recognised as a ‘titled nobility’”, Lyon
       Court interlocutor of 26 February 1943, printed by Innes of Learney, <A href={INNES}><em>PSAS</em> 79, p. 143 n. 3</A>;
       “of the rank of minor barons or untitled nobility of Scotland”, Lyon Court birthbrief of March 1930: see{" "}
