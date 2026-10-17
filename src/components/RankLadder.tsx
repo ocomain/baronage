@@ -108,7 +108,12 @@ export function RankLadder() {
           <PaperThumbnail title={PAPER_TITLE} category="Law & Statutes" size="sm" />
         </Link>
         <div className="min-w-0">
-          <p className="font-display text-xl leading-snug text-navy">{PAPER_TITLE}</p>
+          <p className="font-display text-xl leading-snug text-navy">
+            {/* the title is a link to the paper too (owner 2026-10-17) */}
+            <Link href={PAPER_HREF} className="transition-colors hover:text-oxblood hover:underline hover:decoration-gold/60 hover:underline-offset-4">
+              {PAPER_TITLE}
+            </Link>
+          </p>
           <Link
             href={PAPER_HREF}
             className="mt-3 inline-flex items-center gap-1.5 bg-navy px-4 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-parchment-50 transition-colors hover:bg-oxblood"
