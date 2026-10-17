@@ -10,8 +10,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
  * engines judge; never for in-page links, links that open elsewhere, or back and forward; not shown where the device
  * asks for less motion. A tap or Esc skips it. A shuffled order is kept for the visit, so none repeats until all are seen.
  */
-const QUOTES: { text: string; source: string }[] = [
-  { text: "…every noble man, such as an earl, lord, knight and baron", source: "Parliament of Scotland · 1540" },
+/** `gold`: further words set in gold in that one quotation (owner 2026-10-17: "baron" in the Act of 1540). */
+const QUOTES: { text: string; source: string; gold?: string[] }[] = [
+  { text: "…every noble man, such as an earl, lord, knight and baron", source: "Parliament of Scotland · 1540", gold: ["baron"] },
   { text: "…the nobility, earls, lords and barons…", source: "Parliament of Scotland · 1592" },
   {
     text: "the barons of this realm ought to have vote in Parliament as a part of the nobility",
@@ -44,8 +45,9 @@ const ORDER_KEY = "bsa-quote-order";
 const NEXT_KEY = "bsa-quote-next";
 
 /** The "noble" words in gold, as on the About page. */
-function Gold({ text }: { text: string }) {
-  const parts = text.split(/(ennobl\w*|nobility|nobles?)/gi);
+function Gold({ text, extra = [] }: { text: string; extra?: string[] }) {
+  const words = extra.map((w) => `\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`);
+  const parts = text.split(new RegExp(`(${["ennobl\\w*", "nobility", "nobles?", ...words].join("|")})`, "gi"));
   return (
     <>
       {parts.map((part, i) =>
@@ -170,7 +172,7 @@ export function QuoteInterlude() {
       <figure className="max-w-3xl text-center">
         <span aria-hidden className="mx-auto mb-7 block h-px w-16 bg-gold/70" />
         <blockquote className="font-serif text-[1.7rem] italic leading-snug text-parchment-50 sm:text-4xl sm:leading-snug">
-          <Gold text={q.text} />
+          <Gold text={q.text} extra={q.gold} />
         </blockquote>
         {/* One line on a phone: the longest source (the Court of Session's) a little smaller there so it fits
             (owner 2026-10-17); every source the same size on wider screens. */}
