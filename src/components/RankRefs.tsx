@@ -55,7 +55,8 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp">
         Blackstone, <em>Commentaries on the Laws of England</em>, Book I, ch. 12 (1765)
       </A>
-      .
+      . Baronets are listed with the peers in <em>Burke’s Peerage &amp; Baronetage</em> and <em>Debrett’s Peerage and
+      Baronetage</em>.
     </>
   ),
   5: (
@@ -78,7 +79,14 @@ const REFS: Record<number, ReactNode> = {
   6: (
     <>
       Baronets: the patents create the hereditary state, degree, dignity, name, order, title and style of baronet
-      (Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>). See{" "}
+      (Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>). Baronets of Nova Scotia, the
+      baronetage of Scotland: Charles I’s letter of 17 November 1629 speaks of “the Baronets of that our ancient Kingdom”
+      (Mackenzie, <em>Works</em>, vol. ii, <A href={`${MACKENZIE}n556/mode/1up`}>p. 549</A>); “The relative position in
+      Scotland of baronets of Nova Scotia was fixed by their charters of creation and by Act of Parliament” (
+      <A href="https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22baronets+of+Nova+Scotia%22">
+        <em>Stair Memorial Encyclopaedia</em>, vol. 16 (1995), “Precedence”, para. 2019
+      </A>
+      ), the Act being that of 1633 (<A href="https://www.rps.ac.uk/trans/1633/6/43">RPS 1633/6/43</A>). See{" "}
       <Link href="/reading-room/how-the-baronets-pleaded-the-barons-nobility/" className={int}>
         How the baronets pleaded the barons’ nobility
       </Link>
@@ -89,7 +97,13 @@ const REFS: Record<number, ReactNode> = {
     <>
       Knights and barons as noblemen: Act of 10 December 1540, “every noble man, such as an earl, lord, knight and baron”,
       in the modern English of the{" "}
-      <A href="https://www.rps.ac.uk/trans/1540/12/30">Records of the Parliaments of Scotland, 1540/12/30</A>.
+      <A href="https://www.rps.ac.uk/trans/1540/12/30">Records of the Parliaments of Scotland, 1540/12/30</A>. Knights of
+      the Thistle and knights bachelor: both stand in the order of precedence “recognised by the Lyon King of Arms”, J. H.
+      Stevenson, “Precedence”, in{" "}
+      <A href="https://archive.org/details/greensencyclopae09chis/page/n398/mode/1up">
+        <em>Green’s Encyclopaedia of the Law of Scotland</em>, vol. IX (1898), p. 387
+      </A>
+      ; the knights bachelor are the “milites aurati”, gilded knights, of the baronets’ patents of 1625 (note 18).
     </>
   ),
   8: (
