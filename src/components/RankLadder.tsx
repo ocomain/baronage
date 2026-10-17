@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { R } from "@/components/RankRefs";
 
 /**
  * Under the table "The Noblesse of Scotland" (NoblesseTable, which since 2026-10-17 carries the list of ranks, the owner
@@ -7,9 +8,9 @@ import Link from "next/link";
  * precedence "with visuals instead of many words"; 2026-10-14 the 1905 and 2000 lines removed, "too much information for FAQ"). Words are kept to the names of the
  * ranks, one sentence of Innes of Learney's, and one line for each date; the sources are listed by the page.
  */
-const DATES: { year: string; text: string }[] = [
-  { year: "1625", text: "The King’s patents set baronets before knights, barons, esquires and gentlemen." },
-  { year: "1672", text: "The Lyon Register enters baronets, knights and barons together, ahead of the gentlemen." },
+const DATES: { year: string; text: string; ref: number }[] = [
+  { year: "1625", text: "The King’s patents set baronets before knights, barons, esquires and gentlemen.", ref: 17 },
+  { year: "1672", text: "The Lyon Register enters baronets, knights and barons together, ahead of the gentlemen.", ref: 18 },
 ];
 
 /** What each rank shows above the shield: the peers' coronets of rank, each drawn with its crimson cap turned up with
@@ -23,10 +24,10 @@ const CORONETS: { src: string; rank: string; text: string }[] = [
 ];
 
 /** The chapeau's own record, older than the modern grants (owner 2026-10-13: Roslin, and the petition of 1835). */
-const CHAPEAU_DATES: { year: string; text: string }[] = [
-  { year: "1650", text: "The Baron of Roslin is found in his vault “laying in his armour with a red velvet cap on his head”." },
-  { year: "1835", text: "The Lyon Court allows the heir of the barons of Dolphinton a cap “as being indicative of his descent from the ancient barons of Dolphington”." },
-  { year: "1934", text: "The Lord Lyon “found the claim established, and awarded the chapeau” to the Baron of Esslemont." },
+const CHAPEAU_DATES: { year: string; text: string; ref: number }[] = [
+  { year: "1650", text: "The Baron of Roslin is found in his vault “laying in his armour with a red velvet cap on his head”.", ref: 14 },
+  { year: "1835", text: "The Lyon Court allows the heir of the barons of Dolphinton a cap “as being indicative of his descent from the ancient barons of Dolphington”.", ref: 15 },
+  { year: "1934", text: "The Lord Lyon “found the claim established, and awarded the chapeau” to the Baron of Esslemont.", ref: 16 },
 ];
 
 export function RankLadder() {
@@ -34,6 +35,7 @@ export function RankLadder() {
     <figure className="my-2">
       <figcaption className="mx-auto mt-3 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
         “Their precedence was thus after Knights and before Esquires.”
+        <R n={10} />
         <span className="mt-1 block font-sans text-[0.72rem] font-semibold not-italic uppercase tracking-[0.16em] text-gold-deep">
           Innes of Learney, 1945
         </span>
@@ -42,6 +44,7 @@ export function RankLadder() {
         <p className="text-center font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">Above the shield</p>
         <p className="mx-auto mt-2 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
           “The rank of a Peer is shown by the Coronet.”
+          <R n={11} />
           <span className="mt-1 block font-sans text-[0.72rem] font-semibold not-italic uppercase tracking-[0.16em] text-gold-deep">
             Court of the Lord Lyon
           </span>
@@ -56,31 +59,42 @@ export function RankLadder() {
             </li>
           ))}
         </ul>
+        {/* Under the coronets it describes, so that its reference comes before the chapeau's in number order. */}
+        <p className="mt-3 text-center font-sans text-[0.8rem] leading-snug text-ink-soft">
+          Each drawing shows the front of the coronet; the numbers count all the way round.
+          <R n={12} />
+        </p>
         <div className="mt-3 flex items-start gap-5 bg-navy px-5 py-5 text-parchment-50 shadow-[0_14px_30px_-18px_rgba(10,16,36,0.7)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/guide/chapeau-gules.svg" alt="" width={120} height={60} loading="lazy" className="h-14 w-auto flex-none" />
           <div className="min-w-0">
             <p className="font-display text-2xl leading-tight">Baron: the chapeau</p>
-            <p className="mt-1 font-sans text-[0.92rem] leading-snug text-parchment-200">A red cap turned up with ermine.</p>
+            <p className="mt-1 font-sans text-[0.92rem] leading-snug text-parchment-200">
+              A red cap turned up with ermine.
+              <R n={13} light />
+            </p>
             <ul className="mt-3 space-y-2">
               {CHAPEAU_DATES.map((d) => (
                 <li key={d.year} className="flex items-baseline gap-3">
                   <span className="flex-none font-display text-xl leading-none text-gold-light">{d.year}</span>
-                  <span className="font-sans text-[0.88rem] leading-snug text-parchment-100">{d.text}</span>
+                  <span className="font-sans text-[0.88rem] leading-snug text-parchment-100">
+                    {d.text}
+                    <R n={d.ref} light />
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <p className="mt-3 text-center font-sans text-[0.8rem] leading-snug text-ink-soft">
-          Each drawing shows the front of the coronet; the numbers count all the way round.
-        </p>
       </div>
       <ul className="mt-7 grid gap-3 sm:grid-cols-2">
         {DATES.map((d) => (
           <li key={d.year} className="flex items-baseline gap-3 border-l-2 border-gold/60 bg-parchment-50 px-4 py-3">
             <span className="flex-none font-display text-2xl leading-none text-gold-deep">{d.year}</span>
-            <span className="font-sans text-[0.92rem] leading-snug text-navy">{d.text}</span>
+            <span className="font-sans text-[0.92rem] leading-snug text-navy">
+              {d.text}
+              <R n={d.ref} />
+            </span>
           </li>
         ))}
       </ul>
