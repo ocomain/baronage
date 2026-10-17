@@ -162,7 +162,7 @@ export function QuoteInterlude() {
         <blockquote className="font-serif text-[1.7rem] italic leading-snug text-parchment-50 sm:text-4xl sm:leading-snug">
           <Gold text={q.text} />
         </blockquote>
-        <figcaption className="mt-6 font-sans text-base font-semibold uppercase leading-snug tracking-[0.14em] text-gold-light sm:text-lg">
+        <figcaption className="mt-6 font-sans text-base font-medium uppercase leading-snug tracking-[0.14em] text-parchment-200/60 sm:text-lg">
           {q.source}
         </figcaption>
       </figure>
