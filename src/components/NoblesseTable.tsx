@@ -22,8 +22,15 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
     english: "Nobility; peers",
     ref: 5,
   },
-  { rank: "Baronets", scots: "Baronetcy (hereditary knighthood); noblemen", english: "Commoners in law; often counted among the aristocracy", ref: 6 },
-  { rank: "Knights", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry", ref: 7 },
+  // Notes under Baronets and Knights, and "gentry" for baronets (owner 2026-10-18, "Yes agreed with all", via the papers chat)
+  {
+    rank: "Baronets",
+    note: "Baronets of Nova Scotia, the baronetage of Scotland",
+    scots: "Baronetcy (hereditary knighthood); noblemen",
+    english: "Commoners in law; gentry, often counted among the aristocracy",
+    ref: 6,
+  },
+  { rank: "Knights", note: "Knights of the Thistle and knights bachelor", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry", ref: 7 },
   {
     rank: "Barons",
     note: "Barons and barons of higher dignities in the baronage of Scotland",
