@@ -238,8 +238,17 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
     ),
     authority: (
       <>
-        The table. Its heading is the Lyon Court’s nobility clause: the grantee received “as Nobles in the Noblesse of
-        Scotland” (Wauchope of Niddrie declaration, 19 April 1945; see the glossary). The order: Innes of Learney, below,
+        The table. Its heading is the Lyon Court’s nobility clause, “to be taken, numbered, accounted and received as
+        Nobles in the Noblesse of Scotland”, in a grant of arms of 20 February 1984, reproduced in{" "}
+        <a
+          href="https://www.ccsna.org/sites/default/files/upload/2019-02/Scottish-Armory-and-Heraldry-by-Donald-Draper-Campbell-Esq-2019-01-12.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={extLink}
+        >
+          D. D. Campbell, <em>Scottish Armory and Heraldry: A General Overview</em> (rev. 2019), p. 77
+        </a>
+        . The order: Innes of Learney, below,
         and the baronets’ patents of 1625. Peers:{" "}
         <a href="https://www.legislation.gov.uk/aosp/1707/7" target="_blank" rel="noopener noreferrer" className={extLink}>
           Treaty of Union, art. XXIII
@@ -289,7 +298,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode }[] = 
         <Link href="/reading-room/barons-in-the-gazette/" className={intLink}>
           Barons in the Gazette
         </Link>
-        . Esquires, chiefs, lairds and gentlemen: see{" "}
+        . Esquires, chiefs, lairds and gentlemen: the grant of 1984 above was to an armiger without a title; see{" "}
         <Link href="/reading-room/lairds-lords-and-barons/" className={intLink}>
           Lairds, lords and barons
         </Link>
