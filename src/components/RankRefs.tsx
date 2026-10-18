@@ -198,7 +198,12 @@ const REFS: Record<number, ReactNode> = {
       &amp; minores, the greater and the lesser Nobility. Under the greater are comprehended all such as are Lords of
       Parliament, under the lesser are comprehended Knights and Gentlemen; and though all these be not Peers of
       Parliament, yet they are all Peers to one another”; “a Nobleman is obliged to accept of a Challenge from a Gentleman
-      as his Peer, where Duels are lawful”; and “a Gentleman may be offered to a Duke’s Daughter whose Ward and Marriage
+      as his Peer, where Duels are lawful”, and, in the next sentence, “Under the Word Baron all our Nobility are
+      comprehended, as is clear by the 81 Act, Parl. 14. James II.” He goes on: the first Parliament of James V was held,
+      in the words of its Latin heading, by the guardian of the King and kingdom with the prelates, barons and
+      commissioners of the burghs, while that of Robert I was held with the bishops, abbots, priors, earls, barons and
+      other great men, which shows that there were great men below the barons (“magnates infra barones”). Also on that
+      page: “a Gentleman may be offered to a Duke’s Daughter whose Ward and Marriage
       falls to the King, as has been often decided, nor can that Match be refused upon the account of Inequality”. Rank
       decided who could fight whom: at Carberry Hill on 15 June 1567 Bothwell refused the Laird of Tullibardine’s
       challenge, “saying, That he was not a Peer of the Kingdom, as he was” (John Knox, <em>History of the
