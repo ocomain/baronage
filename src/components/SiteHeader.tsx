@@ -131,7 +131,7 @@ export function SiteHeader() {
       <div
         className={`relative z-50 border-b transition-all duration-300 ${
           scrolled
-            ? "border-gold/30 bg-parchment-50 md:bg-parchment-50/95 shadow-[0_8px_30px_-18px_rgba(12,21,48,0.5)] backdrop-blur"
+            ? "border-gold/30 bg-parchment-50 shadow-[0_8px_30px_-18px_rgba(12,21,48,0.5)]" // solid, no blur while scrolling (smoother; owner 2026-10-18)
             : "border-transparent bg-parchment-50 md:bg-parchment-50/80 md:backdrop-blur-sm"
         }`}
       >
