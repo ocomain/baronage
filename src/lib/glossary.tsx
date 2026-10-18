@@ -173,7 +173,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
           <em>PSAS</em> 79, p. 113
         </a>
-        ), and an esquire who bears arms is of the untitled nobility: see Nobility clause.
+        ), and an esquire who bears arms is of the untitled nobility: see <a href="#term-nobility-clause" className={intLink}>Nobility clause</a>.
       </>
     ),
   },
@@ -191,7 +191,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
         <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
           pp. 393–394
         </a>
-        , with Coke’s definition. In Scotland: see Nobility clause.
+        , with Coke’s definition. In Scotland: see <a href="#term-nobility-clause" className={intLink}>Nobility clause</a>.
       </>
     ),
   },
@@ -205,7 +205,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
         <a href="https://www.courtofthelordlyon.scot/index_htm_files/SuccessionofChiefsGuidanceNote.pdf" target="_blank" rel="noopener noreferrer" className={extLink}>
           Guidance Note, “Chiefs of Clans and Families”, 16 December 2021
         </a>
-        , paras 5 and 7. A chief who bears arms is of the untitled nobility: see Nobility clause.
+        , paras 5 and 7. A chief who bears arms is of the untitled nobility: see <a href="#term-nobility-clause" className={intLink}>Nobility clause</a>.
       </>
     ),
   },
