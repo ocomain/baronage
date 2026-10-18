@@ -1941,7 +1941,7 @@ export default function BaroniesExplainedPage() {
         </Container>
       </section>
 
-      <SectionSidebar items={NAV} anchorId="page-nav" />
+      <SectionSidebar items={NAV} anchorId="page-nav" wide />
       <Section tone="parchment">
         <Container size="prose">
           <nav
