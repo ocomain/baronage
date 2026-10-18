@@ -15,7 +15,9 @@ type Item = { id: string; label: string; badge?: string };
  * lifts above the featured-paper card whenever that card is on screen; the
  * list is marked so the card slips away rather than overlap it.
  */
-export function SectionSidebar({ items, anchorId }: { items: Item[]; anchorId: string }) {
+/** `wide`: a broader list on wider screens, where there is room beside the page column, so that long section names keep
+ * to one line (owner 2026-10-17, Scottish Baronies, Explained). */
+export function SectionSidebar({ items, anchorId, wide = false }: { items: Item[]; anchorId: string; wide?: boolean }) {
   const [visible, setVisible] = useState(false);
   const [active, setActive] = useState<string>(items[0]?.id ?? "");
   const [top, setTop] = useState(140);
@@ -84,7 +86,7 @@ export function SectionSidebar({ items, anchorId }: { items: Item[]; anchorId: s
         aria-label="On this page"
         data-clear-of-featured-paper
         style={{ top, maxHeight: `calc(100vh - ${top + 40}px)` }}
-        className={`fixed right-4 z-40 hidden w-[160px] overflow-y-auto border-l-2 border-gold bg-parchment-50/95 py-3 pl-3 pr-2.5 shadow-[0_10px_30px_-18px_rgba(12,21,48,0.45)] backdrop-blur-sm transition-opacity duration-300 min-[1180px]:block ${
+        className={`fixed right-4 z-40 hidden ${wide ? "w-[195px] min-[1280px]:w-[210px] min-[1400px]:w-[250px] min-[1520px]:w-[280px]" : "w-[160px]"} overflow-y-auto border-l-2 border-gold bg-parchment-50/95 py-3 pl-3 pr-2.5 shadow-[0_10px_30px_-18px_rgba(12,21,48,0.45)] backdrop-blur-sm transition-opacity duration-300 min-[1180px]:block ${
           visible ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
