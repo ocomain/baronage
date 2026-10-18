@@ -1573,10 +1573,13 @@ export default function BaroniesExplainedPage() {
               {orderedFaqs.map((f, i) => (
                 <li key={f.q} className="flex gap-3 leading-snug">
                   <span className="font-sans text-sm tabular-nums text-gold-deep/70">{i + 1}.</span>
-                  <a href={`#${slugify(f.q)}`} className={intLink}>
-                    {f.q}
-                  </a>
-                  {f.isNew && <NavBadge>New</NavBadge>}
+                  {/* the badge in the line of text: as a flex item of its own it stretched into a tall block on a phone */}
+                  <span>
+                    <a href={`#${slugify(f.q)}`} className={intLink}>
+                      {f.q}
+                    </a>
+                    {f.isNew && <NavBadge>New</NavBadge>}
+                  </span>
                 </li>
               ))}
               <li className="flex gap-3 leading-snug">

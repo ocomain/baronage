@@ -34,6 +34,8 @@ const ALIASES: Record<string, string[]> = {
   Baronetcy: ["baronetcy", "baronetcies"],
   Knighthood: ["knighthood"],
   Esquire: ["esquire", "esquires"],
+  Gentleman: ["gentleman", "gentlemen"],
+  Chief: ["chief", "chiefs"],
   "Register of Sasines": ["register of sasines"],
   "Territorial designation (TD)": ["territorial designation", "territorial designations"],
   "Of that Ilk": ["of that ilk"],

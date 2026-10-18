@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { FeaturedPaper } from "@/components/FeaturedPaper";
 import { EasyRead } from "@/components/EasyRead";
 import { QuoteInterlude } from "@/components/QuoteInterlude";
+import { NavBadge } from "@/components/NavBadge";
 import { SITE_URL } from "@/lib/site";
 import { NEW_KEY_STORE } from "@/lib/subscriber";
 
@@ -150,11 +151,14 @@ export default function RootLayout({
           href="/scottish-baronies-explained"
           className="group block bg-oxblood text-parchment-50 transition-colors hover:bg-oxblood-deep"
         >
-          <span className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-center font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em]">
+          {/* a little tighter on a phone, so the line still fits on one row with the New label */}
+          <span className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-3 py-2 text-center font-sans text-[0.62rem] font-medium uppercase tracking-[0.14em] sm:px-4 sm:tracking-[0.2em]">
             <span>
               <span className="sm:hidden">Click for</span>
               <span className="hidden sm:inline">Click here for</span>{" "}
               Scottish Baronies, Explained
+              {/* owner 2026-10-18: "the record set straight bar at top also a New label", the same as in the menu */}
+              <NavBadge>New</NavBadge>
             </span>
             <span className="hidden text-parchment-200/85 sm:inline">— the record set straight</span>
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
