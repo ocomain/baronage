@@ -105,7 +105,8 @@ let am;
 while ((am = articleRe.exec(html)) !== null) {
   const articleHtml = am[1];
 
-  const qMatch = articleHtml.match(/<h2[^>]*>([\s\S]*?)<\/h2>/);
+  // The gold "New" label beside a question is not part of the question.
+  const qMatch = articleHtml.replace(/<span aria-label="new section"[^>]*>[\s\S]*?<\/span>/g, "").match(/<h2[^>]*>([\s\S]*?)<\/h2>/);
   if (!qMatch) continue;
   const question = inlineToMarkdown(qMatch[1]);
 
