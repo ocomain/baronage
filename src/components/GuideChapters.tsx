@@ -112,9 +112,12 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
           >
             <motion.div
               className="max-w-2xl lg:flex-1"
-              initial={reduceMotion ? false : { opacity: 0, y: 36 }}
+              // The first plate's words show at once: a fade waits for the page's scripts, and a reader can scroll past
+              // before they arrive (owner 2026-10-18, "Held of the Crown"). The rest start fading in a little before
+              // they come into view.
+              initial={reduceMotion || i === 0 ? false : { opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.15, once: true }}
+              viewport={{ amount: 0, once: true, margin: "0px 0px 20% 0px" }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="font-inscribe text-[0.7rem] uppercase tracking-[0.28em] text-gold">

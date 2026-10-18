@@ -189,18 +189,26 @@ export function NoblesseTable() {
         </div>
       </div>
     </figure>
+    {/* Innes of Learney's sentence first, then the two lines (owner 2026-10-18: "Put the Innes quote before the 1945 text"). */}
+    <p className="mx-auto mt-6 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
+      “Their precedence was thus after Knights and before Esquires.”
+      <R n={11} />
+      <span className="mt-1 block font-sans text-[0.72rem] font-semibold not-italic uppercase tracking-[0.16em] text-gold-deep">
+        Innes of Learney, 1945
+      </span>
+    </p>
     {/* Two lines under the table (owner 2026-10-18, approved word for word in the papers chat). Not to mention juries. */}
-    <div className="mx-auto mt-4 max-w-2xl space-y-3 font-sans text-[0.95rem] leading-relaxed text-ink">
+    <div className="mx-auto mt-5 max-w-2xl space-y-3 font-sans text-[0.95rem] leading-relaxed text-ink">
       <p>
         In 1945 the Lyon Court declared a Scottish baron “of rank equivalent to that denominated Hoch Adel”, the
         Continent’s high nobility.
-        <R n={11} big />
+        <R n={12} big />
       </p>
       <p>
         In Scotland, greater or lesser, all are equally noble: “all Peers to one another” (Mackenzie, 1680). Rank decided
         who could fight or marry whom, yet a baron, even a gentleman as untitled nobility, counted as a duke’s peer: he
         could challenge him to a duel and marry his daughter.
-        <R n={12} big />
+        <R n={13} big />
       </p>
     </div>
     </>
