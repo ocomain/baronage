@@ -126,11 +126,12 @@ function Title() {
   );
 }
 
-const rowTone = (r: (typeof ROWS)[number], i: number) =>
-  r.baron ? "bg-gold/[0.14]" : r.commons ? "bg-white" : i % 2 === 0 ? "bg-white" : "bg-parchment-50";
+// Every row white but the barons'; the parchment Baronets and Gentlemen rows ran into the "Not of the Noblesse" line
+// (owner 2026-10-18: "this mismatches with same colouring" … "maybe have white background for Gentlemen and Baronets rows").
+const rowTone = (r: (typeof ROWS)[number]) => (r.baron ? "bg-gold/[0.14]" : "bg-white");
 
 /** The line between the Noblesse and the commons (owner 2026-10-18: "should the table visually show that \"Everyone else\"
- * is not in the Noblesse of Scotland" … "yes"). */
+ * is not in the Noblesse of Scotland" … "yes"). Parchment between white rows. */
 function NotNoblesse() {
   return (
     <span className="flex items-center gap-3">
@@ -181,7 +182,7 @@ export function NoblesseTable() {
                   </td>
                 </tr>
               )}
-              <tr className={rowTone(r, i)}>
+              <tr className={rowTone(r)}>
                 <th
                   scope="row"
                   className={`py-4 pr-5 text-left align-top font-normal ${r.baron ? "border-l-4 border-gold pl-4" : "pl-5"}`}
@@ -211,7 +212,7 @@ export function NoblesseTable() {
                   <NotNoblesse />
                 </li>
               )}
-              <li className={`py-4 pr-4 ${rowTone(r, i)} ${r.baron ? "border-l-4 border-gold pl-3" : "pl-4"}`}>
+              <li className={`py-4 pr-4 ${rowTone(r)} ${r.baron ? "border-l-4 border-gold pl-3" : "pl-4"}`}>
                 <RankCell r={r} />
                 <p className="mt-2.5 text-[0.95rem] leading-snug">
                   <span className={label}>Scots law</span>
