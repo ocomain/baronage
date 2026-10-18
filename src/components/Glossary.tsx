@@ -23,7 +23,7 @@ const ALIASES: Record<string, string[]> = {
   "Quondam feudal barony": ["quondam feudal barony", "quondam feudal baronies"],
   "Scottish barony": ["Scottish barony", "Scottish baronies"],
   "Minor baron": ["minor baron", "minor barons"],
-  "Barones majores / minores": ["barones majores", "barones minores"],
+  "Barones majores / minores": ["barones majores", "barones minores", "greater barons", "greater baron", "lesser barons", "lesser baron"],
   "Constitutional baron": ["constitutional baron", "constitutional barons"],
   Laird: ["laird", "lairds"],
   Freeholder: ["freeholder", "freeholders"],

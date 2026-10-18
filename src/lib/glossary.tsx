@@ -153,16 +153,18 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     // owner 2026-10-18: "Esquire also needs to be added to Glossary", then: "needs a better definition between Esquire
-    // and gentlemen". By the sources it is the gentleman who lives without labour; an esquire is made by birth or office.
+    // and gentlemen". By the sources it is the gentleman who lives without labour; an esquire is made by lineage, royal grant or office (owner: "it's linked to lineage, royal grant, or office").
     term: "Esquire",
-    def: "The rank between the knights and the plain gentlemen. Not a title (esquires and gentlemen were “only names of worship”), nor a matter of land: “it is not an estate, however large, that confers this rank” (Blackstone, 1765). Esquires were the eldest sons of knights and the younger sons of peers, with their heirs; men made esquires by the Crown; and holders of offices such as justices of the peace.",
+    def: "The rank between the knights and the plain gentlemen. Not a title (esquires and gentlemen were “only names of worship”), nor a matter of land: “it is not an estate, however large, that confers this rank” (Blackstone, 1765). It is linked to lineage (the eldest sons of knights, the younger sons of peers), royal grant or office (such as justice of the peace).",
     note: (
       <>
         Blackstone, <em>Commentaries on the Laws of England</em>, vol. I (1765),{" "}
         <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
           pp. 393–394
         </a>
-        , following Camden; Sir Thomas Smith, <em>De Republica Anglorum</em> (1583), ch. 19,{" "}
+        , following Camden: the eldest sons of knights and the younger sons of peers, with their eldest sons
+        after them; esquires made by the king’s letters patent; and those who hold an office of trust under the Crown. Sir
+        Thomas Smith, <em>De Republica Anglorum</em> (1583), ch. 19,{" "}
         <a href="https://archive.org/details/derepublicaanglo00smituoft/page/37/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
           p. 37
         </a>{" "}
