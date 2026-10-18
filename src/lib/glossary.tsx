@@ -176,7 +176,11 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
         </a>
         ), and an esquire who bears arms is of the untitled nobility: see <a href="#term-nobility-clause" className={intLink}>Nobility clause</a>.
         “Esq.” and “Gent.” are the “addition” of a man’s degree after his name, required in legal proceedings by the
-        statute 1 Hen. V c. 5 (1413): Blackstone, p. 394.
+        statute 1 Hen. V c. 5 (1413): Blackstone, p. 394. On gentle birth, see{" "}
+        <a href="#term-gentleman" className={intLink}>
+          Gentleman
+        </a>
+        .
       </>
     ),
   },
@@ -205,7 +209,12 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
         <a href="#term-nobility-clause" className={intLink}>
           Nobility clause
         </a>
-        .
+        . {/* owner 2026-10-18: "see term here" (the 1930 birthbrief in the paper) */}
+        Gentle birth in the Lyon Court’s words: in 1930 it certified a family “of the rank of minor barons or untitled
+        nobility of Scotland” to be “of gentle blood, knightly descent, ancient lineage”: see the paper{" "}
+        <Link href="/reading-room/untitled-in-1930-titled-in-1943/" className={intLink}>
+          Untitled or titled nobility?
+        </Link>
       </>
     ),
   },
