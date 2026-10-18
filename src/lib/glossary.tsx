@@ -156,7 +156,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
     // then, over-riding Blackstone's "it is not an estate, however large, that confers this rank": "esquires are upper
     // gentry without a title, gentle birth, or major landowners", with "gentle birth" and the "Esq." and "Gent." suffixes.
     term: "Esquire",
-    def: "The upper gentry without a title, ranking between the knights and the plain gentlemen: men of gentle birth, or major landowners. The rank is linked to lineage (the eldest sons of knights, the younger sons of peers), royal grant or office (such as justice of the peace). Written “Esq.” after the name: John Smith, Esq.",
+    def: "The upper gentry without a title, ranking between knights and the plain gentlemen: men of gentle birth, or major landowners. Historically linked to lineage (the eldest sons of knights, the younger sons of peers), royal grant or office (such as justice of the peace). Written “Esq.” after the name: John Smith, Esq.",
     note: (
       <>
         Blackstone, <em>Commentaries on the Laws of England</em>, vol. I (1765),{" "}
@@ -187,7 +187,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   {
     // owner 2026-10-18: "gentlemen defined by ancestral right to bear arms, a genteel lifestyle, manners, freedom from manual labour"
     term: "Gentleman",
-    def: "The rank below the esquire: a man of gentle birth, one of those “whom their blood and race doth make noble and known” (Sir Thomas Smith, 1583), defined by an ancestral right to bear arms, a genteel lifestyle and manners, and freedom from manual labour. Written “Gent.” after the name. In Scotland a gentleman who bears arms is of the untitled nobility.",
+    def: "The rank below esquire: a man of gentle birth, one of those “whom their blood and race doth make noble and known” (Sir Thomas Smith, 1583), defined by an ancestral right to bear arms, a genteel lifestyle and manners, and freedom from manual labour. Written “Gent.” after the name. In Scotland a gentleman who bears arms is of the untitled nobility.",
     note: (
       <>
         Smith, <em>De Republica Anglorum</em> (1583), ch. 20,{" "}
