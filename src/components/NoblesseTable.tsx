@@ -67,8 +67,8 @@ const ROWS: { rank: string; note?: ReactNode; scots: ReactNode; english: string;
   { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", commons: true, ref: 10 },
 ];
 
-/** Rank names that have an entry in the glossary. */
-const RANK_TERMS: Record<string, string> = { Peers: "Peerage", Esquires: "Esquire", Lairds: "Laird", Gentlemen: "Gentleman", Chiefs: "Chief" };
+/** Rank names that have an entry in the glossary (Barons → Scottish barony: owner 2026-10-18, "ok"). */
+const RANK_TERMS: Record<string, string> = { Peers: "Peerage", Esquires: "Esquire", Lairds: "Laird", Gentlemen: "Gentleman", Chiefs: "Chief", Barons: "Scottish barony" };
 
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
 function Rank({ name }: { name: string }) {
