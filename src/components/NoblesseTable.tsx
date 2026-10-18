@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { R } from "@/components/RankRefs";
+import { GlossaryTerm } from "@/components/Glossary";
 
 /**
  * "The Noblesse of Scotland, in order of precedence": the ranks with what Scots law and English usage call each
@@ -200,7 +201,8 @@ export function NoblesseTable() {
     {/* Two lines under the table (owner 2026-10-18, approved word for word in the papers chat). Not to mention juries. */}
     <div className="mx-auto mt-5 max-w-2xl space-y-3 font-sans text-[0.95rem] leading-relaxed text-ink">
       <p>
-        In 1945 the Lyon Court declared a Scottish baron “of rank equivalent to that denominated Hoch Adel”, the
+        In 1945 the Lyon Court declared a Scottish baron “of rank equivalent to that denominated{" "}
+        <GlossaryTerm term="Hoch-adel">Hoch Adel</GlossaryTerm>”, the
         Continent’s high nobility.
         <R n={12} big />
       </p>

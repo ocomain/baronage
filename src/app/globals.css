@@ -795,3 +795,47 @@ body:has(header nav.fixed) .ez-switch{display:none}
   }
 }
 
+/* ---------- glossary links (Scottish Baronies, Explained) ----------
+   A word of the glossary: a dotted underline that goes to its entry; on a computer, a short entry also shows in a
+   tooltip while the pointer is over it (owner 2026-10-18). The tooltip is drawn from data-tip, so its words are not
+   repeated in the page's text. */
+.gloss {
+  position: relative;
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(156, 122, 46, 0.75);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.gloss:hover { color: #6e1423; }
+@media (hover: hover) {
+  .gloss[data-tip]:hover::after,
+  .gloss[data-tip]:focus-visible::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%);
+    z-index: 60;
+    width: max-content;
+    max-width: 19rem;
+    padding: 0.6rem 0.8rem;
+    background: #131e3a;
+    color: #faf6ec;
+    border: 1px solid rgba(201, 162, 75, 0.55);
+    box-shadow: 0 12px 30px -12px rgba(10, 16, 36, 0.6);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: 0;
+    text-align: left;
+    text-transform: none;
+    white-space: normal;
+    pointer-events: none;
+  }
+}
+
