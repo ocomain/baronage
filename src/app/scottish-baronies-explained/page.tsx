@@ -7,6 +7,7 @@ import { SITE_URL } from "@/lib/site";
 import { RankLadder } from "@/components/RankLadder";
 import { NoblesseTable } from "@/components/NoblesseTable";
 import { SectionSidebar } from "@/components/SectionSidebar";
+import { NavBadge } from "@/components/NavBadge";
 
 export const metadata: Metadata = {
   title: "Scottish Baronies, Explained — FAQ",
@@ -75,7 +76,8 @@ const intLink =
  * FAQPage JSON-LD are both generated from this array, so they cannot drift. */
 /** `inlineRefs`: the answer carries its own numbered references, so its "Authority & sources" link is not shown (the
  * list is still copied, hidden, for search engines). */
-const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlineRefs?: boolean }[] = [
+/** `isNew`: the gold "New" label of the menu beside the question (not part of the question's text). */
+const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlineRefs?: boolean; isNew?: boolean }[] = [
   {
     q: "Is a Scottish baron a titled nobleman?",
     a: "Yes. Historically, barons were untitled nobility as baron was a description not a title, the first hereditary titles were lords and earls. The Declaration of Arbroath of 1320 shows the practice: of the thirty-nine nobles named at its head — eight earls and thirty-one barons — only the earls and two lords are titled, “Jacobus Dominus de Duglas” and “Dauid Dominus de Brechyn”, the other barons appearing by name alone; and the descent of those lordships shows the lord’s title already running as a hereditary rank. Whether “baron” was a name of dignity or only a description of a man’s tenure was argued for centuries: Mackenzie records in 1680 that the old barons, “especially where they are Chiefs of Clans”, refused to yield precedence to baronets although “the other pretend that a Baron is no Name of Dignity”. The 1672 Act let only peers and bishops sign by their titles; barons signed by name, “of” their lands. In 1943 the Court of the Lord Lyon found and declared that the minor barons “are, and have been” recognised as a “titled nobility”. The record on the side of “title” is long: a document of 1382 states that Baronia est nomen dignitatis et importat judicaturam — barony is a name of dignity and imports jurisdiction; the Crown charter of 1590 erecting Spynie into a free barony conferred the “title, honour, rank and status of a free baron”; the Great Seal records in 1589 that Colville was to be called baron of Culross, and that Keith was given the title and honour of baron of Delny; the sheriff-court suit-rolls entered a baron as “A, Baro de B” exactly as an earl was entered “A, Comes de B”; Mary Queen of Scots wrote to “Our traist friend the barroun of Kylrawak”; and Lord Lyon Erskine of Cambo signed himself “Baro de Cambo”. Against it stood Mackenzie’s “other” party, the subscription clause of the 1672 Act, and J. H. Stevenson (1896, 1927), for whom “the mere territorial baron has no title of dignity appropriated to him”. Today, a holder of a barony within the Baronage of Scotland is a member of Scotland's titled nobility, though not a peer. The Scottish equivalent of an English peerage baron is the higher title Lord of Parliament (the lowest rank of the Scottish Peerage, which ranks in order of Lord of Parliament, Viscount, Earl, Marquis, Duke); a Scottish baron is noble but sits below the peerage. The prefix “The Much Honoured” is the honorific traditionally used to distinguish a Scottish baron from a peer. Scotland followed France and much of continental Europe, recognising both peerage and non-peerage titled nobility — the Scottish baron belongs to the latter, which is why a barony can be a genuine title of nobility without being a peerage. Baronies were affirmed in Lord Clyde’s 1992 dictum as heritable titles of honour.",
@@ -230,6 +232,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
   },
   {
     q: "Where does a Scottish baron rank?",
+    isNew: true, // owner 2026-10-18: "put a New label like from the nav bar next to" it
     inlineRefs: true, // owner 2026-10-17: a numbered reference on each point instead of the Authority link
     a: "After knights and before esquires. Innes of Learney, later Lord Lyon, set out the record in 1945: the King’s patents to the first baronets (1625) place baronets before knights, barons, esquires and gentlemen, and the Lyon Register (1672) enters baronets, knights and barons together; “their precedence was thus after Knights and before Esquires”. The Act of 2000 that ended feudal tenure keeps “any quality or precedence” that goes with a barony. The royal Scale of General Precedence in Scotland (1905) names “Barons of Scotland” among the peers and has no separate line for other barons.",
     body: (
@@ -1382,7 +1385,7 @@ const NAV_LABELS: Record<string, string> = {
   "what-is-the-difference-between-the-scottish-barony-register-and-the-roll": "The Register and the Roll",
 };
 const NAV = [
-  ...orderedFaqs.map((f) => ({ id: slugify(f.q), label: NAV_LABELS[slugify(f.q)] ?? f.q })),
+  ...orderedFaqs.map((f) => ({ id: slugify(f.q), label: NAV_LABELS[slugify(f.q)] ?? f.q, badge: f.isNew ? "New" : undefined })),
   { id: "glossary", label: "Glossary" },
 ];
 
@@ -1959,6 +1962,7 @@ export default function BaroniesExplainedPage() {
                   <a href={`#${slugify(f.q)}`} className={intLink}>
                     {f.q}
                   </a>
+                  {f.isNew && <NavBadge>New</NavBadge>}
                 </li>
               ))}
               <li className="flex gap-3 leading-snug">
@@ -1978,7 +1982,10 @@ export default function BaroniesExplainedPage() {
                 id={slug}
                 className={`scroll-mt-32 lg:scroll-mt-44 ${i > 0 ? "border-t border-parchment-300/70 pt-12" : ""}`}
               >
-                <h2 className="font-display text-2xl text-navy sm:text-3xl">{f.q}</h2>
+                <h2 className="font-display text-2xl text-navy sm:text-3xl">
+                  {f.q}
+                  {f.isNew && <NavBadge>New</NavBadge>}
+                </h2>
                 <div className="mt-5 leading-relaxed text-ink-soft">{f.body}</div>
                 {!f.inlineRefs && (
                 <p className="mt-6">
