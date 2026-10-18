@@ -758,3 +758,40 @@ html.ez .ez-row-go{width:3rem;height:3rem;font-size:1.5rem}
 
 /* while the phone menu is open, the text-size switch steps aside (it would sit on the menu's last rows) */
 body:has(header nav.fixed) .ez-switch{display:none}
+
+/* ---------- storybook plates (History and the Guide pages) ----------
+   While the next plate comes over one, it sinks back a little and darkens, and once covered it is hidden, so the
+   browser never draws more than two full-screen pictures at once (owner 2026-10-18: scrolling "needs to be smooth
+   beautiful experience"). Driven by the scroll itself on the compositor; browsers without scroll-driven animations
+   keep the plain stacking. The timelines are named per plate in HistoryChapters and GuideChapters. */
+@supports (animation-timeline: view()) {
+  .plate-sink {
+    transform-origin: 50% 35%;
+    animation: plate-sink linear both;
+    animation-range: entry 0% entry 100%;
+  }
+  .plate-shade {
+    animation: plate-shade linear both;
+    animation-range: entry 0% entry 100%;
+  }
+}
+@keyframes plate-sink {
+  0% { transform: scale(1); visibility: visible; }
+  97% { transform: scale(0.95); visibility: visible; }
+  100% { transform: scale(0.95); visibility: hidden; }
+}
+@keyframes plate-shade {
+  0% { opacity: 0; }
+  100% { opacity: 0.72; }
+}
+@keyframes plate-hide {
+  0%, 97% { visibility: visible; }
+  100% { visibility: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  @supports (animation-timeline: view()) {
+    .plate-sink { animation-name: plate-hide; }
+    .plate-shade { animation: none; }
+  }
+}
+

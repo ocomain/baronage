@@ -129,6 +129,8 @@ export function QuoteInterlude() {
     clearTimers();
     waiting.current = false;
     setShown(false);
+    // Once faded, take it off the page rather than leave an invisible full-screen layer over every page.
+    timers.current.push(window.setTimeout(() => setQuote(null), 600));
   }, []);
   // A tap or click anywhere on it, or Esc, closes it straight away (owner 2026-10-17).
   const close = useCallback(() => {

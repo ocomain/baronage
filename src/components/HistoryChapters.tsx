@@ -1,6 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
+
+import type { CSSProperties, ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
@@ -150,18 +151,29 @@ const chapters: Chapter[] = [
  * and still for that much scrolling before it is covered (owner 2026-10-11: the next plate came over
  * the words before they could be read). The words fade in as soon as a plate begins to arrive, once.
  */
-const HOLD = "mt-[45svh]";
+// 30% of a screen (was 45%): long enough to read, short enough not to feel stuck (owner 2026-10-18).
+const HOLD = "mt-[30svh]";
 export function HistoryChapters() {
   const reduceMotion = useReducedMotion();
 
+  // Each plate names its own view timeline; the plate before it sinks back and is hidden as this one arrives (globals.css).
+  const last = chapters.length - 1;
   return (
-    <div>
+    <div className="bg-navy-deep" style={{ timelineScope: chapters.map((_, i) => `--plate-${i}`).join(", ") } as CSSProperties}>
       {chapters.map((c, i) => (
         <section
           key={c.numeral}
-          className={`sticky top-0 flex h-[100svh] items-center overflow-hidden border-t border-gold/30 ${i > 0 ? HOLD : ""}`}
+          className={`sticky top-0 flex h-[100svh] items-center overflow-hidden border-t border-gold/30 ${i > 0 ? HOLD : ""} ${i < last ? "plate-sink" : ""}`}
+          style={{ viewTimelineName: `--plate-${i}`, ...(i < last ? { animationTimeline: `--plate-${i + 1}` } : {}) } as CSSProperties}
           aria-label={`Chapter ${c.numeral}: ${c.title}`}
         >
+          {i < last && (
+            <div
+              aria-hidden
+              className="plate-shade pointer-events-none absolute inset-0 z-10 bg-navy-deep opacity-0"
+              style={{ animationTimeline: `--plate-${i + 1}` } as CSSProperties}
+            />
+          )}
           {/* A real image, not a CSS background: the first plate loads at once with priority, the rest as they near the screen. */}
           <picture aria-hidden>
             <source media={PHONE_MEDIA} srcSet={phoneImage(c.img)} />

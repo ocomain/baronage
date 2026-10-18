@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Footnote } from "@/components/Footnote";
 import { HeaderOffset } from "@/components/HeaderOffset";
@@ -65,8 +65,10 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
     };
   }, []);
 
+  // As on History: each plate names its own view timeline; the plate before sinks back and is hidden as it arrives.
+  const last = chapters.length - 1;
   return (
-    <div>
+    <div className="bg-navy-deep" style={{ timelineScope: chapters.map((_, i) => `--plate-${i}`).join(", ") } as CSSProperties}>
       <HeaderOffset />
       {chapters.map((c, i) => (
         <section
@@ -75,9 +77,17 @@ export function GuideChapters({ chapters, label = "Chapter" }: { chapters: Guide
             plates.current[i] = el;
           }}
           // mt on every plate but the first: the plate before holds, whole and still, for that much scrolling (as on History)
-          className={`sticky top-0 flex min-h-[100svh] items-center overflow-hidden border-t border-gold/30 ${i > 0 ? "mt-[45svh]" : ""}`}
+          className={`sticky top-0 flex min-h-[100svh] items-center overflow-hidden border-t border-gold/30 ${i > 0 ? "mt-[30svh]" : ""} ${i < last ? "plate-sink" : ""}`}
+          style={{ viewTimelineName: `--plate-${i}`, ...(i < last ? { animationTimeline: `--plate-${i + 1}` } : {}) } as CSSProperties}
           aria-label={`${label} ${c.numeral}: ${c.title}`}
         >
+          {i < last && (
+            <div
+              aria-hidden
+              className="plate-shade pointer-events-none absolute inset-0 z-10 bg-navy-deep opacity-0"
+              style={{ animationTimeline: `--plate-${i + 1}` } as CSSProperties}
+            />
+          )}
           <picture aria-hidden>
             <source media={PHONE_MEDIA} srcSet={phoneImage(c.img)} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
