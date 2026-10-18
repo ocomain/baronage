@@ -152,24 +152,58 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
     def: "A personal, non-hereditary honour conferring the style “Sir” (or “Dame”). Unlike a peerage, a barony or a baronetcy, it does not pass to the holder's heirs.",
   },
   {
-    // owner 2026-10-18: "Esquire also needs to be added to Glossary"
+    // owner 2026-10-18: "Esquire also needs to be added to Glossary", then: "needs a better definition between Esquire
+    // and gentlemen". By the sources it is the gentleman who lives without labour; an esquire is made by birth or office.
     term: "Esquire",
-    def: "The rank below the barons and above the gentlemen: the barons’ place is “after Knights and before Esquires” (Innes of Learney, 1945). The baronets’ patents of 1625 treat esquires as bearers of arms, and in England Sir Thomas Smith (1583) put esquires between the knights and the plain gentlemen. An esquire who bears arms is of the untitled nobility.",
+    def: "The rank between the knights and the plain gentlemen. Not a title (esquires and gentlemen were “only names of worship”), nor a matter of land: “it is not an estate, however large, that confers this rank” (Blackstone, 1765). Esquires were the eldest sons of knights and the younger sons of peers, with their heirs; men made esquires by the Crown; and holders of offices such as justices of the peace.",
     note: (
       <>
-        Innes of Learney, “The Robes of the Feudal Baronage of Scotland”,{" "}
+        Blackstone, <em>Commentaries on the Laws of England</em>, vol. I (1765),{" "}
+        <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
+          pp. 393–394
+        </a>
+        , following Camden; Sir Thomas Smith, <em>De Republica Anglorum</em> (1583), ch. 19,{" "}
+        <a href="https://archive.org/details/derepublicaanglo00smituoft/page/37/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          p. 37
+        </a>{" "}
+        (esquires are those of the gentlemen who bear arms, the marks of their family). In Scotland the barons rank “after
+        Knights and before Esquires” (Innes of Learney,{" "}
         <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
-          <em>PSAS</em> 79 (1944–45), p. 113
+          <em>PSAS</em> 79, p. 113
         </a>
-        ; the patent of Sir Robert Gordon, 28 May 1625, which names esquires as armigers, bearers of arms (F. W. Pixley,{" "}
-        <a href="https://archive.org/details/historyofbaronet00pixluoft/page/n102/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
-          <em>A History of the Baronetage</em>, 1900, p. 83
+        ), and an esquire who bears arms is of the untitled nobility: see Nobility clause.
+      </>
+    ),
+  },
+  {
+    // owner 2026-10-18: the difference between esquire and gentleman
+    term: "Gentleman",
+    def: "The rank below the esquire. In England, wrote Sir Thomas Smith (1583), whoever “can live idly, and without manual labour” and keeps up the state of a gentleman “shall be taken for a gentleman”; in law, as Coke put it, a gentleman is one “who bears coat armour” (Blackstone, 1765). In Scotland a gentleman who bears arms is of the untitled nobility.",
+    note: (
+      <>
+        Smith, <em>De Republica Anglorum</em> (1583), ch. 20,{" "}
+        <a href="https://archive.org/details/derepublicaanglo00smituoft/page/39/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          pp. 39–40
         </a>
-        ); Sir Thomas Smith,{" "}
-        <a href="https://archive.org/details/derepublicaanglo00smituoft/page/n88/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
-          <em>De Republica Anglorum</em> (1583), pp. 31–32
+        , as quoted by Blackstone, <em>Commentaries</em>, vol. I (1765),{" "}
+        <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
+          pp. 393–394
         </a>
-        . The untitled nobility of armigers: see Nobility clause.
+        , with Coke’s definition. In Scotland: see Nobility clause.
+      </>
+    ),
+  },
+  {
+    // owner 2026-10-18: "I guess you better also add Chief to glossary" (the table's "Esquires/Chiefs/Lairds")
+    term: "Chief",
+    def: "The head of a clan or family. Since at least the 16th century a chief has had to be entitled to bear the undifferenced arms of the clan or family, and so be “Chief of the Name and Arms”; it is for the Lord Lyon to decide who has succeeded. A chief so recognised “is chief of all who bear the name of the clan or family”, not only of the members of a clan society.",
+    note: (
+      <>
+        Court of the Lord Lyon,{" "}
+        <a href="https://www.courtofthelordlyon.scot/index_htm_files/SuccessionofChiefsGuidanceNote.pdf" target="_blank" rel="noopener noreferrer" className={extLink}>
+          Guidance Note, “Chiefs of Clans and Families”, 16 December 2021
+        </a>
+        , paras 5 and 7. A chief who bears arms is of the untitled nobility: see Nobility clause.
       </>
     ),
   },

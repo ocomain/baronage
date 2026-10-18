@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { R } from "@/components/RankRefs";
 import { GlossaryTerm } from "@/components/Glossary";
 
@@ -16,7 +16,8 @@ import { GlossaryTerm } from "@/components/Glossary";
 const gone = (t: string) => <s className="decoration-ink/70">{t}</s>;
 
 // Glossary words in the table link to their entry, with the short ones as a tooltip on a computer (owner 2026-10-18).
-const ROWS: { rank: string; note?: ReactNode; scots: ReactNode; english: string; baron?: boolean; ref: number }[] = [
+/** `commons`: the one row outside the Noblesse, set below a line and in plain grey (owner 2026-10-18). */
+const ROWS: { rank: string; note?: ReactNode; scots: ReactNode; english: string; baron?: boolean; commons?: boolean; ref: number }[] = [
   {
     rank: "Peers",
     note: (
@@ -57,11 +58,11 @@ const ROWS: { rank: string; note?: ReactNode; scots: ReactNode; english: string;
   },
   { rank: "Esquires/Chiefs/Lairds", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 9 },
   { rank: "Gentlemen", scots: "Untitled nobility if armigerous", english: "Commoners, gentry", ref: 9 },
-  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 10 },
+  { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", commons: true, ref: 10 },
 ];
 
 /** Rank names that have an entry in the glossary. */
-const RANK_TERMS: Record<string, string> = { Peers: "Peerage", Esquires: "Esquire", Lairds: "Laird" };
+const RANK_TERMS: Record<string, string> = { Peers: "Peerage", Esquires: "Esquire", Lairds: "Laird", Gentlemen: "Gentleman", Chiefs: "Chief" };
 
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
 function Rank({ name }: { name: string }) {
@@ -86,7 +87,7 @@ function Rank({ name }: { name: string }) {
 function RankCell({ r }: { r: (typeof ROWS)[number] }) {
   return (
     <>
-      <span className={`block font-display leading-tight text-navy ${r.baron ? "text-[1.45rem] font-semibold" : "text-[1.3rem]"}`}>
+      <span className={`block font-display leading-tight ${r.commons ? "text-ink-soft/80" : "text-navy"} ${r.baron ? "text-[1.45rem] font-semibold" : "text-[1.3rem]"}`}>
         <Rank name={r.rank} />
       </span>
       {r.note && <span className="mt-1 block font-sans text-[0.72rem] leading-snug text-ink-soft">{r.note}</span>}
@@ -126,7 +127,19 @@ function Title() {
 }
 
 const rowTone = (r: (typeof ROWS)[number], i: number) =>
-  r.baron ? "bg-gold/[0.14]" : i % 2 === 0 ? "bg-white" : "bg-parchment-50";
+  r.baron ? "bg-gold/[0.14]" : r.commons ? "bg-white" : i % 2 === 0 ? "bg-white" : "bg-parchment-50";
+
+/** The line between the Noblesse and the commons (owner 2026-10-18: "should the table visually show that \"Everyone else\"
+ * is not in the Noblesse of Scotland" … "yes"). */
+function NotNoblesse() {
+  return (
+    <span className="flex items-center gap-3">
+      <span aria-hidden className="h-px flex-1 bg-gold/60" />
+      <span className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gold-deep">Not of the Noblesse</span>
+      <span aria-hidden className="h-px flex-1 bg-gold/60" />
+    </span>
+  );
+}
 
 const headCell = "px-5 py-3 text-left align-bottom font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-deep";
 const label = "mr-1.5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-gold-deep";
@@ -160,19 +173,28 @@ export function NoblesseTable() {
           </thead>
           <tbody className="divide-y divide-gold/20">
             {ROWS.map((r, i) => (
-              <tr key={r.rank} className={rowTone(r, i)}>
+              <Fragment key={r.rank}>
+              {r.commons && (
+                <tr className="border-t-2 border-gold/50 bg-parchment-50">
+                  <td colSpan={3} className="px-5 pb-1.5 pt-3">
+                    <NotNoblesse />
+                  </td>
+                </tr>
+              )}
+              <tr className={rowTone(r, i)}>
                 <th
                   scope="row"
                   className={`py-4 pr-5 text-left align-top font-normal ${r.baron ? "border-l-4 border-gold pl-4" : "pl-5"}`}
                 >
                   <RankCell r={r} />
                 </th>
-                <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink">
+                <td className={`border-l border-gold/20 px-5 py-4 align-top leading-relaxed ${r.commons ? "text-ink-soft" : "text-ink"}`}>
                   {r.scots}
                   <R n={r.ref} big />
                 </td>
                 <td className="border-l border-gold/20 px-5 py-4 align-top leading-relaxed text-ink-soft">{r.english}</td>
               </tr>
+              </Fragment>
             ))}
           </tbody>
         </table>
@@ -183,11 +205,17 @@ export function NoblesseTable() {
           </p>
           <ul className="divide-y divide-gold/20 border-t border-gold/40">
             {ROWS.map((r, i) => (
-              <li key={r.rank} className={`py-4 pr-4 ${rowTone(r, i)} ${r.baron ? "border-l-4 border-gold pl-3" : "pl-4"}`}>
+              <Fragment key={r.rank}>
+              {r.commons && (
+                <li className="border-t-2 border-gold/50 bg-parchment-50 px-4 pb-1.5 pt-3">
+                  <NotNoblesse />
+                </li>
+              )}
+              <li className={`py-4 pr-4 ${rowTone(r, i)} ${r.baron ? "border-l-4 border-gold pl-3" : "pl-4"}`}>
                 <RankCell r={r} />
                 <p className="mt-2.5 text-[0.95rem] leading-snug">
                   <span className={label}>Scots law</span>
-                  <span className="text-ink">{r.scots}</span>
+                  <span className={r.commons ? "text-ink-soft" : "text-ink"}>{r.scots}</span>
                   <R n={r.ref} big />
                 </p>
                 <p className="mt-1.5 text-[0.95rem] leading-snug">
@@ -198,6 +226,7 @@ export function NoblesseTable() {
                   <span className="text-ink-soft">{r.english}</span>
                 </p>
               </li>
+              </Fragment>
             ))}
           </ul>
         </div>
