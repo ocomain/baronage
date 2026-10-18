@@ -120,7 +120,7 @@ export const navMenu: NavMenuItem[] = [
     href: "/scottish-baronies-explained",
     label: "Guide",
     children: [
-      { href: "/scottish-baronies-explained", label: "Baronies Explained" },
+      { href: "/scottish-baronies-explained", label: "Baronies Explained", badge: "New" }, // owner 2026-10-18
       { href: "/proper-address", label: "Proper Address" },
       { href: "/history", label: "History" },
       { href: "/robes-and-chapeau", label: "Robes & Chapeau", badge: "New" },

@@ -37,13 +37,6 @@ const CHAPEAU_DATES: { year: string; text: string; ref: number }[] = [
 export function RankLadder() {
   return (
     <figure className="my-2">
-      <figcaption className="mx-auto mt-3 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">
-        “Their precedence was thus after Knights and before Esquires.”
-        <R n={13} />
-        <span className="mt-1 block font-sans text-[0.72rem] font-semibold not-italic uppercase tracking-[0.16em] text-gold-deep">
-          Innes of Learney, 1945
-        </span>
-      </figcaption>
       <div className="mt-10 border-t border-gold/40 pt-7">
         <p className="text-center font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">Above the shield</p>
         <p className="mx-auto mt-2 max-w-md text-center font-serif text-lg italic leading-relaxed text-navy">

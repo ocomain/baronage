@@ -169,6 +169,20 @@ const REFS: Record<number, ReactNode> = {
   ),
   11: (
     <>
+      Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>, after the baronets’ patents and the Lyon
+      Register. See{" "}
+      <Link href="/reading-room/innes-of-learney-1945/" className={int}>
+        The Lord Lyon’s Case for the Baronage
+      </Link>{" "}
+      and{" "}
+      <Link href="/reading-room/the-precedence-of-a-scottish-baron/" className={int}>
+        “Never ceded” to knights or baronets: the precedence of a Scottish baron
+      </Link>
+      .
+    </>
+  ),
+  12: (
+    <>
       The Lyon Court’s declaration in the matriculation of Wauchope of Niddrie, 19 April 1945 (Lord Lyon Sir Francis
       Grant), Lyon Register vol. xxxv, p. 31, printed by Innes of Learney,{" "}
       <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 160</A>: the petitioner “is of Baronial Race, and of rank equivalent
@@ -177,7 +191,7 @@ const REFS: Record<number, ReactNode> = {
       Continental usage—is officially recognised as Hoch-adel”.
     </>
   ),
-  12: (
+  13: (
     <>
       Sir George Mackenzie on precedency (1680), in his <em>Works</em>, vol. ii (1716),{" "}
       <A href={`${MACKENZIE}n539/mode/1up`}>p. 534</A>: “Nobility is divided with us, as in England, into nobiles majores
@@ -194,20 +208,6 @@ const REFS: Record<number, ReactNode> = {
       </A>
       ). The baron as a landed gentleman: “our Lairds or landed Gentlemen” (Mackenzie, <em>Works</em>, vol. ii,{" "}
       <A href={`${MACKENZIE}n557/mode/1up`}>p. 550</A>).
-    </>
-  ),
-  13: (
-    <>
-      Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>, after the baronets’ patents and the Lyon
-      Register. See{" "}
-      <Link href="/reading-room/innes-of-learney-1945/" className={int}>
-        The Lord Lyon’s Case for the Baronage
-      </Link>{" "}
-      and{" "}
-      <Link href="/reading-room/the-precedence-of-a-scottish-baron/" className={int}>
-        “Never ceded” to knights or baronets: the precedence of a Scottish baron
-      </Link>
-      .
     </>
   ),
   14: (
