@@ -189,6 +189,20 @@ export function NoblesseTable() {
         </div>
       </div>
     </figure>
+    {/* Two lines under the table (owner 2026-10-18, approved word for word in the papers chat). Not to mention juries. */}
+    <div className="mx-auto mt-4 max-w-2xl space-y-3 font-sans text-[0.95rem] leading-relaxed text-ink">
+      <p>
+        In 1945 the Lyon Court declared a Scottish baron “of rank equivalent to that denominated Hoch Adel”, the
+        Continent’s high nobility.
+        <R n={11} big />
+      </p>
+      <p>
+        In Scotland, greater or lesser, all are equally noble: “all Peers to one another” (Mackenzie, 1680). Rank decided
+        who could fight or marry whom, yet a baron, even a gentleman as untitled nobility, counted as a duke’s peer: he
+        could challenge him to a duel and marry his daughter.
+        <R n={12} big />
+      </p>
+    </div>
     </>
   );
 }

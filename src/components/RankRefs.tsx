@@ -108,7 +108,7 @@ const REFS: Record<number, ReactNode> = {
       <A href="https://archive.org/details/greensencyclopae09chis/page/n398/mode/1up">
         <em>Green’s Encyclopaedia of the Law of Scotland</em>, vol. IX (1898), p. 387
       </A>
-      ; the knights bachelor are the “milites aurati”, gilded knights, of the baronets’ patents of 1625 (note 18).
+      ; the knights bachelor are the “milites aurati”, gilded knights, of the baronets’ patents of 1625 (note 20).
     </>
   ),
   8: (
@@ -169,6 +169,35 @@ const REFS: Record<number, ReactNode> = {
   ),
   11: (
     <>
+      The Lyon Court’s declaration in the matriculation of Wauchope of Niddrie, 19 April 1945 (Lord Lyon Sir Francis
+      Grant), Lyon Register vol. xxxv, p. 31, printed by Innes of Learney,{" "}
+      <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 160</A>: the petitioner “is of Baronial Race, and of rank equivalent
+      to that denominated Hoch Adel, and equivalent to the Chiefs of Baronial Houses, upon the Continent of Europe”. The
+      same paper, p. 146: “where a Feudal Baronage still exists as a constitutional ‘Order’, this—following the
+      Continental usage—is officially recognised as Hoch-adel”.
+    </>
+  ),
+  12: (
+    <>
+      Sir George Mackenzie on precedency (1680), in his <em>Works</em>, vol. ii (1716),{" "}
+      <A href={`${MACKENZIE}n539/mode/1up`}>p. 534</A>: “Nobility is divided with us, as in England, into nobiles majores
+      &amp; minores, the greater and the lesser Nobility. Under the greater are comprehended all such as are Lords of
+      Parliament, under the lesser are comprehended Knights and Gentlemen; and though all these be not Peers of
+      Parliament, yet they are all Peers to one another”; “a Nobleman is obliged to accept of a Challenge from a Gentleman
+      as his Peer, where Duels are lawful”; and “a Gentleman may be offered to a Duke’s Daughter whose Ward and Marriage
+      falls to the King, as has been often decided, nor can that Match be refused upon the account of Inequality”. Rank
+      decided who could fight whom: at Carberry Hill on 15 June 1567 Bothwell refused the Laird of Tullibardine’s
+      challenge, “saying, That he was not a Peer of the Kingdom, as he was” (John Knox, <em>History of the
+      Reformation</em>, book V, in{" "}
+      <A href="https://archive.org/details/worksofjohnknox2knox/page/n574/mode/1up">
+        D. Laing (ed.), <em>The Works of John Knox</em>, vol. ii (1848), p. 561
+      </A>
+      ). The baron as a landed gentleman: “our Lairds or landed Gentlemen” (Mackenzie, <em>Works</em>, vol. ii,{" "}
+      <A href={`${MACKENZIE}n557/mode/1up`}>p. 550</A>).
+    </>
+  ),
+  13: (
+    <>
       Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>, after the baronets’ patents and the Lyon
       Register. See{" "}
       <Link href="/reading-room/innes-of-learney-1945/" className={int}>
@@ -181,12 +210,12 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  12: (
+  14: (
     <>
       <A href="https://courtofthelordlyon.scot/blazoning.htm">Court of the Lord Lyon, “Blazoning”</A>.
     </>
   ),
-  13: (
+  15: (
     <>
       The numbers of leaves and pearls, and “the caps of crimson velvet turned up with ermine, with a gold tassel on the
       top”, as in the Earl Marshal’s order of 1 October 1901, in{" "}
@@ -201,7 +230,7 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  14: (
+  16: (
     <>
       Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), pp. 152–155</A>: the Roslin “red velvet cap”, and
       that the Lyon Court grants the chapeau in red (p. 155). See{" "}
@@ -211,19 +240,19 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  15: (
+  17: (
     <>
       Father Hay’s account of the Roslin vault, opened in 1650, in Innes of Learney,{" "}
       <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 152</A>.
     </>
   ),
-  16: (
+  18: (
     <>
       The petition of Ainslie of Pilton, “heir and representative of the Feudal Barons of Dolphinton”, and the Lyon
       Court’s interlocutor of 28 November 1835: Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 153</A>.
     </>
   ),
-  17: (
+  19: (
     <>
       The Lord Lyon’s interlocutor of 4 September 1934: Innes of Learney,{" "}
       <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 154</A>. See{" "}
@@ -233,7 +262,7 @@ const REFS: Record<number, ReactNode> = {
       .
     </>
   ),
-  18: (
+  20: (
     <>
       The patent of Sir Robert Gordon, the first baronet, 28 May 1625, printed in F. W. Pixley,{" "}
       <A href="https://archive.org/details/historyofbaronet00pixluoft/page/n102/mode/1up">
@@ -243,7 +272,7 @@ const REFS: Record<number, ReactNode> = {
       <em>Works</em>, vol. ii (1716), <A href={`${MACKENZIE}n554/mode/1up`}>p. 547</A>); Innes of Learney, <A href={INNES}><em>PSAS</em> 79 (1944–45), p. 113</A>.
     </>
   ),
-  19: (
+  21: (
     <>
       George Seton,{" "}
       <A href="https://archive.org/details/lawpracticeofher00setouoft/page/n111/mode/1up">
