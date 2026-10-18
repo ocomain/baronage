@@ -59,6 +59,8 @@ function inlineToMarkdown(fragment) {
   // Links — non-greedy, links in this content never nest.
   s = s.replace(/<a\s+[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, inner) => {
     const text = inlineToMarkdown(inner);
+    // A link to a place on the same page (the glossary) reads as its words.
+    if (href.startsWith("#")) return text;
     return `[${text}](${resolveUrl(decodeEntities(href))})`;
   });
 
