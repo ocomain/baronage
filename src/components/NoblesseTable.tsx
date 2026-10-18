@@ -255,8 +255,11 @@ export function NoblesseTable() {
         Continent’s high nobility.
         <R n={12} big />
       </p>
+      {/* owner 2026-10-18: "be careful here not to seem as if we are over reaching.... making out barons are peers": "equally"
+          deleted (not Mackenzie's word) and his own qualifier quoted ("yes agreed") */}
       <p>
-        In Scotland, greater or lesser, all are equally noble: “all Peers to one another” (Mackenzie, 1680). Rank decided
+        In Scotland, greater or lesser, all are noble: “though all these be not Peers of Parliament, yet they are all Peers
+        to one another” (Mackenzie, 1680). Rank decided
         who could fight or marry whom, yet a baron, even a gentleman as untitled nobility, counted as a duke’s peer: he
         could challenge him to a duel and marry his daughter.
         <R n={13} big />
