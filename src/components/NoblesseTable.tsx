@@ -26,7 +26,13 @@ const ROWS: { rank: string; note?: ReactNode; scots: ReactNode; english: string;
         peerage of Scotland
       </>
     ),
-    scots: "Titled nobility; noblemen; peers (“greater barons” also holding baronies)",
+    // owner 2026-10-18: "greater barons should go to gloss link Barones majores / minores"
+    scots: (
+      <>
+        Titled nobility; noblemen; peers (“<GlossaryTerm term="Barones majores / minores">greater barons</GlossaryTerm>” also
+        holding baronies)
+      </>
+    ),
     english: "Nobility; peers",
     ref: 5,
   },
