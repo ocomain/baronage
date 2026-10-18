@@ -15,10 +15,16 @@ import { GlossaryTerm } from "@/components/Glossary";
 /** The two defunct terms in the barons' row are struck through (owner 2026-10-17). */
 const gone = (t: string) => <s className="decoration-ink/70">{t}</s>;
 
-const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; baron?: boolean; ref: number }[] = [
+// Glossary words in the table link to their entry, with the short ones as a tooltip on a computer (owner 2026-10-18).
+const ROWS: { rank: string; note?: ReactNode; scots: ReactNode; english: string; baron?: boolean; ref: number }[] = [
   {
     rank: "Peers",
-    note: "Dukes, marquis, earls, viscounts, lords of parliament in the peerage of Scotland",
+    note: (
+      <>
+        Dukes, marquis, earls, viscounts, <GlossaryTerm term="Lord of Parliament">lords of parliament</GlossaryTerm> in the
+        peerage of Scotland
+      </>
+    ),
     scots: "Titled nobility; noblemen; peers (“greater barons” also holding baronies)",
     english: "Nobility; peers",
     ref: 5,
@@ -27,17 +33,21 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
   {
     rank: "Baronets",
     note: "Baronets of Nova Scotia, the baronetage of Scotland",
-    scots: "Baronetcy (hereditary knighthood); noblemen",
+    scots: (
+      <>
+        <GlossaryTerm term="Baronetcy">Baronetcy</GlossaryTerm> (hereditary knighthood); noblemen
+      </>
+    ),
     english: "Commoners in law; gentry, often counted among the aristocracy",
     ref: 6,
   },
-  { rank: "Knights", note: "Knights of the Thistle and knights bachelor", scots: "Knighthood (for life); noblemen", english: "Commoners, gentry", ref: 7 },
+  { rank: "Knights", note: "Knights of the Thistle and knights bachelor", scots: <><GlossaryTerm term="Knighthood">Knighthood</GlossaryTerm> (for life); noblemen</>, english: "Commoners, gentry", ref: 7 },
   {
     rank: "Barons",
     note: "Barons and barons of higher dignities in the baronage of Scotland",
     scots: (
       <>
-        Titled nobility; noblemen; “minor barons”; before 1943 sometimes incorrectly {gone("untitled nobility")},
+        Titled nobility; noblemen; “<GlossaryTerm term="Minor baron">minor barons</GlossaryTerm>”; before 1943 sometimes incorrectly {gone("untitled nobility")},
         and before 2004 {gone("feudal barons")} (both terms are now defunct)
       </>
     ),
@@ -50,6 +60,9 @@ const ROWS: { rank: string; note?: string; scots: ReactNode; english: string; ba
   { rank: "Everyone else", scots: "The commons (Mackenzie: “Plebeians”)", english: "Commoners", ref: 10 },
 ];
 
+/** Rank names that have an entry in the glossary. */
+const RANK_TERMS: Record<string, string> = { Peers: "Peerage", Esquires: "Esquire", Lairds: "Laird" };
+
 /** "Esquires/Chiefs/Lairds" may wrap after a slash. */
 function Rank({ name }: { name: string }) {
   const parts = name.split("/");
@@ -57,7 +70,7 @@ function Rank({ name }: { name: string }) {
     <>
       {parts.map((part, i) => (
         <span key={part}>
-          {part}
+          {RANK_TERMS[part] ? <GlossaryTerm term={RANK_TERMS[part]}>{part}</GlossaryTerm> : part}
           {i < parts.length - 1 && (
             <>
               /<wbr />

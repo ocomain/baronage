@@ -152,6 +152,28 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
     def: "A personal, non-hereditary honour conferring the style “Sir” (or “Dame”). Unlike a peerage, a barony or a baronetcy, it does not pass to the holder's heirs.",
   },
   {
+    // owner 2026-10-18: "Esquire also needs to be added to Glossary"
+    term: "Esquire",
+    def: "The rank below the barons and above the gentlemen: the barons’ place is “after Knights and before Esquires” (Innes of Learney, 1945). The baronets’ patents of 1625 treat esquires as bearers of arms, and in England Sir Thomas Smith (1583) put esquires between the knights and the plain gentlemen. An esquire who bears arms is of the untitled nobility.",
+    note: (
+      <>
+        Innes of Learney, “The Robes of the Feudal Baronage of Scotland”,{" "}
+        <a href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <em>PSAS</em> 79 (1944–45), p. 113
+        </a>
+        ; the patent of Sir Robert Gordon, 28 May 1625, which names esquires as armigers, bearers of arms (F. W. Pixley,{" "}
+        <a href="https://archive.org/details/historyofbaronet00pixluoft/page/n102/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <em>A History of the Baronetage</em>, 1900, p. 83
+        </a>
+        ); Sir Thomas Smith,{" "}
+        <a href="https://archive.org/details/derepublicaanglo00smituoft/page/n88/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          <em>De Republica Anglorum</em> (1583), pp. 31–32
+        </a>
+        . The untitled nobility of armigers: see Nobility clause.
+      </>
+    ),
+  },
+  {
     term: "Register of Sasines",
     def: "Scotland's public register of land deeds. After the Conveyancing (Scotland) Act 1874 the transfer of a barony was recorded here; since 2004, baronies are recorded in the separate Scottish Barony Register.",
   },
