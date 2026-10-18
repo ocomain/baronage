@@ -152,10 +152,11 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
     def: "A personal, non-hereditary honour conferring the style “Sir” (or “Dame”). Unlike a peerage, a barony or a baronetcy, it does not pass to the holder's heirs.",
   },
   {
-    // owner 2026-10-18: "Esquire also needs to be added to Glossary", then: "needs a better definition between Esquire
-    // and gentlemen". By the sources it is the gentleman who lives without labour; an esquire is made by lineage, royal grant or office (owner: "it's linked to lineage, royal grant, or office").
+    // owner 2026-10-18: "Esquire also needs to be added to Glossary"; "it's linked to lineage, royal grant, or office";
+    // then, over-riding Blackstone's "it is not an estate, however large, that confers this rank": "esquires are upper
+    // gentry without a title, gentle birth, or major landowners", with "gentle birth" and the "Esq." and "Gent." suffixes.
     term: "Esquire",
-    def: "The rank between the knights and the plain gentlemen. Not a title (esquires and gentlemen were “only names of worship”), nor a matter of land: “it is not an estate, however large, that confers this rank” (Blackstone, 1765). It is linked to lineage (the eldest sons of knights, the younger sons of peers), royal grant or office (such as justice of the peace).",
+    def: "The upper gentry without a title, ranking between the knights and the plain gentlemen: men of gentle birth, or major landowners. The rank is linked to lineage (the eldest sons of knights, the younger sons of peers), royal grant or office (such as justice of the peace). Written “Esq.” after the name: John Smith, Esq.",
     note: (
       <>
         Blackstone, <em>Commentaries on the Laws of England</em>, vol. I (1765),{" "}
@@ -174,24 +175,37 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
           <em>PSAS</em> 79, p. 113
         </a>
         ), and an esquire who bears arms is of the untitled nobility: see <a href="#term-nobility-clause" className={intLink}>Nobility clause</a>.
+        “Esq.” and “Gent.” are the “addition” of a man’s degree after his name, required in legal proceedings by the
+        statute 1 Hen. V c. 5 (1413): Blackstone, p. 394.
       </>
     ),
   },
   {
-    // owner 2026-10-18: the difference between esquire and gentleman
+    // owner 2026-10-18: "gentlemen defined by ancestral right to bear arms, a genteel lifestyle, manners, freedom from manual labour"
     term: "Gentleman",
-    def: "The rank below the esquire. In England, wrote Sir Thomas Smith (1583), whoever “can live idly, and without manual labour” and keeps up the state of a gentleman “shall be taken for a gentleman”; in law, as Coke put it, a gentleman is one “who bears coat armour” (Blackstone, 1765). In Scotland a gentleman who bears arms is of the untitled nobility.",
+    def: "The rank below the esquire: a man of gentle birth, one of those “whom their blood and race doth make noble and known” (Sir Thomas Smith, 1583), defined by an ancestral right to bear arms, a genteel lifestyle and manners, and freedom from manual labour. Written “Gent.” after the name. In Scotland a gentleman who bears arms is of the untitled nobility.",
     note: (
       <>
         Smith, <em>De Republica Anglorum</em> (1583), ch. 20,{" "}
-        <a href="https://archive.org/details/derepublicaanglo00smituoft/page/39/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
-          pp. 39–40
+        <a href="https://archive.org/details/derepublicaanglo00smituoft/page/38/mode/1up" target="_blank" rel="noopener noreferrer" className={extLink}>
+          pp. 38–40
         </a>
-        , as quoted by Blackstone, <em>Commentaries</em>, vol. I (1765),{" "}
+        : gentlemen are those “whom their blood and race doth make noble and known”, and whoever “can live idly, and without
+        manual labour, and will bear the port, charge, and countenance of a gentleman, he shall be called master, and shall be
+        taken for a gentleman”, in
+        Blackstone’s quotation, <em>Commentaries</em>, vol. I (1765),{" "}
         <a href="https://avalon.law.yale.edu/18th_century/blackstone_bk1ch12.asp" target="_blank" rel="noopener noreferrer" className={extLink}>
           pp. 393–394
         </a>
-        , with Coke’s definition. In Scotland: see <a href="#term-nobility-clause" className={intLink}>Nobility clause</a>.
+        , where a gentleman is, after Coke, one “who bears coat armour”. “Gent.”: see{" "}
+        <a href="#term-esquire" className={intLink}>
+          Esquire
+        </a>
+        . In Scotland: see{" "}
+        <a href="#term-nobility-clause" className={intLink}>
+          Nobility clause
+        </a>
+        .
       </>
     ),
   },
