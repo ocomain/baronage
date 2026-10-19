@@ -67,14 +67,10 @@ export default function SupportPage() {
       <PageHero
         eyebrow="Baronage of Scotland Association · Non-Profit"
         title="Support the Association"
-        intro={
-          <em>
-            The Roll of Scottish Barons, the Reading Room and the Index of Known
-            Scottish Baronies are kept by volunteers. Nobody is paid. Your
-            support pays for the work itself.
-          </em>
-        }
-        image="/images/glen-mist.webp"
+        // the same header as the other pages (owner 2026-10-19): upright standfirst, a photograph as rich as theirs
+        intro="The Roll of Scottish Barons, the Reading Room and the Index of Known Scottish Baronies are kept by volunteers. Nobody is paid. Your support pays for the work itself."
+        image="/images/castle-eilean-donan.webp"
+        position="center 45%"
       />
 
       <Section tone="parchment">
@@ -146,8 +142,8 @@ export default function SupportPage() {
                 including counsel’s opinion where it is needed.
               </p>
               <p>
-                <Lead>The printed Roll.</Lead> A bound edition of the Roll of
-                Scottish Barons, the first printed record of the baronage.
+                {/* owner 2026-10-19: ends here; Douglas's Baronage of Scotland (1798) makes "the first printed record" untrue */}
+                <Lead>The printed Roll.</Lead> A bound edition of the Roll of Scottish Barons.
               </p>
               <p>
                 <Lead>The Index.</Lead> Research in the Register of Sasines and
@@ -159,6 +155,15 @@ export default function SupportPage() {
             {/* "Ways to help" and "Recognition": the owner's figures of 2026-10-19, word for word from
                 ~/Documents/baronage/support-page-ways-to-help-v2-2026-10-19.txt (via the membership chat) */}
             <Part title="Ways to help">
+              {/* the free rung first (owner 2026-10-19: "it should also have Roll listing Pledged or not Free in the ladder") */}
+              <p>
+                <Lead>Entry on the Roll.</Lead> Free, pledged or not. Every holder of a Scottish barony may{" "}
+                <a href="https://roll.baronage.com/verification" target="_blank" rel="noopener noreferrer" className={mail}>
+                  verify the entry
+                </a>{" "}
+                and be recorded on the Roll at no charge, and may take the Pledge or leave it. No gift to the Association has
+                any bearing on it.
+              </p>
               <p>
                 <Lead>A gift.</Lead> A single gift of £500, or any amount you choose, once or monthly. Write to{" "}
                 <Mail /> and the Secretary will send the details.
