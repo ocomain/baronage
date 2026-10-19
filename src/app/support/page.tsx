@@ -69,8 +69,7 @@ export default function SupportPage() {
         title="Support the Association"
         // the same header as the other pages (owner 2026-10-19): upright standfirst, a photograph as rich as theirs
         intro="The Roll of Scottish Barons, the Reading Room and the Index of Known Scottish Baronies are kept by volunteers. Nobody is paid. Your support pays for the work itself."
-        image="/images/castle-eilean-donan.webp"
-        position="center 45%"
+        image="/images/hero-loch-castle.webp" // owner 2026-10-19: the Contact page's hero image
       />
 
       <Section tone="parchment">
