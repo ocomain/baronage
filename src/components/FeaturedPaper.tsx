@@ -29,6 +29,8 @@ const NO_CARD_PAGES = [
   "/scottish-baronies-explained/",
   // Support the Association: the card sat over the pay buttons and pulled the eye from the ask (2026-10-20)
   "/support/",
+  // the subscriber's welcome page (after Zoho's confirmation): one message, one button
+  "/welcome/",
 ];
 
 // Storage can be unavailable (private windows, blocked site data); the card then simply behaves as first-visit.
