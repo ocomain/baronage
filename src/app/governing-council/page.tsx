@@ -201,10 +201,11 @@ export default function GoverningCouncilPage() {
           <Reveal>
             <div className="text-center">
               <GoldRule className="mb-8" />
-              <h2 className="text-3xl text-parchment-50 sm:text-4xl">Three entities, one purpose</h2>
+              <h2 className="text-3xl text-parchment-50 sm:text-4xl">Two entities, one purpose</h2>
               <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-parchment-200/85">
-                The Association, the Roll, and the Scottish charity in formation are three separate entities, working in
-                liaison with all baronage stakeholders. Memorandums of Understanding signed with stakeholder
+                {/* the charity in formation taken out (owner 2026-10-19: no charity for now) */}
+                The Association and the Roll are two separate entities, working in liaison with all baronage
+                stakeholders. Memorandums of Understanding signed with stakeholder
                 organisations are to be announced at forthcoming press events.
               </p>
               <div className="mt-9 flex justify-center">
