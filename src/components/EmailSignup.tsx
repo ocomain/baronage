@@ -10,7 +10,9 @@ import { EMAIL_SIGNUP } from "@/lib/site";
  */
 export function EmailSignup({
   variant = "header",
-  label = "Free newsletter by email",
+  // owner 2026-10-19: the papers and the Council's policy statements will go out by email ("Decrees by email" floated;
+  // "decree" is a court's word, so "declarations")
+  label = "Free papers & declarations",
   sentMessage = "Please check your inbox to confirm.",
   buttonLabel = "Sign up",
   className = "",
