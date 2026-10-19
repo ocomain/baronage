@@ -56,7 +56,9 @@ const objectives: ReactNode[] = [
     Baronial Code.
   </>,
   "To publish research on the law and history of the baronage, and to keep the descriptors of baronial titles in line with the law since 2004.",
-  "To work with the other bodies of the Scottish nobility, the chiefs, the baronetage and the Court of the Lord Lyon, and with baronial and noble associations at home and on the Continent.",
+  // owner 2026-10-19: "page left our peerage when mentioning other bodies of Scottish nobility -- also we are working
+  // internationally with nobiliary organisations attending their events and advocacy for the baronage"
+  "To work with the other bodies of the Scottish nobility, the peerage, the chiefs, the baronetage and the Court of the Lord Lyon, and with baronial and noble associations at home; and to work internationally with nobiliary organisations, attending their events and advocating for the baronage.",
 ];
 
 export default function SupportPage() {
@@ -130,9 +132,10 @@ export default function SupportPage() {
                 nominal subscription cannot carry it. Its objectives are
                 advocacy and record: they need lawyers, genealogists, heralds
                 and scholars of Scots law, and liaison with the bodies the
-                baronage sits beside: the chiefs, the baronetage and the Court
-                of the Lord Lyon. The Association’s members and friends pay for
-                that work.
+                baronage sits beside: the peerage, the chiefs, the baronetage
+                and the Court of the Lord Lyon. {/* owner 2026-10-19 */}All of our material is vetted by
+                experts, and this all costs money and resources. The Association’s members and friends pay
+                for that work.
               </p>
             </Part>
 
