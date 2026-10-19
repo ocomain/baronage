@@ -255,11 +255,8 @@ const entities = [
     role: "Title record",
     body: "A non-membership register of verified titles within the Baronage of Scotland — free, for life, to verify an entry.",
   },
-  {
-    name: "The Baron’s Trust",
-    role: "Charity (forming)",
-    body: "A separate, independent charitable entity being established for donations to good causes, in collaboration with all baronage stakeholders.",
-  },
+  // "The Baron’s Trust / Charity (forming)" taken out (owner 2026-10-19: no charity for now; the site speaks for the
+  // non-profit Association only).
 ];
 
 export default function AboutPage() {
@@ -563,11 +560,11 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Governance"
-              title="Three separate entities"
-              intro="To ensure proper checks and balances, our work is held across three distinct bodies."
+              title="Two separate entities"
+              intro="To ensure proper checks and balances, our work is held across two distinct bodies."
             />
           </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
             {entities.map((e, i) => (
               <Reveal key={e.name} delay={i * 0.1} className="h-full">
                 <div className="flex h-full flex-col border border-parchment-300/70 bg-parchment-50 p-8">
@@ -599,8 +596,7 @@ export default function AboutPage() {
               <GoldRule className="mt-5" />
               <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-ink-soft">
                 Baronage of Scotland Association is a non-profit honourable body owned by its members — not a
-                charity. A separate, independent charitable entity is being formed for donations from barons to good
-                causes, in collaboration with other stakeholders.
+                charity.
               </p>
               <div className="mt-8 flex justify-center">
                 <ButtonLink href="/governing-council" variant="outline">

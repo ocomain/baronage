@@ -111,9 +111,7 @@ export function SiteFooter() {
         <div className="mt-14 border-t border-parchment-200/15 pt-6 text-center text-xs leading-relaxed tracking-wide text-parchment-200/55">
           <p className="mx-auto max-w-3xl">
             <span className="font-semibold text-parchment-200/75">Legal Status:</span> The Baronage of Scotland
-            Association is a non-profit honourable body owned by the members, not a charity. A separate, independent
-            charitable entity is being formed for donations from barons going to good causes in collaboration with other
-            stakeholders.
+            Association is a non-profit honourable body owned by the members, not a charity.
           </p>
           <p className="mt-4">
             © {new Date().getFullYear()} {site.legalName} (baronage.com). ·{" "}
