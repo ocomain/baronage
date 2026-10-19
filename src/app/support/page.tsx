@@ -225,8 +225,8 @@ export default function SupportPage() {
               <p>
                 {/* Stripe payment buttons: owner 2026-10-20, via the membership chat. A chosen amount cannot recur in
                     Stripe, so "once or monthly" went from the gift. Same tab: Stripe sends the visitor back here. */}
-                <Lead>A gift.</Lead> A single gift of £500, or any amount you choose. Write to <Mail /> and the
-                Secretary will send the details or donate through this link
+                <Lead>A gift.</Lead> A single gift of £500, or any amount you choose. Write to <Mail /> for details
+                or donate through this link:
                 {/* owner 2026-10-20: "or donate rather" (was "Give") */}
                 <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Donate</Pay>
               </p>
@@ -259,7 +259,7 @@ export default function SupportPage() {
                   className="w-full rounded-sm border border-gold/40 shadow-[0_22px_48px_-30px_rgba(10,16,36,0.55)]"
                 />
                 <figcaption className="mt-3 text-center font-serif text-base italic text-muted">
-                  The Barons’ Gathering with baronial robes, as it is planned
+                  The Barons’ Gathering with baronial robes, as it is planned for 2027
                 </figcaption>
               </figure>
               <p>
