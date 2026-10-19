@@ -239,10 +239,11 @@ export default function SupportPage() {
               </p>
               <p>
                 {/* the Gathering: owner 2026-10-19, "sound more fun / regal, say it's where barons will wear baronial robes" */}
-                <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members own the
-                Association with its other members, one member, one vote, and have the Members’ Chamber, with its
-                muniments room and heir access, and a place at the Barons’ Gathering, the Association’s annual assembly, where
-                barons attend in their baronial robes.
+                {/* owner 2026-10-20 ("yes agreed", via the membership chat): votes stay with Full Membership */}
+                <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members have the
+                Members’ Chamber, with its muniments room and heir access, a place at the Barons’ Gathering, the
+                Association’s annual assembly, where barons attend in their baronial robes, and the Association’s
+                meetups. Full membership, with ownership and voting rights, is by arrangement with the Secretary.
               </p>
               {/* owner 2026-10-20: "the dinner with the robes is excellent"; captioned, as the Gathering has not yet been held */}
               <figure className="!mt-8 !mb-10">
@@ -271,7 +272,7 @@ export default function SupportPage() {
               <p>
                 {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item. 2026-10-20 owner: "for Google",
                     "name and title", "add online notability displayed by a third party authority" */}
-                <Lead>Member and benefactor.</Lead> For barons who wish to carry the work: all of the above, and a
+                <Lead>Full member and benefactor.</Lead> For barons who wish to carry the work: all of the above, and a
                 dedicated page for Google under your own name and title in the manner of a Burke’s Peerage entry, with your
                 arms, honours,
                 lineage and distinctions and the history of your barony, together with the figures on how often your
