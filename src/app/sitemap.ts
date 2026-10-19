@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/pledge", ["src/app/pledge"]],
     ["/governing-council", ["src/app/governing-council"]],
     ["/about", ["src/app/about"]],
+    ["/support", ["src/app/support"]],
     ["/members", ["src/app/members"]],
     ["/contact", ["src/app/contact"]],
   ];

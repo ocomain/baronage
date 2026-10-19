@@ -87,6 +87,7 @@ export const navLinks: NavLink[] = [
   { href: "/pledge", label: "The Pledge" },
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },
+  { href: "/support", label: "Support the Association" },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
 ];
@@ -128,7 +129,17 @@ export const navMenu: NavMenuItem[] = [
     ],
   },
   { href: "/pledge", label: "The Pledge", selfInList: true, children: [{ href: "/baronial-code", label: "Baronial Code" }] },
-  { href: "/about", label: "About", selfInList: true, selfLabel: "About & Nobility", children: [{ href: "/governing-council", label: "Governing Council" }] },
+  {
+    href: "/about",
+    label: "About",
+    selfInList: true,
+    selfLabel: "About & Nobility",
+    // Support page: owner 2026-10-19, "ok publish" (via the membership chat)
+    children: [
+      { href: "/governing-council", label: "Governing Council" },
+      { href: "/support", label: "Support the Association" },
+    ],
+  },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
   // Back in the main row, right of Reading Room (owner 2026-10-06: there is space again on desktop).
