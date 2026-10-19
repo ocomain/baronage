@@ -53,12 +53,8 @@ const pillars = [
     ),
     href: "/pledge",
   },
-  {
-    numeral: "III",
-    title: "The Baron’s Trust",
-    body: "Channelling the influence of the baronage into charitable works and the preservation of heritage.",
-    href: "/charitable-trust",
-  },
+  // "III, The Baron’s Trust" taken out with the Charitable Trust page (owner 2026-10-19: "let's hide the Charitable Trust
+  // page for now … as we have no charity at the moment").
 ];
 
 const timeline = [
@@ -424,7 +420,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <Eyebrow>What We Maintain</Eyebrow>
-                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Three pillars of the Association</h2>
+                <h2 className="mt-4 text-4xl text-navy sm:text-5xl">The pillars of the Association</h2>
               </div>
               <p className="max-w-xs font-serif text-lg italic text-muted">
                 The work entrusted to an honourable body.

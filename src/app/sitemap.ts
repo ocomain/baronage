@@ -43,7 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/arms-and-flags", ["src/app/arms-and-flags", "src/components/GuideChapters.tsx"]],
     ["/baronial-code", ["src/app/baronial-code"]],
     ["/pledge", ["src/app/pledge"]],
-    ["/charitable-trust", ["src/app/charitable-trust"]],
     ["/governing-council", ["src/app/governing-council"]],
     ["/about", ["src/app/about"]],
     ["/members", ["src/app/members"]],

@@ -90,7 +90,7 @@ export function SiteHeader() {
 
   // The header shows navMenu: seven items, four of them with a short list beneath (The Roll,
   // Guide, The Pledge, About), Member's Chamber last (owner 2026-10-06, back in the row now that
-  // there is space). Charitable Trust stays in the footer only.
+  // there is space). The Charitable Trust page is hidden for now (owner 2026-10-19).
   // A parent is marked active on its own page and on its children's pages; a Reading Room
   // paper listed under Guide leaves "Reading Room" as the active item.
   // A page listed under Guide that has a menu item of its own (About) stays under its own item.
