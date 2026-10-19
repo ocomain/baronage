@@ -170,9 +170,11 @@ export default function SupportPage() {
                 join.
               </p>
               <p>
+                {/* the Gathering: owner 2026-10-19, "sound more fun / regal, say it's where barons will wear baronial robes" */}
                 <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members own the
                 Association with its other members, one member, one vote, and have the Members’ Chamber, with its
-                muniments room and heir access, and a place at the annual gathering.
+                muniments room and heir access, and a place at the Barons’ Gathering, the Association’s annual assembly, where
+                barons attend in their baronial robes.
               </p>
               <p>
                 <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all of the above, are named on this
