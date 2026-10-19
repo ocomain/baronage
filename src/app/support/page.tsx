@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { Container, GoldRule, Section } from "@/components/primitives";
+import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
+import { SupportThanks } from "@/components/SupportThanks";
 
 /**
  * Support the Association (owner 2026-10-19, "ok publish", via the "Baron membership strategy" chat). The text is the
@@ -42,6 +43,15 @@ function Part({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
+/** A Stripe payment button under its item, in the site's gold button style. */
+const Pay = ({ href, children }: { href: string; children: ReactNode }) => (
+  <div className="!mt-4 pb-2">
+    <ButtonLink href={href} sameTab>
+      {children}
+    </ButtonLink>
+  </div>
+);
+
 const Lead = ({ children }: { children: ReactNode }) => (
   <strong className="font-semibold text-navy">{children}</strong>
 );
@@ -64,6 +74,7 @@ const objectives: ReactNode[] = [
 export default function SupportPage() {
   return (
     <>
+      <SupportThanks />
       <PageHero
         eyebrow="Baronage of Scotland Association · Non-Profit"
         title="Support the Association"
@@ -164,15 +175,19 @@ export default function SupportPage() {
                 any bearing on it.
               </p>
               <p>
-                <Lead>A gift.</Lead> A single gift of £500, or any amount you choose, once or monthly. Write to{" "}
-                <Mail /> and the Secretary will send the details.
+                {/* Stripe payment buttons: owner 2026-10-20, via the membership chat. A chosen amount cannot recur in
+                    Stripe, so "once or monthly" went from the gift. Same tab: Stripe sends the visitor back here. */}
+                <Lead>A gift.</Lead> A single gift of £500, or any amount you choose. Write to <Mail /> and the
+                Secretary will send the details.
               </p>
+              <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Give</Pay>
               <p>
                 <Lead>Friend of the Association.</Lead> £100 a year, open to anyone with an interest in the baronage,
                 baron or not. Friends receive the newsletter and the subscriber papers and a copy of the printed Roll
                 when it is published, and are named in the annual list of Friends if they wish. Write to <Mail /> to
                 join.
               </p>
+              <Pay href="https://buy.stripe.com/cNiaEXfxC7UE26F7xweZ20q">Become a Friend</Pay>
               <p>
                 {/* the Gathering: owner 2026-10-19, "sound more fun / regal, say it's where barons will wear baronial robes" */}
                 <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members own the
