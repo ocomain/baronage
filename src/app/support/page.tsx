@@ -115,7 +115,8 @@ export default function SupportPage() {
       <SupportThanks />
       <PageHero
         eyebrow="Baronage of Scotland Association · Non-Profit"
-        title="Support the Association"
+        // the heading only (owner 2026-10-20: "yes just the heading title, not menu or anywhere else")
+        title="Support the Baronage"
         // the same header as the other pages (owner 2026-10-19): upright standfirst, a photograph as rich as theirs
         intro={`The Roll of Scottish Barons, the Reading Room and the Index of ${formatCount(INDEX_COUNT)} Known Scottish Baronies are kept by volunteers. Nobody is paid. Your support pays for the work itself.`}
         // owner 2026-10-19: the Contact page's hero image; 2026-10-20: set in motion on Higgsfield, silent ("no audio")
@@ -225,7 +226,7 @@ export default function SupportPage() {
                 {/* Stripe payment buttons: owner 2026-10-20, via the membership chat. A chosen amount cannot recur in
                     Stripe, so "once or monthly" went from the gift. Same tab: Stripe sends the visitor back here. */}
                 <Lead>A gift.</Lead> A single gift of £500, or any amount you choose. Write to <Mail /> and the
-                Secretary will send the details.
+                Secretary will send the details or donate through this link
                 {/* owner 2026-10-20: "or donate rather" (was "Give") */}
                 <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Donate</Pay>
               </p>
@@ -263,16 +264,19 @@ export default function SupportPage() {
               </figure>
               <p>
                 <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all of the above, are named on this
-                page with their consent, and may have their recorded arms shown on the Armorial page.
+                page with their consent, and may have their coat of arms shown on the Armorial page.
                 {/* Patron payment link: owner-approved 2026-10-20, via the membership chat */}
                 <Pay href="https://buy.stripe.com/bJecN5716a2M8v32dceZ20r">Become a Patron</Pay>
               </p>
               <p>
-                {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item */}
+                {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item. 2026-10-20 owner: "for Google",
+                    "name and title", "add online notability displayed by a third party authority" */}
                 <Lead>Member and benefactor.</Lead> For barons who wish to carry the work: all of the above, and a
-                dedicated page under your own name in the manner of a Burke’s Peerage entry, with your arms, honours,
+                dedicated page for Google under your own name and title in the manner of a Burke’s Peerage entry, with your
+                arms, honours,
                 lineage and distinctions and the history of your barony, together with the figures on how often your
-                name and barony are found on Google, and the standing of a founding benefactor. By arrangement with the
+                name and barony are found on Google, your online notability displayed by a third-party authority, and the
+                standing of a founding benefactor. By arrangement with the
                 Secretary: <Mail />
               </p>
             </Part>
