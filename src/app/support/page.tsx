@@ -147,8 +147,7 @@ export default function SupportPage() {
               </p>
               <p>
                 <Lead>The printed Roll.</Lead> A bound edition of the Roll of
-                Scottish Barons, the first printed record of the baronage since
-                Debrett’s ceased to list it.
+                Scottish Barons, the first printed record of the baronage.
               </p>
               <p>
                 <Lead>The Index.</Lead> Research in the Register of Sasines and
@@ -157,31 +156,40 @@ export default function SupportPage() {
               </p>
             </Part>
 
-            <Part title="Three ways to help">
+            {/* "Ways to help" and "Recognition": the owner's figures of 2026-10-19, word for word from
+                ~/Documents/baronage/support-page-ways-to-help-v2-2026-10-19.txt (via the membership chat) */}
+            <Part title="Ways to help">
               <p>
-                <Lead>A gift.</Lead> Any amount, once or monthly. Write to{" "}
+                <Lead>A gift.</Lead> A single gift of £500, or any amount you choose, once or monthly. Write to{" "}
                 <Mail /> and the Secretary will send the details.
               </p>
               <p>
-                <Lead>Friend of the Association.</Lead> £50 a year, open to
-                anyone with an interest in the baronage, baron or not. Friends
-                receive the newsletter and the subscriber papers, and are named
-                in the annual list of Friends if they wish. Write to <Mail /> to
+                <Lead>Friend of the Association.</Lead> £100 a year, open to anyone with an interest in the baronage,
+                baron or not. Friends receive the newsletter and the subscriber papers and a copy of the printed Roll
+                when it is published, and are named in the annual list of Friends if they wish. Write to <Mail /> to
                 join.
               </p>
               <p>
-                <Lead>Membership.</Lead> Barons entered on the Roll may join the
-                Association, which they then own: one member, one vote. Details
-                from the Secretary: <Mail />
+                <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members own the
+                Association with its other members, one member, one vote, and have the Members’ Chamber, with its
+                muniments room and heir access, and a place at the annual gathering.
+              </p>
+              <p>
+                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all of the above, are named on this
+                page with their consent, and may have their recorded arms shown on the Armorial page.
+              </p>
+              <p>
+                <Lead>Member and benefactor.</Lead> For barons who wish to carry the work: all of the above, a
+                dedicated page under their own name, the figures on how often their name and barony are found on
+                Google, and the standing of a founding benefactor. Details from the Secretary: <Mail />
               </p>
             </Part>
 
             <Part title="Recognition">
               <p>
-                Benefactors are named on this page with their consent. A
-                benefactor whose arms are recorded by a heraldic authority may
-                have them shown on the Armorial page, under their own heading
-                and with the reference, alongside the arms already there.
+                Patrons and benefactors are named on this page with their consent. Where their arms are recorded by a
+                heraldic authority, they may be shown on the Armorial page, under their own heading and with the
+                reference, alongside the arms already there.
               </p>
             </Part>
 
