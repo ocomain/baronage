@@ -186,9 +186,12 @@ export default function SupportPage() {
                 page with their consent, and may have their recorded arms shown on the Armorial page.
               </p>
               <p>
-                <Lead>Member and benefactor.</Lead> For barons who wish to carry the work: all of the above, a
-                dedicated page under their own name, the figures on how often their name and barony are found on
-                Google, and the standing of a founding benefactor. Details from the Secretary: <Mail />
+                {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item */}
+                <Lead>Member and benefactor.</Lead> For barons who wish to carry the work: all of the above, and a
+                dedicated page under your own name in the manner of a Burke’s Peerage entry, with your arms, honours,
+                lineage and distinctions and the history of your barony, together with the figures on how often your
+                name and barony are found on Google, and the standing of a founding benefactor. By arrangement with the
+                Secretary: <Mail />
               </p>
             </Part>
 
