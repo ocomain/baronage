@@ -205,7 +205,7 @@ export default function SupportPage() {
               </Pictured>
               <Pictured src="/images/support/registers" alt="An old land register open on a reading desk in an archive">
                 <Lead>The Index.</Lead> Research in the Register of Sasines and the Register of the Great Seal for the
-                Index of {formatCount(INDEX_COUNT)} Known Scottish Baronies: archive fees, copies and travel.
+                Index of {formatCount(INDEX_COUNT)} Known Scottish Baronies: record searches and legal fees.
               </Pictured>
             </Part>
 
