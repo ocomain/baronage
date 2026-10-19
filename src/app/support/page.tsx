@@ -142,8 +142,8 @@ export default function SupportPage() {
                 including counsel’s opinion where it is needed.
               </p>
               <p>
-                {/* owner 2026-10-19: ends here; Douglas's Baronage of Scotland (1798) makes "the first printed record" untrue */}
-                <Lead>The printed Roll.</Lead> A bound edition of the Roll of Scottish Barons.
+                {/* owner 2026-10-19: "published bound edition"; ends here, as Douglas's Baronage of Scotland (1798) makes "the first printed record" untrue */}
+                <Lead>The printed Roll.</Lead> A published bound edition of the Roll of Scottish Barons.
               </p>
               <p>
                 <Lead>The Index.</Lead> Research in the Register of Sasines and
