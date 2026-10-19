@@ -104,14 +104,17 @@ export function ButtonLink({
   children,
   variant = "gold",
   className = "",
+  sameTab = false,
 }: {
   href: string;
   children: ReactNode;
   variant?: ButtonVariant;
   className?: string;
+  /** An outside page that should open in the same tab, such as a Stripe payment page, which sends the visitor back. */
+  sameTab?: boolean;
 }) {
   const isInternal = href.startsWith("/");
-  const isHttp = href.startsWith("http");
+  const isHttp = href.startsWith("http") && !sameTab;
   const cls = `btn inline-flex cursor-pointer items-center justify-center gap-2 rounded-sm px-8 py-4 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] transition-all duration-300 ${buttonStyles[variant]} ${className}`;
   if (isInternal) {
     return (
