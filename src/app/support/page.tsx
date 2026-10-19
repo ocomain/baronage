@@ -204,9 +204,10 @@ export default function SupportPage() {
 
             <Part title="Accountability">
               <p>
-                {/* owner 2026-10-19: the yearly-statement sentence deleted */}
+                {/* owner 2026-10-19: the yearly-statement sentence deleted; then "agreed on new wording" for the second sentence */}
                 The Association is a non-profit association, not a registered
-                charity, so Gift Aid cannot be claimed on gifts to it.
+                charity, so Gift Aid cannot be claimed on gifts to it. Gifts are received on the Association’s behalf
+                and applied to its work.
               </p>
             </Part>
           </div>
