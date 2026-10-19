@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Container, GoldRule, Section } from "@/components/primitives";
 import { SupportThanks } from "@/components/SupportThanks";
+import { INDEX_COUNT, formatCount } from "@/lib/site";
 
 /**
  * Support the Association (owner 2026-10-19, "ok publish", via the "Baron membership strategy" chat). The text is the
@@ -116,7 +117,7 @@ export default function SupportPage() {
         eyebrow="Baronage of Scotland Association · Non-Profit"
         title="Support the Association"
         // the same header as the other pages (owner 2026-10-19): upright standfirst, a photograph as rich as theirs
-        intro="The Roll of Scottish Barons, the Reading Room and the Index of Known Scottish Baronies are kept by volunteers. Nobody is paid. Your support pays for the work itself."
+        intro={`The Roll of Scottish Barons, the Reading Room and the Index of ${formatCount(INDEX_COUNT)} Known Scottish Baronies are kept by volunteers. Nobody is paid. Your support pays for the work itself.`}
         // owner 2026-10-19: the Contact page's hero image; 2026-10-20: set in motion on Higgsfield, silent ("no audio")
         video={{
           webm: "/videos/support-loch.webm",
@@ -143,7 +144,7 @@ export default function SupportPage() {
               <p>
                 The Association exists to restore the standing of the baronage
                 of Scotland, as the baronetage restored its own a century ago.
-                Baronetcies had been sold and assumed; in 1898 the baronets
+                Baronetcies had been sold and abused; in 1898 the baronets
                 formed a body, and in 1910{" "}
                 <Link
                   href="/reading-room/official-roll-of-the-baronetage-1910/"
@@ -154,7 +155,7 @@ export default function SupportPage() {
                 gave them an official Roll, “divers abuses” having “crept into
                 the said Order”. The baronage has the same need and the same
                 answer: a Roll kept by its own body, verified against the public
-                record, and in time recognised by royal warrant.
+                record, and in time officially recognised by royal warrant.
               </p>
             </Part>
 
@@ -198,12 +199,13 @@ export default function SupportPage() {
                 alt="A bound volume in oxblood leather, titled in gilt The Roll of Scottish Barons"
                 caption="The printed Roll, as it is planned"
               >
-                {/* owner 2026-10-19: "published bound edition"; ends here, as Douglas's Baronage of Scotland (1798) makes "the first printed record" untrue */}
-                <Lead>The printed Roll.</Lead> A published bound edition of the Roll of Scottish Barons.
+                {/* owner 2026-10-19: "published bound edition"; 2026-10-20: "akin to burke's peerage style entries"; not "the first printed record", as Douglas's Baronage of Scotland (1798) makes "the first printed record" untrue */}
+                <Lead>The printed Roll.</Lead> A published bound edition of the Roll of Scottish Barons, akin to Burke’s Peerage
+                style entries.
               </Pictured>
               <Pictured src="/images/support/registers" alt="An old land register open on a reading desk in an archive">
                 <Lead>The Index.</Lead> Research in the Register of Sasines and the Register of the Great Seal for the
-                Index of Known Scottish Baronies: archive fees, copies and travel.
+                Index of {formatCount(INDEX_COUNT)} Known Scottish Baronies: archive fees, copies and travel.
               </Pictured>
             </Part>
 
@@ -256,7 +258,7 @@ export default function SupportPage() {
                   className="w-full rounded-sm border border-gold/40 shadow-[0_22px_48px_-30px_rgba(10,16,36,0.55)]"
                 />
                 <figcaption className="mt-3 text-center font-serif text-base italic text-muted">
-                  The Barons’ Gathering, as it is planned
+                  The Barons’ Gathering with baronial robes, as it is planned
                 </figcaption>
               </figure>
               <p>
