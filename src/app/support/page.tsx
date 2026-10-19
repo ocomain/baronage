@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
+import { Container, GoldRule, Section } from "@/components/primitives";
 import { SupportThanks } from "@/components/SupportThanks";
 
 /**
@@ -43,14 +43,51 @@ function Part({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
-/** A Stripe payment button under its item, in the site's gold button style. */
+/**
+ * A Stripe payment button at the end of its item: small, and plainly a way to pay, with a card mark (owner 2026-10-20:
+ * the big gold buttons "look a bit out of place and not obvious to me that they are pay buttons … maybe should be
+ * smaller on end of those sentences and more like a pay button"). Same tab: Stripe sends the visitor back here.
+ */
 const Pay = ({ href, children }: { href: string; children: ReactNode }) => (
-  <div className="!mt-4 pb-2">
-    <ButtonLink href={href} sameTab>
+  <>
+    {" "}
+    <a
+      href={href}
+      title="Secure payment by card, through Stripe"
+      className="ml-1 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-navy px-3.5 py-1 align-middle font-sans text-[0.8rem] font-semibold leading-6 text-parchment-50 shadow-sm transition-colors hover:bg-oxblood focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+    >
+      <svg aria-hidden viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={1.8}>
+        <rect x="2.5" y="5" width="19" height="14" rx="2" />
+        <path d="M2.5 9.5h19M6 15h4" />
+      </svg>
       {children}
-    </ButtonLink>
-  </div>
+    </a>
+  </>
 );
+
+/** An item with its picture beside it (stacked on a phone). `src` is the path without ".webp"; a 640px copy sits beside it. */
+function Pictured({ src, alt, caption, children }: { src: string; alt: string; caption?: string; children: ReactNode }) {
+  return (
+    <div className="grid items-start gap-5 sm:grid-cols-[13rem_1fr] sm:gap-7">
+      <figure>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${src}.webp`}
+          srcSet={`${src}-640.webp 640w, ${src}.webp 1024w`}
+          sizes="(min-width: 640px) 208px, 100vw"
+          alt={alt}
+          width={1024}
+          height={688}
+          loading="lazy"
+          decoding="async"
+          className="w-full rounded-sm border border-gold/40"
+        />
+        {caption && <figcaption className="mt-2 text-center font-serif text-sm italic text-muted">{caption}</figcaption>}
+      </figure>
+      <p>{children}</p>
+    </div>
+  );
+}
 
 const Lead = ({ children }: { children: ReactNode }) => (
   <strong className="font-semibold text-navy">{children}</strong>
@@ -80,7 +117,12 @@ export default function SupportPage() {
         title="Support the Association"
         // the same header as the other pages (owner 2026-10-19): upright standfirst, a photograph as rich as theirs
         intro="The Roll of Scottish Barons, the Reading Room and the Index of Known Scottish Baronies are kept by volunteers. Nobody is paid. Your support pays for the work itself."
-        image="/images/hero-loch-castle.webp" // owner 2026-10-19: the Contact page's hero image
+        // owner 2026-10-19: the Contact page's hero image; 2026-10-20: set in motion on Higgsfield, silent ("no audio")
+        video={{
+          webm: "/videos/support-loch.webm",
+          mp4: "/videos/support-loch.mp4",
+          poster: "/images/hero-loch-castle.webp",
+        }}
       />
 
       <Section tone="parchment">
@@ -146,20 +188,23 @@ export default function SupportPage() {
             </Part>
 
             <Part title="What your support pays for">
-              <p>
-                <Lead>Recognition.</Lead> Representations to government on the
-                recognition of the dignity of baron in official records,
-                including counsel’s opinion where it is needed.
-              </p>
-              <p>
+              {/* pictures made on Higgsfield, owner 2026-10-20 ("yes"); no people in them */}
+              <Pictured src="/images/support/sealed-letter" alt="A letter closed with a red wax seal, beside a fountain pen">
+                <Lead>Recognition.</Lead> Representations to government on the recognition of the dignity of baron in
+                official records, including counsel’s opinion where it is needed.
+              </Pictured>
+              <Pictured
+                src="/images/support/printed-roll"
+                alt="A bound volume in oxblood leather, titled in gilt The Roll of Scottish Barons"
+                caption="The printed Roll, as it is planned"
+              >
                 {/* owner 2026-10-19: "published bound edition"; ends here, as Douglas's Baronage of Scotland (1798) makes "the first printed record" untrue */}
                 <Lead>The printed Roll.</Lead> A published bound edition of the Roll of Scottish Barons.
-              </p>
-              <p>
-                <Lead>The Index.</Lead> Research in the Register of Sasines and
-                the Register of the Great Seal for the Index of Known Scottish
-                Baronies: archive fees, copies and travel.
-              </p>
+              </Pictured>
+              <Pictured src="/images/support/registers" alt="An old land register open on a reading desk in an archive">
+                <Lead>The Index.</Lead> Research in the Register of Sasines and the Register of the Great Seal for the
+                Index of Known Scottish Baronies: archive fees, copies and travel.
+              </Pictured>
             </Part>
 
             {/* "Ways to help" and "Recognition": the owner's figures of 2026-10-19, word for word from
@@ -179,15 +224,16 @@ export default function SupportPage() {
                     Stripe, so "once or monthly" went from the gift. Same tab: Stripe sends the visitor back here. */}
                 <Lead>A gift.</Lead> A single gift of £500, or any amount you choose. Write to <Mail /> and the
                 Secretary will send the details.
+                {/* owner 2026-10-20: "or donate rather" (was "Give") */}
+                <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Donate</Pay>
               </p>
-              <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Give</Pay>
               <p>
                 <Lead>Friend of the Association.</Lead> £100 a year, open to anyone with an interest in the baronage,
                 baron or not. Friends receive the newsletter and the subscriber papers and a copy of the printed Roll
                 when it is published, and are named in the annual list of Friends if they wish. Write to <Mail /> to
                 join.
+                <Pay href="https://buy.stripe.com/cNiaEXfxC7UE26F7xweZ20q">Become a Friend</Pay>
               </p>
-              <Pay href="https://buy.stripe.com/cNiaEXfxC7UE26F7xweZ20q">Become a Friend</Pay>
               <p>
                 {/* the Gathering: owner 2026-10-19, "sound more fun / regal, say it's where barons will wear baronial robes" */}
                 <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members own the
@@ -195,9 +241,29 @@ export default function SupportPage() {
                 muniments room and heir access, and a place at the Barons’ Gathering, the Association’s annual assembly, where
                 barons attend in their baronial robes.
               </p>
+              {/* owner 2026-10-20: "the dinner with the robes is excellent"; captioned, as the Gathering has not yet been held */}
+              <figure className="!mt-8 !mb-10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/support/barons-gathering.webp"
+                  srcSet="/images/support/barons-gathering-960.webp 960w, /images/support/barons-gathering.webp 1600w"
+                  sizes="(min-width: 800px) 768px, 100vw"
+                  alt="A candlelit castle hall laid for dinner, crimson baronial robes draped over the chairs, Scottish banners on the walls"
+                  width={1600}
+                  height={1062}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full rounded-sm border border-gold/40 shadow-[0_22px_48px_-30px_rgba(10,16,36,0.55)]"
+                />
+                <figcaption className="mt-3 text-center font-serif text-base italic text-muted">
+                  The Barons’ Gathering, as it is planned
+                </figcaption>
+              </figure>
               <p>
                 <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all of the above, are named on this
                 page with their consent, and may have their recorded arms shown on the Armorial page.
+                {/* Patron payment link: owner-approved 2026-10-20, via the membership chat */}
+                <Pay href="https://buy.stripe.com/bJecN5716a2M8v32dceZ20r">Become a Patron</Pay>
               </p>
               <p>
                 {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item */}
