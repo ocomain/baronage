@@ -85,7 +85,6 @@ export const navLinks: NavLink[] = [
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
   { href: "/pledge", label: "The Pledge" },
-  { href: "/charitable-trust", label: "Charitable Trust" },
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },
   { href: "/armorial", label: "Armorial" },
