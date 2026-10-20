@@ -102,6 +102,20 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             <PaperBody html={paper.html} footnotesHtml={paper.footnotesHtml} sourcesHtml={paper.sourcesHtml} />
           )}
 
+          {/* One quiet line at the end of each paper (owner 2026-10-20: "1 yes"; no ask on the homepage or in the menu
+              for now). Not under a sealed subscriber paper, where the free sign-up box is the ask. Never on the Roll. */}
+          {paper.gated !== "full" && (
+            <p className="no-print mt-12 max-w-[68ch] border-t border-gold/40 pt-6 font-serif text-lg italic leading-relaxed text-ink-soft">
+              This research is paid for by members and friends of the Association.{" "}
+              <Link
+                href="/support/"
+                className="whitespace-nowrap font-sans text-[0.95rem] font-semibold not-italic text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood"
+              >
+                Support the Baronage →
+              </Link>
+            </p>
+          )}
+
           {related.length > 0 && (
             <section aria-labelledby="more-papers" className="no-print mt-14 max-w-[68ch]">
               <h2 id="more-papers" className="eyebrow !font-semibold">
