@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { MemberLogin } from "@/components/MemberLogin";
-import { Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
+import Link from "next/link";
+import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
 import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 export const metadata: Metadata = {
@@ -107,6 +108,23 @@ export default function MembersPage() {
               </div>
             </Reveal>
           </div>
+          {/* How to join: prices, terms and the pay buttons stay on the Support page alone, so they cannot drift
+              (owner 2026-10-20: "ok" to linking there rather than a second pay button) */}
+          <Reveal>
+            <div className="mt-12 flex flex-col items-center gap-6 text-center">
+              <p className="text-lg text-ink-soft">
+                To join, see the ways to help on the{" "}
+                <Link
+                  href="/support/"
+                  className="font-medium text-oxblood underline decoration-oxblood/40 underline-offset-2 transition-colors hover:decoration-oxblood"
+                >
+                  Support page
+                </Link>
+                .
+              </p>
+              <ButtonLink href="/support/#associate-member">Become an Associate Member</ButtonLink>
+            </div>
+          </Reveal>
         </Container>
       </Section>
     </>
