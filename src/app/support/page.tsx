@@ -190,6 +190,11 @@ export default function SupportPage() {
             </Part>
 
             <Part title="What your support pays for">
+              {/* owner 2026-10-20 ("ensuring a well-funded advocacy and lobbying body"), via the membership chat */}
+              <p>
+                <Lead>Advocacy.</Lead> A well-funded body for advocacy and lobbying on behalf of the baronage, able to
+                engage lawyers, genealogists, heralds and scholars of Scots law when the baronage needs them.
+              </p>
               {/* pictures made on Higgsfield, owner 2026-10-20 ("yes"); no people in them */}
               <Pictured src="/images/support/sealed-letter" alt="A letter closed with a red wax seal, beside a fountain pen">
                 <Lead>Recognition.</Lead> Representations to government on the recognition of the dignity of baron in
@@ -253,7 +258,9 @@ export default function SupportPage() {
                 <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members have the
                 Members’ Chamber, with its muniments room and heir access, a place at the Barons’ Gathering, the
                 Association’s annual assembly, where barons attend in their baronial robes, and the Association’s
-                meetups. Full membership, with ownership and voting rights, is by arrangement with the Secretary.
+                meetups. {/* committees: owner 2026-10-20, "yes to all" (Council and chairs stay with full members) */}Associate members
+                may be invited by the Council to serve on its committees, such as the events committee. Full membership, with
+                ownership and voting rights, is by arrangement with the Secretary.
                 {/* owner-approved 2026-10-20, via the membership chat */}
                 No joining fee for associate members who join before the first Barons’ Gathering in 2027. From then, £250 to
                 join.

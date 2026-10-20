@@ -98,7 +98,10 @@ export default function MembersPage() {
             <Reveal delay={0.1} className="h-full">
               <div className="flex h-full flex-col border border-parchment-300/70 bg-parchment-50 p-7 sm:p-8">
                 <h2 className="font-display text-2xl text-navy">Associate Membership</h2>
-                <p className="mt-1 font-serif text-base italic text-muted">By subscription, or by association with a Full Member</p>
+                {/* owner 2026-10-20 ("yes to all"): associate members may be invited onto committees, not the Council */}
+                <p className="mt-1 font-serif text-base italic text-muted">
+                  By subscription, or by association with a Full Member · May be invited to serve on committees
+                </p>
                 <GoldRule className="mt-4" align="start" />
                 <MemberList items={associateMembers} />
               </div>
