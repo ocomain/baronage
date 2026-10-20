@@ -251,7 +251,8 @@ export default function SupportPage() {
                 join.
                 <Pay href="https://buy.stripe.com/cNiaEXfxC7UE26F7xweZ20q">Become a Friend</Pay>
               </p>
-              <p>
+              {/* id: the Members page's "Become an Associate Member" button lands here (owner 2026-10-20) */}
+              <p id="associate-member" className="scroll-mt-36 lg:scroll-mt-48">
                 {/* the Gathering: owner 2026-10-19, "sound more fun / regal, say it's where barons will wear baronial robes" */}
                 {/* owner 2026-10-20 (via the membership chat): votes stay with Full Membership. "Full" was dropped for an
                     hour, then kept: both are members, full members the inner rank, "a bit like the noblemen peers and the
