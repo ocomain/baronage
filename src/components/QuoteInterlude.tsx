@@ -53,6 +53,13 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
     source: "Lyon Court · Lord Lyon Francis Grant · 1943",
     gold: ["titled nobility"],
   },
+  // owner 2026-10-21. The translation of the National Records of Scotland (nrscotland.gov.uk/declaration), cut at
+  // "alone"; NRS: "sealed by eight earls and about 40 barons" (the owner wrote "signed by 40 barons").
+  {
+    text: "It is in truth not for glory, nor riches, nor honours that we are fighting, but for freedom alone",
+    source: "Declaration of Arbroath · sealed by about 40 barons",
+    gold: ["freedom alone"],
+  },
 ];
 
 // Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it", then "still not staying long
