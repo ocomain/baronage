@@ -192,7 +192,7 @@ export default function SupportPage() {
             <Part title="What your support pays for">
               {/* owner 2026-10-20 ("ensuring a well-funded advocacy and lobbying body"), via the membership chat */}
               <p>
-                <Lead>Advocacy.</Lead> A well-funded body for advocacy and lobbying on behalf of the baronage, able to
+                <Lead>Advocacy.</Lead> A well-funded and proactive body for advocacy and lobbying on behalf of the baronage, able to
                 engage public bodies, and lawyers, genealogists, heralds and scholars of Scots law when the baronage needs
                 them.
               </p>
