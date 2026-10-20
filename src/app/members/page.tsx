@@ -21,10 +21,10 @@ const fullMembers = [
 
 const associateMembers = [
   // owner 2026-10-20: associate membership is for barons too, if they so wish (the £250 rung on /support/)
-  "Barons on the Roll who subscribe as associate members",
+  "Barons on the Roll who subscribe as Associates",
   "Heirs Presumptive",
   "Children of Barons",
-  "The spouse or civil partner and surviving spouse or civil partner of a Full Member",
+  "The spouse or civil partner and surviving spouse or civil partner of a Member",
   "Junior Members",
 ];
 
@@ -80,13 +80,13 @@ export default function MembersPage() {
             <SectionHeading
               eyebrow="Membership"
               title="Who can become a member"
-              intro="Full membership gives ownership and voting rights. Membership is open to the following."
+              intro="Members own the Association and vote. Associates share in its life without a vote."
             />
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
             <Reveal className="h-full">
               <div className="flex h-full flex-col border border-parchment-300/70 bg-parchment-50 p-7 sm:p-8">
-                <h2 className="font-display text-2xl text-navy">Full Membership</h2>
+                <h2 className="font-display text-2xl text-navy">Members</h2>
                 {/* owner 2026-10-20: "nomination", not "election": Council seats are filled by the Council */}
                 <p className="mt-1 font-serif text-base italic text-gold-deep">
                   Ownership &amp; voting rights · Eligible for nomination to the Council and committees
@@ -97,8 +97,8 @@ export default function MembersPage() {
             </Reveal>
             <Reveal delay={0.1} className="h-full">
               <div className="flex h-full flex-col border border-parchment-300/70 bg-parchment-50 p-7 sm:p-8">
-                <h2 className="font-display text-2xl text-navy">Associate Membership</h2>
-                <p className="mt-1 font-serif text-base italic text-muted">By subscription, or by association with a Full Member</p>
+                <h2 className="font-display text-2xl text-navy">Associates</h2>
+                <p className="mt-1 font-serif text-base italic text-muted">By subscription, or by association with a Member</p>
                 <GoldRule className="mt-4" align="start" />
                 <MemberList items={associateMembers} />
               </div>
