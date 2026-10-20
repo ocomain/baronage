@@ -35,9 +35,16 @@ function writeChoice(v: "1" | "0") {
   } catch {}
 }
 
+/** Phones: the switch folds to a round "Aa" button (owner 2026-10-21: readers said it was too big on small screens). */
+const PHONE = "(max-width: 640px)";
+const FOLD_AFTER_MS = 5000;
+
 export function EasyRead() {
   const [on, setOn] = useState(false);
   const [asking, setAsking] = useState(false);
+  // Phones only: "open" shows the two choices; "tucked" hides the button while the reader scrolls down.
+  const [open, setOpen] = useState(false);
+  const [tucked, setTucked] = useState(false);
 
   useEffect(() => {
     const stored = readChoice();
@@ -50,6 +57,7 @@ export function EasyRead() {
     writeChoice(v ? "1" : "0");
     setOn(v);
     setAsking(false);
+    setOpen(false);
     // The question closes (or the switch flips) in this frame; the page is re-laid out at the new size in
     // the next one. Doing both at once kept the tap waiting up to a second on long pages (measured 2026-10-06).
     requestAnimationFrame(() =>
@@ -101,14 +109,57 @@ export function EasyRead() {
     };
   }, []);
 
+  // Phones: an opened switch folds back to "Aa" after a few seconds untouched.
+  useEffect(() => {
+    if (!open) return;
+    const t = window.setTimeout(() => setOpen(false), FOLD_AFTER_MS);
+    return () => window.clearTimeout(t);
+  }, [open]);
+
+  // Phones: out of the way while the reader scrolls down; back when they stop or scroll up, as a phone browser does
+  // with its own address bar. Never gone for good: the first-visit question promises the switch "at any time".
+  useEffect(() => {
+    const phone = window.matchMedia(PHONE);
+    let lastY = window.scrollY;
+    let still = 0;
+    const onScroll = () => {
+      if (!phone.matches) return;
+      const y = window.scrollY;
+      if (y > lastY + 6) setTucked(true);
+      else if (y < lastY - 6) setTucked(false);
+      lastY = y;
+      window.clearTimeout(still);
+      still = window.setTimeout(() => setTucked(false), 700);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(still);
+    };
+  }, []);
+
   return (
     <>
-      <div className="ez-switch" role="group" aria-label="Text size">
+      <div
+        className={`ez-switch${open ? " open" : ""}${tucked && !open ? " tucked" : ""}`}
+        role="group"
+        aria-label="Text size"
+      >
         <span className="ez-switch-l">Text size</span>
-        <button type="button" aria-pressed={!on} onClick={() => choose(false)}>
+        {/* phones only (CSS): the folded switch */}
+        <button
+          type="button"
+          className="ez-switch-aa"
+          aria-label="Text size"
+          aria-expanded={open}
+          onClick={() => setOpen(true)}
+        >
+          Aa
+        </button>
+        <button type="button" className="ez-opt" aria-pressed={!on} onClick={() => choose(false)}>
           Standard
         </button>
-        <button type="button" aria-pressed={on} onClick={() => choose(true)}>
+        <button type="button" className="ez-opt" aria-pressed={on} onClick={() => choose(true)}>
           Extra large
         </button>
       </div>
