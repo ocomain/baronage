@@ -230,6 +230,14 @@ export default function SupportPage() {
                 {/* owner 2026-10-20: "or donate rather" (was "Give") */}
                 <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Donate</Pay>
               </p>
+              {/* Patron between the gift and the Friend (owner 2026-10-20: "fits better … and makes the fees below it look
+                  cheaper"); "all of the above" became "all the benefits below", as Friends and associates now follow */}
+              <p>
+                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all the benefits below, are named on this
+                page with their consent, and may have their coat of arms shown on the Armorial page.
+                {/* Patron payment link: owner-approved 2026-10-20, via the membership chat */}
+                <Pay href="https://buy.stripe.com/bJecN5716a2M8v32dceZ20r">Become a Patron</Pay>
+              </p>
               <p>
                 <Lead>Friend of the Association.</Lead> £100 a year, open to anyone with an interest in the baronage,
                 baron or not. Friends receive the newsletter and the subscriber papers and a copy of the printed Roll
@@ -263,12 +271,6 @@ export default function SupportPage() {
                   The Barons’ Gathering with baronial robes, as it is planned for 2027
                 </figcaption>
               </figure>
-              <p>
-                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all of the above, are named on this
-                page with their consent, and may have their coat of arms shown on the Armorial page.
-                {/* Patron payment link: owner-approved 2026-10-20, via the membership chat */}
-                <Pay href="https://buy.stripe.com/bJecN5716a2M8v32dceZ20r">Become a Patron</Pay>
-              </p>
               <p>
                 {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item. 2026-10-20 owner: "for Google",
                     "name and title", "add online notability displayed by a third party authority" */}
