@@ -144,15 +144,12 @@ export default function SupportPage() {
             <Part title="Our purpose">
               <p>
                 The Association exists to restore the standing of the baronage
-                of Scotland, as the baronetage restored its own a century ago.
-                Baronetcies had been sold and abused; in 1898 the baronets
-                formed a body, and in 1910{" "}
-                <Link
-                  href="/reading-room/official-roll-of-the-baronetage-1910/"
-                  className={mail}
-                >
-                  a Royal Warrant
-                </Link>{" "}
+                of Scotland, as the baronetage restored its own a century ago.{" "}
+                {/* owner 2026-10-21: this phrase links to the 1910 paper, not "a Royal Warrant" */}
+                <Link href="/reading-room/official-roll-of-the-baronetage-1910/" className={mail}>
+                  The baronetage was in a state of disarray
+                </Link>
+                , baronetcies had been sold and abused; in 1898 the baronets formed a body, and in 1910 a Royal Warrant
                 gave them an official Roll, “divers abuses” having “crept into
                 the said Order”. The baronage has the same need and the same
                 answer: a Roll kept by its own body, verified against the public
@@ -239,8 +236,8 @@ export default function SupportPage() {
               {/* Patron between the gift and the Friend (owner 2026-10-20: "fits better … and makes the fees below it look
                   cheaper"); then (owner: "all the benefits below … not accurate now") "all that Friends and associate members have" */}
               <p>
-                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all that Friends and associate members have, are named on this
-                page with their consent, and may have their coat of arms shown on the Armorial page.
+                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all that Friends and associate members have, may optionally be
+                named on the site, and may have their coat of arms shown on the Armorial page.
                 {/* Patron payment link: owner-approved 2026-10-20, via the membership chat */}
                 <Pay href="https://buy.stripe.com/bJecN5716a2M8v32dceZ20r">Become a Patron</Pay>
               </p>
@@ -305,7 +302,7 @@ export default function SupportPage() {
 
             <Part title="Recognition">
               <p>
-                Patrons and benefactors are named on this page with their consent. Where their arms are recorded by a
+                Patrons and benefactors may optionally be named on the site. Where their arms are recorded by a
                 heraldic authority, they may be shown on the Armorial page, under their own heading and with the
                 reference, alongside the arms already there.
               </p>
