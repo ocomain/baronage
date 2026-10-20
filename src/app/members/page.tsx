@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/members/" },
   title: "Member Login",
   description:
-    "Sign in to the members’ area of the Baronage of Scotland Association, or request a call back to join — full membership carries ownership and voting rights.",
+    "Sign in to the members’ area of the Baronage of Scotland Association, or request a call back to join — membership carries ownership and voting rights.",
 };
 
 const fullMembers = [
@@ -87,7 +87,10 @@ export default function MembersPage() {
             <Reveal className="h-full">
               <div className="flex h-full flex-col border border-parchment-300/70 bg-parchment-50 p-7 sm:p-8">
                 <h2 className="font-display text-2xl text-navy">Full Membership</h2>
-                <p className="mt-1 font-serif text-base italic text-gold-deep">Ownership &amp; voting rights</p>
+                {/* owner 2026-10-20: "nomination", not "election": Council seats are filled by the Council */}
+                <p className="mt-1 font-serif text-base italic text-gold-deep">
+                  Ownership &amp; voting rights · Eligible for nomination to the Council and committees
+                </p>
                 <GoldRule className="mt-4" align="start" />
                 <MemberList items={fullMembers} />
               </div>
