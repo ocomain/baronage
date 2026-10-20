@@ -254,6 +254,9 @@ export default function SupportPage() {
                 Members’ Chamber, with its muniments room and heir access, a place at the Barons’ Gathering, the
                 Association’s annual assembly, where barons attend in their baronial robes, and the Association’s
                 meetups. Full membership, with ownership and voting rights, is by arrangement with the Secretary.
+                {/* owner-approved 2026-10-20, via the membership chat */}
+                No joining fee for associate members who join before the first Barons’ Gathering in 2027. From then, £250 to
+                join.
               </p>
               {/* owner 2026-10-20: "the dinner with the robes is excellent"; captioned, as the Gathering has not yet been held */}
               <figure className="!mt-8 !mb-10">
