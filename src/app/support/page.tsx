@@ -231,9 +231,9 @@ export default function SupportPage() {
                 <Pay href="https://donate.stripe.com/14A8wPety7UE12B5poeZ20p">Donate</Pay>
               </p>
               {/* Patron between the gift and the Friend (owner 2026-10-20: "fits better … and makes the fees below it look
-                  cheaper"); then (owner: "all the benefits below … not accurate now") "all that Friends and Associates have" */}
+                  cheaper"); then (owner: "all the benefits below … not accurate now") "all that Friends and associate members have" */}
               <p>
-                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all that Friends and Associates have, are named on this
+                <Lead>Patron.</Lead> £1,000 a year, open to anyone. Patrons have all that Friends and associate members have, are named on this
                 page with their consent, and may have their coat of arms shown on the Armorial page.
                 {/* Patron payment link: owner-approved 2026-10-20, via the membership chat */}
                 <Pay href="https://buy.stripe.com/bJecN5716a2M8v32dceZ20r">Become a Patron</Pay>
@@ -247,12 +247,13 @@ export default function SupportPage() {
               </p>
               <p>
                 {/* the Gathering: owner 2026-10-19, "sound more fun / regal, say it's where barons will wear baronial robes" */}
-                {/* owner 2026-10-20 (via the membership chat): votes stay with Members; "full" dropped: a Member owns and
-                    votes, an Associate is the £250 rung and the family categories, a Friend is anyone */}
-                <Lead>Associate.</Lead> £250 a year, for barons entered on the Roll. Associates have the
+                {/* owner 2026-10-20 (via the membership chat): votes stay with Full Membership. "Full" was dropped for an
+                    hour, then kept: both are members, full members the inner rank, "a bit like the noblemen peers and the
+                    rest of the noblesse" */}
+                <Lead>Associate member.</Lead> £250 a year, for barons entered on the Roll. Associate members have the
                 Members’ Chamber, with its muniments room and heir access, a place at the Barons’ Gathering, the
                 Association’s annual assembly, where barons attend in their baronial robes, and the Association’s
-                meetups. Membership, with ownership and voting rights, is by arrangement with the Secretary.
+                meetups. Full membership, with ownership and voting rights, is by arrangement with the Secretary.
               </p>
               {/* owner 2026-10-20: "the dinner with the robes is excellent"; captioned, as the Gathering has not yet been held */}
               <figure className="!mt-8 !mb-10">
@@ -275,12 +276,12 @@ export default function SupportPage() {
               <p>
                 {/* owner 2026-10-19 ("ok"), via the membership chat; still no figure on this item. 2026-10-20 owner: "for Google",
                     "name and title", "add online notability displayed by a third party authority" */}
-                <Lead>Member and benefactor.</Lead> For barons who wish to carry the work: all of the above, and a
+                <Lead>Full member and benefactor.</Lead> For barons who wish to carry the work: all of the above, and a
                 dedicated page for Google under your own name and title in the manner of a Burke’s Peerage entry, with your
                 arms, honours,
                 lineage and distinctions and the history of your barony, together with the figures on how often your
                 name and barony are found on Google, your online notability displayed by third-party authorities, and the
-                standing of a founding benefactor. Membership carries ownership and voting rights, and eligibility
+                standing of a founding benefactor. Full membership carries ownership and voting rights, and eligibility
                 for nomination to the Governing Council and its committees as vacancies arise. By arrangement with the
                 Secretary: <Mail />
               </p>
