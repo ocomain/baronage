@@ -261,8 +261,9 @@ export default function SupportPage() {
                 Association’s annual assembly, where barons attend in their baronial robes, and the Association’s
                 meetups. {/* committees: owner 2026-10-20, "yes to all" (Council and chairs stay with full members) */}Associate members
                 may be invited by the Council to serve on its committees, such as the events committee. Full membership, with
-                ownership and voting rights, is by arrangement with the Secretary.
-                {/* owner-approved 2026-10-20, via the membership chat */}
+                ownership and voting rights, is by arrangement with the Secretary.{" "}
+                {/* owner-approved 2026-10-20, via the membership chat ({" "} keeps the space before "No": a comment between
+                    two lines of text swallows it, owner: "Secretary.No -- why no space ?") */}
                 No joining fee for associate members who join before the first Barons’ Gathering in 2027. From then, £250 to
                 join.
               </p>
