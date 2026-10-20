@@ -277,7 +277,8 @@ export default function SupportPage() {
                 arms, honours,
                 lineage and distinctions and the history of your barony, together with the figures on how often your
                 name and barony are found on Google, your online notability displayed by a third-party authority, and the
-                standing of a founding benefactor. By arrangement with the
+                standing of a founding benefactor. Full membership carries ownership and voting rights, and eligibility
+                for nomination to the Governing Council and its committees as vacancies arise. By arrangement with the
                 Secretary: <Mail />
               </p>
             </Part>
