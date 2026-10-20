@@ -634,6 +634,11 @@ video.bg-film::-webkit-media-controls-start-playback-button {
 html.ez-card-up .ez-switch{transform:translateY(calc(-1 * (var(--ez-card-h, 150px) + 14px)))}
 /* Where the card only touches the switch (tablets), the switch stays in its corner and the card lies over its end. */
 html.ez-card-over .ez-switch{z-index:29}
+/* Phones fold the switch to a round "Aa" (owner 2026-10-21: "too big on small screens"); it steps out of the way while
+   the reader scrolls down (EasyRead.tsx). Opacity, not transform, so it never fights the lift above the card. */
+.ez-switch{transition:opacity .25s ease}
+.ez-switch.tucked{opacity:0;pointer-events:none}
+.ez-switch button.ez-switch-aa{display:none}
 
 /* ---------- first-visit question: "Do you need extra large text?" ---------- */
 /* The question (and the Proper Address section list) lock the page while open. Keep the scrollbar's space while locked,
@@ -658,6 +663,10 @@ html.ez-asking{overflow:hidden}
   html.ez-card-up .ez-switch{transform:translateY(calc(-1 * (var(--ez-card-h, 150px) + 16px)))}
   .ez-switch-l{display:none}
   .ez-switch button{padding:12px 14px;font-size:15px}
+  .ez-switch:not(.open){padding:0;background:transparent;box-shadow:none}
+  .ez-switch:not(.open) button.ez-opt{display:none}
+  .ez-switch button.ez-switch-aa{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:46px;height:46px;padding:0;border:1px solid rgba(201,162,75,.65);border-radius:9999px;background:#131e3a;color:#faf6ec;font-family:var(--font-display);font-size:21px;font-weight:600;line-height:1;box-shadow:0 6px 18px rgba(10,16,36,.4)}
+  .ez-switch.open button.ez-switch-aa{display:none}
   .ez-ask{align-items:flex-end;padding:0}
   .ez-ask-card{max-width:none;border-width:1px 0 0;padding:28px 20px calc(26px + env(safe-area-inset-bottom,0px))}
   .ez-ask h2{font-size:33px;margin-bottom:22px}
