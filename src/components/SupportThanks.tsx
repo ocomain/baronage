@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 
 /**
  * The thank-you notice on /support/ after a Stripe payment: each payment link sends the visitor back to
- * /support/?thanks=gift, ?thanks=friend or ?thanks=patron (owner 2026-10-20, via the membership chat).
+ * /support/?thanks=gift, ?thanks=friend, ?thanks=patron or ?thanks=associate (owner 2026-10-20, via the membership chat).
  * Read after the page loads, as the site is a static export.
  */
 const NOTES: Record<string, string> = {
   gift: "Thank you. Your gift has been received, and the Secretary will be in touch.",
   friend: "Thank you for becoming a Friend of the Association.",
   patron: "Thank you for becoming a Patron.",
+  associate: "Thank you. Your application goes to the membership committee, which will write to you.",
 };
 
 export function SupportThanks() {
