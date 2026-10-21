@@ -623,9 +623,8 @@ export default function ProperAddressPage() {
                     "a bit smaller and perhaps aligned to the right of the text", then "better underneath and slightly bigger so can read it", then "1/3 smaller" (512px to 344px); the letter speaking for itself; cropped to its text ("you don't need all that white space") */}
                 <P>
                   Alternatively, only the barony can be used: <S>Dear Inverness</S>
-                  <Footnote n={11}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
-                </P>
-                <P>
+                  <Footnote n={11}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.{" "}
+                  {/* one paragraph (owner 2026-10-21) */}
                   <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years.
                 </P>
                 <figure className="mx-auto mt-6 max-w-[21.5rem]">
