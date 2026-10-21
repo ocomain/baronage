@@ -618,37 +618,36 @@ export default function ProperAddressPage() {
                     <S>Dear Baroness</S>
                   </F>
                 </Forms>
+                {/* owner 2026-10-21: the Lyon Office's covering letter of 2013 (the owner's copy, address blacked out),
+                    "with a sentence saying Dear Baron Inverness has been used by lyon office in previous years"; then
+                    "a bit smaller and perhaps aligned to the right of the text", the letter speaking for itself; cropped to its text ("you don't need all that white space") */}
+                <figure className="float-right mb-3 ml-5 mt-1 w-[40%] max-w-[13rem] sm:ml-7">
+                  <a href="/images/lyon-letter-2013-crop.webp" target="_blank" rel="noopener noreferrer" className="block">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/lyon-letter-2013-crop-700.webp"
+                      srcSet="/images/lyon-letter-2013-crop-700.webp 700w, /images/lyon-letter-2013-crop.webp 1200w"
+                      sizes="13rem"
+                      alt="Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”, signed by Sophie Reilly, Secretary, Lyon Office"
+                      width={700}
+                      height={949}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full border border-parchment-300 shadow-[0_14px_32px_-20px_rgba(10,16,36,0.5)]"
+                    />
+                  </a>
+                  <figcaption className="mt-2 text-center font-serif text-sm italic leading-snug text-muted">
+                    Lyon Office, 8 October 2013. Select to enlarge.
+                  </figcaption>
+                </figure>
                 <P>
                   Alternatively, only the barony can be used: <S>Dear Inverness</S>
                   <Footnote n={11}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
                 </P>
-                {/* owner 2026-10-21: the Lyon Office's covering letter of 2013 (the owner's copy, address blacked out),
-                    "with a sentence saying Dear Baron Inverness has been used by lyon office in previous years" */}
                 <P>
-                  <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years: its letter of 8
-                  October 2013 to the Baron of Hartsyde, enclosing his corrected Letters Patent, begins “Dear Baron
-                  Hartsyde”.
+                  <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years.
                 </P>
-                <figure className="mx-auto mt-6 max-w-md">
-                  <a href="/images/lyon-letter-2013.webp" target="_blank" rel="noopener noreferrer" className="block">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/lyon-letter-2013-700.webp"
-                      srcSet="/images/lyon-letter-2013-700.webp 700w, /images/lyon-letter-2013.webp 1200w"
-                      sizes="(min-width: 640px) 448px, 100vw"
-                      alt="Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”, signed by Sophie Reilly, Secretary, Lyon Office"
-                      width={700}
-                      height={990}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full border border-parchment-300 shadow-[0_18px_40px_-24px_rgba(10,16,36,0.5)]"
-                    />
-                  </a>
-                  <figcaption className="mt-3 text-center font-serif text-base italic leading-snug text-muted">
-                    The Court of the Lord Lyon to the Baron of Hartsyde, 8 October 2013 (address withheld). Select the
-                    letter to enlarge it.
-                  </figcaption>
-                </figure>
+                <div className="clear-both" aria-hidden />
               </Sec>
             </Reveal>
 
