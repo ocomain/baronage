@@ -121,11 +121,11 @@ export const navMenu: NavMenuItem[] = [
     label: "Guide",
     children: [
       { href: "/scottish-baronies-explained", label: "Baronies Explained", badge: "New" }, // owner 2026-10-18
-      { href: "/proper-address", label: "Proper Address" },
+      { href: "/proper-address", label: "Proper Address", badge: "New" }, // owner 2026-10-21 (the 2013 Lyon Office letter)
       { href: "/history", label: "History" },
-      { href: "/robes-and-chapeau", label: "Robes & Chapeau", badge: "New" },
-      { href: "/court-and-officers", label: "Court & Officers", badge: "New" },
-      { href: "/arms-and-flags", label: "Arms & Flags", badge: "New" },
+      { href: "/robes-and-chapeau", label: "Robes & Chapeau" },
+      { href: "/court-and-officers", label: "Court & Officers" },
+      { href: "/arms-and-flags", label: "Arms & Flags" },
     ],
   },
   { href: "/pledge", label: "The Pledge", selfInList: true, children: [{ href: "/baronial-code", label: "Baronial Code" }] },
