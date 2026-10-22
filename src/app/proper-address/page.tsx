@@ -638,14 +638,15 @@ export default function ProperAddressPage() {
                       w: 640,
                       h: 689,
                       alt: "Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”",
-                      caption: "Lyon Office, 8 October 2013: “Dear Baron Hartsyde”",
+                      caption: "Lyon Office, 2013: “Dear Baron Hartsyde”",
                     },
                     {
                       file: "lyon-letter-1976-drum",
                       w: 640,
                       h: 461,
                       alt: "Letter from the Lyon Clerk and Keeper of the Records, Malcolm R. Innes of Edingight, Court of the Lord Lyon, 14 October 1976, to Lt. Col. C. F. Irvine of Drum, M.C., beginning “Dear Drum”, with the words “you and your heirs were the undoubted barons of Drum” circled",
-                      caption: "Lyon Clerk, 14 October 1976: “Dear Drum”",
+                      // owner 2026-10-23: "not just Lyon Clerk he went on to be lord lyon"; day and month dropped from both captions
+                      caption: "Malcolm Innes of Edingight, Lyon Clerk, later Lord Lyon, 1976: “Dear Drum”",
                     },
                   ].map((l) => (
                     <figure key={l.file}>
