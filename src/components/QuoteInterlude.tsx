@@ -11,7 +11,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
  * asks for less motion. A tap or Esc skips it. A shuffled order is kept for the visit, so none repeats until all are seen.
  */
 /** `gold`: further words set in gold in that one quotation (owner 2026-10-17: "baron" in the Act of 1540). */
-const QUOTES: { text: string; source: string; gold?: string[] }[] = [
+/** `extraMs`: more time on screen for a quote that needs it (owner 2026-10-22, the Declaration of Arbroath). */
+const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number }[] = [
   { text: "…every noble man, such as an earl, lord, knight and baron", source: "Parliament of Scotland · 1540", gold: ["baron"] },
   { text: "…the nobility, earls, lords and barons…", source: "Parliament of Scotland · 1592" },
   {
@@ -59,6 +60,9 @@ const QUOTES: { text: string; source: string; gold?: string[] }[] = [
     text: "It is in truth not for glory, nor riches, nor honours that we are fighting, but for freedom alone",
     source: "Declaration of Arbroath · sealed by about 40 barons",
     gold: ["freedom alone"],
+    // owner 2026-10-22: "a little longer so please can the interpage screen stay on screen just a tad longer just for
+    // that one": 5.5 seconds by the word count, now 7
+    extraMs: 1500,
   },
 ];
 
@@ -165,7 +169,7 @@ export function QuoteInterlude() {
       setQuick(false);
       setShown(true);
       started.current = Date.now();
-      showFor.current = readMs(QUOTES[n].text);
+      showFor.current = readMs(QUOTES[n].text) + (QUOTES[n].extraMs ?? 0);
       waiting.current = true;
       timers.current.push(window.setTimeout(hide, showFor.current + SPARE_MS));
     };
