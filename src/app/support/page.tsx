@@ -179,8 +179,8 @@ export default function SupportPage() {
                 nominal subscription cannot carry it. Its objectives are
                 advocacy and record: they need lawyers, genealogists, heralds
                 and scholars of Scots law, and liaison with the bodies the
-                baronage sits beside: the peerage, the chiefs, the baronetage
-                and the Court of the Lord Lyon. {/* owner 2026-10-19 */}All of our material is vetted by
+                baronage sits beside: the peerage, the chiefs, the baronetage, the Court of the Lord Lyon and many
+                government bodies. {/* owner 2026-10-19; "many government bodies" 2026-10-23 */}All of our material is vetted by
                 experts, and this all costs money and resources. The Association’s members and friends pay
                 for that work.
               </p>

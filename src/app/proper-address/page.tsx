@@ -627,24 +627,25 @@ export default function ProperAddressPage() {
                   {/* one paragraph (owner 2026-10-21) */}
                   <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years.
                 </P>
-                {/* owner 2026-10-23: the 1976 "Dear Drum" letter beside the 2013 one, side by side; the 2013 letter
+                {/* owner 2026-10-23: the 1976 "Dear Drum" letter added, first side by side, then "worth both letters
+                    being blown up more so not side by side put drum letter second underneath"; the 2013 letter
                     shortened to end at its main paragraph ("crop out the yours sincerely section"). Both copies are
                     the owner's, with addresses and private passages blacked out. */}
-                <div className="mx-auto mt-6 grid max-w-2xl items-start gap-6 sm:grid-cols-2">
+                <div className="mx-auto mt-6 grid max-w-[26rem] gap-8">
                   {[
-                    {
-                      file: "lyon-letter-1976-drum",
-                      w: 640,
-                      h: 461,
-                      alt: "Letter from the Lyon Clerk and Keeper of the Records, Malcolm R. Innes of Edingight, Court of the Lord Lyon, 14 October 1976, to Lt. Col. C. F. Irvine of Drum, M.C., beginning “Dear Drum”, with the words “you and your heirs were the undoubted barons of Drum” circled",
-                      caption: "Lyon Clerk, 14 October 1976: “Dear Drum”",
-                    },
                     {
                       file: "lyon-letter-2013-short",
                       w: 640,
                       h: 689,
                       alt: "Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”",
                       caption: "Lyon Office, 8 October 2013: “Dear Baron Hartsyde”",
+                    },
+                    {
+                      file: "lyon-letter-1976-drum",
+                      w: 640,
+                      h: 461,
+                      alt: "Letter from the Lyon Clerk and Keeper of the Records, Malcolm R. Innes of Edingight, Court of the Lord Lyon, 14 October 1976, to Lt. Col. C. F. Irvine of Drum, M.C., beginning “Dear Drum”, with the words “you and your heirs were the undoubted barons of Drum” circled",
+                      caption: "Lyon Clerk, 14 October 1976: “Dear Drum”",
                     },
                   ].map((l) => (
                     <figure key={l.file}>
@@ -653,7 +654,7 @@ export default function ProperAddressPage() {
                         <img
                           src={`/images/${l.file}-640.webp`}
                           srcSet={`/images/${l.file}-640.webp 640w, /images/${l.file}.webp ${l.file.includes("1976") ? 874 : 1200}w`}
-                          sizes="(min-width: 640px) 20rem, 100vw"
+                          sizes="(min-width: 640px) 26rem, 100vw"
                           alt={l.alt}
                           width={l.w}
                           height={l.h}
