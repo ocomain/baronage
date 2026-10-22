@@ -58,7 +58,8 @@ const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number 
   // "alone"; NRS: "sealed by eight earls and about 40 barons" (the owner wrote "signed by 40 barons").
   {
     text: "It is in truth not for glory, nor riches, nor honours that we are fighting, but for freedom alone",
-    source: "Declaration of Arbroath · sealed by about 40 barons",
+    // owner 2026-10-22: "delete \"declaration of\" it's too wordy … and delete \"about\"" (NRS: "about 40 barons")
+    source: "Arbroath · sealed by 40 barons",
     gold: ["freedom alone"],
     // owner 2026-10-22: "a little longer so please can the interpage screen stay on screen just a tad longer just for
     // that one": 5.5 seconds by the word count, now 7
