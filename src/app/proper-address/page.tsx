@@ -627,25 +627,48 @@ export default function ProperAddressPage() {
                   {/* one paragraph (owner 2026-10-21) */}
                   <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years.
                 </P>
-                <figure className="mx-auto mt-6 max-w-[21.5rem]">
-                  <a href="/images/lyon-letter-2013-crop.webp" target="_blank" rel="noopener noreferrer" className="block">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/lyon-letter-2013-crop-700.webp"
-                      srcSet="/images/lyon-letter-2013-crop-700.webp 700w, /images/lyon-letter-2013-crop.webp 1200w"
-                      sizes="(min-width: 640px) 21.5rem, 100vw"
-                      alt="Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”, signed by Sophie Reilly, Secretary, Lyon Office"
-                      width={700}
-                      height={949}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full border border-parchment-300 shadow-[0_14px_32px_-20px_rgba(10,16,36,0.5)]"
-                    />
-                  </a>
-                  <figcaption className="mt-3 text-center font-serif text-base italic leading-snug text-muted">
-                    Lyon Office, 8 October 2013. Select to enlarge.
-                  </figcaption>
-                </figure>
+                {/* owner 2026-10-23: the 1976 "Dear Drum" letter beside the 2013 one, side by side; the 2013 letter
+                    shortened to end at its main paragraph ("crop out the yours sincerely section"). Both copies are
+                    the owner's, with addresses and private passages blacked out. */}
+                <div className="mx-auto mt-6 grid max-w-2xl items-start gap-6 sm:grid-cols-2">
+                  {[
+                    {
+                      file: "lyon-letter-1976-drum",
+                      w: 640,
+                      h: 461,
+                      alt: "Letter from the Lyon Clerk and Keeper of the Records, Malcolm R. Innes of Edingight, Court of the Lord Lyon, 14 October 1976, to Lt. Col. C. F. Irvine of Drum, M.C., beginning “Dear Drum”, with the words “you and your heirs were the undoubted barons of Drum” circled",
+                      caption: "Lyon Clerk, 14 October 1976: “Dear Drum”",
+                    },
+                    {
+                      file: "lyon-letter-2013-short",
+                      w: 640,
+                      h: 689,
+                      alt: "Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”",
+                      caption: "Lyon Office, 8 October 2013: “Dear Baron Hartsyde”",
+                    },
+                  ].map((l) => (
+                    <figure key={l.file}>
+                      <a href={`/images/${l.file}.webp`} target="_blank" rel="noopener noreferrer" className="block">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={`/images/${l.file}-640.webp`}
+                          srcSet={`/images/${l.file}-640.webp 640w, /images/${l.file}.webp ${l.file.includes("1976") ? 874 : 1200}w`}
+                          sizes="(min-width: 640px) 20rem, 100vw"
+                          alt={l.alt}
+                          width={l.w}
+                          height={l.h}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full border border-parchment-300 shadow-[0_14px_32px_-20px_rgba(10,16,36,0.5)]"
+                        />
+                      </a>
+                      <figcaption className="mt-3 text-center font-serif text-base italic leading-snug text-muted">
+                        {l.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+                <p className="mt-2 text-center font-serif text-sm italic text-muted">Select a letter to enlarge it.</p>
               </Sec>
             </Reveal>
 
