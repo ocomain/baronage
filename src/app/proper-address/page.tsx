@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const NAV: { id: string; label: string; badge?: string }[] = [
   { id: "verbal", label: "Address" },
   { id: "written", label: "Written Address" },
-  { id: "salutation", label: "Salutation in Letters" },
+  { id: "salutation", label: "Salutation in Letters", badge: "New" }, // owner 2026-10-23 (the Lyon letters)
   { id: "children", label: "Children of a Baron" },
   { id: "special", label: "Special Considerations" },
   { id: "dowager", label: "Widow or Dowager" },
