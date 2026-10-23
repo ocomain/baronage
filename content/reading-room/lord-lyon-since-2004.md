@@ -8,6 +8,7 @@ published: 2026-09-11
 reviewed: 2026-09-20
 gated: true
 reading_time: "7 min"
+essential: true
 ---
 
 # The Lord Lyon and the baronage since 2004

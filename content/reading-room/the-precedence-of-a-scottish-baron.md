@@ -6,6 +6,7 @@ meta_description: "Where a Scottish baron ranks: the baronets’ patents of 1625
 category: Law & Statutes
 published: 2026-10-14
 reviewed: 2026-10-14
+essential: true
 ---
 
 # “Never ceded” to knights or baronets: the precedence of a Scottish baron

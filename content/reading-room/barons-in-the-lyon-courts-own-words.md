@@ -8,6 +8,7 @@ published: 2026-09-13
 reviewed: 2026-10-18
 gated: part
 reading_time: "10 min"
+essential: true
 ---
 
 # Barons in the Lyon Court’s own words

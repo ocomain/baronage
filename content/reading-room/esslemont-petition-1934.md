@@ -8,6 +8,7 @@ published: 2026-09-13
 reviewed: 2026-10-10
 gated: part
 reading_time: "7 min"
+essential: true
 ---
 
 # The Esslemont petition of 1934

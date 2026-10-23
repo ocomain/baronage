@@ -6,6 +6,7 @@ meta_description: "In 1843 the baronets, claiming nobility, rested their case on
 category: Heritage & Sources
 published: 2026-10-10
 reviewed: 2026-10-10
+essential: true
 ---
 
 # “A class of nobles”: how the baronets pleaded the barons’ nobility

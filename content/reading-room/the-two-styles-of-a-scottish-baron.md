@@ -6,6 +6,7 @@ meta_description: "Was “baron” a title or a description of tenure? Charters,
 category: Words & Usage
 published: 2026-09-27
 reviewed: 2026-10-23
+essential: true
 ---
 
 # Baron of X, or X of Y? Two styles of a Scottish baron

@@ -8,6 +8,7 @@ published: 2026-09-13
 reviewed: 2026-10-10
 gated: part
 reading_time: "4 min"
+essential: true
 ---
 
 # Untitled or titled nobility?
