@@ -688,7 +688,12 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="children" title="Addressing the Children of a Baron">
                 <P>
-                  The heir is styled “Younger of Barony”, as a Scottish peer’s heir is “Master of”. “The” may go before either,
+                  {/* owner 2026-10-23: link to the paper on "Younger of" and "Master of" */}
+                  The heir is styled{" "}
+                  <Link href="/reading-room/younger-of-and-master-of/" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
+                    “Younger of Barony”
+                  </Link>
+                  , as a Scottish peer’s heir is “Master of”. “The” may go before either,
                   and keeps “younger” from being read as a surname.<Footnote n={12}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
@@ -842,7 +847,12 @@ export default function ProperAddressPage() {
                   spelling as a rule.
                 </P>
                 <P>
-                  The Roll of Scottish Barons styles the holder of an earldom in the form the Lyon Court has used for
+                  {/* owner 2026-10-23: link to the paper on non-peerage earldoms */}
+                  The Roll of Scottish Barons styles{" "}
+                  <Link href="/reading-room/non-peerage-earldoms/" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
+                    the holder of an earldom
+                  </Link>{" "}
+                  in the form the Lyon Court has used for
                   that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
                   continues to the successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon
                   Court used for Annandale in 1983<Ref n={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={9} />
