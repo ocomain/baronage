@@ -62,14 +62,15 @@ const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number 
     source: "Arbroath · sealed by 40 barons",
     gold: ["freedom alone"],
     // owner 2026-10-22: "a little longer so please can the interpage screen stay on screen just a tad longer just for
-    // that one": 5.5 seconds by the word count, now 7
-    extraMs: 1500,
+    // that one": about 7 seconds in all; kept at 7 when the others were cut by a second (owner 2026-10-23)
+    extraMs: 2500,
   },
 ];
 
 // Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it", then "still not staying long
-// enough"): three seconds and more for each word, so the shortest stays about 3.8 seconds and the longest about 5.7.
-const readMs = (text: string) => 3000 + 130 * text.split(/\s+/).length;
+// enough"): two seconds and more for each word, so the shortest stays about 2.8 seconds and the longest about 4.7
+// (owner 2026-10-23: about a second shorter than the 3.8 to 5.7 of 17 Oct).
+const readMs = (text: string) => 2000 + 130 * text.split(/\s+/).length;
 const SPARE_MS = 3000; // taken down regardless this long after its reading time, should a page be slow
 const ORDER_KEY = "bsa-quote-order";
 const NEXT_KEY = "bsa-quote-next";
