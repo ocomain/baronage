@@ -634,7 +634,7 @@ export default function ProperAddressPage() {
                   Alternatively, only the barony can be used: <S>Dear Inverness</S>
                   <Footnote n={11}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.{" "}
                   {/* one paragraph (owner 2026-10-21) */}
-                  <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years.
+                  <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years:
                 </P>
                 {/* owner 2026-10-23: the 1976 "Dear Drum" letter added, first side by side, then "worth both letters
                     being blown up more so not side by side put drum letter second underneath"; the 2013 letter
