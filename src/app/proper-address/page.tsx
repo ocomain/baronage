@@ -601,8 +601,10 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="salutation" title="Salutation in Letters">
                 <P>
-                  When beginning a letter to a Scottish Baron, the salutation should reflect the dignity of the title.
-                  The correct salutation is:
+                  {/* owner 2026-10-23 ("yes" to the capital-or-lower-case sentence, not "inconsequential") */}
+                  When beginning a letter to a Scottish Baron, the salutation should reflect the dignity of the title. A
+                  capital or a lower-case “b”
+                  for baron is equally correct. The correct salutation is:
                 </P>
                 <Forms>
                   <F>
