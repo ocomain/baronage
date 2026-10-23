@@ -243,7 +243,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
       <>
         For the evidence that Scotland’s barons were styled by both title and designation, see{" "}
         <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className={intLink}>
-          Baron of X, or X of Y?
+          Baron of X, or X of Y? Two styles of a Scottish baron
         </Link>
         .
       </>
