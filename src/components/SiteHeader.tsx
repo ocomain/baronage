@@ -171,7 +171,7 @@ export function SiteHeader() {
         </div>
 
         {/* Desktop nav row */}
-        {/* Eight items since The Baron's Course (owner 2026-10-23): a little closer on laptop widths so the row stays on one
+        {/* Eight items since Essential Reading (owner 2026-10-23): a little closer on laptop widths so the row stays on one
             line at 1024px; wider screens keep the old spacing. */}
         <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-5 gap-y-2 px-6 pb-4 lg:flex lg:flex-wrap xl:gap-x-7 xl:px-8">
           {navMenu.map((item) => {
