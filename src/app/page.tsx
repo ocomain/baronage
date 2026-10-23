@@ -540,7 +540,7 @@ export default function HomePage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/featured/renfrew-2026-10.webp"
-                  alt="Lord of the Isles and Baron of Renfrew"
+                  alt="Lord of the Isles and the Baron of Renfrew"
                   width={439}
                   height={549}
                   loading="lazy"
@@ -551,7 +551,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.12}>
               <Eyebrow>Featured Baron</Eyebrow>
-              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Lord of the Isles and Baron of Renfrew</h2>
+              <h2 className="mt-4 text-4xl text-navy sm:text-5xl">Lord of the Isles and the Baron of Renfrew</h2>
               <GoldRule className="mt-6" align="start" />
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
                 Each season we honour a member of the baronage whose stewardship exemplifies the Baronial Code —
