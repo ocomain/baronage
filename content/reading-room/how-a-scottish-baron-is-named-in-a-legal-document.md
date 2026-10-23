@@ -1,5 +1,5 @@
 ---
-title: "How is a Scottish baron named in a legal document? “John Smith, Baron of Inverness”, with no “commonly called”"
+title: "How is a Scottish baron named in a legal document? There is no “commonly called”"
 subtitle: "The Crown writes “commonly called” before a courtesy title, which the law does not confer. A Scottish barony is a dignity kept by statute, and every Lord Lyon on record has written it into the name. A deed names a baron as it names a duke"
 slug: how-a-scottish-baron-is-named-in-a-legal-document
 meta_description: "In a Scots deed a baron is designed “John Smith, Baron of Inverness”, with no “commonly called”: that formula is for courtesy titles. The dignity stands on the Act of 2000 and on the Lyon Court’s own instruments."
@@ -9,7 +9,7 @@ reviewed: 2026-10-23
 essential: true
 ---
 
-# How is a Scottish baron named in a legal document? “John Smith, Baron of Inverness”, with no “commonly called”
+# How is a Scottish baron named in a legal document? There is no “commonly called”
 
 *Scots conveyancing has a settled form for a duke, an earl, a Master and a courtesy lord. Applied to a Scottish baron, it gives one result.*
 
