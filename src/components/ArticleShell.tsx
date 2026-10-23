@@ -8,6 +8,8 @@ import { PaperNotePopups } from "./PaperNotePopups";
 import { SealedPaper } from "./SealedPaper";
 import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
+import { COURSE_PATH, courseStepFor } from "@/lib/course";
+import { CourseMarkRead } from "./CourseMarkRead";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
 
@@ -29,6 +31,8 @@ export function monthYear(iso: string) {
  * print rules for .paper-print in globals.css.
  */
 export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; related: ReadingRoomPaper[] }) {
+  // The Baron's Course (owner 2026-10-23): papers in it carry a band under the title and previous/next at the foot.
+  const course = courseStepFor(paper.slug);
   return (
     <Section tone="parchment" className="!py-12 sm:!py-16 print:!py-0">
       <Container size="prose">
@@ -47,6 +51,17 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               <p className="eyebrow">{paper.category}</p>
               <h1 className="mt-4 font-display text-4xl leading-[1.08] text-navy sm:text-5xl">{paper.title}</h1>
               <p className="mt-4 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">{paper.subtitle}</p>
+              {course && (
+                <p className="no-print mt-4 inline-flex flex-wrap items-center gap-x-2 border border-gold/50 bg-parchment-100 px-3 py-1.5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                  <Link href={COURSE_PATH} className="underline decoration-gold/60 underline-offset-4 transition-colors hover:text-oxblood">
+                    The baron’s course
+                  </Link>
+                  <span aria-hidden>·</span>
+                  <span>
+                    Paper {course.step.n} of {course.total}
+                  </span>
+                </p>
+              )}
               <p className="mt-5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-muted">
                 {paper.readingTime} read · Reviewed {monthYear(paper.reviewed)}
                 {/* Desktop only: phones already have the back link above the title. */}
@@ -100,6 +115,47 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
             </>
           ) : (
             <PaperBody html={paper.html} footnotesHtml={paper.footnotesHtml} sourcesHtml={paper.sourcesHtml} />
+          )}
+
+          {course && (
+            <nav aria-label="The baron’s course" className="no-print mt-12 max-w-[68ch] border-t border-gold/40 pt-6">
+              <CourseMarkRead slug={paper.slug} />
+              <p className="font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                <Link href={COURSE_PATH} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
+                  The baron’s course
+                </Link>{" "}
+                · Paper {course.step.n} of {course.total}
+              </p>
+              <ul className="mt-3 space-y-2 font-serif text-lg leading-snug text-navy">
+                {course.prev && (
+                  <li>
+                    <span className="text-ink-soft">Previous in the course: </span>
+                    <Link href={`/reading-room/${course.prev.slug}/`} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
+                      {course.prev.title}
+                    </Link>
+                  </li>
+                )}
+                {course.next ? (
+                  <li>
+                    <span className="text-ink-soft">Next in the course: </span>
+                    <Link href={`/reading-room/${course.next.slug}/`} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
+                      {course.next.title}
+                    </Link>
+                  </li>
+                ) : (
+                  <li>
+                    <span className="text-ink-soft">Then: </span>
+                    <Link href="/the-roll/" className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
+                      the Roll
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/pledge/" className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
+                      the Pledge
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </nav>
           )}
 
           {/* One quiet line at the end of each paper (owner 2026-10-20: "1 yes"; no ask on the homepage or in the menu

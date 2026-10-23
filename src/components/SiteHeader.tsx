@@ -171,7 +171,9 @@ export function SiteHeader() {
         </div>
 
         {/* Desktop nav row */}
-        <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-7 gap-y-2 px-8 pb-4 lg:flex lg:flex-wrap">
+        {/* Eight items since The Baron's Course (owner 2026-10-23): a little closer on laptop widths so the row stays on one
+            line at 1024px; wider screens keep the old spacing. */}
+        <nav className="mx-auto hidden max-w-6xl items-center justify-center gap-x-5 gap-y-2 px-6 pb-4 lg:flex lg:flex-wrap xl:gap-x-7 xl:px-8">
           {navMenu.map((item) => {
             const active = groupActive(item);
             const cls = `nav-link inline-flex items-center font-sans text-[0.7rem] font-medium uppercase tracking-[0.1em] transition-colors ${
