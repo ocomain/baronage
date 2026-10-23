@@ -1561,13 +1561,6 @@ export default function BaroniesExplainedPage() {
       <SectionSidebar items={NAV} anchorId="page-nav" wide />
       <Section tone="parchment">
         <Container size="prose">
-          {/* owner 2026-10-23: the course, from the papers chat */}
-          <p className="mb-8 text-center font-serif text-xl text-navy">
-            New to the baronage?{" "}
-            <Link href="/the-barons-course/" className="font-semibold underline decoration-gold/60 underline-offset-4 transition-colors hover:text-oxblood">
-              Start the course.
-            </Link>
-          </p>
           <nav
             id="page-nav"
             aria-label="On this page"
