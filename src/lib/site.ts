@@ -87,7 +87,7 @@ export const navLinks: NavLink[] = [
   { href: "/pledge", label: "The Pledge" },
   { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },
-  { href: "/support", label: "Support the Association" },
+  // Support the Association taken out of the footer too (owner 2026-10-23, after the header menu); the page stays live.
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
 ];
