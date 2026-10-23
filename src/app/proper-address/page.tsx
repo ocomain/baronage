@@ -648,7 +648,7 @@ export default function ProperAddressPage() {
                       h: 461,
                       alt: "Letter from the Lyon Clerk and Keeper of the Records, Malcolm R. Innes of Edingight, Court of the Lord Lyon, 14 October 1976, to Lt. Col. C. F. Irvine of Drum, M.C., beginning “Dear Drum”, with the words “you and your heirs were the undoubted barons of Drum” circled",
                       // owner 2026-10-23: "not just Lyon Clerk he went on to be lord lyon"; day and month dropped from both captions
-                      caption: "Malcolm Innes of Edingight, Lyon Clerk, later Lord Lyon, 1976: “Dear Drum”",
+                      caption: "Innes of Edingight, Lyon Clerk, later Lord Lyon, 1976: “Dear Drum”", // owner: "delete Malcolm"
                     },
                   ].map((l) => (
                     <figure key={l.file}>
