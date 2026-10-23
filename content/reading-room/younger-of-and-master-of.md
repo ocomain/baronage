@@ -6,6 +6,7 @@ meta_description: "A peer’s heir is “Master of”; a baron’s heir is “Yo
 category: Words & Usage
 published: 2026-10-13
 reviewed: 2026-10-13
+essential: true
 ---
 
 # “Younger of” and “Master of”: the record set straight

@@ -6,6 +6,7 @@ meta_description: "Laird and lord are the same word, and laird was never a rank.
 category: Words & Usage
 published: 2026-09-11
 reviewed: 2026-10-10
+essential: true
 ---
 
 # Lairds, lords and barons: what the words meant
