@@ -536,12 +536,13 @@ export default function HomePage() {
             <Reveal>
               <div className="relative mx-auto aspect-[4/5] w-full max-w-sm">
                 <div className="absolute inset-0 translate-x-3 translate-y-3 border border-gold/40" aria-hidden />
+                {/* owner 2026-10-23: the new photograph (renfrew.jpg), cropped to this 4:5 frame round the face */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/featured/william.webp"
+                  src="/featured/renfrew-2026-10.webp"
                   alt="Lord of the Isles and Baron of Renfrew"
-                  width={438}
-                  height={408}
+                  width={439}
+                  height={549}
                   loading="lazy"
                   decoding="async"
                   className="relative h-full w-full object-cover object-top shadow-[0_30px_60px_-30px_rgba(10,16,36,0.7)]"

@@ -134,11 +134,10 @@ export const navMenu: NavMenuItem[] = [
     label: "About",
     selfInList: true,
     selfLabel: "About & Nobility",
-    // Support page: owner 2026-10-19, "ok publish" (via the membership chat)
-    children: [
-      { href: "/governing-council", label: "Governing Council" },
-      { href: "/support", label: "Support the Association" },
-    ],
+    // Support the Association: added 2026-10-19 (owner, via the membership chat); taken out of the header menu
+    // 2026-10-23 (owner: "for now remove support the association page link from navigation"). The page stays live
+    // and in the footer.
+    children: [{ href: "/governing-council", label: "Governing Council" }],
   },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New Papers" }, // owner 2026-10-23: "New Papers"
