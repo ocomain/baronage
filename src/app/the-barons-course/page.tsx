@@ -1,33 +1,33 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { pageMetadata } from "@/lib/page-metadata";
 import { Container, Section } from "@/components/primitives";
-import { COURSE_NAME, COURSE_PATH } from "@/lib/course";
+import { CoursePanel } from "@/components/CoursePanel";
+import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PARTS, COURSE_PATH, courseStandfirst, courseSteps } from "@/lib/course";
 
 /**
- * The course's first address (live for a day as "The Baron's Course", 23 Oct 2026). Renamed Essential Reading by the
- * owner; this page stays so old links still arrive, kept out of search and sending the visitor on.
+ * The Baron's Course on its own page, for the header menu (owner 2026-10-23). The full syllabus lives here only; the
+ * Reading Room shows a one-line banner that leads to it. No hero band (owner: "remove the hero section from the top of
+ * the page"): the course's own panel carries the title.
  */
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: COURSE_NAME,
-  robots: { index: false, follow: true },
-  alternates: { canonical: COURSE_PATH },
-};
+  description: courseStandfirst(),
+  path: COURSE_PATH,
+  image: COURSE_OG_IMAGE,
+});
 
-export default function OldCoursePage() {
+export default function BaronsCoursePage() {
   return (
-    <>
-      <meta httpEquiv="refresh" content={`0; url=${COURSE_PATH}`} />
-      <Section tone="parchment">
-        <Container>
-          <p className="py-24 text-center font-serif text-xl text-navy">
-            Please continue to{" "}
-            <Link href={COURSE_PATH} className="text-oxblood underline decoration-oxblood/40 underline-offset-4">
-              {COURSE_NAME}
-            </Link>
-            .
-          </p>
-        </Container>
-      </Section>
-    </>
+    <Section tone="parchment" className="!pt-10 sm:!pt-14">
+      <Container>
+        <CoursePanel
+          title={COURSE_NAME}
+          steps={courseSteps}
+          parts={COURSE_PARTS}
+          standfirst={courseStandfirst()}
+          path={COURSE_PATH}
+        />
+      </Container>
+    </Section>
   );
 }

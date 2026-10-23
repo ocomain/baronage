@@ -11,7 +11,7 @@ import { Seal } from "./Seal";
 const NAME_STORE = "baronage.course.name";
 
 /**
- * Essential Reading: the certificate of reading (owner 2026-10-23, "more visual and gamified"). Offered once every
+ * The Baron's Course: the certificate of reading (owner 2026-10-23, "more visual and gamified"). Offered once every
  * paper is ticked on this device. A keepsake the reader prints for their own record, not a qualification: it says
  * so on its face, and nothing about it is recorded by the Association.
  */
@@ -21,7 +21,7 @@ export function CourseCertificate({
   countWord,
 }: {
   steps: Pick<CourseStep, "n" | "slug" | "title">[];
-  /** "Essential Reading" */
+  /** "The Baron’s Course" */
   name: string;
   /** "twelve" */
   countWord: string;

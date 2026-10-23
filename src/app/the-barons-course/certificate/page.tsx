@@ -5,7 +5,7 @@ import { CourseCertificate } from "@/components/CourseCertificate";
 import { COURSE_NAME, COURSE_PATH, courseSteps, numberWord } from "@/lib/course";
 
 /**
- * Essential Reading: the certificate of reading, for a reader who has ticked every paper on this device (owner
+ * The Baron's Course: the certificate of reading, for a reader who has ticked every paper on this device (owner
  * 2026-10-23). Out of search and out of the sitemap; the course page and the Reading Room banner lead here once
  * every paper is read.
  */

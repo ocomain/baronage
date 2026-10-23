@@ -1,5 +1,5 @@
 /**
- * Essential Reading (the course): which papers this reader has read, kept on this device only (localStorage). No account and
+ * The Baron's Course: which papers this reader has read, kept on this device only (localStorage). No account and
  * nothing sent anywhere. Storage can be missing or blocked (private windows, cleared site data), so every read and
  * write is guarded and the course simply starts unread.
  */

@@ -81,7 +81,7 @@ export default function ReadingRoomPage() {
               , our FAQ answering the questions people ask most about baronial titles.
             </p>
           </aside>
-          {/* Essential Reading, the course: one line here, the full list on its own page (owner 2026-10-23) */}
+          {/* The Baron's Course: one line here, the full list on its own page (owner 2026-10-23) */}
           <div className="mb-12">
             <CourseBanner
               steps={courseSteps.map(({ n, slug, title }) => ({ n, slug, title }))}

@@ -574,7 +574,7 @@ html {
   }
 }
 
-/* The Essential Reading booklet (/essential-reading/print/): the title page with its contents, then each paper from
+/* The Baron's Course booklet (/the-barons-course/print/): the title page with its contents, then each paper from
    a new page, in the papers' own print style above. */
 @media print {
   .booklet-cover > div:first-child { padding-top: 55mm; }
@@ -582,7 +582,11 @@ html {
   .booklet-cover img { height: 96pt; width: auto; }
   .booklet-contents { break-before: page; border-top: 0 !important; margin-top: 0 !important; padding-top: 0 !important; }
   .booklet-contents li { break-inside: avoid; }
-  .booklet-part { break-inside: avoid; margin-top: 9pt; }
+  .booklet-contents ol { margin-top: 3pt !important; }
+  .booklet-contents ol > li + li { margin-top: 5pt !important; }
+  .booklet-contents li .text-xl { font-size: 13.5pt; line-height: 1.2; }
+  .booklet-contents li .text-base { font-size: 10.5pt; line-height: 1.3; }
+  .booklet-part { break-inside: avoid; margin-top: 11pt !important; }
   .booklet-box { border-color: #000 !important; }
   .booklet-paper { break-before: page; margin-top: 0 !important; padding-top: 0 !important; border-top: 0 !important; }
   .booklet-paper .booklet-title { font-size: 22pt; line-height: 1.1; color: #000; margin-top: 6pt; }
@@ -592,7 +596,7 @@ html {
   .booklet-end { border-color: #999 !important; break-inside: avoid; }
 }
 
-/* The certificate of reading (/essential-reading/certificate/): one A4 page, its gold frame kept. */
+/* The certificate of reading (/the-barons-course/certificate/): one A4 page, its gold frame kept. */
 @media print {
   .certificate { max-width: none !important; border-color: #b08a3a !important; }
   .certificate__inner { min-height: 250mm !important; padding: 26mm 16mm 12mm !important; border-color: #c9a24b !important; }

@@ -1,10 +1,10 @@
 import { readingRoomPapers } from "@/generated/reading-room";
+import { SITE_URL } from "@/lib/site";
 
 /**
- * Essential Reading: a numbered reading series through the Reading Room (owner 2026-10-23, "approved, yes this is
- * good"; order and lesson lines from the papers chat, word for word). Called "The Baron's Course" until the owner took
- * the name "Essential Reading" the same day, to match the tags on the cards (its first address, /the-barons-course/,
- * forwards here). This list is the one source of truth for the
+ * The Baron's Course: a numbered reading series through the Reading Room (owner 2026-10-23, "approved, yes this is
+ * good"; order and lesson lines from the papers chat, word for word). Called "Essential Reading" for an afternoon,
+ * then "call it The Baron's Course" (owner, same day); /essential-reading/ forwards here. This list is the one source of truth for the
  * course panel, the course page, the band and the previous/next links on each paper.
  *
  * A step whose paper is not yet in the Reading Room is skipped, and the numbering and the count follow what is
@@ -83,8 +83,15 @@ export const courseSteps: CourseStep[] = STEPS.filter((s) => published.has(s.slu
   return { n: i + 1, part: s.part, slug: s.slug, title: p.title, lesson: s.lesson, readingTime: p.readingTime };
 });
 
-export const COURSE_PATH = "/essential-reading/";
-export const COURSE_NAME = "Essential Reading";
+export const COURSE_PATH = "/the-barons-course/";
+export const COURSE_NAME = "The Baron’s Course";
+/** The link-preview card (app/og/course), so a shared link shows the course, not the site's general picture. */
+export const COURSE_OG_IMAGE = {
+  url: `${SITE_URL}/og/course/the-barons-course.png`,
+  width: 1200,
+  height: 630,
+  alt: "The Baron’s Course: twelve papers from the Reading Room of the Baronage of Scotland Association",
+};
 
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
   "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
