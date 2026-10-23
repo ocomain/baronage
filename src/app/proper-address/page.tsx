@@ -634,10 +634,11 @@ export default function ProperAddressPage() {
                 <div className="mx-auto mt-6 grid max-w-[26rem] gap-8">
                   {[
                     {
-                      // owner 2026-10-23: cropped from the middle of the arms down to the letter's first line
-                      file: "lyon-letter-2013-line",
+                      // owner 2026-10-23: from just above the Lyon arms ("doesn't look as good without seeing the
+                      // lyon coat of arms") down to the letter's first line
+                      file: "lyon-letter-2013-arms",
                       w: 640,
-                      h: 500,
+                      h: 587,
                       alt: "Letter of the Court of the Lord Lyon, 8 October 2013, to Jean-Guy Philip Boisserolles de Saint-Julien, Baron of Hartsyde, beginning “Dear Baron Hartsyde”",
                       caption: "Lyon Office, 2013: “Dear Baron Hartsyde”",
                     },
