@@ -374,7 +374,7 @@ export default function ProperAddressPage() {
                   >
                     Where “The Much Honoured” comes from
                   </Link>
-                  . A baron’s forms run parallel to a duke’s, each at its own level; the duke’s are as the same guide gives them:
+                  . A baron’s forms run parallel to a duke’s, each at its own level:
                 </p>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
@@ -493,8 +493,15 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  Where the territorial designation and the barony differ, both are written, as the Lyon Court’s
-                  Gazette notices do: “[Surname] of Kildonan, Baron of Inverness”. They may also be joined socially:
+                  Where the territorial designation and the barony differ, both are written, as the Lyon Court’s{" "}
+                  {/* owner 2026-10-23: linked to the paper */}
+                  <Link
+                    href="/reading-room/barons-in-the-gazette/"
+                    className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood"
+                  >
+                    Gazette notices
+                  </Link>{" "}
+                  do: “[Surname] of Kildonan, Baron of Inverness”. They may also be joined socially:
                   Lord Lyon Innes of Learney, writing in 1945, called the petitioner in the Esslemont case, Gordon of
                   Hallhead, “The Baron of Hallhead-Esslemont”, though the Lyon Register records him as “Baron of
                   Esslemont”. The recorded title stays “Baron of [Barony]”; the wife takes the designation, as a laird’s
@@ -601,10 +608,10 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="salutation" title="Salutation in Letters">
                 <P>
-                  {/* owner 2026-10-23 ("yes" to the capital-or-lower-case sentence, not "inconsequential") */}
+                  {/* owner 2026-10-23: "A lower-case “b” for baron is equally correct" (his wording, after "inconsequential"
+                      and "A capital or a lower-case") */}
                   When beginning a letter to a Scottish Baron, the salutation should reflect the dignity of the title. A
-                  capital or a lower-case “b”
-                  for baron is equally correct. The correct salutation is:
+                  lower-case “b” for baron is equally correct. The correct salutation is:
                 </P>
                 <Forms>
                   <F>
