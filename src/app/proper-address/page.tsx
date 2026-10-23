@@ -608,10 +608,10 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="salutation" title="Salutation in Letters">
                 <P>
-                  {/* owner 2026-10-23: "A lower-case “b” for baron is equally correct" (his wording, after "inconsequential"
-                      and "A capital or a lower-case") */}
+                  {/* owner 2026-10-23: "A lower-case “b” for baron is inconsequential" (he went back to "inconsequential":
+                      "I think inconsequential is better personally") */}
                   When beginning a letter to a Scottish Baron, the salutation should reflect the dignity of the title. A
-                  lower-case “b” for baron is equally correct. The correct salutation is:
+                  lower-case “b” for baron is inconsequential. The correct salutation is:
                 </P>
                 <Forms>
                   <F>
