@@ -1026,65 +1026,7 @@ export default function ProperAddressPage() {
                   ordinary use.<Footnote n={15}>{RECORDS_SOURCE}</Footnote>
                 </P>
                 <DigitalAddressSimulator />
-                <p className="mt-10 font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-navy/70">Field by field</p>
-                <div className="mt-4 overflow-x-auto">
-                  <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
-                    <thead>
-                      <tr className="border-b border-navy/20 text-left font-sans text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gold-deep">
-                        <th className="py-2 pr-4">Field</th>
-                        <th className="py-2 pr-4">Enter</th>
-                        <th className="py-2">So that it reads</th>
-                      </tr>
-                    </thead>
-                    <tbody className="[&_td]:border-b [&_td]:border-parchment-300/70 [&_td]:py-3 [&_td]:pr-4 [&_td]:align-top">
-                      <tr>
-                        <td>Title, drop-down</td>
-                        <td><S>Baron</S><Or /><S>Baroness</S><Or /><S>Lady</S></td>
-                        <td>Baron John of Inverness</td>
-                      </tr>
-                      <tr>
-                        <td>Title, free text</td>
-                        <td><S>The Much Honoured</S><Or /><S>The Baron of Inverness</S></td>
-                        <td>The Much Honoured John Smith, Baron of Inverness</td>
-                      </tr>
-                      <tr>
-                        <td>Title, only Mr / Ms</td>
-                        <td><S>Mr</S>, with <S>The Baron of Inverness</S> in the surname</td>
-                        <td>Mr John The Baron of Inverness <N>(worst case)</N></td>
-                      </tr>
-                      <tr>
-                        <td>First name</td>
-                        <td><S>John</S></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Surname</td>
-                        <td>
-                          <S>of Inverness</S><Or /><S>Smith of Inverness</S> after a drop-down title;{" "}
-                          <S>Smith, Baron of Inverness</S> after a free-text title
-                        </td>
-                        <td>Dear Baron of Inverness <N>(the greeting a system builds from title and surname)</N></td>
-                      </tr>
-                      <tr>
-                        <td>Display or full name</td>
-                        <td>
-                          <S>The Much Hon Baron of Inverness</S><Or /><S>The Baron of Inverness</S><Or /><S>John, Baron of Inverness</S><Or /><S>The Baron</S>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Correspondence</td>
-                        <td><S>Dear Baron of Inverness</S><Or /><S>Dear The Much Hon. Baron of Inverness</S></td>
-                        <td>Never Mr Smith, Baron Smith or Baron Inverness</td>
-                      </tr>
-                      <tr>
-                        <td>Email signature</td>
-                        <td>From-name <S>The Baron</S>; signature <S>John, Baron of Inverness</S> over <S>The Much Honoured Baron of Inverness</S></td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
                 <P>
                   By following these guidelines, you can ensure that baronial titles are correctly represented and
                   respected in digital systems, maintaining the dignity and historical heritage of the title.
