@@ -31,7 +31,7 @@ export default function ReadingRoomPage() {
         readingRoomCategories.indexOf(a.category) - readingRoomCategories.indexOf(b.category) ||
         (editorial.get(a.slug) ?? 0) - (editorial.get(b.slug) ?? 0),
     )
-    .map(({ slug, title, subtitle, category, readingTime, published, gated }) => ({
+    .map(({ slug, title, subtitle, category, readingTime, published, gated, essential }) => ({
       slug,
       title,
       subtitle,
@@ -39,6 +39,7 @@ export default function ReadingRoomPage() {
       readingTime,
       published,
       gated: gated === "full",
+      essential,
     }));
   // The subject headings, in the owner's order (10 Oct 2026); a subject not named here goes last.
   const SUBJECT_ORDER = ["Heritage & Sources", "Words & Usage", "The Lyon Court", "Robes & Insignia", "Law & Statutes"];

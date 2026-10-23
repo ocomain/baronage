@@ -6,6 +6,7 @@ meta_description: "Scottish barons sat in the House of Commons from 1707, named 
 category: Law & Statutes
 published: 2026-10-23
 reviewed: 2026-10-23
+essential: true
 ---
 
 # Did Scottish barons sit in the House of Commons? Yes, but never as “Baron of X”

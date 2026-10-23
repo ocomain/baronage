@@ -14,6 +14,8 @@ export type PaperCard = {
   readingTime: string;
   published: string;
   gated: boolean;
+  /** "Essential reading" (owner 2026-10-23), from the paper's front-matter. */
+  essential: boolean;
 };
 
 const ALL = "All papers";
@@ -82,10 +84,11 @@ export function ReadingRoomGrid({
       <ul aria-label="Papers" className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
         {shelf.map((p) => (
           <li key={p.slug} hidden={active !== ALL && p.category !== active}>
-            {/* Phones: a compact row (sheet left, text right). From sm up: a small framed file. */}
+            {/* Phones: a compact row (sheet left, text right). From sm up: a small framed file, with room at the top for
+                the Featured and Essential reading tags (pt-11, 2026-10-23). */}
             <Link
               href={`/reading-room/${p.slug}`}
-              className="group relative flex h-full items-center gap-4 border border-parchment-300/70 bg-parchment-50 p-4 text-left shadow-[0_14px_30px_-26px_rgba(10,16,36,0.5)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_22px_40px_-26px_rgba(10,16,36,0.6)] sm:flex-col sm:items-center sm:gap-0 sm:px-4 sm:pb-5 sm:pt-7 sm:text-center"
+              className="group relative flex h-full items-center gap-4 border border-parchment-300/70 bg-parchment-50 p-4 text-left shadow-[0_14px_30px_-26px_rgba(10,16,36,0.5)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_22px_40px_-26px_rgba(10,16,36,0.6)] sm:flex-col sm:items-center sm:gap-0 sm:px-4 sm:pb-5 sm:pt-11 sm:text-center"
             >
               <span
                 className="pointer-events-none absolute inset-2 hidden border border-gold/0 transition-colors duration-300 group-hover:border-gold/25 sm:block"
@@ -96,6 +99,12 @@ export function ReadingRoomGrid({
                 {p.slug === featuredSlug && (
                   <span className="mb-1.5 self-start bg-gold px-1.5 py-0.5 font-sans text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-navy-deep sm:absolute sm:left-3 sm:top-3 sm:mb-0 sm:px-2 sm:py-1 sm:text-[0.55rem]">
                     Featured
+                  </span>
+                )}
+                {/* "Essential reading" (owner 2026-10-23): navy, so it is not mistaken for the gold "Featured" tag */}
+                {p.essential && (
+                  <span className="mb-1.5 self-start whitespace-nowrap bg-navy px-1.5 py-0.5 font-sans text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-gold-light sm:absolute sm:right-3 sm:top-3 sm:mb-0 sm:px-2 sm:py-1 sm:text-[0.55rem]">
+                    Essential reading
                   </span>
                 )}
                 <span className="font-sans text-[0.56rem] font-semibold uppercase tracking-[0.18em] text-gold-deep sm:mt-4">

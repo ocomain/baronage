@@ -175,6 +175,9 @@ async function buildPaper(file, dir = CONTENT_DIR) {
   if (data.emblem && !data.emblem.startsWith("/images/")) throw new Error(`${file}: emblem must be a path under /images`);
   if (data.gated && !["true", "part"].includes(data.gated)) throw new Error(`${file}: gated must be "true" or "part"`);
   const gated = data.gated === "true" ? "full" : data.gated === "part" ? "part" : null;
+  // "Essential reading" tag on the Reading Room card (owner 2026-10-23); front-matter `essential: true`.
+  if (data.essential && data.essential !== "true") throw new Error(`${file}: essential must be "true" or left out`);
+  const essential = data.essential === "true";
 
   // Drop a leading HTML comment (implementation notes) and a leading H1 that duplicates the title.
   let body = fmBody.replace(/^\s*<!--[\s\S]*?-->\s*/, "");
@@ -214,6 +217,7 @@ async function buildPaper(file, dir = CONTENT_DIR) {
     reviewed,
     emblem: data.emblem || null,
     gated,
+    essential,
     html,
     sourcesHtml,
     footnotesHtml,
@@ -300,6 +304,8 @@ export type ReadingRoomPaper = {
    * passages. Either way the full text is in public/sealed/<slug>.json.
    */
   gated: "full" | "part" | null;
+  /** Shown with an "Essential reading" tag on its Reading Room card (front-matter \`essential: true\`). */
+  essential: boolean;
   html: string;
   sourcesHtml: string;
   footnotesHtml: string;

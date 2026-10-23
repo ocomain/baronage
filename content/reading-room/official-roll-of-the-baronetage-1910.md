@@ -6,6 +6,7 @@ meta_description: "How a Royal Warrant and an official Roll of 1910 restored a d
 category: Heritage & Sources
 published: 2026-09-19
 reviewed: 2026-10-12
+essential: true
 ---
 
 # A dignity in disarray: the baronets’ Roll of 1910

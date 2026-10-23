@@ -6,6 +6,7 @@ meta_description: "English law calls everyone below a peer a commoner. Scots law
 category: Law & Statutes
 published: 2026-10-23
 reviewed: 2026-10-23
+essential: true
 ---
 
 # Is a Scottish baron a commoner? Not in Scots law
