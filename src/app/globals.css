@@ -482,6 +482,9 @@ html {
 @page { margin: 18mm 17mm 20mm; }
 @media print {
   .reveal-hidden { opacity: 1 !important; transform: none !important; }
+  /* The text-size switch is pinned to the window, so on paper it repeated at the foot of every page (and its shadow
+     at the top of the next); the first-visit question likewise. Neither belongs on paper. */
+  .ez-switch, .ez-ask { display: none !important; }
 
   /* The canvas is parchment on screen (html rule above); on paper it must be white, or the unused part of the
      last page prints as a tinted block. */
@@ -569,6 +572,35 @@ html {
   .paper-print .paper-sources a[href^="/"]::after {
     content: " <www.baronage.com" attr(href) ">"; font-size: 0.85em; color: #333; overflow-wrap: anywhere;
   }
+}
+
+/* The Essential Reading booklet (/essential-reading/print/): the title page with its contents, then each paper from
+   a new page, in the papers' own print style above. */
+@media print {
+  .booklet-cover > div:first-child { padding-top: 55mm; }
+  .booklet-cover h1 { font-size: 34pt; margin-top: 14pt; }
+  .booklet-cover img { height: 96pt; width: auto; }
+  .booklet-contents { break-before: page; border-top: 0 !important; margin-top: 0 !important; padding-top: 0 !important; }
+  .booklet-contents li { break-inside: avoid; }
+  .booklet-part { break-inside: avoid; margin-top: 9pt; }
+  .booklet-box { border-color: #000 !important; }
+  .booklet-paper { break-before: page; margin-top: 0 !important; padding-top: 0 !important; border-top: 0 !important; }
+  .booklet-paper .booklet-title { font-size: 22pt; line-height: 1.1; color: #000; margin-top: 6pt; }
+  .booklet-paper header > p:nth-of-type(2) { font-size: 13.5pt; line-height: 1.35; margin-top: 8pt; }
+  .booklet-paper .paper-print__source { text-transform: none; letter-spacing: 0.04em; font-weight: 400; }
+  .booklet-paper .sealed-gate { border-left: 0; border-top: 0.5pt solid #999; padding: 8pt 0 0; font-size: 11pt; }
+  .booklet-end { border-color: #999 !important; break-inside: avoid; }
+}
+
+/* The certificate of reading (/essential-reading/certificate/): one A4 page, its gold frame kept. */
+@media print {
+  .certificate { max-width: none !important; border-color: #b08a3a !important; }
+  .certificate__inner { min-height: 250mm !important; padding: 26mm 16mm 12mm !important; border-color: #c9a24b !important; }
+  .certificate__inner img { height: 30mm; width: auto; }
+  .certificate__title { font-size: 34pt !important; color: #0a1024 !important; }
+  .certificate__name { font-size: 26pt !important; color: #6e1423 !important; }
+  .certificate__course { font-size: 24pt !important; color: #0a1024 !important; }
+  .certificate__note { font-size: 9.5pt !important; }
 }
 
 /* Background films (.bg-film): never show the browser's own play button. iOS draws one over a paused

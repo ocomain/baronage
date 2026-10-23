@@ -4,25 +4,27 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { CourseStep } from "@/lib/course";
 import { COURSE_EVENT, readProgress, writeProgress } from "@/lib/courseProgress";
+import { CourseSeal, PartSeal } from "./CourseSeal";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 
 /**
- * The Baron's Course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
+ * Essential Reading, the course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
  * and a tick. Two columns of parts on a computer; one numbered rail on a phone. Ticks are kept on this device only
- * (lib/courseProgress); without storage everything shows unread and still works.
+ * (lib/courseProgress); without storage everything shows unread and still works. A wax seal fills as papers are
+ * read, each finished part gets a small seal, and the last tick leads to the certificate (owner 2026-10-23).
  */
 export function CoursePanel({
   steps,
   parts,
-  heading,
   standfirst,
+  path,
 }: {
   steps: CourseStep[];
   parts: readonly string[];
-  /** Shown on the Reading Room; left out on the course's own page, which has the title as its h1. */
-  heading?: string;
   standfirst: string;
+  /** The course page, "/essential-reading/": the booklet and the certificate sit under it. */
+  path: string;
 }) {
   const [read, setRead] = useState<string[]>([]);
   // The current list, so quick taps in a row each start from the latest (state can lag a render behind).
@@ -53,41 +55,67 @@ export function CoursePanel({
 
   return (
     <section
-      aria-label="The baron’s course"
+      aria-label="Essential Reading"
       className="mx-auto max-w-5xl border border-gold/50 bg-parchment-50 px-5 py-8 shadow-[0_22px_48px_-34px_rgba(10,16,36,0.55)] sm:px-10 sm:py-10"
     >
-      {heading && <h2 className="font-display text-3xl leading-tight text-navy sm:text-[2.1rem]">{heading}</h2>}
-      <p className={`max-w-3xl font-serif text-lg italic leading-relaxed text-ink-soft sm:text-xl ${heading ? "mt-3" : ""}`}>
-        {standfirst}
-      </p>
+      <div className="flex items-start gap-5 sm:gap-7">
+        <CourseSeal done={done} total={steps.length} size={92} className="mt-1 hidden sm:block" />
+        <CourseSeal done={done} total={steps.length} size={68} className="mt-1 sm:hidden" />
+        <div className="min-w-0">
+          <p className="max-w-3xl font-serif text-lg italic leading-relaxed text-ink-soft sm:text-xl">{standfirst}</p>
 
-      {/* Progress and the way back in: only once something has been read on this device */}
-      {done > 0 && (
-        <p className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-muted">
-          <span>
-            {done} of {steps.length} read
-          </span>
-          {nextUnread ? (
-            <Link
-              href={`/reading-room/${nextUnread.slug}/`}
-              className="text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood"
-            >
-              Resume: {nextUnread.n}. {nextUnread.title} →
-            </Link>
-          ) : (
-            <span className="text-gold-deep">Course complete</span>
+          {/* Progress and the way back in: only once something has been read on this device */}
+          {done > 0 && (
+            <p className="mt-4 flex flex-wrap items-baseline gap-x-4 gap-y-1 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-muted">
+              <span>
+                {done} of {steps.length} read
+              </span>
+              {nextUnread ? (
+                <Link
+                  href={`/reading-room/${nextUnread.slug}/`}
+                  className="text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood"
+                >
+                  Resume: {nextUnread.n}. {nextUnread.title} →
+                </Link>
+              ) : (
+                <Link
+                  href={`${path}certificate/`}
+                  className="text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood"
+                >
+                  All read: your certificate of reading →
+                </Link>
+              )}
+            </p>
           )}
-        </p>
-      )}
+
+          {/* The booklet: every paper in order, to print or keep as a PDF */}
+          <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <Link
+              href={`${path}print/`}
+              className="inline-flex min-h-[2.75rem] items-center gap-2.5 border-2 border-navy px-4 py-2 font-sans text-[0.95rem] font-semibold text-navy transition-colors hover:border-oxblood hover:text-oxblood"
+            >
+              <svg aria-hidden viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 9V3h12v6" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <path d="M6 14h12v7H6z" />
+              </svg>
+              Print the course
+            </Link>
+            <span className="font-serif text-base italic text-ink-soft">every paper in one booklet, to print or to email as a PDF</span>
+          </p>
+        </div>
+      </div>
 
       <div className="mt-8 grid gap-x-12 gap-y-9 md:grid-cols-2">
         {parts.map((partTitle, pi) => {
           const inPart = steps.filter((s) => s.part === pi + 1);
           if (!inPart.length) return null;
+          const partRead = inPart.every((s) => read.includes(s.slug));
           return (
             <div key={partTitle} className="break-inside-avoid">
-              <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-deep">
+              <p className="flex min-h-[22px] items-center gap-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-deep">
                 Part {ROMAN[pi]} · {partTitle}
+                {partRead && <PartSeal />}
               </p>
               {/* the rail: a thin gold line through the numerals */}
               <ol className="relative mt-4 space-y-6 before:absolute before:bottom-5 before:left-5 before:top-5 before:w-px before:bg-gold/40">

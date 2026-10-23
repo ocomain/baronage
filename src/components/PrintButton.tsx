@@ -4,7 +4,7 @@
  * Opens the browser's print dialog (which also offers "Save as PDF"). A large, plain,
  * high-contrast button: many readers of the papers are older. Hidden on paper.
  */
-export function PrintButton({ className = "" }: { className?: string }) {
+export function PrintButton({ className = "", label = "Print this paper" }: { className?: string; label?: string }) {
   return (
     <button
       type="button"
@@ -16,7 +16,7 @@ export function PrintButton({ className = "" }: { className?: string }) {
         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
         <path d="M6 14h12v7H6z" />
       </svg>
-      Print this paper
+      {label}
     </button>
   );
 }

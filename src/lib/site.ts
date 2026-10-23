@@ -142,8 +142,9 @@ export const navMenu: NavMenuItem[] = [
   },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New Papers" }, // owner 2026-10-23: "New Papers"
-  // owner 2026-10-23: "you could even have this as a nav menu itself in addition to reading room"
-  { href: "/the-barons-course", label: "The Baron’s Course" },
+  // owner 2026-10-23: "you could even have this as a nav menu itself in addition to reading room"; renamed from
+  // "The Baron’s Course" the same day (owner: "pls proceed" on the name Essential Reading)
+  { href: "/essential-reading", label: "Essential Reading" },
   // Back in the main row, right of Reading Room (owner 2026-10-06: there is space again on desktop).
   { href: "/members", label: "Member’s Chamber" },
 ];

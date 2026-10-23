@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState, type ReactNode } from "react";
 import { EmailSignup } from "./EmailSignup";
 import { PaperBody } from "./PaperBody";
 import { PrintButton } from "./PrintButton";
@@ -53,6 +53,7 @@ export function SealedPaper({
   html,
   footnotesHtml,
   sourcesHtml,
+  lockedNote,
 }: {
   slug: string;
   /** "full": only the opening is public. "part": the paper is public except for some passages. */
@@ -60,6 +61,8 @@ export function SealedPaper({
   html: string;
   footnotesHtml: string;
   sourcesHtml: string;
+  /** In the Essential Reading booklet: a printed note in place of the sign-up box, and no print button of its own. */
+  lockedNote?: ReactNode;
 }) {
   const [full, setFull] = useState<FullPaper | null>(null);
   const [badLink, setBadLink] = useState(false);
@@ -106,12 +109,22 @@ export function SealedPaper({
     return (
       <>
         <PaperBody html={full.html} footnotesHtml={full.footnotesHtml} sourcesHtml={full.sourcesHtml} />
-        {mode === "full" && (
+        {mode === "full" && !lockedNote && (
           <p className="no-print mt-12">
             <PrintButton />
           </p>
         )}
       </>
+    );
+  }
+
+  if (lockedNote) {
+    return (
+      <PaperBody html={html} footnotesHtml={footnotesHtml} sourcesHtml={sourcesHtml}>
+        <aside className="sealed-gate mt-10 max-w-[68ch] border-l-4 border-gold bg-parchment-100 px-6 py-4 font-serif text-lg leading-relaxed text-navy">
+          {lockedNote}
+        </aside>
+      </PaperBody>
     );
   }
 

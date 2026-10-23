@@ -8,7 +8,7 @@ import { PaperNotePopups } from "./PaperNotePopups";
 import { SealedPaper } from "./SealedPaper";
 import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
-import { COURSE_PATH, courseStepFor } from "@/lib/course";
+import { COURSE_NAME, COURSE_PATH, courseStepFor } from "@/lib/course";
 import { CourseMarkRead } from "./CourseMarkRead";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
@@ -31,7 +31,7 @@ export function monthYear(iso: string) {
  * print rules for .paper-print in globals.css.
  */
 export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; related: ReadingRoomPaper[] }) {
-  // The Baron's Course (owner 2026-10-23): papers in it carry a band under the title and previous/next at the foot.
+  // Essential Reading, the course (owner 2026-10-23): papers in it carry a band under the title and previous/next at the foot.
   const course = courseStepFor(paper.slug);
   return (
     <Section tone="parchment" className="!py-12 sm:!py-16 print:!py-0">
@@ -54,7 +54,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               {course && (
                 <p className="no-print mt-4 inline-flex flex-wrap items-center gap-x-2 border border-gold/50 bg-parchment-100 px-3 py-1.5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                   <Link href={COURSE_PATH} className="underline decoration-gold/60 underline-offset-4 transition-colors hover:text-oxblood">
-                    The baron’s course
+                    {COURSE_NAME}
                   </Link>
                   <span aria-hidden>·</span>
                   <span>
@@ -118,18 +118,18 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
           )}
 
           {course && (
-            <nav aria-label="The baron’s course" className="no-print mt-12 max-w-[68ch] border-t border-gold/40 pt-6">
+            <nav aria-label={COURSE_NAME} className="no-print mt-12 max-w-[68ch] border-t border-gold/40 pt-6">
               <CourseMarkRead slug={paper.slug} />
               <p className="font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 <Link href={COURSE_PATH} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
-                  The baron’s course
+                  {COURSE_NAME}
                 </Link>{" "}
                 · Paper {course.step.n} of {course.total}
               </p>
               <ul className="mt-3 space-y-2 font-serif text-lg leading-snug text-navy">
                 {course.prev && (
                   <li>
-                    <span className="text-ink-soft">Previous in the course: </span>
+                    <span className="text-ink-soft">Previous paper: </span>
                     <Link href={`/reading-room/${course.prev.slug}/`} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
                       {course.prev.title}
                     </Link>
@@ -137,7 +137,7 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                 )}
                 {course.next ? (
                   <li>
-                    <span className="text-ink-soft">Next in the course: </span>
+                    <span className="text-ink-soft">Next paper: </span>
                     <Link href={`/reading-room/${course.next.slug}/`} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
                       {course.next.title}
                     </Link>
