@@ -3,7 +3,7 @@ title: "Is a Scottish baron a commoner? Not in Scots law"
 subtitle: "Why “anyone who is not a peer is a commoner” is English law, and what Scots law says about the baron before and after the Union"
 slug: is-a-scottish-baron-a-commoner
 meta_description: "English law calls everyone below a peer a commoner. Scots law counted barons, knights and gentlemen among the nobility, before and after the Union."
-category: Words & Usage
+category: Law & Statutes
 published: 2026-10-23
 reviewed: 2026-10-23
 ---
