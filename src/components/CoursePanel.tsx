@@ -9,21 +9,24 @@ import { CourseSeal, PartSeal } from "./CourseSeal";
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 
 /**
- * Essential Reading, the course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
+ * The Baron's Course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
  * and a tick. Two columns of parts on a computer; one numbered rail on a phone. Ticks are kept on this device only
  * (lib/courseProgress); without storage everything shows unread and still works. A wax seal fills as papers are
  * read, each finished part gets a small seal, and the last tick leads to the certificate (owner 2026-10-23).
  */
 export function CoursePanel({
+  title,
   steps,
   parts,
   standfirst,
   path,
 }: {
+  /** The page's h1: the course page has no hero band (owner 2026-10-23). */
+  title: string;
   steps: CourseStep[];
   parts: readonly string[];
   standfirst: string;
-  /** The course page, "/essential-reading/": the booklet and the certificate sit under it. */
+  /** The course page, "/the-barons-course/": the booklet and the certificate sit under it. */
   path: string;
 }) {
   const [read, setRead] = useState<string[]>([]);
@@ -55,14 +58,17 @@ export function CoursePanel({
 
   return (
     <section
-      aria-label="Essential Reading"
+      aria-labelledby="course-title"
       className="mx-auto max-w-5xl border border-gold/50 bg-parchment-50 px-5 py-8 shadow-[0_22px_48px_-34px_rgba(10,16,36,0.55)] sm:px-10 sm:py-10"
     >
-      <div className="flex items-start gap-5 sm:gap-7">
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:gap-7">
         <CourseSeal done={done} total={steps.length} size={92} className="mt-1 hidden sm:block" />
         <CourseSeal done={done} total={steps.length} size={68} className="mt-1 sm:hidden" />
         <div className="min-w-0">
-          <p className="max-w-3xl font-serif text-lg italic leading-relaxed text-ink-soft sm:text-xl">{standfirst}</p>
+          <h1 id="course-title" className="font-display text-4xl leading-[1.05] text-navy sm:text-5xl">
+            {title}
+          </h1>
+          <p className="mt-3 max-w-3xl font-serif text-lg italic leading-relaxed text-ink-soft sm:text-xl">{standfirst}</p>
 
           {/* Progress and the way back in: only once something has been read on this device */}
           {done > 0 && (

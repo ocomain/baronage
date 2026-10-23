@@ -1,5 +1,5 @@
 /**
- * Essential Reading: a wax seal whose gold ring fills as the papers are read (owner 2026-10-23, "more visual and
+ * The Baron's Course: a wax seal whose gold ring fills as the papers are read (owner 2026-10-23, "more visual and
  * gamified"). The count stands in the wax; when every paper is read the ring closes and the Association's seal takes
  * the count's place. Drawn in SVG, so it is sharp at any size and costs no image.
  */

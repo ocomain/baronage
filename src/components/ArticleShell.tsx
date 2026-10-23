@@ -31,7 +31,7 @@ export function monthYear(iso: string) {
  * print rules for .paper-print in globals.css.
  */
 export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; related: ReadingRoomPaper[] }) {
-  // Essential Reading, the course (owner 2026-10-23): papers in it carry a band under the title and previous/next at the foot.
+  // The Baron's Course (owner 2026-10-23): papers in it carry a band under the title and previous/next at the foot.
   const course = courseStepFor(paper.slug);
   return (
     <Section tone="parchment" className="!py-12 sm:!py-16 print:!py-0">

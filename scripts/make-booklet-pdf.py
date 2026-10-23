@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-The Essential Reading booklet as a PDF to download or attach to an email (owner 2026-10-23: "can then be emailed out
+The Baron's Course booklet as a PDF to download or attach to an email (owner 2026-10-23: "can then be emailed out
 also"). Run on this Mac after `npm run build`, whenever a course paper changes, then build again and commit the PDF:
 
     python3 scripts/make-booklet-pdf.py
 
-It serves out/ on a spare port, prints /essential-reading/print/ with Chrome in a fresh profile (no subscriber key,
+It serves out/ on a spare port, prints /the-barons-course/print/ with Chrome in a fresh profile (no subscriber key,
 so subscriber passages are left out, as on the public page), shrinks the pictures (Chrome stores them uncompressed:
-30 MB) and writes public/essential-reading/Essential-Reading-Baronage-of-Scotland-Association.pdf. Needs pypdf and
+30 MB) and writes public/the-barons-course/The-Barons-Course-Baronage-of-Scotland-Association.pdf. Needs pypdf and
 Pillow (both on this Mac). Not run on GitHub.
 """
 import functools
@@ -23,7 +23,7 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "out")
-DEST = os.path.join(ROOT, "public", "essential-reading", "Essential-Reading-Baronage-of-Scotland-Association.pdf")
+DEST = os.path.join(ROOT, "public", "the-barons-course", "The-Barons-Course-Baronage-of-Scotland-Association.pdf")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PORT = 4419
 
@@ -34,8 +34,8 @@ class Quiet(http.server.SimpleHTTPRequestHandler):
 
 
 def main():
-    if not os.path.exists(os.path.join(OUT, "essential-reading", "print", "index.html")):
-        raise SystemExit("Build the site first (npm run build): out/essential-reading/print/ is missing.")
+    if not os.path.exists(os.path.join(OUT, "the-barons-course", "print", "index.html")):
+        raise SystemExit("Build the site first (npm run build): out/the-barons-course/print/ is missing.")
     server = http.server.ThreadingHTTPServer(("127.0.0.1", PORT), functools.partial(Quiet, directory=OUT))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     work = tempfile.mkdtemp(prefix="booklet-")
@@ -44,7 +44,7 @@ def main():
         subprocess.run(
             [CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--timeout=20000",
              f"--user-data-dir={os.path.join(work, 'profile')}", f"--print-to-pdf={raw}",
-             f"http://127.0.0.1:{PORT}/essential-reading/print/"],
+             f"http://127.0.0.1:{PORT}/the-barons-course/print/"],
             check=True, capture_output=True,
         )
     finally:
@@ -65,7 +65,7 @@ def main():
             img.replace(im, quality=70)
         page.compress_content_streams()
     writer.compress_identical_objects(remove_duplicates=True, remove_unreferenced=True)
-    writer.add_metadata({"/Title": "Essential Reading", "/Author": "Baronage of Scotland Association"})
+    writer.add_metadata({"/Title": "The Baron’s Course", "/Author": "Baronage of Scotland Association"})
     os.makedirs(os.path.dirname(DEST), exist_ok=True)
     with open(DEST, "wb") as f:
         writer.write(f)

@@ -11,7 +11,7 @@ import { readingRoomPapers } from "@/generated/reading-room";
 import { COURSE_NAME, COURSE_PARTS, COURSE_PATH, courseStandfirst, courseSteps, numberWord } from "@/lib/course";
 
 /**
- * Essential Reading as one booklet to print (owner 2026-10-23: "print it out … not to get distracted"): a title page
+ * The Baron's Course as one booklet to print (owner 2026-10-23: "print it out … not to get distracted"): a title page
  * with the contents and a box to tick by hand for each paper, then every paper in order, each from a new page, with
  * its notes and sources, in the papers' own print style (.paper-print in globals.css). A subscriber paper prints what
  * this device may read: its public text and a note, or the whole paper once the subscriber key is here. Out of search
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
 };
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
-const PDF = "Essential-Reading-Baronage-of-Scotland-Association.pdf";
+const PDF = "The-Barons-Course-Baronage-of-Scotland-Association.pdf";
 
 /** The PDF's size in whole megabytes, or null while there is none. */
 function pdfMegabytes() {
   try {
-    return Math.max(1, Math.round(statSync(join(process.cwd(), "public", "essential-reading", PDF)).size / 1e6));
+    return Math.max(1, Math.round(statSync(join(process.cwd(), "public", "the-barons-course", PDF)).size / 1e6));
   } catch {
     return null;
   }
@@ -48,11 +48,11 @@ export default function EssentialReadingBookletPage() {
   const papers = courseSteps.map((step) => ({ step, paper: published.get(step.slug)! }));
   const count = numberWord(courseSteps.length);
 
-  // About how many A4 pages: the title page, the contents, the text, the notes and sources in smaller type, the
-  // pictures, and the part page each paper leaves blank at its end. Matched to a print of 23 Oct 2026 (98 pages);
+  // About how many A4 pages: the title page and the contents page, the text, the notes and sources in smaller type, the
+  // pictures, and the part page each paper leaves blank at its end. Matched to a print of 23 Oct 2026 (97 pages);
   // shown to the nearest five.
   const pageCount =
-    3 +
+    2 +
     papers.reduce(
       (n, { paper }) =>
         n +
@@ -71,7 +71,7 @@ export default function EssentialReadingBookletPage() {
         {/* On screen only: what this is, and the button */}
         <div className="no-print mb-14 max-w-[68ch] border border-gold/50 bg-parchment-50 p-6 sm:p-8">
           <p className="eyebrow">Print to read</p>
-          <p className="mt-3 font-display text-3xl leading-tight text-navy sm:text-4xl">The {COURSE_NAME} booklet</p>
+          <p className="mt-3 font-display text-3xl leading-tight text-navy sm:text-4xl">{COURSE_NAME}: the booklet</p>
           <p className="mt-4 font-serif text-lg leading-relaxed text-ink-soft sm:text-xl">
             All {count} papers in order, each starting on a new page, with their notes and sources: about {about} printed
             pages. The contents page lists the papers with a box to tick as you finish each one.

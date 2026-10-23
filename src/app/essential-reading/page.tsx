@@ -1,47 +1,32 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { pageMetadata } from "@/lib/page-metadata";
 import { Container, Section } from "@/components/primitives";
-import { CoursePanel } from "@/components/CoursePanel";
-import { COURSE_NAME, COURSE_PARTS, COURSE_PATH, courseStandfirst, courseSteps, numberWord } from "@/lib/course";
+import { COURSE_NAME, COURSE_PATH } from "@/lib/course";
 
 /**
- * Essential Reading on its own page, for the header menu (owner 2026-10-23). The full syllabus lives here only; the
- * Reading Room shows a one-line banner that leads to it.
+ * The course was called "Essential Reading" and lived here for an afternoon (23 Oct 2026) before the owner put the
+ * name "The Baron's Course" back. This page stays so links of that afternoon still arrive, kept out of search and
+ * sending the visitor on.
  */
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = {
   title: COURSE_NAME,
-  description: courseStandfirst(),
-  path: COURSE_PATH,
-});
+  robots: { index: false, follow: true },
+  alternates: { canonical: COURSE_PATH },
+};
 
-export default function EssentialReadingPage() {
-  const count = numberWord(courseSteps.length);
+export default function OldCoursePage() {
   return (
     <>
-      <section className="bg-navy-deep text-parchment-50 texture-saltire">
-        <Container className="py-12 text-center sm:py-14">
-          <p className="rise eyebrow eyebrow--light">
-            {count[0].toUpperCase() + count.slice(1)} papers, in order
-          </p>
-          <h1
-            className="rise mt-4 font-display leading-[1.02] text-parchment-50"
-            style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
-          >
-            {COURSE_NAME}
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl font-serif text-lg italic leading-relaxed text-parchment-200/85 sm:text-xl">
-            Papers from the{" "}
-            <Link href="/reading-room/" className="underline decoration-gold/60 underline-offset-4 hover:text-parchment-50">
-              Reading Room
-            </Link>
-            , in the order to read them. Tick each one off as you go; this device remembers where you stopped.
-          </p>
-        </Container>
-      </section>
-      <Section tone="parchment" className="!pt-10 sm:!pt-12">
+      <meta httpEquiv="refresh" content={`0; url=${COURSE_PATH}`} />
+      <Section tone="parchment">
         <Container>
-          <CoursePanel steps={courseSteps} parts={COURSE_PARTS} standfirst={courseStandfirst()} path={COURSE_PATH} />
+          <p className="py-24 text-center font-serif text-xl text-navy">
+            Please continue to{" "}
+            <Link href={COURSE_PATH} className="text-oxblood underline decoration-oxblood/40 underline-offset-4">
+              {COURSE_NAME}
+            </Link>
+            .
+          </p>
         </Container>
       </Section>
     </>

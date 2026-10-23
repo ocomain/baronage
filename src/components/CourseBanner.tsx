@@ -8,7 +8,7 @@ import { ButtonLink } from "./primitives";
 import { CourseSeal } from "./CourseSeal";
 
 /**
- * Essential Reading on the Reading Room: one line instead of the full syllabus (owner 2026-10-23: the panel at the top
+ * The Baron's Course on the Reading Room: one line instead of the full syllabus (owner 2026-10-23: the panel at the top
  * of the Reading Room was "confusing … duplicate"). The name and a link lead to the course page; the button starts at
  * paper 1, or resumes at the first paper not yet read on this device, or, once all are read, offers the certificate.
  * The wax seal fills as papers are read.

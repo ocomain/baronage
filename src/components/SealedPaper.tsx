@@ -61,7 +61,7 @@ export function SealedPaper({
   html: string;
   footnotesHtml: string;
   sourcesHtml: string;
-  /** In the Essential Reading booklet: a printed note in place of the sign-up box, and no print button of its own. */
+  /** In the Baron's Course booklet: a printed note in place of the sign-up box, and no print button of its own. */
   lockedNote?: ReactNode;
 }) {
   const [full, setFull] = useState<FullPaper | null>(null);
