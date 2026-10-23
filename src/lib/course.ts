@@ -8,10 +8,10 @@ import { SITE_URL } from "@/lib/site";
  * course panel, the course page, the band and the previous/next links on each paper.
  *
  * A step whose paper is not yet in the Reading Room is skipped, and the numbering and the count follow what is
- * published (step 12 waits for its paper). Server-side only: it reads the generated papers, bodies included, so
+ * published. Server-side only: it reads the generated papers, bodies included, so
  * client components get the light `CourseStep` objects below and never this module.
  */
-export const COURSE_PARTS = ["The words", "The rank", "Recognition", "In public life and in law", "The Roll"] as const;
+export const COURSE_PARTS = ["The words", "The rank", "Recognition", "In public life and in law", "The Roll", "In the deed"] as const;
 
 const STEPS: { part: number; slug: string; lesson: string }[] = [
   // Part I. The words
@@ -53,23 +53,25 @@ const STEPS: { part: number; slug: string; lesson: string }[] = [
     slug: "barons-in-the-house-of-commons",
     lesson: "How the title fares in Parliament, councils and the honours list.",
   },
-  {
-    part: 4,
-    slug: "how-a-scottish-baron-is-named-in-a-legal-document", // shown once the paper is published
-    lesson: "How to design a baron in a deed, and why it never says “commonly called”.",
-  },
   // Part V. The Roll
   {
     part: 5,
     slug: "official-roll-of-the-baronetage-1910",
     lesson: "Why a dignity needs a roll, and why a roll needs a pledge.",
   },
+  // Part VI. In the deed: the last paper (owner 2026-10-23, via the papers chat: "add to last paper of course"); it
+  // ends, as the course does, on the Roll and the Pledge.
+  {
+    part: 6,
+    slug: "how-a-scottish-baron-is-named-in-a-legal-document",
+    lesson: "How to design a baron in a deed, and why it never says “commonly called”.",
+  },
 ];
 
 /** A published step, light enough to hand to client components. */
 export type CourseStep = {
   n: number; // 1-based, counting published steps only
-  part: number; // 1..5
+  part: number; // 1..6
   slug: string;
   title: string;
   lesson: string;
