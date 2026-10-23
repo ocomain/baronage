@@ -846,7 +846,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
           may or may not coincide. Where they did, the records call the same baron by both, the title and the name,
           often in the same deed: see{" "}
           <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className={intLink}>
-            Baron of X, or X of Y?
+            Baron of X, or X of Y? Two styles of a Scottish baron
           </Link>
         </p>
         <p className="mt-4">

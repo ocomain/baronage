@@ -1,14 +1,14 @@
 ---
-title: "Baron of X, or X of Y?"
+title: "Baron of X, or X of Y? Two styles of a Scottish baron"
 subtitle: "A name and a title: the evidence that Scotland’s barons were called by both, often by the same writer and sometimes in the same deed"
 slug: the-two-styles-of-a-scottish-baron
 meta_description: "Was “baron” a title or a description of tenure? Charters, signatures and four volumes of Aberdeen and Banff records show when “Baron of X” and “X of Y” were used."
 category: Words & Usage
 published: 2026-09-27
-reviewed: 2026-10-10
+reviewed: 2026-10-23
 ---
 
-# Baron of X, or X of Y?
+# Baron of X, or X of Y? Two styles of a Scottish baron
 
 *“To our traist freynd the barroun of Kylrawak,” wrote Mary Queen of Scots from Aberdeen on 3 November 1562. Five years later a writ in her name called the same baron “Hucheoun Ros of Kilrawak”. The first gives him his title, the barony, a dignity and title of nobility; the second gives his name, with its territorial designation. A Scottish baron had both, and the records move freely between them. This paper sets out the evidence as it stands: the Kilravock papers, the Forbes, Leys and Irvine charters, and a count across four volumes of Aberdeen and Banff records.*
 
