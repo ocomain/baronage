@@ -11,7 +11,7 @@ import { SITE_URL } from "@/lib/site";
  * published. Server-side only: it reads the generated papers, bodies included, so
  * client components get the light `CourseStep` objects below and never this module.
  */
-export const COURSE_PARTS = ["The words", "The rank", "Recognition", "In public life and in law", "The Roll", "In the deed"] as const;
+export const COURSE_PARTS = ["The words", "The rank", "Recognition", "In public life", "The Roll", "In the deed"] as const;
 
 const STEPS: { part: number; slug: string; lesson: string }[] = [
   // Part I. The words
@@ -47,7 +47,7 @@ const STEPS: { part: number; slug: string; lesson: string }[] = [
     lesson: "Lords Lyon who signed as barons, and the instruments that say “Baron of X”.",
   },
   { part: 3, slug: "lord-lyon-since-2004", lesson: "Section 63 and the appointed day: the dignity kept, the land let go." },
-  // Part IV. In public life and in law
+  // Part IV. In public life ("and in law" dropped once the deed paper moved to Part VI: papers chat, 23 Oct)
   {
     part: 4,
     slug: "barons-in-the-house-of-commons",
