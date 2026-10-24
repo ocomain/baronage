@@ -393,8 +393,8 @@ export default function ProperAddressPage() {
                       </tr>
                       <tr>
                         <td>Speaking about him</td>
-                        <td>The Duke</td>
-                        <td><S>The Baron</S></td>
+                        <td>the Duke</td>
+                        <td><S>the Baron</S></td>
                       </tr>
                       <tr>
                         <td>Speaking to him, as an equal</td>
