@@ -68,6 +68,21 @@ const STEPS: { part: number; slug: string; lesson: string }[] = [
   },
 ];
 
+/**
+ * Read first (owner 2026-10-24, via the papers chat: "shouldn't baronies explained be read first in the baron's
+ * course?", then "yes least it should be a pre-read of the course like presection"): one unnumbered step before Part I.
+ * It is outside the count, the seal and the certificate; its tick is kept in the same store under its slug. Lesson line
+ * from the papers chat, final copy. Reading time: about 8,200 readable words on 24 Oct 2026 at the papers' 230 a minute.
+ */
+export const COURSE_PREREAD = {
+  slug: "scottish-baronies-explained",
+  href: "/scottish-baronies-explained/",
+  title: "Scottish Baronies, Explained",
+  lesson: "The words, the rank and the questions every holder asks: the primer the papers build on.",
+  readingTime: "36 min",
+};
+export type CoursePreread = typeof COURSE_PREREAD;
+
 /** A published step, light enough to hand to client components. */
 export type CourseStep = {
   n: number; // 1-based, counting published steps only
@@ -110,5 +125,12 @@ export const courseStandfirst = () => {
 export function courseStepFor(slug: string) {
   const i = courseSteps.findIndex((s) => s.slug === slug);
   if (i < 0) return null;
-  return { step: courseSteps[i], prev: courseSteps[i - 1] ?? null, next: courseSteps[i + 1] ?? null, total: courseSteps.length };
+  return {
+    step: courseSteps[i],
+    prev: courseSteps[i - 1] ?? null,
+    next: courseSteps[i + 1] ?? null,
+    total: courseSteps.length,
+    // Paper 1 points back to the pre-read
+    preread: i === 0 ? COURSE_PREREAD : null,
+  };
 }

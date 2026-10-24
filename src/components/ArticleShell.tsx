@@ -127,13 +127,22 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
                 · Paper {course.step.n} of {course.total}
               </p>
               <ul className="mt-3 space-y-2 font-serif text-lg leading-snug text-navy">
-                {course.prev && (
+                {course.prev ? (
                   <li>
                     <span className="text-ink-soft">Previous paper: </span>
                     <Link href={`/reading-room/${course.prev.slug}/`} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
                       {course.prev.title}
                     </Link>
                   </li>
+                ) : (
+                  course.preread && (
+                    <li>
+                      <span className="text-ink-soft">Read first: </span>
+                      <Link href={course.preread.href} className="underline decoration-gold/60 underline-offset-4 hover:text-oxblood">
+                        {course.preread.title}
+                      </Link>
+                    </li>
+                  )
                 )}
                 {course.next ? (
                   <li>

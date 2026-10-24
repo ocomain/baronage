@@ -8,7 +8,7 @@ import { PrintButton } from "@/components/PrintButton";
 import { SealedPaper } from "@/components/SealedPaper";
 import { Seal } from "@/components/Seal";
 import { readingRoomPapers } from "@/generated/reading-room";
-import { COURSE_NAME, COURSE_PARTS, COURSE_PATH, courseStandfirst, courseSteps, numberWord } from "@/lib/course";
+import { COURSE_NAME, COURSE_PARTS, COURSE_PATH, COURSE_PREREAD, courseStandfirst, courseSteps, numberWord } from "@/lib/course";
 
 /**
  * The Baron's Course as one booklet to print (owner 2026-10-23: "print it out … not to get distracted"): a title page
@@ -48,11 +48,11 @@ export default function EssentialReadingBookletPage() {
   const papers = courseSteps.map((step) => ({ step, paper: published.get(step.slug)! }));
   const count = numberWord(courseSteps.length);
 
-  // About how many A4 pages: the title page and the contents page, the text, the notes and sources in smaller type, the
+  // About how many A4 pages: the title page, the contents page and the Read first page, the text, the notes and sources in smaller type, the
   // pictures, and the part page each paper leaves blank at its end. Matched to a print of 23 Oct 2026 (97 pages);
   // shown to the nearest five.
   const pageCount =
-    2 +
+    3 +
     papers.reduce(
       (n, { paper }) =>
         n +
@@ -147,6 +147,23 @@ export default function EssentialReadingBookletPage() {
               );
             })}
           </div>
+        </section>
+
+        {/* Read first (owner 2026-10-24): the Explained page is not printed here (its table, glossary and answers are
+            made for the screen), only where to read it */}
+        <section className="paper-print booklet-paper booklet-preread mt-20 border-t-2 border-gold/50 pt-14">
+          <header>
+            <p className="eyebrow">Read first · before Paper 1</p>
+            <h2 className="booklet-title mt-4 font-display text-4xl leading-[1.08] text-navy sm:text-5xl">{COURSE_PREREAD.title}</h2>
+            <p className="mt-4 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">{COURSE_PREREAD.lesson}</p>
+            <p className="paper-print__source mt-3 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-muted">
+              {COURSE_PREREAD.readingTime} read · www.baronage.com{COURSE_PREREAD.href}
+            </p>
+          </header>
+          <p className="mt-8 flex max-w-[68ch] items-start gap-3 font-serif text-lg leading-relaxed text-ink">
+            <span aria-hidden className="booklet-box mt-1 block h-[1.15rem] w-[1.15rem] flex-none border-[1.5px] border-navy" />
+            <span>Not printed in this booklet: read it at the address above before Paper 1.</span>
+          </p>
         </section>
 
         {papers.map(({ step, paper }) => {

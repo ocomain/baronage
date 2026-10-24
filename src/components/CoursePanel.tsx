@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import type { CourseStep } from "@/lib/course";
+import type { CoursePreread, CourseStep } from "@/lib/course";
 import { COURSE_EVENT, readProgress, writeProgress } from "@/lib/courseProgress";
 import { CourseSeal, PartSeal } from "./CourseSeal";
 
@@ -20,6 +20,7 @@ export function CoursePanel({
   parts,
   standfirst,
   path,
+  preread,
 }: {
   /** The page's h1: the course page has no hero band (owner 2026-10-23). */
   title: string;
@@ -28,6 +29,8 @@ export function CoursePanel({
   standfirst: string;
   /** The course page, "/the-barons-course/": the booklet and the certificate sit under it. */
   path: string;
+  /** "Read first": the unnumbered step before Part I (owner 2026-10-24), outside the count and the seal. */
+  preread?: CoursePreread;
 }) {
   const [read, setRead] = useState<string[]>([]);
   // The current list, so quick taps in a row each start from the latest (state can lag a render behind).
@@ -112,6 +115,56 @@ export function CoursePanel({
         </div>
       </div>
 
+      {/* Read first: one unnumbered step before Part I; its tick counts toward nothing */}
+      {preread && (
+        <div className="mt-9 border-l-4 border-gold bg-parchment-100 px-5 py-5 sm:px-6">
+          <p className="flex min-h-[22px] items-center gap-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-deep">
+            Read first
+            {read.includes(preread.slug) && <PartSeal />}
+          </p>
+          <div className="mt-4 grid max-w-3xl grid-cols-[2.5rem_1fr_auto] items-start gap-x-4">
+            <span
+              aria-hidden
+              className={`flex h-10 w-10 items-center justify-center rounded-full border ${
+                read.includes(preread.slug) ? "border-navy bg-navy text-gold-light" : "border-gold bg-parchment-50 text-gold-deep"
+              }`}
+            >
+              {/* an open book */}
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 6.5C10.3 5.2 8 4.6 4 4.8v13c4-.2 6.3.4 8 1.7 1.7-1.3 4-1.9 8-1.7v-13c-4-.2-6.3.4-8 1.7z" />
+                <path d="M12 6.5v13" />
+              </svg>
+            </span>
+            <div className="min-w-0 pt-1">
+              <span className="mb-1.5 inline-block bg-gold px-1.5 py-0.5 font-sans text-[0.55rem] font-semibold uppercase tracking-[0.18em] text-navy-deep">
+                Start here
+              </span>
+              <Link href={preread.href} className="block font-display text-xl leading-snug text-navy transition-colors hover:text-oxblood">
+                {preread.title}
+              </Link>
+              <p className="mt-1 font-serif text-base leading-snug text-ink-soft">{preread.lesson}</p>
+              <p className="mt-1.5 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
+                {preread.readingTime}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => toggle(preread.slug)}
+              aria-pressed={read.includes(preread.slug)}
+              aria-label={read.includes(preread.slug) ? `Mark “${preread.title}” as not read` : `Mark “${preread.title}” as read`}
+              title={read.includes(preread.slug) ? "Read" : "Mark as read"}
+              className={`mt-1.5 flex h-7 w-7 items-center justify-center rounded-full border text-sm transition-colors ${
+                read.includes(preread.slug)
+                  ? "border-navy bg-navy text-gold-light"
+                  : "border-parchment-300 bg-white text-transparent hover:border-gold hover:text-gold-deep"
+              }`}
+            >
+              ✓
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="mt-8 grid gap-x-12 gap-y-9 md:grid-cols-2">
         {parts.map((partTitle, pi) => {
           const inPart = steps.filter((s) => s.part === pi + 1);
@@ -138,7 +191,7 @@ export function CoursePanel({
                         {s.n}
                       </span>
                       <div className="min-w-0 pt-1">
-                        {s.n === 1 && (
+                        {s.n === 1 && !preread && (
                           <span className="mb-1.5 inline-block bg-gold px-1.5 py-0.5 font-sans text-[0.55rem] font-semibold uppercase tracking-[0.18em] text-navy-deep">
                             Start here
                           </span>
