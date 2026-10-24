@@ -5,8 +5,6 @@ import { Container, Eyebrow, Section } from "@/components/primitives";
 import { ReadingRoomGrid, type PaperCard } from "@/components/ReadingRoomGrid";
 import { FEATURED_PAPER } from "@/lib/site";
 import { readingRoomCategories, readingRoomPapers } from "@/generated/reading-room";
-import { CourseBanner } from "@/components/CourseBanner";
-import { COURSE_NAME, COURSE_PATH, courseSteps, numberWord } from "@/lib/course";
 
 const STANDFIRST =
   "Papers on the baronage of Scotland — its law, its history, its words and its insignia — written from the sources, with page references so you can check them.";
@@ -81,15 +79,6 @@ export default function ReadingRoomPage() {
               , our FAQ answering the questions people ask most about baronial titles.
             </p>
           </aside>
-          {/* The Baron's Course: one line here, the full list on its own page (owner 2026-10-23) */}
-          <div className="mb-12">
-            <CourseBanner
-              steps={courseSteps.map(({ n, slug, title }) => ({ n, slug, title }))}
-              name={COURSE_NAME}
-              path={COURSE_PATH}
-              countWord={numberWord(courseSteps.length)}
-            />
-          </div>
           <ReadingRoomGrid papers={papers} categories={categories} featuredSlug={FEATURED_PAPER.slug} />
         </Container>
       </Section>

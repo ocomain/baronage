@@ -6,7 +6,8 @@ import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PARTS, COURSE_PATH, courseStandfir
 
 /**
  * The Baron's Course on its own page, for the header menu (owner 2026-10-23). The full syllabus lives here only; the
- * Reading Room shows a one-line banner that leads to it. No hero band (owner: "remove the hero section from the top of
+ * header menu leads to it (the Reading Room banner was taken off on 24 Oct: "it is already clearly in the nav menu as
+ * a main item"). No hero band (owner: "remove the hero section from the top of
  * the page"): the course's own panel carries the title.
  */
 export const metadata: Metadata = pageMetadata({
