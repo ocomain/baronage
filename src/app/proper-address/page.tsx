@@ -584,7 +584,10 @@ export default function ProperAddressPage() {
                   appear in a subordinate position. Here’s the correct format if an academic title is included:
                 </P>
                 <Forms>
+                  {/* owner 2026-10-25: the main style, first */}
                   <F>
+                    <S>Prof The Much Hon John Smith, Baron of Inverness</S>
+                    <Or />
                     <S>The Baron of Inverness, Professor John Smith</S>
                     <Or />
                     <S>Prof Baron of Inverness</S>
