@@ -2,13 +2,14 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { OG_SIZE } from "@/lib/og-paper";
-import { longDate, type NewsPost } from "@/lib/news";
+import { eventLine, longDate, titlesLine, type NewsPost } from "@/lib/news";
 
 const asset = (...parts: string[]) => readFile(join(process.cwd(), ...parts));
 
 /**
  * Link-preview card for a News post. An In Memoriam card is quiet: deep ink, the category, the name, the life dates and
- * the titles as on the Roll, the Association's seal in pale ink. Other categories show their title on the same ground.
+ * the titles as on the Roll, the Association's seal in pale ink. A Congratulations card is the site's navy with gold:
+ * the couple, or the child and his style, and the date. Other categories show their title.
  */
 export async function renderNewsOgImage(post: NewsPost) {
   const [serif, sans, seal] = await Promise.all([
@@ -24,7 +25,16 @@ export async function renderNewsOgImage(post: NewsPost) {
     if (jpeg) photoSrc = `data:image/jpeg;base64,${jpeg.toString("base64")}`;
   }
   const memoriam = post.category === "In Memoriam";
-  const heading = memoriam && post.name ? post.name : post.title;
+  const congrats = post.category === "Congratulations";
+  const heading =
+    memoriam && post.name
+      ? post.name
+      : congrats && post.kind === "marriage" && post.holder
+        ? `${post.holder}${post.holder.includes(",") ? "," : ""} and ${post.spouse ?? ""}`.trim()
+        : congrats && post.kind === "birth" && post.child
+          ? `${post.child}${post.style ? `, ${post.style}` : ""}`
+          : post.title;
+  const dateLine = memoriam && post.born && post.died ? `${longDate(post.born)} – ${longDate(post.died)}` : eventLine(post);
 
   return new ImageResponse(
     (
@@ -34,29 +44,38 @@ export async function renderNewsOgImage(post: NewsPost) {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#121212",
-          backgroundImage: "linear-gradient(160deg, #1d1d22 0%, #121214 55%, #0b0b0d 100%)",
+          backgroundColor: congrats ? "#0a1024" : "#121212",
+          backgroundImage: congrats
+            ? "linear-gradient(155deg, #18264a 0%, #0f1832 45%, #0a1024 100%)"
+            : "linear-gradient(160deg, #1d1d22 0%, #121214 55%, #0b0b0d 100%)",
           padding: 64,
           fontFamily: "Cormorant",
         }}
       >
-        <div style={{ display: "flex", height: 1, backgroundColor: "rgba(230,207,147,0.45)" }} />
+        <div
+          style={{
+            display: "flex",
+            height: congrats ? 3 : 1,
+            backgroundColor: "rgba(230,207,147,0.45)",
+            ...(congrats ? { backgroundImage: "linear-gradient(90deg, #936f24 0%, #c9a24b 45%, #e6cf93 100%)" } : {}),
+          }}
+        />
         <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
           <div style={{ display: "flex", flexDirection: "column", flex: 1, paddingRight: 40 }}>
-            <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 22, letterSpacing: 5, textTransform: "uppercase", color: "#cfc6b4" }}>
+            <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 22, letterSpacing: 5, textTransform: "uppercase", color: congrats ? "#e6cf93" : "#cfc6b4" }}>
               {post.category}
             </div>
-            <div style={{ display: "flex", fontSize: heading.length > 34 ? 70 : 82, lineHeight: 1.05, color: "#f6f1e6", marginTop: 26, maxWidth: 800 }}>
+            <div style={{ display: "flex", fontSize: heading.length > 48 ? 58 : heading.length > 34 ? 70 : 82, lineHeight: 1.05, color: "#f6f1e6", marginTop: 26, maxWidth: 800 }}>
               {heading}
             </div>
-            {memoriam && post.born && post.died ? (
-              <div style={{ display: "flex", fontSize: 36, color: "#cfc6b4", marginTop: 22 }}>
-                {`${longDate(post.born)} – ${longDate(post.died)}`}
+            {dateLine ? (
+              <div style={{ display: "flex", fontSize: 36, color: congrats ? "#d9cdb2" : "#cfc6b4", marginTop: 22 }}>
+                {dateLine}
               </div>
             ) : null}
-            {memoriam && post.titles?.length ? (
+            {(memoriam || congrats) && titlesLine(post) ? (
               <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 20, letterSpacing: 3, textTransform: "uppercase", color: "#9d9584", marginTop: 18 }}>
-                {post.titles.join(" · ")}
+                {titlesLine(post)}
               </div>
             ) : null}
           </div>

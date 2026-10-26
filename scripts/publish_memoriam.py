@@ -55,6 +55,7 @@ PHOTO_DIR = REPO / "public" / "images" / "news"
 FREE_LICENCE = re.compile(r"^(CC BY(-SA)? \d(\.\d)?|CC0( 1\.0)?|Public domain|OGL( v\d(\.\d)?)?|Open Government Licence( v\d(\.\d)?)?)$", re.I)
 SITE = "https://www.baronage.com"
 CATEGORY, CATEGORY_SLUG = "In Memoriam", "in-memoriam"
+CATEGORY_SLUGS = {"In Memoriam": "in-memoriam", "Congratulations": "congratulations"}
 INDEXNOW = {"key": "910101b36edcdd4d440834976c689148", "keyLocation": f"{SITE}/910101b36edcdd4d440834976c689148.txt"}
 MIN_WORDS, MAX_WORDS = 100, 150
 LIVE_TIMEOUT_S = 15 * 60
@@ -255,25 +256,35 @@ def fetch_photo(photo_in: dict, slug: str, name: str) -> tuple[dict, list[Path]]
     return photo, [webp, jpg]
 
 
+def load_json(file: str) -> dict:
+    try:
+        raw = json.loads(Path(file).expanduser().read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        fail(f"no such file: {file}")
+    except json.JSONDecodeError as e:
+        fail(f"{file} is not valid JSON: {e}")
+    if not isinstance(raw, dict):
+        fail("the JSON file must hold one object")
+    return raw
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Publish an In Memoriam notice to News on www.baronage.com.")
     ap.add_argument("notice", help="path to the notice JSON file")
     ap.add_argument("--dry-run", action="store_true", help="check the notice and show what would happen; change nothing")
     a = ap.parse_args()
+    raw = load_json(a.notice)
+    publish(check_notice(raw), raw, a.dry_run)
 
-    try:
-        raw = json.loads(Path(a.notice).expanduser().read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        fail(f"no such file: {a.notice}")
-    except json.JSONDecodeError as e:
-        fail(f"{a.notice} is not valid JSON: {e}")
-    if not isinstance(raw, dict):
-        fail("the JSON file must hold one object")
-    post = check_notice(raw)
+
+def publish(post: dict, raw: dict, dry_run: bool) -> None:
+    """Write, build, commit, push and wait for one checked post of any News category (see publish_news.py too)."""
     photo_in = post.pop("_photo_in", None)
+    label = post.get("name") or post.get("holder") or post["title"]
+    category_slug = CATEGORY_SLUGS[post["category"]]
     path = NEWS_DIR / f"{post['slug']}.json"
     rel = f"content/news/{path.name}"
-    url = f"{SITE}/news/{CATEGORY_SLUG}/{post['slug']}/"
+    url = f"{SITE}/news/{category_slug}/{post['slug']}/"
 
     def committed() -> dict | None:
         """This notice as committed (HEAD), or None."""
@@ -282,19 +293,25 @@ def main() -> None:
 
     def prepare(prev: dict | None) -> str:
         if prev is not None:
-            if prev.get("roll_id") != post["roll_id"] or prev.get("died") != post["died"]:
-                fail(f"{path.name} already holds another notice (Roll id {prev.get('roll_id')}, died {prev.get('died')}); give this one its own \"slug\"")
+            if any(prev.get(k) != post.get(k) for k in ("roll_id", "category", "kind", "died", "event_date")):
+                fail(f"{path.name} already holds another post (Roll id {prev.get('roll_id')}, {prev.get('died') or prev.get('event_date')}); give this one its own \"slug\"")
             if not raw.get("published"):
                 post["published"] = prev["published"]  # a re-run keeps the first date
         return json.dumps(post, ensure_ascii=False, indent=2) + "\n"
 
-    if a.dry_run:
+    def same_photo(prev: dict | None) -> bool:
+        old = (prev or {}).get("photo") or {}
+        return bool(photo_in) and all(old.get(k) == photo_in.get(k) for k in ("credit", "licence", "source_url")) and old.get("url_in") == photo_in["url"]
+
+    if dry_run:
         prev = committed()
+        if photo_in and same_photo(prev):
+            post["photo"] = prev["photo"]
         body = prepare(prev)
         state = "new" if prev is None else ("unchanged" if json.dumps(prev, ensure_ascii=False, indent=2) + "\n" == body else "update")
-        if photo_in:
+        if photo_in and not same_photo(prev):
             state += f", with a photo ({photo_in['credit']}, {photo_in['licence']}) to fetch"
-        say(f"dry run, nothing written. {words(post['text'])} words; {state} notice")
+        say(f"dry run, nothing written. {words(post['text'])} words; {state} post")
         say(f"would write {path}")
         say(f"would publish {url}")
         print(url)
@@ -312,11 +329,13 @@ def main() -> None:
     # The News pages themselves must be on GitHub, or the notice could never go live.
     if run(["git", "cat-file", "-e", "origin/main:src/app/news/[category]/[slug]/page.tsx"], check=False).returncode != 0:
         fail("the News section is not live on www.baronage.com yet, so nothing was published; use --dry-run until it is")
+    if f'"{post["category"]}"' not in run(["git", "show", "origin/main:src/lib/news.ts"], check=False).stdout:
+        fail(f"the {post['category']} category is not live on www.baronage.com yet, so nothing was published; use --dry-run until it is")
     prev = committed()
     files = [path]
     if photo_in:
         old = (prev or {}).get("photo") or {}
-        same = all(old.get(k) == photo_in.get(k) for k in ("credit", "licence", "source_url")) and old.get("url_in") == photo_in["url"]
+        same = same_photo(prev)
         stored = [PHOTO_DIR / f"{post['slug']}.webp", PHOTO_DIR / f"{post['slug']}.jpg"]
         files += stored
     before = {f: (f.read_bytes() if f.exists() else None) for f in files}
@@ -333,7 +352,7 @@ def main() -> None:
             post["photo"] = old
         else:
             try:
-                post["photo"], _ = fetch_photo(photo_in, post["slug"], post["name"])
+                post["photo"], _ = fetch_photo(photo_in, post["slug"], label)
             except Exception as e:
                 restore()
                 fail(str(e))
@@ -348,8 +367,8 @@ def main() -> None:
         say(f"wrote {', '.join(rels)} ({state}); building")
         try:
             build()
-            built = REPO / "out" / "news" / CATEGORY_SLUG / post["slug"] / "index.html"
-            if not built.exists() or post["name"] not in html.unescape(built.read_text(encoding="utf-8")):
+            built = REPO / "out" / "news" / category_slug / post["slug"] / "index.html"
+            if not built.exists() or post["title"] not in html.unescape(built.read_text(encoding="utf-8")):
                 raise RuntimeError(f"the build did not produce {built.relative_to(REPO)} with the name on it")
         except Exception as e:  # leave the checkout as it was
             restore()
@@ -358,7 +377,7 @@ def main() -> None:
         run(["git", "pull", "-q", "--rebase", "--autostash", "origin", "main"])
         run(["git", "add", *rels])
         verb = "updated" if state == "update" else "published"
-        run(["git", "commit", "-q", "-o", *rels, "-m", f"News, In Memoriam: {post['name']} ({verb} by the weekly obituary scan)"])
+        run(["git", "commit", "-q", "-o", *rels, "-m", f"News, {post['category']}: {label} ({verb} by the weekly scan)"])
     elif photo_in and not same:
         restore()  # the photo was fetched again but the notice is unchanged
     # Push whatever of this notice is not yet on GitHub (also mends a run that failed after committing).
@@ -375,7 +394,7 @@ def main() -> None:
     deadline = time.time() + LIVE_TIMEOUT_S
     while True:
         status, page = fetch(url)
-        if status == 200 and post["name"] in html.unescape(page):
+        if status == 200 and post["title"] in html.unescape(page):
             break
         if time.time() > deadline:
             fail(f"{url} did not go live within {LIVE_TIMEOUT_S // 60} minutes (last answer {status}); the commit is on GitHub, so run this again later")
@@ -384,7 +403,7 @@ def main() -> None:
     try:
         req = urllib.request.Request(
             "https://api.indexnow.org/indexnow",
-            data=json.dumps({"host": "www.baronage.com", **INDEXNOW, "urlList": [url, f"{SITE}/news/", f"{SITE}/news/{CATEGORY_SLUG}/"]}).encode(),
+            data=json.dumps({"host": "www.baronage.com", **INDEXNOW, "urlList": [url, f"{SITE}/news/", f"{SITE}/news/{category_slug}/"]}).encode(),
             headers={"Content-Type": "application/json"},
         )
         urllib.request.urlopen(req, timeout=20)

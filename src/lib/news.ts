@@ -9,7 +9,12 @@ import { join } from "node:path";
  */
 
 /** Categories, in the order the index shows them; a post's category must be one of these. */
-export const NEWS_CATEGORIES = [{ name: "In Memoriam", slug: "in-memoriam" }] as const;
+export const NEWS_CATEGORIES = [
+  { name: "In Memoriam", slug: "in-memoriam" },
+  // owner 2026-10-26: "also let's have it auto do marriages announcing the new baroness … and children anew younger of or
+  // master of as congratulation posts"
+  { name: "Congratulations", slug: "congratulations" },
+] as const;
 export type NewsCategoryName = (typeof NEWS_CATEGORIES)[number]["name"];
 
 type SourceLink = string | { label: string; url: string };
@@ -50,6 +55,17 @@ export type NewsPost = {
   roll_url?: string;
   source_urls?: SourceLink[];
   photo?: NewsPhoto;
+  // Congratulations
+  kind?: "marriage" | "birth";
+  /** the wedding or the birth, ISO */
+  event_date?: string;
+  /** the holder as on the Roll, "John Smith, Baron of Inverness" */
+  holder?: string;
+  spouse?: string;
+  child?: string;
+  sex?: "son" | "daughter";
+  /** the heir's style, only as the family's announcement gives it: "Younger of Inverness", "Master of Lindsay" */
+  style?: string;
 };
 
 const DIR = join(process.cwd(), "content", "news");
@@ -76,6 +92,20 @@ export const postPath = (p: NewsPost) => `/news/${categorySlug(p.category)}/${p.
 export function longDate(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);
   return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+}
+
+/** "Married on 3 October 2026, at St Giles’ Cathedral" / "Born on 3 October 2026", for a Congratulations post. */
+export function eventLine(p: NewsPost) {
+  if (!p.kind || !p.event_date) return null;
+  return p.kind === "marriage"
+    ? `Married on ${longDate(p.event_date)}${p.place ? `, at ${p.place}` : ""}`
+    : `Born on ${longDate(p.event_date)}`;
+}
+
+/** The small line under the heading: the titles as on the Roll, or, for a birth, whose son or daughter the child is. */
+export function titlesLine(p: NewsPost) {
+  if (p.kind === "birth" && p.holder) return `${p.sex === "daughter" ? "Daughter" : "Son"} of ${p.holder}`;
+  return p.titles?.length ? p.titles.join(" · ") : null;
 }
 
 export const paragraphs = (text: string) => text.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);

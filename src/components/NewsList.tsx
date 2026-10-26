@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { excerpt, longDate, postPath, type NewsPost } from "@/lib/news";
+import { eventLine, excerpt, longDate, postPath, type NewsPost } from "@/lib/news";
 
 /**
  * The list of posts on /news/ and on each category page: date on the left, then the category, the title and the
- * opening sentence. In Memoriam posts carry the life dates under the title. Server component.
+ * opening sentence, and the post's photograph, when it has one, on the right with its credit (owner 2026-10-26:
+ * "photos should be here"). In Memoriam posts carry the life dates under the title. Server component.
  */
 export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; showCategory?: boolean }) {
   if (!posts.length) {
@@ -12,7 +13,10 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
   return (
     <ol className="divide-y divide-parchment-300/80 border-y border-parchment-300/80">
       {posts.map((p) => (
-        <li key={p.slug} className="grid gap-x-10 gap-y-2 py-8 sm:grid-cols-[9.5rem_1fr] sm:py-10">
+        <li
+          key={p.slug}
+          className={`grid gap-x-10 gap-y-2 py-8 sm:py-10 ${p.photo ? "sm:grid-cols-[9.5rem_1fr_7.5rem]" : "sm:grid-cols-[9.5rem_1fr]"}`}
+        >
           <p className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-muted sm:pt-2">
             <time dateTime={p.published}>{longDate(p.published)}</time>
           </p>
@@ -20,6 +24,7 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
             {showCategory && (
               <p className="flex items-center gap-2.5 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-ink">
                 {p.category === "In Memoriam" && <span aria-hidden className="inline-block h-px w-6 bg-ink" />}
+                {p.category === "Congratulations" && <span aria-hidden className="inline-block h-px w-6 bg-gold" />}
                 {p.category}
               </p>
             )}
@@ -33,6 +38,7 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
                 {longDate(p.born)} – {longDate(p.died)}
               </p>
             )}
+            {eventLine(p) && <p className="mt-1.5 font-serif text-lg text-ink-soft">{eventLine(p)}</p>}
             <p className="mt-3 max-w-[62ch] font-serif text-lg leading-relaxed text-ink">{excerpt(p.text)}</p>
             <p className="mt-3">
               <Link
@@ -43,6 +49,25 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
               </Link>
             </p>
           </div>
+          {p.photo && (
+            <figure className="order-first w-28 sm:order-none sm:w-full sm:pt-2">
+              <Link href={postPath(p)} tabIndex={-1} aria-hidden>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.photo.src}
+                  alt=""
+                  width={p.photo.width}
+                  height={p.photo.height}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full border border-parchment-300 shadow-[0_14px_28px_-22px_rgba(10,16,36,0.6)] grayscale-[15%] transition-opacity hover:opacity-90"
+                />
+              </Link>
+              <figcaption className="mt-1.5 font-sans text-[0.55rem] leading-snug tracking-[0.03em] text-muted">
+                {p.photo.credit}, {p.photo.licence}
+              </figcaption>
+            </figure>
+          )}
         </li>
       ))}
     </ol>

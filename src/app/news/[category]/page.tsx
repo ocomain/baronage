@@ -19,6 +19,7 @@ type Props = { params: Promise<{ category: string }> };
 
 const STANDFIRSTS: Record<string, string> = {
   "in-memoriam": "Notices of barons and peers on the Roll who have died, with the Association’s condolences to their families.",
+  congratulations: "Marriages and births in the families of barons and peers on the Roll, with the Association’s congratulations.",
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

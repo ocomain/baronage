@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/page-metadata";
 import { SITE_URL } from "@/lib/site";
 import { Container, Section } from "@/components/primitives";
-import { categorySlug, excerpt, longDate, newsPosts, paragraphs, postPath, sourceLink } from "@/lib/news";
+import { categorySlug, eventLine, excerpt, longDate, newsPosts, paragraphs, postPath, sourceLink, titlesLine } from "@/lib/news";
 
 // Static export: every post is prerendered from content/news/; anything else is a 404. With no posts at all, one
 // placeholder address that renders the 404 page, as the export needs at least one.
@@ -122,10 +122,9 @@ export default async function NewsPostPage({ params }: Props) {
                 <time dateTime={post.born}>{longDate(post.born)}</time> – <time dateTime={post.died}>{longDate(post.died)}</time>
               </p>
             )}
-            {memoriam && post.titles?.length ? (
-              <p className="mt-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted">
-                {post.titles.join(" · ")}
-              </p>
+            {eventLine(post) && <p className="mt-4 font-display text-2xl text-ink-soft sm:text-[1.7rem]">{eventLine(post)}</p>}
+            {(memoriam || post.kind) && titlesLine(post) ? (
+              <p className="mt-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted">{titlesLine(post)}</p>
             ) : null}
             {/* the mourning rule: a double ink hairline where other pages have gold */}
             <div aria-hidden className={`mt-7 h-[5px] w-28 border-y ${memoriam ? "border-ink/70" : "border-gold"}`} />
@@ -149,7 +148,7 @@ export default async function NewsPostPage({ params }: Props) {
               {post.family_notice_url && (
                 <li>
                   <a href={post.family_notice_url} target="_blank" rel="noopener noreferrer" className={LINK}>
-                    {post.family_notice_label || "The family’s notice"}
+                    {post.family_notice_label || (post.kind ? "The family’s announcement" : "The family’s notice")}
                   </a>{" "}
                   <span aria-hidden className="text-muted">↗</span>
                 </li>
