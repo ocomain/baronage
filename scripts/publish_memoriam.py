@@ -38,6 +38,7 @@ with a plain message on any failure, leaving the checkout as it found it.
 """
 import argparse
 import fcntl
+import hashlib
 import html
 import json
 import os
@@ -304,11 +305,13 @@ def fetch_photo(photo_in: dict, slug: str, name: str) -> tuple[dict, list[Path]]
     if im.width > 720:
         im = im.resize((720, round(im.height * 720 / im.width)), Image.LANCZOS)
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
-    webp, jpg = PHOTO_DIR / f"{slug}.webp", PHOTO_DIR / f"{slug}.jpg"
+    # a new name for every new picture: a browser or the CDN never shows the one it replaced (owner 2026-10-26)
+    name = f"{slug}-{hashlib.sha1(im.tobytes()).hexdigest()[:8]}"
+    webp, jpg = PHOTO_DIR / f"{name}.webp", PHOTO_DIR / f"{name}.jpg"
     im.save(webp, "WEBP", quality=82, method=6)
     im.save(jpg, "JPEG", quality=85, optimize=True, progressive=True)
     photo = {
-        "src": f"/images/news/{slug}.webp",
+        "src": f"/images/news/{name}.webp",
         "width": im.width,
         "height": im.height,
         "alt": photo_in.get("alt") or name,
@@ -406,11 +409,16 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
     if photo_in:
         old = (prev or {}).get("photo") or {}
         same = same_photo(prev)
-        stored = [PHOTO_DIR / f"{post['slug']}.webp", PHOTO_DIR / f"{post['slug']}.jpg"]
+        # the photo's files now on the site, by the name in the post
+        stored = [PHOTO_DIR / Path(old["src"]).name, PHOTO_DIR / Path(old["src"]).with_suffix(".jpg").name] if old.get("src") else []
         files += stored
     before = {f: (f.read_bytes() if f.exists() else None) for f in files}
+    fetched: list[Path] = []
 
     def restore() -> None:
+        for f in fetched:
+            if f not in before:
+                f.unlink(missing_ok=True)
         for f, b in before.items():
             if b is None:
                 f.unlink(missing_ok=True)
@@ -418,15 +426,19 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
                 f.write_bytes(b)
 
     if photo_in:
-        if same and all(f.exists() for f in stored):
+        if same and stored and all(f.exists() for f in stored):
             post["photo"] = old
         else:
             try:
-                post["photo"], _ = fetch_photo(photo_in, post["slug"], label)
+                post["photo"], fetched[:] = fetch_photo(photo_in, post["slug"], label)
             except Exception as e:
                 restore()
                 fail(str(e))
             post["photo"]["url_in"] = photo_in["url"]  # so a re-run knows the photo is the same one
+            for f in stored:
+                if f not in fetched:
+                    f.unlink(missing_ok=True)  # the picture it replaces leaves the site
+            files += [f for f in fetched if f not in files]
     body = prepare(prev)
     state = "new" if prev is None else ("unchanged" if json.dumps(prev, ensure_ascii=False, indent=2) + "\n" == body else "update")
     rels = [str(f.relative_to(REPO)) for f in files]
@@ -469,7 +481,9 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
         paras = [re.sub(r"\s+", " ", p).strip() for p in post["text"].split("\n\n") if p.strip()]
         # a birth page shows whose child it is ("Son of …") in place of the Roll titles
         lines = [f"{'Daughter' if post.get('sex') == 'daughter' else 'Son'} of {post['holder']}"] if post.get("kind") == "birth" else post.get("titles", [])
-        if status == 200 and post["title"] in html.unescape(page) and all(p in shown for p in paras) and all(t in shown for t in lines):
+        # and the photograph by its own name, so a new picture is not reported live from the old page
+        pic = (post.get("photo") or {}).get("src", "")
+        if status == 200 and post["title"] in html.unescape(page) and all(p in shown for p in paras) and all(t in shown for t in lines) and pic in page:
             break
         if time.time() > deadline:
             fail(f"{url} did not go live within {LIVE_TIMEOUT_S // 60} minutes (last answer {status}); the commit is on GitHub, so run this again later")
