@@ -31,8 +31,9 @@ export async function renderNewsOgImage(post: NewsPost) {
       ? post.title.replace(/^In Memoriam:\s*/, "")
       : congrats && post.kind === "marriage" && post.holder
         ? `${post.holder}${post.holder.includes(",") ? "," : ""} and ${post.spouse ?? ""}`.trim()
-        : congrats && post.kind === "birth" && post.child
-          ? `${post.child}${post.style ? `, ${post.style}` : ""}`
+        : congrats && post.kind === "birth"
+          ? // the post's own heading, the parents: never the child's name beside a photograph of a parent
+            post.title.replace(/^Congratulations:\s*/, "")
           : post.title;
   const dateLine = (memoriam && lifeLine(post)) || eventLine(post);
 

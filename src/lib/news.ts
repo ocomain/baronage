@@ -28,6 +28,7 @@ export type NewsPhoto = {
   width: number;
   height: number;
   alt: string;
+  caption?: string; // who and when, when the post does not make it plain: "Lady Violet, Countess of Lindsay, in 2014"
   credit: string; // "Chris McAndrew / UK Parliament"
   licence: string; // "CC BY 3.0"
   licence_url?: string;

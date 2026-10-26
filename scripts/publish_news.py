@@ -25,10 +25,13 @@ younger of or master of as congratulation posts").
              sex      "son" or "daughter"
              style    optional: the heir's style ONLY as the announcement gives it: "Younger of Inverness",
                       "Master of Lindsay"; a daughter has none unless the announcement gives one
+             photo    optional: of the parents ONLY, never the child, with an alt naming who is shown
   optional:  source_urls, announcement_label, slug, title, published
+  photo:     {url, credit, licence, licence_url, source_url, alt}, plus optional "caption" (who and when, shown
+             before the credit) and "crop" [left, top, right, bottom] in pixels of the original
 
 Refused, with exit 1 and a plain message: a missing announcement_url; more than 100 or fewer than 60 words; anything
-that looks like a home address (postcode, house number and street, flat); a photo on a birth post; links or markup in
+that looks like a home address (postcode, house number and street, flat); a photo on a birth post without an alt; links or markup in
 the text; "feudal"; "substantive"; the Lord Lyon "recognising" a style; the word "title" in a birth post (a style is
 never called a title). Then as publish_memoriam.py: writes content/news/<slug>.json, builds, commits that file (and a
 photo), pushes, waits for the page to answer 200, pings IndexNow, prints the URL as the last line on stdout. Safe to
@@ -75,8 +78,9 @@ def check_congratulations(d: dict) -> dict:
         pm.fail(f"date must be an ISO date like 2026-10-03, or 2026-10 when the sources give only the month, got {d['date']!r}")
     if kind == "birth" and str(d["sex"]).strip().lower() not in ("son", "daughter"):
         pm.fail('sex must be "son" or "daughter"')
-    if kind == "birth" and d.get("photo"):
-        pm.fail("a birth post never carries a photo (never a photograph of a child)")
+    # a birth post may show the parents (owner 2026-10-26: "put a photo of the happy couple"), never the child
+    if kind == "birth" and d.get("photo") and not str((d["photo"] or {}).get("alt", "")).strip():
+        pm.fail("a photo on a birth post needs an alt naming the parent(s) shown: never a photograph of the child")
 
     text = "\n\n".join(p.strip() for p in re.split(r"\n\s*\n", str(d["text"]).replace("\r\n", "\n")) if p.strip())
     n = pm.words(text)
@@ -110,7 +114,7 @@ def check_congratulations(d: dict) -> dict:
         else:
             sources.append(url(s, "source_urls"))
 
-    # marriage only (refused above for a birth): a free-licence photo, or the holder's own portrait on the Roll
+    # a free-licence photo, or the holder's own portrait on the Roll (on a birth post, of the parents only)
     photo_in = pm.check_photo(d["photo"], d["roll_url"]) if d.get("photo") else None
 
     holder = str(d["holder"]).strip()

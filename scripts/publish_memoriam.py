@@ -117,6 +117,16 @@ def check_photo(ph, roll_url: str) -> dict:
     src = str(ph["url"]).strip()
     if not re.match(r"^https?://\S+$", src):
         fail(f"photo.url must be a web address, got {src!r}")
+    crop = ph.get("crop")
+    if crop is not None and not (
+        isinstance(crop, list) and len(crop) == 4 and all(isinstance(v, int) and v >= 0 for v in crop) and crop[2] > crop[0] and crop[3] > crop[1]
+    ):
+        fail(f"photo.crop must be [left, top, right, bottom] in pixels of the original, got {crop!r}")
+    extra = {
+        **({"crop": crop} if crop else {}),
+        # who the picture shows, when that is not plain from the post (owner 2026-10-26: Lady Violet's 2014 photo on the birth post)
+        **({"caption": str(ph["caption"]).strip()} if ph.get("caption") else {}),
+    }
     if re.match(r"^https://roll\.baronage\.com/", src):
         return {
             "url": src,
@@ -124,6 +134,7 @@ def check_photo(ph, roll_url: str) -> dict:
             "licence": "",
             "source_url": str(ph.get("source_url") or roll_url).strip(),
             **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
+            **extra,
         }
     lack = [k for k in ("credit", "licence", "source_url") if not str(ph.get(k, "")).strip()]
     if lack:
@@ -140,6 +151,7 @@ def check_photo(ph, roll_url: str) -> dict:
         **({"licence_url": str(ph["licence_url"])} if ph.get("licence_url") else {}),
         "source_url": str(ph["source_url"]),
         **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
+        **extra,
     }
 
 
@@ -266,6 +278,11 @@ def fetch_photo(photo_in: dict, slug: str, name: str) -> tuple[dict, list[Path]]
         im = ImageOps.exif_transpose(Image.open(BytesIO(data))).convert("RGB")
     except Exception:
         raise RuntimeError(f"{photo_in['url']} is not an image")
+    if photo_in.get("crop"):
+        x0, y0, x1, y1 = photo_in["crop"]
+        if x1 > im.width or y1 > im.height:
+            raise RuntimeError(f"photo.crop {photo_in['crop']} runs past the picture ({im.width} x {im.height})")
+        im = im.crop((x0, y0, x1, y1))
     if im.width > 720:
         im = im.resize((720, round(im.height * 720 / im.width)), Image.LANCZOS)
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
@@ -277,6 +294,7 @@ def fetch_photo(photo_in: dict, slug: str, name: str) -> tuple[dict, list[Path]]
         "width": im.width,
         "height": im.height,
         "alt": photo_in.get("alt") or name,
+        **({"caption": photo_in["caption"]} if photo_in.get("caption") else {}),
         "credit": photo_in["credit"],
         "licence": photo_in["licence"],
         **({"licence_url": photo_in["licence_url"]} if photo_in.get("licence_url") else {}),
@@ -335,7 +353,7 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
 
     def same_photo(prev: dict | None) -> bool:
         old = (prev or {}).get("photo") or {}
-        return bool(photo_in) and all(old.get(k) == photo_in.get(k) for k in ("credit", "licence", "source_url")) and old.get("url_in") == photo_in["url"]
+        return bool(photo_in) and all(old.get(k) == photo_in.get(k) for k in ("credit", "licence", "source_url", "caption", "crop")) and old.get("url_in") == photo_in["url"]
 
     if dry_run:
         prev = committed()

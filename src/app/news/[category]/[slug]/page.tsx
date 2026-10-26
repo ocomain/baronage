@@ -100,6 +100,7 @@ export default async function NewsPostPage({ params }: Props) {
                   className={`h-auto w-full border border-parchment-300 shadow-[0_18px_36px_-26px_rgba(10,16,36,0.6)] ${memoriam ? "grayscale-[15%]" : ""}`}
                 />
                 <figcaption className="mt-2 font-sans text-[0.62rem] leading-snug tracking-[0.04em] text-muted">
+                  {post.photo.caption && <span className="block pb-1 font-serif text-[0.8rem] italic tracking-normal text-ink-soft">{post.photo.caption}</span>}
                   Photograph:{" "}
                   <a href={post.photo.source_url} target="_blank" rel="noopener noreferrer" className="underline decoration-muted/40 underline-offset-2 hover:text-oxblood">
                     {post.photo.credit}
