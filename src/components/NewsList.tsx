@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { eventLine, excerpt, lifeLine, longDate, paragraphs, postPath, type NewsPost } from "@/lib/news";
+import { eventLine, excerpt, lifeLine, longDate, postPath, type NewsPost } from "@/lib/news";
 
 /**
  * The News pages laid out like a magazine (owner 2026-10-26: "should look like a magazine this page with list of
@@ -11,18 +11,14 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
   if (!posts.length) {
     return <p className="py-16 text-center font-serif text-xl italic text-ink-soft">There is no news here yet.</p>;
   }
-  const [lead, ...rest] = posts;
+  // Every post an equal card, side by side (owner 2026-10-26: "make them smaller and display equally side by side
+  // don't show black crop"): an upright photo frame, no lead story, no dark mount.
   return (
-    <>
-      <Lead post={lead} showCategory={showCategory} />
-      {rest.length > 0 && (
-        <ol className="mt-14 grid gap-x-8 gap-y-14 border-t border-parchment-300/80 pt-12 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.map((p) => (
-            <Card key={p.slug} post={p} showCategory={showCategory} />
-          ))}
-        </ol>
-      )}
-    </>
+    <ol className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+      {posts.map((p) => (
+        <Card key={p.slug} post={p} showCategory={showCategory} />
+      ))}
+    </ol>
   );
 }
 
@@ -105,42 +101,13 @@ function Picture({ post, frame, sizes, fit = "cover" }: { post: NewsPost; frame:
   );
 }
 
-function Lead({ post, showCategory }: { post: NewsPost; showCategory: boolean }) {
-  const paras = paragraphs(post.text);
-  return (
-    <article className="grid items-start gap-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12">
-      <Picture post={post} frame="aspect-[4/5]" sizes="(min-width: 768px) 40vw, 100vw" />
-      <div className="min-w-0 md:pt-2">
-        <Kicker post={post} showCategory={showCategory} />
-        <h2 className="mt-4 font-display text-[2.2rem] leading-[1.06] text-navy sm:text-5xl">
-          <Link href={postPath(post)} className="transition-colors hover:text-oxblood">
-            {post.title}
-          </Link>
-        </h2>
-        {dateLine(post) && <p className="mt-3 font-display text-xl text-ink-soft sm:text-2xl">{dateLine(post)}</p>}
-        <div className={`mt-5 h-[5px] w-24 border-y ${post.category === "In Memoriam" ? "border-ink/70" : "border-gold"}`} aria-hidden />
-        <p className="mt-6 font-serif text-xl leading-relaxed text-ink">{paras[0]}</p>
-        {paras[1] && <p className="mt-4 hidden font-serif text-xl leading-relaxed text-ink-soft md:block">{paras[1]}</p>}
-        <p className="mt-6">
-          <Link
-            href={postPath(post)}
-            className="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-oxblood underline decoration-oxblood/40 underline-offset-4 hover:decoration-oxblood"
-          >
-            {readLabel(post)} <span aria-hidden>→</span>
-          </Link>
-        </p>
-      </div>
-    </article>
-  );
-}
-
 function Card({ post, showCategory }: { post: NewsPost; showCategory: boolean }) {
   return (
     <li className="flex min-w-0 flex-col">
-      <Picture post={post} frame="aspect-[4/3]" fit="mount" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" />
+      <Picture post={post} frame="aspect-[4/5]" sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw" />
       <div className="mt-5">
         <Kicker post={post} showCategory={showCategory} />
-        <h3 className="mt-3 font-display text-2xl leading-snug text-navy">
+        <h3 className="mt-3 font-display text-xl leading-snug text-navy">
           <Link href={postPath(post)} className="transition-colors hover:text-oxblood">
             {post.title}
           </Link>
