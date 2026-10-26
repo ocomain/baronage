@@ -14,7 +14,7 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
   // Every post an equal card, side by side (owner 2026-10-26: "make them smaller and display equally side by side
   // don't show black crop"): an upright photo frame, no lead story, no dark mount.
   return (
-    <ol className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+    <ol className="grid gap-x-10 gap-y-12 md:grid-cols-2">
       {posts.map((p) => (
         <Card key={p.slug} post={p} showCategory={showCategory} />
       ))}
@@ -102,26 +102,30 @@ function Picture({ post, frame, sizes, fit = "cover" }: { post: NewsPost; frame:
 }
 
 function Card({ post, showCategory }: { post: NewsPost; showCategory: boolean }) {
+  // Two equal columns of notices (owner 2026-10-26). In each: the title, twice the old size ("main heading text twice
+  // the size really large"), across the column; under it the portrait on the left and the text beside it.
   return (
-    <li className="flex min-w-0 flex-col">
-      <Picture post={post} frame="aspect-[4/5]" sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw" />
-      <div className="mt-5">
-        <Kicker post={post} showCategory={showCategory} />
-        <h3 className="mt-3 font-display text-xl leading-snug text-navy">
-          <Link href={postPath(post)} className="transition-colors hover:text-oxblood">
-            {post.title}
-          </Link>
-        </h3>
-        {dateLine(post) && <p className="mt-1.5 font-serif text-lg text-ink-soft">{dateLine(post)}</p>}
-        <p className="mt-3 line-clamp-3 font-serif text-lg leading-relaxed text-ink">{excerpt(post.text, 180)}</p>
-        <p className="mt-3">
-          <Link
-            href={postPath(post)}
-            className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-oxblood underline decoration-oxblood/40 underline-offset-4 hover:decoration-oxblood"
-          >
-            {readLabel(post)} <span aria-hidden>→</span>
-          </Link>
-        </p>
+    <li className="min-w-0">
+      <Kicker post={post} showCategory={showCategory} />
+      <h3 className="mt-3 font-display text-[2.5rem] leading-[1.08] text-navy">
+        <Link href={postPath(post)} className="transition-colors hover:text-oxblood">
+          {post.title}
+        </Link>
+      </h3>
+      <div className="mt-5 grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start gap-5">
+        <Picture post={post} frame="aspect-[4/5]" sizes="(min-width: 768px) 20vw, 40vw" />
+        <div className="min-w-0">
+          {dateLine(post) && <p className="font-serif text-lg text-ink-soft">{dateLine(post)}</p>}
+          <p className="mt-3 line-clamp-5 font-serif text-lg leading-relaxed text-ink">{excerpt(post.text, 220)}</p>
+          <p className="mt-3">
+            <Link
+              href={postPath(post)}
+              className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-oxblood underline decoration-oxblood/40 underline-offset-4 hover:decoration-oxblood"
+            >
+              {readLabel(post)} <span aria-hidden>→</span>
+            </Link>
+          </p>
+        </div>
       </div>
     </li>
   );
