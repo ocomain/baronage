@@ -29,7 +29,7 @@ export type NewsPhoto = {
   height: number;
   alt: string;
   caption?: string; // who and when, when the post does not make it plain: "Lady Violet, Countess of Lindsay, in 2014"
-  credit: string; // "Chris McAndrew / UK Parliament"
+  credit: string; // "Chris McAndrew / UK Parliament"; "" for a picture the owner supplied without one
   licence: string; // "CC BY 3.0"
   licence_url?: string;
   source_url: string; // where the licence can be checked
@@ -73,6 +73,8 @@ export type NewsPost = {
 
 const DIR = join(process.cwd(), "content", "news");
 
+const rank = (p: NewsPost) => NEWS_CATEGORIES.findIndex((c) => c.name === p.category);
+
 function load(): NewsPost[] {
   let files: string[] = [];
   try {
@@ -85,6 +87,8 @@ function load(): NewsPost[] {
     .sort(
       (a, b) =>
         b.published.localeCompare(a.published) ||
+        // on the same day In Memoriam notices come before Congratulations (owner 2026-10-26: the birth post as "the third card on the second line")
+        rank(a) - rank(b) ||
         (b.published_at ?? "").localeCompare(a.published_at ?? "") ||
         (b.died ?? "").localeCompare(a.died ?? ""),
     );

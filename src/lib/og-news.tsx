@@ -90,9 +90,11 @@ export async function renderNewsOgImage(post: NewsPost) {
                 height={Math.round((270 * post.photo.height) / post.photo.width)}
                 style={{ border: "1px solid rgba(207,198,180,0.35)", filter: "grayscale(15%)" }}
               />
-              <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 13, color: "#8a8372", marginTop: 8 }}>
-                {`Photograph: ${post.photo.credit}${post.photo.licence ? `, ${post.photo.licence}` : ""}`}
-              </div>
+              {post.photo.credit ? (
+                <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 13, color: "#8a8372", marginTop: 8 }}>
+                  {`Photograph: ${post.photo.credit}${post.photo.licence ? `, ${post.photo.licence}` : ""}`}
+                </div>
+              ) : null}
             </div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element

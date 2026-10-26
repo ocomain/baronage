@@ -111,12 +111,9 @@ def words(text: str) -> int:
 
 def check_photo(ph, roll_url: str) -> dict:
     """A photograph we may use: a free licence with its credit, or (owner 2026-10-26, "where is his pic? see roll") the
-    holder's own portrait on his Roll entry, credited to the Roll."""
-    if not isinstance(ph, dict) or not str(ph.get("url", "")).strip():
-        fail("photo must be an object with at least a url")
-    src = str(ph["url"]).strip()
-    if not re.match(r"^https?://\S+$", src):
-        fail(f"photo.url must be a web address, got {src!r}")
+    holder's own portrait on his Roll entry, credited to the Roll, or a picture the owner supplies as a file."""
+    if not isinstance(ph, dict) or not (str(ph.get("url", "")).strip() or str(ph.get("file", "")).strip()):
+        fail("photo must be an object with at least a url (or a file)")
     crop = ph.get("crop")
     if crop is not None and not (
         isinstance(crop, list) and len(crop) == 4 and all(isinstance(v, int) and v >= 0 for v in crop) and crop[2] > crop[0] and crop[3] > crop[1]
@@ -127,6 +124,24 @@ def check_photo(ph, roll_url: str) -> dict:
         # who the picture shows, when that is not plain from the post (owner 2026-10-26: Lady Violet's 2014 photo on the birth post)
         **({"caption": str(ph["caption"]).strip()} if ph.get("caption") else {}),
     }
+    if str(ph.get("file", "")).strip():
+        # a picture the owner supplies from his own computer (owner 2026-10-26: "use Screenshot … on my comp as photo"):
+        # its use is his decision; the credit line shows only when a credit is given
+        path = Path(str(ph["file"])).expanduser()
+        if not path.is_file():
+            fail(f"photo.file {path} is not a file")
+        return {
+            "url": f"owner-supplied:{path.name}",
+            "file": str(path),
+            "credit": str(ph.get("credit", "")).strip(),
+            "licence": "",
+            "source_url": str(ph.get("source_url", "")).strip(),
+            **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
+            **extra,
+        }
+    src = str(ph["url"]).strip()
+    if not re.match(r"^https?://\S+$", src):
+        fail(f"photo.url must be a web address, got {src!r}")
     if re.match(r"^https://roll\.baronage\.com/", src):
         return {
             "url": src,
@@ -268,12 +283,15 @@ def fetch_photo(photo_in: dict, slug: str, name: str) -> tuple[dict, list[Path]]
     """Download a free-licence photograph and store it on our site: WebP for the page, JPEG for the sharing card."""
     from PIL import Image, ImageOps
 
-    req = urllib.request.Request(photo_in["url"], headers={"User-Agent": "BaronageOfScotlandAssociation/1.0 (+https://www.baronage.com) publish_memoriam"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            data = r.read(30_000_000)
-    except Exception as e:
-        raise RuntimeError(f"could not download the photo {photo_in['url']}: {e}")
+    if photo_in.get("file"):
+        data = Path(photo_in["file"]).read_bytes()
+    else:
+        req = urllib.request.Request(photo_in["url"], headers={"User-Agent": "BaronageOfScotlandAssociation/1.0 (+https://www.baronage.com) publish_memoriam"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = r.read(30_000_000)
+        except Exception as e:
+            raise RuntimeError(f"could not download the photo {photo_in['url']}: {e}")
     try:
         im = ImageOps.exif_transpose(Image.open(BytesIO(data))).convert("RGB")
     except Exception:
