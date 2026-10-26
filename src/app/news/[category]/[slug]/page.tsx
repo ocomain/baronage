@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/page-metadata";
 import { SITE_URL } from "@/lib/site";
 import { Container, Section } from "@/components/primitives";
-import { categorySlug, eventLine, excerpt, longDate, newsPosts, paragraphs, postPath, sourceLink, titlesLine } from "@/lib/news";
+import { categorySlug, eventLine, excerpt, lifeLine, longDate, newsPosts, paragraphs, postPath, sourceLink, titlesLine } from "@/lib/news";
 
 // Static export: every post is prerendered from content/news/; anything else is a 404. With no posts at all, one
 // placeholder address that renders the 404 page, as the export needs at least one.
@@ -117,9 +117,17 @@ export default async function NewsPostPage({ params }: Props) {
             )}
             <div className="min-w-0 flex-1">
             <h1 className="font-display text-4xl leading-[1.08] text-navy sm:text-5xl">{post.title}</h1>
-            {memoriam && post.born && post.died && (
+            {memoriam && post.died && (
               <p className="mt-4 font-display text-2xl text-ink-soft sm:text-[1.7rem]">
-                <time dateTime={post.born}>{longDate(post.born)}</time> – <time dateTime={post.died}>{longDate(post.died)}</time>
+                {post.born ? (
+                  <>
+                    <time dateTime={post.born}>{longDate(post.born)}</time> – <time dateTime={post.died}>{longDate(post.died)}</time>
+                  </>
+                ) : (
+                  <>
+                    Died <time dateTime={post.died}>{longDate(post.died)}</time>
+                  </>
+                )}
               </p>
             )}
             {eventLine(post) && <p className="mt-4 font-display text-2xl text-ink-soft sm:text-[1.7rem]">{eventLine(post)}</p>}

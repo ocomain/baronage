@@ -10,7 +10,9 @@ The JSON file (UTF-8):
     roll_id            Roll entry id (number)
     name               "James, 16th Earl of Lindsay"
     titles             titles as on the Roll: ["Earl of Lindsay", "Baron of Kilconquhar"] (or one string)
-    born, died         ISO dates, "1955-11-19"
+    died               ISO date, "2026-10-09"; only what the sources give: "2026-06" (shown "June 2026") or "2026"
+    born               optional, the same way: "1955-11-19", "1955-11" or "1955"; leave it out when no source gives it.
+                       Never guess a day or a month.
     place              place of death, "London"
     text               the notice, 100 to 150 words, plain text, paragraphs separated by a blank line, no links
     family_notice_url  the family's own notice (linked, never copied)
@@ -60,7 +62,7 @@ INDEXNOW = {"key": "910101b36edcdd4d440834976c689148", "keyLocation": f"{SITE}/9
 MIN_WORDS, MAX_WORDS = 100, 150
 LIVE_TIMEOUT_S = 15 * 60
 
-REQUIRED = ["roll_id", "name", "titles", "born", "died", "place", "text", "family_notice_url", "source_urls", "roll_url"]
+REQUIRED = ["roll_id", "name", "titles", "died", "place", "text", "family_notice_url", "source_urls", "roll_url"]
 # Never in our own voice (owner, 2026-09); and never a cause of death (the brief's rule).
 BANNED = [(r"\bfeudal\b", '"feudal"')]
 CAUSE_OF_DEATH = [
@@ -69,6 +71,10 @@ CAUSE_OF_DEATH = [
     r"\baccident\b", r"\bcollapsed\b", r"\bovercome\b",
 ]
 ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# A death or birth date as far as the sources go (owner-approved Horsbrugh notice, 26 Oct 2026: died "at the weekend",
+# born unknown): a year, a year and month, or a full date.
+PARTIAL_DATE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
+PARTIAL_FORMATS = {4: "%Y", 7: "%Y-%m", 10: "%Y-%m-%d"}
 os.environ["PATH"] = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:" + os.environ.get("PATH", "")
 
 
@@ -112,14 +118,18 @@ def check_notice(d: dict) -> dict:
         roll_id = int(d["roll_id"])
     except (TypeError, ValueError):
         fail(f"roll_id must be a number, got {d['roll_id']!r}")
+    if d.get("born") in (None, "", "unknown", "UNKNOWN"):
+        d.pop("born", None)
     for k in ("born", "died"):
-        if not ISO_DATE.match(str(d[k])):
-            fail(f"{k} must be an ISO date like 1955-11-19, got {d[k]!r}")
+        if k not in d:
+            continue
+        if not PARTIAL_DATE.match(str(d[k])):
+            fail(f"{k} must be an ISO date like 1955-11-19, or as far as the sources go: 1955-11 or 1955 (leave born out when unknown); got {d[k]!r}")
         try:
-            datetime.strptime(d[k], "%Y-%m-%d")
+            datetime.strptime(d[k], PARTIAL_FORMATS[len(d[k])])
         except ValueError:
             fail(f"{k} is not a real date: {d[k]!r}")
-    if d["died"] < d["born"]:
+    if "born" in d and d["died"][: len(d["born"])] < d["born"][: len(d["died"])]:
         fail("died is before born")
     titles = d["titles"] if isinstance(d["titles"], list) else [d["titles"]]
     titles = [str(t).strip() for t in titles if str(t).strip()]
@@ -183,7 +193,7 @@ def check_notice(d: dict) -> dict:
         "roll_id": roll_id,
         "name": name,
         "titles": titles,
-        "born": d["born"],
+        **({"born": d["born"]} if "born" in d else {}),
         "died": d["died"],
         "place": str(d["place"]).strip(),
         "text": text,

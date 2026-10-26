@@ -88,10 +88,21 @@ export const categorySlug = (name: string) => NEWS_CATEGORIES.find((c) => c.name
 export const categoryBySlug = (slug: string) => NEWS_CATEGORIES.find((c) => c.slug === slug);
 export const postPath = (p: NewsPost) => `/news/${categorySlug(p.category)}/${p.slug}/`;
 
-/** "2026-10-09" -> "9 October 2026" (UTC, so the day never shifts with the build machine's zone). */
+/**
+ * "2026-10-09" -> "9 October 2026"; a date known only to the month or year stays so: "2026-06" -> "June 2026",
+ * "1955" -> "1955" (UTC, so the day never shifts with the build machine's zone).
+ */
 export function longDate(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);
-  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  if (!m) return String(y);
+  const opts: Intl.DateTimeFormatOptions = { month: "long", year: "numeric", timeZone: "UTC", ...(d ? { day: "numeric" } : {}) };
+  return new Date(Date.UTC(y, m - 1, d || 1)).toLocaleDateString("en-GB", opts);
+}
+
+/** The life dates of an In Memoriam post: "19 November 1955 – 9 October 2026", or "Died June 2026" when the birth is unknown. */
+export function lifeLine(p: NewsPost) {
+  if (!p.died) return null;
+  return p.born ? `${longDate(p.born)} – ${longDate(p.died)}` : `Died ${longDate(p.died)}`;
 }
 
 /** "Married on 3 October 2026, at St Giles’ Cathedral" / "Born on 3 October 2026", for a Congratulations post. */

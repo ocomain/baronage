@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { OG_SIZE } from "@/lib/og-paper";
-import { eventLine, longDate, titlesLine, type NewsPost } from "@/lib/news";
+import { eventLine, lifeLine, titlesLine, type NewsPost } from "@/lib/news";
 
 const asset = (...parts: string[]) => readFile(join(process.cwd(), ...parts));
 
@@ -34,7 +34,7 @@ export async function renderNewsOgImage(post: NewsPost) {
         : congrats && post.kind === "birth" && post.child
           ? `${post.child}${post.style ? `, ${post.style}` : ""}`
           : post.title;
-  const dateLine = memoriam && post.born && post.died ? `${longDate(post.born)} – ${longDate(post.died)}` : eventLine(post);
+  const dateLine = (memoriam && lifeLine(post)) || eventLine(post);
 
   return new ImageResponse(
     (

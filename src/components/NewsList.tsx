@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { eventLine, excerpt, longDate, paragraphs, postPath, type NewsPost } from "@/lib/news";
+import { eventLine, excerpt, lifeLine, longDate, paragraphs, postPath, type NewsPost } from "@/lib/news";
 
 /**
  * The News pages laid out like a magazine (owner 2026-10-26: "should look like a magazine this page with list of
@@ -44,7 +44,7 @@ function Kicker({ post, showCategory }: { post: NewsPost; showCategory: boolean 
   );
 }
 
-const dateLine = (p: NewsPost) => (p.born && p.died ? `${longDate(p.born)} – ${longDate(p.died)}` : eventLine(p));
+const dateLine = (p: NewsPost) => lifeLine(p) ?? eventLine(p);
 const readLabel = (p: NewsPost) => (p.category === "In Memoriam" ? "Read the notice" : "Read more");
 
 /** The post's photograph in a frame of the given shape, or the category's tile; the credit sits under a photograph. */
