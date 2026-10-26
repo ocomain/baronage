@@ -141,7 +141,7 @@ export const navMenu: NavMenuItem[] = [
     children: [
       { href: "/governing-council", label: "Governing Council" },
       // News (owner 2026-10-26; placement shown to him in the mock)
-      { href: "/news", label: "News" },
+      { href: "/news", label: "News", badge: "New" }, // owner 2026-10-26: "put a New label next to News"
     ],
   },
   { href: "/armorial", label: "Armorial" },
