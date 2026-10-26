@@ -126,9 +126,13 @@ export function eventLine(p: NewsPost) {
     : `Born ${when}`;
 }
 
-/** The small line under the heading: the titles as on the Roll, or, for a birth, whose son or daughter the child is. */
+/**
+ * The small line under the heading: the titles as on the Roll, or, for a birth, whose son or daughter the child is, by
+ * the parent's titles (owner 2026-10-26: "Son of the Earl of Lindsay · Baron of Kilconquhar").
+ */
 export function titlesLine(p: NewsPost) {
-  if (p.kind === "birth" && p.holder) return `${p.sex === "daughter" ? "Daughter" : "Son"} of ${p.holder}`;
+  if (p.kind === "birth" && (p.titles?.length || p.holder))
+    return `${p.sex === "daughter" ? "Daughter" : "Son"} of ${p.titles?.length ? `the ${p.titles.join(" · ")}` : p.holder}`;
   return p.titles?.length ? p.titles.join(" · ") : null;
 }
 

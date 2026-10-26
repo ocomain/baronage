@@ -479,8 +479,9 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
         # the whole new wording, not only the title, so an edit anywhere in the text is not reported live from the old page
         shown = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", page)))
         paras = [re.sub(r"\s+", " ", p).strip() for p in post["text"].split("\n\n") if p.strip()]
-        # a birth page shows whose child it is ("Son of …") in place of the Roll titles
-        lines = [f"{'Daughter' if post.get('sex') == 'daughter' else 'Son'} of {post['holder']}"] if post.get("kind") == "birth" else post.get("titles", [])
+        # a birth page shows whose child it is, by the parent's titles ("Son of the Earl of Lindsay · Baron of Kilconquhar")
+        whose = f"the {' · '.join(post['titles'])}" if post.get("titles") else post.get("holder", "")
+        lines = [f"{'Daughter' if post.get('sex') == 'daughter' else 'Son'} of {whose}"] if post.get("kind") == "birth" else post.get("titles", [])
         # and the photograph by its own name, so a new picture is not reported live from the old page
         pic = (post.get("photo") or {}).get("src", "")
         if status == 200 and post["title"] in html.unescape(page) and all(p in shown for p in paras) and all(t in shown for t in lines) and pic in page:
