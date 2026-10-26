@@ -42,24 +42,10 @@ export default async function NewsCategoryPage({ params }: Props) {
   const posts = newsPosts.filter((p) => p.category === c.name);
   return (
     <>
-      <section className="bg-navy-deep text-parchment-50 texture-saltire">
-        <Container className="py-12 text-center sm:py-14">
-          <p className="rise eyebrow eyebrow--light">News</p>
-          <h1
-            className="rise mt-4 font-display leading-[1.02] text-parchment-50"
-            style={{ animationDelay: "0.08s", fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}
-          >
-            {c.name}
-          </h1>
-          {STANDFIRSTS[c.slug] && (
-            <p className="mx-auto mt-4 max-w-2xl font-serif text-lg italic leading-relaxed text-parchment-200/85 sm:text-xl">
-              {STANDFIRSTS[c.slug]}
-            </p>
-          )}
-        </Container>
-      </section>
+      {/* No hero, as on the News page (owner 2026-10-26); the standfirst stays as the page description */}
       <Section tone="parchment" className="!pt-10 sm:!pt-12">
         <Container>
+          <h1 className="mb-6 font-display text-4xl leading-[1.05] text-navy sm:text-5xl">{c.name}</h1>
           <NewsCategoryTabs current={c.slug} categories={used()} />
           <NewsList posts={posts} showCategory={false} />
         </Container>
