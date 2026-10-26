@@ -22,7 +22,15 @@ export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; sh
   );
 }
 
+/** "In Memoriam: James, 16th Earl of Lindsay" -> ["In Memoriam", "James, 16th Earl of Lindsay"]; other titles whole. */
+function splitTitle(p: NewsPost): [string | null, string] {
+  const m = p.title.match(/^(In Memoriam|Congratulations):\s*(.+)$/);
+  return m ? [m[1], m[2]] : [null, p.title];
+}
+
 function Kicker({ post, showCategory }: { post: NewsPost; showCategory: boolean }) {
+  // The category is said once: when the title opens with it, it stands small in italics above the name instead.
+  if (splitTitle(post)[0]) showCategory = false;
   const rule = post.category === "In Memoriam" ? "bg-ink" : "bg-gold";
   return (
     <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 font-sans text-[0.66rem] font-semibold uppercase tracking-[0.2em]">
@@ -107,9 +115,16 @@ function Card({ post, showCategory }: { post: NewsPost; showCategory: boolean })
   return (
     <li className="min-w-0">
       <Kicker post={post} showCategory={showCategory} />
-      <h3 className="mt-3 font-display text-[2.5rem] leading-[1.08] text-navy">
+      <h3 className="mt-3 font-display text-navy">
         <Link href={postPath(post)} className="transition-colors hover:text-oxblood">
-          {post.title}
+          {/* owner 2026-10-26: "In Memoriam" smaller and in italics, so the name and title read on one line */}
+          {splitTitle(post)[0] && (
+            <span className="block font-serif text-xl italic text-ink-soft">
+              {splitTitle(post)[0]}
+              <span className="sr-only">: </span>
+            </span>
+          )}
+          <span className="block text-[2.5rem] leading-[1.08]">{splitTitle(post)[1]}</span>
         </Link>
       </h3>
       <div className="mt-5 grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start gap-5">
