@@ -2,7 +2,7 @@
   "slug": "michael-chenery-of-horsbrugh-baron-of-horsbrugh",
   "category": "In Memoriam",
   "published": "2026-10-26",
-  "title": "In Memoriam: Michael Chenery of Horsbrugh, Baron of Horsbrugh",
+  "title": "In Memoriam: Michael, Baron of Horsbrugh",
   "roll_id": 185,
   "name": "Michael Chenery of Horsbrugh, Baron of Horsbrugh",
   "titles": [
@@ -19,5 +19,15 @@
       "label": "Eastern Daily Press, 23 June 2026",
       "url": "https://www.edp24.co.uk/news/26220987.tributes-death-baron-chenery-horsbrugh"
     }
-  ]
+  ],
+  "photo": {
+    "src": "/images/news/michael-chenery-of-horsbrugh-baron-of-horsbrugh.webp",
+    "width": 200,
+    "height": 273,
+    "alt": "Michael, Baron of Horsbrugh",
+    "credit": "Roll of Scottish Barons",
+    "licence": "",
+    "source_url": "https://roll.baronage.com/baron/michael-chenery-of-horsbrugh",
+    "url_in": "https://roll.baronage.com/baronages/Michael%20Chenery%20of%20Horsbrugh.jpg"
+  }
 }
