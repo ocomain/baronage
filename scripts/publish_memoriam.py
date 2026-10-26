@@ -426,7 +426,7 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
         # the whole new wording, not only the title, so an edit anywhere in the text is not reported live from the old page
         shown = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", page)))
         paras = [re.sub(r"\s+", " ", p).strip() for p in post["text"].split("\n\n") if p.strip()]
-        if status == 200 and post["title"] in html.unescape(page) and all(p in shown for p in paras):
+        if status == 200 and post["title"] in html.unescape(page) and all(p in shown for p in paras) and all(t in shown for t in post.get("titles", [])):
             break
         if time.time() > deadline:
             fail(f"{url} did not go live within {LIVE_TIMEOUT_S // 60} minutes (last answer {status}); the commit is on GitHub, so run this again later")
