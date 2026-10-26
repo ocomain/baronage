@@ -125,3 +125,82 @@ export async function renderNewsOgImage(post: NewsPost) {
     }
   );
 }
+
+/**
+ * Link-preview card for the News page and its category pages (owner 2026-10-26: "meta sharing image needs fixing"):
+ * navy and gold, the heading large, and the latest notices with their portraits, so a shared link shows the news itself.
+ */
+export async function renderNewsIndexOgImage(heading: string, eyebrow: string | null, posts: NewsPost[]) {
+  const [serif, sans, seal] = await Promise.all([
+    asset("assets", "CormorantGaramond-SemiBold.ttf"),
+    asset("assets", "Quicksand-Medium.ttf"),
+    asset("public", "seal-gold.png"),
+  ]);
+  const latest = posts.slice(0, 3);
+  const photos = await Promise.all(
+    latest.map(async (p) => {
+      if (!p.photo) return null;
+      const jpeg = await asset("public", p.photo.src.replace(/^\//, "").replace(/\.webp$/, ".jpg")).catch(() => null);
+      return jpeg ? `data:image/jpeg;base64,${jpeg.toString("base64")}` : null;
+    }),
+  );
+  const sealSrc = `data:image/png;base64,${seal.toString("base64")}`;
+  const name = (p: NewsPost) => p.title.replace(/^(In Memoriam|Congratulations):\s*/, "");
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "#0a1024",
+          backgroundImage: "linear-gradient(155deg, #18264a 0%, #0f1832 45%, #0a1024 100%)",
+          padding: 64,
+          fontFamily: "Cormorant",
+        }}
+      >
+        <div style={{ display: "flex", height: 3, backgroundImage: "linear-gradient(90deg, #936f24 0%, #c9a24b 45%, #e6cf93 100%)" }} />
+        <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", flex: 1, paddingRight: 32 }}>
+            <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 22, letterSpacing: 5, textTransform: "uppercase", color: "#e6cf93" }}>
+              {eyebrow ?? "Baronage of Scotland Association"}
+            </div>
+            <div style={{ display: "flex", fontSize: 120, lineHeight: 1, color: "#faf6ec", marginTop: 16 }}>{heading}</div>
+            {latest.length ? (
+              <div style={{ display: "flex", flexDirection: "column", marginTop: 22 }}>
+                {latest.map((p) => (
+                  <div key={p.slug} style={{ display: "flex", fontSize: 30, color: "#d9cdb2", marginTop: 6 }}>
+                    {`${p.category === "In Memoriam" ? "In Memoriam" : p.category}: ${name(p)}`}
+                  </div>
+                ))}
+              </div>
+            ) : null}
+          </div>
+          {photos.some(Boolean) ? (
+            <div style={{ display: "flex" }}>
+              {photos.filter((x): x is string => !!x).slice(0, 2).map((src, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={i} src={src} alt="" width={170} height={212} style={{ objectFit: "cover", objectPosition: "top", marginLeft: 16, border: "1px solid rgba(230,207,147,0.45)" }} />
+              ))}
+            </div>
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={sealSrc} alt="" width={150} height={209} />
+          )}
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid rgba(201,162,75,0.35)", paddingTop: 24, fontFamily: "Quicksand", fontSize: 20, letterSpacing: 3, textTransform: "uppercase", color: "#b9ad93" }}>
+          <div style={{ display: "flex" }}>Baronage of Scotland Association</div>
+          <div style={{ display: "flex" }}>www.baronage.com/news</div>
+        </div>
+      </div>
+    ),
+    {
+      ...OG_SIZE,
+      fonts: [
+        { name: "Cormorant", data: serif, style: "normal", weight: 400 },
+        { name: "Quicksand", data: sans, style: "normal", weight: 500 },
+      ],
+    }
+  );
+}

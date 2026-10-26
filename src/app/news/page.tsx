@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/page-metadata";
+import { SITE_URL } from "@/lib/site";
 import { Container, Section } from "@/components/primitives";
 import { NewsCategoryTabs, NewsList } from "@/components/NewsList";
 import { NEWS_CATEGORIES, newsPosts } from "@/lib/news";
@@ -10,6 +11,7 @@ export const metadata: Metadata = pageMetadata({
   title: "News",
   description: STANDFIRST,
   path: "/news/",
+  image: { url: `${SITE_URL}/og/news-index/news.png`, width: 1200, height: 630, alt: "News from the Baronage of Scotland Association" },
 });
 
 /** News (owner 2026-10-26): every post, newest first; In Memoriam is the first category. */

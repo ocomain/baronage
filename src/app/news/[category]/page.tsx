@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/page-metadata";
+import { SITE_URL } from "@/lib/site";
 import { Container, Section } from "@/components/primitives";
 import { NewsCategoryTabs, NewsList } from "@/components/NewsList";
 import { NEWS_CATEGORIES, categoryBySlug, newsPosts } from "@/lib/news";
@@ -26,7 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const c = categoryBySlug(category);
   if (!c) return {};
-  return pageMetadata({ title: `${c.name} · News`, description: STANDFIRSTS[c.slug] ?? `${c.name}: news from the Association.`, path: `/news/${c.slug}/` });
+  return pageMetadata({
+    title: `${c.name} · News`,
+    description: STANDFIRSTS[c.slug] ?? `${c.name}: news from the Association.`,
+    path: `/news/${c.slug}/`,
+    image: { url: `${SITE_URL}/og/news-index/${c.slug}.png`, width: 1200, height: 630, alt: `${c.name}: news from the Baronage of Scotland Association` },
+  });
 }
 
 export default async function NewsCategoryPage({ params }: Props) {
