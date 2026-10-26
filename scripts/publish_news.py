@@ -14,7 +14,7 @@ younger of or master of as congratulation posts").
     roll_id           Roll entry id (number)
     holder            the holder as on the Roll: "John Smith, Baron of Inverness"
     titles            titles as on the Roll: ["Baron of Inverness"] (or one string)
-    date              the wedding or the birth, ISO: "2026-10-03"
+    date              the wedding or the birth, ISO: "2026-10-03", or "2026-07" when the sources give only the month
     text              60 to 100 words, plain text, paragraphs separated by a blank line, no links
     announcement_url  the family's own announcement (required; linked, never copied)
     roll_url          the Roll entry
@@ -43,6 +43,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import publish_memoriam as pm  # noqa: E402  (shared checks and the publishing steps)
 
 MIN_WORDS, MAX_WORDS = 60, 100
+EVENT_DATE = re.compile(r"^\d{4}-\d{2}(-\d{2})?$")  # the day, or only the month when the sources go no further
 POSTCODE = re.compile(r"\b(GIR ?0AA|[A-PR-UWYZ][A-HK-Y]?\d[A-Z\d]? ?\d[ABD-HJLNP-UW-Z]{2})\b")
 STREET = re.compile(
     r"\b\d{1,4}[A-Za-z]?,? (?:[A-Z][a-z']+ ){1,3}(Street|St|Road|Rd|Avenue|Ave|Lane|Drive|Crescent|Place|Gardens|Terrace|"
@@ -70,8 +71,8 @@ def check_congratulations(d: dict) -> dict:
         roll_id = int(d["roll_id"])
     except (TypeError, ValueError):
         pm.fail(f"roll_id must be a number, got {d['roll_id']!r}")
-    if not pm.ISO_DATE.match(str(d["date"])):
-        pm.fail(f"date must be an ISO date like 2026-10-03, got {d['date']!r}")
+    if not EVENT_DATE.match(str(d["date"])):
+        pm.fail(f"date must be an ISO date like 2026-10-03, or 2026-10 when the sources give only the month, got {d['date']!r}")
     if kind == "birth" and str(d["sex"]).strip().lower() not in ("son", "daughter"):
         pm.fail('sex must be "son" or "daughter"')
     if kind == "birth" and d.get("photo"):

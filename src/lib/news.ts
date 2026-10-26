@@ -40,6 +40,8 @@ export type NewsPost = {
   category: NewsCategoryName;
   /** ISO date the post went up */
   published: string;
+  /** When the tool first published it (London time): the newest of a day's posts comes first. */
+  published_at?: string;
   title: string;
   /** Plain text; paragraphs separated by a blank line. No links or markup. */
   text: string;
@@ -79,7 +81,12 @@ function load(): NewsPost[] {
   }
   return files
     .map((f) => JSON.parse(readFileSync(join(DIR, f), "utf8")) as NewsPost)
-    .sort((a, b) => b.published.localeCompare(a.published) || (b.died ?? "").localeCompare(a.died ?? ""));
+    .sort(
+      (a, b) =>
+        b.published.localeCompare(a.published) ||
+        (b.published_at ?? "").localeCompare(a.published_at ?? "") ||
+        (b.died ?? "").localeCompare(a.died ?? ""),
+    );
 }
 
 export const newsPosts: NewsPost[] = load();
@@ -105,12 +112,13 @@ export function lifeLine(p: NewsPost) {
   return p.born ? `${longDate(p.born)} – ${longDate(p.died)}` : `Died ${longDate(p.died)}`;
 }
 
-/** "Married on 3 October 2026, at St Giles’ Cathedral" / "Born on 3 October 2026", for a Congratulations post. */
+/** "Married on 3 October 2026, at St Giles’ Cathedral" / "Born on 3 October 2026", or "Born in July 2026" when only the month is known, for a Congratulations post. */
 export function eventLine(p: NewsPost) {
   if (!p.kind || !p.event_date) return null;
+  const when = `${p.event_date.split("-").length === 3 ? "on" : "in"} ${longDate(p.event_date)}`;
   return p.kind === "marriage"
-    ? `Married on ${longDate(p.event_date)}${p.place ? `, at ${p.place}` : ""}`
-    : `Born on ${longDate(p.event_date)}`;
+    ? `Married ${when}${p.place ? `, at ${p.place}` : ""}`
+    : `Born ${when}`;
 }
 
 /** The small line under the heading: the titles as on the Roll, or, for a birth, whose son or daughter the child is. */

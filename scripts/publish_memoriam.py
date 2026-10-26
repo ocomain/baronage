@@ -326,6 +326,11 @@ def publish(post: dict, raw: dict, dry_run: bool) -> None:
                 fail(f"{path.name} already holds another post (Roll id {prev.get('roll_id')}, {prev.get('died') or prev.get('event_date')}); give this one its own \"slug\"")
             if not raw.get("published"):
                 post["published"] = prev["published"]  # a re-run keeps the first date
+            if prev.get("published_at"):
+                post["published_at"] = prev["published_at"]  # and the first time
+        else:
+            # the time orders posts published the same day: the newest first (owner 2026-10-26)
+            post["published_at"] = datetime.now(ZoneInfo("Europe/London")).isoformat(timespec="seconds")
         return json.dumps(post, ensure_ascii=False, indent=2) + "\n"
 
     def same_photo(prev: dict | None) -> bool:
