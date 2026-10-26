@@ -47,12 +47,24 @@ function Kicker({ post, showCategory }: { post: NewsPost; showCategory: boolean 
 const dateLine = (p: NewsPost) => lifeLine(p) ?? eventLine(p);
 const readLabel = (p: NewsPost) => (p.category === "In Memoriam" ? "Read the notice" : "Read more");
 
-/** The post's photograph in a frame of the given shape, or the category's tile; the credit sits under a photograph. */
-function Picture({ post, frame, sizes }: { post: NewsPost; frame: string; sizes: string }) {
+/**
+ * The post's photograph in a frame of the given shape, or the category's tile; the credit sits under a photograph.
+ * "cover" fills the frame (the upright lead frame suits a portrait); "mount" shows the whole photograph centred on a dark
+ * mount, so a portrait in a landscape card is never cut off at the chin (owner 2026-10-26: "pic looks strange way it's
+ * cut off").
+ */
+function Picture({ post, frame, sizes, fit = "cover" }: { post: NewsPost; frame: string; sizes: string; fit?: "cover" | "mount" }) {
   if (post.photo) {
+    const memoriam = post.category === "In Memoriam";
+    const mount = memoriam ? "bg-[linear-gradient(160deg,#1d1d22,#0b0b0d)]" : "bg-[linear-gradient(155deg,#18264a,#0a1024)]";
     return (
       <figure>
-        <Link href={postPath(post)} tabIndex={-1} aria-hidden className={`block overflow-hidden border border-parchment-300 bg-parchment-100 ${frame}`}>
+        <Link
+          href={postPath(post)}
+          tabIndex={-1}
+          aria-hidden
+          className={`block overflow-hidden border border-parchment-300 ${fit === "mount" ? `${mount} flex items-center justify-center p-3` : "bg-parchment-100"} ${frame}`}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={post.photo.src}
@@ -62,9 +74,9 @@ function Picture({ post, frame, sizes }: { post: NewsPost; frame: string; sizes:
             sizes={sizes}
             loading="lazy"
             decoding="async"
-            className={`h-full w-full object-cover object-top transition-transform duration-500 hover:scale-[1.02] ${
-              post.category === "In Memoriam" ? "grayscale-[15%]" : ""
-            }`}
+            className={`transition-transform duration-500 hover:scale-[1.02] ${
+              fit === "mount" ? "h-full w-auto max-w-full object-contain shadow-[0_10px_24px_-12px_rgba(0,0,0,0.7)]" : "h-full w-full object-cover object-top"
+            } ${memoriam ? "grayscale-[15%]" : ""}`}
           />
         </Link>
         <figcaption className="mt-1.5 font-sans text-[0.58rem] leading-snug tracking-[0.03em] text-muted">
@@ -125,7 +137,7 @@ function Lead({ post, showCategory }: { post: NewsPost; showCategory: boolean })
 function Card({ post, showCategory }: { post: NewsPost; showCategory: boolean }) {
   return (
     <li className="flex min-w-0 flex-col">
-      <Picture post={post} frame="aspect-[4/3]" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" />
+      <Picture post={post} frame="aspect-[4/3]" fit="mount" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" />
       <div className="mt-5">
         <Kicker post={post} showCategory={showCategory} />
         <h3 className="mt-3 font-display text-2xl leading-snug text-navy">
