@@ -13,7 +13,8 @@ younger of or master of as congratulation posts").
     kind              "marriage" or "birth"
     roll_id           Roll entry id (number)
     holder            the holder as on the Roll: "John Smith, Baron of Inverness"
-    titles            titles as on the Roll: ["Baron of Inverness"] (or one string)
+    titles            titles as on the Roll, shown under the heading: ["The Baron of Inverness"] (or one string);
+                      on a birth post the parent's
     date              the wedding or the birth, ISO: "2026-10-03", or "2026-07" when the sources give only the month
     text              60 to 100 words, plain text, paragraphs separated by a blank line, no links
     announcement_url  the family's own announcement (required; linked, never copied)
