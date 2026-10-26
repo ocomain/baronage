@@ -53,7 +53,7 @@ export default async function NewsCategoryPage({ params }: Props) {
         </Container>
       </section>
       <Section tone="parchment" className="!pt-10 sm:!pt-12">
-        <Container size="prose">
+        <Container>
           <NewsCategoryTabs current={c.slug} categories={used()} />
           <NewsList posts={posts} showCategory={false} />
         </Container>

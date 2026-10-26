@@ -33,7 +33,7 @@ export default function NewsPage() {
         </Container>
       </section>
       <Section tone="parchment" className="!pt-10 sm:!pt-12">
-        <Container size="prose">
+        <Container>
           <NewsCategoryTabs current={null} categories={used} />
           <NewsList posts={newsPosts} />
         </Container>
