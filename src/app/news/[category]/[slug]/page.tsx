@@ -116,7 +116,21 @@ export default async function NewsPostPage({ params }: Props) {
               </figure>
             )}
             <div className="min-w-0 flex-1">
-            <h1 className="font-display text-4xl leading-[1.08] text-navy sm:text-5xl">{post.title}</h1>
+            {/* owner 2026-10-26: "In Memoriam" small and in italics above the name, as on the News page */}
+            {(() => {
+              const m = post.title.match(/^(In Memoriam|Congratulations):\s*(.+)$/);
+              return (
+                <h1 className="font-display text-navy">
+                  {m && (
+                    <span className="block font-serif text-2xl italic text-ink-soft">
+                      {m[1]}
+                      <span className="sr-only">: </span>
+                    </span>
+                  )}
+                  <span className="block text-4xl leading-[1.08] sm:text-5xl">{m ? m[2] : post.title}</span>
+                </h1>
+              );
+            })()}
             {memoriam && post.died && (
               <p className="mt-4 font-display text-2xl text-ink-soft sm:text-[1.7rem]">
                 {post.born ? (
