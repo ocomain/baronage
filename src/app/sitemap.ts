@@ -4,6 +4,7 @@ import { execSync } from "node:child_process";
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { readingRoomPapers } from "@/generated/reading-room";
+import { NEWS_CATEGORIES, newsPosts, postPath } from "@/lib/news";
 
 const BASE = SITE_URL;
 const BUILD_DATE = new Date();
@@ -68,5 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...pages, ...papers];
+  // News: the index, each category with a post, and every post (written by scripts/publish_memoriam.py and the like).
+  const newest = newsPosts[0] ? new Date(newsPosts[0].published) : BUILD_DATE;
+  const news: MetadataRoute.Sitemap = [
+    { url: `${BASE}/news/`, lastModified: newest, changeFrequency: "weekly", priority: 0.6 },
+    ...NEWS_CATEGORIES.filter((c) => newsPosts.some((p) => p.category === c.name)).map((c) => ({
+      url: `${BASE}/news/${c.slug}/`,
+      lastModified: new Date(newsPosts.find((p) => p.category === c.name)!.published),
+      changeFrequency: "weekly" as const,
+      priority: 0.5,
+    })),
+    ...newsPosts.map((p) => ({ url: `${BASE}${postPath(p)}`, lastModified: new Date(p.published), changeFrequency: "yearly" as const, priority: 0.5 })),
+  ];
+
+  return [...pages, ...papers, ...news];
 }

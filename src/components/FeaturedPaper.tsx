@@ -94,9 +94,11 @@ export function FeaturedPaper() {
 
   useEffect(() => {
     // Anywhere in the Reading Room (the index and every paper) the visitor is already among the papers; so too in
-    // The Baron's Course, its booklet and its certificate (owner 2026-10-23: "should not appear in this section").
+    // The Baron's Course, its booklet and its certificate (owner 2026-10-23: "should not appear in this section"). Never
+    // in News either: no promotion beside a death notice (2026-10-26).
     const path = pathname.replace(/\/?$/, "/");
-    const inReadingRoom = path.startsWith("/reading-room/") || path.startsWith("/the-barons-course/");
+    const inReadingRoom =
+      path.startsWith("/reading-room/") || path.startsWith("/the-barons-course/") || path.startsWith("/news/");
     const noCardPage = NO_CARD_PAGES.includes(path);
     const closed = isClosed();
     if (closed) markClosed(); // still browsing: keep it closed for another 30 minutes

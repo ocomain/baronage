@@ -90,6 +90,7 @@ export const navLinks: NavLink[] = [
   // Support the Association taken out of the footer too (owner 2026-10-23, after the header menu); the page stays live.
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" },
+  { href: "/news", label: "News" },
 ];
 
 export type NavMenuItem = NavLink & {
@@ -137,7 +138,11 @@ export const navMenu: NavMenuItem[] = [
     // Support the Association: added 2026-10-19 (owner, via the membership chat); taken out of the header menu
     // 2026-10-23 (owner: "for now remove support the association page link from navigation"). The page stays live
     // and in the footer.
-    children: [{ href: "/governing-council", label: "Governing Council" }],
+    children: [
+      { href: "/governing-council", label: "Governing Council" },
+      // News (owner 2026-10-26; placement shown to him in the mock)
+      { href: "/news", label: "News" },
+    ],
   },
   { href: "/armorial", label: "Armorial" },
   { href: "/reading-room", label: "Reading Room", badge: "New" }, // owner 2026-10-23: "New Papers"; later the same day "delete papers": "New"
