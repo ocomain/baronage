@@ -109,24 +109,8 @@ def check_congratulations(d: dict) -> dict:
         else:
             sources.append(url(s, "source_urls"))
 
-    photo_in = None
-    if d.get("photo"):  # marriage only (refused above for a birth)
-        ph = d["photo"]
-        if not isinstance(ph, dict):
-            pm.fail("photo must be an object with url, credit, licence and source_url")
-        lack = [k for k in ("url", "credit", "licence", "source_url") if not str(ph.get(k, "")).strip()]
-        if lack:
-            pm.fail(f"photo is missing: {', '.join(lack)} (a photo is only used with its credit and licence)")
-        if not pm.FREE_LICENCE.match(str(ph["licence"]).strip()):
-            pm.fail(f"photo licence {ph['licence']!r} is not a free licence we can use (CC BY, CC BY-SA, CC0, public domain, OGL)")
-        photo_in = {
-            "url": url(ph["url"], "photo.url"),
-            "credit": str(ph["credit"]).strip(),
-            "licence": str(ph["licence"]).strip(),
-            **({"licence_url": url(ph["licence_url"], "photo.licence_url")} if ph.get("licence_url") else {}),
-            "source_url": url(ph["source_url"], "photo.source_url"),
-            **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
-        }
+    # marriage only (refused above for a birth): a free-licence photo, or the holder's own portrait on the Roll
+    photo_in = pm.check_photo(d["photo"], d["roll_url"]) if d.get("photo") else None
 
     holder = str(d["holder"]).strip()
     titles = d["titles"] if isinstance(d["titles"], list) else [d["titles"]]

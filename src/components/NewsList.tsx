@@ -68,7 +68,8 @@ function Picture({ post, frame, sizes }: { post: NewsPost; frame: string; sizes:
           />
         </Link>
         <figcaption className="mt-1.5 font-sans text-[0.58rem] leading-snug tracking-[0.03em] text-muted">
-          {post.photo.credit}, {post.photo.licence}
+          {post.photo.credit}
+          {post.photo.licence && `, ${post.photo.licence}`}
         </figcaption>
       </figure>
     );

@@ -104,8 +104,8 @@ export default async function NewsPostPage({ params }: Props) {
                   <a href={post.photo.source_url} target="_blank" rel="noopener noreferrer" className="underline decoration-muted/40 underline-offset-2 hover:text-oxblood">
                     {post.photo.credit}
                   </a>
-                  ,{" "}
-                  {post.photo.licence_url ? (
+                  {post.photo.licence && ", "}
+                  {!post.photo.licence ? null : post.photo.licence_url ? (
                     <a href={post.photo.licence_url} target="_blank" rel="noopener noreferrer license" className="underline decoration-muted/40 underline-offset-2 hover:text-oxblood">
                       {post.photo.licence}
                     </a>

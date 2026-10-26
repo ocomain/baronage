@@ -27,8 +27,8 @@ export async function renderNewsOgImage(post: NewsPost) {
   const memoriam = post.category === "In Memoriam";
   const congrats = post.category === "Congratulations";
   const heading =
-    memoriam && post.name
-      ? post.name
+    memoriam
+      ? post.title.replace(/^In Memoriam:\s*/, "")
       : congrats && post.kind === "marriage" && post.holder
         ? `${post.holder}${post.holder.includes(",") ? "," : ""} and ${post.spouse ?? ""}`.trim()
         : congrats && post.kind === "birth" && post.child
@@ -90,7 +90,7 @@ export async function renderNewsOgImage(post: NewsPost) {
                 style={{ border: "1px solid rgba(207,198,180,0.35)", filter: "grayscale(15%)" }}
               />
               <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 13, color: "#8a8372", marginTop: 8 }}>
-                {`Photograph: ${post.photo.credit}, ${post.photo.licence}`}
+                {`Photograph: ${post.photo.credit}${post.photo.licence ? `, ${post.photo.licence}` : ""}`}
               </div>
             </div>
           ) : (

@@ -22,7 +22,9 @@ The JSON file (UTF-8):
     family_notice_label  link text, default "The family's notice"
     slug, title          default from the name: "james-16th-earl-of-lindsay", "In Memoriam: James, 16th Earl of Lindsay"
     published            default today (London); kept from the first run when the notice already exists
-    photo                a photograph we are free to use, shown beside the heading and on the sharing card:
+    photo                the holder's portrait from his Roll entry, {"url": "https://roll.baronage.com/baronages/…jpg"}
+                         (credited "Roll of Scottish Barons"), or a photograph we are free to use, shown beside
+                         the heading and on the sharing card:
                          {"url": image file to download, "credit": "Chris McAndrew / UK Parliament",
                           "licence": "CC BY 3.0", "licence_url": "...", "source_url": page where the licence is shown,
                           "alt": optional description}. Only free licences: CC BY, CC BY-SA, CC0, public domain,
@@ -107,6 +109,40 @@ def words(text: str) -> int:
     return len(text.split())
 
 
+def check_photo(ph, roll_url: str) -> dict:
+    """A photograph we may use: a free licence with its credit, or (owner 2026-10-26, "where is his pic? see roll") the
+    holder's own portrait on his Roll entry, credited to the Roll."""
+    if not isinstance(ph, dict) or not str(ph.get("url", "")).strip():
+        fail("photo must be an object with at least a url")
+    src = str(ph["url"]).strip()
+    if not re.match(r"^https?://\S+$", src):
+        fail(f"photo.url must be a web address, got {src!r}")
+    if re.match(r"^https://roll\.baronage\.com/", src):
+        return {
+            "url": src,
+            "credit": str(ph.get("credit") or "Roll of Scottish Barons").strip(),
+            "licence": "",
+            "source_url": str(ph.get("source_url") or roll_url).strip(),
+            **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
+        }
+    lack = [k for k in ("credit", "licence", "source_url") if not str(ph.get(k, "")).strip()]
+    if lack:
+        fail(f"photo is missing: {', '.join(lack)} (a photo is only used with its credit and licence)")
+    if not FREE_LICENCE.match(str(ph["licence"]).strip()):
+        fail(f"photo licence {ph['licence']!r} is not a free licence we can use (CC BY, CC BY-SA, CC0, public domain, OGL), and the photo is not from the holder's Roll entry")
+    for k in ("source_url", "licence_url"):
+        if ph.get(k) and not re.match(r"^https?://\S+$", str(ph[k])):
+            fail(f"photo.{k} must be a web address, got {ph[k]!r}")
+    return {
+        "url": src,
+        "credit": str(ph["credit"]).strip(),
+        "licence": str(ph["licence"]).strip(),
+        **({"licence_url": str(ph["licence_url"])} if ph.get("licence_url") else {}),
+        "source_url": str(ph["source_url"]),
+        **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
+    }
+
+
 def check_notice(d: dict) -> dict:
     """The notice as it will be stored, or a plain message and exit 1."""
     if "text" not in d and "notice" in d:
@@ -162,24 +198,7 @@ def check_notice(d: dict) -> dict:
         else:
             sources.append(url(s, "source_urls"))
 
-    photo_in = None
-    if d.get("photo"):
-        ph = d["photo"]
-        if not isinstance(ph, dict):
-            fail("photo must be an object with url, credit, licence and source_url")
-        lack = [k for k in ("url", "credit", "licence", "source_url") if not str(ph.get(k, "")).strip()]
-        if lack:
-            fail(f"photo is missing: {', '.join(lack)} (a photo is only used with its credit and licence)")
-        if not FREE_LICENCE.match(str(ph["licence"]).strip()):
-            fail(f"photo licence {ph['licence']!r} is not a free licence we can use (CC BY, CC BY-SA, CC0, public domain, OGL)")
-        photo_in = {
-            "url": url(ph["url"], "photo.url"),
-            "credit": str(ph["credit"]).strip(),
-            "licence": str(ph["licence"]).strip(),
-            **({"licence_url": url(ph["licence_url"], "photo.licence_url")} if ph.get("licence_url") else {}),
-            "source_url": url(ph["source_url"], "photo.source_url"),
-            **({"alt": str(ph["alt"]).strip()} if ph.get("alt") else {}),
-        }
+    photo_in = check_photo(d.get("photo"), d["roll_url"]) if d.get("photo") else None
 
     name = str(d["name"]).strip()
     slug = slugify(d.get("slug") or name)
