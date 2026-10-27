@@ -79,6 +79,24 @@ export function GlossaryTerm({ term, children }: { term: string; children: React
   );
 }
 
+const bySlug = new Map(glossary.map((g) => [slugify(g.term), g]));
+const attr = (s: string) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+/**
+ * A paper links a glossary word as [word](/scottish-baronies-explained/#term-<slug>), as far as markdown can go; here
+ * that link becomes the same dotted word and tooltip as on the Explained page (owner 2026-10-27, via the papers chat:
+ * "the dotted tooltip also that we use on that page"), still going to the entry when clicked or tapped. A slug the
+ * glossary does not have stays a plain link.
+ */
+export function glossLinks(html: string): string {
+  return html.replace(/<a href="(\/scottish-baronies-explained\/#term-([a-z0-9-]+))">/g, (whole, href: string, slug: string) => {
+    const g = bySlug.get(slug);
+    if (!g) return whole;
+    const tip = g.def.length <= TIP_MAX ? ` data-tip="${attr(`${g.term}: ${g.def}`)}"` : "";
+    return `<a href="${href}" class="gloss"${tip}>`;
+  });
+}
+
 function linkTerms(text: string, used: Set<string>): ReactNode {
   const parts: ReactNode[] = [];
   let last = 0;

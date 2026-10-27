@@ -10,6 +10,7 @@ import { KEY_STORE, NEW_KEY_STORE, UNSEALING } from "@/lib/subscriber";
 import type { ReadingRoomPaper } from "@/generated/reading-room";
 import { COURSE_NAME, COURSE_PATH, courseStepFor } from "@/lib/course";
 import { CourseMarkRead } from "./CourseMarkRead";
+import { glossLinks } from "./Glossary";
 
 const DEFAULT_EMBLEM = "/images/seal-ink.png";
 
@@ -108,13 +109,17 @@ export function ArticleShell({ paper, related }: { paper: ReadingRoomPaper; rela
               <SealedPaper
                 slug={paper.slug}
                 mode={paper.gated}
-                html={paper.html}
-                footnotesHtml={paper.footnotesHtml}
+                html={glossLinks(paper.html)}
+                footnotesHtml={paper.footnotesHtml && glossLinks(paper.footnotesHtml)}
                 sourcesHtml={paper.sourcesHtml}
               />
             </>
           ) : (
-            <PaperBody html={paper.html} footnotesHtml={paper.footnotesHtml} sourcesHtml={paper.sourcesHtml} />
+            <PaperBody
+              html={glossLinks(paper.html)}
+              footnotesHtml={paper.footnotesHtml && glossLinks(paper.footnotesHtml)}
+              sourcesHtml={paper.sourcesHtml}
+            />
           )}
 
           {course && (

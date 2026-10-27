@@ -857,6 +857,16 @@ body:has(header nav.fixed) .ez-switch{display:none}
   transition: color 0.15s;
 }
 .gloss:hover { color: #6e1423; }
+/* in a paper, a glossary word keeps the dotted look of the Explained page, not the paper's own link style */
+.prose-heritage a.gloss {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(156, 122, 46, 0.75);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.prose-heritage a.gloss:hover { color: #6e1423; }
 @media (hover: hover) {
   .gloss[data-tip]:hover::after,
   .gloss[data-tip]:focus-visible::after {
