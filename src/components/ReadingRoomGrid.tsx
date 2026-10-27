@@ -115,7 +115,8 @@ export function ReadingRoomGrid({
                 </span>
                 <span className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.18em] sm:mt-auto sm:justify-center sm:pt-4 sm:text-[0.62rem]">
                   <span className="whitespace-nowrap text-muted">{p.readingTime} read</span>
-                  {p.gated && <span className="whitespace-nowrap text-muted">Subscribers</span>}
+                  {/* owner 2026-10-27: not on the card of "The Lord Lyon and the baronage since 2004" */}
+                  {p.gated && p.slug !== "lord-lyon-since-2004" && <span className="whitespace-nowrap text-muted">Subscribers</span>}
                   <span className="whitespace-nowrap text-gold-deep transition-colors group-hover:text-oxblood">
                     Read <span aria-hidden>→</span>
                   </span>
