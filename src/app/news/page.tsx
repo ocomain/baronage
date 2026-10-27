@@ -22,7 +22,16 @@ export default function NewsPage() {
     <>
       <Section tone="parchment" className="!pt-10 sm:!pt-12">
         <Container>
-          <h1 className="mb-6 font-display text-4xl leading-[1.05] text-navy sm:text-5xl">News</h1>
+          {/* owner 2026-10-27: the old saying after the heading, with a dash */}
+          <div className="mb-6 sm:flex sm:items-baseline sm:gap-x-4">
+            <h1 className="font-display text-4xl leading-[1.05] text-navy sm:text-5xl">News</h1>
+            <p className="mt-2 font-serif text-xl italic leading-snug text-ink-soft sm:mt-0 sm:text-2xl">
+              <span className="hidden sm:inline" aria-hidden="true">
+                —{" "}
+              </span>
+              As the saying goes, a gentleman should only be written about at his birth, his marriage and his death.
+            </p>
+          </div>
           <NewsCategoryTabs current={null} categories={used} />
           <NewsList posts={newsPosts} />
         </Container>
