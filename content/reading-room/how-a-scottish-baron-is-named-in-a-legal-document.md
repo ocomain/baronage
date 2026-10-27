@@ -130,7 +130,7 @@ The heir is designed as Scots deeds have always designed a laird’s heir. The L
 
 On the social forms, and on widows and former wives, see [Proper address](/proper-address/) and [“Younger of” and “Master of”](/reading-room/younger-of-and-master-of/).
 
-Two things do not belong in the clause. Not “commonly called”: that is the Crown’s formula for a title it does not confer, and the Crown confers this one. And not the title on a line of its own, apart from the name: the Lyon’s patents, the court’s headings and the honours list all run name and title together, “John Smith, Baron of Inverness”. Or the title stands alone, as a peer’s does: “The Baron of Inverness”.
+Two things do not belong in the clause. Not “commonly called”: that is the Crown’s formula for a title it does not confer, and the Crown confers this one. And not the title on a line of its own, apart from the name: the Lyon’s patents, the court’s headings and the honours list all run name and title together, “John Smith, Baron of Inverness”. Or the title stands alone, as a peer’s does: “The Baron of Inverness”, as the holder of a substantive title, not a courtesy title.
 
 ## The Roll and the Pledge
 
