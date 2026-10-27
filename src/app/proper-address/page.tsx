@@ -588,8 +588,6 @@ export default function ProperAddressPage() {
                   <F>
                     <S>Prof The Much Hon John Smith, Baron of Inverness</S>
                     <Or />
-                    <S>The Baron of Inverness, Professor John Smith</S>
-                    <Or />
                     <S>Prof Baron of Inverness</S>
                     <Or />
                     <S>Prof Inverness</S>
