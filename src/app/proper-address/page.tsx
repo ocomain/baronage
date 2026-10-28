@@ -237,6 +237,15 @@ const LADY_TITLE_SOURCE = (
     Lady Drum”: the same, p. 410, note 1.
   </>
 );
+const PROFESSOR_SOURCE = (
+  <>
+    Court of Session, Outer House, Opinion of Lord Uist, 22 February 2008, [2008] CSOH 36, in the Petition of “Professor The
+    Much Honoured Stephen Pendaries Kerr of Ardgowan, Baron of Ardgowan” for judicial review of a decision of the Lord Lyon
+    King of Arms. His petition to the Lord Lyon of 24 May 2004 was “in the name ‘The Much Honoured Stephen Kerr of Ardgowan,
+    Baron of Ardgowan’” (para. [2]) —{" "}
+    <Src href="http://web.archive.org/web/20080603042706/http://www.scotcourts.gov.uk:80/opinions/2008CSOH36.html">Scottish Courts (archived)</Src>.
+  </>
+);
 const DEAR_SOURCE = (
   <>
     In personal letters a laird or chief “is addressed ‘Dear Glenfalloch,’ not ‘Dear Campbell’”: <Adam page="410" n={441} />.
@@ -587,6 +596,7 @@ export default function ProperAddressPage() {
                   {/* owner 2026-10-25: the main style, first */}
                   <F>
                     <S>Prof The Much Hon John Smith, Baron of Inverness</S>
+                    <Footnote n={11}>{PROFESSOR_SOURCE}</Footnote>
                     <Or />
                     <S>Prof the Baron of Inverness</S>
                     <Or />
@@ -633,7 +643,7 @@ export default function ProperAddressPage() {
                     "a bit smaller and perhaps aligned to the right of the text", then "better underneath and slightly bigger so can read it", then "1/3 smaller" (512px to 344px); the letter speaking for itself; cropped to its text ("you don't need all that white space") */}
                 <P>
                   Alternatively, only the barony or TD can be used: <S>Dear Inverness</S>
-                  <Footnote n={11}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.{" "}
+                  <Footnote n={12}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.{" "}
                   {/* one paragraph (owner 2026-10-21) */}
                   <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years:
                 </P>
@@ -695,7 +705,7 @@ export default function ProperAddressPage() {
                     “Younger of Barony”
                   </Link>
                   , as a Scottish peer’s heir is “Master of”. “The” may go before either,
-                  and keeps “younger” from being read as a surname.<Footnote n={12}>{HEIR_SOURCE}</Footnote>
+                  and keeps “younger” from being read as a surname.<Footnote n={13}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <div hidden>{MAID_SOURCE}</div>
@@ -714,7 +724,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Where there is no son and a daughter is the heir, some families style her “Maid of Barony”
-                  <Footnote n={13}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
+                  <Footnote n={14}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
                 </P>
                 <Forms>
                   <F>
@@ -808,7 +818,7 @@ export default function ProperAddressPage() {
                   The following section applies only to Pledged hereditary titles; as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
-                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={14}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
+                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={15}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
                   married. New baron must be related to the dowager. In such cases, she may choose to be styled as:
                 </P>
                 <Forms>
@@ -1018,7 +1028,7 @@ export default function ProperAddressPage() {
                 </P>
                 <P>
                   Use the title on every record and every signature. Official recognition is given only to titles in
-                  ordinary use.<Footnote n={15}>{RECORDS_SOURCE}</Footnote>
+                  ordinary use.<Footnote n={16}>{RECORDS_SOURCE}</Footnote>
                 </P>
                 <DigitalAddressSimulator />
                 {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
