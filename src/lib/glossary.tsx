@@ -95,7 +95,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Freeholder",
-    def: "A vassal holding land directly of the Crown without a grant in free barony. Freeholders and small barons (both commonly referred to as lairds) were excused attendance at Parliament together in 1428. Until then both owed suit and presence in Parliament as members and were liable to fines for absence, so for the minor barons — who bore the burden and expense of travelling to wherever Parliament sat — the Act came as a relief rather than a loss. From 1587 they voted together for shire commissioners (on forty shillings of land held of the king). But “Freeholders were not Barons and everybody recognised that”; heraldically they had no baronial insignia.",
+    def: "A laird who was not a baron: a vassal holding land directly of the Crown without a grant in free barony. Freeholders and small barons (both commonly referred to as lairds) were excused attendance at Parliament together in 1428. Until then both owed suit and presence in Parliament as members and were liable to fines for absence, so for the minor barons — who bore the burden and expense of travelling to wherever Parliament sat — the Act came as a relief rather than a loss. From 1587 they voted together for shire commissioners (on forty shillings of land held of the king). But “Freeholders were not Barons and everybody recognised that”; heraldically they had no baronial insignia.",
     note: (
       <>
         <a href="https://www.rps.ac.uk/trans/1428/3/3" target="_blank" rel="noopener noreferrer" className={extLink}>
