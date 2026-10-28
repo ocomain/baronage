@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/page-metadata";
+import { site } from "@/lib/site";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { Seal } from "@/components/Seal";
 import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PATH, courseSteps, numberWord } from "@/lib/course";
@@ -12,8 +13,8 @@ import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PATH, courseSteps, numberWord } fr
  * hang up on the wall", a badge for the member's website with no mention of the Roll, as members and Patrons need not
  * be barons). The test and the certificate themselves are not built yet (owner: "wait until we have some paying members
  * and membership area first but the sales page can go up now"), so this page says the test is still to open. The free
- * Certificate of Reading is gone (owner, same day: "it's only for members"). Prices stay on the Support page alone, as
- * on the Members page.
+ * Certificate of Reading is gone (owner, same day: "it's only for members"). No link to the Support page: the way to
+ * join is to contact the Secretary (owner, same day).
  */
 const PATH = `${COURSE_PATH}certification/`;
 const link = "text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood";
@@ -65,6 +66,8 @@ function Specimen() {
   );
 }
 
+/** The certificate: the holder's name is the heading and the course a small label under it, so the two "The Baron…"
+ * lines do not sit one above the other (owner 2026-10-28, option A). */
 function Badge({ name, no }: { name: string; no: string }) {
   return (
     <div className="w-[18.75rem] max-w-full shrink-0 border-[3px] border-gold bg-parchment-50 p-[5px] shadow-[0_14px_30px_-22px_rgba(10,16,36,0.55)]">
@@ -73,11 +76,11 @@ function Badge({ name, no }: { name: string; no: string }) {
         <p className="mt-2.5 font-sans text-[0.58rem] font-bold uppercase tracking-[0.2em] text-gold-deep">
           Baronage of Scotland Association
         </p>
-        <p className="mt-1.5 font-display text-[1.75rem] leading-none text-navy">{COURSE_NAME}</p>
-        <p className="mt-3 border-b border-gold/60 pb-1 font-display text-[1.3rem] leading-tight text-oxblood">
-          {name}
+        <p className="mt-2.5 font-display text-[1.7rem] leading-[1.08] text-navy">{name}</p>
+        <p className="mt-2.5 font-serif text-[0.95rem] italic leading-none text-ink-soft">has passed</p>
+        <p className="mt-1.5 border-y border-gold/70 px-2.5 py-1 font-sans text-[0.68rem] font-bold uppercase tracking-[0.22em] text-oxblood">
+          {COURSE_NAME}
         </p>
-        <p className="mt-2 font-serif text-base italic leading-snug text-ink-soft">read its papers and passed its test</p>
         <p className="mt-3 font-sans text-[0.6rem] font-bold uppercase tracking-[0.16em] text-gold-deep">
           Certificate No. {no} · www.baronage.com
         </p>
@@ -92,10 +95,12 @@ function Button({ name, no }: { name: string; no: string }) {
     <div className="inline-flex max-w-full items-center gap-3 rounded-[5px] border border-gold bg-parchment-50 py-2.5 pl-3 pr-4 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
       <Seal tone="gold" size="xs" alt="" aria-hidden className="h-12 w-auto flex-none" />
       <div className="min-w-0 text-left">
-        <p className="font-sans text-[1.15rem] font-semibold leading-tight text-navy">{COURSE_NAME}</p>
-        <p className="mt-0.5 font-display text-[1.05rem] leading-tight text-oxblood">{name}</p>
+        <p className="font-display text-[1.4rem] leading-[1.1] text-navy">{name}</p>
+        <p className="mt-1 font-sans text-[0.62rem] font-bold uppercase tracking-[0.18em] text-oxblood">
+          Passed · {COURSE_NAME}
+        </p>
         <p className="mt-1 font-sans text-[0.58rem] font-bold uppercase tracking-[0.16em] text-gold-deep">
-          Passed · No. {no} · www.baronage.com
+          No. {no} · www.baronage.com
         </p>
       </div>
     </div>
@@ -108,7 +113,7 @@ function Line({ name }: { name: string }) {
     <p className="inline-flex max-w-full items-start gap-2.5 text-left font-serif text-[1.05rem] leading-snug text-parchment-100/85">
       <Seal tone="gold" size="xs" alt="" aria-hidden className="mt-0.5 h-6 w-auto flex-none" />
       <span className="underline decoration-parchment-100/30 underline-offset-4">
-        {name} · {COURSE_NAME}, passed · Baronage of Scotland Association
+        {name} has passed {COURSE_NAME} · Baronage of Scotland Association
       </span>
     </p>
   );
@@ -183,7 +188,17 @@ const steps: { title: string; body: ReactNode }[] = [
       </>
     ),
   },
-  { title: "Join", body: <>Become a member of the Association, a Friend or a Patron.</> },
+  {
+    title: "Join",
+    body: (
+      <>
+        <Link href="/contact/" className={link}>
+          Contact the Secretary
+        </Link>{" "}
+        to become a member of the Association, a Friend or a Patron.
+      </>
+    ),
+  },
   {
     title: "Take the test",
     body: (
@@ -294,20 +309,14 @@ export default function CourseCertificationPage() {
             <p className="font-serif text-xl leading-relaxed text-ink">
               The test will open to members, Friends and Patrons. Join now, and you can take it as soon as it opens.
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-4">
-              <ButtonLink href="/support/#associate-member">Become an Associate Member</ButtonLink>
-              <ButtonLink href="/support/" variant="outline">
-                Become a Friend
-              </ButtonLink>
-              <ButtonLink href="/support/" variant="outline">
-                Become a Patron
-              </ButtonLink>
+            <div className="mt-7 flex justify-center">
+              <ButtonLink href="/contact/">Contact the Secretary for membership</ButtonLink>
             </div>
             <p className="mt-5 font-serif text-base italic text-muted">
-              Prices and terms are on the{" "}
-              <Link href="/support/" className={link}>
-                Support page
-              </Link>
+              Or write to{" "}
+              <a href={`mailto:${site.email}`} className={link}>
+                {site.email}
+              </a>
               .
             </p>
           </div>
