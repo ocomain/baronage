@@ -95,7 +95,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Freeholder",
-    def: "A vassal holding land directly of the Crown without a grant in free barony. Freeholders and small barons were excused attendance at Parliament together in 1428. Until then both owed suit and presence in Parliament as members and were liable to fines for absence, so for the minor barons — who bore the burden and expense of travelling to wherever Parliament sat — the Act came as a relief rather than a loss. From 1587 they voted together for shire commissioners (on forty shillings of land held of the king). But “Freeholders were not Barons and everybody recognised that”; heraldically they had no baronial insignia.",
+    def: "A vassal holding land directly of the Crown without a grant in free barony. Freeholders and small barons (both commonly referred to as lairds) were excused attendance at Parliament together in 1428. Until then both owed suit and presence in Parliament as members and were liable to fines for absence, so for the minor barons — who bore the burden and expense of travelling to wherever Parliament sat — the Act came as a relief rather than a loss. From 1587 they voted together for shire commissioners (on forty shillings of land held of the king). But “Freeholders were not Barons and everybody recognised that”; heraldically they had no baronial insignia.",
     note: (
       <>
         <a href="https://www.rps.ac.uk/trans/1428/3/3" target="_blank" rel="noopener noreferrer" className={extLink}>
@@ -105,7 +105,11 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
         <a href="https://www.rps.ac.uk/trans/1587/7/143" target="_blank" rel="noopener noreferrer" className={extLink}>
           RPS 1587/7/143
         </a>
-        ; Innes of Learney,{" "}
+        ;{" "}
+        <a href="https://www.dsl.ac.uk/entry/dost/lard" target="_blank" rel="noopener noreferrer" className={extLink}>
+          DOST, <em>Lard, Laird</em>
+        </a>{" "}
+        (“a landowner who was a tenant-in-chief of the sovereign, a baron or a freeholder”); Innes of Learney,{" "}
         <a
           href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/"
           target="_blank"
