@@ -35,7 +35,7 @@ function Specimen() {
         <p className="mt-1 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-gold-deep">Certificate</p>
         <p className="mt-8 font-serif text-lg italic text-ink-soft">This records that</p>
         <p className="mt-2 w-full max-w-sm border-b border-gold/60 pb-2 font-display text-3xl leading-tight text-oxblood sm:text-[2.1rem]">
-          John Smith, Baron of Inverness
+          The Baron of Inverness
         </p>
         <p className="mt-5 max-w-sm font-serif text-lg leading-snug text-ink">
           has read the {numberWord(courseSteps.length)} papers of {COURSE_NAME} and passed its test
@@ -64,7 +64,7 @@ function Specimen() {
   );
 }
 
-function Badge() {
+function Badge({ name, no }: { name: string; no: string }) {
   return (
     <div className="w-[18.75rem] max-w-full shrink-0 border-[3px] border-gold bg-parchment-50 p-[5px] shadow-[0_14px_30px_-22px_rgba(10,16,36,0.55)]">
       <div className="flex flex-col items-center border border-gold/60 px-4 pb-3.5 pt-5 text-center">
@@ -74,24 +74,27 @@ function Badge() {
         </p>
         <p className="mt-1.5 font-display text-[1.75rem] leading-none text-navy">{COURSE_NAME}</p>
         <p className="mt-3 border-b border-gold/60 pb-1 font-display text-[1.3rem] leading-tight text-oxblood">
-          John Smith, Baron of Inverness
+          {name}
         </p>
         <p className="mt-2 font-serif text-base italic leading-snug text-ink-soft">read its papers and passed its test</p>
         <p className="mt-3 font-sans text-[0.6rem] font-bold uppercase tracking-[0.16em] text-gold-deep">
-          Certificate No. 0001 · www.baronage.com
+          Certificate No. {no} · www.baronage.com
         </p>
       </div>
     </div>
   );
 }
 
+/** The owner's examples (2026-10-28), to show the certificate is not only for barons: a baron, an heir and a member who is neither. */
+const EXAMPLES = ["The Baron of Inverness", "Younger of Edinburgh", "Jane Hoop"];
+
 /** What a visitor sees on pointing at the badge, or tapping it on a phone. */
 function Record() {
   const rows: [string, string][] = [
-    ["Name", "John Smith, Baron of Inverness"],
+    ["Name", "Jane Hoop"],
     ["Course", `${COURSE_NAME}, ${numberWord(courseSteps.length)} papers`],
     ["Test", "Passed"],
-    ["Certificate", "No. 0001, signed by the Baron of Drum"],
+    ["Certificate", "No. 0003, signed by the Baron of Drum"],
   ];
   return (
     <div className="w-[22rem] max-w-full shrink-0 border border-gold bg-parchment-50 px-5 pb-4 pt-5 shadow-[0_18px_40px_-20px_rgba(10,16,36,0.45)]">
@@ -183,8 +186,7 @@ export default function CourseCertificationPage() {
         </div>
 
         <div className="mt-20 grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-12">
-          <div className="flex flex-wrap items-start justify-center gap-6 lg:order-2">
-            <Badge />
+          <div className="flex justify-center lg:order-2">
             <Record />
           </div>
           <div className="lg:order-1">
@@ -199,6 +201,13 @@ export default function CourseCertificationPage() {
             </ul>
           </div>
         </div>
+
+        <div className="mt-12 flex flex-wrap items-start justify-center gap-6">
+          {EXAMPLES.map((name, i) => (
+            <Badge key={name} name={name} no={String(i + 1).padStart(4, "0")} />
+          ))}
+        </div>
+        <p className="mt-5 text-center font-serif text-lg italic text-muted">Not only for barons: the same badge for a baron, an heir or any member.</p>
 
         <div className="mx-auto mt-20 max-w-3xl">
           <h2 className="text-center font-display text-4xl leading-tight text-navy">How to earn it</h2>
