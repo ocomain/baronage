@@ -724,7 +724,6 @@ export default function ProperAddressPage() {
                     <N>(some prefer Maiden)</N>
                   </F>
                 </Forms>
-                <P>Unmarried daughters otherwise use the designation, as shown below.</P>
                 <P>If a baron holds a territorial designation, the TD typically takes precedence:</P>
                 <Forms>
                   <F>
@@ -734,7 +733,7 @@ export default function ProperAddressPage() {
                     Wife of heir: <S>Mrs Smith of TD, yr</S>
                   </F>
                   <F>
-                    Daughters: <S>Miss Mary Smith of TD</S>
+                    Unmarried daughters: <S>Miss Mary Smith of TD</S>
                   </F>
                 </Forms>
               </Sec>
