@@ -44,5 +44,143 @@
         "anchor": "the-short-answer"
       }
     ]
+  },
+  {
+    "no": 2,
+    "week": "2026-11-02",
+    "questions": [
+      {
+        "q": "Which flag has a baron no right to fly?",
+        "options": ["The Saltire", "His own banner", "The Lion Rampant", "His standard"],
+        "answer": 2,
+        "why": "The Saltire is every Scot’s flag. The Lion Rampant is the Sovereign’s, and a baron has no right to fly it.",
+        "paper": "heraldry-and-flags-of-a-baron",
+        "anchor": "the-short-answer"
+      },
+      {
+        "q": "In a baron’s court, who gave judgment?",
+        "options": ["The baron", "The bailie", "The tenants who owed attendance", "The sheriff"],
+        "answer": 2,
+        "why": "Whoever presided, the baron or his bailie, did not judge.",
+        "paper": "the-barons-court-and-its-officers",
+        "anchor": "the-short-answer"
+      },
+      {
+        "q": "On the Lord Lyon’s Rolls in the Gazette, a baron appears as what?",
+        "options": ["The head of a house", "A peer", "A knight", "A landowner"],
+        "answer": 0,
+        "why": "A baron is on such a Roll as the head of a house.",
+        "paper": "barons-in-the-gazette",
+        "anchor": "the-lyon-court-s-rolls"
+      },
+      {
+        "q": "The baron’s red cap turned up with white fur is the ancestor of what?",
+        "options": ["The heraldic “cap of maintenance”", "The judge’s wig", "The bishop’s mitre", "The Glengarry bonnet"],
+        "answer": 0,
+        "why": "The baron’s cap — red, turned up with white fur — is the ancestor of the heraldic “cap of maintenance”.",
+        "paper": "robes-and-insignia",
+        "anchor": "the-chapeau"
+      },
+      {
+        "q": "In Scots law, what does a barony do for its holder?",
+        "options": ["It ennobles him", "Makes him a peer", "Makes him a knight", "Nothing for his rank"],
+        "answer": 0,
+        "why": "Mackenzie: “a Barony, as we call it, do ennoble; for Baronies are establisht only by the Prince’s Erection or Confirmation.”",
+        "paper": "is-a-scottish-baron-a-commoner",
+        "anchor": "the-short-answer"
+      }
+    ]
+  },
+  {
+    "no": 3,
+    "week": "2026-11-09",
+    "questions": [
+      {
+        "q": "When the small barons were excused from Parliament, what was each sheriffdom asked to send instead?",
+        "options": ["The sheriff himself", "Commissioners of the shire", "The barons’ eldest sons", "A written petition"],
+        "answer": 1,
+        "why": "The Act of 1428 does not create the distinction between great barons and small; it assumes it, excusing the small barons and freeholders from attendance and asking each sheriffdom to send commissioners instead.",
+        "paper": "baronage-in-the-statutes",
+        "anchor": "three-threads"
+      },
+      {
+        "q": "In the records of the House of Commons, which members were called “barons”?",
+        "options": ["Members for the Scottish shires", "The sons of peers", "Members for the City of London", "Members for the Cinque Ports"],
+        "answer": 3,
+        "why": "The commission covers every person elected “a Knight, Citizen, Burgess, or Baron of any the five Ports”: the members for the Cinque Ports were called barons.",
+        "paper": "barons-in-the-house-of-commons",
+        "anchor": "esquire-october-1707"
+      },
+      {
+        "q": "In Waverley, what does Sir Walter Scott call his laird of Tully-Veolan?",
+        "options": ["The Lord of Tully-Veolan", "The Baron of Bradwardine", "The Laird of Waverley", "The Baron of Kilravock"],
+        "answer": 1,
+        "why": "Sir Walter Scott, Innes concludes, \"was quite correct when he characterised his laird of Tully-veolan as 'The Baron of Bradwardine'\" (p. 157).",
+        "paper": "innes-of-learney-1945",
+        "anchor": "8-baron-of-x-the-title-in-use"
+      },
+      {
+        "q": "How did the official Roll of Baronets settle who was entitled to the title?",
+        "options": ["By proof of each claim", "By a vote of the baronets themselves", "By a fee paid to the Crown", "By the word of the claimant’s family"],
+        "answer": 0,
+        "why": "The Roll settled the question by proof, not argument.",
+        "paper": "official-roll-of-the-baronetage-1910",
+        "anchor": "credibility-restored"
+      },
+      {
+        "q": "In the Kilravock papers, who called the baron “laird”?",
+        "options": ["The Queen and the Privy Council", "Neighbours, clerks and tradesmen", "The baron himself, in his own deeds", "The Lord Lyon"],
+        "answer": 1,
+        "why": "None of them, in anything he wrote or signed, calls himself laird: that was the word of neighbours, clerks and tradesmen.",
+        "paper": "the-two-styles-of-a-scottish-baron",
+        "anchor": "the-kilravock-papers"
+      }
+    ]
+  },
+  {
+    "no": 4,
+    "week": "2026-11-16",
+    "questions": [
+      {
+        "q": "How may a Scottish baron sign a deed today?",
+        "options": ["Only by his family name", "By his title, as a peer does", "Only as “Laird of Inverness”", "Only with the Lord Lyon’s leave"],
+        "answer": 1,
+        "why": "A baron signs as a peer signs, by his title: “Inverness”, or “Baron of Inverness”.",
+        "paper": "how-a-scottish-baron-is-named-in-a-legal-document",
+        "anchor": "signing-the-deed"
+      },
+      {
+        "q": "Which barony did Parliament annex to the King’s eldest son for ever?",
+        "options": ["Stirling", "Falkland", "Dunfermline", "Renfrew"],
+        "answer": 3,
+        "why": "In 1469 Parliament annexed “the barony of Renfrew, with the lands and tenandries of the same” to the King’s eldest son “in perpetuity”. The notice of the letters patent of 2023 that made Prince William Prince of Wales names him “Baron of Renfrew”.",
+        "paper": "how-the-baronets-pleaded-the-barons-nobility",
+        "anchor": "never-taken-away"
+      },
+      {
+        "q": "What does a souvenir plot of Scottish land confer on its buyer?",
+        "options": ["Nothing", "The style of laird", "A right to arms", "A place in the Land Register"],
+        "answer": 0,
+        "why": "A souvenir plot confers nothing: the Court of the Lord Lyon calls such plots “insufficient to bring anyone within the jurisdiction of the Lord Lyon King of Arms”, and they cannot be entered in the Land Register.",
+        "paper": "lairds-lords-and-barons",
+        "anchor": "of-that-ilk-the-territorial-designation"
+      },
+      {
+        "q": "Barons and freeholders voted together for the shire. Were the freeholders barons?",
+        "options": ["No, and everybody recognised that", "Yes, every one of them", "Only those who bore arms", "Only in the Highlands"],
+        "answer": 0,
+        "why": "Freeholders were not Barons and everybody recognised that.",
+        "paper": "innes-of-learney-1945",
+        "anchor": "3-barons-and-freeholders"
+      },
+      {
+        "q": "In the old records, where is a baron most often given his title, “Baron of X”?",
+        "options": ["In letters from the sovereign", "In his bonds and contracts", "In his tenants’ rent books", "In the parish registers"],
+        "answer": 0,
+        "why": "A charter or a bond will usually show the name; a royal letter will often show the title.",
+        "paper": "the-two-styles-of-a-scottish-baron",
+        "anchor": "what-the-record-shows"
+      }
+    ]
   }
 ]
