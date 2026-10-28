@@ -37,7 +37,7 @@
       },
       {
         "q": "Of old, a baron on trial for a crime had the right to be tried by whom?",
-        "options": ["Peers of the realm", "Other barons", "Burgesses", "The Lord Lyon"],
+        "options": ["Peers of the realm", "Barons of the realm", "Burgesses", "The Lord Lyon"],
         "answer": 1,
         "why": "The old law says it in terms: “ane Earle, be Earles; ane Baron, be Barons”.",
         "paper": "the-barons-privilege-of-trial-by-barons",
