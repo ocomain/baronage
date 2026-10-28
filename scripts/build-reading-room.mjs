@@ -178,6 +178,8 @@ async function buildPaper(file, dir = CONTENT_DIR) {
   // "Essential reading" tag on the Reading Room card (owner 2026-10-23); front-matter `essential: true`.
   if (data.essential && data.essential !== "true") throw new Error(`${file}: essential must be "true" or left out`);
   const essential = data.essential === "true";
+  // Optional shorter title for the link-preview card only (front-matter `share_title`); the page keeps `title`.
+  const shareTitle = data.share_title || null;
 
   // Drop a leading HTML comment (implementation notes) and a leading H1 that duplicates the title.
   let body = fmBody.replace(/^\s*<!--[\s\S]*?-->\s*/, "");
@@ -218,6 +220,7 @@ async function buildPaper(file, dir = CONTENT_DIR) {
     emblem: data.emblem || null,
     gated,
     essential,
+    shareTitle,
     html,
     sourcesHtml,
     footnotesHtml,
@@ -306,6 +309,8 @@ export type ReadingRoomPaper = {
   gated: "full" | "part" | null;
   /** Shown with an "Essential reading" tag on its Reading Room card (front-matter \`essential: true\`). */
   essential: boolean;
+  /** Title for the link-preview card when the full title would not fit it (front-matter \`share_title\`). */
+  shareTitle: string | null;
   html: string;
   sourcesHtml: string;
   footnotesHtml: string;

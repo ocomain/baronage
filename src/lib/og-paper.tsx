@@ -25,7 +25,11 @@ export async function renderPaperOgImage(paper: ReadingRoomPaper) {
     asset("public", "images", "seal-ink.png"),
   ]);
   const sealSrc = `data:image/png;base64,${seal.toString("base64")}`;
-  const standfirst = clamp(paper.subtitle ?? "");
+  const title = paper.shareTitle ?? paper.title;
+  // A title over ~70 characters runs to three lines: set it smaller and keep the standfirst to one line,
+  // or the column overflows the card and the title is drawn over the standfirst.
+  const long = title.length > 70;
+  const standfirst = clamp(paper.subtitle ?? "", long ? 72 : 132);
 
   return new ImageResponse(
     (
@@ -72,17 +76,17 @@ export async function renderPaperOgImage(paper: ReadingRoomPaper) {
           <div
             style={{
               display: "flex",
-              fontSize: paper.title.length > 42 ? 76 : 84,
+              fontSize: long ? 66 : paper.title.length > 42 ? 76 : 84,
               lineHeight: 1.06,
               color: "#131e3a",
-              marginTop: 40,
+              marginTop: long ? 28 : 40,
               maxWidth: 1000,
             }}
           >
-            {paper.title}
+            {title}
           </div>
 
-          <div style={{ display: "flex", width: 132, height: 2, backgroundColor: "#c9a24b", marginTop: 30 }} />
+          <div style={{ display: "flex", width: 132, height: 2, backgroundColor: "#c9a24b", marginTop: long ? 26 : 30 }} />
 
           {standfirst ? (
             <div
