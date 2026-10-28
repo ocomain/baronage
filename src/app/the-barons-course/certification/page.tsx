@@ -27,20 +27,19 @@ export const metadata: Metadata = pageMetadata({
   image: COURSE_OG_IMAGE,
 });
 
+/** The certificate for the wall: the holder's name is what people see, the course a small label, as on the badges
+ * (owner 2026-10-28: "the baron's title in big visually … the baron's course small"). */
 function Specimen() {
   return (
     <div className="relative mx-auto w-full max-w-[34rem] border-[3px] border-gold bg-parchment-50 p-2 shadow-[0_22px_48px_-30px_rgba(10,16,36,0.55)]">
       <div className="flex flex-col items-center border border-gold/60 px-5 pb-8 pt-10 text-center sm:px-10">
         <Seal tone="gold" size="sm" alt="" aria-hidden className="h-20 w-auto" />
         <p className="eyebrow mt-5">Baronage of Scotland Association</p>
-        <p className="mt-4 font-display text-4xl leading-tight text-navy sm:text-5xl">{COURSE_NAME}</p>
-        <p className="mt-1 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-gold-deep">Certificate</p>
         <p className="mt-8 font-serif text-lg italic text-ink-soft">This records that</p>
-        <p className="mt-2 w-full max-w-sm border-b border-gold/60 pb-2 font-display text-3xl leading-tight text-oxblood sm:text-[2.1rem]">
-          The Baron of Inverness
-        </p>
-        <p className="mt-5 max-w-sm font-serif text-lg leading-snug text-ink">
-          has read all the papers of {COURSE_NAME} and passed its test
+        <p className="mt-3 font-display text-[2.6rem] leading-[1.05] text-navy sm:text-[3.4rem]">The Baron of Inverness</p>
+        <p className="mt-6 max-w-sm font-serif text-lg leading-snug text-ink">has read all the papers and passed the test of</p>
+        <p className="mt-3 border-y border-gold/70 px-4 py-1.5 font-sans text-[0.78rem] font-bold uppercase tracking-[0.24em] text-oxblood">
+          {COURSE_NAME}
         </p>
         <div className="mt-10 grid w-full grid-cols-2 items-end gap-6 text-left">
           <div>
