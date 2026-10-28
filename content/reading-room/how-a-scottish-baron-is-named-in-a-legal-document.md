@@ -158,6 +158,7 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 - Court of the Lord Lyon: certificate of 10 March 1946; Letters Patent of 30 November 1982, 2 March 1995, 30 May 2007, 26 October 2009, 2014 and 2015; guidance of 5 January 2010; the Sturzenegger of Arran note.
 - *Kerr of Ardgowan, Petitioner* [2008] CSOH 36; *Kerr v Blair* [2009] CSIH 61, 2010 SC 1.
 - HM Passport Office, *Titles: caseworker guidance*, version 25.0 (2026).
+- Law of Property (Miscellaneous Provisions) Act 1989, s. 1; *Neocleous v Rees* [2019] EWHC 2462 (Ch); *Cowley v Cowley* [1901] AC 450; Land and Conveyancing Law Reform Act 2009 (Ireland), s. 64; Uniform Commercial Code, § 1-201; Revised Uniform Law on Notarial Acts, as enacted in Kansas, K.S.A. 53-5a05.
 - Hugh Peskett, opinion on the nobility, title and dignity of Scottish baronies (after 2013), quoted with permission.
 
 [^1]: [Explanatory Notes to the Abolition of Feudal Tenure etc. (Scotland) Act 2000](https://www.legislation.gov.uk/asp/2000/5/notes/division/1/3/6/11), paras 195–196: “ownership of such an estate and land enables the owner to adopt the title of ‘Baron of …’”; “the holder of land on a barony title has the right to use the title of baron”.
