@@ -102,7 +102,7 @@ Green’s *Encyclopaedia of the Law of Scotland* said in 1896 that “the mere t
 
 ## Form for legal contracts
 
-A Scottish baron is designed on the pattern of the peers’ deeds above: every forename, the surname, the title, the residence, and a defined term. The prefix of the baronage is “The Much Honoured”, the form accepted by the Court of Session in *Kerr of Ardgowan* in 2008, whose petitioner came before it as “Professor The Much Honoured Stephen Pendaries Kerr of Ardgowan, Baron of Ardgowan”.[^38]
+A Scottish baron is designed on the pattern of the peers’ deeds above: prefix, forenames, the surname, the title, the residence, and a defined term. The prefix of the baronage is “The Much Honoured”, the form accepted by the Court of Session in *Kerr of Ardgowan* in 2008, whose petitioner came before it as “Professor The Much Honoured Stephen Pendaries Kerr of Ardgowan, Baron of Ardgowan”.[^38]
 
 > **THE MUCH HONOURED JOHN ALEXANDER SMITH, BARON OF INVERNESS**, residing at [address] **(“the Baron”)**
 
