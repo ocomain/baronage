@@ -50,7 +50,7 @@ Mackenzie was speaking for Archibald Douglas of Spott, accused in 1667 of the �
 
 The order gave him barons in the majority, not a jury of barons only.[^7] The Crown had opposed the plea: the old books were not law, it said, and “it cannot be instanced that the said objection was ever proponed and sustained”.[^8] Spott himself escaped from Edinburgh Castle and was never tried.[^9]
 
-The plea was older than Spott. In 1613 Hew Somervell of Drum, “within the degrie of ane Barroune”, asked to be “tryit be his peiris, viz. be Barrones”. That time the Justice found the jurors “honest, substantious men” and let them sit.[^10]
+The plea was older than Spott. In 1613 Hew Somervell of Drum, “within the degree of a baron”, asked to be “tried by his peers, that is, by barons”. That time the Justice found the jurors “honest, substantious men” and let them sit.[^10]
 
 ## Whose it was
 
@@ -98,7 +98,7 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^7]: *Justiciary Records*, vol. I, [p. 211](https://archive.org/details/recordsofproceed01edin/page/n254/mode/1up).
 [^8]: *Justiciary Records*, vol. I, [p. 202](https://archive.org/details/recordsofproceed01edin/page/n245/mode/1up) and [p. 210](https://archive.org/details/recordsofproceed01edin/page/n253/mode/1up); Mackenzie, *Works*, vol. II, [p. 244](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n248/mode/1up).
 [^9]: *Justiciary Records*, vol. I, [p. 214](https://archive.org/details/recordsofproceed01edin/page/n257/mode/1up).
-[^10]: Robert Pitcairn, *Criminal Trials in Scotland*, vol. III (Edinburgh, 1833), [p. 260](https://archive.org/details/criminaltrialsin03pitc/page/n271/mode/1up).
+[^10]: Robert Pitcairn, *Criminal Trials in Scotland*, vol. III (Edinburgh, 1833), [p. 260](https://archive.org/details/criminaltrialsin03pitc/page/n271/mode/1up). The record’s words, in the Scots of 1613: “within the degrie of ane Barroune”; “tryit be his peiris, viz. be Barrones”.
 [^11]: Mackenzie, *Works*, vol. II, [p. 245](https://archive.org/details/bim_eighteenth-century_the-works-of-that-eminen_mackenzie-george-sir_1716_2/page/n249/mode/1up). He names the case of 19 July 1675 as *Mackintosh contra Frazer of Culbockie*.
 [^12]: Hume, *Commentaries*, vol. II, [pp. 97–98](https://archive.org/details/bim_eighteenth-century_commentaries-on-the-law-_hume-david-baron-of-th_1800_2/page/n98/mode/1up).
 [^13]: Jurors (Scotland) Act 1825 (6 Geo. IV c. 22), [s. 12](https://www.legislation.gov.uk/ukpga/Geo4/6/22/enacted).
