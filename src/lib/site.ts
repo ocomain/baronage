@@ -155,7 +155,15 @@ export const navMenu: NavMenuItem[] = [
   },
   // owner 2026-10-23: "you could even have this as a nav menu itself in addition to reading room" (called
   // "Essential Reading" for an afternoon, then "call it The Baron's Course")
-  { href: "/the-barons-course", label: "The Baron’s Course", badge: "New" }, // owner 2026-10-24: "put new label next the baron's course"
+  {
+    href: "/the-barons-course",
+    label: "The Baron’s Course",
+    badge: "New", // owner 2026-10-24: "put new label next the baron's course"
+    // The Certificate under it (owner 2026-10-28: "clearly describe what it is on a drop-down of The Baron's Course")
+    selfInList: true,
+    selfLabel: "The Course",
+    children: [{ href: "/the-barons-course/certification", label: "The Certificate", badge: "New" }],
+  },
   // Back in the main row, right of Reading Room (owner 2026-10-06: there is space again on desktop).
   { href: "/members", label: "Member’s Chamber" },
 ];

@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/scottish-baronies-explained", ["src/app/scottish-baronies-explained"]],
     ["/reading-room", ["src/app/reading-room/page.tsx", "content/reading-room"]],
     ["/the-barons-course", ["src/app/the-barons-course", "src/lib/course.ts", "src/components/CoursePanel.tsx"]],
+    ["/the-barons-course/certification", ["src/app/the-barons-course/certification"]],
     ["/armorial", ["src/app/armorial"]],
     ["/history", ["src/app/history", "src/components/HistoryChapters.tsx"]],
     ["/proper-address", ["src/app/proper-address"]],
