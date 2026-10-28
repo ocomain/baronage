@@ -17,6 +17,7 @@ const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
  */
 export function CoursePanel({
   title,
+  eyebrow,
   steps,
   parts,
   standfirst,
@@ -25,6 +26,8 @@ export function CoursePanel({
 }: {
   /** The page's h1: the course page has no hero band (owner 2026-10-23). */
   title: string;
+  /** A small line over the h1: the menu's name for the course. */
+  eyebrow?: string;
   steps: CourseStep[];
   parts: readonly string[];
   standfirst: string;
@@ -69,6 +72,7 @@ export function CoursePanel({
         <CourseSeal done={done} total={steps.length} size={92} className="mt-1 hidden sm:block" />
         <CourseSeal done={done} total={steps.length} size={68} className="mt-1 sm:hidden" />
         <div className="min-w-0">
+          {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
           <h1 id="course-title" className="font-display text-4xl leading-[1.05] text-navy sm:text-5xl">
             {title}
           </h1>

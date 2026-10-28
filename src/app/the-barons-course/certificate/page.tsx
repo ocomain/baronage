@@ -11,7 +11,7 @@ import { COURSE_NAME, COURSE_PATH } from "@/lib/course";
 const TO = `${COURSE_PATH}certification/`;
 
 export const metadata: Metadata = {
-  title: `${COURSE_NAME} Certificate`,
+  title: `Certificate in ${COURSE_NAME}`,
   robots: { index: false, follow: true },
   alternates: { canonical: TO },
 };

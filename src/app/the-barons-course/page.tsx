@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/page-metadata";
 import { Container, Section } from "@/components/primitives";
 import { CoursePanel } from "@/components/CoursePanel";
-import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PARTS, COURSE_PATH, COURSE_PREREAD, courseStandfirst, courseSteps } from "@/lib/course";
+import { COURSE_MENU_NAME, COURSE_NAME, COURSE_OG_IMAGE, COURSE_PARTS, COURSE_PATH, COURSE_PREREAD, courseStandfirst, courseSteps } from "@/lib/course";
 
 /**
  * The Baron's Course on its own page, for the header menu (owner 2026-10-23). The full syllabus lives here only; the
@@ -23,6 +23,7 @@ export default function BaronsCoursePage() {
       <Container>
         <CoursePanel
           title={COURSE_NAME}
+          eyebrow={COURSE_MENU_NAME}
           steps={courseSteps}
           parts={COURSE_PARTS}
           standfirst={courseStandfirst()}

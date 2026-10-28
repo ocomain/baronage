@@ -4,7 +4,9 @@ import { SITE_URL } from "@/lib/site";
 /**
  * The Baron's Course: a numbered reading series through the Reading Room (owner 2026-10-23, "approved, yes this is
  * good"; order and lesson lines from the papers chat, word for word). Called "Essential Reading" for an afternoon,
- * then "call it The Baron's Course" (owner, same day); /essential-reading/ forwards here. This list is the one source of truth for the
+ * then "call it The Baron's Course" (owner, same day); /essential-reading/ forwards here. Renamed Scottish Baronial
+ * Studies on 28 Oct 2026 (owner: a less derogatory name), but the menu still says The Baron's Course ("as it's clear
+ * it's a course then") and the address stays /the-barons-course/. This list is the one source of truth for the
  * course panel, the course page, the band and the previous/next links on each paper.
  *
  * A step whose paper is not yet in the Reading Room is skipped, and the numbering and the count follow what is
@@ -101,13 +103,15 @@ export const courseSteps: CourseStep[] = STEPS.filter((s) => published.has(s.slu
 });
 
 export const COURSE_PATH = "/the-barons-course/";
-export const COURSE_NAME = "The Baron’s Course";
+export const COURSE_NAME = "Scottish Baronial Studies";
+/** The menu's name for it, also the course page's eyebrow so the page is plainly the one the menu named. */
+export const COURSE_MENU_NAME = "The Baron’s Course";
 /** The link-preview card (app/og/course), so a shared link shows the course, not the site's general picture. */
 export const COURSE_OG_IMAGE = {
   url: `${SITE_URL}/og/course/the-barons-course.png`,
   width: 1200,
   height: 630,
-  alt: "The Baron’s Course: twelve papers from the Reading Room of the Baronage of Scotland Association",
+  alt: "Scottish Baronial Studies: papers from the Reading Room of the Baronage of Scotland Association",
 };
 
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",

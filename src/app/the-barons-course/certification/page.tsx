@@ -20,9 +20,9 @@ const PATH = `${COURSE_PATH}certification/`;
 const link = "text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood";
 
 export const metadata: Metadata = pageMetadata({
-  title: `${COURSE_NAME} Certificate`,
+  title: `Certificate in ${COURSE_NAME}`,
   description:
-    "For members, Friends and Patrons of the Baronage of Scotland Association who read the papers of The Baron’s Course and pass its test: a certificate for the wall, signed by the Baron of Drum, and optionally a badge for their own website.",
+    "For members, Friends and Patrons of the Baronage of Scotland Association who read the papers of Scottish Baronial Studies and pass its test: a certificate for the wall, signed by the Baron of Drum, and optionally a badge for their own website.",
   path: PATH,
   image: COURSE_OG_IMAGE,
 });
@@ -37,7 +37,7 @@ function Specimen() {
         <p className="eyebrow mt-5">Baronage of Scotland Association</p>
         <p className="mt-8 font-serif text-lg italic text-ink-soft">This records that</p>
         <p className="mt-3 font-display text-[2.6rem] leading-[1.05] text-navy sm:text-[3.4rem]">The Baron of Inverness</p>
-        <p className="mt-6 max-w-sm font-serif text-lg leading-snug text-ink">has read all the papers and passed the test of</p>
+        <p className="mt-6 max-w-sm font-serif text-lg leading-snug text-ink">has read all the papers and passed the test in</p>
         <p className="mt-3 border-y border-gold/70 px-4 py-1.5 font-sans text-[0.78rem] font-bold uppercase tracking-[0.24em] text-oxblood">
           {COURSE_NAME}
         </p>
@@ -91,15 +91,15 @@ function Badge({ name, no }: { name: string; no: string }) {
 /** The button: small, to sit beside other badges, such as the Roll's Enrolled card. */
 function Button({ name, no }: { name: string; no: string }) {
   return (
-    <div className="inline-flex max-w-full items-center gap-3 rounded-[5px] border border-gold bg-parchment-50 py-2.5 pl-3 pr-4 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+    <div className="inline-flex max-w-full items-center gap-2.5 rounded-[5px] border border-gold bg-parchment-50 py-2.5 pl-3 pr-3.5 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
       <Seal tone="gold" size="xs" alt="" aria-hidden className="h-12 w-auto flex-none" />
       <div className="min-w-0 text-left">
         <p className="font-display text-[1.4rem] leading-[1.1] text-navy">{name}</p>
         <p className="mt-1 font-sans text-[0.62rem] font-bold uppercase tracking-[0.18em] text-oxblood">
-          Passed · {COURSE_NAME}
+          {COURSE_NAME}
         </p>
-        <p className="mt-1 font-sans text-[0.58rem] font-bold uppercase tracking-[0.16em] text-gold-deep">
-          No. {no} · www.baronage.com
+        <p className="mt-1 font-sans text-[0.58rem] font-bold uppercase tracking-[0.13em] text-gold-deep">
+          Passed · No. {no} · www.baronage.com
         </p>
       </div>
     </div>
@@ -298,7 +298,7 @@ export default function CourseCertificationPage() {
             <div>
               <h2 className="font-display text-3xl leading-tight text-navy">What it is</h2>
               <p className="mt-3 font-serif text-xl leading-relaxed text-ink-soft">
-                A record that you have read {COURSE_NAME} and passed its test. It is not a professional qualification, and it
+                A record that you have read the papers of {COURSE_NAME} and passed its test. It is not a professional qualification, and it
                 does not confer or confirm any title.
               </p>
             </div>

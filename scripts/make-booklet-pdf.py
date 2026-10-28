@@ -65,7 +65,7 @@ def main():
             img.replace(im, quality=70)
         page.compress_content_streams()
     writer.compress_identical_objects(remove_duplicates=True, remove_unreferenced=True)
-    writer.add_metadata({"/Title": "The Baron’s Course", "/Author": "Baronage of Scotland Association"})
+    writer.add_metadata({"/Title": "Scottish Baronial Studies", "/Author": "Baronage of Scotland Association"})
     os.makedirs(os.path.dirname(DEST), exist_ok=True)
     with open(DEST, "wb") as f:
         writer.write(f)
