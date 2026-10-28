@@ -32,12 +32,21 @@ export function PaperActions({
   slug,
   showPrint = true,
   className = "",
+  path,
+  thing = "paper",
+  score,
 }: {
   title: string;
   slug: string;
   /** A subscriber paper offers printing only once it has been opened (see SealedPaper). */
   showPrint?: boolean;
   className?: string;
+  /** Another page than a paper, e.g. "/quiz/" (owner 2026-10-28: the quiz uses the same system as the papers). */
+  path?: string;
+  /** What is being sent, in the form's words: "paper" or "quiz". */
+  thing?: "paper" | "quiz";
+  /** The sender's quiz score, e.g. "4/5", printed in the email. */
+  score?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
@@ -50,9 +59,11 @@ export function PaperActions({
   const [sentTo, setSentTo] = useState(1);
   const id = useId();
 
-  const url = `${SITE_URL}/reading-room/${slug}/`;
+  const url = path ? `${SITE_URL}${path}` : `${SITE_URL}/reading-room/${slug}/`;
   const mailto = `mailto:?subject=${encodeURIComponent(`${title} (Baronage of Scotland Association)`)}&body=${encodeURIComponent(
-    `I thought you would like to read this paper from the Reading Room of the Baronage of Scotland Association:\n\n${title}\n${url}\n`,
+    thing === "quiz"
+      ? `I thought you would like to try this week’s quiz from the Reading Room of the Baronage of Scotland Association:\n\n${title}\n${url}\n`
+      : `I thought you would like to read this paper from the Reading Room of the Baronage of Scotland Association:\n\n${title}\n${url}\n`,
   )}`;
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -87,6 +98,7 @@ export function PaperActions({
           email: field("email"),
           comment: field("comment"),
           url,
+          ...(score ? { score } : {}),
           website: field("website"),
         }),
       });
@@ -187,7 +199,7 @@ export function PaperActions({
             </div>
           ) : (
             <form onSubmit={onSubmit}>
-              <p className="font-display text-2xl leading-tight text-navy">Email this paper to a friend</p>
+              <p className="font-display text-2xl leading-tight text-navy">Email this {thing} to a friend</p>
               <div className="mt-4 space-y-4">
                 <div>
                   <label htmlFor={`${id}-to`} className={LABEL}>
@@ -239,7 +251,7 @@ export function PaperActions({
                 </div>
               </div>
               <p className="mt-4 font-sans text-[0.88rem] leading-relaxed text-ink-soft">
-                We send each friend one email with a link to this paper, separately, so no friend sees another’s
+                We send each friend one email with a link to this {thing}, separately, so no friend sees another’s
                 address. We keep none of the addresses.
               </p>
               {state === "failed" && (

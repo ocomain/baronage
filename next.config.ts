@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { readFileSync } from "node:fs";
+import quizBank from "./content/quiz/quizzes.json";
 
 // The Reading Room Quiz (src/lib/quiz.ts) shows the latest quiz whose Monday has come by the London day of the build;
 // the deploy workflow rebuilds every Monday morning to move it on. QUIZ_BUILD_DAY=YYYY-MM-DD overrides the day, to
@@ -7,7 +7,7 @@ import { readFileSync } from "node:fs";
 const QUIZ_BUILD_DAY =
   process.env.QUIZ_BUILD_DAY ||
   new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-const quizWeeks: string[] = JSON.parse(readFileSync("content/quiz/quizzes.json", "utf8")).map((q: { week: string }) => q.week);
+const quizWeeks: string[] = quizBank.map((q) => q.week);
 
 const nextConfig: NextConfig = {
   // Static export — the site is fully static and deploys to GitHub Pages.

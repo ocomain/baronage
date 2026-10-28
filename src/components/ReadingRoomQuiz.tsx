@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { PaperActions } from "@/components/PaperActions";
 import {
   QUIZ_PATH,
   emptyAnswers,
@@ -105,32 +106,62 @@ function Verdict({ quiz, i, answers }: { quiz: Quiz; i: number; answers: QuizAns
 
 const BUTTON =
   "inline-flex min-h-14 items-center gap-2.5 border-[1.5px] border-navy bg-navy px-6 font-sans text-[0.95rem] font-bold uppercase tracking-[0.14em] text-parchment-50 transition-colors hover:bg-parchment-50 hover:text-navy";
-const QUIET =
-  "inline-flex min-h-14 items-center gap-2.5 border-[1.5px] border-navy bg-transparent px-6 font-sans text-[0.95rem] font-bold uppercase tracking-[0.14em] text-navy transition-colors hover:bg-navy hover:text-parchment-50";
+const LEFT = ["None", "One", "Two", "Three", "Four", "Five"];
+/** Shown with the score, on the homepage and the quiz page (owner 2026-10-28: "say come back next Monday"). */
+const COME_BACK = "Come back next Monday for five new questions.";
 
-/** The homepage panel: question one answered in place, then a button to the quiz page for the other four. */
+/** The score once all five are answered: the figure, the five squares where asked for, and when to come back. */
+function QuizScore({ quiz, answers, squares = true }: { quiz: Quiz; answers: QuizAnswers; squares?: boolean }) {
+  return (
+    <div className="mt-5">
+      <div className="font-sans text-[0.8rem] font-semibold uppercase tracking-[0.16em] text-muted">Your score</div>
+      <div className="font-display text-[5.5rem] font-semibold leading-none text-navy tabular-nums">
+        {score(quiz, answers)}
+        <span className="text-[2rem] font-medium text-muted"> of {quiz.questions.length}</span>
+      </div>
+      {squares && (
+        <div className="mt-4 flex gap-2.5" aria-hidden>
+          {quiz.questions.map((q, j) => (
+            <span key={j} className={`h-[22px] w-[22px] border-[1.5px] ${answers[j] === q.answer ? "border-navy bg-navy" : "border-oxblood bg-white"}`} />
+          ))}
+        </div>
+      )}
+      <p className="mt-4 font-serif text-2xl leading-snug text-ink-soft">{COME_BACK}</p>
+    </div>
+  );
+}
+
+/** The homepage panel: question one answered in place, then a button to the quiz page for the rest; the score once all are done. */
 export function QuizPanel({ quiz }: { quiz: Quiz }) {
   const { answers, answer } = useAnswers(quiz);
-  const done = answers.every((a) => a != null);
+  const left = answers.filter((a) => a == null).length;
+  const done = left === 0;
   return (
     <section className="bg-parchment px-5 py-14 sm:px-8 sm:py-16" aria-labelledby="quiz-panel-h">
       <div className="mx-auto max-w-3xl border border-parchment-300 border-t-[3px] border-t-gold bg-parchment-50 px-5 pb-9 pt-8 sm:px-10">
         <div className="font-sans text-[0.8rem] font-semibold uppercase tracking-[0.16em] text-muted">
-          {weekLabel(quiz.week)} · Question 1 of {quiz.questions.length}
+          {weekLabel(quiz.week)}
+          {!done && ` · Question 1 of ${quiz.questions.length}`}
         </div>
         <h2 id="quiz-panel-h" className="mt-1.5 font-display text-[2.4rem] leading-[1.05] text-navy">
           <Link href={QUIZ_PATH} className="hover:text-oxblood">
             The Reading Room Quiz
           </Link>
         </h2>
-        <p className="mb-5 mt-4 font-display text-[1.85rem] font-semibold leading-tight text-navy sm:text-[2.15rem]">{quiz.questions[0].q}</p>
-        <Options quiz={quiz} i={0} answers={answers} onAnswer={(c) => answer(0, c)} />
-        <div aria-live="polite">
-          <Verdict quiz={quiz} i={0} answers={answers} />
-        </div>
+        {done ? (
+          <QuizScore quiz={quiz} answers={answers} />
+        ) : (
+          <>
+            <p className="mb-5 mt-4 font-display text-[1.85rem] font-semibold leading-tight text-navy sm:text-[2.15rem]">{quiz.questions[0].q}</p>
+            <Options quiz={quiz} i={0} answers={answers} onAnswer={(c) => answer(0, c)} />
+            <div aria-live="polite">
+              <Verdict quiz={quiz} i={0} answers={answers} />
+            </div>
+          </>
+        )}
         <div className="mt-7">
           <Link href={QUIZ_PATH} className={BUTTON}>
-            {done ? "Your score" : answers[0] == null ? "Answer all five" : "Four to go"} <span aria-hidden>→</span>
+            {done ? "See your answers" : answers[0] == null ? "Answer all five" : `${LEFT[left] ?? left} to go`} <span aria-hidden>→</span>
           </Link>
         </div>
       </div>
@@ -224,9 +255,6 @@ function Result({
 }) {
   const text = shareText(quiz, answers);
   const pre = useRef<HTMLPreElement>(null);
-  const mailto = `mailto:?subject=${encodeURIComponent("The Reading Room Quiz")}&body=${encodeURIComponent(
-    `${text}\n\nFive questions a week from the papers of the Baronage of Scotland Association.\n`,
-  )}`;
   function copy() {
     const select = () => {
       const r = document.createRange();
@@ -244,12 +272,8 @@ function Result({
   }
   return (
     <div className="mt-6">
-      <div className="font-sans text-[0.8rem] font-semibold uppercase tracking-[0.16em] text-muted">Your score</div>
-      <div className="font-display text-[5.5rem] font-semibold leading-none text-navy tabular-nums">
-        {score(quiz, answers)}
-        <span className="text-[2rem] font-medium text-muted"> of {quiz.questions.length}</span>
-      </div>
-      <p className="mt-3 font-serif text-2xl leading-snug text-ink-soft">A new five every Monday.</p>
+      {/* The progress squares above already show which were right. */}
+      <QuizScore quiz={quiz} answers={answers} squares={false} />
 
       <ul className="mt-7 border-t border-parchment-300">
         {quiz.questions.map((q, j) => (
@@ -269,18 +293,23 @@ function Result({
         <pre ref={pre} className="mb-4 whitespace-pre-wrap break-words font-sans text-[1.05rem] font-semibold leading-relaxed text-ink">
           {text}
         </pre>
-        <div className="flex flex-wrap gap-3">
-          <button type="button" onClick={copy} className={BUTTON}>
-            Copy
-          </button>
-          <a href={mailto} className={QUIET}>
-            Email a friend
-          </a>
-        </div>
+        <button type="button" onClick={copy} className={BUTTON}>
+          Copy
+        </button>
         <p role="status" className="mt-3 min-h-[1.4em] font-sans text-[0.95rem] text-muted">
           {copied}
         </p>
       </div>
+      {/* The same "Email to a friend" as the papers: our own sender, the sender's score in the email (owner 2026-10-28). */}
+      <PaperActions
+        title="The Reading Room Quiz"
+        slug="quiz"
+        path={QUIZ_PATH}
+        thing="quiz"
+        score={`${score(quiz, answers)}/${quiz.questions.length}`}
+        showPrint={false}
+        className="mt-6"
+      />
     </div>
   );
 }
