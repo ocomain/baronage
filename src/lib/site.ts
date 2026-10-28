@@ -145,7 +145,14 @@ export const navMenu: NavMenuItem[] = [
     ],
   },
   { href: "/armorial", label: "Armorial" },
-  { href: "/reading-room", label: "Reading Room", badge: "New" }, // owner 2026-10-23: "New Papers"; later the same day "delete papers": "New"
+  {
+    href: "/reading-room",
+    label: "Reading Room",
+    badge: "New", // owner 2026-10-23: "New Papers"; later the same day "delete papers": "New"
+    selfInList: true,
+    // The quiz sits under the Reading Room, so the main row does not change (owner 2026-10-28)
+    children: [{ href: "/quiz", label: "Quiz", badge: "New" }],
+  },
   // owner 2026-10-23: "you could even have this as a nav menu itself in addition to reading room" (called
   // "Essential Reading" for an afternoon, then "call it The Baron's Course")
   { href: "/the-barons-course", label: "The Baron’s Course", badge: "New" }, // owner 2026-10-24: "put new label next the baron's course"

@@ -6,6 +6,9 @@ import { BaroniesCarousel } from "@/components/BaroniesCarousel";
 import { ImageBand } from "@/components/ImageBand";
 import { Reveal } from "@/components/Reveal";
 import { LiveStats } from "@/components/LiveStats";
+import { QuizPanel } from "@/components/ReadingRoomQuiz";
+import { quizzes } from "@/lib/quiz-bank";
+import { londonDate, quizFor } from "@/lib/quiz";
 import { Footnote } from "@/components/Footnote";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
@@ -270,6 +273,7 @@ const terminologyJsonLd = {
 };
 
 export default function HomePage() {
+  const homeQuiz = quizFor(quizzes, londonDate());
   return (
     <>
       {/* Terminology for search engines and AI crawlers (not rendered as visible text) */}
@@ -290,6 +294,9 @@ export default function HomePage() {
 
       {/* The main things a visitor comes to do. Sits under the live figures, which belong with the hero. */}
       <EasyStart />
+
+      {/* The Reading Room Quiz (owner 2026-10-28): question one answered in place. */}
+      {homeQuiz && <QuizPanel quizzes={quizzes} initialNo={homeQuiz.no} />}
 
       {/* ============================== TOUR OF THE BARONIES ============================== */}
       <Section tone="parchment" className="pt-16 pb-10 sm:pt-20 sm:pb-12">

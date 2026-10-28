@@ -209,6 +209,7 @@ export function SiteHeader() {
                   className={cls}
                 >
                   {item.label}
+                  {badge}
                   <svg viewBox="0 0 12 12" aria-hidden className="ml-1.5 h-2.5 w-2.5 opacity-70">
                     <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

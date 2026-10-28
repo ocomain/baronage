@@ -1,0 +1,48 @@
+[
+  {
+    "no": 1,
+    "week": "2026-10-26",
+    "questions": [
+      {
+        "q": "What is the heir of a Scottish baron styled?",
+        "options": ["Master of Inverness", "Younger of Inverness", "Lord Inverness", "The Honourable John Smith"],
+        "answer": 1,
+        "why": "A survey of Scots law of 1936 puts the two in one sentence: the heir of a peer is “Master”, the heir of a baron is “younger of”.",
+        "paper": "younger-of-and-master-of",
+        "anchor": "the-short-answer"
+      },
+      {
+        "q": "The earliest Scottish letter found addressed to someone as “much honoured” is dated in which year?",
+        "options": ["1455", "1616", "1707", "1832"],
+        "answer": 1,
+        "why": "The earliest Scottish letter found with it is dated 6 January 1616, from the laird of Drumlanrig",
+        "paper": "where-the-much-honoured-comes-from",
+        "anchor": "a-courtesy-of-the-seventeenth-century"
+      },
+      {
+        "q": "The Act of 1455 gave the lords of parliament a mantle of which colour?",
+        "options": ["Brown", "Red", "Blue", "Black"],
+        "answer": 1,
+        "why": "The Act of 1455 gave the lords of parliament one red mantle, which Lord Lyon Innes of Learney read as the barons’, great and small.",
+        "paper": "the-precedence-of-a-scottish-baron",
+        "anchor": "robed-alike"
+      },
+      {
+        "q": "Which Article of the Treaty of Union kept the baron’s court as his property?",
+        "options": ["Article I", "Article XVIII", "Article XX", "Article XXIII"],
+        "answer": 2,
+        "why": "This is the Article that touched the baron: his court was a heritable jurisdiction, and the Treaty preserved it as property.",
+        "paper": "treaty-of-union",
+        "anchor": "article-xx-heritable-jurisdictions-as-rights-of-property"
+      },
+      {
+        "q": "A baron’s privilege of trial by barons was later opened to landed men generally. When did Parliament abolish it?",
+        "options": ["1707", "1747", "1949", "2000"],
+        "answer": 2,
+        "why": "Parliament abolished the peers’ privilege in 1948 and the landed man’s in 1949.",
+        "paper": "the-barons-privilege-of-trial-by-barons",
+        "anchor": "when-it-ended"
+      }
+    ]
+  }
+]
