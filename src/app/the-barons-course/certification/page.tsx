@@ -21,7 +21,7 @@ const link = "text-oxblood underline decoration-oxblood/40 underline-offset-4 tr
 export const metadata: Metadata = pageMetadata({
   title: `${COURSE_NAME} Certificate`,
   description:
-    "For members, Friends and Patrons of the Baronage of Scotland Association who read the papers of The Baron’s Course and pass its test: a certificate for the wall, signed by the Baron of Drum, and a badge for their own website.",
+    "For members, Friends and Patrons of the Baronage of Scotland Association who read the papers of The Baron’s Course and pass its test: a certificate for the wall, signed by the Baron of Drum, and optionally a badge for their own website.",
   path: PATH,
   image: COURSE_OG_IMAGE,
 });
@@ -39,7 +39,7 @@ function Specimen() {
           The Baron of Inverness
         </p>
         <p className="mt-5 max-w-sm font-serif text-lg leading-snug text-ink">
-          has read the {numberWord(courseSteps.length)} papers of {COURSE_NAME} and passed its test
+          has read all the papers of {COURSE_NAME} and passed its test
         </p>
         <div className="mt-10 grid w-full grid-cols-2 items-end gap-6 text-left">
           <div>
@@ -128,7 +128,7 @@ const STYLES: { title: string; hint: string; dark?: boolean; sample: ReactNode }
 function Record() {
   const rows: [string, string][] = [
     ["Name", "Jane Hoop"],
-    ["Course", `${COURSE_NAME}, ${numberWord(courseSteps.length)} papers`],
+    ["Course", `${COURSE_NAME}, all papers`],
     ["Test", "Passed"],
     ["Certificate", "No. 0003, signed by the Baron of Drum"],
   ];
@@ -204,7 +204,7 @@ export default function CourseCertificationPage() {
           <h1 className="mt-4 font-display text-5xl leading-tight text-navy sm:text-6xl">The Certificate</h1>
           <p className="mt-5 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">
             For members, Friends and Patrons of the Association who read the papers and pass the course’s test: a signed
-            certificate for the wall, and a badge for your own website.
+            certificate for the wall and, optionally, a badge for your own website.
           </p>
         </div>
 
@@ -229,7 +229,7 @@ export default function CourseCertificationPage() {
             <h2 className="font-display text-4xl leading-tight text-navy">For your website</h2>
             <GoldRule className="mt-4" align="start" />
             <ul className="mt-6 space-y-4 font-serif text-xl leading-relaxed text-ink-soft">
-              <li>A certificate, a button or a line for your website, drawn live by the Association.</li>
+              <li>Optional: a certificate, a button or a line for your website, drawn live by the Association.</li>
               <li>Visitors who point at it, or tap it on a phone, see the Association’s record of it.</li>
               <li>
                 It shows in full only on your own website. A copy anywhere else shows only <i>Not registered for this website</i>.
