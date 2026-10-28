@@ -133,7 +133,7 @@ On the social forms, and on widows and former wives, see [Proper address](/prope
 
 Two things do not belong in the clause. Not “commonly called”: that is the Crown’s formula for a title it does not confer, and the Crown confers this one. And not the title on a line of its own beneath the name: “John Smith, Baron of Inverness”, as on a visiting card, where the title belongs on the same line as the name.[^43]
 
-Outside the contract the title serves by itself, as a peer’s does: a duke is “The Duke of Argyll” or “the Duke” everywhere but in his deed, where he is “THE MOST NOBLE TORQUHIL IAN CAMPBELL, Thirteenth Duke of Argyll …”. A Pledged baron, who holds the title for life with family descent, is “The Baron of Inverness” or “the Baron” in the same way, and needs no full names to identify him; a non-Pledged baron generally would need to use his full names with the title to identify different holders. Both hold a substantive title, not a courtesy title.[^44]
+Outside the contract the title serves by itself, as a peer’s does: a duke is “The Duke of Argyll” or “the Duke” everywhere but in his deed, where he is “THE MOST NOBLE TORQUHIL IAN CAMPBELL, Thirteenth Duke of Argyll …”. A Pledged baron, who holds the title for life with family descent, is “The Baron of Inverness” or “the Baron” in the same way, and needs no full names to identify him; a non-Pledged baron generally would need to use his full names with the title to identify different holders. Barons hold a substantive title, not a courtesy title.[^44]
 
 ## The Roll and the Pledge
 
