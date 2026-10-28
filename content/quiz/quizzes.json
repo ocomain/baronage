@@ -145,7 +145,7 @@
         "q": "How may a Scottish baron sign a deed today?",
         "options": ["Only by his family name", "By his title, as a peer does", "Only as “Laird of Inverness”", "Only with the Lord Lyon’s leave"],
         "answer": 1,
-        "why": "A baron signs as a peer signs, by his title: “Inverness”, or “Baron of Inverness”.",
+        "why": "A baron can sign as a peer signs, by his title: “Inverness”, or “Baron of Inverness”.",
         "paper": "how-a-scottish-baron-is-named-in-a-legal-document",
         "anchor": "signing-the-deed"
       },
