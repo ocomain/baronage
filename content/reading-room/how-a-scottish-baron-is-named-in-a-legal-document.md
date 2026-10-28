@@ -117,7 +117,7 @@ A baroness in her own right takes the same form:
 
 > **THE MUCH HONOURED JANE MARY SMITH, BARONESS OF INVERNESS**, residing at [address] **(“the Baroness”)**
 
-A baron’s wife is designed with her forenames, her maiden and married surnames in the Scots manner, and the title. She signs as a peer’s wife signs, by her Christian name and the title, “Jane Inverness”: Menzies gives the peeresses’ form as “their Christian name prefixed to the title of nobility”, and Bell extends it to a wife “whose title arises from marriage”.[^42]
+A baron’s wife is designed with her forenames, her maiden and married surnames in the Scots manner, and the title. She signs as a peer’s wife signs, by her Christian name and the title, “Jane Inverness”: Menzies gives the peeresses’ form as “their Christian name prefixed to the title of nobility”, and Bell extends it to a wife “whose title arises from marriage”.[^42] That signature is valid; for a self-proving deed she signs as he does, her name with the title, “J. M. Smith, Lady Inverness”, unless the family has added the title to its name as a surname, when “Jane Inverness” is her name.
 
 > **JANE MARY BROWN or SMITH, LADY INVERNESS**, residing at [address] **(“The Lady Inverness”)**
 
