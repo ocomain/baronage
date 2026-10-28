@@ -164,7 +164,7 @@ const HIGHER_SOURCES: ReactNode[] = [
   </>,
   <>
     Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes —{" "}
-    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. Reproduced above.
+    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>.
   </>,
   <>
     Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163; the Esslemont Memorial’s words “preferred for formal purposes by English and British lords”, p. 163.
@@ -884,21 +884,6 @@ export default function ProperAddressPage() {
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
                   B”.<Ref n={4} />
                 </P>
-                <figure className="mt-8">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/innes-1945-p158-baron-of-the-barony.webp"
-                    alt="Innes of Learney, PSAS 79 (1944–45), p. 158: sheriff-court rolls entered ‘Intrat A, Dominus de B’ or ‘Intrat A, Baro de B’; where a peer held a feudal barony it was added to his style as ‘Baron of the Barony of X’."
-                    width={1320}
-                    height={453}
-                    loading="lazy"
-                    className="mx-auto w-full max-w-3xl border border-parchment-300/70"
-                  />
-                  <figcaption className="mt-3 text-center font-serif text-base italic text-ink/80">
-                    Innes of Learney, “The Robes of the Feudal Baronage of Scotland” (1945), p. 158: “Dominus de B” and “Baro de B”
-                    in the sheriff-court rolls, and the peerage form “Baron of the Barony of X”.
-                  </figcaption>
-                </figure>
                 <P>
                   Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
                   equally of judges of the Court of Session, courtesy lords and the Lord Lyon himself, and it is the male counterpart of
