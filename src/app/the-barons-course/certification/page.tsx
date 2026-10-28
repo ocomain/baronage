@@ -86,8 +86,43 @@ function Badge({ name, no }: { name: string; no: string }) {
   );
 }
 
-/** The owner's examples (2026-10-28), to show the certificate is not only for barons: a baron, an heir and someone who is neither. */
-const EXAMPLES = ["The Baron of Inverness", "Younger of Edinburgh", "Jane Hoop"];
+/** The button: small, to sit beside other badges, such as the Roll's Enrolled card. */
+function Button({ name, no }: { name: string; no: string }) {
+  return (
+    <div className="inline-flex max-w-full items-center gap-3 rounded-[5px] border border-gold bg-parchment-50 py-2.5 pl-3 pr-4 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+      <Seal tone="gold" size="xs" alt="" aria-hidden className="h-12 w-auto flex-none" />
+      <div className="min-w-0 text-left">
+        <p className="font-sans text-[1.15rem] font-semibold leading-tight text-navy">{COURSE_NAME}</p>
+        <p className="mt-0.5 font-display text-[1.05rem] leading-tight text-oxblood">{name}</p>
+        <p className="mt-1 font-sans text-[0.58rem] font-bold uppercase tracking-[0.16em] text-gold-deep">
+          Passed · No. {no} · www.baronage.com
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/** The line: one line of text in the website's own colours, here on a dark footer. */
+function Line({ name }: { name: string }) {
+  return (
+    <p className="inline-flex max-w-full items-start gap-2.5 text-left font-serif text-[1.05rem] leading-snug text-parchment-100/85">
+      <Seal tone="gold" size="xs" alt="" aria-hidden className="mt-0.5 h-6 w-auto flex-none" />
+      <span className="underline decoration-parchment-100/30 underline-offset-4">
+        {name} · {COURSE_NAME}, passed · Baronage of Scotland Association
+      </span>
+    </p>
+  );
+}
+
+/**
+ * The styles for a website, each with one of the owner's examples (2026-10-28: "show the different stamp versions for
+ * their website"; examples to show it is not only for barons: a baron, an heir and someone who is neither).
+ */
+const STYLES: { title: string; hint: string; dark?: boolean; sample: ReactNode }[] = [
+  { title: "The certificate", hint: "For an About page.", sample: <Badge name="The Baron of Inverness" no="0001" /> },
+  { title: "The button", hint: "Small. Fits anywhere, beside other badges.", sample: <Button name="Younger of Edinburgh" no="0002" /> },
+  { title: "The line", hint: "For a footer, in your website’s own colours.", dark: true, sample: <Line name="Jane Hoop" /> },
+];
 
 /** What a visitor sees on pointing at the badge, or tapping it on a phone. */
 function Record() {
@@ -194,7 +229,7 @@ export default function CourseCertificationPage() {
             <h2 className="font-display text-4xl leading-tight text-navy">For your website</h2>
             <GoldRule className="mt-4" align="start" />
             <ul className="mt-6 space-y-4 font-serif text-xl leading-relaxed text-ink-soft">
-              <li>A small certificate for your About page, drawn live by the Association.</li>
+              <li>A certificate, a button or a line for your website, drawn live by the Association.</li>
               <li>Visitors who point at it, or tap it on a phone, see the Association’s record of it.</li>
               <li>
                 It shows in full only on your own website. A copy anywhere else shows only <i>Not registered for this website</i>.
@@ -203,9 +238,20 @@ export default function CourseCertificationPage() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-start justify-center gap-6">
-          {EXAMPLES.map((name, i) => (
-            <Badge key={name} name={name} no={String(i + 1).padStart(4, "0")} />
+        <h3 className="mt-14 text-center font-display text-3xl leading-tight text-navy">Three styles to choose from</h3>
+        <div className="mt-8 grid gap-8 md:grid-cols-3 md:gap-6">
+          {STYLES.map((st) => (
+            <div key={st.title} className="flex flex-col">
+              <p className="font-display text-2xl leading-tight text-navy">{st.title}</p>
+              <p className="mt-1 font-serif text-lg leading-snug text-ink-soft">{st.hint}</p>
+              <div
+                className={`mt-4 flex min-h-[13rem] flex-1 md:min-h-[23rem] items-center justify-center border px-4 py-8 ${
+                  st.dark ? "border-navy-deep bg-navy-deep" : "border-parchment-300 bg-white"
+                }`}
+              >
+                {st.sample}
+              </div>
+            </div>
           ))}
         </div>
         <p className="mt-5 text-center font-serif text-lg italic text-muted">
