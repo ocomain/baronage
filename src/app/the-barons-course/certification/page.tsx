@@ -8,11 +8,12 @@ import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PATH, courseSteps, numberWord } fr
 
 /**
  * The Baron's Course Certificate: the page that describes it, under The Baron's Course in the menu (owner 2026-10-28:
- * "the certification only open to … members", "signed by The Baron of Drum Chief of his Name", "something they can
+ * "the certification only open to … members", then "supporters and patrons yes can take the test", "signed by The Baron of Drum Chief of his Name", "something they can
  * hang up on the wall", a badge for the member's website with no mention of the Roll, as members and Patrons need not
  * be barons). The test and the certificate themselves are not built yet (owner: "wait until we have some paying members
- * and membership area first but the sales page can go up now"), so this page says the test opens in the Members'
- * Chamber. Prices stay on the Support page alone, as on the Members page.
+ * and membership area first but the sales page can go up now"), so this page says the test is still to open. The free
+ * Certificate of Reading is gone (owner, same day: "it's only for members"). Prices stay on the Support page alone, as
+ * on the Members page.
  */
 const PATH = `${COURSE_PATH}certification/`;
 const link = "text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood";
@@ -20,7 +21,7 @@ const link = "text-oxblood underline decoration-oxblood/40 underline-offset-4 tr
 export const metadata: Metadata = pageMetadata({
   title: `${COURSE_NAME} Certificate`,
   description:
-    "For members of the Baronage of Scotland Association who read the papers of The Baron’s Course and pass its test: a certificate for the wall, signed by the Baron of Drum, and a badge for their own website.",
+    "For members, Friends and Patrons of the Baronage of Scotland Association who read the papers of The Baron’s Course and pass its test: a certificate for the wall, signed by the Baron of Drum, and a badge for their own website.",
   path: PATH,
   image: COURSE_OG_IMAGE,
 });
@@ -85,7 +86,7 @@ function Badge({ name, no }: { name: string; no: string }) {
   );
 }
 
-/** The owner's examples (2026-10-28), to show the certificate is not only for barons: a baron, an heir and a member who is neither. */
+/** The owner's examples (2026-10-28), to show the certificate is not only for barons: a baron, an heir and someone who is neither. */
 const EXAMPLES = ["The Baron of Inverness", "Younger of Edinburgh", "Jane Hoop"];
 
 /** What a visitor sees on pointing at the badge, or tapping it on a phone. */
@@ -147,13 +148,13 @@ const steps: { title: string; body: ReactNode }[] = [
       </>
     ),
   },
-  { title: "Join", body: <>Become a member of the Association, or a Patron.</> },
+  { title: "Join", body: <>Become a member of the Association, a Friend or a Patron.</> },
   {
     title: "Take the test",
     body: (
       <>
-        In the Members’ Chamber: {numberWord(courseSteps.length)} questions, one from each paper. Ten right answers pass, and
-        you may take it again whenever you like.
+        Online: {numberWord(courseSteps.length)} questions, one from each paper. Ten right answers pass, and you may take it
+        again whenever you like.
       </>
     ),
   },
@@ -167,8 +168,8 @@ export default function CourseCertificationPage() {
           <p className="eyebrow">{COURSE_NAME}</p>
           <h1 className="mt-4 font-display text-5xl leading-tight text-navy sm:text-6xl">The Certificate</h1>
           <p className="mt-5 font-serif text-xl italic leading-relaxed text-ink-soft sm:text-2xl">
-            For members of the Association who read the papers and pass the course’s test: a signed certificate for the wall,
-            and a badge for your own website.
+            For members, Friends and Patrons of the Association who read the papers and pass the course’s test: a signed
+            certificate for the wall, and a badge for your own website.
           </p>
         </div>
 
@@ -207,7 +208,9 @@ export default function CourseCertificationPage() {
             <Badge key={name} name={name} no={String(i + 1).padStart(4, "0")} />
           ))}
         </div>
-        <p className="mt-5 text-center font-serif text-lg italic text-muted">Not only for barons: the same badge for a baron, an heir or any member.</p>
+        <p className="mt-5 text-center font-serif text-lg italic text-muted">
+          Not only for barons: the same badge for a baron, an heir, a Friend or a Patron.
+        </p>
 
         <div className="mx-auto mt-20 max-w-3xl">
           <h2 className="text-center font-display text-4xl leading-tight text-navy">How to earn it</h2>
@@ -228,8 +231,8 @@ export default function CourseCertificationPage() {
             <div>
               <h2 className="font-display text-3xl leading-tight text-navy">Who may take it</h2>
               <p className="mt-3 font-serif text-xl leading-relaxed text-ink-soft">
-                Members of the Association and Patrons. You need not be a baron: heirs (“Younger of”) and Patrons may take it
-                too.
+                Members of the Association, Friends and Patrons. You need not be a baron: heirs (“Younger of”), Friends and
+                Patrons may all take it.
               </p>
             </div>
             <div>
@@ -243,10 +246,13 @@ export default function CourseCertificationPage() {
 
           <div className="mt-14 border border-parchment-300 border-t-[3px] border-t-gold bg-parchment-50 px-6 py-8 text-center sm:px-10">
             <p className="font-serif text-xl leading-relaxed text-ink">
-              The test opens to members in the Members’ Chamber. Join now, and you can take it as soon as it opens.
+              The test will open to members, Friends and Patrons. Join now, and you can take it as soon as it opens.
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-4">
               <ButtonLink href="/support/#associate-member">Become an Associate Member</ButtonLink>
+              <ButtonLink href="/support/" variant="outline">
+                Become a Friend
+              </ButtonLink>
               <ButtonLink href="/support/" variant="outline">
                 Become a Patron
               </ButtonLink>

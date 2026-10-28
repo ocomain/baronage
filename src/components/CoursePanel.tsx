@@ -12,7 +12,8 @@ const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
  * The Baron's Course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
  * and a tick. Two columns of parts on a computer; one numbered rail on a phone. Ticks are kept on this device only
  * (lib/courseProgress); without storage everything shows unread and still works. A wax seal fills as papers are
- * read, each finished part gets a small seal, and the last tick leads to the certificate (owner 2026-10-23).
+ * read, each finished part gets a small seal, and the last tick leads to the Certificate page: the certificate is for
+ * members, Friends and Patrons who pass the test (owner 2026-10-28: "drop the free Certificate of Reading").
  */
 export function CoursePanel({
   title,
@@ -27,7 +28,7 @@ export function CoursePanel({
   steps: CourseStep[];
   parts: readonly string[];
   standfirst: string;
-  /** The course page, "/the-barons-course/": the booklet and the certificate sit under it. */
+  /** The course page, "/the-barons-course/": the booklet and the Certificate page sit under it. */
   path: string;
   /** "Read first": the unnumbered step before Part I (owner 2026-10-24), outside the count and the seal. */
   preread?: CoursePreread;
@@ -88,10 +89,10 @@ export function CoursePanel({
                 </Link>
               ) : (
                 <Link
-                  href={`${path}certificate/`}
+                  href={`${path}certification/`}
                   className="text-oxblood underline decoration-oxblood/40 underline-offset-4 transition-colors hover:decoration-oxblood"
                 >
-                  All read: your certificate of reading →
+                  All read: the certificate, for members →
                 </Link>
               )}
             </p>
