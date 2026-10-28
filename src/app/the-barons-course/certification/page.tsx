@@ -47,7 +47,17 @@ function Specimen() {
             <p className="mt-1 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">Date</p>
           </div>
           <div>
-            <p className="h-8 border-b border-ink/40" />
+            {/* His signature, which he has agreed to for the certificates (owner 2026-10-28). */}
+            <div className="relative h-8 border-b border-ink/40">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/the-barons-course/drum-signature.webp"
+                width={720}
+                height={240}
+                alt="Signature of the Baron of Drum"
+                className="absolute -bottom-3 left-0 h-auto w-[11.5rem] max-w-full"
+              />
+            </div>
             <p className="mt-1 font-serif text-base leading-tight text-ink">The Baron of Drum</p>
             <p className="font-serif text-sm italic leading-tight text-ink-soft">Chief of his Name</p>
           </div>
