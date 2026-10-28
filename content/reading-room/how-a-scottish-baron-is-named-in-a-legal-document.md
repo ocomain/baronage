@@ -21,7 +21,7 @@ essential: true
 - **The barony is a dignity in law.** “Nothing in this Act affects the dignity of baron”, says section 63 of the Act of 2000, and its Explanatory Notes say the barony “enables the owner to adopt the title of ‘Baron of …’”.[^1] It is a substantive title in law; a courtesy title, in the Lord Chancellor’s words of 1963, gives “no legal right”.
 - **The Lyon Court has long written the title into the name.** Lords Lyon have styled themselves “Baron of X” in their own instruments as far back as the Court’s records go, and the Court’s Letters Patent to barons have named the grantee the same way as a matter of course. “Officially Recognise the Petitioner in the name X, Baron of Y” have been the Court’s standard words, up to the present Lord Lyon in his early years.
 - **The passport’s two fields are not the measure of the full legal name.** HM Passport Office’s own guidance says “Titles of nobility are part of a person’s name and identity”, and lets the holder put either the title or the family name in the surname field, with the whole name in the observations. A legal contract uses the whole name.
-- **A baron signs by his title, as a peer does.** The rule of 1672 that only peers might “subscrive by their titles” was repealed in 1995, and the Act of 2000 kept the dignity of baron. He can sign “Inverness”, or “Baron of Inverness”.
+- **A baron can sign by his title, as a peer does.** The rule of 1672 that only peers might “subscrive by their titles” was repealed in 1995, and the Act of 2000 kept the dignity of baron. He can sign “Inverness”, or “Baron of Inverness”.
 
 ## The legal contract form
 
@@ -89,7 +89,7 @@ Before 1672 a Scottish landowner might sign by his land. “It was anciently not
 
 Parliament repealed the rule of 1672 on 1 August 1995, saving “any right of a person to add a territorial designation to his signature”.[^30] The Act of 1995 keeps “any rule of law relating to the subscription or signing of documents … by peers”, and for every other granter it accepts as a signature “a name … or description” that “was his usual method of signing” or “was intended by him as his signature”.[^31] Five years later the Act of 2000 kept the dignity of baron, which Peskett puts “in the same class as peerages”, both now personal dignities.[^18] The Inner House has said that barony holders “can call themselves by any name they choose”.[^32]
 
-Nothing now confines the title signature to peers. The Lord Lyon’s own rolls in the Edinburgh Gazette said as much of the name: a holder’s name with its territorial designation is used “in the signature as they legally may be”.[^33] A baron signs as a peer signs, by his title: “Inverness”, or “Baron of Inverness”. Where a deed is to be self-proving, he signs the name in which the deed designs him, title and all: “John Alexander Smith, Baron of Inverness”.[^34]
+Nothing now confines the title signature to peers. The Lord Lyon’s own rolls in the Edinburgh Gazette said as much of the name: a holder’s name with its territorial designation is used “in the signature as they legally may be”.[^33] A baron can sign as a peer signs, by his title: “Inverness”, or “Baron of Inverness”. Where a deed is to be self-proving, he signs the name in which the deed designs him, title and all: “J. A. Smith, Baron of Inverness”.[^34]
 
 <figure class="paper-figure">
 <img src="/images/reading-room/signature-the-baron-of-inverness.webp" alt="An illustration of a signature: Inverness, signed above a line, with The Baron of Inverness printed beneath" width="1600" height="272" loading="lazy">
