@@ -5,9 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   QUIZ_PATH,
   emptyAnswers,
-  londonDate,
   parseAnswers,
-  quizFor,
   score,
   shareText,
   storageKey,
@@ -18,21 +16,15 @@ import {
 
 const LETTERS = ["A", "B", "C", "D"];
 
-/** The quiz the browser should show, and the reader's answers to it, kept in their own browser (one key per quiz). */
-function useQuiz(quizzes: Quiz[], initialNo: number) {
-  const [quiz, setQuiz] = useState<Quiz>(() => quizzes.find((q) => q.no === initialNo) ?? quizzes[0]);
+/** The reader's answers to this quiz, kept in their own browser (one key per quiz). */
+function useAnswers(quiz: Quiz) {
   const [answers, setAnswers] = useState<QuizAnswers>(() => emptyAnswers(quiz));
-  // The built page shows the quiz current when it was built; the reader's own date can move it on.
   useEffect(() => {
-    const now = quizFor(quizzes, londonDate()) ?? quiz;
-    let saved: QuizAnswers | null = null;
     try {
-      saved = parseAnswers(now, JSON.parse(localStorage.getItem(storageKey(now)) ?? "null"));
+      const saved = parseAnswers(quiz, JSON.parse(localStorage.getItem(storageKey(quiz)) ?? "null"));
+      if (saved) setAnswers(saved);
     } catch {}
-    setQuiz(now);
-    setAnswers(saved ?? emptyAnswers(now));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [quizzes]);
+  }, [quiz]);
   function answer(i: number, choice: number) {
     if (answers[i] != null) return;
     const next = answers.map((a, j) => (j === i ? choice : a));
@@ -41,7 +33,7 @@ function useQuiz(quizzes: Quiz[], initialNo: number) {
       localStorage.setItem(storageKey(quiz), JSON.stringify(next));
     } catch {}
   }
-  return { quiz, answers, answer };
+  return { answers, answer };
 }
 
 function Options({ quiz, i, answers, onAnswer }: { quiz: Quiz; i: number; answers: QuizAnswers; onAnswer: (choice: number) => void }) {
@@ -117,8 +109,8 @@ const QUIET =
   "inline-flex min-h-14 items-center gap-2.5 border-[1.5px] border-navy bg-transparent px-6 font-sans text-[0.95rem] font-bold uppercase tracking-[0.14em] text-navy transition-colors hover:bg-navy hover:text-parchment-50";
 
 /** The homepage panel: question one answered in place, then a button to the quiz page for the other four. */
-export function QuizPanel({ quizzes, initialNo }: { quizzes: Quiz[]; initialNo: number }) {
-  const { quiz, answers, answer } = useQuiz(quizzes, initialNo);
+export function QuizPanel({ quiz }: { quiz: Quiz }) {
+  const { answers, answer } = useAnswers(quiz);
   const done = answers.every((a) => a != null);
   return (
     <section className="bg-parchment px-5 py-14 sm:px-8 sm:py-16" aria-labelledby="quiz-panel-h">
@@ -147,8 +139,8 @@ export function QuizPanel({ quizzes, initialNo }: { quizzes: Quiz[]; initialNo: 
 }
 
 /** The quiz page: one question at a time, starting at the first unanswered one, then the score. */
-export function QuizPage({ quizzes, initialNo }: { quizzes: Quiz[]; initialNo: number }) {
-  const { quiz, answers, answer } = useQuiz(quizzes, initialNo);
+export function QuizPage({ quiz }: { quiz: Quiz }) {
+  const { answers, answer } = useAnswers(quiz);
   // The question whose answer is on screen, until the reader moves on.
   const [shown, setShown] = useState<number | null>(null);
   const [copied, setCopied] = useState("");

@@ -73,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const newest = newsPosts[0] ? new Date(newsPosts[0].published) : BUILD_DATE;
   const news: MetadataRoute.Sitemap = [
     { url: `${BASE}/news/`, lastModified: newest, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE}/quiz/`, lastModified: BUILD_DATE, changeFrequency: "weekly", priority: 0.5 },
+    ...(process.env.QUIZ_LIVE === "1" ? [{ url: `${BASE}/quiz/`, lastModified: BUILD_DATE, changeFrequency: "weekly" as const, priority: 0.5 }] : []),
     ...NEWS_CATEGORIES.filter((c) => newsPosts.some((p) => p.category === c.name)).map((c) => ({
       url: `${BASE}/news/${c.slug}/`,
       lastModified: new Date(newsPosts.find((p) => p.category === c.name)!.published),

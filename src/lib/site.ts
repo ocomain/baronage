@@ -149,9 +149,9 @@ export const navMenu: NavMenuItem[] = [
     href: "/reading-room",
     label: "Reading Room",
     badge: "New", // owner 2026-10-23: "New Papers"; later the same day "delete papers": "New"
-    selfInList: true,
-    // The quiz sits under the Reading Room, so the main row does not change (owner 2026-10-28)
-    children: [{ href: "/quiz", label: "Quiz", badge: "New" }],
+    // The quiz sits under the Reading Room, so the main row does not change (owner 2026-10-28). It appears from the
+    // build on the Monday the first quiz begins (QUIZ_LIVE, next.config.ts).
+    ...(process.env.QUIZ_LIVE === "1" ? { selfInList: true, children: [{ href: "/quiz", label: "Quiz", badge: "New" }] } : {}),
   },
   // owner 2026-10-23: "you could even have this as a nav menu itself in addition to reading room" (called
   // "Essential Reading" for an afternoon, then "call it The Baron's Course")

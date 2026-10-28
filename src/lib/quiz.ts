@@ -3,7 +3,8 @@
  * The rules here have no imports, so the quiz component can use them in the browser. The bank and its checks
  * against the papers are in quiz-bank.ts, which runs only at build time.
  *
- * The site is static, so the browser picks the quiz: the latest one whose week (a Monday) has begun in London.
+ * The site is static, so the quiz is chosen when the site is built: the latest one whose week (a Monday) has begun by
+ * the London day of the build. The deploy workflow rebuilds every Monday morning, so a new week's quiz needs no push.
  */
 
 export type QuizQuestion = {
@@ -27,30 +28,30 @@ export type Quiz = {
 
 export type QuizAnswers = Array<number | null>;
 
-export const QUIZ_TZ = "Europe/London";
 export const QUESTIONS_PER_QUIZ = 5;
 export const OPTIONS_PER_QUESTION = 4;
 export const QUIZ_PATH = "/quiz/";
 export const SHARE_URL = "www.baronage.com/quiz/";
 
-/** Today's date in London as YYYY-MM-DD. */
-export function londonDate(now: Date = new Date()): string {
-  const parts = new Intl.DateTimeFormat("en-CA", { timeZone: QUIZ_TZ, year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
-  const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "";
-  return `${get("year")}-${get("month")}-${get("day")}`;
-}
+/** The London day the site was built, YYYY-MM-DD (set in next.config.ts). */
+export const BUILD_DAY = process.env.QUIZ_BUILD_DAY ?? "";
 
-/** The latest quiz whose week has begun by `today`; the first quiz if none has yet. */
-export function quizFor(quizzes: readonly Quiz[], today: string): Quiz | null {
+/** The latest quiz whose week has begun by `today`, or null before the first. */
+export function quizFor(quizzes: readonly Quiz[], today: string = BUILD_DAY): Quiz | null {
   let best: Quiz | null = null;
   for (const quiz of quizzes) if (quiz.week <= today && (!best || quiz.week > best.week)) best = quiz;
-  return best ?? quizzes[0] ?? null;
+  return best;
 }
 
-/** "Week of 26 October" */
+/** "Week of 2 November" */
 export function weekLabel(week: string): string {
+  return `Week of ${dayMonth(week)}`;
+}
+
+/** "2 November" */
+export function dayMonth(week: string): string {
   const d = new Date(`${week}T12:00:00Z`);
-  return `Week of ${d.getUTCDate()} ${d.toLocaleString("en-GB", { month: "long", timeZone: "UTC" })}`;
+  return `${d.getUTCDate()} ${d.toLocaleString("en-GB", { month: "long", timeZone: "UTC" })}`;
 }
 
 export function emptyAnswers(quiz: Quiz): QuizAnswers {

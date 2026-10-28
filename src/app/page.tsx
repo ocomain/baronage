@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { LiveStats } from "@/components/LiveStats";
 import { QuizPanel } from "@/components/ReadingRoomQuiz";
 import { quizzes } from "@/lib/quiz-bank";
-import { londonDate, quizFor } from "@/lib/quiz";
+import { quizFor } from "@/lib/quiz";
 import { Footnote } from "@/components/Footnote";
 import { ButtonLink, Container, Eyebrow, GoldRule, Section } from "@/components/primitives";
 import { ROLL_URL } from "@/lib/site";
@@ -273,7 +273,7 @@ const terminologyJsonLd = {
 };
 
 export default function HomePage() {
-  const homeQuiz = quizFor(quizzes, londonDate());
+  const homeQuiz = quizFor(quizzes);
   return (
     <>
       {/* Terminology for search engines and AI crawlers (not rendered as visible text) */}
@@ -296,7 +296,7 @@ export default function HomePage() {
       <EasyStart />
 
       {/* The Reading Room Quiz (owner 2026-10-28): question one answered in place. */}
-      {homeQuiz && <QuizPanel quizzes={quizzes} initialNo={homeQuiz.no} />}
+      {homeQuiz && <QuizPanel quiz={homeQuiz} />}
 
       {/* ============================== TOUR OF THE BARONIES ============================== */}
       <Section tone="parchment" className="pt-16 pb-10 sm:pt-20 sm:pb-12">
