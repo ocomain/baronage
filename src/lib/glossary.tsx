@@ -242,7 +242,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Territorial designation (TD)",
-    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. It must be authorised by the Court of the Lord Lyon and generally requires ownership of a substantial estate. It is not a title of nobility or dignity, and is separate from a barony, although certainly untitled nobility; a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
+    def: "A “Surname of Place” designation — such as “Kerr of Ardgowan” — that forms part of a person's name. TDs are governed by the Court of the Lord Lyon and generally require ownership of a substantial estate. It is not a title of nobility or dignity, and is separate from a barony, although certainly untitled nobility; a person may hold either, both, or neither. The custom is distinctly Scottish and does not apply to the rest of the British Isles.",
     note: (
       <>
         For the evidence that Scotland’s barons were styled by both title and designation, see{" "}
@@ -325,7 +325,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Of the genus of barony",
-    def: "Lord Lyon Morrow’s formula (Menking, 2015) for former feudal lordships, regalities and earldoms: dignities of the same kind as a barony, whose holders receive a baron’s additaments and are recorded as holding the lordship or earldom.",
+    def: "Lord Lyon Morrow’s formula (Menking, 2015) for former feudal (territorial) lordships, regalities and earldoms: dignities of the same kind as a barony, whose holders receive a baron’s additaments and are recorded as holding the lordship or earldom.",
     note: (
       <>
         Lord Lyon Morrow,{" "}
