@@ -1311,7 +1311,7 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
             doubt about the thread of continuity from the earliest days of feudalism in Scotland until the present
             day.”
           </em>{" "}
-          (emphasis added). And on the Heritable Jurisdictions Act, often assumed to have ended the Scottish barony:{" "}
+          And on the Heritable Jurisdictions Act, often assumed to have ended the Scottish barony:{" "}
           <em>“Baron courts, however, were not abolished by the Heritable Jurisdictions Act, although their
           jurisdiction, both civil and criminal, was greatly reduced. … The style of ‘Baron’, although not incorrect,
           gradually fell into desuetude.”</em>
