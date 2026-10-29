@@ -1305,9 +1305,13 @@ const faqs: { q: string; a: string; body: ReactNode; authority: ReactNode; inlin
         </p>
         <p className="mt-4">
           Lord Lyon Sellar put it thus in <em>Sturzenegger of Arran</em>:{" "}
-          <em>“Anachronistic and anomalous the position of the former feudal baron may be, but there can be no doubt
-          about the thread of continuity from the earliest days of feudalism in Scotland until the present day.”</em>{" "}
-          And on the Heritable Jurisdictions Act, often assumed to have ended the Scottish barony:{" "}
+          <em>
+            “Anachronistic and anomalous the position of the{" "}
+            <strong className="font-semibold text-navy">former feudal baron</strong> may be, but there can be no
+            doubt about the thread of continuity from the earliest days of feudalism in Scotland until the present
+            day.”
+          </em>{" "}
+          (emphasis added). And on the Heritable Jurisdictions Act, often assumed to have ended the Scottish barony:{" "}
           <em>“Baron courts, however, were not abolished by the Heritable Jurisdictions Act, although their
           jurisdiction, both civil and criminal, was greatly reduced. … The style of ‘Baron’, although not incorrect,
           gradually fell into desuetude.”</em>
