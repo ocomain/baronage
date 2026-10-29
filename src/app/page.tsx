@@ -77,7 +77,7 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
         Court of the Lord Lyon, interlocutor of 26 February 1943 (Lord Lyon Sir Francis Grant) in a petition for a
         birthbrief, recorded in the Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26: <em>“Finds and
         Declares that the Minor Barons of Scotland are, and have been both in this nobiliary Court and in the Court of
-        Session recognised as a ‘titled nobility’ and that the estait of the Baronage (i.e. Barones Minores) are of the
+        Session recognised as a ‘<strong className="font-semibold">titled nobility</strong>’ and that the estait of the Baronage (i.e. Barones Minores) are of the
         ancient Feudal Nobility of Scotland”</em>. Printed in Innes of Learney, <em><a href="https://archive.org/details/in.ernet.dli.2015.69848/page/n187/mode/1up?q=Declares" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Proceedings of the Society of Antiquaries of Scotland 1944–1945, Vol. 79, p. 143 n. 3</a></em>
       </>
     ),
