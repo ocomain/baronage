@@ -180,7 +180,9 @@ const footnotes: { body: ReactNode; subs?: ReactNode[] }[] = [
   {
     body: (
       <>
-        <a href="https://www.legislation.gov.uk/asp/2000/5/notes/division/1/3/6/11" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Scottish Parliament, Explanatory Notes to the 2000 Act, Section 63.198</a>
+        <a href="https://www.legislation.gov.uk/asp/2000/5/notes/division/1/3/6/11" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">Scottish Parliament, Explanatory Notes to the 2000 Act, Section 63.198</a>: “the social, ceremonial and
+        armorial aspects of baronies will be severed from land ownership and baronies will become{" "}
+        <strong className="font-semibold">non-territorial dignities</strong>.”
       </>
     ),
   },
