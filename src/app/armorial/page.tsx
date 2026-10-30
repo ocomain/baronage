@@ -57,6 +57,11 @@ function Flourish({ text, placement }: { text: string; placement: "top" | "below
   );
 }
 
+/** The card label; “Lord (Baron of)” is the Armorial’s form (owner 2026-10-30). */
+function styleOf(dignity: string) {
+  return dignity === "Lord Baron" ? "Lord (Baron of)" : `${dignity} of`;
+}
+
 export default function SupportersPage() {
   return (
     <>
@@ -98,7 +103,7 @@ export default function SupportersPage() {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={b.img}
-                        alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
+                        alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${styleOf(b.dignity)} ${b.name}`}
                         width={208}
                         height={208}
                         // Only the first row loads with the page; the rest as they near the screen
@@ -138,7 +143,7 @@ export default function SupportersPage() {
                           </span>
                         )}
                         <span className="mt-1 block font-sans text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">
-                          {b.dignity} of
+                          {styleOf(b.dignity)}
                         </span>
                         <span className="mt-1.5 block font-display text-3xl text-navy">{b.name}</span>
                         {b.note ? (
