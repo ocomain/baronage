@@ -907,7 +907,7 @@ export default function ProperAddressPage() {
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
                   and “Baron of X” are interchangeable, as the holder prefers, and both are correct, a lordship being, in
                   Stair’s words, one of the “more noble titles of a barony”.<Ref n={22} src={1} /> A Scots baron who is not a lord is only
-                  ever called a baron. “Lord Baron of X” is an ancient combined form.<Ref n={23} src={2} /> Non-peerage
+                  ever called a baron. “Lord Baron of X” is an ancient combined formality.<Ref n={23} src={2} /> Non-peerage
                   lords have been written both “Lord X” and “Lord of X” since the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
                   Lord of Graham in 1420, before he received the Lord of Parliament honour of 1445.<Ref n={24} src={3} /> The medieval
@@ -1030,12 +1030,6 @@ export default function ProperAddressPage() {
             <Reveal>
               <Sec id="digital" title="Digital Address Guidelines for Barons">
                 <P>
-                  When entering the title of a Baron into a digital system, it is important to ensure that the title is
-                  displayed correctly and with proper respect for its historical and legal significance. Below are
-                  recommended practices for filling out typical fields in computer systems, such as databases, online
-                  forms, and digital directories. Always think of how it will be presented in that system:
-                </P>
-                <P>
                   Use the title on every record and every signature. Official recognition is given only to titles in
                   ordinary use.<Footnote n={29}>{RECORDS_SOURCE}</Footnote>
                 </P>
@@ -1059,6 +1053,12 @@ export default function ProperAddressPage() {
                 >
                   Such titles should be “regularly employed in all registrations of Births, Marriages, or Deaths”.
                 </Quote>
+                <P>
+                  When entering the title of a Baron into a digital system, it is important to ensure that the title is
+                  displayed correctly and with proper respect for its historical and legal significance. Below are
+                  recommended practices for filling out typical fields in computer systems, such as databases, online
+                  forms, and digital directories. Always think of how it will be presented in that system:
+                </P>
                 <DigitalAddressSimulator />
                 {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
                 <P>
