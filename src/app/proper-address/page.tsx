@@ -999,7 +999,8 @@ export default function ProperAddressPage() {
                     Scottish baronial lord: <S>The Much Honoured Lord Lochaber</S><Or /><S>Baron of Lochaber</S>
                   </F>
                   <F>
-                    Baron without a lordship: <S>The Much Honoured Baron of Lochaber</S> (never Lord)
+                    Baron without a lordship: <S>The Much Honoured Baron of Lochaber</S>
+                    <N>(never Lord)</N>
                   </F>
                   <F>
                     Peer: <S>The Right Honourable The Lord Lochaber</S>
