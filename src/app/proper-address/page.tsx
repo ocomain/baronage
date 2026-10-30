@@ -1038,7 +1038,8 @@ export default function ProperAddressPage() {
                   <Link href="/reading-room/how-a-scottish-baron-is-named-in-a-legal-document/#signing-the-deed" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
                     every signature
                   </Link>
-                  . Official recognition is given only to titles in ordinary use.<Footnote n={28}>{RECORDS_SOURCE}</Footnote>
+                  . As Lord Lyon Innes of Learney wrote, “official recognition is only accorded where such titles are
+                  ordinarily used”.<Footnote n={28}>{RECORDS_SOURCE}</Footnote>
                 </P>
                 {/* owner 2026-10-30: both from the old note 29, as big quotes, credited, each with its pop-up reference */}
                 <Quote
