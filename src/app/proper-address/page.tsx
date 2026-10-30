@@ -721,7 +721,7 @@ export default function ProperAddressPage() {
                   <Link href="/reading-room/younger-of-and-master-of/" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
                     “Younger of Barony”
                   </Link>
-                  , as a Scottish peer’s heir-presumptive is “Master of”. “The” may go before either,
+                  , as a Scottish peer’s heir is “Master of”. “The” may go before either,
                   and keeps “younger” from being read as a surname.<Footnote n={15}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
