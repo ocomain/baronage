@@ -477,6 +477,7 @@ export default function ProperAddressPage() {
                 {/* second form added (owner 2026-10-31) */}
                 <FormLine>
                   (The Much Hon.) [First Name] [Surname] of [TD], Baron of [Barony]
+                  <br />
                   <Or />
                   <br />
                   [First Name] [Surname] of [TD], (Much Hon.) the Baron of [Barony]
