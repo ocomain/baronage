@@ -793,7 +793,7 @@ export default function ProperAddressPage() {
                     <S>Major (The Baron of) Inverness</S>
                   </F>
                   <F>
-                    <S>Major The Much Honoured Baron of Inverness DL</S>{" "}
+                    <S>Major The Much Hon Baron of Inverness DL</S>{" "}
                     <S>(John Smith, 5th baron)</S> <N>— post-nominals after title</N>
                   </F>
                 </Forms>
