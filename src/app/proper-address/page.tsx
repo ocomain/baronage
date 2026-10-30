@@ -643,9 +643,11 @@ export default function ProperAddressPage() {
                     "a bit smaller and perhaps aligned to the right of the text", then "better underneath and slightly bigger so can read it", then "1/3 smaller" (512px to 344px); the letter speaking for itself; cropped to its text ("you don't need all that white space") */}
                 <P>
                   Alternatively, only the barony or TD can be used: <S>Dear Inverness</S>
-                  <Footnote n={12}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.{" "}
-                  {/* one paragraph (owner 2026-10-21) */}
-                  <S>Dear Baron Inverness</S> has also been used by the Lyon Office in previous years:
+                  <Footnote n={12}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
+                </P>
+                {/* own paragraph, "in previous years" cut (owner 2026-10-30) */}
+                <P>
+                  <S>Dear Baron Inverness</S> has also been used by the Lyon Office:
                 </P>
                 {/* owner 2026-10-23: the 1976 "Dear Drum" letter added, first side by side, then "worth both letters
                     being blown up more so not side by side put drum letter second underneath"; the 2013 letter
