@@ -1009,7 +1009,7 @@ export default function ProperAddressPage() {
                   </F>
                   <F>
                     Baron without a lordship: <S>The Much Honoured Baron of Lochaber</S>
-                    <N>(never Lord)</N>
+                    <N>NEVER LORD</N>
                   </F>
                   <F>
                     Peer: <S>The Right Honourable The Lord Lochaber</S>
