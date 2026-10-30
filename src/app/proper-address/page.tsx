@@ -866,8 +866,11 @@ export default function ProperAddressPage() {
                 </p>
                 <P>
                   Over 90% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
-                  the nobler titles of lord and earl. Some holders of higher dignities choose to be known exclusively by
-                  the lower rank: “The Baron of X”. Baron of somewhat distinguishes from peers (there are not
+                  the nobler titles of lord and earl.{" "}
+                  <strong className="font-bold">
+                    Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
+                  </strong>{" "}
+                  Baron of somewhat distinguishes from peers (there are not
                   many titles in the peerage that use of for baron, for example many Irish peers are baron of). However,
                   to distinguish Earl of which could be confused with the peerage the prefix honorific
                   style The Much Hon. (The Much Honoured) can be put before the name, this prefix honorific is used to
