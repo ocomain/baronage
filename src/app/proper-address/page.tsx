@@ -581,7 +581,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   “Lady Jane” is incorrect and should never be used — this is the title for daughters of a senior
-                  peer: a Duke, Marquis, or Earl. Forms such as “Lady Jane Inverness” or “Baron John of Inverness” are
+                  peer: a Duke or Earl. Forms such as “Lady Jane Inverness” or “Baron John of Inverness” are
                   often seen, but are still socially incorrect. The phrase “Lady of Inverness” is wrong unless the lady in
                   question is a{" "}
                   <Link
@@ -855,9 +855,9 @@ export default function ProperAddressPage() {
             </Reveal>
 
             <Reveal>
-              <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
+              <Sec id="higher" title="Higher dignities Lord and Earl in the Baronage of Scotland">
                 <p className="mt-6 font-serif text-xl font-bold italic leading-[1.8] text-navy">
-                  A baron, a lord, earl or marquis in the baronage of Scotland are all barons of the Kingdom of Scotland,
+                  A baron, a lord or earl in the baronage of Scotland are all barons of the Kingdom of Scotland,
                   the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”,<Ref n={18} src={1} />{" "}
                   and the Parliament of Scotland declared in 1567 that “the barons of this realm ought to have vote in
                   parliament as a part of the nobility”, an Act which, in the words of Lord Lyon Innes of Learney,
@@ -866,12 +866,12 @@ export default function ProperAddressPage() {
                 </p>
                 <P>
                   Over 90% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
-                  the nobler titles of lord, earl and marquis. Baron of somewhat distinguishes from peers (there are not
+                  the nobler titles of lord and earl. Some holders of higher dignities choose to be known exclusively by
+                  the lower rank: “The Baron of X”. Baron of somewhat distinguishes from peers (there are not
                   many titles in the peerage that use of for baron, for example many Irish peers are baron of). However,
-                  to distinguish Earl of or Marquis of which could be confused with the peerage the prefix honorific
+                  to distinguish Earl of which could be confused with the peerage the prefix honorific
                   style The Much Hon. (The Much Honoured) can be put before the name, this prefix honorific is used to
-                  distinguish Scottish Barons from honourifics attaching to peers. In Scotland marquis follows the French
-                  spelling as a rule.
+                  distinguish Scottish Barons from honourifics attaching to peers.
                 </P>
                 <P>
                   {/* owner 2026-10-23: link to the paper on non-peerage earldoms */}
@@ -938,7 +938,7 @@ export default function ProperAddressPage() {
                   </figcaption>
                 </figure>
                 <P>
-                  Lordships, earldoms and marquisates are nobler titles of a barony, so
+                  Lordships and earldoms are nobler titles of a barony, so
                   their holders are barons whose barony carries the nobler name, and typically only the senior rank is
                   referenced. “Earl in the baronage of Scotland” names the class; a
                   holder’s style follows the rule above: Earl where a Lord Lyon has recognised a holder of that earldom
