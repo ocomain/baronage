@@ -991,13 +991,12 @@ export default function ProperAddressPage() {
                 </ol>
                 <P>
                   Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”; socially “Lord X” is also used,
-                  just as a baroness may be “Lady X”.
+                  just as a “Baroness of” may be “Lady X”.
                 </P>
                 <P>Lordship example:</P>
                 <Forms>
                   <F>
-                    Scottish baronial lord: <S>The Much Honoured Lord of Lochaber</S><Or /><S>Baron of Lochaber</S>, never
-                    Baron Lochaber; socially also <S>Lord Lochaber</S>
+                    Scottish baronial lord: <S>The Much Honoured Lord Lochaber</S><Or /><S>Baron of Lochaber</S>
                     <N>(spoken Lochaber)</N>
                   </F>
                   <F>
@@ -1005,7 +1004,6 @@ export default function ProperAddressPage() {
                   </F>
                   <F>
                     Peer: <S>The Right Honourable The Lord Lochaber</S>
-                    <N>(spoken Lord Lochaber)</N>
                   </F>
                 </Forms>
                 <P>
