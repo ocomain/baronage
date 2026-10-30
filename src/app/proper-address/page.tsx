@@ -58,6 +58,15 @@ function Or() {
 function N({ children }: { children: ReactNode }) {
   return <em className="font-normal"> {children}</em>;
 }
+/** Big quotation with its credit underneath. */
+function Quote({ children, credit }: { children: ReactNode; credit: ReactNode }) {
+  return (
+    <figure className="mt-8 border-l-2 border-gold pl-6 sm:pl-8">
+      <blockquote className="font-serif text-2xl italic leading-relaxed text-navy">{children}</blockquote>
+      <figcaption className="mt-2 font-serif text-lg leading-snug text-ink-soft">{credit}</figcaption>
+    </figure>
+  );
+}
 /** Numbered marker that opens one of the higher-dignities sources in a pop-up card (same component as the Explained page). */
 function Ref({ n, src }: { n: number; src: number }) {
   return <Footnote n={n}>{HIGHER_SOURCES[src - 1]}</Footnote>;
@@ -258,8 +267,17 @@ const WIDOW_SOURCE = (
 );
 const RECORDS_SOURCE = (
   <>
-    “official recognition is only accorded where such titles are ordinarily used”; “Signature on cheques is a good test!”
-    He also quotes the editor of the <em>Annuaire de la Noblesse de la France</em>: such titles should be “regularly
+    “official recognition is only accorded where such titles are ordinarily used”: <Adam page="409" n={440} />.
+  </>
+);
+const CHEQUES_SOURCE = (
+  <>
+    Sir Thomas Innes of Learney on titles in ordinary use: “Signature on cheques is a good test!”: <Adam page="409" n={440} />.
+  </>
+);
+const ANNUAIRE_SOURCE = (
+  <>
+    Innes of Learney quotes the editor of the <em>Annuaire de la Noblesse de la France</em>: such titles should be “regularly
     employed in all registrations of Births, Marriages, or Deaths”: <Adam page="409" n={440} />.
   </>
 );
@@ -438,7 +456,7 @@ export default function ProperAddressPage() {
                 <div hidden>{ENVELOPE_SOURCE}</div>
                 <div hidden>
                   {TITLE_ALONE_SOURCE} {ESQUIRE_SOURCE} {MADAM_SOURCE} {VISITING_CARD_SOURCE} {LADY_TITLE_SOURCE} {DEAR_SOURCE}{" "}
-                  {WIDOW_SOURCE} {RECORDS_SOURCE} {POSTNOMINAL_SOURCE}
+                  {WIDOW_SOURCE} {RECORDS_SOURCE} {CHEQUES_SOURCE} {ANNUAIRE_SOURCE} {POSTNOMINAL_SOURCE}
                 </div>
               </Sec>
             </Reveal>
@@ -1018,10 +1036,26 @@ export default function ProperAddressPage() {
                   Use the title on every record and every signature. Official recognition is given only to titles in
                   ordinary use.<Footnote n={29}>{RECORDS_SOURCE}</Footnote>
                 </P>
-                {/* owner 2026-10-30: from note 29, the words of the Annuaire's editor, as a big quote */}
-                <blockquote className="mt-8 border-l-2 border-gold pl-6 font-serif text-2xl italic leading-relaxed text-navy sm:pl-8">
+                {/* owner 2026-10-30: both from the old note 29, as big quotes, credited, each with its pop-up reference */}
+                <Quote
+                  credit={
+                    <>
+                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={30}>{CHEQUES_SOURCE}</Footnote>
+                    </>
+                  }
+                >
+                  “Signature on cheques is a good test!”
+                </Quote>
+                <Quote
+                  credit={
+                    <>
+                      The editor of the <em>Annuaire de la Noblesse de la France</em>, quoted by Innes of Learney
+                      <Footnote n={31}>{ANNUAIRE_SOURCE}</Footnote>
+                    </>
+                  }
+                >
                   Such titles should be “regularly employed in all registrations of Births, Marriages, or Deaths”.
-                </blockquote>
+                </Quote>
                 <DigitalAddressSimulator />
                 {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
                 <P>
