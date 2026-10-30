@@ -58,9 +58,9 @@ function Or() {
 function N({ children }: { children: ReactNode }) {
   return <em className="font-normal"> {children}</em>;
 }
-/** Numbered marker that opens its source in a pop-up card (same component as the Explained page). */
-function Ref({ n }: { n: number }) {
-  return <Footnote n={n}>{HIGHER_SOURCES[n - 1]}</Footnote>;
+/** Numbered marker that opens one of the higher-dignities sources in a pop-up card (same component as the Explained page). */
+function Ref({ n, src }: { n: number; src: number }) {
+  return <Footnote n={n}>{HIGHER_SOURCES[src - 1]}</Footnote>;
 }
 /** External source link inside a reference. */
 function Src({ href, children }: { href: string; children: ReactNode }) {
@@ -131,23 +131,22 @@ const POSTNOMINAL_SOURCE: ReactNode = (
     <Adam page="410" n={441} />.
   </>
 );
-/** Sources for the Written Address forms (designation and barony; post-nominals). */
-const TD_SOURCES: ReactNode = (
-  <ol className="list-decimal space-y-3 pl-5">
-    <li>
-      Court of the Lord Lyon, “Rolls of the Chiefs, and Heads of Territorial Houses … Officially Recognised”, <em>The Edinburgh Gazette</em>, 19 August 2005: entries print the designation and the barony together where they differ, e.g. “Newlands of Lauriston, Baron of Miltonhaven” (matriculated 6 October 2003, Lyon Register 85/36) —{" "}
-      <Src href="https://www.thegazette.co.uk/notice/E-25893-1107-293">The Gazette</Src>. The same form appears in earlier notices, e.g. “Teall of Teallach Baron of Huntly”, 4 April 1997, p. 777.
-    </li>
-    <li>
-      Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45): the Esslemont matriculation of 4 September 1934, Lyon Register vol. xxxi, p. 20, in which Gordon of Hallhead was “duly described as Baron of Esslemont”, p. 160 n. 1; and “The Baron of Hallhead-Esslemont duly received both chapeau and designation, consistently with the statute and the ancient precedents of Lyon Court”, p. 163 —{" "}
-      <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. See{" "}
-      <Link href="/reading-room/esslemont-petition-1934/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">The Esslemont petition of 1934</Link>.
-    </li>
-    <li>{POSTNOMINAL_SOURCE}</li>
-    <li>{LADY_SOURCE}</li>
-  </ol>
+/** Source for the designation and the barony written together (Written Address). */
+const TD_GAZETTE_SOURCE: ReactNode = (
+  <>
+    Court of the Lord Lyon, “Rolls of the Chiefs, and Heads of Territorial Houses … Officially Recognised”, <em>The Edinburgh Gazette</em>, 19 August 2005: entries print the designation and the barony together where they differ, e.g. “Newlands of Lauriston, Baron of Miltonhaven” (matriculated 6 October 2003, Lyon Register 85/36) —{" "}
+    <Src href="https://www.thegazette.co.uk/notice/E-25893-1107-293">The Gazette</Src>. The same form appears in earlier notices, e.g. “Teall of Teallach Baron of Huntly”, 4 April 1997, p. 777.
+  </>
 );
-/** Sources for the higher-dignities note; opened from the numbered markers and from "Authority & sources". */
+/** Source for “Baron of Esslemont” and “The Baron of Hallhead-Esslemont” (Written Address). */
+const TD_ESSLEMONT_SOURCE: ReactNode = (
+  <>
+    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45): the Esslemont matriculation of 4 September 1934, Lyon Register vol. xxxi, p. 20, in which Gordon of Hallhead was “duly described as Baron of Esslemont”, p. 160 n. 1; and “The Baron of Hallhead-Esslemont duly received both chapeau and designation, consistently with the statute and the ancient precedents of Lyon Court”, p. 163 —{" "}
+    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. See{" "}
+    <Link href="/reading-room/esslemont-petition-1934/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">The Esslemont petition of 1934</Link>.
+  </>
+);
+/** Sources for the higher-dignities note; opened from the numbered markers. */
 const HIGHER_SOURCES: ReactNode[] = [
   <>
     James Dalrymple, Viscount Stair, <em>The Institutions of the Law of Scotland</em> (2nd ed., 1693), II.iii.45, p. 222 —{" "}
@@ -510,10 +509,10 @@ export default function ProperAddressPage() {
                   >
                     Gazette notices
                   </Link>{" "}
-                  do: “[Surname] of Kildonan, Baron of Inverness”. They may also be joined socially:
+                  do: “[Surname] of Kildonan, Baron of Inverness”.<Footnote n={8}>{TD_GAZETTE_SOURCE}</Footnote> They may also be joined socially:
                   Lord Lyon Innes of Learney, writing in 1945, called the petitioner in the Esslemont case, Gordon of
                   Hallhead, “The Baron of Hallhead-Esslemont”, though the Lyon Register records him as “Baron of
-                  Esslemont”. The recorded title stays “Baron of [Barony]”; the wife takes the designation, as a laird’s
+                  Esslemont”.<Footnote n={9}>{TD_ESSLEMONT_SOURCE}</Footnote> The recorded title stays “Baron of [Barony]”; the wife takes the designation, as a laird’s
                   wife always has.
                 </P>
                 <Forms>
@@ -527,12 +526,10 @@ export default function ProperAddressPage() {
                     Wife: <S>Lady Kildonan</S>
                   </F>
                 </Forms>
-                <p className="mt-2">
-                  <Footnote n={0} heading="Authority & sources" label="Authority & sources" triggerClassName="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-gold-deep underline decoration-dotted decoration-gold/40 underline-offset-4 transition-colors hover:text-oxblood">
-                    {TD_SOURCES}
-                  </Footnote>
-                </p>
-                <div hidden>{TD_SOURCES}</div>
+                {/* The pop-ups render only when opened; this keeps these sources in the page's own HTML. */}
+                <div hidden>
+                  {TD_GAZETTE_SOURCE} {TD_ESSLEMONT_SOURCE} {LADY_SOURCE}
+                </div>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
                   A Scottish barony is a{" "}
@@ -545,7 +542,7 @@ export default function ProperAddressPage() {
                   held legally by the baron (or baroness in her own right). It does not create a separate legal title for
                   a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
                   She shares his rank and assumes the feminine form of his title by legal description
-                  <Footnote n={8}>{LADY_TITLE_SOURCE}</Footnote> but does not hold it in her own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
+                  <Footnote n={10}>{LADY_TITLE_SOURCE}</Footnote> but does not hold it in her own right. Upon marriage, she takes his style; if widowed or divorced, her title use follows
                   convention, not entitlement. As titles of nobility are considered part of a person’s name and
                   identity, her title is reflected in a British passport as her legal name.
                 </P>
@@ -575,11 +572,11 @@ export default function ProperAddressPage() {
                   >
                     laird
                   </Link>{" "}
-                  in her own right.<Footnote n={9}>{LADY_SOURCE}</Footnote>
+                  in her own right.<Footnote n={11}>{LADY_SOURCE}</Footnote>
                 </P>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
-                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={10}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
+                  In cases where the Baron is entitled to post-nominal letters, these should follow<Footnote n={12}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
                 </P>
                 <Forms>
                   <F>
@@ -596,7 +593,7 @@ export default function ProperAddressPage() {
                   {/* owner 2026-10-25: the main style, first */}
                   <F>
                     <S>Prof The Much Hon John Smith, Baron of Inverness</S>
-                    <Footnote n={11}>{PROFESSOR_SOURCE}</Footnote>
+                    <Footnote n={13}>{PROFESSOR_SOURCE}</Footnote>
                     <Or />
                     <S>Prof the Baron of Inverness</S>
                     <Or />
@@ -643,7 +640,7 @@ export default function ProperAddressPage() {
                     "a bit smaller and perhaps aligned to the right of the text", then "better underneath and slightly bigger so can read it", then "1/3 smaller" (512px to 344px); the letter speaking for itself; cropped to its text ("you don't need all that white space") */}
                 <P>
                   Alternatively, only the barony or TD can be used: <S>Dear Inverness</S>
-                  <Footnote n={12}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
+                  <Footnote n={14}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
                 </P>
                 {/* own paragraph, "in previous years" cut (owner 2026-10-30) */}
                 <P>
@@ -707,7 +704,7 @@ export default function ProperAddressPage() {
                     “Younger of Barony”
                   </Link>
                   , as a Scottish peer’s heir is “Master of”. “The” may go before either,
-                  and keeps “younger” from being read as a surname.<Footnote n={13}>{HEIR_SOURCE}</Footnote>
+                  and keeps “younger” from being read as a surname.<Footnote n={15}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <div hidden>{MAID_SOURCE}</div>
@@ -726,7 +723,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Where there is no son and a daughter is the heir, some families style her “Maid of Barony”
-                  <Footnote n={14}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
+                  <Footnote n={16}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
                 </P>
                 <Forms>
                   <F>
@@ -820,7 +817,7 @@ export default function ProperAddressPage() {
                   The following section applies only to Pledged hereditary titles; as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
-                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={15}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
+                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={17}>{WIDOW_SOURCE}</Footnote> unless the new Baron is
                   married. New baron must be related to the dowager. In such cases, she may choose to be styled as:
                 </P>
                 <Forms>
@@ -843,11 +840,11 @@ export default function ProperAddressPage() {
               <Sec id="higher" title="Higher dignities Lord, Earl and Marquis in the Baronage of Scotland">
                 <p className="mt-6 font-serif text-xl font-bold italic leading-[1.8] text-navy">
                   A baron, a lord, earl or marquis in the baronage of Scotland are all barons of the Kingdom of Scotland,
-                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”,<Ref n={1} />{" "}
+                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”,<Ref n={18} src={1} />{" "}
                   and the Parliament of Scotland declared in 1567 that “the barons of this realm ought to have vote in
                   parliament as a part of the nobility”, an Act which, in the words of Lord Lyon Innes of Learney,
                   “clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its
-                  constitutional sense, and as an ‘Order’ or ‘Estate’”.<Ref n={10} />
+                  constitutional sense, and as an ‘Order’ or ‘Estate’”.<Ref n={19} src={10} />
                 </p>
                 <P>
                   Over 90% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
@@ -867,7 +864,7 @@ export default function ProperAddressPage() {
                   in the form the Lyon Court has used for
                   that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
                   continues to the successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon
-                  Court used for Annandale in 1983<Ref n={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={9} />
+                  Court used for Annandale in 1983<Ref n={20} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={21} src={9} />
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -888,13 +885,13 @@ export default function ProperAddressPage() {
                 <P>
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
                   and “Baron of X” are interchangeable, as the holder prefers, and both are correct, a lordship being, in
-                  Stair’s words, one of the “more noble titles of a barony”.<Ref n={1} /> A Scots baron who is not a lord is only
-                  ever called a baron. “Lord Baron of X” is an ancient combined form.<Ref n={2} /> Non-peerage
+                  Stair’s words, one of the “more noble titles of a barony”.<Ref n={22} src={1} /> A Scots baron who is not a lord is only
+                  ever called a baron. “Lord Baron of X” is an ancient combined form.<Ref n={23} src={2} /> Non-peerage
                   lords have been written both “Lord X” and “Lord of X” since the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
-                  Lord of Graham in 1420, before he received the Lord of Parliament honour of 1445.<Ref n={3} /> The medieval
+                  Lord of Graham in 1420, before he received the Lord of Parliament honour of 1445.<Ref n={24} src={3} /> The medieval
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
-                  B”.<Ref n={4} />
+                  B”.<Ref n={25} src={4} />
                 </P>
                 <P>
                   Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
@@ -906,7 +903,7 @@ export default function ProperAddressPage() {
                   Memorial of 1934 noted is “preferred for formal purposes by English and British lords”; no one else
                   uses it, and the Scottish form has always been “Baron of X”. That is the line not to cross: a Scots
                   baron is “Baron of X”, never “Baron X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
-                  description in 1427.<Ref n={5} />
+                  description in 1427.<Ref n={26} src={5} />
                 </P>
                 <figure className="mt-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -929,9 +926,9 @@ export default function ProperAddressPage() {
                   holder’s style follows the rule above: Earl where a Lord Lyon has recognised a holder of that earldom
                   in an earl’s style (at present Crawfurd-Lindsay, Rothes and Breadalbane, recognised under Lord Lyon
                   Blair in 2006–07), otherwise Baron of the Earldom, the form the Lyon Court used for Annandale in 1983,
-                  unless the Lyon Court gives that holder another style.<Ref n={6} /> Some earldoms were erected by the
+                  unless the Lyon Court gives that holder another style.<Ref n={27} src={6} /> Some earldoms were erected by the
                   Crown as an earldom, lordship and barony in one unit; others sit on a barony of another
-                  name.<Ref n={7} /> For the history of these words see{" "}
+                  name.<Ref n={28} src={7} /> For the history of these words see{" "}
                   <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
                     Lairds, lords and barons
                   </Link>{" "}
@@ -974,15 +971,6 @@ export default function ProperAddressPage() {
                     Lord Graham until 1445.
                   </p>
                 </div>
-                <p className="mt-8">
-                  <Footnote n={0} heading="Authority & sources" label="Authority & sources" triggerClassName="cursor-pointer border-0 bg-transparent p-0 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-gold-deep underline decoration-dotted decoration-gold/40 underline-offset-4 transition-colors hover:text-oxblood">
-                    <ol className="list-decimal space-y-3 pl-5">
-                      {HIGHER_SOURCES.map((src, i) => (
-                        <li key={i}>{src}</li>
-                      ))}
-                    </ol>
-                  </Footnote>
-                </p>
                 {/* Crawlable copy of the sources — the pop-up renders its content only when opened. */}
                 <ol hidden>
                   {HIGHER_SOURCES.map((src, i) => (
@@ -1028,7 +1016,7 @@ export default function ProperAddressPage() {
                 </P>
                 <P>
                   Use the title on every record and every signature. Official recognition is given only to titles in
-                  ordinary use.<Footnote n={16}>{RECORDS_SOURCE}</Footnote>
+                  ordinary use.<Footnote n={29}>{RECORDS_SOURCE}</Footnote>
                 </P>
                 <DigitalAddressSimulator />
                 {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
