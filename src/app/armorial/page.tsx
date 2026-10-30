@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ArmorialGrid } from "@/components/ArmorialGrid";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
-import { baronies } from "@/lib/supporters";
+import { baronies, styleOf } from "@/lib/supporters";
 import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -55,11 +55,6 @@ function Flourish({ text, placement }: { text: string; placement: "top" | "below
       ))}
     </span>
   );
-}
-
-/** The card label; “Lord (Baron of)” is the Armorial’s form (owner 2026-10-30). */
-function styleOf(dignity: string) {
-  return dignity === "Lord Baron" ? "Lord (Baron of)" : `${dignity} of`;
 }
 
 export default function SupportersPage() {

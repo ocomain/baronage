@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { baronies } from "@/lib/supporters";
+import { baronies, styleOf } from "@/lib/supporters";
 
 
 /**
@@ -191,7 +191,7 @@ export function BaroniesCarousel() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={b.img}
-                  alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
+                  alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${styleOf(b.dignity)} ${b.name}`}
                   loading="lazy"
                   decoding="async"
                   draggable={false}
@@ -223,7 +223,7 @@ export function BaroniesCarousel() {
               ) : (
                 <>
                   <span className="block font-sans text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-gold-deep">
-                    {b.dignity} of
+                    {styleOf(b.dignity)}
                   </span>
                   <span className="mt-1 block font-display text-xl text-navy">{b.name}</span>
                   {b.note ? (
