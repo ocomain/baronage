@@ -1018,6 +1018,10 @@ export default function ProperAddressPage() {
                   Use the title on every record and every signature. Official recognition is given only to titles in
                   ordinary use.<Footnote n={29}>{RECORDS_SOURCE}</Footnote>
                 </P>
+                {/* owner 2026-10-30: from note 29, the words of the Annuaire's editor, as a big quote */}
+                <blockquote className="mt-8 border-l-2 border-gold pl-6 font-serif text-2xl italic leading-relaxed text-navy sm:pl-8">
+                  Such titles should be “regularly employed in all registrations of Births, Marriages, or Deaths”.
+                </blockquote>
                 <DigitalAddressSimulator />
                 {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
                 <P>
