@@ -474,7 +474,13 @@ export default function ProperAddressPage() {
                   When addressing a Scottish Baron in writing, for some barons they hold a territorial designation and
                   the correct format for the envelope or any formal correspondence would be the full territorial title:
                 </P>
-                <FormLine>(The Much Hon.) [First Name] [Surname] of [TD], Baron of [Barony]</FormLine>
+                {/* second form added (owner 2026-10-31) */}
+                <FormLine>
+                  (The Much Hon.) [First Name] [Surname] of [TD], Baron of [Barony]
+                  <Or />
+                  <br />
+                  [First Name] [Surname] of [TD], (Much Hon.) the Baron of [Barony]
+                </FormLine>
                 <P>
                   Some barons with a territorial designation choose not to use their baron title. However, most barons
                   do not hold a territorial designation and <em>just the title</em> is normally the <em>preferred</em>{" "}
@@ -1063,6 +1069,17 @@ export default function ProperAddressPage() {
                 {/* "Field by field" table deleted (owner 2026-10-23: "I think that's confusing") */}
                 {/* owner 2026-10-31: moved from Written Address, with email added ("a big offender especially from american
                     barons"), the quotation in large text, and the reason ("the title is not an office") */}
+                <Quote
+                  credit={
+                    <>
+                      Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, as revised by Lord Lyon
+                      Sir Thomas Innes of Learney, p. 410, on visiting cards
+                      <Footnote n={31}>{VISITING_CARD_SOURCE}</Footnote>
+                    </>
+                  }
+                >
+                  “may (and strictly should) be on the same line as the name”
+                </Quote>
                 <P>
                   On a visiting card, and just the same in an email, the title goes on the same line as the name, never on
                   a line beneath it:
@@ -1075,17 +1092,6 @@ export default function ProperAddressPage() {
                     Not “John Smith” with “Baron of Inverness” on a second line
                   </F>
                 </Forms>
-                <Quote
-                  credit={
-                    <>
-                      Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, as revised by Lord Lyon
-                      Sir Thomas Innes of Learney, p. 410, on visiting cards
-                      <Footnote n={31}>{VISITING_CARD_SOURCE}</Footnote>
-                    </>
-                  }
-                >
-                  “may (and strictly should) be on the same line as the name”
-                </Quote>
                 <P>
                   This is because the title is not an office. It is a title of nobility and part of one’s name and
                   identity;<Footnote n={32}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.

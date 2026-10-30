@@ -333,11 +333,10 @@ export function DigitalAddressSimulator() {
             <p>Dear Secretary,</p>
             <p className="mt-3 text-muted">…</p>
             <p className="mt-3">{email.signoff}</p>
-            <div className="mt-5 border-l-2 border-gold/60 pl-4">
-              {email.lines.map((l, i) => (
-                <p key={l} className={i === 0 ? "font-semibold text-navy" : "text-ink-soft"}>
-                  {l}
-                </p>
+            {/* plain, as a real signature: no gold line, no bold (owner 2026-10-31) */}
+            <div className="mt-5">
+              {email.lines.map((l) => (
+                <p key={l}>{l}</p>
               ))}
             </div>
           </div>
