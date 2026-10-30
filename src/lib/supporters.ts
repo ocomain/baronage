@@ -16,11 +16,6 @@ export type Barony = {
   homeAfter?: string;
 };
 
-/** The card label; “Lord (Baron of)” is the form for a lordship (owner 2026-10-30). */
-export function styleOf(dignity: Barony["dignity"]) {
-  return dignity === "Lord Baron" ? "Lord (Baron of)" : `${dignity} of`;
-}
-
 export const baronies: Barony[] = [
   { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie-arms.webp", homeAfter: "Pittenweem" },
   { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird-brim.webp" },
