@@ -934,7 +934,7 @@ export default function ProperAddressPage() {
                 <P>
                   Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
                   equally of judges of the Court of Session, courtesy lords and the Lord Lyon himself, and it is the male counterpart of
-                  “Lady X”, the form the baronage has always used for a baroness or a baron’s wife. So for a lord in the baronage of Scotland “The Much Honoured Lord Lochaber” and “The Much Honoured Lord
+                  “Lady X”, the form the baronage has always used for a baroness or a baron’s wife. So for a lord in the baronage of Scotland “The Much Honoured (the) Lord Lochaber” and “The Much Honoured (the) Lord
                   of Lochaber” are equally correct, the prefix marking the baronage, while a baron who is not a lord
                   remains “Baron of Inverness”.
                 </P>
@@ -1041,7 +1041,7 @@ export default function ProperAddressPage() {
                 <P>Lordship example:</P>
                 <Forms>
                   <F>
-                    Scottish baronial lord: <S>The Much Honoured Lord Lochaber</S><Or /><S>Baron of Lochaber</S>
+                    Scottish baronial lord: <S>The Much Honoured (the) Lord Lochaber</S><Or /><S>Baron of Lochaber</S>
                   </F>
                   <F>
                     Baron without a lordship: <S>The Much Honoured Baron of Lochaber</S>
