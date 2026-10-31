@@ -132,9 +132,9 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^24]: Innes of Learney, *The Tartans of the Clans and Families of Scotland* (W. & A. K. Johnston, 1938; the same sentence in later printings).
 [^25]: *Titles and Forms of Address*, 9th ed. (1955), under “Chiefs of Scottish Clans and Territorial Houses”, [archive.org](https://archive.org/details/titlesandformsof017862mbp).
 [^26]: Frank Adam, *The Clans, Septs and Regiments of the Scottish Highlands*, revised by Sir Thomas Innes of Learney, [p. 410](https://archive.org/details/bwb_S0-BUT-001/page/n441). The passage is in the edition of 1952 (W. & A. K. Johnston) and in later ones; the page linked is from a later printing. It is not in the first edition of 1908.
-[^27]: *Debrett’s Correct Form*, ed. P. Montague-Smith (1970), in the chapter on the Scottish chief, chieftain or laird, [archive.org](https://archive.org/details/debrettscorrectf0000mont).
-[^28]: *Debrett’s Distinguished People of Today* (1989), entry for the Baron of Leslie, [archive.org](https://archive.org/details/debrettsdistingu0000unse).
+[^27]: *Debrett’s Correct Form*, ed. P. Montague-Smith (1970), in the chapter on the Scottish chief, chieftain or laird, [archive.org](https://archive.org/details/debrettscorrectf0000mont "nofollow").
+[^28]: *Debrett’s Distinguished People of Today* (1989), entry for the Baron of Leslie, [archive.org](https://archive.org/details/debrettsdistingu0000unse "nofollow").
 [^29]: The Convention of the Baronage of Scotland, “Male Barons”, as captured on [14 June 2002](https://web.archive.org/web/20020614003107/http://www.scotsbarons.org/male_barons.htm).
-[^30]: *Debrett’s Peerage and Baronetage 2003*, article on the Baronage of Scotland, [archive.org](https://archive.org/details/debrettspeerageb0000unse_r0m8).
+[^30]: *Debrett’s Peerage and Baronetage 2003*, article on the Baronage of Scotland, [archive.org](https://archive.org/details/debrettspeerageb0000unse_r0m8 "nofollow").
 [^31]: *Titles and Forms of Address*, 9th ed. (1955), under “The Peerage”.
 [^32]: *Titles and Forms of Address*, 9th ed. (1955), under “Dukes and Duchesses”: “plain Duke or Duchess is correct”; “They are referred to as The Duke or The Duchess”; “Inferiors address them as Your Grace”; in writing, “My Lord Duke” formally and “Dear Duke” socially; and, for the envelope, “His Grace The Duke of Middlesex”. The baron’s forms are those of [Proper Address for Scottish Barons](/proper-address/), with “Your Honour” as set out above.
