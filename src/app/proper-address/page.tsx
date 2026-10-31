@@ -175,7 +175,7 @@ const HIGHER_SOURCES: ReactNode[] = [
     <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>.
   </>,
   <>
-    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced above. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163; the Esslemont Memorial’s words “preferred for formal purposes by English and British lords”, p. 163.
+    Innes of Learney (1945), p. 158 and n. 7, citing Sir Bruce Seton’s Gordon Peerage Case, p. 15. Reproduced below. On “Baron of X” as the correct form, and “esquire” never added, pp. 161–163; the Esslemont Memorial’s words “preferred for formal purposes by English and British lords”, p. 163.
     The Lord Lyon’s “Lord” is that of his office: “The Officers of the Court are the Lord Lyon King of Arms and the Lyon Clerk
     and Keeper of the Records, both appointed by the Sovereign on the recommendation of the First Minister” —{" "}
     <Src href="https://courtofthelordlyon.scot/about%20us.htm">Court of the Lord Lyon, About us</Src>.
@@ -289,12 +289,7 @@ const WIDOW_SOURCE = (
 );
 const RECORDS_SOURCE = (
   <>
-    “official recognition is only accorded where such titles are ordinarily used”: <Adam page="409" n={440} />.
-  </>
-);
-const CHEQUES_SOURCE = (
-  <>
-    Sir Thomas Innes of Learney on titles in ordinary use: “Signature on cheques is a good test!”: <Adam page="409" n={440} />.
+    Sir Thomas Innes of Learney on titles in ordinary use: <Adam page="409" n={440} />.
   </>
 );
 const ANNUAIRE_SOURCE = (
@@ -478,7 +473,7 @@ export default function ProperAddressPage() {
                 <div hidden>{ENVELOPE_SOURCE}</div>
                 <div hidden>
                   {TITLE_ALONE_SOURCE} {ESQUIRE_SOURCE} {MADAM_SOURCE} {VISITING_CARD_SOURCE} {IDENTITY_SOURCE} {LADY_TITLE_SOURCE} {DEAR_SOURCE}{" "}
-                  {WIDOW_SOURCE} {RECORDS_SOURCE} {CHEQUES_SOURCE} {ANNUAIRE_SOURCE} {POSTNOMINAL_SOURCE}
+                  {WIDOW_SOURCE} {RECORDS_SOURCE} {ANNUAIRE_SOURCE} {POSTNOMINAL_SOURCE}
                 </div>
               </Sec>
             </Reveal>
@@ -886,11 +881,9 @@ export default function ProperAddressPage() {
                   <strong className="font-bold">
                     Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
                   </strong>{" "}
-                  Baron of somewhat distinguishes from peers (there are not
-                  many titles in the peerage that use of for baron, for example many Irish peers are baron of). However,
-                  to distinguish Earl of which could be confused with the peerage the prefix honorific
-                  style The Much Hon. (The Much Honoured) can be put before the name, this prefix honorific is used to
-                  distinguish Scottish Barons from honourifics attaching to peers.
+                  “Baron of” helps to distinguish a baron from a peer, though many Irish peers are also “Baron of”. For
+                  an earl, which could be confused with the peerage, the prefix The Much Hon. (The Much Honoured) goes
+                  before the name.
                 </P>
                 <P>
                   {/* owner 2026-10-23: link to the paper on non-peerage earldoms */}
@@ -898,10 +891,13 @@ export default function ProperAddressPage() {
                   <Link href="/reading-room/non-peerage-earldoms/" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
                     the holder of an earldom
                   </Link>{" "}
-                  in the form the Lyon Court has used for
-                  that holder. Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, the style
-                  continues to the successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon
-                  Court used for Annandale in 1983<Ref n={19} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={20} src={9} />
+                  in the form the Lyon Court has used for that holder, and typically only the senior rank is referenced.
+                  Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, at present Crawfurd-Lindsay,
+                  Rothes and Breadalbane under Lord Lyon Blair in 2006–07,<Ref n={19} src={6} /> the style continues to the
+                  successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon Court used for Annandale
+                  in 1983<Ref n={20} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={21} src={9} /> Some
+                  earldoms were erected by the Crown as an earldom, lordship and barony in one unit; others sit on a barony
+                  of another name.<Ref n={22} src={7} />
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -921,14 +917,14 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
-                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={21} src={1} />{" "}
+                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={23} src={1} />{" "}
                   <strong className="font-bold">A Scots baron who is not a lord is only ever called a baron.</strong>{" "}
-                  “Lord Baron of X” is an ancient combined formality.<Ref n={22} src={2} /> Feudal
+                  “Lord Baron of X” is an ancient combined formality.<Ref n={24} src={2} /> Feudal
                   lords were written both “Lord X” and “Lord of X” in the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
-                  Lord of Graham in 1420, before his family received the Lord of Parliament honour of 1445.<Ref n={23} src={3} /> The medieval
+                  Lord of Graham in 1420, before his family received the Lord of Parliament honour of 1445.<Ref n={25} src={3} /> The medieval
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
-                  B”.<Ref n={24} src={4} />
+                  B”.<Ref n={26} src={4} />
                 </P>
                 <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">
@@ -972,67 +968,18 @@ export default function ProperAddressPage() {
                   remains “Baron of Inverness”.
                 </P>
                 <P>
-                  Socially such a lord may also be “The Lord Lochaber”. The article is old Scottish usage, not a claim to
-                  peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
-                  lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={25} src={11} /> Innes gives the same
+                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”.
+                  Socially “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. The article is old
+                  Scottish usage, not a claim to peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
+                  lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={27} src={11} /> Innes gives the same
                   article for lairds’ wives, “The Lady Drum” and “The Lady Invercauld”, and calls the title “not a
-                  ‘courtesy’ but a proper legal description”.<Ref n={26} src={12} /> In the Passport Office’s words, a
+                  ‘courtesy’ but a proper legal description”.<Ref n={28} src={12} /> In the Passport Office’s words, a
                   substantive holder “will have the word, ‘The’ at the beginning of their title”, and a courtesy holder
-                  does not.<Ref n={27} src={13} /> A Scottish barony is{" "}
+                  does not.<Ref n={29} src={13} /> A Scottish barony is{" "}
                   <Link href="/reading-room/how-a-scottish-baron-is-named-in-a-legal-document/" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
                     a substantive title in law
                   </Link>
                   , so a lord in the baronage takes the article on the same footing.
-                </P>
-                <P>
-                  “Baron X” is different. In Britain
-                  it is the formal designation of a peer of the rank of baron, the form the Esslemont
-                  Memorial of 1934 noted is “preferred for formal purposes by English and British lords”. The Scottish
-                  form is “Baron of X”, although the Lyon Office has used “Baron X” socially in salutation, and Innes of
-                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={28} src={5} />
-                </P>
-                <figure className="mt-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/innes-1945-baron-mccorquodale.webp"
-                    alt="Innes of Learney, PSAS 79 (1944–45), p. 158: ‘In Argyll “Baron McCorquodale” is found as a non-peerage description in 1427.’"
-                    width={1320}
-                    height={233}
-                    loading="lazy"
-                    className="mx-auto w-full max-w-3xl border border-parchment-300/70"
-                  />
-                  <figcaption className="mt-3 text-center font-serif text-base italic text-ink/80">
-                    The same page: “Baron McCorquodale”, a non-peerage description of 1427.
-                  </figcaption>
-                </figure>
-                <P>
-                  Lordships and earldoms are nobler titles of a barony, so
-                  their holders are barons whose barony carries the nobler name, and typically only the senior rank is
-                  referenced. “Earl in the baronage of Scotland” names the class; a
-                  holder’s style follows the rule above: Earl where a Lord Lyon has recognised a holder of that earldom
-                  in an earl’s style (at present Crawfurd-Lindsay, Rothes and Breadalbane, recognised under Lord Lyon
-                  Blair in 2006–07), otherwise Baron of the Earldom, the form the Lyon Court used for Annandale in 1983,
-                  unless the Lyon Court gives that holder another style.<Ref n={29} src={6} /> Some earldoms were erected by the
-                  Crown as an earldom, lordship and barony in one unit; others sit on a barony of another
-                  name.<Ref n={30} src={7} /> For the history of these words see{" "}
-                  <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
-                    Lairds, lords and barons
-                  </Link>{" "}
-                  and the{" "}
-                  <Link href="/scottish-baronies-explained/#term-comes-dominus-baro" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
-                    glossary
-                  </Link>
-                  .
-                </P>
-                {/* Crawlable copy of the sources — the pop-up renders its content only when opened. */}
-                <ol hidden>
-                  {HIGHER_SOURCES.map((src, i) => (
-                    <li key={i}>{src}</li>
-                  ))}
-                </ol>
-                <P>
-                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”; socially “The Lord X” is also used,
-                  just as “The Baroness of X” may be “The Lady X”.
                 </P>
                 <P>Lordship example:</P>
                 <Forms>
@@ -1048,13 +995,52 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
+                  “Baron X” is different. In Britain
+                  it is the formal designation of a peer of the rank of baron, the form the Esslemont
+                  Memorial of 1934 noted is “preferred for formal purposes by English and British lords”. The Scottish
+                  form is “Baron of X”, although the Lyon Office has used “Baron X” socially in salutation, and Innes of
+                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={30} src={5} />
+                </P>
+                <figure className="mt-6">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/innes-1945-baron-mccorquodale.webp"
+                    alt="Innes of Learney, PSAS 79 (1944–45), p. 158: ‘In Argyll “Baron McCorquodale” is found as a non-peerage description in 1427.’"
+                    width={1320}
+                    height={233}
+                    loading="lazy"
+                    className="mx-auto w-full max-w-3xl border border-parchment-300/70"
+                  />
+                  <figcaption className="mt-3 text-center font-serif text-base italic text-ink/80">
+                    Innes of Learney (1945), p. 158: “Baron McCorquodale”, a non-peerage description of 1427.
+                  </figcaption>
+                </figure>
+
+                {/* Crawlable copy of the sources — the pop-up renders its content only when opened. */}
+                <ol hidden>
+                  {HIGHER_SOURCES.map((src, i) => (
+                    <li key={i}>{src}</li>
+                  ))}
+                </ol>
+                <P>
                   The heir to these higher dignities is the same as a baron’s: “Younger of Lochaber” for a son, and, where
-                  a daughter is the heir, “Maid of Lochaber”. Earls in the Baronage of Scotland, typically hold lordship or
+                  a daughter is the heir, “Maid of Lochaber”. Earls in the Baronage of Scotland typically hold lordship or
                   barony subsidiary titles. For Pledged title holders, the Roll recommends special disposition allowing
                   their children use of their junior titles during their lifetimes, similar to courtesy titles in the
                   peerage but more like the Spanish nobility’s practice of subtitle transfer during a lifetime. This is a
                   one-time, irreversible process that lasts until death, after which the title reverts to the primary
                   succession of the senior title. For advice, contact us.
+                </P>
+                <P>
+                  For the history of these words see{" "}
+                  <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
+                    Lairds, lords and barons
+                  </Link>{" "}
+                  and the{" "}
+                  <Link href="/scottish-baronies-explained/#term-comes-dominus-baro" className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood">
+                    glossary
+                  </Link>
+                  .
                 </P>
               </Sec>
             </Reveal>
@@ -1067,24 +1053,24 @@ export default function ProperAddressPage() {
                   <Link href="/reading-room/how-a-scottish-baron-is-named-in-a-legal-document/#signing-the-deed" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
                     every signature
                   </Link>
-                  . As Lord Lyon Innes of Learney wrote, “official recognition is only accorded where such titles are
-                  ordinarily used”.<Footnote n={31}>{RECORDS_SOURCE}</Footnote>
+                  .
                 </P>
-                {/* owner 2026-10-30: both from the old note 29, as big quotes, credited, each with its pop-up reference */}
+                {/* owner 2026-10-31: Innes's two lines of p. 409 joined in one box; one sentence left out between them */}
                 <Quote
                   credit={
                     <>
-                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={32}>{CHEQUES_SOURCE}</Footnote>
+                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={31}>{RECORDS_SOURCE}</Footnote>
                     </>
                   }
                 >
-                  “Signature on cheques is a good test!”
+                  “It need hardly be pointed out that official recognition is only accorded where such titles are
+                  ordinarily used … Signature on cheques is a good test!”
                 </Quote>
                 <Quote
                   credit={
                     <>
                       The editor of the <em>Annuaire de la Noblesse de la France</em>, quoted by Innes of Learney
-                      <Footnote n={33}>{ANNUAIRE_SOURCE}</Footnote>
+                      <Footnote n={32}>{ANNUAIRE_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1105,7 +1091,7 @@ export default function ProperAddressPage() {
                     <>
                       Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, as revised by Lord Lyon
                       Sir Thomas Innes of Learney, p. 410, on visiting cards
-                      <Footnote n={34}>{VISITING_CARD_SOURCE}</Footnote>
+                      <Footnote n={33}>{VISITING_CARD_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1125,7 +1111,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   This is because the title is not an office. It is a title of nobility and part of one’s name and
-                  identity;<Footnote n={35}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
+                  identity;<Footnote n={34}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
                 </P>
                 <P>
                   By following these guidelines, you can ensure that baronial titles are correctly represented and
