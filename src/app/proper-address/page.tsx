@@ -491,11 +491,11 @@ export default function ProperAddressPage() {
                 </P>
                 {/* second form added (owner 2026-10-31) */}
                 <FormLine>
-                  (The Much Hon.) [First Name] [Surname] (of TD), Baron of [Barony]
+                  (The Much Hon.) [First Name] [Surname (of TD)], Baron of [Barony]
                   <br />
                   <Or />
                   <br />
-                  [First Name] [Surname] (of TD), Much Hon. the Baron of [Barony]
+                  [First Name] [Surname (of TD)], Much Hon. the Baron of [Barony]
                 </FormLine>
                 <P>
                   Some barons with a territorial designation choose not to use their baron title. However, most barons
