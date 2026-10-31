@@ -491,11 +491,11 @@ export default function ProperAddressPage() {
                 </P>
                 {/* second form added (owner 2026-10-31) */}
                 <FormLine>
-                  (The Much Hon.) [First Name] [Surname (of TD)], Baron of [Barony]
+                  (The Much Hon.) John Smith of Glenmore, Baron of Inverness
                   <br />
                   <Or />
                   <br />
-                  [First Name] [Surname (of TD)], Much Hon. the Baron of [Barony]
+                  John Smith of Glenmore, Much Hon. the Baron of Inverness
                 </FormLine>
                 <P>
                   Some barons with a territorial designation choose not to use their baron title. However, most barons
@@ -809,7 +809,7 @@ export default function ProperAddressPage() {
                     <S>Major (The Baron of) Inverness</S>
                   </F>
                   <F>
-                    <S>Major The Much Hon Baron of Inverness DL</S>{" "}
+                    <S>Major the Much Hon Baron of Inverness DL</S>{" "}
                     <S>(John Smith, 5th baron)</S> <N>— post-nominals after title</N>
                   </F>
                 </Forms>
@@ -921,8 +921,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
-                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct, a lordship being, in
-                  Stair’s words, one of the “more noble titles of a barony”.<Ref n={21} src={1} />{" "}
+                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={21} src={1} />{" "}
                   <strong className="font-bold">A Scots baron who is not a lord is only ever called a baron.</strong>{" "}
                   “Lord Baron of X” is an ancient combined formality.<Ref n={22} src={2} /> Non-peerage
                   lords have been written both “Lord X” and “Lord of X” since the Middle Ages, in the most formal documents
@@ -931,6 +930,40 @@ export default function ProperAddressPage() {
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
                   B”.<Ref n={24} src={4} />
                 </P>
+                <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
+                  <p className="font-serif text-base italic leading-relaxed text-ink">
+                    William Borthwick, 1775 —{" "}
+                    <a
+                      href="https://archive.org/details/inquiryintoorigi00bortuoft/page/12/mode/2up?q=Lord+Barons"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
+                    >
+                      An inquiry into the origin and limitations of the feudal dignities of Scotland
+                    </a>
+                  </p>
+                  <figure className="mt-6">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/lord-baron.webp"
+                      alt="Charter excerpt from Borthwick (1775): in 1416 William ‘Lord Graham’ receives the barony of Mellenok, and in 1420 ‘William Lord of Graham’ the lands of Aldmontrose."
+                      width={584}
+                      height={262}
+                      loading="lazy"
+                      decoding="async"
+                      className="mx-auto w-full max-w-md border border-navy/10 shadow-[0_14px_34px_-16px_rgba(8,12,28,0.4)]"
+                    />
+                  </figure>
+                  <p className="mt-6 font-serif text-lg text-navy">
+                    1416 William Lord Graham &gt;
+                    <br />
+                    1420 William Lord of Graham
+                  </p>
+                  <p className="mt-3 leading-relaxed text-ink-soft">
+                    By definition a feudal lordship, as the additional Lord of Parliament honour was not created for
+                    Lord Graham until 1445.
+                  </p>
+                </div>
                 <P>
                   Both forms remain in use. “Lord X” asserts no rank by itself: it is the spoken form of peers, but
                   equally of judges of the Court of Session, courtesy lords and the Lord Lyon himself, and it is the male counterpart of
@@ -994,40 +1027,7 @@ export default function ProperAddressPage() {
                     glossary
                   </Link>
                   .
-                </P>                <div className="mt-10 border-y border-parchment-300/70 py-6 text-center">
-                  <p className="font-serif text-base italic leading-relaxed text-ink">
-                    William Borthwick, 1775 —{" "}
-                    <a
-                      href="https://archive.org/details/inquiryintoorigi00bortuoft/page/12/mode/2up?q=Lord+Barons"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
-                    >
-                      An inquiry into the origin and limitations of the feudal dignities of Scotland
-                    </a>
-                  </p>
-                  <figure className="mt-6">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/lord-baron.webp"
-                      alt="Charter excerpt from Borthwick (1775): in 1416 William ‘Lord Graham’ receives the barony of Mellenok, and in 1420 ‘William Lord of Graham’ the lands of Aldmontrose."
-                      width={584}
-                      height={262}
-                      loading="lazy"
-                      decoding="async"
-                      className="mx-auto w-full max-w-md border border-navy/10 shadow-[0_14px_34px_-16px_rgba(8,12,28,0.4)]"
-                    />
-                  </figure>
-                  <p className="mt-6 font-serif text-lg text-navy">
-                    1416 William Lord Graham &gt;
-                    <br />
-                    1420 William Lord of Graham
-                  </p>
-                  <p className="mt-3 leading-relaxed text-ink-soft">
-                    By definition a feudal lordship, as the additional Lord of Parliament honour was not created for
-                    Lord Graham until 1445.
-                  </p>
-                </div>
+                </P>
                 {/* Crawlable copy of the sources — the pop-up renders its content only when opened. */}
                 <ol hidden>
                   {HIGHER_SOURCES.map((src, i) => (
@@ -1035,8 +1035,8 @@ export default function ProperAddressPage() {
                   ))}
                 </ol>
                 <P>
-                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”; socially “(The) Lord X” is also used,
-                  just as a “Baroness of X” may be “(The) Lady X”.
+                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”; socially “The Lord X” is also used,
+                  just as “The Baroness of X” may be “The Lady X”.
                 </P>
                 <P>Lordship example:</P>
                 <Forms>
