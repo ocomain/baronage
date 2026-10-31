@@ -923,8 +923,8 @@ export default function ProperAddressPage() {
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
                   and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={21} src={1} />{" "}
                   <strong className="font-bold">A Scots baron who is not a lord is only ever called a baron.</strong>{" "}
-                  “Lord Baron of X” is an ancient combined formality.<Ref n={22} src={2} /> Non-peerage
-                  lords have been written both “Lord X” and “Lord of X” since the Middle Ages, in the most formal documents
+                  “Lord Baron of X” is an ancient combined formality.<Ref n={22} src={2} /> Feudal
+                  lords were written both “Lord X” and “Lord of X” in the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
                   Lord of Graham in 1420, before his family received the Lord of Parliament honour of 1445.<Ref n={23} src={3} /> The medieval
                   sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
@@ -973,8 +973,7 @@ export default function ProperAddressPage() {
                 </P>
                 <P>
                   Socially such a lord may also be “The Lord Lochaber”. The article is old Scottish usage, not a claim to
-                  peerage. “Lord X” and “Lord of X” were interchangeable, as the Graham charters show: Innes of Learney’s
-                  edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
+                  peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
                   lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={25} src={11} /> Innes gives the same
                   article for lairds’ wives, “The Lady Drum” and “The Lady Invercauld”, and calls the title “not a
                   ‘courtesy’ but a proper legal description”.<Ref n={26} src={12} /> In the Passport Office’s words, a
@@ -983,17 +982,14 @@ export default function ProperAddressPage() {
                   <Link href="/reading-room/how-a-scottish-baron-is-named-in-a-legal-document/" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">
                     a substantive title in law
                   </Link>
-                  , so a lord in the baronage takes the article on the same footing. In writing the prefix still keeps
-                  lord and peer apart: “The Much Honoured (the) Lord Lochaber”, and for a peer “The Right Honourable The
-                  Lord Lochaber”.
+                  , so a lord in the baronage takes the article on the same footing.
                 </P>
                 <P>
                   “Baron X” is different. In Britain
-                  it is the formal designation of one thing only, a peer of the rank of baron, the form the Esslemont
-                  Memorial of 1934 noted is “preferred for formal purposes by English and British lords”; no one else
-                  uses it, and the Scottish form has always been “Baron of X”. That is the line not to cross: a Scots
-                  baron is “Baron of X”, never “Baron X”, though Innes of Learney notes “Baron McCorquodale” as a non-peerage
-                  description in 1427.<Ref n={28} src={5} />
+                  it is the formal designation of a peer of the rank of baron, the form the Esslemont
+                  Memorial of 1934 noted is “preferred for formal purposes by English and British lords”. The Scottish
+                  form is “Baron of X”, although the Lyon Office has used “Baron X” socially in salutation, and Innes of
+                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={28} src={5} />
                 </P>
                 <figure className="mt-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
