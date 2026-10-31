@@ -171,7 +171,7 @@ const HIGHER_SOURCES: ReactNode[] = [
     <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. Patrick Graham was created Lord Graham, a Lord of Parliament, in 1445.
   </>,
   <>
-    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes —{" "}
+    Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes; in the Latin of the rolls, “Intrat A, Dominus de B” and “Intrat A, Baro de B” —{" "}
     <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>.
   </>,
   <>
@@ -187,7 +187,7 @@ const HIGHER_SOURCES: ReactNode[] = [
   </>,
   <>
     One unit: Crawfurd and Lindsay, charter of 1 March 1648, ratified{" "}
-    <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected “in liberam baroniam de Ballinbreich” (RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
+    <Src href="https://www.rps.ac.uk/search.php?action=print&id=23983&filename=charlesi_trans&type=trans">RPS 1648/3/234</Src>; Slains and Erroll, charter of 29 March 1699, ratified RPS 1700/10/253. A barony of another name: Rothes, whose Fife lands were erected into the free barony of Ballinbreich (“in liberam baroniam de Ballinbreich”, RMS VI, nos. 756–757, 1598); Wigtown, on the lordship and barony of Cumbernauld (1588/9).
   </>,
   <>
     Letters Patent of Lord Lyon Innes of Edingight, 4 February 1983, recognising Percy Wentworth Hope Johnstone of Annandale and that Ilk as “Baron of the Barony of the lands of the Earldom of Annandale and Hartfell” and Chief of Clan Johnstone; recorded in the Lyon Court’s notice in <em>The Edinburgh Gazette</em>, 17 January 1984, p. 51, Lyon Register 66/71 —{" "}
@@ -195,12 +195,6 @@ const HIGHER_SOURCES: ReactNode[] = [
   </>,
   <>
     Lord Lyon Sellar, <Src href="https://courtofthelordlyon.scot/index_htm_files/ARRAN.pdf">Note in the Petition of Sturzenegger of Arran</Src> (petition of 10 February 2006; Note c. 2010), reported as <em>Sturzenegger, Petitioner (No 2)</em> 2015 SLT (Lyon Ct) 2: of the passages in Stair and Erskine, “it suggests to me that in terms of the feudal grant the owner has no claim to a style greater than that of baron”; the petition for recognition as “Feudal Earl of Arran” was refused.
-  </>,
-  <>
-    Act of the Parliament of Scotland, 20 December 1567, article 33: “the barons of this realm ought to have vote in parliament as a part of the nobility” —{" "}
-    <Src href="https://www.rps.ac.uk/trans/1567/12/45">RPS 1567/12/45</Src>. Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), p. 132, quoting the Act: “This clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its constitutional sense, and as an ‘Order’ or ‘Estate’” —{" "}
-    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">journal PDF</Src>. See{" "}
-    <Link href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Innes of Learney, 1945</Link>.
   </>,
   <>
     In the reign of Alexander III, “a baron, the Lord of Strathbogie”: <Adam page="211" n={234} />. Borthwick (1775), p. 18:
@@ -226,30 +220,35 @@ const HIGHER_SOURCES: ReactNode[] = [
     <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Lairds, lords and barons</Link>.
   </>,
   <>
-    Act of 5 March 1428, general council at Perth: <em>The Acts of the Parliaments of Scotland</em>, vol. II,{" "}
+    Act of 5 March 1428, general council at Perth. The original reads “All bischoppis abbotis priors dukis erlis lordis of
+    parliament &amp; banrentis the quhilkis the King wil, be reseruit &amp; summonde to consalis &amp; to parliamentis be his
+    special precep”: <em>The Acts of the Parliaments of Scotland</em>, vol. II,{" "}
     <Src href="https://archive.org/details/india.history.resource.77916/page/n106">p. 15</Src>, printed under 1427 in the old
     reckoning of the year;{" "}
-    <Src href="https://www.rps.ac.uk/trans/1428/3/3">RPS 1428/3/3</Src>. The spelling above is that of the{" "}
+    <Src href="https://www.rps.ac.uk/trans/1428/3/3">RPS 1428/3/3</Src>. That spelling is from the{" "}
     <Src href="https://dsl.ac.uk/entry/dost/lord">Dictionary of the Older Scottish Tongue, “Lord”</Src>, sense 8, which
     writes out the printer’s contractions.
   </>,
   <>
-    14 October 1591, “servitori suo D. Joanni Murray de Tullybairdin militi”, “in liberum dominium de Balquhidder”:{" "}
+    14 October 1591, to his servant Sir John Murray of Tullibardine, knight, in free lordship of Balquhidder (“servitori suo
+    D. Joanni Murray de Tullybairdin militi”, “in liberum dominium de Balquhidder”):{" "}
     <em>Register of the Great Seal</em>, vol. V, no. 1939,{" "}
     <Src href="https://archive.org/details/registrummagnisi05scot/page/n661">p. 654</Src>. The Register prints abstracts of
     the charters.
   </>,
   <>
-    4 June 1631, “Jacobo Maxuell de Innerweik”, “in liberum dominium et baroniam de Fentoun”:{" "}
+    4 June 1631, to James Maxwell of Innerwick, in free lordship and barony of Fenton (“Jacobo Maxuell de Innerweik”, “in
+    liberum dominium et baroniam de Fentoun”):{" "}
     <em>Register of the Great Seal</em>, vol. VIII, no. 1779,{" "}
     <Src href="https://archive.org/details/registrummagnisi08scot/page/n616">p. 609</Src>.
   </>,
   <>
-    Charter of 18 March 1583, recited on 3 August 1587: “in liberum dominium et baroniam … ordinando dictum Andream dominum et
-    baronem de Dingwall nuncupandum, qui honorem domini parliamenti haberet”: <em>Register of the Great Seal</em>, vol. V, no.
-    1337, <Src href="https://archive.org/details/registrummagnisi05scot/page/n468">p. 461</Src>. So too at Paisley in 1587:
-    “in liberum temporale dominium et baroniam de Paislay … titulum et honorem liberi baronis et domini parliamentorum”,
-    no. 1320, <Src href="https://archive.org/details/registrummagnisi05scot/page/n460">p. 453</Src>.
+    Charter of 18 March 1583, recited on 3 August 1587: in free lordship and barony, Andrew Keith to be called lord and baron
+    of Dingwall, who should have the honour of a lord of Parliament (“in liberum dominium et baroniam … ordinando dictum
+    Andream dominum et baronem de Dingwall nuncupandum, qui honorem domini parliamenti haberet”):{" "}
+    <em>Register of the Great Seal</em>, vol. V, no. 1337, <Src href="https://archive.org/details/registrummagnisi05scot/page/n468">p. 461</Src>. So too at Paisley in 1587:
+    in free temporal lordship and barony, with the title and honour of a free baron and lord of parliaments (“in liberum
+    temporale dominium et baroniam de Paislay … titulum et honorem liberi baronis et domini parliamentorum”), no. 1320, <Src href="https://archive.org/details/registrummagnisi05scot/page/n460">p. 453</Src>.
   </>,
   <>
     Of the 1,871 baronies in the <Src href="https://baronies.baronage.com/">Index of Scottish Baronies</Src>, about 40 are a
@@ -918,31 +917,16 @@ export default function ProperAddressPage() {
               <Sec id="higher" title="Higher dignities Lord and Earl in the Baronage of Scotland">
                 <p className="mt-6 font-serif text-xl font-bold italic leading-[1.8] text-navy">
                   A baron, a lord or earl in the baronage of Scotland are all barons of the Kingdom of Scotland,
-                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”,<Ref n={17} src={1} />{" "}
-                  and the Parliament of Scotland declared in 1567 that “the barons of this realm ought to have vote in
-                  parliament as a part of the nobility”, an Act which, in the words of Lord Lyon Innes of Learney,
-                  “clarifies the (obvious) nobiliary fact, that the Barons are a part of ‘The Nobility’ in its
-                  constitutional sense, and as an ‘Order’ or ‘Estate’”.<Ref n={18} src={10} />
+                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”.<Ref n={17} src={1} />
                 </p>
                 <P>
                   About 98% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
-                  the nobler titles of lord and earl.<Ref n={19} src={19} />{" "}
+                  the nobler titles of lord and earl.<Ref n={18} src={18} />{" "}
                   <strong className="font-bold">
                     Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
                   </strong>{" "}
                   The Baron of Balvaird, of our Governing Council, is one: he holds a lordship and barony and does not use
-                  the title of lord.
-                </P>
-                <Quote
-                  credit={
-                    <>
-                      Lord Lyon King of Arms, 14 January 2020<Ref n={20} src={20} />
-                    </>
-                  }
-                >
-                  “the Petitioner prima facie holds the lordship of Balvaird being of the genus of barony”
-                </Quote>
-                <P>
+                  the title of lord.<Ref n={19} src={19} />{" "}
                   “Baron of” helps to distinguish a baron from a peer, though many Irish peers are also “Baron of”. For
                   an earl, which could be confused with the peerage, the prefix The Much Hon. (The Much Honoured) goes
                   before the name.
@@ -955,11 +939,11 @@ export default function ProperAddressPage() {
                   </Link>{" "}
                   in the form the Lyon Court has used for that holder, and typically only the senior rank is referenced.
                   Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, at present Crawfurd-Lindsay,
-                  Rothes and Breadalbane under Lord Lyon Blair in 2006–07,<Ref n={21} src={6} /> the style continues to the
+                  Rothes and Breadalbane under Lord Lyon Blair in 2006–07,<Ref n={20} src={6} /> the style continues to the
                   successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon Court used for Annandale
-                  in 1983<Ref n={22} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={23} src={9} /> Some
+                  in 1983<Ref n={21} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={22} src={9} /> Some
                   earldoms were erected by the Crown as an earldom, lordship and barony in one unit; others sit on a barony
-                  of another name.<Ref n={24} src={7} />
+                  of another name.<Ref n={23} src={7} />
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -979,27 +963,27 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Note that for Lords in the Baronage of Scotland a baron is a lord and a lord is a baron: “Lord of X”
-                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={25} src={1} />{" "}
+                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={24} src={1} />{" "}
                   <strong className="font-bold">A Scots baron who is not a lord is only ever called a baron.</strong>{" "}
-                  “Lord Baron of X” is an ancient combined formality.<Ref n={26} src={2} /> Feudal
+                  “Lord Baron of X” is an ancient combined formality.<Ref n={25} src={2} /> Feudal
                   lords were written both “Lord X” and “Lord of X” in the Middle Ages, in the most formal documents
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
-                  Lord of Graham in 1420, before his family received the Lord of Parliament honour of 1445.<Ref n={27} src={3} /> The medieval
-                  sheriff-court rolls entered a lord as “Intrat A, Dominus de B” and a baron as “Intrat A, Baro de
-                  B”.<Ref n={28} src={4} /> That is why the peerage rank was called “Lord of Parliament”, not simply “Lord”:
+                  Lord of Graham in 1420, before his family received the Lord of Parliament honour of 1445.<Ref n={26} src={3} /> The medieval
+                  sheriff-court rolls entered a lord as “Enters A, Lord of B” and a baron as “Enters A, Baron of
+                  B”.<Ref n={27} src={4} /> That is why the peerage rank was called “Lord of Parliament”, not simply “Lord”:
                   other lords held territorially, not by personal summons to Parliament, by charter in free lordship, or as
-                  lord barons by charter in lordship and barony.<Ref n={29} src={14} />
+                  lord barons by charter in lordship and barony.<Ref n={28} src={13} />
                 </P>
                 {/* owner 2026-10-31: quotes shown big or as screenshots, each with its own pop-up source */}
                 <Quote
                   credit={
                     <>
-                      Act of the Scottish Parliament, 5 March 1428<Ref n={30} src={15} />
+                      Act of the Scottish Parliament, 5 March 1428, in modern English<Ref n={29} src={14} />
                     </>
                   }
                 >
-                  “All bischoppis abbotis priors dukis erlis lordis of parliament &amp; banrentis the quhilkis the King wil, be
-                  reseruit &amp; summonde to consalis &amp; to parliamentis be his special precep”
+                  “All bishops, abbots, priors, dukes, earls, lords of parliament and bannerets whom the King wishes shall be
+                  reserved, and summoned to councils and to parliaments by his special precept”
                 </Quote>
                 <figure className="mt-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1012,6 +996,9 @@ export default function ProperAddressPage() {
                       decoding="async"
                       className="mx-auto w-full max-w-xl border border-navy/10 shadow-[0_14px_34px_-16px_rgba(8,12,28,0.4)]"
                     />
+                  <figcaption className="mt-3 text-center font-serif text-base italic text-ink/80">
+                    The Act as printed, <em>Acts of the Parliaments of Scotland</em>, vol. II, p. 15
+                  </figcaption>
                 </figure>
                 <div className="mt-10 border-t border-parchment-300/70 pt-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">The Register of the Great Seal of Scotland</p>
@@ -1028,7 +1015,7 @@ export default function ProperAddressPage() {
                     />
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
-                    1591: Sir John Murray of Tullibardine, knight, in free lordship<Ref n={31} src={16} />
+                    1591: Sir John Murray of Tullibardine, knight, in free lordship<Ref n={30} src={15} />
                   </p>
                   <figure className="mt-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1043,7 +1030,7 @@ export default function ProperAddressPage() {
                     />
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
-                    1631: James Maxwell of Innerwick, in free lordship and barony<Ref n={32} src={17} />
+                    1631: James Maxwell of Innerwick, in free lordship and barony<Ref n={31} src={16} />
                   </p>
                   <figure className="mt-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1059,7 +1046,7 @@ export default function ProperAddressPage() {
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
                     1583: Andrew Keith, to be called lord and baron of Dingwall, who should have the honour of a lord of
-                    Parliament<Ref n={33} src={18} />
+                    Parliament<Ref n={32} src={17} />
                   </p>
                   <p className="mt-3 leading-relaxed text-ink-soft">
                     The first two hold a lordship by charter and nothing more. The third has to add the honour of Parliament
@@ -1108,18 +1095,18 @@ export default function ProperAddressPage() {
                   remains “Baron of Inverness”.
                 </P>
                 <P>
-                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”.<Ref n={34} src={21} />{" "}
+                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord of X” or “Baron of X”.<Ref n={33} src={20} />{" "}
                   Socially “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. The article is old
                   Scottish usage, not a claim to peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
-                  lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={35} src={11} /> Innes gives the same
+                  lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={34} src={10} /> Innes gives the same
                   article for lairds’ wives, “The Lady Drum” and “The Lady Invercauld”, and calls the title “not a
-                  ‘courtesy’ but a proper legal description”.<Ref n={36} src={12} /> The Passport Office gives the modern
+                  ‘courtesy’ but a proper legal description”.<Ref n={35} src={11} /> The Passport Office gives the modern
                   rule:
                 </P>
                 <Quote
                   credit={
                     <>
-                      HM Passport Office, <em>Titles</em><Ref n={37} src={13} />
+                      HM Passport Office, <em>Titles</em><Ref n={36} src={12} />
                     </>
                   }
                 >
@@ -1151,7 +1138,7 @@ export default function ProperAddressPage() {
                   it is the formal designation of a peer of the rank of baron, the form the Esslemont
                   Memorial of 1934 noted is “preferred for formal purposes by English and British lords”. The Scottish
                   form is “Baron of X”, although the Lyon Office has used “Baron X” socially in salutation, and Innes of
-                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={38} src={5} />
+                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={37} src={5} />
                 </P>
                 <figure className="mt-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1211,7 +1198,7 @@ export default function ProperAddressPage() {
                 <Quote
                   credit={
                     <>
-                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={39}>{RECORDS_SOURCE}</Footnote>
+                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={38}>{RECORDS_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1222,7 +1209,7 @@ export default function ProperAddressPage() {
                   credit={
                     <>
                       The editor of the <em>Annuaire de la Noblesse de la France</em>, quoted by Innes of Learney
-                      <Footnote n={40}>{ANNUAIRE_SOURCE}</Footnote>
+                      <Footnote n={39}>{ANNUAIRE_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1243,7 +1230,7 @@ export default function ProperAddressPage() {
                     <>
                       Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, as revised by Lord Lyon
                       Sir Thomas Innes of Learney, p. 410, on visiting cards
-                      <Footnote n={41}>{VISITING_CARD_SOURCE}</Footnote>
+                      <Footnote n={40}>{VISITING_CARD_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1263,7 +1250,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   This is because the title is not an office. It is a title of nobility and part of one’s name and
-                  identity;<Footnote n={42}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
+                  identity;<Footnote n={41}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
                 </P>
                 <P>
                   By following these guidelines, you can ensure that baronial titles are correctly represented and
