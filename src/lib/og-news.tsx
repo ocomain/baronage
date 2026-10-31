@@ -133,7 +133,7 @@ export async function renderNewsOgImage(post: NewsPost) {
  * Link-preview card for the News page and its category pages (owner 2026-10-26: "meta sharing image needs fixing"):
  * navy and gold, the heading large, and the latest notices with their portraits, so a shared link shows the news itself.
  */
-export async function renderNewsIndexOgImage(heading: string, eyebrow: string | null, posts: NewsPost[]) {
+export async function renderNewsIndexOgImage(heading: string, eyebrow: string | null, posts: NewsPost[], headingSize = 120) {
   const [serif, sans, seal] = await Promise.all([
     asset("assets", "CormorantGaramond-SemiBold.ttf"),
     asset("assets", "Quicksand-Medium.ttf"),
@@ -169,7 +169,7 @@ export async function renderNewsIndexOgImage(heading: string, eyebrow: string | 
             <div style={{ display: "flex", fontFamily: "Quicksand", fontSize: 22, letterSpacing: 5, textTransform: "uppercase", color: "#e6cf93" }}>
               {eyebrow ?? "Baronage of Scotland Association"}
             </div>
-            <div style={{ display: "flex", fontSize: 120, lineHeight: 1, color: "#faf6ec", marginTop: 16 }}>{heading}</div>
+            <div style={{ display: "flex", fontSize: headingSize, lineHeight: 1, color: "#faf6ec", marginTop: 16 }}>{heading}</div>
             {latest.length ? (
               <div style={{ display: "flex", flexDirection: "column", marginTop: 22 }}>
                 {latest.map((p) => (

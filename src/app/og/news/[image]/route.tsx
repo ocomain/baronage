@@ -17,5 +17,5 @@ export async function GET(_request: Request, { params }: { params: Promise<{ ima
   const post = newsPosts.find((p) => `${p.slug}.png` === image);
   if (post) return renderNewsOgImage(post);
   if (image !== "news.png") notFound();
-  return renderNewsOgImage({ slug: "news", category: "In Memoriam", published: "", title: "News", text: "" });
+  return renderNewsOgImage({ slug: "news", category: "In Memoriam", published: "", title: "Announcements", text: "" });
 }

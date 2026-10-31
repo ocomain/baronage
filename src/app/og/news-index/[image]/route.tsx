@@ -12,8 +12,9 @@ export function generateStaticParams() {
 
 export async function GET(_request: Request, { params }: { params: Promise<{ image: string }> }) {
   const { image } = await params;
-  if (image === "news.png") return renderNewsIndexOgImage("News", null, newsPosts);
+  // smaller: at the full size the word runs into the two portraits
+  if (image === "news.png") return renderNewsIndexOgImage("Announcements", null, newsPosts, 98);
   const c = NEWS_CATEGORIES.find((x) => `${x.slug}.png` === image);
   if (!c) notFound();
-  return renderNewsIndexOgImage(c.name, "News", newsPosts.filter((p) => p.category === c.name));
+  return renderNewsIndexOgImage(c.name, "Announcements", newsPosts.filter((p) => p.category === c.name));
 }

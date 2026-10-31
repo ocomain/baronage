@@ -80,7 +80,7 @@ export default async function NewsPostPage({ params }: Props) {
         <article className="max-w-[62ch]">
           <nav aria-label="Breadcrumb" className="font-sans text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-muted">
             <Link href="/news/" className="text-gold-deep underline decoration-gold/50 underline-offset-4 hover:text-oxblood">
-              News
+              Announcements
             </Link>
             <span aria-hidden> · </span>
             <Link href={`/news/${categorySlug(post.category)}/`} className="text-ink underline decoration-ink/30 underline-offset-4 hover:text-oxblood">
@@ -211,7 +211,7 @@ export default async function NewsPostPage({ params }: Props) {
           </p>
           <p className="mt-6">
             <Link href="/news/" className="font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-oxblood underline decoration-oxblood/40 underline-offset-4 hover:decoration-oxblood">
-              <span aria-hidden>←</span> All news
+              <span aria-hidden>←</span> All announcements
             </Link>
           </p>
         </article>

@@ -750,7 +750,6 @@ export default function ProperAddressPage() {
                     <S>Maid of Barony</S>
                     <Or />
                     <S>Miss Jane Smith, the Maid of Barony</S>
-                    <N>(some prefer Maiden)</N>
                   </F>
                 </Forms>
                 <P>If a baron holds a territorial designation, the TD typically takes precedence:</P>

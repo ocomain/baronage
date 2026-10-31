@@ -9,7 +9,7 @@ import { eventLine, excerpt, lifeLine, longDate, postPath, type NewsPost } from 
  */
 export function NewsList({ posts, showCategory = true }: { posts: NewsPost[]; showCategory?: boolean }) {
   if (!posts.length) {
-    return <p className="py-16 text-center font-serif text-xl italic text-ink-soft">There is no news here yet.</p>;
+    return <p className="py-16 text-center font-serif text-xl italic text-ink-soft">There are no announcements here yet.</p>;
   }
   // Every post an equal card, side by side (owner 2026-10-26: "make them smaller and display equally side by side
   // don't show black crop"): an upright photo frame, no lead story, no dark mount.
@@ -155,9 +155,9 @@ export function NewsCategoryTabs({ current, categories }: { current: string | nu
       active ? "border-navy bg-navy text-parchment-50" : "border-parchment-300 bg-parchment-50 text-navy hover:border-gold"
     }`;
   return (
-    <nav aria-label="News categories" className="mb-10 flex flex-wrap gap-2">
+    <nav aria-label="Announcement categories" className="mb-10 flex flex-wrap gap-2">
       <Link href="/news/" className={tab(current === null)} aria-current={current === null ? "page" : undefined}>
-        All news
+        All announcements
       </Link>
       {categories.map((c) => (
         <Link key={c.slug} href={`/news/${c.slug}/`} className={tab(current === c.slug)} aria-current={current === c.slug ? "page" : undefined}>
