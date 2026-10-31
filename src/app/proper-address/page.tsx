@@ -985,7 +985,7 @@ export default function ProperAddressPage() {
                       className="mx-auto w-full max-w-xl border border-navy/10 shadow-[0_14px_34px_-16px_rgba(8,12,28,0.4)]"
                     />
                 </figure>
-                <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
+                <div className="mt-10 border-t border-parchment-300/70 pt-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">The Register of the Great Seal of Scotland</p>
                   <figure className="mt-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1038,7 +1038,7 @@ export default function ProperAddressPage() {
                     in words.
                   </p>
                 </div>
-                <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
+                <div className="mb-10 mt-8 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">
                     William Borthwick, 1775 —{" "}
                     <a
