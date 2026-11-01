@@ -316,12 +316,11 @@ function Kil({ page }: { page: number }) {
 }
 const THE_BARON_SOURCE = (
   <>
-    The Privy Council, 1 August 1632, in a letter signed by nine councillors: “To our right traist freind the Baron of
-    Kilrawack”: {KILRAVOCK_BOOK}, <Kil page={318} />. So too the Earl of Argyll, Justice General, in 1561, “To our traist
-    freind the Barroune of Kilravok”, <Kil page={235} />, and the Earl of Mar, Lord High Treasurer, in 1629, “To my very
-    louing freind the Barron of Killrauok”, <Kil page={317} />. Innes of Learney gives the family’s writs as “Hutcheon Rose,
-    Baron of Kilravock”:{" "}
-    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">PSAS 79 (1945), p. 158</Src>. See{" "}
+    Innes of Learney on the Baron of Kilravock: addressed by the Earl of Huntly, Argyll and other great public men, “and
+    colloquially referred to as ‘the Baron’”. And “in the speech of the countryside”, the tomb of Alexander Innes of
+    Sinnahard, Baron of Towie, was still pointed out 200 years after his death “as that of ‘the Baron’”:{" "}
+    <Src href="http://journals.socantscot.org/index.php/psas/article/download/8229/8197/">PSAS 79 (1944–45), p. 158</Src> (
+    <Src href="http://journals.socantscot.org/index.php/psas/article/view/8229">article record</Src>). See{" "}
     <Link href="/reading-room/innes-of-learney-1945/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
       The Lord Lyon’s Case for the Baronage
     </Link>
