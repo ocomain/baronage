@@ -19,7 +19,7 @@ essential: true
 - **Never as “Baron of X”.** Westminster sat them as “John Cockburne, junior, of Ormstown, Esquire” and “William Blair, of Blair, Esq.”. In the Commons’ own records a “Baron” was a member for the Cinque Ports.
 - **The barons kept their estate’s franchise.** Until 1832 the county seats went to landowners holding of the Crown, a body that one contemporary said “may be termed indifferently Barons or Freeholders”. In 1788 the Scottish counties had 2,662 voters in all.
 - **A modern MP was a baron.** The Lord Lyon marked “Fairbairn of Fordell” a minor baron in 1970, and Sir Nicholas Fairbairn sat for Perth until 1995. Parliament’s own records give the title only as an “alternative name”.
-- **Barons sit in other chambers today.** How councils, Tynwald, the honours list and the Scottish Parliament name them is the subject of a companion paper, *How is a Scottish baron named in public life?*, to follow.
+- **Barons sit in other chambers today.** How councils, Tynwald, the honours list and the Scottish Parliament name them is the subject of a companion paper, [How is a Scottish baron named in public life?](/reading-room/how-a-scottish-baron-is-named-in-public-life/).
 - **Section 63 changed the ground.** A barony was “a name of dignity” in 1382. The Act of 2000 severed it from the land and kept it as a dignity in law, with “any quality or precedence associated with” it: no longer a title that passed with an estate, but a personal dignity, as a peerage is. The Birthday Honours of 2005 made “Robert Brown Gillespie, Baron of Blackhall” an OBE.
 - **A baron’s title is his own.** The Crown writes “commonly called” before a style that the law of the United Kingdom does not itself confer: a courtesy title, or a foreign one. A Scottish barony is a dignity kept by that law. Baronets, courtesy lords and now hereditary peers sit in the Commons under their titles; “John Smith, Baron of Y” is the form that follows.
 
@@ -78,7 +78,7 @@ The style never entered the Commons, but barons did not stop being elected. On 4
 
 Parliament’s records show the same two faces as in 1707. The House of Commons members’ database names him “Sir Nicholas Fairbairn”. The History of Parliament’s record carries “Baron of Fordell (Title)” with the note “Scottish title, not in the peerage”, and the Hansard index lists “Baron of Fordell” among his “Alternative names”.[^20] The title was recorded, and kept out of the name.
 
-The same two faces appear in other chambers and offices today, from Tynwald to a Norfolk borough council that wrote the title into its own record. Those cases, and the rule of the ballot paper that strips every title, are set out in a companion paper, *How is a Scottish baron named in public life?*, to follow.
+The same two faces appear in other chambers and offices today, from Tynwald to a Norfolk borough council that wrote the title into its own record. Those cases, and the rule of the ballot paper that strips every title, are set out in a companion paper, [How is a Scottish baron named in public life?](/reading-room/how-a-scottish-baron-is-named-in-public-life/).
 
 ## Section 63: the old dignity on a new footing
 
