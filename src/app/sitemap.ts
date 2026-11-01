@@ -84,5 +84,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...newsPosts.map((p) => ({ url: `${BASE}${postPath(p)}`, lastModified: new Date(p.published), changeFrequency: "yearly" as const, priority: 0.5 })),
   ];
 
-  return [...pages, ...papers, ...news];
+  // The Proper Address guide as a PDF, for Google (owner 2026-11-01).
+  const pdfs: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/proper-address/Proper-Address-for-Scottish-Barons-Forms-of-Address-and-Precedence.pdf`,
+      lastModified: lastChanged("public/proper-address"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+  ];
+
+  return [...pages, ...pdfs, ...papers, ...news];
 }

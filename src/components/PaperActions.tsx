@@ -35,6 +35,7 @@ export function PaperActions({
   path,
   thing = "paper",
   score,
+  pdf,
 }: {
   title: string;
   slug: string;
@@ -43,10 +44,12 @@ export function PaperActions({
   className?: string;
   /** Another page than a paper, e.g. "/quiz/" (owner 2026-10-28: the quiz uses the same system as the papers). */
   path?: string;
-  /** What is being sent, in the form's words: "paper" or "quiz". */
-  thing?: "paper" | "quiz";
+  /** What is being sent, in the form's words: "paper", "quiz" or "guide" (Proper Address). */
+  thing?: "paper" | "quiz" | "guide";
   /** The sender's quiz score, e.g. "4/5", printed in the email. */
   score?: string;
+  /** A PDF of the page, offered beside the print button. */
+  pdf?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
@@ -63,7 +66,9 @@ export function PaperActions({
   const mailto = `mailto:?subject=${encodeURIComponent(`${title} (Baronage of Scotland Association)`)}&body=${encodeURIComponent(
     thing === "quiz"
       ? `I thought you would like to try this week’s quiz from the Reading Room of the Baronage of Scotland Association:\n\n${title}\n${url}\n`
-      : `I thought you would like to read this paper from the Reading Room of the Baronage of Scotland Association:\n\n${title}\n${url}\n`,
+      : thing === "guide"
+        ? `I thought you would like to read this guide from the Baronage of Scotland Association:\n\n${title}\n${url}\n`
+        : `I thought you would like to read this paper from the Reading Room of the Baronage of Scotland Association:\n\n${title}\n${url}\n`,
   )}`;
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -135,7 +140,20 @@ export function PaperActions({
   return (
     <div className={`no-print ${className}`}>
       <div className="flex flex-wrap gap-3">
-        {showPrint && <PrintButton />}
+        {showPrint && <PrintButton label={thing === "guide" ? "Print this guide" : undefined} />}
+        {pdf && (
+          <a
+            href={pdf}
+            className="inline-flex min-h-[3rem] cursor-pointer items-center gap-3 border-2 border-navy bg-parchment-50 px-5 py-2.5 font-sans text-[1.05rem] font-semibold text-navy transition-colors hover:bg-parchment-200"
+          >
+            <svg aria-hidden viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3v12" />
+              <path d="m7 11 5 5 5-5" />
+              <path d="M4 20h16" />
+            </svg>
+            Download the PDF
+          </a>
+        )}
         <a
           href={mailto}
           role="button"
