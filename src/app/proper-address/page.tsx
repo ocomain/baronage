@@ -588,7 +588,7 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <Aside>
-                  Also correct: if the title is <Link href="/pledge" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">Pledged</Link> (a lifelong honour by descent rather than a temporary
+                  Also correct: if the title is <Link href="/pledge" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">Pledged</Link> (a lifelong honour rather than a temporary
                   office), the title can replace the surname for daily or professional use:{" "}
                   <strong className="font-bold">John, Baron of Inverness</strong> or{" "}
                   <strong className="font-bold">John Inverness</strong>. The holder may also retain their family name,
