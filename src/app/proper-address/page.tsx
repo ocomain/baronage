@@ -827,7 +827,7 @@ export default function ProperAddressPage() {
               <S>Dr The Lady Inverness</S>{" "}
               <S>(Jane Smith, 5th baroness)</S>
               <Or />
-              <S>Dr Lady Inverness</S>
+              <S>Dr Inverness</S>
             </F>
           </Forms>
           <P>
@@ -982,7 +982,7 @@ export default function ProperAddressPage() {
             <F>
               <S>The Rt Hon The Lord Inverness</S>
               <N>(if a Scottish Baron is also a Peer)</N>
-                <Footnote n={27}>{PEER_BARON_SOURCE}</Footnote>
+              <Footnote n={27}>{PEER_BARON_SOURCE}</Footnote>
             </F>
           </Forms>
           <P>If the Baron is also a knight:</P>
