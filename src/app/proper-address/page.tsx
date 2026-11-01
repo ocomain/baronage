@@ -392,6 +392,20 @@ const YOUR_HONOUR_SOURCE = (
     <Src href="https://archive.org/details/recordsofinverca00news/page/n377">pp. 342–343</Src>. See {MUCH_HONOURED_PAPER}.
   </>
 );
+/* Moved from the page into the pop-up (owner 2026-11-01), with the sources added. */
+const YOUR_HONOUR_USE_SOURCE = (
+  <>
+    Used to barons from the 1620s to the 1770s (“May it pleas your Honour”, the tenants of Glenshee to the Laird of
+    Invercauld, 1776, <em>The Records of Invercauld</em>,{" "}
+    <Src href="https://archive.org/details/recordsofinverca00news/page/n377">pp. 342–343</Src>) and recorded in{" "}
+    <em>Titles and Forms of Address</em> (1955): “The prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured;
+    in address, Your Honour” — <Src href="https://archive.org/details/titlesandformsof017862mbp">archive.org</Src>. See{" "}
+    <Link href="/reading-room/where-the-much-honoured-comes-from/#your-honour" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      Where “The Much Honoured” comes from
+    </Link>
+    .
+  </>
+);
 const FORMAL_LETTER_SOURCE = (
   <>
     Opening: the Marquis of Huntly to the Laird of Grant, 22 December 1677, “Much honored Sir”, <em>The Chiefs of
@@ -482,19 +496,10 @@ export default function ProperAddressPage() {
                 </P>
                 <P>
                   “<S>Your Honour</S>” is the old formal address of a baron, the spoken counterpart of the written
-                  prefix “The Much Honoured”.
+                  prefix “The Much Honoured”.<Footnote n={4}>{YOUR_HONOUR_USE_SOURCE}</Footnote>
                 </P>
                 <p className="mt-4 font-serif text-base leading-relaxed text-ink">
-                  Used to barons from the 1620s to the 1770s (“May it pleas your Honour”, the tenants of Glenshee to
-                  the Laird of Invercauld, 1776) and recorded in <em>Titles and Forms of Address</em> (1955): “The
-                  prefix of Chiefs and Laird-Barons was, in writing, The Much Honoured; in address, Your Honour”. See{" "}
-                  <Link
-                    href="/reading-room/where-the-much-honoured-comes-from/#your-honour"
-                    className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood"
-                  >
-                    Where “The Much Honoured” comes from
-                  </Link>
-                  . A baron’s forms run parallel to a duke’s, each at its own level:
+                  A baron’s forms run parallel to a duke’s, each at its own level:
                 </p>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full border-collapse font-serif text-lg leading-snug text-ink">
@@ -524,12 +529,12 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Speaking to him deferentially</td>
                         <td>Your Grace</td>
-                        <td><S>Your Honour</S><Footnote n={4}>{YOUR_HONOUR_SOURCE}</Footnote></td>
+                        <td><S>Your Honour</S><Footnote n={5}>{YOUR_HONOUR_SOURCE}</Footnote></td>
                       </tr>
                       <tr>
                         <td>Formal letter</td>
                         <td>opens “My Lord Duke”, closes “Your Grace’s most obedient servant”</td>
-                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S><Footnote n={5}>{FORMAL_LETTER_SOURCE}</Footnote></td>
+                        <td><S>opens “Much Honoured Sir”, closes “Your Honour’s humble servant”</S><Footnote n={6}>{FORMAL_LETTER_SOURCE}</Footnote></td>
                       </tr>
                       <tr>
                         <td>Social letter</td>
@@ -539,7 +544,7 @@ export default function ProperAddressPage() {
                       <tr>
                         <td>Envelope</td>
                         <td>His Grace the Duke of Middlesex</td>
-                        <td><S>The Much Honoured, the Baron of Inverness</S><Footnote n={6}>{ENVELOPE_SOURCE}</Footnote></td>
+                        <td><S>The Much Honoured, the Baron of Inverness</S><Footnote n={7}>{ENVELOPE_SOURCE}</Footnote></td>
                       </tr>
                     </tbody>
                   </table>
@@ -550,7 +555,7 @@ export default function ProperAddressPage() {
                 <div hidden>{ENVELOPE_SOURCE}</div>
                 <div hidden>
                   {TITLE_ALONE_SOURCE} {ESQUIRE_SOURCE} {MADAM_SOURCE} {VISITING_CARD_SOURCE} {IDENTITY_SOURCE} {LADY_TITLE_SOURCE} {DEAR_SOURCE}{" "}
-                  {WIDOW_SOURCE} {RECORDS_SOURCE} {ANNUAIRE_SOURCE} {POSTNOMINAL_SOURCE} {TWO_STYLES_SOURCE} {BACHUIL_SOURCE} {MILITARY_SOURCE}
+                  {WIDOW_SOURCE} {RECORDS_SOURCE} {ANNUAIRE_SOURCE} {POSTNOMINAL_SOURCE} {TWO_STYLES_SOURCE} {BACHUIL_SOURCE} {MILITARY_SOURCE} {YOUR_HONOUR_USE_SOURCE}
                 </div>
               </Sec>
             </Reveal>
@@ -571,7 +576,7 @@ export default function ProperAddressPage() {
                   John Smith of Glenmore, Much Hon. the Baron of Inverness
                 </FormLine>
                 <P>
-                  Some barons with a territorial designation choose not to use their baron title.<Footnote n={7}>{TWO_STYLES_SOURCE}</Footnote> However, most barons
+                  Some barons with a territorial designation choose not to use their baron title.<Footnote n={8}>{TWO_STYLES_SOURCE}</Footnote> However, most barons
                   do not hold a territorial designation and <em>just the title</em> is normally the <em>preferred</em>{" "}
                   format, for example (brackets are optional):
                 </P>
@@ -606,7 +611,7 @@ export default function ProperAddressPage() {
                   <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic leading-relaxed text-ink">
                     Bachuil chaired a Titles and Usages Committee, which produced the paper “The Use and Abuse of
                     Titles”, and presented the views of the Convention of the Baronage of Scotland to the Court of the
-                    Lord Lyon and the Scottish Parliament.<Footnote n={8}>{BACHUIL_SOURCE}</Footnote>
+                    Lord Lyon and the Scottish Parliament.<Footnote n={9}>{BACHUIL_SOURCE}</Footnote>
                   </p>
                 </div>
                 <P>
@@ -618,10 +623,10 @@ export default function ProperAddressPage() {
                   >
                     Gazette notices
                   </Link>{" "}
-                  do: “[Surname] of Kildonan, Baron of Inverness”.<Footnote n={9}>{TD_GAZETTE_SOURCE}</Footnote> They may also be joined socially:
+                  do: “[Surname] of Kildonan, Baron of Inverness”.<Footnote n={10}>{TD_GAZETTE_SOURCE}</Footnote> They may also be joined socially:
                   Lord Lyon Innes of Learney, writing in 1945, called the petitioner in the Esslemont case, Gordon of
                   Hallhead, “The Baron of Hallhead-Esslemont”, though the Lyon Register records him as “Baron of
-                  Esslemont”.<Footnote n={10}>{TD_ESSLEMONT_SOURCE}</Footnote> The recorded title stays “Baron of [Barony]”; the wife takes the designation, as a laird’s
+                  Esslemont”.<Footnote n={11}>{TD_ESSLEMONT_SOURCE}</Footnote> The recorded title stays “Baron of [Barony]”; the wife takes the designation, as a laird’s
                   wife always has.
                 </P>
                 <Forms>
@@ -651,9 +656,9 @@ export default function ProperAddressPage() {
                   held legally by the baron (or baroness in her own right). It does not create a separate legal title for
                   a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
                   She shares his rank and assumes the feminine form of his title by legal description
-                  <Footnote n={11}>{LADY_TITLE_SOURCE}</Footnote> but does not hold it in her own right. Upon marriage, she takes his style; if widowed or divorced, her use of the title follows
+                  <Footnote n={12}>{LADY_TITLE_SOURCE}</Footnote> but does not hold it in her own right. Upon marriage, she takes his style; if widowed or divorced, her use of the title follows
                   convention, not entitlement. As titles of nobility are considered part of a person’s name and
-                  identity, her title is reflected in a British passport as her legal name.<Footnote n={12}>{IDENTITY_SOURCE}</Footnote>
+                  identity, her title is reflected in a British passport as her legal name.<Footnote n={13}>{IDENTITY_SOURCE}</Footnote>
                 </P>
                 <P>
                   A baron’s wife or a baroness in her own right may use <S>Lady</S> <em>or</em> <S>Baroness of</S>:
@@ -681,11 +686,11 @@ export default function ProperAddressPage() {
                   >
                     laird
                   </Link>{" "}
-                  in her own right.<Footnote n={13}>{LADY_SOURCE}</Footnote>
+                  in her own right.<Footnote n={14}>{LADY_SOURCE}</Footnote>
                 </P>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
-                  In cases where the Baron is entitled to post-nominal letters, these follow the title<Footnote n={14}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
+                  In cases where the Baron is entitled to post-nominal letters, these follow the title<Footnote n={15}>{POSTNOMINAL_SOURCE}</Footnote>, such as:
                 </P>
                 <Forms>
                   <F>
@@ -702,7 +707,7 @@ export default function ProperAddressPage() {
                   {/* owner 2026-10-25: the main style, first */}
                   <F>
                     <S>Prof The Much Hon John Smith, Baron of Inverness</S>
-                    <Footnote n={15}>{PROFESSOR_SOURCE}</Footnote>
+                    <Footnote n={16}>{PROFESSOR_SOURCE}</Footnote>
                     <Or />
                     <S>Prof the Baron of Inverness</S>
                     <Or />
@@ -749,7 +754,7 @@ export default function ProperAddressPage() {
                     "a bit smaller and perhaps aligned to the right of the text", then "better underneath and slightly bigger so can read it", then "1/3 smaller" (512px to 344px); the letter speaking for itself; cropped to its text ("you don't need all that white space") */}
                 <P>
                   Alternatively, only the barony or TD can be used: <S>Dear Inverness</S>
-                  <Footnote n={16}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
+                  <Footnote n={17}>{DEAR_SOURCE}</Footnote>, but this format is never for a lady.
                 </P>
                 {/* own paragraph, "in previous years" cut (owner 2026-10-30) */}
                 <P>
@@ -813,7 +818,7 @@ export default function ProperAddressPage() {
                     “Younger of Barony”
                   </Link>
                   , as a Scottish peer’s heir is “Master of”. “The” may go before either,
-                  and keeps “younger” from being read as a surname.<Footnote n={17}>{HEIR_SOURCE}</Footnote>
+                  and keeps “younger” from being read as a surname.<Footnote n={18}>{HEIR_SOURCE}</Footnote>
                 </P>
                 <div hidden>{HEIR_SOURCE}</div>
                 <div hidden>{MAID_SOURCE}</div>
@@ -832,7 +837,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   Where there is no son and a daughter is the heir, some families style her “Maid of Barony”
-                  <Footnote n={18}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
+                  <Footnote n={19}>{MAID_SOURCE}</Footnote>, a usage best kept where the family already has it:
                 </P>
                 <Forms>
                   <F>
@@ -877,7 +882,7 @@ export default function ProperAddressPage() {
                     <S>Sir John Smith, Baron of Inverness</S>
                   </F>
                 </Forms>
-                <P>Military ranks go before the title<Footnote n={19}>{MILITARY_SOURCE}</Footnote>, or, for maximum formality:</P>
+                <P>Military ranks go before the title<Footnote n={20}>{MILITARY_SOURCE}</Footnote>, or, for maximum formality:</P>
                 <Forms>
                   <F>
                     <S>Major (The Baron of) Inverness</S>
@@ -925,7 +930,7 @@ export default function ProperAddressPage() {
                   The following section applies only to Pledged titles, as the title of honour always remains
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
-                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={20}>{WIDOW_SOURCE}</Footnote> unless the new Baron,
+                  the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={21}>{WIDOW_SOURCE}</Footnote> unless the new Baron,
                   who must be related to her, is married. She may then choose to be styled:
                 </P>
                 <Forms>
@@ -948,16 +953,16 @@ export default function ProperAddressPage() {
               <Sec id="higher" title="Higher Dignities: Lord and Earl in the Baronage of Scotland">
                 <p className="mt-6 font-serif text-xl font-bold italic leading-[1.8] text-navy">
                   A baron, a lord and an earl in the Baronage of Scotland are all barons of the Kingdom of Scotland,
-                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”.<Ref n={21} src={1} />
+                  the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”.<Ref n={22} src={1} />
                 </p>
                 <P>
-                  About 98% of titles<Ref n={22} src={16} /> in the Baronage of Scotland are Baron of; the rest are the rarer
+                  About 98% of titles<Ref n={23} src={16} /> in the Baronage of Scotland are Baron of; the rest are the rarer
                   and nobler titles of lord and earl.{" "}
                   <strong className="font-bold">
                     Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
                   </strong>{" "}
                   The Baron of Balvaird, of our Governing Council, is one: he holds a lordship and barony and does not use
-                  the title lord.<Ref n={23} src={17} />{" "}
+                  the title lord.<Ref n={24} src={17} />{" "}
                   “Baron of” helps to distinguish a baron from a peer, though many Irish peers are also “Baron of”. For
                   an earl, which could be confused with the peerage, the prefix The Much Hon. (The Much Honoured) goes
                   before the name.
@@ -970,11 +975,11 @@ export default function ProperAddressPage() {
                   </Link>{" "}
                   in the form the Lyon Court has used for that holder, and typically only the senior rank is referenced.
                   Where a Lord Lyon has recognised a holder of the earldom in an earl’s style, at present Crawfurd-Lindsay,
-                  Rothes and Breadalbane under Lord Lyon Blair in 2006–07,<Ref n={24} src={6} /> the style continues to the
+                  Rothes and Breadalbane under Lord Lyon Blair in 2006–07,<Ref n={25} src={6} /> the style continues to the
                   successor; otherwise the holder is styled Baron of the Earldom, the form the Lyon Court used for Annandale
-                  in 1983<Ref n={25} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={26} src={9} /> Some
+                  in 1983<Ref n={26} src={8} /> and the ceiling Lord Lyon Sellar set in 2010.<Ref n={27} src={9} /> Some
                   earldoms were erected by the Crown as an earldom, lordship and barony in one unit; others sit on a barony
-                  of another name.<Ref n={27} src={7} />
+                  of another name.<Ref n={28} src={7} />
                 </P>
                 <P>Earldom example:</P>
                 <Forms>
@@ -995,14 +1000,14 @@ export default function ProperAddressPage() {
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
                   Note that for Lords in the Baronage of Scotland, a baron is a lord and a lord is a baron: “Lord of X”
-                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={28} src={1} />{" "}
+                  and “Baron of X” are interchangeable, as the holder prefers, and both are correct.<Ref n={29} src={1} />{" "}
                   <strong className="font-bold">A Scots baron who is not a lord is only ever called a baron.</strong>{" "}
-                  “Lord Baron of X” is an ancient combined formality.<Ref n={29} src={2} /> Feudal
+                  “Lord Baron of X” is an ancient combined formality.<Ref n={30} src={2} /> Feudal
                   lords were written both “Lord X” and “Lord of X”, in the most formal documents,
                   including Crown charters, as Borthwick’s examples below show: William Lord Graham in 1416 and William
-                  Lord of Graham in 1420, before the Lord of Parliament honour of 1445.<Ref n={30} src={3} /> The medieval
+                  Lord of Graham in 1420, before the Lord of Parliament honour of 1445.<Ref n={31} src={3} /> The medieval
                   sheriff-court rolls entered an earl as “Enters A, Earl of B”, a lord as “Enters A, Lord of B” and a baron as
-                  “Enters A, Baron of B”.<Ref n={31} src={4} />
+                  “Enters A, Baron of B”.<Ref n={32} src={4} />
                 </P>
                 <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">
@@ -1048,8 +1053,8 @@ export default function ProperAddressPage() {
                 <P>
                   The peerage rank was called “Lord of Parliament”, not simply “Lord”, because
                   lords held territorially in the Baronage of Scotland, by charter in free lordship, or as lord barons by
-                  charter in lordship and barony.<Ref n={32} src={13} /> Lord of Parliament was at first an additional honour
-                  added to such a lordship, and only later given by personal patent alone.<Ref n={33} src={19} />
+                  charter in lordship and barony.<Ref n={33} src={13} /> Lord of Parliament was at first an additional honour
+                  added to such a lordship, and only later given by personal patent alone.<Ref n={34} src={19} />
                 </P>
                 <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">The Register of the Great Seal of Scotland</p>
@@ -1066,7 +1071,7 @@ export default function ProperAddressPage() {
                     />
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
-                    1591: Sir John Murray of Tullibardine, knight, in free lordship<Ref n={34} src={14} />
+                    1591: Sir John Murray of Tullibardine, knight, in free lordship<Ref n={35} src={14} />
                   </p>
                   <figure className="mt-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1082,7 +1087,7 @@ export default function ProperAddressPage() {
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
                     1583: Andrew Keith, in free lordship and barony, to be called lord and baron of Dingwall, who should
-                    have the honour of a lord of Parliament<Ref n={35} src={15} />
+                    have the honour of a lord of Parliament<Ref n={36} src={15} />
                   </p>
                   <p className="mt-3 leading-relaxed text-ink-soft">
                     The first holds a lordship by charter and nothing more. The second has to add the honour of Parliament in
@@ -1090,18 +1095,18 @@ export default function ProperAddressPage() {
                   </p>
                 </div>
                 <P>
-                  Formally, for a lordship, as the Lyon Court has recorded it, the style is “Baron of X” and “Lord thereof”.<Ref n={36} src={18} />{" "}
+                  Formally, for a lordship, as the Lyon Court has recorded it, the style is “Baron of X” and “Lord thereof”.<Ref n={37} src={18} />{" "}
                   “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. The word “The” is old
                   Scottish usage, not a claim to peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
-                  lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={37} src={10} /> Innes gives the same
+                  lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={38} src={10} /> Innes gives the same
                   “The” for wives, “The Lady Drum” and “The Lady Invercauld”, and calls the wives’ title “not a
-                  ‘courtesy’ but a proper legal description”.<Ref n={38} src={11} /> The Passport Office gives the modern
+                  ‘courtesy’ but a proper legal description”.<Ref n={39} src={11} /> The Passport Office gives the modern
                   rule:
                 </P>
                 <Quote
                   credit={
                     <>
-                      HM Passport Office, <em>Titles</em><Ref n={39} src={12} />
+                      HM Passport Office, <em>Titles</em><Ref n={40} src={12} />
                     </>
                   }
                 >
@@ -1133,7 +1138,7 @@ export default function ProperAddressPage() {
                   it is the formal designation of a peer of the rank of baron, the form the Esslemont
                   Memorial of 1934 noted is “preferred for formal purposes by English and British lords”. The Scottish
                   form is “Baron of X”, although the Lyon Office has used “Baron X” socially in salutation, and Innes of
-                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={40} src={5} />
+                  Learney notes “Baron McCorquodale” as a non-peerage description in 1427.<Ref n={41} src={5} />
                 </P>
                 <figure className="mt-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1193,7 +1198,7 @@ export default function ProperAddressPage() {
                 <Quote
                   credit={
                     <>
-                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={41}>{RECORDS_SOURCE}</Footnote>
+                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={42}>{RECORDS_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1204,7 +1209,7 @@ export default function ProperAddressPage() {
                   credit={
                     <>
                       The editor of the <em>Annuaire de la Noblesse de la France</em>, quoted by Innes of Learney
-                      <Footnote n={42}>{ANNUAIRE_SOURCE}</Footnote>
+                      <Footnote n={43}>{ANNUAIRE_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1236,7 +1241,7 @@ export default function ProperAddressPage() {
                     <>
                       Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, as revised by Lord Lyon
                       Sir Thomas Innes of Learney, p. 410, on visiting cards
-                      <Footnote n={43}>{VISITING_CARD_SOURCE}</Footnote>
+                      <Footnote n={44}>{VISITING_CARD_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1244,7 +1249,7 @@ export default function ProperAddressPage() {
                 </Quote>
                 <P>
                   This is because the title is not an office. It is a title of nobility and part of one’s name and
-                  identity;<Footnote n={44}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
+                  identity;<Footnote n={45}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
                 </P>
               </Sec>
             </Reveal>
