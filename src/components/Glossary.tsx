@@ -48,8 +48,8 @@ const ALIASES: Record<string, string[]> = {
   "Hoch-adel": ["hoch-adel", "hoch adel", "hochadel"],
 };
 
-/** Entries short enough to show in a tooltip. */
-const TIP_MAX = 400;
+/** Entries short enough to show in a tooltip (450 so that "Territorial designation (TD)", at 445, shows: owner 2026-11-01). */
+const TIP_MAX = 450;
 
 const byTerm = new Map(glossary.map((g) => [g.term, g]));
 const termOf = new Map<string, string>();
@@ -67,13 +67,13 @@ const PATTERN = new RegExp(
   "gi",
 );
 
-/** A word of the glossary, linked to its entry; short entries show as a tooltip on a computer. */
-export function GlossaryTerm({ term, children }: { term: string; children: ReactNode }) {
+/** A word of the glossary, linked to its entry; short entries show as a tooltip on a computer. `away`: on any page but the Explained page. */
+export function GlossaryTerm({ term, away, children }: { term: string; away?: boolean; children: ReactNode }) {
   const g = byTerm.get(term);
   if (!g) return <>{children}</>;
   const tip = g.def.length <= TIP_MAX ? `${g.term}: ${g.def}` : undefined;
   return (
-    <a href={`#term-${slugify(g.term)}`} className="gloss" data-tip={tip}>
+    <a href={`${away ? "/scottish-baronies-explained/" : ""}#term-${slugify(g.term)}`} className="gloss" data-tip={tip}>
       {children}
     </a>
   );
