@@ -682,7 +682,7 @@ export default function ProperAddressPage() {
           <P>
             When writing to a Scottish Baron who holds a{" "}
             <GlossaryTerm term="Territorial designation (TD)" away>territorial designation</GlossaryTerm> (TD), the
-            correct format for the envelope or any formal correspondence is (brackets are optional):
+            correct format for the envelope or any formal correspondence is <em>(brackets are optional)</em>:
           </P>
           {/* second form added (owner 2026-10-31) */}
           <FormLine>
