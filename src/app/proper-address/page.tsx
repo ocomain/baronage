@@ -598,18 +598,18 @@ function Sec({ id, title, children }: { id: string; title: string; children: Rea
 export default function ProperAddressPage() {
   const guide = (
     <div className="space-y-14">
+      {/* owner 2026-11-01: Innes's line on "Mr", at the head of the guide */}
+      <Quote
+        credit={
+          <>
+            Sir Thomas Innes of Learney, Lord Lyon<Footnote n={1}>{TITLE_ALONE_SOURCE}</Footnote>
+          </>
+        }
+      >
+        “It is rude, not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”
+      </Quote>
       <Reveal>
         <Sec id="verbal" title="Address">
-          {/* owner 2026-11-01: Innes's line on "Mr", at the head of the guide */}
-          <Quote
-            credit={
-              <>
-                Sir Thomas Innes of Learney, Lord Lyon<Footnote n={1}>{TITLE_ALONE_SOURCE}</Footnote>
-              </>
-            }
-          >
-            “It is rude, not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”
-          </Quote>
           <P>A Scottish Baron is referred to as “<S>The Baron</S>”<Footnote n={2}>{THE_BARON_SOURCE}</Footnote> / “<S>The Baroness</S>”</P>
           <Forms>
             <F>
