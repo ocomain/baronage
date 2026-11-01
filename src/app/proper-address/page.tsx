@@ -394,7 +394,7 @@ const WIFE_OR_BARONESS_SOURCE = (
     The same division in the peerage: a baron’s wife is entered as “The Lady [title]” and a peeress in her own right as “The
     Baroness [title]”:{" "}
     <Src href="https://www.gov.uk/government/publications/titles-included-in-passports/titles-accessible">HM Passport Office, Titles</Src>,
-    guidance for passport staff. Both for one holder: “The Much Honoured Lady Rockhall-Lag (Margaret Hamilton of Rockhall, Baroness of Lag)”,{" "}
+    guidance for passport staff. The Roll gives one style, with the other in brackets: “The Much Honoured Lady Rockhall-Lag (Margaret Hamilton of Rockhall, Baroness of Lag)”,{" "}
     <Src href="https://roll.baronage.com/baron/margaret-hamilton-of-rockhall">the Roll</Src>, the Lyon Court’s recognition
     being in the form “Baroness of Lag”. “‘Lady Craigcaffie’ is a style still used, e.g. Lyon Court record narrative”:{" "}
     <Adam page="411" n={442} />. For the two forms in a deed see{" "}
@@ -768,8 +768,7 @@ export default function ProperAddressPage() {
           <P>
             A baron’s wife typically uses <S>Lady</S>, and a baroness in her own right <S>Baroness of</S>.
             <br />
-            <S>Baroness</S> is the rank, <S>Lady</S> the social form; either may be used<Footnote n={15}>{WIFE_OR_BARONESS_SOURCE}</Footnote>,
-            but never “Lady Jane Smith, Baroness of Inverness”:
+            <S>Baroness</S> is the rank, <S>Lady</S> the social form; either, never together<Footnote n={15}>{WIFE_OR_BARONESS_SOURCE}</Footnote>:
           </P>
           <Forms>
             <F>
