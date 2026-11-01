@@ -982,7 +982,7 @@ export default function ProperAddressPage() {
                   within the family. However, if a non-Pledged title is disponed to another family, the honour ceases
                   for all connected family members, meaning there can be no dowager or continued courtesy titles. Upon
                   the death of a Scottish Baron, the widow retains the style of “Lady [Barony]”<Footnote n={22}>{WIDOW_SOURCE}</Footnote> unless the new Baron,
-                  who must be related to her, is married.<Footnote n={23}>{DOWAGER_SOURCE}</Footnote> She may then choose to be styled:
+                  who must be her son or grandson, is married.<Footnote n={23}>{DOWAGER_SOURCE}</Footnote> She may then choose to be styled:
                 </P>
                 <Forms>
                   <F>
