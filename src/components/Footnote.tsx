@@ -53,14 +53,14 @@ export function Footnote({
           {label}
         </button>
       ) : (
-      <sup className="text-[0.62em] leading-none">
+      <sup className="ref-sup">
         <button
           type="button"
           onClick={() => setOpen(true)}
           aria-haspopup="dialog"
           aria-expanded={open}
           aria-label={`Show footnote ${n}`}
-          className="cursor-pointer border-0 bg-transparent p-0 font-sans font-semibold text-gold-deep underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors hover:text-oxblood"
+          className="ref-chip"
         >
           {n}
         </button>
