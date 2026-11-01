@@ -1008,7 +1008,7 @@ export default function ProperAddressPage() {
                   remains “Baron of Inverness”.
                 </P>
                 <P>
-                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Lord thereof” or “Baron of X”.<Ref n={28} src={19} />{" "}
+                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Baron of X and Lord thereof”.<Ref n={28} src={19} />{" "}
                   Socially “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. The article is old
                   Scottish usage, not a claim to peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
                   lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={29} src={10} /> Innes gives the same
