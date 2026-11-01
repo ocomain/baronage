@@ -835,8 +835,7 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <P>
-                  Official recognition from the Crown as Doctor or Professor is not recognition of baron rank, as both rank
-                  under a baron. The Stair Memorial Encyclopaedia in its volume of 1995 has a paragraph headed “The baronage”.
+                  A style of Doctor or Professor is no recognition of baron rank, as both rank under a baron. The Stair Memorial Encyclopaedia in its volume of 1995 has a paragraph headed “The baronage”.
                   The baronage, it says, has a precedency established by Act of Parliament. Barons rank before esquires, and
                   before doctors of divinity, law and physic.<Footnote n={20}>{STAIR_DOCTORS_SOURCE}</Footnote>
                 </P>
