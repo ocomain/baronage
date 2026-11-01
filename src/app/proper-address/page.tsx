@@ -359,7 +359,7 @@ const IDENTITY_SOURCE = (
 );
 const TWO_STYLES_SOURCE = (
   <>
-    A baron can have both a title and a name with its territorial designation, and the records move freely between them: Mary
+    A baron could have both a title and a name with its territorial designation, and the records move freely between them: Mary
     Queen of Scots wrote to “the barroun of Kylrawak” in 1562, and a writ in her name of 1567 called him “Hucheoun Ros of
     Kilrawak”. See{" "}
     <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
@@ -1147,7 +1147,7 @@ export default function ProperAddressPage() {
                 </div>
                 <P>
                   Formally, for a lordship, the Lyon Court has recorded it as “Baron of X” and “Lord thereof”.<Ref n={42} src={18} />{" "}
-                  “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. This style is old
+                  “The Lord X” is also used as a style, just as “The Baroness of X” may be “The Lady X”. This style is old
                   Scottish usage, not a claim to peerage.<Ref n={43} src={20} /> Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
                   lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={44} src={10} /> Innes gives the same
                   “The” for wives, “The Lady Drum” and “The Lady Invercauld”, and calls the wives’ title “not a
