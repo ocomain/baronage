@@ -52,8 +52,8 @@ const STEPS: { part: number; slug: string; lesson: string }[] = [
   // Part IV. In public life ("and in law" dropped once the deed paper moved to Part VI: papers chat, 23 Oct)
   {
     part: 4,
-    slug: "barons-in-the-house-of-commons",
-    lesson: "How the title fares in Parliament, councils and the honours list.",
+    slug: "how-a-scottish-baron-is-named-in-public-life",
+    lesson: "By title, by name, or by designation: how councils, parliaments and the ballot paper name a baron.",
   },
   // Part V. The Roll
   {
