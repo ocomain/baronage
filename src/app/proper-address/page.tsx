@@ -768,7 +768,8 @@ export default function ProperAddressPage() {
           <P>
             A baron’s wife typically uses <S>Lady</S>, and a baroness in her own right <S>Baroness of</S>.
             <br />
-            <S>Baroness</S> is the rank, <S>Lady</S> the social form; either may be used<Footnote n={15}>{WIFE_OR_BARONESS_SOURCE}</Footnote>:
+            <S>Baroness</S> is the rank, <S>Lady</S> the social form; either may be used<Footnote n={15}>{WIFE_OR_BARONESS_SOURCE}</Footnote>,
+            but never “Lady Jane Smith, Baroness of Inverness”:
           </P>
           <Forms>
             <F>
