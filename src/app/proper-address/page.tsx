@@ -613,20 +613,20 @@ export default function ProperAddressPage() {
               In person: <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
             </F>
           </Forms>
-          <P>
-            “Mr / Mrs Smith” or “Esq.” is certainly incorrect.<Footnote n={3}>{ESQUIRE_SOURCE}</Footnote> Some wives of Highland clan chief-barons prefer{" "}
-            <S>Madam</S>.<Footnote n={4}>{MADAM_SOURCE}</Footnote>
-          </P>
-          {/* owner 2026-11-01: Innes's line on "Mr", between Madam and Your Honour */}
+          {/* owner 2026-11-01: Innes's line on "Mr", above Mr / Mrs Smith */}
           <Quote
             credit={
               <>
-                Sir Thomas Innes of Learney, Lord Lyon<Footnote n={5}>{TITLE_ALONE_SOURCE}</Footnote>
+                Sir Thomas Innes of Learney, Lord Lyon<Footnote n={3}>{TITLE_ALONE_SOURCE}</Footnote>
               </>
             }
           >
             “It is rude, not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”
           </Quote>
+          <P>
+            “Mr / Mrs Smith” or “Esq.” is certainly incorrect.<Footnote n={4}>{ESQUIRE_SOURCE}</Footnote> Some wives of Highland clan chief-barons prefer{" "}
+            <S>Madam</S>.<Footnote n={5}>{MADAM_SOURCE}</Footnote>
+          </P>
           <P>
             “<S>Your Honour</S>” is the old formal address of a baron, the spoken counterpart of the written
             prefix “The Much Honoured”.<Footnote n={6}>{YOUR_HONOUR_USE_SOURCE}</Footnote>
