@@ -1049,7 +1049,7 @@ export default function ProperAddressPage() {
                   Socially “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. The article is old
                   Scottish usage, not a claim to peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
                   lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={32} src={10} /> Innes gives the same
-                  article for lairds’ wives, “The Lady Drum” and “The Lady Invercauld”, and calls the title “not a
+                  article for wives, “The Lady Drum” and “The Lady Invercauld”, and calls the title “not a
                   ‘courtesy’ but a proper legal description”.<Ref n={33} src={11} /> The Passport Office gives the modern
                   rule:
                 </P>
