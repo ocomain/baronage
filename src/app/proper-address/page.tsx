@@ -308,7 +308,7 @@ const IDENTITY_SOURCE = (
 );
 const TWO_STYLES_SOURCE = (
   <>
-    A baron has both a title and a name with its territorial designation, and the records move freely between them: Mary
+    A baron can have both a title and a name with its territorial designation, and the records move freely between them: Mary
     Queen of Scots wrote to “the barroun of Kylrawak” in 1562, and a writ in her name of 1567 called him “Hucheoun Ros of
     Kilrawak”. See{" "}
     <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
@@ -588,8 +588,7 @@ export default function ProperAddressPage() {
                   </F>
                 </Forms>
                 <Aside>
-                  Also correct: if the title is <Link href="/pledge" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">Pledged</Link> (a lifelong honour rather than a temporary
-                  office), the title can replace the surname for daily or professional use:{" "}
+                  Also correct: if the title is <Link href="/pledge" className="underline decoration-gold/60 underline-offset-2 transition-colors hover:text-oxblood">Pledged</Link> (a lifelong honour), the title can replace the surname for daily or professional use:{" "}
                   <strong className="font-bold">John, Baron of Inverness</strong> or{" "}
                   <strong className="font-bold">John Inverness</strong>. The holder may also retain their family name,
                   with or without TD, though it is not typically used in daily life.
