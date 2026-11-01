@@ -719,8 +719,9 @@ export default function ProperAddressPage() {
                   identity, her title is reflected in a British passport as her legal name.<Footnote n={13}>{IDENTITY_SOURCE}</Footnote>
                 </P>
                 <P>
-                  A baron’s wife typically uses <S>Lady</S>, and a baroness in her own right <S>Baroness of</S>. <S>Baroness</S> is the rank,{" "}
-                  <S>Lady</S> the social form; either may be used<Footnote n={14}>{WIFE_OR_BARONESS_SOURCE}</Footnote>:
+                  A baron’s wife typically uses <S>Lady</S>, and a baroness in her own right <S>Baroness of</S>.
+                  <br />
+                  <S>Baroness</S> is the rank, <S>Lady</S> the social form; either may be used<Footnote n={14}>{WIFE_OR_BARONESS_SOURCE}</Footnote>:
                 </P>
                 <Forms>
                   <F>
