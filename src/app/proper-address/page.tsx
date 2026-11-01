@@ -212,22 +212,19 @@ const HIGHER_SOURCES: ReactNode[] = [
     guidance for passport staff.
   </>,
   <>
-    “Lord” was already “the lord or proprietor of a lordship”; a lord of Parliament was “an important baron below the rank
-    of earl (and thus originally entitled only ‘lord’ …) who was among those whose attendance at Parliament by personal
-    writ of summons was reserved”:{" "}
-    <Src href="https://dsl.ac.uk/entry/dost/lord">Dictionary of the Older Scottish Tongue, “Lord”</Src>, senses 21 and 8 b.
-    See{" "}
-    <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Lairds, lords and barons</Link>.
-  </>,
-  <>
-    Act of 5 March 1428, general council at Perth. The original reads “All bischoppis abbotis priors dukis erlis lordis of
-    parliament &amp; banrentis the quhilkis the King wil, be reseruit &amp; summonde to consalis &amp; to parliamentis be his
-    special precep”: <em>The Acts of the Parliaments of Scotland</em>, vol. II,{" "}
+    “Lord” was already “the lord or proprietor of a lordship” (sense 21). A lord of Parliament was “A member of the class of
+    great landowners, as dukes, earls and certain of the greater barons or ‘lords’ … whose attendance at Parliaments or General
+    Councils was reserved in the Act of 1428 and who were appointed to receive individual summons by precept” (sense 8 a), and
+    more narrowly “An important baron below the rank of earl (and thus originally entitled only ‘lord’ …) who was among those
+    whose attendance at Parliament by personal writ of summons was reserved” (sense 8 b):{" "}
+    <Src href="https://dsl.ac.uk/entry/dost/lord">Dictionary of the Older Scottish Tongue, “Lord”</Src>. The Act of 5 March
+    1428, in modern English: “All bishops, abbots, priors, dukes, earls, lords of parliament and bannerets whom the King wishes
+    shall be reserved, and summoned to councils and to parliaments by his special precept”:{" "}
+    <em>The Acts of the Parliaments of Scotland</em>, vol. II,{" "}
     <Src href="https://archive.org/details/india.history.resource.77916/page/n106">p. 15</Src>, printed under 1427 in the old
     reckoning of the year;{" "}
-    <Src href="https://www.rps.ac.uk/trans/1428/3/3">RPS 1428/3/3</Src>. That spelling is from the{" "}
-    <Src href="https://dsl.ac.uk/entry/dost/lord">Dictionary of the Older Scottish Tongue, “Lord”</Src>, sense 8, which
-    writes out the printer’s contractions.
+    <Src href="https://www.rps.ac.uk/trans/1428/3/3">RPS 1428/3/3</Src>. See{" "}
+    <Link href="/reading-room/lairds-lords-and-barons/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">Lairds, lords and barons</Link>.
   </>,
   <>
     14 October 1591, to his servant Sir John Murray of Tullibardine, knight, in free lordship of Balquhidder (“servitori suo
@@ -915,12 +912,12 @@ export default function ProperAddressPage() {
                 </p>
                 <P>
                   About 98% of titles in the Baronage of Scotland are Baron of; a small number of very rare titles are
-                  the nobler titles of lord and earl.<Ref n={18} src={17} />{" "}
+                  the nobler titles of lord and earl.<Ref n={18} src={16} />{" "}
                   <strong className="font-bold">
                     Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
                   </strong>{" "}
                   The Baron of Balvaird, of our Governing Council, is one: he holds a lordship and barony and does not use
-                  the title of lord.<Ref n={19} src={18} />{" "}
+                  the title of lord.<Ref n={19} src={17} />{" "}
                   “Baron of” helps to distinguish a baron from a peer, though many Irish peers are also “Baron of”. For
                   an earl, which could be confused with the peerage, the prefix The Much Hon. (The Much Honoured) goes
                   before the name.
@@ -1008,7 +1005,7 @@ export default function ProperAddressPage() {
                   remains “Baron of Inverness”.
                 </P>
                 <P>
-                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Baron of X and Lord thereof”.<Ref n={28} src={19} />{" "}
+                  Formally for a lordship, as the Lyon Court has recorded it, the style is “Baron of X and Lord thereof”.<Ref n={28} src={18} />{" "}
                   Socially “The Lord X” is also used, just as “The Baroness of X” may be “The Lady X”. The article is old
                   Scottish usage, not a claim to peerage. Innes of Learney’s edition of Adam names “a baron, the Lord of Strathbogie” in the reign of Alexander III, and Borthwick
                   lists “Lord Strathbolgie” among the Lord Barons of Scotland.<Ref n={29} src={10} /> Innes gives the same
@@ -1088,17 +1085,6 @@ export default function ProperAddressPage() {
                   territorially, not by personal summons to Parliament, by charter in free lordship, or as lord barons by
                   charter in lordship and barony.<Ref n={33} src={13} />
                 </P>
-                {/* owner 2026-10-31: quotes shown big or as screenshots, each with its own pop-up source */}
-                <Quote
-                  credit={
-                    <>
-                      Act of the Scottish Parliament, 5 March 1428, in modern English<Ref n={34} src={14} />
-                    </>
-                  }
-                >
-                  “All bishops, abbots, priors, dukes, earls, lords of parliament and bannerets whom the King wishes shall be
-                  reserved, and summoned to councils and to parliaments by his special precept”
-                </Quote>
                 <div className="my-10 border-y border-parchment-300/70 py-6 text-center">
                   <p className="font-serif text-base italic leading-relaxed text-ink">The Register of the Great Seal of Scotland</p>
                   <figure className="mt-6">
@@ -1114,7 +1100,7 @@ export default function ProperAddressPage() {
                     />
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
-                    1591: Sir John Murray of Tullibardine, knight, in free lordship<Ref n={35} src={15} />
+                    1591: Sir John Murray of Tullibardine, knight, in free lordship<Ref n={34} src={14} />
                   </p>
                   <figure className="mt-6">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1130,7 +1116,7 @@ export default function ProperAddressPage() {
                   </figure>
                   <p className="mt-4 font-serif text-lg text-navy">
                     1583: Andrew Keith, to be called lord and baron of Dingwall, who should have the honour of a lord of
-                    Parliament<Ref n={36} src={16} />
+                    Parliament<Ref n={35} src={15} />
                   </p>
                   <p className="mt-3 leading-relaxed text-ink-soft">
                     The first holds a lordship by charter and nothing more. The second has to add the honour of Parliament in
@@ -1165,7 +1151,7 @@ export default function ProperAddressPage() {
                 <Quote
                   credit={
                     <>
-                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={37}>{RECORDS_SOURCE}</Footnote>
+                      Sir Thomas Innes of Learney, Lord Lyon<Footnote n={36}>{RECORDS_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1176,7 +1162,7 @@ export default function ProperAddressPage() {
                   credit={
                     <>
                       The editor of the <em>Annuaire de la Noblesse de la France</em>, quoted by Innes of Learney
-                      <Footnote n={38}>{ANNUAIRE_SOURCE}</Footnote>
+                      <Footnote n={37}>{ANNUAIRE_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1197,7 +1183,7 @@ export default function ProperAddressPage() {
                     <>
                       Frank Adam, <em>The Clans, Septs and Regiments of the Scottish Highlands</em>, as revised by Lord Lyon
                       Sir Thomas Innes of Learney, p. 410, on visiting cards
-                      <Footnote n={39}>{VISITING_CARD_SOURCE}</Footnote>
+                      <Footnote n={38}>{VISITING_CARD_SOURCE}</Footnote>
                     </>
                   }
                 >
@@ -1217,7 +1203,7 @@ export default function ProperAddressPage() {
                 </Forms>
                 <P>
                   This is because the title is not an office. It is a title of nobility and part of one’s name and
-                  identity;<Footnote n={40}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
+                  identity;<Footnote n={39}>{IDENTITY_SOURCE}</Footnote> on a second line it reads like a job title.
                 </P>
                 <P>
                   By following these guidelines, you can ensure that baronial titles are correctly represented and
