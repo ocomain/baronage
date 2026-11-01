@@ -911,7 +911,7 @@ export default function ProperAddressPage() {
                   the higher ranks being, in the words of Viscount Stair, “but more noble titles of a barony”.<Ref n={17} src={1} />
                 </p>
                 <P>
-                  About 98%<Ref n={18} src={16} /> of titles in the Baronage of Scotland are Baron of; a small number of very
+                  About 98% of titles<Ref n={18} src={16} /> in the Baronage of Scotland are Baron of; a small number of very
                   rare titles are the nobler titles of lord and earl.{" "}
                   <strong className="font-bold">
                     Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
