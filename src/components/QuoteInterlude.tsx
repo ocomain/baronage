@@ -65,6 +65,12 @@ const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number 
     // that one": about 7 seconds in all; kept at 7 when the others were cut by a second (owner 2026-10-23)
     extraMs: 2500,
   },
+  // owner 2026-11-01. Adam, revised by Innes of Learney, p. 410, of titles on visiting-cards, as on Proper Address.
+  {
+    text: "titles “strictly should be on the same line as the name”",
+    source: "Lord Lyon Sir Thomas Innes of Learney",
+    gold: ["same line as the name"],
+  },
 ];
 
 // Long enough to read (owner 2026-10-17: a second "doesn't stay long enough to read it", then "still not staying long
