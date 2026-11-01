@@ -825,7 +825,8 @@ export default function ProperAddressPage() {
             </F>
             <F>
               <S>Dr The Lady Inverness</S>{" "}
-              <S>(Jane Smith, 5th baroness)</S>
+              (Jane Smith, 5th baroness)
+              <N>— name in brackets</N>
               <Or />
               <S>Dr Inverness</S>
             </F>
@@ -1000,7 +1001,7 @@ export default function ProperAddressPage() {
             </F>
             <F>
               <S>Major the Much Hon Baron of Inverness DL</S>{" "}
-              <S>(John Smith, 5th baron)</S> <N>— post-nominals after title</N>
+              (John Smith, 5th baron) <N>— post-nominals after title, name in brackets</N>
             </F>
           </Forms>
         </Sec>
