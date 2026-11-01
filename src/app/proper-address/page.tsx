@@ -600,29 +600,29 @@ export default function ProperAddressPage() {
     <div className="space-y-14">
       <Reveal>
         <Sec id="verbal" title="Address">
-          <P>A Scottish Baron is referred to as “<S>The Baron</S>”<Footnote n={1}>{THE_BARON_SOURCE}</Footnote> / “<S>The Baroness</S>”</P>
+          {/* owner 2026-11-01: Innes's line on "Mr", at the head of the guide */}
+          <Quote
+            credit={
+              <>
+                Sir Thomas Innes of Learney, Lord Lyon<Footnote n={1}>{TITLE_ALONE_SOURCE}</Footnote>
+              </>
+            }
+          >
+            “It is rude, not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”
+          </Quote>
+          <P>A Scottish Baron is referred to as “<S>The Baron</S>”<Footnote n={2}>{THE_BARON_SOURCE}</Footnote> / “<S>The Baroness</S>”</P>
           <Forms>
             <F>
               Third person introduction: <S>The Baron</S> (of Inverness and Lady Inverness)
             </F>
             <F>
               In person: <S>Baron</S> <em>or</em> simply ‘<S>Inverness</S>’ may be used
-              <Footnote n={2}>{TITLE_ALONE_SOURCE}</Footnote>
+              <Footnote n={3}>{TITLE_ALONE_SOURCE}</Footnote>
             </F>
             <F>
               In person: <S>Baroness</S> <em>or</em> <S>Lady Inverness</S>
             </F>
           </Forms>
-          {/* owner 2026-11-01: Innes's line on "Mr", above Mr / Mrs Smith */}
-          <Quote
-            credit={
-              <>
-                Sir Thomas Innes of Learney, Lord Lyon<Footnote n={3}>{TITLE_ALONE_SOURCE}</Footnote>
-              </>
-            }
-          >
-            “It is rude, not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”
-          </Quote>
           <P>
             “Mr / Mrs Smith” or “Esq.” is certainly incorrect.<Footnote n={4}>{ESQUIRE_SOURCE}</Footnote> Some wives of Highland clan chief-barons prefer{" "}
             <S>Madam</S>.<Footnote n={5}>{MADAM_SOURCE}</Footnote>
