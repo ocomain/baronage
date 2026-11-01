@@ -615,7 +615,6 @@ export default function ProperAddressPage() {
             </F>
           </Forms>
           <P>
-            It is incorrect to refer to them simply by their surname or without the baronial designation, e.g.,
             “Mr / Mrs Smith” or “Esq.” is certainly incorrect.<Footnote n={3}>{ESQUIRE_SOURCE}</Footnote> Some wives of Highland clan chief-barons prefer{" "}
             <S>Madam</S>.<Footnote n={4}>{MADAM_SOURCE}</Footnote>
           </P>
