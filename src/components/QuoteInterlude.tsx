@@ -69,7 +69,7 @@ const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number 
   {
     text: "titles “strictly should be on the same line as the name”",
     source: "Lord Lyon Sir Thomas Innes of Learney",
-    gold: ["same line as the name"],
+    extraMs: 2500, // owner: on screen as long as the Arbroath quote
   },
 ];
 
