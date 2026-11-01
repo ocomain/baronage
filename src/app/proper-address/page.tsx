@@ -438,6 +438,7 @@ const TITLE_ALONE_SOURCE = (
 );
 const ESQUIRE_SOURCE = (
   <>
+    “It is rude, not ‘respectful,’ to address Clanranald as ‘Mr. Macdonald’”: <Adam page="409" n={440} />.{" "}
     “‘Esquire’ is not normally added, the designation being taken to infer it.” Where it is used, that is “when the laird
     or chief is not a baron”: <Adam page="410" n={441} />.
   </>
