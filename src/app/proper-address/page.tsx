@@ -565,7 +565,7 @@ export default function ProperAddressPage() {
                 <P>
                   When writing to a Scottish Baron who holds a{" "}
                   <GlossaryTerm term="Territorial designation (TD)" away>territorial designation</GlossaryTerm>, the
-                  correct format for the envelope or any formal correspondence is:
+                  correct format for the envelope or any formal correspondence is (brackets are optional):
                 </P>
                 {/* second form added (owner 2026-10-31) */}
                 <FormLine>
@@ -578,7 +578,7 @@ export default function ProperAddressPage() {
                 <P>
                   Some barons with a territorial designation choose not to use their baron title.<Footnote n={8}>{TWO_STYLES_SOURCE}</Footnote> However, most barons
                   do not hold a territorial designation and <em>just the title</em> is normally the <em>preferred</em>{" "}
-                  format, for example (brackets are optional):
+                  format, for example:
                 </P>
                 <Forms>
                   <F>
