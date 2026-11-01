@@ -169,7 +169,8 @@ const HIGHER_SOURCES: ReactNode[] = [
   </>,
   <>
     Borthwick (1775), p. 21: “In the year 1416, William Lord Graham gets a charter of the barony of Mellenok, in which he is designed, Willielmo Domino Graham. And the same Lord gets a charter of the lands of Aldmontrose, dated the 4th August 1420, Willielmo Domino de Graham”, the charters being “on the record of the great seal” —{" "}
-    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. Patrick Graham was created Lord Graham, a Lord of Parliament, in 1445.
+    <Src href="https://archive.org/details/inquiryintoorigi00bortuoft/page/21/mode/2up">archive.org</Src>. William’s grandson Patrick was already “the Lord Graham” in an English order of 8 March 1427, and “Prior to 28 June 1445 he was raised to the Peerage under the title of Lord Graham, sitting at that date for the first time as a Lord of Parliament”: <em>The Scots Peerage</em>, vol. VI,{" "}
+    <Src href="https://archive.org/details/scotspeeragefoun06pauluoft/page/n235">pp. 220</Src>–<Src href="https://archive.org/details/scotspeeragefoun06pauluoft/page/n236">221</Src>, citing <em>The Acts of the Parliaments of Scotland</em>, vol. II, p. 59.
   </>,
   <>
     Sir Thomas Innes of Learney, “The Robes of the Feudal Baronage of Scotland”, <em>Proceedings of the Society of Antiquaries of Scotland</em> 79 (1944–45), pp. 111–163, at p. 158, citing the Additional Case for the Countess of Sutherland, p. 84, and Lord Hailes; in the Latin of the rolls, “Intrat A, Comes de B”, “Intrat A, Dominus de B” and “Intrat A, Baro de B” —{" "}
