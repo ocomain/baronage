@@ -604,8 +604,9 @@ export default function ProperAddressPage() {
                   </p>
                   <p className="mt-3 font-serif text-xl font-bold text-navy">Niall, Baron of Bachuil</p>
                   <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic leading-relaxed text-ink">
-                    Bachuil chaired a Titles and Usages Committee and published the paper “The Use and Abuse of
-                    Titles”, presented to the Court of the Lord Lyon and the Scottish Parliament.<Footnote n={8}>{BACHUIL_SOURCE}</Footnote>
+                    Bachuil chaired a Titles and Usages Committee, which produced the paper “The Use and Abuse of
+                    Titles”, and presented the views of the Convention of the Baronage of Scotland to the Court of the
+                    Lord Lyon and the Scottish Parliament.<Footnote n={8}>{BACHUIL_SOURCE}</Footnote>
                   </p>
                 </div>
                 <P>
