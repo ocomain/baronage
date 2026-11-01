@@ -628,8 +628,8 @@ export default function ProperAddressPage() {
                   John Smith of Glenmore, Much Hon. the Baron of Inverness
                 </FormLine>
                 <P>
-                  Some barons with a territorial designation choose not to use their baron title.<Footnote n={8}>{TWO_STYLES_SOURCE}</Footnote> However, most barons
-                  do not hold a territorial designation and <em>just the title</em> is normally the <em>preferred</em>{" "}
+                  Some barons with a TD choose not to use their baron title.<Footnote n={8}>{TWO_STYLES_SOURCE}</Footnote> However, most barons
+                  do not hold a TD and <em>just the title</em> is normally the <em>preferred</em>{" "}
                   format, for example:
                 </P>
                 <Forms>
@@ -660,7 +660,7 @@ export default function ProperAddressPage() {
                   </p>
                   <p className="mt-3 font-serif text-xl font-bold text-navy">Niall, Baron of Bachuil</p>
                   <p className="mx-auto mt-4 max-w-2xl font-serif text-base italic leading-relaxed text-ink">
-                    Bachuil chaired a Titles and Usages Committee, which produced the paper “The Use and Abuse of
+                    Bachuil chaired a Titles and Usages Committee, producing the paper “The Use and Abuse of
                     Titles”, and presented the views of the Convention of the Baronage of Scotland to the Court of the
                     Lord Lyon and the Scottish Parliament.<Footnote n={9}>{BACHUIL_SOURCE}</Footnote>
                   </p>
@@ -697,14 +697,7 @@ export default function ProperAddressPage() {
                 </div>
                 <div className="gold-rule my-10 text-gold/70" aria-hidden="true"><span className="gold-rule__gem" /></div>
                 <P>
-                  A Scottish barony is a{" "}
-                  <Link
-                    href="/scottish-baronies-explained"
-                    className="underline decoration-gold/50 underline-offset-2 transition-colors hover:text-oxblood"
-                  >
-                    personal dignity
-                  </Link>{" "}
-                  held legally by the baron (or baroness in her own right). It does not create a separate legal title for
+                  A Scottish barony is a personal dignity held legally by the baron (or baroness in her own right). It does not create a separate legal title for
                   a spouse. However, under British social custom, a wife is the legal and social equal of her husband in style and title.
                   She shares his rank and assumes the feminine form of his title by legal description
                   <Footnote n={12}>{LADY_TITLE_SOURCE}</Footnote> but does not hold it in her own right. Upon marriage, she takes his style; if widowed or divorced, her use of the title follows
@@ -712,7 +705,7 @@ export default function ProperAddressPage() {
                   identity, her title is reflected in a British passport as her legal name.<Footnote n={13}>{IDENTITY_SOURCE}</Footnote>
                 </P>
                 <P>
-                  A baron’s wife or a baroness in her own right may use <S>Lady</S> <em>or</em> <S>Baroness of</S>:
+                  A baron’s wife typically uses <S>Lady</S>, and a baroness in her own right <S>Baroness of</S>:
                 </P>
                 <Forms>
                   <F>
