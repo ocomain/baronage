@@ -774,8 +774,12 @@ html.ez a:focus-visible, html.ez button:focus-visible{outline:4px solid var(--co
 /* ---- 6. links inside text: always underlined, thicker line ---- */
 html.ez main p a:not(.btn){text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 
-/* ---- 7. reference numbers: a round button instead of a tiny superscript ---- */
-html.ez button[aria-label^="Show footnote"]{display:inline-flex;align-items:center;justify-content:center;min-width:1.9rem;height:1.9rem;margin:0 .15rem;padding:0 .3rem;border:2px solid var(--color-gold)!important;border-radius:999px;background:#fff!important;color:var(--color-navy);text-decoration:none;font-size:.82rem;line-height:1;vertical-align:middle}
+/* ---- 7. reference numbers: a round button instead of a tiny superscript, in the papers too (owner 2026-11-01) ---- */
+@media screen{
+html.ez button[aria-label^="Show footnote"],
+html.ez .paper-body sup.fnref a{display:inline-flex;align-items:center;justify-content:center;min-width:1.9rem;height:1.9rem;margin:0 .15rem;padding:0 .3rem;border:2px solid var(--color-gold)!important;border-radius:999px;background:#fff!important;color:var(--color-navy);text-decoration:none;font-size:.82rem;line-height:1;vertical-align:middle}
+html.ez .paper-body sup.fnref--adj::before{content:none}
+}
 
 /* ---- 8. the featured-paper card: a close button nobody can miss ---- */
 html.ez aside[aria-label="Featured paper"] button[aria-label="Close featured paper"]{width:3rem;height:3rem;right:.5rem;top:.5rem}
