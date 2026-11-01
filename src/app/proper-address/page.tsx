@@ -394,9 +394,8 @@ const WIFE_OR_BARONESS_SOURCE = (
     The same division in the peerage: a baron’s wife is entered as “The Lady [title]” and a peeress in her own right as “The
     Baroness [title]”:{" "}
     <Src href="https://www.gov.uk/government/publications/titles-included-in-passports/titles-accessible">HM Passport Office, Titles</Src>,
-    guidance for passport staff. The Roll gives one style, with the other in brackets: “The Much Honoured Lady Rockhall-Lag (Margaret Hamilton of Rockhall, Baroness of Lag)”,{" "}
-    <Src href="https://roll.baronage.com/baron/margaret-hamilton-of-rockhall">the Roll</Src>, the Lyon Court’s recognition
-    being in the form “Baroness of Lag”. “‘Lady Craigcaffie’ is a style still used, e.g. Lyon Court record narrative”:{" "}
+    guidance for passport staff. The Roll gives one style, with the other in brackets: “The Much Honoured Lady Chirnside (Ethel Patricia Hewitt Kirby, Baroness of Chirnside)”,{" "}
+    <Src href="https://roll.baronage.com/baron/ethel-kirby">the Roll</Src>. “‘Lady Craigcaffie’ is a style still used, e.g. Lyon Court record narrative”:{" "}
     <Adam page="411" n={442} />. For the two forms in a deed see{" "}
     <Link href="/reading-room/how-a-scottish-baron-is-named-in-a-legal-document/#form-for-legal-contracts" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
       How is a Scottish baron named in a legal document?
