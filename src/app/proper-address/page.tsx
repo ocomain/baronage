@@ -795,7 +795,7 @@ export default function ProperAddressPage() {
           </Forms>
           <P>
             “Lady Jane” is incorrect and should never be used — this is the title for daughters of a senior
-            peer: a Duke, Marquess or Earl.<Footnote n={18}>{LADY_DAUGHTERS_SOURCE}</Footnote> Forms such as “Lady Jane Inverness” or “Baron John of Inverness” are
+            peer: a Duke, Marquis or Earl.<Footnote n={18}>{LADY_DAUGHTERS_SOURCE}</Footnote> Forms such as “Lady Jane Inverness” or “Baron John of Inverness” are
             often seen, but are still socially incorrect. The phrase “Lady of Inverness” is wrong unless the lady in
             question is a{" "}
             <Link
