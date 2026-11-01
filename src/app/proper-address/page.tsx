@@ -917,7 +917,7 @@ export default function ProperAddressPage() {
                     Some holders of higher dignities choose to be known exclusively by the lower rank: “The Baron of X”.
                   </strong>{" "}
                   The Baron of Balvaird, of our Governing Council, is one: he holds a lordship and barony and does not use
-                  the title of lord.<Ref n={19} src={17} />{" "}
+                  the title lord.<Ref n={19} src={17} />{" "}
                   “Baron of” helps to distinguish a baron from a peer, though many Irish peers are also “Baron of”. For
                   an earl, which could be confused with the peerage, the prefix The Much Hon. (The Much Honoured) goes
                   before the name.
