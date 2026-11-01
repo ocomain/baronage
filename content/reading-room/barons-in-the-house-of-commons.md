@@ -58,7 +58,7 @@ The form held for a century and a quarter.
 
 At home the same men were barons. The Roses of Kilravock had been “the baron of Kilraok” to the Countess of Crawford in 1576 and “the richt honorable the Barrone of Kilraik” to the Marquis of Argyll in 1642. When Hugh Rose of Kilravock, chosen for the first Parliament of Great Britain, died in 1732, an Inverness baker was paid “for dressing and ordering the honored Hugh Rose baron and laird of Kilraock’s funeralls”, and Lord Lovat wrote to his son, “My dear Baron”.[^10] The title lived on in the families that had always carried it, and in the letters of the peers and officers of state who addressed them: see [Baron of X, or X of Y? Two styles of a Scottish baron](/reading-room/the-two-styles-of-a-scottish-baron/) and [Where “The Much Honoured” comes from](/reading-room/where-the-much-honoured-comes-from/).
 
-Westminster did not recognise it. The House had one word for a landed man who was not a peer, baronet or knight, and used it. The baron of Kilravock was “Esquire” in the Commons and “my dear Baron” in Scotland, and no English record of the period knew the difference.
+Westminster did not recognise it. The House had only the forms it gave any landed man who was not a peer, baronet or knight, “Esquire” and “Mr.”, and used them. The baron of Kilravock was “Esquire” in the Commons and “my dear Baron” in Scotland, and no English record of the period knew the difference.
 
 ## Barons or freeholders
 
@@ -68,7 +68,7 @@ It was a House of landowners, chosen by landowners, and by few of them: in 1788 
 
 ## Desuetude, and a revival
 
-After the Union the title went out of public use: England did not recognise it, and the British Empire took its forms from England. The barons’ members sat at Westminster as Esquires, the baron court was cut down in 1748, and the lairds of the eighteenth and nineteenth centuries signed “X of Y”, as the Act of 1672 required. The dignity was never taken away, but by 1934 a baron could tell the Lord Lyon that the right of the Scottish baronage “to be designated as ‘Baron of Bradwardine’” was being allowed “to fall into desuetude”.[^17]
+After the Union the title gradually went out of public use: England did not recognise it, and the British Empire took its forms from England. The barons’ members sat at Westminster as Esquires, the baron court was cut down in 1748, and the lairds of the eighteenth and nineteenth centuries signed “X of Y”, as the Act of 1672 required. The dignity was never taken away, but by 1934 a baron could tell the Lord Lyon that the right of the Scottish baronage “to be designated as ‘Baron of Bradwardine’” was being allowed “to fall into desuetude”.[^17]
 
 The Lyon Court answered. It had awarded a baron’s descendant the cap of maintenance in 1835, “as being indicative of his descent from the ancient barons of Dolphington”; in 1934 it awarded the chapeau to the Baron of Esslemont after proof, and recorded him by that title; in 1943 it found and declared that the minor barons “are, and have been … recognised as a ‘titled nobility’”, a standing fact and not a new finding; and in 1945 Lord Lyon Innes of Learney set out the record of the baronage in a paper that is still the fullest account of the order. From 1934 the chapeau was the mark of every baron who matriculated arms, and from 1968 the Court’s rolls in the Edinburgh Gazette carried that mark. The rolls were never a complete list, and they are not the Register: see [Officially Recognised](/reading-room/barons-in-the-gazette/).[^18]
 
