@@ -359,7 +359,7 @@ const IDENTITY_SOURCE = (
 );
 const TWO_STYLES_SOURCE = (
   <>
-    A baron could have both a title and a name with its territorial designation, and the records move freely between them: Mary
+    A baron might have both a title and a name with its territorial designation, and the records move freely between them: Mary
     Queen of Scots wrote to “the barroun of Kylrawak” in 1562, and a writ in her name of 1567 called him “Hucheoun Ros of
     Kilrawak”. See{" "}
     <Link href="/reading-room/the-two-styles-of-a-scottish-baron/" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
