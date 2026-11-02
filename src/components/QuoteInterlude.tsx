@@ -69,7 +69,9 @@ const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number 
   {
     text: "titles “strictly should be on the same line as the name”",
     source: "Lord Lyon Innes of Learney",
-    extraMs: 2500, // owner: on screen as long as the Arbroath quote
+    // owner: on screen as long as the Arbroath quote. Reading time counts words, so this one needs 1,040 ms more
+    // than Arbroath's 2,500 to match its 6,970 ms in all.
+    extraMs: 3540,
   },
 ];
 
