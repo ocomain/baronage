@@ -26,14 +26,15 @@
     }
   ],
   "photo": {
-    "src": "/images/news/christopher-burges-lumsden-of-pitcaple-baron-of-pitcaple-0f76facd.webp",
-    "width": 250,
-    "height": 234,
-    "alt": "Christopher, Baron of Pitcaple (right)",
-    "credit": "Roll of Scottish Barons",
+    "src": "/images/news/christopher-burges-lumsden-of-pitcaple-baron-of-pitcaple-95282441.webp",
+    "width": 600,
+    "height": 480,
+    "alt": "Christopher, Baron of Pitcaple (right), at Pitcaple Castle",
+    "caption": "Christopher Burges-Lumsden of Pitcaple (right) at Pitcaple Castle, December 2014",
+    "credit": "Press and Journal",
     "licence": "",
-    "source_url": "https://roll.baronage.com/baron/christopher-burges-lumsden",
-    "url_in": "https://roll.baronage.com/baronages/Pitcaple.png"
+    "source_url": "",
+    "url_in": "owner-supplied:2026-11-02-259-photo.jpg"
   },
   "published_at": "2026-11-02T09:36:58+00:00"
 }
