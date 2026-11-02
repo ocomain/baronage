@@ -26,6 +26,8 @@ export const metadata: Metadata = {
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 const PDF = "The-Barons-Course-Baronage-of-Scotland-Association.pdf";
+/** Off while the PDF is out of date (owner 2026-11-02); back to true, with BOOKLET_ON in CoursePanel.tsx, once it is remade. */
+const PDF_ON = false;
 
 /** The PDF's size in whole megabytes, or null while there is none. */
 function pdfMegabytes() {
@@ -63,7 +65,7 @@ export default function EssentialReadingBookletPage() {
       0,
     );
   const about = Math.max(5, Math.round(pageCount / 5) * 5);
-  const pdfMb = pdfMegabytes();
+  const pdfMb = PDF_ON ? pdfMegabytes() : null;
 
   return (
     <Section tone="parchment" className="!py-12 sm:!py-16 print:!py-0">

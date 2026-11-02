@@ -7,6 +7,8 @@ import { COURSE_EVENT, readProgress, writeProgress } from "@/lib/courseProgress"
 import { CourseSeal, PartSeal } from "./CourseSeal";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
+/** Off while the booklet PDF is out of date (owner 2026-11-02); back to true, with PDF_ON in print/page.tsx, once it is remade. */
+const BOOKLET_ON = false;
 
 /**
  * The Baron's Course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
@@ -103,20 +105,22 @@ export function CoursePanel({
           )}
 
           {/* The booklet: every paper in order, to print or keep as a PDF */}
-          <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
-            <Link
-              href={`${path}print/`}
-              className="inline-flex min-h-[2.75rem] items-center gap-2.5 border-2 border-navy px-4 py-2 font-sans text-[0.95rem] font-semibold text-navy transition-colors hover:border-oxblood hover:text-oxblood"
-            >
-              <svg aria-hidden viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 9V3h12v6" />
-                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                <path d="M6 14h12v7H6z" />
-              </svg>
-              Print the course
-            </Link>
-            <span className="font-serif text-base italic text-ink-soft">every paper in one booklet, to print or to email as a PDF</span>
-          </p>
+          {BOOKLET_ON && (
+            <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+              <Link
+                href={`${path}print/`}
+                className="inline-flex min-h-[2.75rem] items-center gap-2.5 border-2 border-navy px-4 py-2 font-sans text-[0.95rem] font-semibold text-navy transition-colors hover:border-oxblood hover:text-oxblood"
+              >
+                <svg aria-hidden viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 9V3h12v6" />
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                  <path d="M6 14h12v7H6z" />
+                </svg>
+                Print the course
+              </Link>
+              <span className="font-serif text-base italic text-ink-soft">every paper in one booklet, to print or to email as a PDF</span>
+            </p>
+          )}
         </div>
       </div>
 
