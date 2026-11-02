@@ -68,7 +68,7 @@ const QUOTES: { text: string; source: string; gold?: string[]; extraMs?: number 
   // owner 2026-11-01. Adam, revised by Innes of Learney, p. 410, of titles on visiting-cards, as on Proper Address.
   {
     text: "titles “strictly should be on the same line as the name”",
-    source: "Lord Lyon Sir Thomas Innes of Learney",
+    source: "Lord Lyon Innes of Learney",
     extraMs: 2500, // owner: on screen as long as the Arbroath quote
   },
 ];
