@@ -6,7 +6,6 @@ meta_description: "Councils, parliaments, ballot papers and the honours list nam
 category: Law & Statutes
 published: 2026-11-01
 reviewed: 2026-11-02
-essential: true
 ---
 
 # How is a Scottish baron named in public life? By title, by name, or by designation

@@ -6,7 +6,6 @@ meta_description: "The Act of 1672 let “noblemen” sign by their titles. Crit
 category: Law & Statutes
 published: 2026-11-02
 reviewed: 2026-11-02
-essential: true
 ---
 
 # Were Scotland’s barons “noblemen”? The word in the Act of 1672, read in its own time
