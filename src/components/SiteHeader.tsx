@@ -139,8 +139,9 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-8">
           <Link href="/" aria-label="Baronage of Scotland Association — home" className="relative text-navy">
             <Wordmark />
-            {/* Phones: pinned on the seal's corner, clear of the menu button; wider screens: beside the name, as Burke's has it. */}
-            <Poppy className="absolute -left-3 -top-3 h-10 w-auto drop-shadow-[0_2px_2px_rgba(12,21,48,0.22)] sm:left-auto sm:-right-12 sm:-top-3 sm:h-[3.6rem]" />
+            {/* Beside the name, as Burke's has it (owner 2026-11-02: on phones too). Phones leave only 16 to 40 px before
+                the menu button, so there it is smaller and grows with the screen. */}
+            <Poppy className="absolute -top-1 left-full h-[22px] w-auto drop-shadow-[0_2px_2px_rgba(12,21,48,0.22)] min-[375px]:h-8 min-[400px]:h-9 sm:left-auto sm:-right-12 sm:-top-3 sm:h-[3.6rem]" />
           </Link>
 
           <EmailSignup className="hidden lg:block" />
