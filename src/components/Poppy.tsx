@@ -27,10 +27,11 @@ export function Poppy({ className = "" }: { className?: string }) {
     <img
       src="/images/poppy.webp"
       alt=""
+      title="We will remember them" // Binyon, "For the Fallen": on hover only (owner 2026-11-02)
       width={136}
       height={200}
       decoding="async"
-      className={`no-print pointer-events-none select-none ${className}`}
+      className={`no-print select-none ${className}`}
     />
   );
 }
