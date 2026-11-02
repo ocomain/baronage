@@ -97,7 +97,7 @@ The King’s Scale of 1905 uses the word more narrowly. It lists “Barons of Sc
 <figcaption>“Barons of Scotland”: the King’s Scale of 1905. <a href="https://www.thegazette.co.uk/London/issue/27774/page/2013" target="_blank" rel="noopener noreferrer"><em>London Gazette</em>, 14 March 1905</a>.</figcaption>
 </figure>
 
-The Stair Encyclopaedia explains the name. The lowest rank in the peerage was “lord” in Scotland before the Union, and has been “baron” in the peerage since.[^22] The peerage of Scotland closed at the Union, and its lowest rank is still the Lord of Parliament, styled Lord. So the Scale’s “Barons of Scotland” are the lords of parliament, under the British name for their rank. Usage has since moved on: Debrett’s table for England now gives them a line of their own, “Lords of Parliament, Scotland”, and the Act of 2000 uses the word for the baronage, “the dignity of baron”. The baronage itself is not in the Scale.
+The Stair Encyclopaedia explains the name. The lowest rank in the peerage was “lord” in Scotland before the Union, and has been “baron” in the peerage since.[^22] The peerage of Scotland closed at the Union, and its lowest rank is still the Lord of Parliament, styled Lord. So the Scale’s “Barons of Scotland” are the lords of parliament, under the British name for their rank. Usage has since moved on: Debrett’s table for England now gives them a line of their own, “Lords of Parliament, Scotland”, and the Act of 2000 uses the word for the baronage, “the dignity of baron”. The baronage itself is not in the Scale. See [Why is the lowest Scottish peer a Lord of Parliament, not a baron?](/reading-room/why-the-lowest-scottish-peer-is-not-a-baron/)
 
 ## Robed alike
 
