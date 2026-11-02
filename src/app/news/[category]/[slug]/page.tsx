@@ -5,6 +5,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 import { SITE_URL } from "@/lib/site";
 import { Container, Section } from "@/components/primitives";
 import { categorySlug, eventLine, excerpt, lifeLine, longDate, newsPosts, paragraphs, postPath, sourceLink, titlesLine } from "@/lib/news";
+import { newsOgVersion } from "@/lib/news-og-version";
 
 // Static export: every post is prerendered from content/news/; anything else is a 404. With no posts at all, one
 // placeholder address that renders the 404 page, as the export needs at least one.
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: excerpt(post.text, 155),
     path: postPath(post),
-    image: { url: `${SITE_URL}/og/news/${post.slug}.png`, width: 1200, height: 630, alt: post.title },
+    image: { url: `${SITE_URL}/og/news/${post.slug}.png?v=${newsOgVersion(post)}`, width: 1200, height: 630, alt: post.title },
   });
 }
 
@@ -57,7 +58,7 @@ export default async function NewsPostPage({ params }: Props) {
     publisher: organisation,
     articleSection: post.category,
     mainEntityOfPage: url,
-    image: `${SITE_URL}/og/news/${post.slug}.png`,
+    image: `${SITE_URL}/og/news/${post.slug}.png?v=${newsOgVersion(post)}`,
     ...(memoriam && post.name
       ? {
           about: {
