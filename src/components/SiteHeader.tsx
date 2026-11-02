@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { NavBadge } from "./NavBadge";
 import { Wordmark } from "./Wordmark";
+import { Poppy } from "./Poppy";
 import { EmailSignup } from "./EmailSignup";
 import { ExternalArrow } from "./primitives";
 import { IndexCountText } from "./IndexCount";
@@ -136,8 +137,10 @@ export function SiteHeader() {
         }`}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-8">
-          <Link href="/" aria-label="Baronage of Scotland Association — home" className="text-navy">
+          <Link href="/" aria-label="Baronage of Scotland Association — home" className="relative text-navy">
             <Wordmark />
+            {/* Phones: pinned on the seal's corner, clear of the menu button; wider screens: beside the name, as Burke's has it. */}
+            <Poppy className="absolute -left-3 -top-3 h-10 w-auto drop-shadow-[0_2px_2px_rgba(12,21,48,0.22)] sm:left-auto sm:-right-12 sm:-top-3 sm:h-[3.6rem]" />
           </Link>
 
           <EmailSignup className="hidden lg:block" />
