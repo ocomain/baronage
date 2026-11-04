@@ -52,4 +52,5 @@ export const baronies: Barony[] = [
   { dignity: "Younger", name: "Kinfauns", img: "/arms/kinfauns-arms.webp", pageOnly: true },
   { dignity: "Baron", name: "Gilmerton", img: "/arms/gilmerton.webp", pageOnly: true },
   { dignity: "Lord Baron", name: "Coupar", img: "/arms/coupar.webp", pageOnly: true },
+  { dignity: "Baron", name: "Kerse", roll: "https://roll.baronage.com/baron/donald-angotta", img: "/arms/kerse.webp", pageOnly: true },
 ];
