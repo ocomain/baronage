@@ -38,7 +38,7 @@ const allMembers: CouncilMember[] = [
     alsoSub: "& Scottish Registered Solicitor",
     img: "/council/drum2.jpg",
     comic: {
-      href: "https://roll.baronage.com/baron/alexander-irvine-of-drum/comic/the-bruces-armour-bearer",
+      href: "https://roll.baronage.com/baron/alexander-irvine-of-drum/comic/",
       img: "/council/comic-drum.webp",
       label: "Drum Comic ↗",
       alt: "Comic panel: William de Irwyn, armour-bearer, follows King Robert the Bruce through the royal camp carrying the king’s helm and shield",
