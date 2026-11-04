@@ -25,7 +25,7 @@ export type CouncilMember = {
   /** Optional external link shown beside the bio link */
   link?: { href: string; label: string };
   /** Optional comic, shown as a picture link below the links (owner, 4 Nov 2026) */
-  comic?: { href: string; img: string; alt: string };
+  comic?: { href: string; img: string; alt: string; label: string };
   /** object-position for the wide pop-up banner (defaults to pos) */
   popPos?: string;
   /** Optional different image for the wide pop-up banner (defaults to img) */
@@ -152,7 +152,7 @@ export function CouncilCard({ m, first = false }: { m: CouncilMember; /** The fi
                 />
               </span>
               <span className="mt-3 inline-block font-sans text-sm font-semibold uppercase tracking-[0.2em] text-gold-light underline decoration-gold-light/60 decoration-2 underline-offset-4 transition-colors group-hover/comic:text-parchment-50 sm:text-xs">
-                The comic ↗
+                {m.comic.label}
               </span>
             </a>
           )}

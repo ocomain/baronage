@@ -40,6 +40,7 @@ const allMembers: CouncilMember[] = [
     comic: {
       href: "https://roll.baronage.com/baron/alexander-irvine-of-drum/comic/the-bruces-armour-bearer",
       img: "/council/comic-drum.webp",
+      label: "Drum Comic ↗",
       alt: "Comic panel: William de Irwyn, armour-bearer, follows King Robert the Bruce through the royal camp carrying the king’s helm and shield",
     },
     pos: "center 10%",
@@ -57,6 +58,7 @@ const allMembers: CouncilMember[] = [
     comic: {
       href: "https://www.lordkinfauns.com/comic/",
       img: "/council/comic-kinfauns.webp",
+      label: "Kinfauns Comic ↗",
       alt: "Comic panel: Sir Thomas kneels by the loch at Lochmaben, his sword held up like a cross, and swears to avenge Wallace",
     },
     pos: "center 18%",
