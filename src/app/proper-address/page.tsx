@@ -1318,7 +1318,7 @@ export default function ProperAddressPage() {
           <P>Lordship example:</P>
           <Forms>
             <F>
-              Scottish baronial lord: <S>The Much Honoured (the) Lord Lochaber</S><Or /><S>Baron of Lochaber</S>
+              Scot baronial lord: <S>The Much Honoured (the) Lord Lochaber</S><Or /><S>Baron of Lochaber</S>
             </F>
             <F>
               Baron without a lordship: <S>The Much Honoured Baron of Lochaber</S>
