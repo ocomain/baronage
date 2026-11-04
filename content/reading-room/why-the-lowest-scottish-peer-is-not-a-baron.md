@@ -17,7 +17,7 @@ reviewed: 2026-11-04
 - **The Peerage of Scotland has no baron.** Its ranks are duke, marquis, earl, viscount and Lord of Parliament. A woman holding the lowest rank sat in the Lords as “Lady Saltoun of Abernethy”, not “Baroness”.
 - **The baronage came first.** “Baron” was the name of the whole order. Sir Alexander Forbes held a free barony by 1429 and became a lord of parliament only in 1444 or 1445.
 - **The honour was added.** A Great Seal charter of 1583 makes Andrew Keith lord and baron of Dingwall, “who should have the honour of a lord of Parliament”.
-- **Sometimes the honour was in the land.** At Torphichen the title of Lord of Parliament was annexed to part of a barony granted to “heirs and assignees”. In 1862 the London press called its holder “Baron of Torphichen … in the peerage of Scotland”.
+- **Sometimes the honour was in the land.** At Torphichen the title of Lord of Parliament was annexed to part of a barony granted to “heirs and assignees”. Its holder was Baron of Torphichen by the barony and Lord Torphichen by the honour, and a notice of 1862 used both.
 - **So a Scottish baron is no lesser copy of an English peer.** In England the word names a rank of the peerage. In Scotland it names a dignity of its own, which the Act of 2000 keeps by name.
 
 ## “Baron” meant the whole order
@@ -47,7 +47,7 @@ At Torphichen the barony and the lordship of Parliament were one estate. In Janu
 
 When Charles I resumed the church lands, the fourth Lord feared for the superiorities of his barony. An award of the King in 1636, with the force of an Act of Parliament, kept them “within that … portion of it in which the title and dignity of Lords of Parliament subsists, and to which the title of Lord of Parliament is annexed”.[^14] The peerage stood in the land: a lordship of Parliament annexed to part of a barony, held of the Crown by heirs and assignees.
 
-The usage followed. When the tenth Lord died in March 1862, the London press recorded the death of “James Sandilands, Baron of Torphichen, in West Lothian, in the peerage of Scotland”. He had “succeeded to the ancient barony on the death of his cousin, the ninth lord”, and his heir was “Master of Torphichen”.[^15] Baron and lord, barony and peerage, in one notice.
+The holder carried two titles, as Forbes did: the barony made him Baron of Torphichen, the honour made him Lord Torphichen. Neither is a form of the other. When the tenth Lord died in March 1862, the London press used both. Its heading was “Death of Lord Torphichen”; its text recorded “James Sandilands, Baron of Torphichen, in West Lothian, in the peerage of Scotland”, who had “succeeded to the ancient barony on the death of his cousin, the ninth lord”, and whose heir was “Master of Torphichen”.[^15] The barony is named first and the peerage after it, in one sentence, for one man.
 
 ## What the Union changed
 
