@@ -41,15 +41,15 @@ The Register of the Great Seal shows that lordship and the honour of Parliament 
 
 It is often said that the only lords are peers. The Register answers it. Balquhidder and Fenton were erected into free lordships with no honour of Parliament, and their holders were lords of those lands and nothing more. Dingwall’s charter adds the honour as a further clause. Torphichen shows a third kind of lord: before the hereditary peerage of 1564, the Preceptors of the Knights of St John were lords for their lives, by election and “investiture in the fief”. The three charter entries are below.
 
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure--small">
 <img src="/images/reading-room/rms-v-1337-dingwall-1583.webp" alt="Register of the Great Seal, vol. V, no. 1337, 3 August 1587, reciting the charter of 18 March 1583: the lands of Dingwall incorporated in liberum dominium et baroniam, the lordship called the lordschip of Dingwall, ordaining the said Andrew to be called dominum et baronem de Dingwall, qui honorem domini parliamenti haberet" width="770" height="378" loading="lazy">
 <figcaption>Dingwall, 1583, highlighted: the lands “incorporated into free lordship and barony, to be called the lordship of Dingwall, ordaining the said Andrew to be called lord and baron of Dingwall, who should have the honour of a lord of Parliament”. The honour is the last clause. <em>Register of the Great Seal</em>, vol. V, no. 1337, <a href="https://archive.org/details/registrummagnisi05scot/page/n468/mode/1up" target="_blank" rel="noopener noreferrer">p. 461</a>.</figcaption>
 </figure>
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure--small">
 <img src="/images/reading-room/rms-v-1939-balquhidder-1591.webp" alt="Register of the Great Seal, vol. V, no. 1939, 14 October 1591: the King confirms and grants anew to Sir John Murray of Tullibardine, knight, the lands and lordship of Balquhidder, which he resigned, and which the King incorporated anew in liberum dominium de Balquhidder" width="740" height="382" loading="lazy">
 <figcaption>Balquhidder, 1591, highlighted: Sir John Murray of Tullibardine, a knight, resigns his lands, and the King “incorporated them anew into the free lordship of Balquhidder”. No honour of Parliament. <em>Register of the Great Seal</em>, vol. V, no. 1939, <a href="https://archive.org/details/registrummagnisi05scot/page/n661/mode/1up" target="_blank" rel="noopener noreferrer">p. 654</a>.</figcaption>
 </figure>
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure--small">
 <img src="/images/reading-room/rms-viii-1779-fenton-1631.webp" alt="Two parts of one entry in the Register of the Great Seal, vol. VIII, no. 1779, 4 June 1631: the King grants to James Maxwell of Innerwick, heredibus ejus et assignatis quibuscunque, the lands, lordship and barony of Fenton; and below, incorporates all in liberum dominium et baroniam de Fentoun, ordaining the tower and manor place of Fenton Tower to be the principal messuage" width="760" height="347" loading="lazy">
 <figcaption>Fenton, 1631, highlighted: to James Maxwell of Innerwick, “his heirs and assignees whomsoever”, the lands, lordship and barony of Fenton, all “incorporated into the free lordship and barony of Fenton”. No honour of Parliament. Two parts of one entry. <em>Register of the Great Seal</em>, vol. VIII, no. 1779, <a href="https://archive.org/details/registrummagnisi08scot/page/n616/mode/1up" target="_blank" rel="noopener noreferrer">p. 609</a>.</figcaption>
 </figure>
