@@ -5,7 +5,7 @@ slug: why-the-lowest-scottish-peer-is-not-a-baron
 meta_description: "The lowest rank of the Peerage of Scotland is the Lord of Parliament, not baron. The Great Seal shows why: the honour was added to men who already held lordships and baronies."
 category: Words & Usage
 published: 2026-11-02
-reviewed: 2026-11-02
+reviewed: 2026-11-04
 ---
 
 # Why is the lowest Scottish peer a Lord of Parliament, not a baron?
@@ -17,6 +17,7 @@ reviewed: 2026-11-02
 - **The Peerage of Scotland has no baron.** Its ranks are duke, marquis, earl, viscount and Lord of Parliament. A woman holding the lowest rank sat in the Lords as “Lady Saltoun of Abernethy”, not “Baroness”.
 - **The baronage came first.** “Baron” was the name of the whole order. Sir Alexander Forbes held a free barony by 1429 and became a lord of parliament only in 1444 or 1445.
 - **The honour was added.** A Great Seal charter of 1583 makes Andrew Keith lord and baron of Dingwall, “who should have the honour of a lord of Parliament”.
+- **Sometimes the honour was in the land.** At Torphichen the title of Lord of Parliament was annexed to part of a barony granted to “heirs and assignees”. In 1862 the London press called its holder “Baron of Torphichen … in the peerage of Scotland”.
 - **So a Scottish baron is no lesser copy of an English peer.** In England the word names a rank of the peerage. In Scotland it names a dignity of its own, which the Act of 2000 keeps by name.
 
 ## “Baron” meant the whole order
@@ -40,24 +41,33 @@ The Register of the Great Seal shows that lordship and the honour of Parliament 
 
 So “lord” alone did not make a peer. The peerage rank needed its fuller name, Lord of Parliament, because lords held territorially in the baronage. It was at first an honour added to such a lordship, and only later given by patent alone: in 1627 Sir Thomas Fairfax, an Englishman, was made Lord Fairfax of Cameron with no lands.[^11]
 
+## Torphichen: the honour in the land
+
+At Torphichen the barony and the lordship of Parliament were one estate. In January 1564 Sir James Sandilands, Preceptor of the Knights of St John in Scotland, resigned the Order’s lands into Queen Mary’s hands. She granted them back to him “and his heirs and assignees”, for 10,000 crowns of the sun, and incorporated them “into the free barony of Torphichen”. The charter names no title.[^12] In 1606 it was accepted “as the sole evidence creating the lordship and carrying with it the dignity of Lord Torphichen”.[^13]
+
+When Charles I resumed the church lands, the fourth Lord feared for the superiorities of his barony. An award of the King in 1636, with the force of an Act of Parliament, kept them “within that … portion of it in which the title and dignity of Lords of Parliament subsists, and to which the title of Lord of Parliament is annexed”.[^14] The peerage stood in the land: a lordship of Parliament annexed to part of a barony, held of the Crown by heirs and assignees.
+
+The usage followed. When the tenth Lord died in March 1862, the London press recorded the death of “James Sandilands, Baron of Torphichen, in West Lothian, in the peerage of Scotland”. He had “succeeded to the ancient barony on the death of his cousin, the ninth lord”, and his heir was “Master of Torphichen”.[^15] Baron and lord, barony and peerage, in one notice.
+
 ## What the Union changed
 
-England took another road. There “baron” became the lowest rank of the peerage, and at Westminster a baron was a peer. The Peerage of Scotland closed at the Union of 1707, and no Scottish peerage has been created since. The Stair Encyclopaedia puts it in a line: the lowest rank in the peerage was “lord” in Scotland before the Union, and has been “baron” since.[^12]
+England took another road. There “baron” became the lowest rank of the peerage, and at Westminster a baron was a peer. The Peerage of Scotland closed at the Union of 1707, and no Scottish peerage has been created since. The Stair Encyclopaedia puts it in a line: the lowest rank in the peerage was “lord” in Scotland before the Union, and has been “baron” since.[^16]
 
-That is why the King’s Scale of 1905 lists “Barons of Scotland” among the peers: it uses the British name for the lords of parliament.[^13] The holders themselves stayed Lords, and the women show it best. The Peerage Act 1963 gave a woman holding a peerage in her own right a seat in the Lords.[^14] Within months the House had “Baroness Strange of Knokin”, in an English barony, and “The Lady Kinloss”, in a Scottish lordship. Hansard’s “Lord Saltoun” of 1955 was followed by “Lady Saltoun of Abernethy”.[^15] The Scottish holders were Ladies, not Baronesses: the peerage of Scotland has no such rank.
+That is why the King’s Scale of 1905 lists “Barons of Scotland” among the peers: it uses the British name for the lords of parliament.[^17] The holders themselves stayed Lords, and the women show it best. The Peerage Act 1963 gave a woman holding a peerage in her own right a seat in the Lords.[^18] Within months the House had “Baroness Strange of Knokin”, in an English barony, and “The Lady Kinloss”, in a Scottish lordship. Hansard’s “Lord Saltoun” of 1955 was followed by “Lady Saltoun of Abernethy”.[^19] The Scottish holders were Ladies, not Baronesses: the peerage of Scotland has no such rank.
 
-Debrett’s table for England now gives them a line of their own, “Lords of Parliament, Scotland”.[^16]
+Debrett’s table for England now gives them a line of their own, “Lords of Parliament, Scotland”.[^20]
 
 ## Why it matters
 
 The common objection runs: a baron is a peer, so a Scottish baron who is not a peer is no real baron. That is English usage. In Scotland the word never passed to the peerage, because the baronage already held it.
 
-Stair warns that the title “should not be confused with a dignity in the peerage of Scotland”.[^17] That is right, and it is the point. A Scottish baron does not claim a rank of the peerage. He holds a dignity older than the peerage: the Act of 2000 preserves “the dignity of baron”, and in 1943 the Lyon Court found the minor barons “a ‘titled nobility’”.[^18]
+Stair warns that the title “should not be confused with a dignity in the peerage of Scotland”.[^21] That is right, and it is the point. A Scottish baron does not claim a rank of the peerage. He holds a dignity older than the peerage: the Act of 2000 preserves “the dignity of baron”, and in 1943 the Lyon Court found the minor barons “a ‘titled nobility’”.[^22]
 
 ## What the record does not say
 
 - **No source gives the reason in terms.** The charters show the separation. That the rank took its name from it is our reading.
 - **The word still crosses over.** Debrett’s table for Scotland reads “Barons or Lords of Parliament (Scotland)”.
+- **Whether the Torphichen peerage could be sold.** The charter runs to heirs and assignees, as a barony’s did, and the award of 1636 annexes the title to land. No source read says the dignity ever passed by sale, or that it could.
 - **The phrase is older than the first named creations.** The Act of 1428 has “lords of parliament”; the first named creations are of the 1440s.
 
 ## The Roll and the Pledge
@@ -68,8 +78,8 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 
 ### Authority & sources
 
-- *Registrum Magni Sigilli Regum Scotorum*, vols. II, V and VIII. The Register prints abstracts of the charters.
-- Sir George Mackenzie, *Works*, vol. II (Edinburgh, 1716); William Borthwick, [*An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland* (1775)](https://archive.org/details/inquiryintoorigi00bortuoft/); *The Scots Peerage*, vol. IV (Edinburgh, 1907).
+- *Registrum Magni Sigilli Regum Scotorum*, vols. II, IV, V and VIII. The Register prints abstracts of the charters.
+- Sir George Mackenzie, *Works*, vol. II (Edinburgh, 1716); William Borthwick, [*An Inquiry into the Origin and Limitations of the Feudal Dignities of Scotland* (1775)](https://archive.org/details/inquiryintoorigi00bortuoft/); *The Scots Peerage*, vols. IV (1907) and VIII (1911); *Saint James’s Chronicle*, 27 March 1862.
 - *The Acts of the Parliaments of Scotland*, vol. II; The Records of the Parliaments of Scotland, [1428/3/3](https://www.rps.ac.uk/trans/1428/3/3), [1540/12/30](https://www.rps.ac.uk/trans/1540/12/30), [1567/12/45](https://www.rps.ac.uk/trans/1567/12/45) and [1592/4/72](https://www.rps.ac.uk/trans/1592/4/72).
 - *The London Gazette*, 14 March 1905; *Stair Memorial Encyclopaedia*, vol. 16; Debrett’s, Tables of Precedence; House of Lords Debates, 1955, 1963, 1964 and 1985; Peerage Act 1963.
 - Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63); Court of the Lord Lyon, interlocutor of 26 February 1943.
@@ -85,10 +95,14 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^9]: 14 October 1591, translated from the Latin: “into the free lordship of Balquhidder”. *Register of the Great Seal*, vol. V, no. 1939, [p. 654](https://archive.org/details/registrummagnisi05scot/page/n661).
 [^10]: 4 June 1631, translated from the Latin: “into the free lordship and barony of Fenton”. *Register of the Great Seal*, vol. VIII, no. 1779, [p. 609](https://archive.org/details/registrummagnisi08scot/page/n616).
 [^11]: 18 October 1627: *Register of the Great Seal*, vol. VIII, no. 1155, [p. 404](https://archive.org/details/registrummagnisi08scot/page/n411).
-[^12]: *Stair Memorial Encyclopaedia*, vol. 16, “Peerages”, para. 1311, [p. 136](https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22lowest+rank+in+the+peerage%22). The title “Precedence”, para. 2018 (p. 432), uses “baron” in the same way, for the lowest rank of the peerage. In copyright; summarised.
-[^13]: *The London Gazette*, 14 March 1905, issue 27774, [p. 2013](https://www.thegazette.co.uk/London/issue/27774/page/2013). See [“Never ceded”: the precedence of a Scottish baron](/reading-room/the-precedence-of-a-scottish-baron/).
-[^14]: Peerage Act 1963, [s. 6](https://www.legislation.gov.uk/ukpga/1963/48/section/6/enacted): “A woman who is the holder of a hereditary peerage in the peerage of England, Scotland, Great Britain or the United Kingdom shall … have the same right … to sit and vote in that House”.
-[^15]: House of Lords Debates, 19 November 1963, vol. 253, [c. 207](https://api.parliament.uk/historic-hansard/lords/1963/nov/19/baroness-strange-of-knokin): “Baroness Strange of Knokin took the Oath”; 18 February 1964, vol. 255, [c. 753](https://api.parliament.uk/historic-hansard/lords/1964/feb/18/preamble): “The Lady Kinloss—Sat first in Parliament, pursuant to the Peerage Act, 1963”; 22 November 1955, vol. 194, [cc. 687–707](https://api.parliament.uk/historic-hansard/lords/1955/nov/22/persecution-of-railway-non-strikers); 1 May 1985, vol. 463, [cc. 234–6](https://api.parliament.uk/historic-hansard/lords/1985/may/01/women-science-undergraduates). Hansard’s [record of Flora Fraser](https://api.parliament.uk/historic-hansard/people/ms-flora-fraser): “Titles in Lords: Lady Saltoun of Abernethy”.
-[^16]: Debrett’s, *Tables of Precedence* (online, read 1 November 2026).
-[^17]: *Stair Memorial Encyclopaedia*, vol. 16, “Peerages”, para. 1311, [p. 136](https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22lowest+rank+in+the+peerage%22).
-[^18]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63); Court of the Lord Lyon, interlocutor of 26 February 1943, Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26. See [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/)
+[^12]: *Register of the Great Seal*, vol. IV, no. 1499, 24 January 1563-64, [pp. 343](https://archive.org/details/registrummagnisi04scot/page/n350/mode/1up)–[344](https://archive.org/details/registrummagnisi04scot/page/n351/mode/1up), translated from the Latin: the lands, which “the Queen incorporated into the free barony of Torphichen”, granted to “the said James, lord of St John’s, his heirs and assignees”, for “10,000 gold crowns of the sun”, with a promise to ratify the grant in Parliament when she reached the age of twenty-five.
+[^13]: *The Scots Peerage*, vol. VIII (Edinburgh, 1911), [p. 387](https://archive.org/details/scotspeeragefoun08paul/page/n414/mode/1up): “Though his new title is not named in this charter, it was accepted in 1606 as the sole evidence creating the lordship and carrying with it the dignity of LORD TORPHICHEN, which designation he bore from the date of the writ.”
+[^14]: Award of Charles I, dated 15 May 1636, *The Acts of the Parliaments of Scotland*, vol. V, p. 162, as quoted in *The Scots Peerage*, vol. VIII, [p. 392](https://archive.org/details/scotspeeragefoun08paul/page/n419/mode/1up), in modern English. The award followed a resolution of the Privy Council and was “to have the force of an Act of Parliament”.
+[^15]: *Saint James’s Chronicle*, 27 March 1862, p. 5; the same notice in the *Brighton Gazette*, 3 April 1862, p. 2 (British Newspaper Archive). The tenth Lord died on 22 March 1862: *The Scots Peerage*, vol. VIII, [p. 397](https://archive.org/details/scotspeeragefoun08paul/page/n424/mode/1up).
+[^16]: *Stair Memorial Encyclopaedia*, vol. 16, “Peerages”, para. 1311, [p. 136](https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22lowest+rank+in+the+peerage%22). The title “Precedence”, para. 2018 (p. 432), uses “baron” in the same way, for the lowest rank of the peerage. In copyright; summarised.
+[^17]: *The London Gazette*, 14 March 1905, issue 27774, [p. 2013](https://www.thegazette.co.uk/London/issue/27774/page/2013). See [“Never ceded”: the precedence of a Scottish baron](/reading-room/the-precedence-of-a-scottish-baron/).
+[^18]: Peerage Act 1963, [s. 6](https://www.legislation.gov.uk/ukpga/1963/48/section/6/enacted): “A woman who is the holder of a hereditary peerage in the peerage of England, Scotland, Great Britain or the United Kingdom shall … have the same right … to sit and vote in that House”.
+[^19]: House of Lords Debates, 19 November 1963, vol. 253, [c. 207](https://api.parliament.uk/historic-hansard/lords/1963/nov/19/baroness-strange-of-knokin): “Baroness Strange of Knokin took the Oath”; 18 February 1964, vol. 255, [c. 753](https://api.parliament.uk/historic-hansard/lords/1964/feb/18/preamble): “The Lady Kinloss—Sat first in Parliament, pursuant to the Peerage Act, 1963”; 22 November 1955, vol. 194, [cc. 687–707](https://api.parliament.uk/historic-hansard/lords/1955/nov/22/persecution-of-railway-non-strikers); 1 May 1985, vol. 463, [cc. 234–6](https://api.parliament.uk/historic-hansard/lords/1985/may/01/women-science-undergraduates). Hansard’s [record of Flora Fraser](https://api.parliament.uk/historic-hansard/people/ms-flora-fraser): “Titles in Lords: Lady Saltoun of Abernethy”.
+[^20]: Debrett’s, *Tables of Precedence* (online, read 1 November 2026).
+[^21]: *Stair Memorial Encyclopaedia*, vol. 16, “Peerages”, para. 1311, [p. 136](https://archive.org/details/partnershippassp0016unse/mode/1up?q=%22lowest+rank+in+the+peerage%22).
+[^22]: Abolition of Feudal Tenure etc. (Scotland) Act 2000, [s. 63](https://www.legislation.gov.uk/asp/2000/5/section/63); Court of the Lord Lyon, interlocutor of 26 February 1943, Public Register of All Genealogies and Birthbrieves, vol. iv, p. 26. See [Untitled or titled nobility?](/reading-room/untitled-in-1930-titled-in-1943/)
