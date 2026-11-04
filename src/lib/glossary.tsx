@@ -343,7 +343,7 @@ export const glossary: { term: string; def: string; note?: ReactNode }[] = [
   },
   {
     term: "Additaments",
-    def: "“Symbols signifying a particular rank” added to a coat of arms (Court of Session, 2019): for barons, the baronial helm; formerly also the chapeau, the feudo-baronial mantle and, for pre-1587 baronial houses, supporters — only for baronies held since then continuously in the same family.",
+    def: "“Symbols signifying a particular rank” added to a coat of arms (Court of Session, 2019): for barons, the baronial helm; formerly also the chapeau, the feudo-baronial mantle and, for pre-1587 baronies and baronial houses, supporters.",
     note: (
       <>
         <a

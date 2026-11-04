@@ -70,9 +70,15 @@ const SUPPORTERS_SOURCE = (
     <a href="https://web.archive.org/web/20100925150122/http://www.lyon-court.com:80/lordlyon/616.html" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
       archived copy
     </a>
-    ). Innes of Learney: “the heirs of the many minor barons, or ‘Lairds’, who were liable to be called to Parliament prior
-    to 1587 … are entitled as of right to obtain grants of supporters from the Lord Lyon” (<em>Scots Heraldry</em>, 1978
-    ed., p. 71). The barons’ case of June 1673 is in Fountainhall, “Sundry Barons, &amp;c. against The Lord Lyon”.
+    ). Innes of Learney, then Carrick Pursuivant, in 1931: “The liberi barones, whose privileges arise out of Crown grants,
+    enjoy the right of armorial supporters, if anterior to 1587” (<em>Encyclopaedia of the Laws of Scotland</em>, vol. XII,
+    “Precedence”, s. 28,{" "}
+    <a href="https://archive.org/details/bwb_KU-337-846_12/mode/1up?q=%22rank+before+esquires%22" target="_blank" rel="noopener noreferrer" className="underline decoration-gold/50 underline-offset-2 hover:text-oxblood">
+      p. 16
+    </a>
+    ); and later, from the line: “the heirs of the many minor barons, or ‘Lairds’, who were liable to be called to
+    Parliament prior to 1587 … are entitled as of right to obtain grants of supporters from the Lord Lyon” (<em>Scots
+    Heraldry</em>, 1978 ed., p. 71). The barons’ case of June 1673 is in Fountainhall, “Sundry Barons, &amp;c. against The Lord Lyon”.
   </>
 );
 
@@ -139,8 +145,8 @@ const chapters: GuideChapter[] = [
     title: "Supporters",
     lead: (
       <>
-        The old barons bore supporters because they had been heritable counsellors to the King in Parliament, so only
-        the heirs of barons liable to be called to Parliament before 1587 have them
+        The old barons bore supporters because they had been heritable counsellors to the King in Parliament, so they belong to the old baronies,
+        held by Crown grant before 1587, and the heirs of their barons
         <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/60">
           <Footnote n={3}>{SUPPORTERS_SOURCE}</Footnote>
         </span>
