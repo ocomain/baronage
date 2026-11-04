@@ -5,7 +5,7 @@ slug: the-precedence-of-a-scottish-baron
 meta_description: "Where a Scottish baron ranks: the baronets’ patents of 1625, the red robe, the coronet warrant of 1665, the King’s Scale of 1905 and the Act of 2000."
 category: Law & Statutes
 published: 2026-10-14
-reviewed: 2026-10-14
+reviewed: 2026-11-04
 essential: true
 ---
 

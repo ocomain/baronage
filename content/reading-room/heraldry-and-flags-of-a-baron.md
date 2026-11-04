@@ -5,7 +5,7 @@ slug: heraldry-and-flags-of-a-baron
 meta_description: "A plain guide to a Scottish baron’s heraldry: how arms are held, the helm, chapeau and supporters, and the banner, standard, guidon, pennon and pinsel."
 category: Robes & Insignia
 published: 2026-10-05
-reviewed: 2026-10-10
+reviewed: 2026-11-04
 ---
 
 # The arms and flags of a baron
@@ -79,11 +79,17 @@ A narrower statement is sometimes quoted against the barons. In a note of 27 Jun
 
 So supporters go with an old baronial house, not with the holding of a barony as such. The guidance of 2010 keeps the rule: “Armigers formerly entitled to a chapeau Azure, or to supporters as representatives of baronial houses who had a seat in Parliament until 1587, continue to be so entitled.”[^9]
 
+### By descent, and by record
+
+A right by descent and a right of record are two things. The heirs of a house that was liable to be called to Parliament before 1587 are entitled, in Innes of Learney’s words, “as of right to obtain grants of supporters”.[^13] The right is to obtain the grant. Nothing is borne until the Lord Lyon has granted or matriculated it and the painting is in the Register, “the true and unrepeallable rule of all Armes and Bearings in Scotland”.[^3] So a claim is proved by evidence, and the evidence is what the Lyon Court asks for: for supporters, the descent from the baron of before 1587; for the chapeau, the title to the barony, on a petition lodged before 28 November 2004, or the succession to such a baron since.[^9] Tait’s note of 1821 shows what a claim meets when the usage has lapsed, “the want of usage is a strong presumption against the right”. The Court’s findings for Burnet of Leys in 1838 and for Gordon of Hallhead in 1934 show what answers it: the record.[^15]
+
+Other heraldic authorities draw their own lines, and none of them is this one. In England the chapeau is a crest-support. Fox-Davies records that from Stuart times it was granted to others than peers, often in other colours; that by 1909 the College of Arms granted it “only in the case of a grant of arms to a peer”; and that it was by then “reserved for the crests granted to peers”. The red cap turned up ermine is the peer’s, and the College grants the cap in other colours on request. In Ireland the Ulster King of Arms confirmed a chapeau “on the strength of user”, and the Chief Herald of Ireland gives it no meaning of rank.[^16] Malta’s barons bear a coronet of rank, above the shield or above the helm, and supporters, in arms the republic registers “exactly as they stand” though it “does not formally recognize titles of nobility”.[^17] A chapeau from those offices is a crest-support. The chapeau the Lyon Court assigned to the baronage is the record of a dignity, and only that Court can enter it in the Register of 1672.
+
 ## The five flags
 
-“The other principal sign of honour”, Nisbet wrote in 1722, “is the ensign; under which general name, are comprehended standards, banners, pennons, gideons, and gonfanouns.”[^16] The Lyon Court’s guidance describes five: the banner, the standard, the guidon, the pennon and the pinsel.
+“The other principal sign of honour”, Nisbet wrote in 1722, “is the ensign; under which general name, are comprehended standards, banners, pennons, gideons, and gonfanouns.”[^18] The Lyon Court’s guidance describes five: the banner, the standard, the guidon, the pennon and the pinsel.
 
-The guidance has come down in three forms, and they are one text at three dates. The oldest is Innes of Learney’s *Scots Heraldry*, which gives the sizes in feet and yards. A printed leaflet of the Lyon Court, “Information Leaflet No. 3 … Scottish Heraldic Flags”, repeats them. A page of the Court’s former website, “Further Guidance on Flags”, turns them into metric measures.[^17] They agree on sizes and differ on who may have two of the flags, as shown below. All three speak of feudal barons, as was usual before 2004. The Court’s present website has no page on flags.
+The guidance has come down in three forms, and they are one text at three dates. The oldest is Innes of Learney’s *Scots Heraldry*, which gives the sizes in feet and yards. A printed leaflet of the Lyon Court, “Information Leaflet No. 3 … Scottish Heraldic Flags”, repeats them. A page of the Court’s former website, “Further Guidance on Flags”, turns them into metric measures.[^19] They agree on sizes and differ on who may have two of the flags, as shown below. All three speak of feudal barons, as was usual before 2004. The Court’s present website has no page on flags.
 
 <figure class="paper-figure paper-figure--tall">
 <img src="/images/reading-room/baron-flags-to-scale.svg" alt="Diagram of the five heraldic flags drawn to one scale: a square banner 0.90 metres each way; a tapering standard 3.5 metres long with a split rounded end; a guidon 2.40 metres long with a rounded end; a pennon 1.20 metres long ending in a point; a triangular pinsel 0.60 metres high and 1.35 metres long; and a figure 1.75 metres tall for scale." width="900" height="1375" loading="lazy">
@@ -94,47 +100,47 @@ The guidance has come down in three forms, and they are one text at three dates.
 
 <blockquote class="paper-pullquote paper-pullquote--text"><p>“The coat of arms fills the banner right to its edges, as though it were a rectangular shield.”</p><cite>The Court of the Lord Lyon, guidance on flags</cite></blockquote>
 
-The banner is the arms themselves made into a flag. The Lyon Court calls it “the personal flag of the owner of a coat of arms”, showing the arms “granted by the Lord Lyon or inherited in right of an ancestor”. It is “often wrongly called a ‘Standard’”. The guidance sets it apart from the other four, which it lists as “Special Heraldic Flags”, each granted, assigned or allotted by the Lord Lyon.[^18]
+The banner is the arms themselves made into a flag. The Lyon Court calls it “the personal flag of the owner of a coat of arms”, showing the arms “granted by the Lord Lyon or inherited in right of an ancestor”. It is “often wrongly called a ‘Standard’”. The guidance sets it apart from the other four, which it lists as “Special Heraldic Flags”, each granted, assigned or allotted by the Lord Lyon.[^20]
 
-The rule for drawing it is strict. “It is quite wrong to use a banner of a plain colour with the owner’s arms on a shield in the middle.” Helmet, crest, motto and supporters are left off.[^18]
+The rule for drawing it is strict. “It is quite wrong to use a banner of a plain colour with the owner’s arms on a shield in the middle.” Helmet, crest, motto and supporters are left off.[^20]
 
 <figure class="paper-figure">
 <img src="/images/reading-room/baron-banner-right-and-wrong.svg" alt="Two square flags. The first, marked right, is filled edge to edge by a coat of arms. The second, marked wrong, is a plain flag with a small shield of the same arms in the middle." width="900" height="520" loading="lazy">
 <figcaption>A banner, right and wrong, after the Lyon Court’s rule. The arms are invented for the drawing.</figcaption>
 </figure>
 
-The banner stands for its owner. “No one else may use it. Flown over the house it denotes that the armiger is there”. For a house flag the proportions are five to four.[^18]
+The banner stands for its owner. “No one else may use it. Flown over the house it denotes that the armiger is there”. For a house flag the proportions are five to four.[^20]
 
-A square banner is itself a mark of rank. “In actual mediaeval warfare”, Innes of Learney wrote, “none below knights-banneret and (feudal) barons displayed the *square* banner. Other nobles used, and can still only use, the ‘upright’ banners.”[^19]
+A square banner is itself a mark of rank. “In actual mediaeval warfare”, Innes of Learney wrote, “none below knights-banneret and (feudal) barons displayed the *square* banner. Other nobles used, and can still only use, the ‘upright’ banners.”[^21]
 
-For personal use the size goes by rank. Innes gives “Baronets and feudal barons, 3 feet square”, and the leaflet “Barons and Feudal Barons : 36 Inches square”. The web page has “Baronets and Feudal Barons : 0.90 square metres”, which a later copy corrects to “0.90 metres square”. A banner made to be carried in procession is taller: for “Feudal Barons, 3 ft. by 3 ft. 9 in.”, or 90 centimetres by 115.[^20]
+For personal use the size goes by rank. Innes gives “Baronets and feudal barons, 3 feet square”, and the leaflet “Barons and Feudal Barons : 36 Inches square”. The web page has “Baronets and Feudal Barons : 0.90 square metres”, which a later copy corrects to “0.90 metres square”. A banner made to be carried in procession is taller: for “Feudal Barons, 3 ft. by 3 ft. 9 in.”, or 90 centimetres by 115.[^22]
 
 ### The standard
 
-The standard is the long tapering flag, and it is not for every armiger. The Lyon Court’s guidance says it is “granted by the Lord Lyon only to those who have a ‘following’, such as Clan Chiefs, because it is a ‘Headquarters’ flag. It is used to mark the assembly point or Headquarters of the Clan or following, and does not necessarily denote the presence of the Standard’s owner as the personal banner does.”[^21]
+The standard is the long tapering flag, and it is not for every armiger. The Lyon Court’s guidance says it is “granted by the Lord Lyon only to those who have a ‘following’, such as Clan Chiefs, because it is a ‘Headquarters’ flag. It is used to mark the assembly point or Headquarters of the Clan or following, and does not necessarily denote the presence of the Standard’s owner as the personal banner does.”[^23]
 
-A baron was counted among those who have a following. Innes of Learney: “Standards, guidons, and pennons are assigned by Lyon in grants or matriculations to those who are peers, baronets, knights, barons, or chieftains, i.e. those who from their position or feudal tenure may be presumed to have a ‘following’.” He adds that standards and guidons “are legally regarded as an ‘addition to’ the armorial achievement.”[^22]
+A baron was counted among those who have a following. Innes of Learney: “Standards, guidons, and pennons are assigned by Lyon in grants or matriculations to those who are peers, baronets, knights, barons, or chieftains, i.e. those who from their position or feudal tenure may be presumed to have a ‘following’.” He adds that standards and guidons “are legally regarded as an ‘addition to’ the armorial achievement.”[^24]
 
-The guidance describes the parts. Next to the pole, in the hoist, old standards showed the Saltire and newer ones often show the owner’s arms. The rest is divided lengthways into tracts of the owner’s livery colours, on which are set the crest and badges, “separated by transverse bands bearing the owner’s motto or slogan”. And there is a mark of rank in the shape of the end: “Those of peers and barons have the ends split into two and rounded.”[^21]
+The guidance describes the parts. Next to the pole, in the hoist, old standards showed the Saltire and newer ones often show the owner’s arms. The rest is divided lengthways into tracts of the owner’s livery colours, on which are set the crest and badges, “separated by transverse bands bearing the owner’s motto or slogan”. And there is a mark of rank in the shape of the end: “Those of peers and barons have the ends split into two and rounded.”[^23]
 
-The Association’s Armorial has an example. The Letters Patent of Charles Russell Clayton Ross, Baron of Biggar, granted on a petition of 5 November 2004 and dated 23 October 2007, blazon his badge and crest “upon a Standard three and a half metres in length of four tracts Argent and Gules, split at the end”, with the Saltire in the hoist and the motto “in letters Argent upon two transverse bands Azure”. The patent limits the standard, with the chapeau, mantle and badge, to the petitioner and his successors in the arms “who are in the right of the barony of Biggar”.[^23]
+The Association’s Armorial has an example. The Letters Patent of Charles Russell Clayton Ross, Baron of Biggar, granted on a petition of 5 November 2004 and dated 23 October 2007, blazon his badge and crest “upon a Standard three and a half metres in length of four tracts Argent and Gules, split at the end”, with the Saltire in the hoist and the motto “in letters Argent upon two transverse bands Azure”. The patent limits the standard, with the chapeau, mantle and badge, to the petitioner and his successors in the arms “who are in the right of the barony of Biggar”.[^25]
 
 <figure class="paper-figure">
 <img src="/images/reading-room/baron-standard-biggar-2007-labelled.webp" alt="The standard of the Baron of Biggar as painted on his Letters Patent of 2007: a long tapering flag with the Saltire next to the pole, four stripes of white and red, a goat’s head badge twice, a red demi-lion crest, the motto Prospera et spera in Deo on two blue bands, and a split, rounded end. Six numbered labels." width="1318" height="518" loading="lazy">
 <figcaption>A baron’s standard, from the Letters Patent of the Baron of Biggar, 23 October 2007. <strong>1</strong> the Saltire in the hoist; <strong>2</strong> the badge; <strong>3</strong> the motto on a transverse band; <strong>4</strong> the crest; <strong>5</strong> four tracts of the livery colours, white and red; <strong>6</strong> the end split and rounded. Public Register of All Arms and Bearings in Scotland, vol. 86, p. 109; the patent is shown on <a href="https://roll.baronage.com/baron/charles-ross-of-biggar" target="_blank" rel="noopener noreferrer">the Roll</a>.</figcaption>
 </figure>
 
-On length the three texts agree. Innes gives “Knight and Baron, 4 yds.”, and the leaflet “Knights and Barons : 4 yards”, which is 3.66 metres. The web page gives “Knights and Feudal Barons : 3½ metres”: its metric table is the old table of yards rounded to the half metre. The Biggar standard is exactly that length. A later copy of the web page adds a caution. It reads “Knights and, where a Standard has been granted, Feudal Barons”.[^24]
+On length the three texts agree. Innes gives “Knight and Baron, 4 yds.”, and the leaflet “Knights and Barons : 4 yards”, which is 3.66 metres. The web page gives “Knights and Feudal Barons : 3½ metres”: its metric table is the old table of yards rounded to the half metre. The Biggar standard is exactly that length. A later copy of the web page adds a caution. It reads “Knights and, where a Standard has been granted, Feudal Barons”.[^26]
 
 ### The guidon
 
-The guidon is a shorter flag of the same shape, a third shorter than the standard, at 8 feet or 2.40 metres, and it ends in “a round, unsplit end”. It carries the crest or badge in the hoist and the motto in the fly. The texts disagree on who may have one. Innes and the leaflet give it to lairds who have a following but “are of non-baronial tenure”; in Innes’s words, “Lairds of non-baronial tenure are only allowed guidons.” The web page assigns it “to those individuals who qualify for a grant of supporters to their Arms and to other individuals who have a following”.[^25]
+The guidon is a shorter flag of the same shape, a third shorter than the standard, at 8 feet or 2.40 metres, and it ends in “a round, unsplit end”. It carries the crest or badge in the hoist and the motto in the fly. The texts disagree on who may have one. Innes and the leaflet give it to lairds who have a following but “are of non-baronial tenure”; in Innes’s words, “Lairds of non-baronial tenure are only allowed guidons.” The web page assigns it “to those individuals who qualify for a grant of supporters to their Arms and to other individuals who have a following”.[^27]
 
 ### The pennon
 
-The pennon is half the length of the guidon, 4 feet or 120 centimetres. The leaflet says it is assigned “in very rare cases and circumstances nowadays”; the web page says it “is assigned by the Lord Lyon to any armiger who wishes to apply for it”.[^26]
+The pennon is half the length of the guidon, 4 feet or 120 centimetres. The leaflet says it is assigned “in very rare cases and circumstances nowadays”; the web page says it “is assigned by the Lord Lyon to any armiger who wishes to apply for it”.[^28]
 
-The Armorial has one of these too. The Lyon Court document shown on the Roll for the Baron of Hartsyde, in the name of Lord Lyon Sellar, adds to his arms a “Pennon 120 centimetres long”, with “the Arms of the Petitioner in the hoist” and his motto.[^27]
+The Armorial has one of these too. The Lyon Court document shown on the Roll for the Baron of Hartsyde, in the name of Lord Lyon Sellar, adds to his arms a “Pennon 120 centimetres long”, with “the Arms of the Petitioner in the hoist” and his motto.[^29]
 
 <figure class="paper-figure">
 <img src="/images/reading-room/baron-pennon-hartsyde.webp" alt="The painted arms of the Baron of Hartsyde from the Association’s Armorial: a shield, helm, mantling and eagle crest, with a short blue and white pennon on a staff above, bearing the arms next to the staff and the motto." width="400" height="400" loading="lazy" style="max-width: 400px; margin-left: auto; margin-right: auto;">
@@ -143,7 +149,7 @@ The Armorial has one of these too. The Lyon Court document shown on the Roll for
 
 ### The pinsel
 
-The pinsel is a small triangular flag, 4 feet 6 inches long by 2 feet high, and it is a chief’s. The Lyon Court calls it “the flag denoting a person to whom a Clan Chief has delegated authority for a particular occasion”. It bears the chief’s crest within a strap and buckle and a circlet with his title, and “On top of this circlet is set the owner’s coronet of rank or his baronial cap.” It is not a flag for barons generally. In Innes’s words it is “Given only to Chiefs or very special Chieftain-barons for practical use”, and the Lyon Court adds, “only upon the specific authority of the Lord Lyon King of Arms.”[^28]
+The pinsel is a small triangular flag, 4 feet 6 inches long by 2 feet high, and it is a chief’s. The Lyon Court calls it “the flag denoting a person to whom a Clan Chief has delegated authority for a particular occasion”. It bears the chief’s crest within a strap and buckle and a circlet with his title, and “On top of this circlet is set the owner’s coronet of rank or his baronial cap.” It is not a flag for barons generally. In Innes’s words it is “Given only to Chiefs or very special Chieftain-barons for practical use”, and the Lyon Court adds, “only upon the specific authority of the Lord Lyon King of Arms.”[^30]
 
 ### The three texts side by side
 
@@ -158,13 +164,13 @@ On sizes the three agree, the metric figures being the old ones rounded. On who 
 
 ## The Saltire and the Lion Rampant
 
-A baron has no special right to either national flag, and needs none for the first. The Saltire is “the correct flag for all Scots or Scottish corporate bodies to fly”, and the leaflet adds that it “may be freely flown by any Scot”.[^29]
+A baron has no special right to either national flag, and needs none for the first. The Saltire is “the correct flag for all Scots or Scottish corporate bodies to fly”, and the leaflet adds that it “may be freely flown by any Scot”.[^31]
 
-The Lion Rampant is another matter. In the Lyon Court’s words, “This is NOT a national flag and its use by citizens and corporate bodies is entirely wrong.” It “is the Scottish Royal banner”, kept for the Sovereign and a few great officers who represent the Sovereign.[^30] J. H. Stevenson called its common use, in 1914, “by far the most outrageous infringement of the law in Scotland”.[^31]
+The Lion Rampant is another matter. In the Lyon Court’s words, “This is NOT a national flag and its use by citizens and corporate bodies is entirely wrong.” It “is the Scottish Royal banner”, kept for the Sovereign and a few great officers who represent the Sovereign.[^32] J. H. Stevenson called its common use, in 1914, “by far the most outrageous infringement of the law in Scotland”.[^33]
 
 ## Getting arms and flags today
 
-The Lyon Court still paints these flags. Its note of fees for April 2026 lists “Additional painting fees” for a “Standard or Guidon” from £295, a “Pinsel” at £380, a “Pennon or Pennoncel” at £273 and a “Banner” from £147, with a “Badge” at £189.[^32] In the Biggar patent the standard is both blazoned in the text and painted in the margin.
+The Lyon Court still paints these flags. Its note of fees for April 2026 lists “Additional painting fees” for a “Standard or Guidon” from £295, a “Pinsel” at £380, a “Pennon or Pennoncel” at £273 and a “Banner” from £147, with a “Badge” at £189.[^34] In the Biggar patent the standard is both blazoned in the text and painted in the margin.
 
 A baron who wants a flag has three steps to take. He should hold arms of his own. He should ask the Lyon Office which flags he may have and in what size. And he should have the flag made to the blazon in his patent, with the arms filling a banner to its edges.
 
@@ -176,9 +182,9 @@ A baron who wants a flag has three steps to take. He should hold arms of his own
 
 **“A baron has a right to a standard.”** Nearly. Innes of Learney wrote that a baron “will, if he applies for them, receive” a cap of estate, a standard and a mantle. It still had to be applied for and granted, and the Lyon Court’s later wording is “where a Standard has been granted”.[^6]
 
-**“A shield on a coloured flag is a banner.”** The Lyon Court calls that “quite wrong”. The arms must fill the flag.[^18]
+**“A shield on a coloured flag is a banner.”** The Lyon Court calls that “quite wrong”. The arms must fill the flag.[^20]
 
-**“Any Scot may fly the Lion Rampant.”** No. The Saltire is the flag for all Scots. The Lion Rampant is the Sovereign’s.[^30]
+**“Any Scot may fly the Lion Rampant.”** No. The Saltire is the flag for all Scots. The Lion Rampant is the Sovereign’s.[^32]
 
 ## The Roll and the Pledge
 
@@ -219,20 +225,22 @@ The Baronage of Scotland Association keeps [the Roll of Scottish Barons](/the-ro
 [^13]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 71.
 [^14]: Lyon Register, vol. iv, p. 33, as quoted by Seton, [p. 317](https://archive.org/details/lawpracticeofher00setouoft/page/n374/mode/1up), and by Stevenson, *Heraldry in Scotland*, vol. II, [p. 322](https://archive.org/details/heraldryinscotla02stev/page/n165/mode/1up).
 [^15]: Note of George Tait, Lyon-Depute, 27 June 1821, printed in Seton, *The Law and Practice of Heraldry in Scotland* (1863), pp. [286](https://archive.org/details/lawpracticeofher00setouoft/page/n343/mode/1up)–[287](https://archive.org/details/lawpracticeofher00setouoft/page/n344/mode/1up); Innes of Learney, *Scots Heraldry* (1978 ed.), p. 74, n. 18.
-[^16]: Nisbet, *A System of Heraldry* (ed. 1816), vol. I, [p. 10](https://archive.org/details/systemofheraldry01nisbuoft/page/n31/mode/1up).
-[^17]: See “Authority & sources”. *Scots Heraldry* was first published in 1934 and is quoted here from the edition of 1978. The web page is quoted from the archived copy of 14 January 2008, except where a later copy is named; it is later than the leaflet, which names the Secretary of State for Scotland where the web page names the First Minister. The leaflet has been read in the copy hosted by the Clan Strachan Society.
-[^18]: “Further Guidance on Flags”, under “The Personal Banner”; the leaflet, para. 13, has the same rule.
-[^19]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21. The italic is his.
-[^20]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21 and p. 35, n. 26; leaflet, paras. 13 and 14; “Further Guidance on Flags”, under “The Personal Banner” and “Carrying Flags”, where the carrying flag is “90 centimetres wide x 115 centimetres high”. The corrected wording is in the [archived copy of 27 February 2015](https://web.archive.org/web/20150227201624/http://www.lyon-court.com/lordlyon/375.html).
-[^21]: “Further Guidance on Flags”, under “The Standard”; leaflet, para. 17.
-[^22]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21.
-[^23]: Letters Patent of Charles Russell Clayton Ross, Baron of Biggar, by Lord Lyon Blair, 23 October 2007, matriculated in the Public Register of All Arms and Bearings in Scotland, vol. 86, p. 109, and shown on [the Roll](https://roll.baronage.com/baron/charles-ross-of-biggar).
-[^24]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 35, n. 30; leaflet, para. 17; “Further Guidance on Flags”, under “The Standard”. Four yards is 3.6576 metres. The later wording is in the [archived copy of 27 February 2015](https://web.archive.org/web/20150227201624/http://www.lyon-court.com/lordlyon/375.html). In some archived copies of the page, among them those of 2009, the fraction signs are missing or damaged, so that the figure appears to read “3 metres”.
-[^25]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21; leaflet, para. 18; “Further Guidance on Flags”, under “The Guidon”.
-[^26]: Leaflet, para. 19; “Further Guidance on Flags”, under “The Pennon”. Innes (p. 21) says only that pennons “are half the size of guidons” and are assigned with standards and guidons.
-[^27]: Shown on [the Roll](https://roll.baronage.com/baron/jean-guy-philip-boisserolles-de-st-julien), which describes it as a warrant for Letters Patent. The copy published there is small, and only the words quoted here have been read with confidence; its date cannot be read.
-[^28]: “Further Guidance on Flags”, under “The Pinsel”; Innes of Learney, *Scots Heraldry* (1978 ed.), p. 23; leaflet, para. 20, which has the circlet inscribed with “the Chief’s or Baron’s title”. The web page gives the size as 60 centimetres by 135.
-[^29]: The Court of the Lord Lyon, “The Saltire”, former website, [archived copy](https://web.archive.org/web/20080114024459/http://www.lyon-court.com:80/lordlyon/236.html) of 14 January 2008; leaflet, para. 21.
-[^30]: Leaflet, para. 12; the former website’s page “The ‘Lion Rampant’ Flag”, [archived copy](https://web.archive.org/web/20080114024505/http://www.lyon-court.com:80/lordlyon/237.html) of 14 January 2008, is to the same effect.
-[^31]: Stevenson, *Heraldry in Scotland* (1914), vol. I, [p. 100](https://archive.org/details/heraldryinscotla01stev/page/n161/mode/1up).
-[^32]: The Court of the Lord Lyon, [Note of Dues, Fees and Charges, April 2026](https://www.courtofthelordlyon.scot/index_htm_files/LyonOfficeFeeSheet.pdf), Appendix A, “Additional painting fees”.
+[^16]: A. C. Fox-Davies, *A Complete Guide to Heraldry* (London and Edinburgh, 1909), ch. XXIII, [p. 370](https://archive.org/details/completeguidetoh00foxduoft/page/n423/mode/1up): in Scotland and Ireland “Lyon King of Arms and Ulster King of Arms have always been considered to have, and still retain, the right to grant crests upon a chapeau”, a power “exceedingly sparingly used”, and arms “‘confirmed’ on the strength of user by Ulster King of Arms”; in the College of Arms since about 1800 “The chapeau is only granted in the case of a grant of arms to a peer”. [Pp. 379](https://archive.org/details/completeguidetoh00foxduoft/page/n432/mode/1up)–[381](https://archive.org/details/completeguidetoh00foxduoft/page/n434/mode/1up): “until after Stuart days the chapeau does not appear to have been allowed or granted to others than peers”, “it is now reserved for the crests granted to peers”, and “About the Stuart period the granting of crests upon chapeaux to others than peers became far from unusual”, with the sheriff’s grant of 1667 “On a chapeau sable, turned up or”. The text is also at [Project Gutenberg](https://www.gutenberg.org/ebooks/41617).
+[^17]: Charles A. Gauci, Chief Herald of Arms of Malta, “The Evolution of Heraldry in Malta (with reference to the Nobility)”, *Hidalguía* LXIX, no. 390 (2022), [pp. 355–370](https://maltaheraldry.mt/wp-content/uploads/2022/10/The-evolution-of-heraldry-in-Malta-With-reference-to-the-Nobility-CHARLES-A.-GAUCI.pdf): p. 357 on “the exact position of the coronet of rank vis-à-vis the helm”, with fig. 2, “Arms of a Maltese Marquis, coronet above shield”, fig. 3, “Arms of a Maltese Baron, coronet above helm”, and fig. 4, the arms of the 23rd Baron of Djar-il-Bniet and of Buqana, flanked by two winged figures; p. 365, “the Maltese nobility were and still are free to maintain the Arms they have always used and these are registered exactly as they stand”; p. 367, “Malta, as a republic does not formally recognize titles of nobility although freely permitting their use”.
+[^18]: Nisbet, *A System of Heraldry* (ed. 1816), vol. I, [p. 10](https://archive.org/details/systemofheraldry01nisbuoft/page/n31/mode/1up).
+[^19]: See “Authority & sources”. *Scots Heraldry* was first published in 1934 and is quoted here from the edition of 1978. The web page is quoted from the archived copy of 14 January 2008, except where a later copy is named; it is later than the leaflet, which names the Secretary of State for Scotland where the web page names the First Minister. The leaflet has been read in the copy hosted by the Clan Strachan Society.
+[^20]: “Further Guidance on Flags”, under “The Personal Banner”; the leaflet, para. 13, has the same rule.
+[^21]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21. The italic is his.
+[^22]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21 and p. 35, n. 26; leaflet, paras. 13 and 14; “Further Guidance on Flags”, under “The Personal Banner” and “Carrying Flags”, where the carrying flag is “90 centimetres wide x 115 centimetres high”. The corrected wording is in the [archived copy of 27 February 2015](https://web.archive.org/web/20150227201624/http://www.lyon-court.com/lordlyon/375.html).
+[^23]: “Further Guidance on Flags”, under “The Standard”; leaflet, para. 17.
+[^24]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21.
+[^25]: Letters Patent of Charles Russell Clayton Ross, Baron of Biggar, by Lord Lyon Blair, 23 October 2007, matriculated in the Public Register of All Arms and Bearings in Scotland, vol. 86, p. 109, and shown on [the Roll](https://roll.baronage.com/baron/charles-ross-of-biggar).
+[^26]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 35, n. 30; leaflet, para. 17; “Further Guidance on Flags”, under “The Standard”. Four yards is 3.6576 metres. The later wording is in the [archived copy of 27 February 2015](https://web.archive.org/web/20150227201624/http://www.lyon-court.com/lordlyon/375.html). In some archived copies of the page, among them those of 2009, the fraction signs are missing or damaged, so that the figure appears to read “3 metres”.
+[^27]: Innes of Learney, *Scots Heraldry* (1978 ed.), p. 21; leaflet, para. 18; “Further Guidance on Flags”, under “The Guidon”.
+[^28]: Leaflet, para. 19; “Further Guidance on Flags”, under “The Pennon”. Innes (p. 21) says only that pennons “are half the size of guidons” and are assigned with standards and guidons.
+[^29]: Shown on [the Roll](https://roll.baronage.com/baron/jean-guy-philip-boisserolles-de-st-julien), which describes it as a warrant for Letters Patent. The copy published there is small, and only the words quoted here have been read with confidence; its date cannot be read.
+[^30]: “Further Guidance on Flags”, under “The Pinsel”; Innes of Learney, *Scots Heraldry* (1978 ed.), p. 23; leaflet, para. 20, which has the circlet inscribed with “the Chief’s or Baron’s title”. The web page gives the size as 60 centimetres by 135.
+[^31]: The Court of the Lord Lyon, “The Saltire”, former website, [archived copy](https://web.archive.org/web/20080114024459/http://www.lyon-court.com:80/lordlyon/236.html) of 14 January 2008; leaflet, para. 21.
+[^32]: Leaflet, para. 12; the former website’s page “The ‘Lion Rampant’ Flag”, [archived copy](https://web.archive.org/web/20080114024505/http://www.lyon-court.com:80/lordlyon/237.html) of 14 January 2008, is to the same effect.
+[^33]: Stevenson, *Heraldry in Scotland* (1914), vol. I, [p. 100](https://archive.org/details/heraldryinscotla01stev/page/n161/mode/1up).
+[^34]: The Court of the Lord Lyon, [Note of Dues, Fees and Charges, April 2026](https://www.courtofthelordlyon.scot/index_htm_files/LyonOfficeFeeSheet.pdf), Appendix A, “Additional painting fees”.
