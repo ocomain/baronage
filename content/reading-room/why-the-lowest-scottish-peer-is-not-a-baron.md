@@ -39,7 +39,7 @@ The Register of the Great Seal shows that lordship and the honour of Parliament 
 - **1591, Balquhidder.** Sir John Murray, a knight, in free lordship. No honour of Parliament.[^9]
 - **1631, Fenton.** James Maxwell of Innerwick, in free lordship and barony. No honour of Parliament.[^10]
 
-It is often said that the only lords are peers. The Register answers it. Balquhidder and Fenton were erected into free lordships with no honour of Parliament, and their holders were lords of those lands and nothing more. Dingwall’s charter adds the honour as a further clause. The three entries are below.
+It is often said that the only lords are peers. The Register answers it. Balquhidder and Fenton were erected into free lordships with no honour of Parliament, and their holders were lords of those lands and nothing more. Dingwall’s charter adds the honour as a further clause. Torphichen shows a third kind of lord: before the hereditary peerage of 1564, the Preceptors of the Knights of St John were lords for their lives, by election and “investiture in the fief”. The three charter entries are below.
 
 <figure class="paper-figure">
 <img src="/images/reading-room/rms-v-1337-dingwall-1583.webp" alt="Register of the Great Seal, vol. V, no. 1337, 3 August 1587, reciting the charter of 18 March 1583: the lands of Dingwall incorporated in liberum dominium et baroniam, the lordship called the lordschip of Dingwall, ordaining the said Andrew to be called dominum et baronem de Dingwall, qui honorem domini parliamenti haberet" width="830" height="1660" loading="lazy">
@@ -87,7 +87,7 @@ Stair warns that the title “should not be confused with a dignity in the peera
 
 - **No source gives the reason in terms.** The charters show the separation. That the rank took its name from it is our reading.
 - **The word still crosses over.** Debrett’s table for Scotland reads “Barons or Lords of Parliament (Scotland)”.
-- **Whether the Torphichen peerage could pass by sale.** Riddell thought “a curious question might, possibly, arise, on the alienation” of the portion that carries the title, and Stevenson called the barony “possibly an exception” to the rule that a dignity cannot be transferred. No source read says it ever passed by sale.
+- **How far the Torphichen peerage follows the land.** Riddell: the barony “passed like a common property, under a limitation applicable to land, carrying the Peerage along with it”, and “a curious question might, possibly, arise, on the alienation” of the portion that carries the title. Stevenson: “When the holding was alienated the dignity went with it”, and Torphichen “is possibly an exception” to the rule that a dignity “is not now capable of transference”. Both leave the question open; the record shows the peerage passing with the barony by inheritance.
 - **The phrase is older than the first named creations.** The Act of 1428 has “lords of parliament”; the first named creations are of the 1440s.
 
 ## The Roll and the Pledge
