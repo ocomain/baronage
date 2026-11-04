@@ -24,6 +24,8 @@ export type CouncilMember = {
   alt?: string;
   /** Optional external link shown beside the bio link */
   link?: { href: string; label: string };
+  /** Optional comic, shown as a picture link below the links (owner, 4 Nov 2026) */
+  comic?: { href: string; img: string; alt: string };
   /** object-position for the wide pop-up banner (defaults to pos) */
   popPos?: string;
   /** Optional different image for the wide pop-up banner (defaults to img) */
@@ -127,6 +129,31 @@ export function CouncilCard({ m, first = false }: { m: CouncilMember; /** The fi
               className="ml-4 mt-4 inline-block font-sans text-sm font-semibold uppercase tracking-[0.2em] text-gold-light underline decoration-gold-light/60 decoration-2 underline-offset-4 transition-colors hover:text-parchment-50 sm:text-xs"
             >
               {m.link.label}
+            </a>
+          )}
+          {m.comic && (
+            <a
+              href={m.comic.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="group/comic mx-auto mt-5 block w-full max-w-[17rem] sm:max-w-[13rem]"
+            >
+              <span className="block overflow-hidden border border-gold/40 shadow-[0_18px_36px_-22px_rgba(0,0,0,0.8)] transition-colors group-hover/comic:border-gold-light">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={m.comic.img}
+                  alt={m.comic.alt}
+                  width={560}
+                  height={294}
+                  loading="lazy"
+                  decoding="async"
+                  className="block aspect-[560/294] w-full object-cover transition duration-500 group-hover/comic:scale-105"
+                />
+              </span>
+              <span className="mt-3 inline-block font-sans text-sm font-semibold uppercase tracking-[0.2em] text-gold-light underline decoration-gold-light/60 decoration-2 underline-offset-4 transition-colors group-hover/comic:text-parchment-50 sm:text-xs">
+                The comic ↗
+              </span>
             </a>
           )}
         </figcaption>
