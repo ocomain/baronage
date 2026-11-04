@@ -323,7 +323,8 @@ html {
 .paper-body .paper-figure--tall img { max-width: 34rem; margin-left: auto; margin-right: auto; }
 /* A small document crop: two thirds of the column, centred (papers chat, 4 Nov 2026). */
 .paper-body .paper-figure--small img { max-width: 66.7%; margin-left: auto; margin-right: auto; }
-.paper-body .paper-figure--small figcaption { max-width: 66.7%; margin-left: auto; margin-right: auto; }
+/* Its caption keeps the full column: it carries the translation. */
+.paper-body .paper-figure--small figcaption { font-size: 1.02rem; }
 /* Key findings panel at the head of a paper: figures, pull quotes, fact-check note */
 .paper-body .paper-findings {
   margin: 2rem 0 2.75rem;
