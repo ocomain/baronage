@@ -140,7 +140,7 @@ const chapters: GuideChapter[] = [
     lead: (
       <>
         The old barons bore supporters because they had been heritable counsellors to the King in Parliament, so only
-        families who held their barony before 1587 have them
+        the heirs of barons liable to be called to Parliament before 1587 have them
         <span className="[&_button]:text-gold-light [&_button]:decoration-gold-light/60">
           <Footnote n={3}>{SUPPORTERS_SOURCE}</Footnote>
         </span>
