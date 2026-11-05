@@ -55,12 +55,13 @@ const allMembers: CouncilMember[] = [
     also: "Tánaiste Clan Ó Comáin",
     img: "/council/kinfauns.jpg",
     link: { href: "https://www.ocomain.org", label: "Clan Ó Comáin ↗" },
-    comic: {
-      href: "https://www.lordkinfauns.com/comic/",
-      img: "/council/comic-kinfauns.webp",
-      label: "Kinfauns Comic ↗",
-      alt: "Comic panel: Sir Thomas kneels by the loch at Lochmaben, his sword held up like a cross, and swears to avenge Wallace",
-    },
+    // Comic off the card for now (owner, 5 Nov 2026: "temp remove"). To bring it back, uncomment these lines.
+    // comic: {
+    //   href: "https://www.lordkinfauns.com/comic/",
+    //   img: "/council/comic-kinfauns.webp",
+    //   label: "Kinfauns Comic ↗",
+    //   alt: "Comic panel: Sir Thomas kneels by the loch at Lochmaben, his sword held up like a cross, and swears to avenge Wallace",
+    // },
     pos: "center 18%",
     popPos: "center 14%",
     bio: "Antóin, Younger of Kinfauns is heir to the chiefship of Ó Comáin and lordship of Kinfauns — granted by King David II for the pirate-knight Sir Thomas de Longueville in 1330, with crown confirmation by James III for his descendant Sir William Charteris in 1487. Kinfauns is Tanist of Clan Ó Comáin, heir to the Chief, an ancient Gaelic Royal House and Irish clan recognised under the patronage of the President of Ireland. From the family seat at Newhall, County Clare, the family are custodians of Killone Abbey and the Holy Well of St John the Baptist. The lordship is pledged as a hereditary title upon the Roll.",
