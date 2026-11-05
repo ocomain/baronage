@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 const PDF = "The-Barons-Course-Baronage-of-Scotland-Association.pdf";
-/** Off while the PDF is out of date (owner 2026-11-02); back to true, with BOOKLET_ON in CoursePanel.tsx, once it is remade. */
-const PDF_ON = false;
+/** Off 2026-11-02 while the PDF was out of date (owner); back on 2026-11-05 with the PDF remade. Pair: BOOKLET_ON in CoursePanel.tsx. */
+const PDF_ON = true;
 
 /** The PDF's size in whole megabytes, or null while there is none. */
 function pdfMegabytes() {

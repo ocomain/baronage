@@ -7,8 +7,8 @@ import { COURSE_EVENT, readProgress, writeProgress } from "@/lib/courseProgress"
 import { CourseSeal, PartSeal } from "./CourseSeal";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
-/** Off while the booklet PDF is out of date (owner 2026-11-02); back to true, with PDF_ON in print/page.tsx, once it is remade. */
-const BOOKLET_ON = false;
+/** Off 2026-11-02 while the booklet PDF was out of date (owner); back on 2026-11-05 with the PDF remade. Pair: PDF_ON in print/page.tsx. */
+const BOOKLET_ON = true;
 
 /**
  * The Baron's Course (owner 2026-10-23): the steps by part, each with its numeral, title, lesson line, reading time
