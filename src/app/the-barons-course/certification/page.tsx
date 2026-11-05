@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 import { site } from "@/lib/site";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 import { Seal } from "@/components/Seal";
-import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PATH, courseSteps, numberWord } from "@/lib/course";
+import { COURSE_NAME, COURSE_OG_IMAGE, COURSE_PATH, TEST_PER_PAPER, courseSteps, numberWord, testPassMark, testQuestions } from "@/lib/course";
 
 /**
  * The Baron's Course Certificate: the page that describes it, under The Baron's Course in the menu (owner 2026-10-28:
@@ -212,8 +212,9 @@ const steps: { title: string; body: ReactNode }[] = [
     title: "Take the test",
     body: (
       <>
-        Online: {numberWord(courseSteps.length)} questions, one from each paper. Ten right answers pass, and you may take it
-        again whenever you like.
+        Online: {numberWord(testQuestions())} questions, {numberWord(TEST_PER_PAPER)} from each paper.{" "}
+        {numberWord(testPassMark()).replace(/^./, (c) => c.toUpperCase())} right answers pass, and you may take it again
+        whenever you like.
       </>
     ),
   },

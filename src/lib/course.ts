@@ -137,8 +137,19 @@ export const COURSE_OG_IMAGE = {
 
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
   "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
-/** 12 -> "twelve" (to twenty; figures beyond). */
-export const numberWord = (n: number) => WORDS[n] ?? String(n);
+const TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+/** 12 -> "twelve", 51 -> "fifty-one" (to ninety-nine; figures beyond). */
+export const numberWord = (n: number) =>
+  n <= 20 ? WORDS[n] ?? String(n) : n < 100 ? `${TENS[Math.floor(n / 10)]}${n % 10 ? `-${WORDS[n % 10]}` : ""}` : String(n);
+
+/**
+ * The members' test (owner 2026-11-05: "10 questions is way too little for a course.... surely it should grill for many
+ * questions"; agreed, via the papers chat: three questions from each paper, 80% to pass, so 51 and 41 at 17 papers).
+ * Stated on the certification page; the test itself waits for paying members and the members' area (owner).
+ */
+export const TEST_PER_PAPER = 3;
+export const testQuestions = () => courseSteps.length * TEST_PER_PAPER;
+export const testPassMark = () => Math.ceil(testQuestions() * 0.8);
 
 /** "Twelve papers, read in order, give…": the count follows the published steps. */
 export const courseStandfirst = () => {
