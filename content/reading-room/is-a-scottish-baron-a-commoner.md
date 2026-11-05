@@ -17,7 +17,7 @@ essential: true
 
 - **“Commoner”, in the sense of anyone who is not a peer, is English law.** Blackstone wrote in 1765 that all below the peers are “in law peers, in respect of their want of nobility”.
 - **Scots law drew the line lower.** Sir George Mackenzie, Lord Advocate, wrote in 1680 that the nobility is “greater” and “lesser”, and that “Under the Word Baron all our Nobility are comprehended”. An Act of 1540 names “every noble man, such as an earl, lord, knight and baron”. Parliament called the barons “a part of the nobility” in 1567, and named “the nobility, earls, lords and barons” in 1592.
-- **Noble, though not peers of Parliament.** Mackenzie: “though all these be not Peers of Parliament, yet they are all Peers to one another”. A nobleman had to accept a gentleman’s challenge to a duel as his peer.
+- **Noble, though not peers of Parliament.** Mackenzie: “though all these be not Peers of Parliament, yet they are all Peers to one another”. A nobleman had to accept a gentleman’s challenge to a duel as his peer. See [Were Scotland’s barons peers?](/reading-room/were-scotlands-barons-peers/).
 - **A barony ennobles.** Mackenzie: “a Barony, as we call it, do ennoble; for Baronies are establisht only by the Prince’s Erection or Confirmation.”
 - **Before the Union, Scots did not use the word for rank.** A “commoner” was an arbitrator. The common people were, in Mackenzie’s word, “Plebeians”.
 - **“Commoner” measures the peerage, not nobility.** A foreign baron in London is not called a commoner. A British one was: Lionel de Rothschild, a baron of the Austrian empire, sat in the House of Commons from 1858.
