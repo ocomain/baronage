@@ -115,7 +115,7 @@ The warrant’s words are “the barons and lords of Parliament of this ancient 
 
 The other reading is that the words name one body twice. The warrant goes on to speak of “those of the degree of peers”, who are to bear the cap as “the viscounts of this kingdom, and other peers of higher degree” bear their coronets. Mackenzie, fifteen years later, writes “the Barons or Lords of Parliament”.[^27]
 
-On the words, the wider reading is the stronger: the right the warrant describes was the barons’ right, and the name it uses was Parliament’s name for them. What it lacks is use. No baron below the peerage is known to have borne the cap. The Association does not press the point, and claims no coronet today. A baron’s own mark is the chapeau, the red cap turned up with ermine, and the record of it is older than the warrant. When the vault at Roslin was opened in 1650, the Baron of Roslin lay “in his armour with a red velvet cap on his head”. In 1835 the Lyon Court allowed Ainslie of Pilton a cap of maintenance “as being indicative of his descent from the ancient barons of Dolphington”.[^28]
+On the words, the wider reading is the stronger: the right the warrant describes was the barons’ right, and the name it uses was Parliament’s name for them. The Association does not press the point, and claims no coronet today. A baron’s own mark is the chapeau, the red cap turned up with ermine, and the record of it is older than the warrant. When the vault at Roslin was opened in 1650, the Baron of Roslin lay “in his armour with a red velvet cap on his head”. In 1835 the Lyon Court allowed Ainslie of Pilton a cap of maintenance “as being indicative of his descent from the ancient barons of Dolphington”.[^28]
 
 ## What the Scale of 1905 leaves out
 
