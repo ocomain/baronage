@@ -115,7 +115,7 @@ while ((am = articleRe.exec(html)) !== null) {
   // The answer ends at its "Authority & sources" link, or, where the answer carries its own numbered references and
   // shows no such link, at the hidden copy of its sources.
   const bodyMatch = articleHtml.match(
-    /<div class="mt-5 leading-relaxed text-ink-soft">([\s\S]*?)<\/div>(?:<p class="mt-6">|<p hidden="">Authority:)/
+    /<div class="mt-5 leading-relaxed text-ink-soft">([\s\S]*?)<\/div>(?:<p class="(?:no-print )?mt-6">|<p hidden="">Authority:)/
   );
   if (!bodyMatch) fail(`Could not find answer body for question: "${question}"`);
   // Reference markers (superscript numbers that open a source card) are left out of the plain text.

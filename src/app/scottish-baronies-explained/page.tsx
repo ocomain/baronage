@@ -8,6 +8,7 @@ import { RankLadder } from "@/components/RankLadder";
 import { NoblesseTable } from "@/components/NoblesseTable";
 import { SectionSidebar } from "@/components/SectionSidebar";
 import { NavBadge } from "@/components/NavBadge";
+import { RankRefsPrint } from "@/components/RankRefs";
 import { glossary } from "@/lib/glossary";
 import { glossify } from "@/components/Glossary";
 
@@ -1551,7 +1552,7 @@ export default function BaroniesExplainedPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="bg-navy-deep text-parchment-50 texture-saltire">
+      <section className="no-print bg-navy-deep text-parchment-50 texture-saltire">
         <Container className="py-10 text-center sm:py-12">
           <p className="rise eyebrow eyebrow--light">Frequently Asked Questions</p>
           <h1
@@ -1576,13 +1577,33 @@ export default function BaroniesExplainedPage() {
         </Container>
       </section>
 
-      <SectionSidebar items={NAV} anchorId="page-nav" wide />
+      <div className="no-print">
+        <SectionSidebar items={NAV} anchorId="page-nav" wide />
+      </div>
+      {/* On paper (owner 2026-11-05: printed in full in the course PDF): the papers' print style, a title block in place
+          of the banner, and each answer's authorities written out. As the course's Read first (scripts/make-booklet-pdf.py
+          prints #in-booklet), the eyebrow says so. */}
+      <div className="paper-print explained-print">
       <Section tone="parchment">
         <Container size="prose">
+          <div id="in-booklet" className="print-only explained-print__head">
+            <p className="eyebrow">
+              <span className="explained-print__alone">Baronage of Scotland Association · Frequently Asked Questions</span>
+              <span className="explained-print__booklet">Read first · before Paper 1</span>
+            </p>
+            <h1>Scottish Baronies, Explained</h1>
+            <p className="explained-print__standfirst">
+              Distinct from peerages, altered by legislation in 2004, and often described with terminology that is now
+              out of date. What the law and the institutional sources actually say.
+            </p>
+            <p className="paper-print__source">
+              Last reviewed {REVIEWED_LABEL} · www.baronage.com/scottish-baronies-explained/
+            </p>
+          </div>
           <nav
             id="page-nav"
             aria-label="On this page"
-            className="mb-14 rounded-sm border border-parchment-300/70 bg-parchment-50/70 px-6 py-6 sm:px-8"
+            className="no-print mb-14 rounded-sm border border-parchment-300/70 bg-parchment-50/70 px-6 py-6 sm:px-8"
           >
             <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
               On this page
@@ -1623,7 +1644,7 @@ export default function BaroniesExplainedPage() {
                 </h2>
                 <div className="mt-5 leading-relaxed text-ink-soft">{glossify(f.body, new Set())}</div>
                 {!f.inlineRefs && (
-                <p className="mt-6">
+                <p className="no-print mt-6">
                   <Footnote
                     n={i + 1}
                     heading="Authority & sources"
@@ -1636,6 +1657,13 @@ export default function BaroniesExplainedPage() {
                 )}
                 {/* Crawlable copy of the citations — the pop-up renders its content only when opened. */}
                 <p hidden>Authority: {f.authority}</p>
+                {f.inlineRefs && <RankRefsPrint />}
+                {!f.inlineRefs && (
+                  <div className="print-only explained-print__authority">
+                    <span className="explained-print__label">Authority &amp; sources. </span>
+                    {f.authority}
+                  </div>
+                )}
               </article>
               );
             })}
@@ -1643,7 +1671,7 @@ export default function BaroniesExplainedPage() {
         </Container>
       </Section>
 
-      <Section tone="parchment" className="border-t border-parchment-300/60">
+      <Section tone="parchment" className="explained-print__glossary border-t border-parchment-300/60">
         <Container size="prose">
           <h2 id="glossary" className="scroll-mt-32 font-display text-2xl text-navy sm:text-3xl lg:scroll-mt-44">
             Glossary of terms
@@ -1685,8 +1713,9 @@ export default function BaroniesExplainedPage() {
           </p>
         </Container>
       </Section>
+      </div>
 
-      <Section tone="navyDeep" className="text-center">
+      <Section tone="navyDeep" className="no-print text-center">
         <Container size="prose">
           <h2 className="text-3xl text-parchment-50 sm:text-4xl">Explore further.</h2>
           <p className="mx-auto mt-6 max-w-xl leading-relaxed text-parchment-200/85">

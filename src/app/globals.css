@@ -498,6 +498,7 @@ html {
 
 /* Shown on paper only (see the print rules below). */
 .print-only { display: none; }
+.booklet-pdf-only { display: none; }
 
 /* ---- Printing a Reading Room paper ------------------------------------------------------------
    A paper prints as a plain document: no banner, menu or footer, white paper, black serif text,
@@ -609,10 +610,10 @@ html {
   .booklet-contents > p:first-child { font-size: 18pt; }
   .booklet-contents > p:nth-child(2) { font-size: 11pt; margin-top: 0; }
   .booklet-contents ol { margin-top: 2pt !important; }
-  .booklet-contents ol > li + li { margin-top: 4pt !important; }
-  .booklet-contents li .text-xl { font-size: 13pt; line-height: 1.18; }
-  .booklet-contents li .text-base { font-size: 10pt; line-height: 1.28; }
-  .booklet-part { break-inside: avoid; margin-top: 9pt !important; }
+  .booklet-contents ol > li + li { margin-top: 2pt !important; }
+  .booklet-contents li .text-xl { font-size: 12.5pt; line-height: 1.16; }
+  .booklet-contents li .text-base { font-size: 9.5pt; line-height: 1.25; }
+  .booklet-part { break-inside: avoid; margin-top: 5.5pt !important; }
   .booklet-box { border-color: #000 !important; }
   .booklet-paper { break-before: page; margin-top: 0 !important; padding-top: 0 !important; border-top: 0 !important; }
   .booklet-paper .booklet-title { font-size: 22pt; line-height: 1.1; color: #000; margin-top: 6pt; }
@@ -620,6 +621,10 @@ html {
   .booklet-paper .paper-print__source { text-transform: none; letter-spacing: 0.04em; font-weight: 400; }
   .booklet-paper .sealed-gate { border-left: 0; border-top: 0.5pt solid #999; padding: 8pt 0 0; font-size: 11pt; }
   .booklet-end { border-color: #999 !important; break-inside: avoid; }
+  /* The course PDF (scripts/make-booklet-pdf.py prints #booklet-pdf, owner 2026-11-05): Scottish Baronies, Explained is
+     printed in full in place of the Read first page, and the Proper Address guide follows as an appendix. */
+  body:has(#booklet-pdf:target) .booklet-preread { display: none !important; }
+  body:has(#booklet-pdf:target) .booklet-pdf-only { display: block; }
 }
 
 /* The certificate of reading (/the-barons-course/certificate/): one A4 page, its gold frame kept. */
@@ -943,4 +948,56 @@ body:has(header nav.fixed) .ez-switch{display:none}
   .guide-print__notes { break-before: page; }
   .guide-print__notes ol { margin: 8pt 0 0 1.5em; padding: 0; list-style: decimal; }
   .guide-print__notes li { margin-bottom: 3.5pt; padding-left: 0.2em; font-size: 9.5pt; line-height: 1.3; }
+}
+
+/* ---------- Scottish Baronies, Explained on paper and in the course PDF (owner 2026-11-05) ----------
+   The papers' print style (.paper-print) with a title block for the banner and each answer's authorities written out;
+   the navy panels (Noblesse table head, the chapeau) print as plain black on white. #in-booklet is the course PDF's
+   address for this page (scripts/make-booklet-pdf.py): its eyebrow then reads "Read first · before Paper 1". */
+.explained-print__booklet { display: none; }
+@media print {
+  .explained-print > section { padding-top: 0; padding-bottom: 0; }
+  .explained-print__head { margin-bottom: 12pt; }
+  .explained-print__head .eyebrow { color: #8a6a2a; }
+  #in-booklet:target .explained-print__alone { display: none; }
+  #in-booklet:target .explained-print__booklet { display: inline; }
+  .explained-print__head h1 { margin: 6pt 0 0; font-family: var(--font-display); font-size: 22pt; font-weight: 500; line-height: 1.1; color: #000; }
+  .explained-print__standfirst { margin-top: 8pt; font-family: var(--font-serif); font-size: 13.5pt; font-style: italic; line-height: 1.35; color: #222; }
+  .explained-print .space-y-14 > * + * { margin-top: 14pt; }
+  .explained-print article { break-inside: auto; }
+  .explained-print article + article { padding-top: 12pt; border-color: #999 !important; }
+  .explained-print h2 { margin-top: 0; font-family: var(--font-display); font-size: 15pt; line-height: 1.2; color: #000; break-after: avoid; }
+  .explained-print p, .explained-print li, .explained-print dd { font-size: 11.5pt; line-height: 1.4; orphans: 3; widows: 3; }
+  .explained-print [class*="text-ink"], .explained-print [class*="text-navy"] { color: #000 !important; }
+  .explained-print [class*="text-parchment"] { color: #000 !important; }
+  .explained-print [class*="text-gold-light"] { color: #8a6a2a !important; }
+  .explained-print a, .explained-print a.gloss { color: inherit !important; text-decoration: none !important; border-bottom: 0 !important; }
+  .explained-print blockquote { color: #000; }
+  .explained-print .bg-navy, .explained-print .bg-navy-deep { border: 0.5pt solid #999; }
+  .explained-print figure, .explained-print tr, .explained-print li { break-inside: avoid; }
+  .explained-print figure:has(table) { break-inside: auto; }
+  .explained-print thead { display: table-row-group; }
+  .explained-print td, .explained-print tbody th { padding-top: 5pt !important; padding-bottom: 5pt !important; }
+  .explained-print thead th { padding-top: 6pt !important; padding-bottom: 6pt !important; }
+  .explained-print table [class*="text-[1.3rem]"], .explained-print table [class*="text-[1.45rem]"] { font-size: 13pt !important; }
+  .explained-print table [class*="text-[1.75rem]"] { font-size: 18pt !important; }
+  .explained-print table img { height: 18pt !important; margin-top: 3pt; }
+  .explained-print p.text-center { break-inside: avoid; }
+  /* the coronets and the chapeau (RankLadder) may run on from the page before, part by part */
+  .explained-print figure:has(> div > ul) { break-inside: auto; }
+  .explained-print figure > div > p { break-after: avoid; }
+  .explained-print .bg-navy { break-inside: avoid; }
+  .explained-print__refs > .explained-print__label { display: block; break-after: avoid; }
+  .explained-print__refs ol { margin: 3pt 0 0 1.5em; padding: 0; list-style: decimal; }
+  .explained-print__refs li { margin-bottom: 2.5pt; padding-left: 0.2em; }
+  .explained-print__refs a span[aria-hidden] { display: none; }
+  .explained-print img { max-height: 64mm; }
+  .explained-print li > .bg-gold[aria-hidden] { background: #b08a3a !important; }
+  .explained-print [aria-label="new section"] { display: none !important; }
+  .explained-print__authority * { font-size: inherit !important; line-height: inherit; }
+  .explained-print__authority { margin-top: 8pt; font-family: var(--font-serif); font-size: 9.5pt !important; line-height: 1.32; color: #222; }
+  .explained-print__label { font-family: var(--font-sans); font-size: 7.5pt; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #8a6a2a; }
+  .explained-print__glossary { break-before: page; }
+  .explained-print dt { font-size: 12.5pt; color: #000; break-after: avoid; }
+  .explained-print dl > div { break-inside: avoid; margin-top: 7pt !important; }
 }

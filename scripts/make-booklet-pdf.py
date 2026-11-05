@@ -10,6 +10,11 @@ It serves out/ on a spare port, prints /the-barons-course/print/ with Chrome in 
 so subscriber passages are left out, as on the public page), shrinks the pictures (Chrome stores them uncompressed:
 30 MB) and writes public/the-barons-course/The-Barons-Course-Baronage-of-Scotland-Association.pdf. Needs pypdf and
 Pillow (both on this Mac). Not run on GitHub.
+
+The course PDF also prints Scottish Baronies, Explained in full as the Read first, before Paper 1, and the Proper
+Address guide as an appendix (owner 2026-11-05). Each is printed from its own page here and put in place; the
+#fragments are the pages' print modes (#booklet-pdf, #in-booklet in globals.css). So remake the course PDF after an
+edit to either page too.
 """
 import functools
 import http.server
@@ -28,7 +33,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "out")
 BOOKS = {
     "course": {
-        "page": "the-barons-course/print/",
+        "page": "the-barons-course/print/#booklet-pdf",
+        # (page, marker): printed and put in before the first page whose text has the marker
+        "insert": [("scottish-baronies-explained/#in-booklet", "PAPER 1 OF")],
+        "append": ["proper-address/"],
         "dest": ("the-barons-course", "The-Barons-Course-Baronage-of-Scotland-Association.pdf"),
         "meta": {"/Title": "Scottish Baronial Studies"},
     },
@@ -55,23 +63,39 @@ class Quiet(http.server.SimpleHTTPRequestHandler):
 def main():
     book = BOOKS[sys.argv[1] if len(sys.argv) > 1 else "course"]
     dest = os.path.join(ROOT, "public", *book["dest"])
-    if not os.path.exists(os.path.join(OUT, book["page"], "index.html")):
-        raise SystemExit(f"Build the site first (npm run build): out/{book['page']} is missing.")
+    inserts, appends = book.get("insert", []), book.get("append", [])
+    for page in [book["page"], *(p for p, _ in inserts), *appends]:
+        if not os.path.exists(os.path.join(OUT, page.split("#")[0], "index.html")):
+            raise SystemExit(f"Build the site first (npm run build): out/{page.split('#')[0]} is missing.")
     server = http.server.ThreadingHTTPServer(("127.0.0.1", PORT), functools.partial(Quiet, directory=OUT))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     work = tempfile.mkdtemp(prefix="booklet-")
-    raw = os.path.join(work, "raw.pdf")
-    try:
+
+    def print_page(page, name):
+        raw = os.path.join(work, f"{name}.pdf")
         subprocess.run(
             [CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--timeout=20000",
-             f"--user-data-dir={os.path.join(work, 'profile')}", f"--print-to-pdf={raw}",
-             f"http://127.0.0.1:{PORT}/{book['page']}"],
+             f"--user-data-dir={os.path.join(work, 'profile-' + name)}", f"--print-to-pdf={raw}",
+             f"http://127.0.0.1:{PORT}/{page}"],
             check=True, capture_output=True,
         )
+        return raw
+
+    try:
+        raw = print_page(book["page"], "main")
+        extra_in = [(print_page(p, f"in{i}"), marker) for i, (p, marker) in enumerate(inserts)]
+        extra_end = [print_page(p, f"end{i}") for i, p in enumerate(appends)]
     finally:
         server.shutdown()
 
     writer = pypdf.PdfWriter(clone_from=pypdf.PdfReader(raw))
+    for path, marker in extra_in:
+        at = next((i for i, p in enumerate(writer.pages) if marker in (p.extract_text() or "")), None)
+        if at is None:
+            raise SystemExit(f"No page with {marker!r} to put {path} before.")
+        writer.merge(at, pypdf.PdfReader(path))
+    for path in extra_end:
+        writer.append(pypdf.PdfReader(path))
     for page in writer.pages:
         # Links to the site's own pages were printed against the local server.
         for annot in page.get("/Annots") or []:

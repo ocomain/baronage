@@ -302,3 +302,19 @@ export function R({ n, light = false, big = false }: { n: number; light?: boolea
   if (big) marker = <span className="text-[1.3rem] not-italic leading-none tracking-normal [&_button]:font-bold">{marker}</span>;
   return marker;
 }
+
+/** On paper (owner 2026-11-05: the Explained page printed in the course PDF) the pop-up notes are written out, in order. */
+export function RankRefsPrint() {
+  return (
+    <section className="print-only explained-print__authority explained-print__refs">
+      <p className="explained-print__label">References</p>
+      <ol>
+        {Object.entries(REFS).map(([n, note]) => (
+          <li key={n} value={Number(n)}>
+            {note}
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}

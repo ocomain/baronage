@@ -80,7 +80,8 @@ export default function EssentialReadingBookletPage() {
           </p>
           {pdfMb && (
             <p className="mt-3 font-serif text-lg leading-relaxed text-ink-soft sm:text-xl">
-              Or keep it as a PDF, to read on a tablet or to send by email.
+              Or keep it as a PDF, to read on a tablet or to send by email. The PDF also prints {COURSE_PREREAD.title} in
+              full, to read first, and the Proper Address guide as an appendix.
             </p>
           )}
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
@@ -109,7 +110,8 @@ export default function EssentialReadingBookletPage() {
         </div>
 
         {/* Title page and contents */}
-        <section className="paper-print booklet-cover">
+        {/* id: the course PDF prints this page at #booklet-pdf (see .booklet-pdf-only in globals.css) */}
+        <section id="booklet-pdf" className="paper-print booklet-cover">
           <div className="text-center">
             <Seal tone="ink" size="sm" alt="" aria-hidden className="mx-auto h-28 w-auto sm:h-32" />
             <p className="eyebrow mt-6">Baronage of Scotland Association · The Reading Room</p>
@@ -123,6 +125,21 @@ export default function EssentialReadingBookletPage() {
           <div className="booklet-contents mt-12 border-t border-gold/40 pt-8">
             <p className="font-display text-2xl text-navy">Contents</p>
             <p className="mt-1 font-serif text-lg italic text-ink-soft">Tick each paper as you finish it.</p>
+            <div className="booklet-part mt-6">
+              <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-deep">Read first · before Paper 1</p>
+              <ol className="mt-2 space-y-3">
+                <li className="grid grid-cols-[1.4rem_2rem_1fr] items-start gap-x-3">
+                  <span aria-hidden className="booklet-box mt-1 block h-[1.15rem] w-[1.15rem] border-[1.5px] border-navy" />
+                  <span aria-hidden />
+                  <span>
+                    <span className="block font-display text-xl leading-snug text-navy">{COURSE_PREREAD.title}</span>
+                    <span className="block font-serif text-base leading-snug text-ink-soft">
+                      {COURSE_PREREAD.lesson} <span className="whitespace-nowrap">({COURSE_PREREAD.readingTime})</span>
+                    </span>
+                  </span>
+                </li>
+              </ol>
+            </div>
             {COURSE_PARTS.map((partTitle, pi) => {
               const inPart = courseSteps.filter((s) => s.part === pi + 1);
               if (!inPart.length) return null;
@@ -148,6 +165,24 @@ export default function EssentialReadingBookletPage() {
                 </div>
               );
             })}
+            {/* In the PDF only: the guide is appended there by scripts/make-booklet-pdf.py */}
+            <div className="booklet-part booklet-pdf-only mt-6">
+              <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-deep">Appendix</p>
+              <ol className="mt-2 space-y-3">
+                <li className="grid grid-cols-[1.4rem_2rem_1fr] items-start gap-x-3">
+                  <span aria-hidden />
+                  <span aria-hidden />
+                  <span>
+                    <span className="block font-display text-xl leading-snug text-navy">
+                      The Definitive Guide to Proper Address for Scottish Barons
+                    </span>
+                    <span className="block font-serif text-base leading-snug text-ink-soft">
+                      Forms of address and precedence: on the envelope, in a letter, in person and online.
+                    </span>
+                  </span>
+                </li>
+              </ol>
+            </div>
           </div>
         </section>
 
