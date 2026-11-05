@@ -39,7 +39,7 @@ function pdfMegabytes() {
 }
 const published = new Map(readingRoomPapers.map((p) => [p.slug, p]));
 
-/** Twelve papers on one page: give each paper's anchors (notes, headings) a prefix of its own so none collide. */
+/** Every paper on one page: give each paper's anchors (notes, headings) a prefix of its own so none collide. */
 const prefixIds = (html: string, pfx: string) =>
   html.replace(/\bid="([^"]+)"/g, `id="${pfx}$1"`).replace(/href="#([^"]+)"/g, `href="#${pfx}$1"`);
 /** Every picture loads with the page, so none is left blank on paper. */

@@ -18,6 +18,12 @@ export const COURSE_PARTS = ["The words", "The rank", "Recognition", "In public 
 const STEPS: { part: number; slug: string; lesson: string }[] = [
   // Part I. The words
   { part: 1, slug: "lairds-lords-and-barons", lesson: "What a laird, a lord and a baron were, and what a territorial designation is." },
+  // Four papers added on 5 Nov 2026 (owner: "agreed pls add"; places and lesson lines from the papers chat, word for word)
+  {
+    part: 1,
+    slug: "why-the-lowest-scottish-peer-is-not-a-baron",
+    lesson: "Why the Scottish peerage has no baron, and the lords of the baronage who were never peers.",
+  },
   {
     part: 1,
     slug: "the-two-styles-of-a-scottish-baron",
@@ -33,6 +39,16 @@ const STEPS: { part: number; slug: string; lesson: string }[] = [
   { part: 2, slug: "is-a-scottish-baron-a-commoner", lesson: "The noblesse of Scotland, and where a baron stands in it." },
   {
     part: 2,
+    slug: "were-scotlands-barons-noblemen",
+    lesson: "The strongest objection to the baronage, and the Acts’ own answer to it.",
+  },
+  {
+    part: 2,
+    slug: "were-scotlands-barons-peers",
+    lesson: "“Peer” meant an equal before it meant a lord: tried by barons, and named with the lords in 1665.",
+  },
+  {
+    part: 2,
     slug: "the-precedence-of-a-scottish-baron",
     lesson: "After knights and before esquires: the baron’s place, “never ceded”.",
   },
@@ -42,6 +58,11 @@ const STEPS: { part: number; slug: string; lesson: string }[] = [
     lesson: "The baronets themselves pleaded the barons’ nobility to the Crown.",
   },
   // Part III. Recognition
+  {
+    part: 3,
+    slug: "baronage-in-the-statutes",
+    lesson: "Twenty Acts: excused in 1428, declared a part of the nobility in 1567, kept by name in 2000.",
+  },
   { part: 3, slug: "esslemont-petition-1934", lesson: "The chapeau, and what the Lyon Court meant by granting it." },
   {
     part: 3,
