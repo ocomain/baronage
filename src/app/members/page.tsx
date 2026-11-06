@@ -50,7 +50,7 @@ const fullMemberPerks = [
     img: "/comics/drum",
     alt: "Comic panel: William de Irwyn, armour-bearer, follows King Robert the Bruce through the royal camp carrying the king’s helm and shield",
     eyebrow: "Illustrated Comic",
-    title: "Your barony, illustrated",
+    title: "Your barony and lineage, illustrated",
     blurb:
       "The history of your barony drawn as a comic: its charters, battles and family legends told in chapters, on your page on the Roll.",
     label: "Drum Illustrated Comic",
