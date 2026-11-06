@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { MemberLogin } from "@/components/MemberLogin";
 import Link from "next/link";
-import { ButtonLink, Container, GoldRule, Section, SectionHeading } from "@/components/primitives";
+import { ButtonLink, Container, Eyebrow, ExternalArrow, GoldRule, Section, SectionHeading } from "@/components/primitives";
 import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 export const metadata: Metadata = {
@@ -27,6 +27,31 @@ const associateMembers = [
   "Children of Barons",
   "The spouse or civil partner and surviving spouse or civil partner of a Full Member",
   "Junior Members",
+];
+
+// owner 2026-11-06: "pls add comic example Drum and link to his full burke's peerage style public page ... explaining full
+// members optionally get these perks". Same cover cards as /comics/; both examples are the Baron of Drum's, on the Roll.
+const fullMemberPerks = [
+  {
+    href: "https://roll.baronage.com/baron/alexander-irvine-of-drum",
+    img: "/members/drum-page",
+    alt: "The top of the Baron of Drum’s page on the Roll: his portrait, his arms and his name",
+    eyebrow: "A page of your own",
+    title: "Your page on the Roll",
+    blurb:
+      "A public page in the manner of a Burke’s Peerage entry, with your arms, honours, lineage and distinctions and the history of your barony.",
+    label: "The Baron of Drum’s page",
+  },
+  {
+    href: "https://roll.baronage.com/baron/alexander-irvine-of-drum/comic/",
+    img: "/comics/drum",
+    alt: "Comic panel: William de Irwyn, armour-bearer, follows King Robert the Bruce through the royal camp carrying the king’s helm and shield",
+    eyebrow: "Illustrated Comic",
+    title: "Your barony, illustrated",
+    blurb:
+      "The history of your barony drawn as a comic: its charters, battles and family legends told in chapters, on your page on the Roll.",
+    label: "Drum Illustrated Comic",
+  },
 ];
 
 function MemberList({ items }: { items: string[] }) {
@@ -107,6 +132,68 @@ export default function MembersPage() {
                 <MemberList items={associateMembers} />
               </div>
             </Reveal>
+          </div>
+          {/* Full members' optional extras, each with the Baron of Drum's as the example (owner 2026-11-06) */}
+          <div className="mt-20">
+            <Reveal>
+              <div className="text-center">
+                <Eyebrow>Full Membership</Eyebrow>
+                <h2 className="mt-3 font-display text-[2.2rem] leading-tight text-navy sm:text-[2.5rem]">
+                  For full members, if they wish
+                </h2>
+                <GoldRule className="mt-5" />
+                <p className="mx-auto mt-6 max-w-2xl text-[1.2rem] leading-relaxed text-ink-soft">
+                  A full member may also have a page of their own on the Roll and their barony drawn as an Illustrated
+                  Comic. Both examples here are the Baron of Drum’s.
+                </p>
+              </div>
+            </Reveal>
+            <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-2">
+              {fullMemberPerks.map((c, i) => (
+                <Reveal key={c.href} delay={i * 0.08}>
+                  <article className="flex h-full flex-col">
+                    <a href={c.href} target="_blank" rel="noopener noreferrer" className="group/cover block">
+                      <span className="relative block">
+                        <span
+                          className="absolute inset-0 translate-x-2 translate-y-2 border border-gold/50 transition-transform duration-500 group-hover/cover:translate-x-3 group-hover/cover:translate-y-3"
+                          aria-hidden
+                        />
+                        <span className="relative block overflow-hidden border border-gold/40 bg-navy-deep shadow-[0_24px_50px_-24px_rgba(8,12,28,0.6)]">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={`${c.img}-720.webp`}
+                            srcSet={`${c.img}-720.webp 720w, ${c.img}-1200.webp 1200w`}
+                            sizes="(min-width: 1024px) 540px, 100vw"
+                            alt={c.alt}
+                            width={1200}
+                            height={675}
+                            loading="lazy"
+                            decoding="async"
+                            className="block aspect-[16/9] w-full object-cover transition duration-700 group-hover/cover:scale-[1.04]"
+                          />
+                        </span>
+                      </span>
+                    </a>
+                    <div className="mt-9 flex flex-1 flex-col">
+                      <Eyebrow>{c.eyebrow}</Eyebrow>
+                      <h3 className="mt-3 font-display text-[2rem] leading-tight text-navy sm:text-[2.3rem]">{c.title}</h3>
+                      <p className="mt-4 text-[1.2rem] leading-relaxed text-ink-soft">{c.blurb}</p>
+                      <div className="mt-auto pt-7">
+                        <a
+                          href={c.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-8 py-4 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-navy-deep shadow-[0_10px_30px_-12px_rgba(201,162,75,0.7)] transition-all duration-300 hover:bg-gold-light"
+                        >
+                          {c.label}
+                          <ExternalArrow />
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
           {/* How to join: prices, terms and the pay buttons stay on the Support page alone, so they cannot drift
               (owner 2026-10-20: "ok" to linking there rather than a second pay button) */}
