@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/baronial-code", ["src/app/baronial-code"]],
     ["/pledge", ["src/app/pledge"]],
     ["/governing-council", ["src/app/governing-council"]],
+    ["/comics", ["src/app/comics"]],
     ["/about", ["src/app/about"]],
     ["/support", ["src/app/support"]],
     ["/members", ["src/app/members"]],

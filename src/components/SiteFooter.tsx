@@ -131,7 +131,15 @@ export function SiteFooter() {
               className="underline decoration-parchment-200/30 underline-offset-2 transition-colors hover:text-parchment-100"
             >
               Privacy Notice
-            </a>
+            </a>{" "}
+            ·{" "}
+            {/* The comics page is linked only here, not in the header menu (owner 2026-11-06). */}
+            <Link
+              href="/comics/"
+              className="underline decoration-parchment-200/30 underline-offset-2 transition-colors hover:text-parchment-100"
+            >
+              Illustrated Comics
+            </Link>
           </p>
         </div>
       </div>
