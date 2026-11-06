@@ -14,10 +14,12 @@ export type Barony = {
   roll?: string;
   /** homepage conveyor only: place this card immediately after the named card (armorial order is unaffected) */
   homeAfter?: string;
+  /** Armorial page only: the name alone, without note and sub (owner 2026-11-06: "remove Windsor Herald of the College of Arms"); the homepage conveyor keeps them */
+  armorialNameOnly?: boolean;
 };
 
 export const baronies: Barony[] = [
-  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie-arms.webp", homeAfter: "Pittenweem" },
+  { dignity: "Herald", name: "John Allen-Petrie OBE", note: "Windsor Herald", sub: "of the College of Arms", officer: true, img: "/arms/petrie-arms.webp", homeAfter: "Pittenweem", armorialNameOnly: true },
   { dignity: "Baron", name: "Balvaird", roll: "https://roll.baronage.com/baron/brady-balvaird", img: "/arms/balvaird-brim.webp" },
   { dignity: "Lord Baron", name: "Pittenweem", roll: "https://roll.baronage.com/claes-zangeberg.html", img: "/arms/pittenweem.webp" },
   {

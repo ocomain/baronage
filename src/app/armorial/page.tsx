@@ -98,7 +98,7 @@ export default function SupportersPage() {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={b.img}
-                        alt={b.officer ? `Coat of arms — ${b.name}${b.note ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
+                        alt={b.officer ? `Coat of arms — ${b.name}${b.note && !b.armorialNameOnly ? `, ${b.note}` : ""}` : `Coat of arms — ${b.dignity} of ${b.name}`}
                         width={208}
                         height={208}
                         // Only the first row loads with the page; the rest as they near the screen
@@ -119,12 +119,12 @@ export default function SupportersPage() {
                         <span className="block whitespace-nowrap font-display text-lg leading-tight text-navy">
                           {b.name}
                         </span>
-                        {b.note && (
+                        {b.note && !b.armorialNameOnly && (
                           <span className="mt-2 block font-serif text-lg italic leading-snug text-gold-deep">
                             {b.note}
                           </span>
                         )}
-                        {b.sub && (
+                        {b.sub && !b.armorialNameOnly && (
                           <span className="mt-1 block whitespace-nowrap font-display text-[0.88rem] italic leading-none tracking-wide text-gold-deep">
                             {b.sub}
                           </span>
