@@ -72,7 +72,7 @@ export function BaroniesCarousel() {
     let inView = false;
 
     // Only auto-glide while the carousel is actually on screen, so a card near
-    // the front (e.g. the Windsor Herald) is still in view when the reader
+    // the front (e.g. John Allen-Petrie OBE's) is still in view when the reader
     // scrolls down to this section instead of having drifted off already.
     const io =
       typeof IntersectionObserver !== "undefined"
