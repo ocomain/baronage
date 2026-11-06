@@ -117,7 +117,7 @@ export default function ComicsPage() {
           <Reveal>
             <div className="text-center">
               <Eyebrow light>For members of the Baronage of Scotland Association</Eyebrow>
-              <h2 className="mt-4 text-3xl text-parchment-50 sm:text-4xl">Your barony, illustrated</h2>
+              <h2 className="mt-4 text-3xl text-parchment-50 sm:text-4xl">Your barony and lineage, illustrated</h2>
               <GoldRule className="mt-6" />
               <p className="mx-auto mt-7 max-w-2xl text-[1.2rem] leading-relaxed text-parchment-200/90">
                 Members of the Association can have their own barony drawn as an Illustrated Comic: its charters,
