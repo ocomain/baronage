@@ -7,6 +7,9 @@ import { PHONE_MEDIA, phoneImage } from "@/lib/heroImage";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/members/" },
+  // owner 2026-11-06: "pls noindex this specific https://www.baronage.com/members/ page so this doesn't appear on waybackmachine or google".
+  // Search engines: noindex + noarchive here (and off the sitemap); the Internet Archive's crawlers are refused in robots.ts.
+  robots: { index: false, follow: true, noarchive: true, googleBot: { index: false, follow: true, noarchive: true } },
   title: "Member Login",
   description:
     "Sign in to the members’ area of the Baronage of Scotland Association, or request a call back to join — membership carries ownership and voting rights.",

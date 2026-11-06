@@ -50,7 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/comics", ["src/app/comics"]],
     ["/about", ["src/app/about"]],
     ["/support", ["src/app/support"]],
-    ["/members", ["src/app/members"]],
     ["/contact", ["src/app/contact"]],
   ];
   // Trailing slashes match the URLs the site actually serves (trailingSlash: true),
