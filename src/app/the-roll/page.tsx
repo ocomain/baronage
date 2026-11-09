@@ -342,8 +342,8 @@ export default function TheRollPage() {
                   >
                     Governing Council
                   </Link>{" "}
-                  — among them one of Scotland’s foremost genealogists connected to the Lyon Court, a Scottish
-                  Registered Solicitor and Chief of the Name.
+                  — among them one of Scotland’s foremost genealogists connected to the Lyon Court, and a Chief of
+                  the Name.
                 </>
               }
             />
