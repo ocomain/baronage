@@ -35,7 +35,7 @@ const allMembers: CouncilMember[] = [
     alt: "Alexander Irvine of Drum, 27th Baron of Drum",
     also: "Chief of his Name",
     alsoProminent: true,
-    alsoSub: "& Scottish Registered Solicitor",
+    // alsoSub "& Scottish Registered Solicitor" removed from the card (owner, 9 Nov 2026)
     img: "/council/drum2.jpg",
     comic: {
       href: "https://roll.baronage.com/baron/alexander-irvine-of-drum/comic/",
