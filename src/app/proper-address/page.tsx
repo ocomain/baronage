@@ -652,7 +652,7 @@ export default function ProperAddressPage() {
                 <tr>
                   <td>Speaking about him</td>
                   <td>the Duke</td>
-                  <td><S>the Baron</S></td>
+                  <td><S>the baron</S></td>
                 </tr>
                 <tr>
                   <td>Speaking to him, as an equal</td>
