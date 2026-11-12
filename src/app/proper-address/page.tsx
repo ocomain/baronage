@@ -649,7 +649,7 @@ export default function ProperAddressPage() {
                 </tr>
                 <tr>
                   <td>Speaking about him</td>
-                  <td>the Duke</td>
+                  <td>the duke</td>
                   <td><S>the baron</S></td>
                 </tr>
                 <tr>
