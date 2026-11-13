@@ -335,13 +335,8 @@ export default function TheRollPage() {
               intro={
                 <>
                   The Roll does not stand alone. It draws gladly on the work of Scotland’s established institutions and
-                  is maintained under the oversight of the Association’s{" "}
-                  <Link
-                    href="/governing-council"
-                    className="text-oxblood underline decoration-oxblood/30 underline-offset-4 transition-colors hover:text-oxblood-deep"
-                  >
-                    Governing Council
-                  </Link>{" "}
+                  {/* Council page off (owner 2026-11-13): "Governing Council" was a link to /governing-council */}
+                  is maintained under the oversight of the Association’s Governing Council{" "}
                   — among them one of Scotland’s foremost genealogists connected to the Lyon Court, and a Chief of
                   the Name.
                 </>

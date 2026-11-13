@@ -85,7 +85,7 @@ export const navLinks: NavLink[] = [
   { href: "/proper-address", label: "Proper Address" },
   { href: "/baronial-code", label: "Baronial Code" },
   { href: "/pledge", label: "The Pledge" },
-  { href: "/governing-council", label: "Governing Council" },
+  // Council page off (owner 2026-11-13; back in the coming weeks): { href: "/governing-council", label: "Governing Council" },
   { href: "/about", label: "About" },
   // Support the Association taken out of the footer too (owner 2026-10-23, after the header menu); the page stays live.
   { href: "/armorial", label: "Armorial" },
@@ -139,7 +139,7 @@ export const navMenu: NavMenuItem[] = [
     // 2026-10-23 (owner: "for now remove support the association page link from navigation"). The page stays live
     // and in the footer.
     children: [
-      { href: "/governing-council", label: "Governing Council" },
+      // Council page off (owner 2026-11-13; back in the coming weeks): { href: "/governing-council", label: "Governing Council" },
       // Announcements, called News until 2026-10-31 (owner 2026-10-26; placement shown to him in the mock)
       { href: "/news", label: "Announcements", badge: "New" }, // owner 2026-10-26: "put a New label next to News"
     ],

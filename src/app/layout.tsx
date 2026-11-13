@@ -120,7 +120,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              'var __m={"#page-2":"/proper-address/","#governing-council":"/governing-council/","#about":"/about/"};var __t=__m[location.hash];if(__t)location.replace(__t);',
+              'var __m={"#page-2":"/proper-address/","#about":"/about/"};var __t=__m[location.hash];if(__t)location.replace(__t);',
           }}
         />
         {/* A subscriber's link (#key=…) may land on any page: keep the key for the subscriber papers and tidy the address. */}

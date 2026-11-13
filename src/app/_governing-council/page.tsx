@@ -1,3 +1,6 @@
+// OFF THE SITE: owner 2026-11-13: "please remove or delete governing council page and on nav bar -- we will put it back later in next weeks".
+// The leading underscore makes this a private folder, so Next builds no page. To bring it back: git mv src/app/_governing-council src/app/governing-council,
+// then undo the other "Council page off" lines (grep for "Council page off").
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";

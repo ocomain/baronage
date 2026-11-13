@@ -73,11 +73,9 @@ const rows: Row[] = [
         <Link href="/supporters" className={intLink}>
           supporters
         </Link>{" "}
-        and{" "}
-        <Link href="/governing-council" className={intLink}>
-          Governing Council
-        </Link>
-        , whose members are published by name, with their records
+        and Governing Council
+        {/* Council page off (owner 2026-11-13): "Governing Council" linked to /governing-council, followed by
+            ", whose members are published by name, with their records" (untrue while the page is down) */}
       </>
     ),
   },

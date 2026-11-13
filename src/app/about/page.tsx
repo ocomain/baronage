@@ -598,11 +598,12 @@ export default function AboutPage() {
                 Baronage of Scotland Association is a non-profit honourable body owned by its members — not a
                 charity.
               </p>
+              {/* Council page off (owner 2026-11-13): the "The Governing Council" button to /governing-council sat here
               <div className="mt-8 flex justify-center">
                 <ButtonLink href="/governing-council" variant="outline">
                   The Governing Council
                 </ButtonLink>
-              </div>
+              </div> */}
             </div>
           </Reveal>
         </Container>

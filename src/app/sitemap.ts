@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/arms-and-flags", ["src/app/arms-and-flags", "src/components/GuideChapters.tsx"]],
     ["/baronial-code", ["src/app/baronial-code"]],
     ["/pledge", ["src/app/pledge"]],
-    ["/governing-council", ["src/app/governing-council"]],
+    // Council page off (owner 2026-11-13): ["/governing-council", ["src/app/governing-council"]],
     ["/comics", ["src/app/comics"]],
     ["/about", ["src/app/about"]],
     ["/support", ["src/app/support"]],
