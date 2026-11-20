@@ -773,7 +773,9 @@ export default function ProperAddressPage() {
           </P>
           <P>
             A baron’s wife is typically styled <S>Lady</S>, and a baroness in her own right <S>Baroness of</S>.
-            <br />
+          </P>
+          {/* owner 2026-11-20: "in her own right Baroness of. --pls add a new paragraph after this" (was a line break) */}
+          <P>
             <S>Baroness</S> is the rank, <S>Lady</S> the social form; either may be used, but never together<Footnote n={16}>{WIFE_OR_BARONESS_SOURCE}</Footnote>:
           </P>
           <Forms>
