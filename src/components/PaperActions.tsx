@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/site";
 
 /** The Association's own sender for "Email to a friend": a small Worker in front of Resend (see ~/baronage-mail). */
 const ENDPOINT = "https://baronage-mail.antoin-405.workers.dev/friend";
-/** The same Worker signs the sender up for the newsletter when they ask for it after a send (Zoho then asks them to confirm). */
+/** The same Worker signs the sender up for the newsletter when they ask for it after a send (the Worker's LIST setting decides whether Zoho or the Association's own list sends the confirmation email). */
 const NEWSLETTER_ENDPOINT = "https://baronage-mail.antoin-405.workers.dev/newsletter";
 const NOTE_MAX = 400;
 /** The most friends one send may go to; the Worker holds the same figure. */
@@ -56,7 +56,7 @@ export function PaperActions({
   const [error, setError] = useState("");
   // The sender's own name and address, kept while the panel is open: for the newsletter button and the next send.
   const [sender, setSender] = useState({ name: "", email: "" });
-  // The newsletter button on the "sent" screen: "done" once Zoho has been asked to send its confirmation email.
+  // The newsletter button on the "sent" screen: "done" once the confirmation email has been asked for (by Zoho or by our own list, whichever the Worker uses).
   const [newsletter, setNewsletter] = useState<"idle" | "sending" | "done" | "failed">("idle");
   // How many friends the last send went to, for the words on the "sent" screen.
   const [sentTo, setSentTo] = useState(1);

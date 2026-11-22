@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
-import { EMAIL_SIGNUP } from "@/lib/site";
+import { LIST_LIVE, MAIL_API, ZOHO_SIGNUP } from "@/lib/site";
 
 /** The trap: a field people never see, which sign-up bots fill in like any other. */
 const TRAP = "website";
@@ -9,14 +9,16 @@ const TRAP = "website";
 const MIN_MS = 3000;
 
 /**
- * Email sign-up for the Association's free newsletter (papers and news). Posts straight to the Zoho Campaigns
- * sign-up form (into a hidden frame, so the visitor stays on the page); Zoho sends the
- * confirmation email. Renders nothing until EMAIL_SIGNUP.action is set in lib/site.
+ * Email sign-up for the Association's free newsletter (papers and news). Two paths, chosen by LIST_LIVE in lib/site:
+ *  - false (today): posts straight to the Zoho Campaigns sign-up form (into a hidden frame, so the visitor stays on
+ *    the page); Zoho sends the confirmation email. Renders nothing while ZOHO_SIGNUP.action is empty.
+ *  - true: posts JSON to the baronage-mail Worker (MAIL_API/subscribe), which keeps the address in the Association's
+ *    own list and sends its own confirmation email (double opt-in; the button on /confirm/ completes it).
  *
- * Bot trap (owner 2026-10-28, after junk sign-ups in October): Zoho's address is not in the page's HTML, only set
- * when a person sends the form, so a bot reading the HTML has nowhere to post. A sign-up that fills in the hidden
- * field, or comes within three seconds of the form appearing, is dropped, and is shown the same "check your
- * inbox" message, so the bot learns nothing.
+ * Bot trap (owner 2026-10-28, after junk sign-ups in October): on the Zoho path Zoho's address is not in the page's
+ * HTML, only set when a person sends the form, so a bot reading the HTML has nowhere to post. On both paths a sign-up
+ * that fills in the hidden field, or comes within three seconds of the form appearing, is dropped, and is shown the
+ * same "check your inbox" message, so the bot learns nothing.
  */
 export function EmailSignup({
   variant = "header",
@@ -35,6 +37,7 @@ export function EmailSignup({
   className?: string;
 }) {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
   const shownAt = useRef(0);
   const id = useId();
   const frame = `signup-frame-${id.replace(/[^a-zA-Z0-9]/g, "")}`;
@@ -43,15 +46,37 @@ export function EmailSignup({
     shownAt.current = Date.now();
   }, []);
 
-  if (!EMAIL_SIGNUP.action) return null;
+  if (!LIST_LIVE && !ZOHO_SIGNUP.action) return null;
 
   function send(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const trap = form.elements.namedItem(TRAP) as HTMLInputElement | null;
-    if (!trap?.value && Date.now() - shownAt.current >= MIN_MS) {
+    const human = !trap?.value && Date.now() - shownAt.current >= MIN_MS;
+    if (LIST_LIVE) {
+      if (!human) {
+        setSent(true);
+        return;
+      }
+      const email = (form.elements.namedItem(ZOHO_SIGNUP.emailField) as HTMLInputElement).value;
+      setError("");
+      fetch(`${MAIL_API}/subscribe`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, website: "", source: variant }),
+      })
+        .then(async (r) => {
+          if (r.status === 400 || r.status === 429) {
+            const d = (await r.json().catch(() => ({}))) as { error?: string };
+            setError(d.error || (r.status === 400 ? "Please check your email address." : "Please wait a minute and try again."));
+          } else setSent(true);
+        })
+        .catch(() => setSent(true));
+      return;
+    }
+    if (human) {
       if (trap) trap.disabled = true; // not sent to Zoho
-      form.action = EMAIL_SIGNUP.action;
+      form.action = ZOHO_SIGNUP.action;
       form.submit();
     }
     setSent(true);
@@ -80,7 +105,7 @@ export function EmailSignup({
           <input
             id={`${id}-email`}
             type="email"
-            name={EMAIL_SIGNUP.emailField}
+            name={ZOHO_SIGNUP.emailField}
             autoComplete="email"
             required
             placeholder="Email address"
@@ -92,7 +117,7 @@ export function EmailSignup({
             <label htmlFor={`${id}-${TRAP}`}>Leave this empty</label>
             <input id={`${id}-${TRAP}`} type="text" name={TRAP} tabIndex={-1} autoComplete="off" defaultValue="" />
           </div>
-          {Object.entries(EMAIL_SIGNUP.hidden).map(([name, value]) => (
+          {!LIST_LIVE && Object.entries(ZOHO_SIGNUP.hidden).map(([name, value]) => (
             <input key={name} type="hidden" name={name} value={value} />
           ))}
           <button
@@ -104,6 +129,11 @@ export function EmailSignup({
             {buttonLabel}
           </button>
         </div>
+        {error && (
+          <p role="alert" className={`mt-2 font-sans leading-snug text-oxblood ${block ? "text-base" : "max-w-[17rem] text-[0.8rem]"}`}>
+            {error}
+          </p>
+        )}
       </form>
       <p
         role="status"
@@ -113,7 +143,7 @@ export function EmailSignup({
       >
         {sentMessage}
       </p>
-      <iframe name={frame} title="Email sign-up" tabIndex={-1} aria-hidden className="hidden" />
+      {!LIST_LIVE && <iframe name={frame} title="Email sign-up" tabIndex={-1} aria-hidden className="hidden" />}
     </div>
   );
 }

@@ -3,10 +3,11 @@ import { Seal } from "@/components/Seal";
 import { ButtonLink, Container, GoldRule, Section } from "@/components/primitives";
 
 /**
- * Where Zoho Campaigns sends a new subscriber after they confirm (owner 2026-10-20: Zoho's own thank-you page had the
- * Reading Room address as plain text in tiny type: "should be huge … these are old people"). Zoho's list setting
- * points here with the subscriber key after "#key=", which the script in app/layout.tsx keeps on the device; the key
- * itself is never in this file or the repository. Out of search and out of the sitemap.
+ * Where a new subscriber lands after confirming. With our own list (LIST_LIVE in lib/site) the /confirm/ page sends them
+ * here; with Zoho Campaigns, Zoho's list setting does (owner 2026-10-20: Zoho's own thank-you page had the Reading Room
+ * address as plain text in tiny type: "should be huge … these are old people"). Either way the subscriber key comes
+ * after "#key=", and the script in app/layout.tsx keeps it on the device; the key itself is never in this file or the
+ * repository. Out of search and out of the sitemap.
  */
 export const metadata: Metadata = {
   title: "Thank you for subscribing",

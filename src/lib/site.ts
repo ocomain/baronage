@@ -41,12 +41,22 @@ export const ROLL_API = "https://roll.baronage.com";
 /** The Secretary's Calendly booking link — "Request a Call Back". */
 export const CALENDLY_URL = "https://calendly.com/secretary-baronage/30min";
 
+/** The baronage-mail Worker (no trailing slash): the newsletter list, the Confirm button, unsubscribe, email-a-friend. */
+export const MAIL_API = "https://baronage-mail.antoin-405.workers.dev";
+
 /**
- * Email sign-up (components/EmailSignup, shown in the header and the mobile menu).
- * `action`, `emailField` and the `hidden` fields come from the embed code of the Zoho Campaigns
- * sign-up form. While `action` is empty the form is not shown anywhere.
+ * Which list the sign-up form (components/EmailSignup: header, mobile menu, subscriber papers) feeds.
+ * false: the old Zoho Campaigns form, exactly as before. true: the Association's own list
+ * (MAIL_API /subscribe, our own confirmation email, /confirm/ and /unsubscribe/ pages). One boolean to switch.
  */
-export const EMAIL_SIGNUP: { action: string; emailField: string; hidden: Record<string, string> } = {
+export const LIST_LIVE = true; // owner 2026-11-22: "Yes, switch it" (Zoho's confirmation emails had stopped)
+
+/**
+ * The Zoho Campaigns sign-up form used while LIST_LIVE is false (components/EmailSignup).
+ * `action`, `emailField` and the `hidden` fields come from the embed code of the Zoho form.
+ * While `action` is empty that form is not shown anywhere.
+ */
+export const ZOHO_SIGNUP: { action: string; emailField: string; hidden: Record<string, string> } = {
   // Zoho Campaigns (EU): list "Papers and news", form "Website sign-up".
   action: "https://zcv2-zcmp.maillist-manage.eu/weboptin.zc",
   emailField: "CONTACT_EMAIL",
