@@ -86,7 +86,7 @@ const chapters: GuideChapter[] = [
   {
     numeral: "I",
     years: "1455",
-    title: "The baronial robe", // owner 2026-10-18 (was "The red robe")
+    title: "Scottish feudo-baronial robe", // owner 2026-11-23 (was "The baronial robe"; before 2026-10-18 "The red robe")
     lead: (
       <>
         Parliament gave the lords of parliament and barons
