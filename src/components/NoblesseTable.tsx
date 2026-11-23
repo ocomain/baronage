@@ -99,7 +99,7 @@ function RankCell({ r }: { r: (typeof ROWS)[number] }) {
       {r.note && <span className="mt-1 block font-sans text-[0.72rem] leading-snug text-ink-soft">{r.note}</span>}
       {r.baron && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src="/images/guide/chapeau-gules.svg" alt="The chapeau" width={72} height={36} loading="lazy" className="mt-2 block h-8 w-auto" />
+        <img src="/images/guide/chapeau-gules-v2.svg" alt="The chapeau" width={72} height={36} loading="lazy" className="mt-2 block h-8 w-auto" />
       )}
     </>
   );

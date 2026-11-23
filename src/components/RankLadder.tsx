@@ -63,7 +63,7 @@ export function RankLadder() {
         </p>
         <div className="mt-3 flex items-start gap-5 bg-navy px-5 py-5 text-parchment-50 shadow-[0_14px_30px_-18px_rgba(10,16,36,0.7)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/guide/chapeau-gules.svg" alt="" width={120} height={60} loading="lazy" className="h-14 w-auto flex-none" />
+          <img src="/images/guide/chapeau-gules-v2.svg" alt="" width={120} height={60} loading="lazy" className="h-14 w-auto flex-none" />
           <div className="min-w-0">
             <p className="font-display text-2xl leading-tight">Baron: the chapeau</p>
             <p className="mt-1 font-sans text-[0.92rem] leading-snug text-parchment-200">

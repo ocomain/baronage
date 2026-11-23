@@ -133,7 +133,7 @@ const chapters: GuideChapter[] = [
     dark: true,
     figure: (
       <div className="grid grid-cols-2 items-end gap-x-4 gap-y-6 lg:gap-x-6 lg:gap-y-8">
-        <Drawing className="col-span-2 mx-auto w-full max-w-[15rem] lg:max-w-none" src="/images/guide/chapeau-gules.svg" alt="A red chapeau turned up with ermine" caption={<>The baron’s chapeau<br />red, furred ermine</>} />
+        <Drawing className="col-span-2 mx-auto w-full max-w-[15rem] lg:max-w-none" src="/images/guide/chapeau-gules-v2.svg" alt="A red chapeau turned up with ermine" caption={<>The baron’s chapeau<br />red, furred ermine</>} />
         <Drawing src="/images/guide/chapeau-azure.svg" alt="A blue chapeau turned up with ermine" caption={<>The blue chapeau<br />representatives of baronial houses</>} />
         <Drawing src="/images/guide/chapeau-allodial.svg" alt="A red chapeau with a blue ermine brim" caption={<>The allodial chapeau<br />the Baron of the Bachuil</>} />
       </div>
