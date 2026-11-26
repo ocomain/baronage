@@ -41,7 +41,7 @@ const COMICS: Comic[] = [
   },
   {
     href: "https://www.lordkinfauns.com/comic/",
-    img: "/comics/kinfauns",
+    img: "/comics/kinfauns-ink", // owner 2026-11-26: the new ink panel from lordkinfauns.com/comic/ (new name so browsers fetch it fresh)
     alt: "Comic panel: Sir Thomas kneels by the loch at Lochmaben, his sword held up like a cross, and swears to avenge Wallace",
     eyebrow: "Lordship of Kinfauns",
     title: "The Lords of Kinfauns",
